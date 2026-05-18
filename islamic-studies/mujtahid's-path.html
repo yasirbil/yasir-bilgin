@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mujtahid's Path — A Comprehensive Formation Guide</title>
+
+<!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+:root {
+  --ink:           #0c1428;
+  --royal:         #14224a;
+  --indigo:        #1e3468;
+  --cobalt:        #2a4a8a;
+  --crimson:       #7a1420;
+  --crimson-deep:  #4e0c14;
+  --crimson-pale:  #f6eced;
+  --platinum:      #a8b8cc;
+  --silver:        #ccd6e4;
+  --vellum:        #f8f4ee;
+  --parchment:     #ede4d0;
+  --paper:         #fdfbf8;
+  --text:          #18162a;
+  --text-mid:      #3c3a54;
+  --text-light:    #6a6880;
+  --border:        #ddd4c4;
+  --border-cool:   #c4ceda;
+  --shadow-sm:     0 1px 6px rgba(12,20,40,0.07);
+  --shadow-md:     0 4px 20px rgba(12,20,40,0.09);
+  --radius:        2px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Crimson Pro', Georgia, serif;
+  background: var(--vellum);
+  color: var(--text);
+  line-height: 1.85;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+/* ── TOP NAV ── */
+#topbar {
+  background: var(--ink);
+  color: #fff;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--crimson);
+}
+#topbar .title-bar {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--silver);
+}
+#topbar .subtitle-bar {
+  font-size: 0.72rem;
+  color: var(--platinum);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  font-family: 'Crimson Pro', Georgia, serif;
+}
+#menu-toggle {
+  background: none;
+  border: none;
+  color: var(--platinum);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* ── LAYOUT ── */
+#layout { display: flex; min-height: calc(100vh - 54px); }
+
+/* ── SIDEBAR ── */
+#sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--ink);
+  padding: 2rem 0 2rem;
+  position: sticky;
+  top: 54px;
+  height: calc(100vh - 54px);
+  overflow-y: auto;
+  border-right: 1px solid rgba(168,184,204,0.12);
+  transition: transform 0.3s;
+}
+#sidebar::-webkit-scrollbar { width: 3px; }
+#sidebar::-webkit-scrollbar-thumb { background: rgba(168,184,204,0.2); }
+#sidebar .nav-section-label {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--platinum);
+  padding: 1.4rem 1.6rem 0.4rem;
+  opacity: 0.7;
+}
+#sidebar a {
+  display: block;
+  padding: 0.42rem 1.6rem 0.42rem 1.9rem;
+  color: rgba(204,214,228,0.65);
+  text-decoration: none;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.9rem;
+  border-left: 2px solid transparent;
+  transition: all 0.15s;
+  line-height: 1.4;
+}
+#sidebar a:hover {
+  color: var(--silver);
+  border-left-color: rgba(122,20,32,0.5);
+}
+#sidebar a.active {
+  color: #fff;
+  border-left-color: var(--crimson);
+  background: rgba(255,255,255,0.04);
+}
+#sidebar .session-num {
+  display: inline-block;
+  width: 18px;
+  color: var(--crimson);
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ── MAIN ── */
+#main {
+  flex: 1;
+  max-width: 860px;
+  padding: 3rem 3.5rem;
+  margin: 0 auto;
+}
+
+/* ── HERO ── */
+#hero {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(30,52,104,0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(122,20,32,0.15) 0%, transparent 50%),
+    linear-gradient(160deg, #0c1428 0%, #14224a 55%, #1a2e58 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 4rem 3.5rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(168,184,204,0.12);
+}
+#hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(168,184,204,0.04) 39px, rgba(168,184,204,0.04) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(168,184,204,0.04) 39px, rgba(168,184,204,0.04) 40px);
+  pointer-events: none;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(168,184,204,0.3), transparent);
+}
+#hero .arabic-header {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: var(--platinum);
+  letter-spacing: 0.12em;
+  margin-bottom: 1.4rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+#hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.9rem;
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+#hero .hero-sub {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1rem;
+  color: rgba(204,214,228,0.8);
+  font-style: italic;
+  margin-bottom: 2rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  line-height: 1.7;
+}
+#hero .hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+#hero .tag {
+  border: 1px solid rgba(168,184,204,0.3);
+  color: var(--platinum);
+  padding: 0.22rem 0.85rem;
+  border-radius: 1px;
+  font-size: 0.7rem;
+  font-family: 'Crimson Pro', serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── SECTION HEADERS ── */
+.session-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 4rem 0 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.session-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.2rem;
+  min-width: 44px;
+}
+.session-badge .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--crimson);
+  line-height: 1;
+}
+.session-badge span:not(.num) {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.56rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 0.1rem;
+}
+.session-title-block { flex: 1; }
+.session-title-block h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.95rem;
+  font-weight: 500;
+  color: var(--royal);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+.session-title-block .session-subtitle {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+/* ── ORNAMENTAL DIVIDER ── */
+.ornamental-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+  color: var(--border);
+}
+.ornamental-divider::before,
+.ornamental-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border));
+}
+.ornamental-divider::after {
+  background: linear-gradient(to left, transparent, var(--border));
+}
+
+/* ── BODY TEXT ── */
+p { margin-bottom: 1rem; font-size: 1.02rem; }
+ul, ol { margin: 0.5rem 0 1rem 1.6rem; }
+li { margin-bottom: 0.45rem; }
+
+h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--royal);
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.02em;
+}
+h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.2rem 0 0.4rem;
+}
+
+/* ── PULL QUOTE ── */
+.pullquote {
+  border-left: 2px solid var(--crimson);
+  padding: 0.8rem 1.8rem;
+  margin: 2rem 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--royal);
+  line-height: 1.7;
+}
+.pullquote::before { content: none; }
+.pullquote .attribution {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-style: normal;
+  letter-spacing: 0.06em;
+  margin-top: 0.6rem;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* ── REFLECT BOX ── */
+.reflect-box {
+  background: var(--paper);
+  border: 1px solid var(--border-cool);
+  border-left: 3px solid var(--indigo);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  margin: 1.8rem 0;
+}
+.reflect-box::before {
+  content: 'Pause & Reflect';
+  display: block;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 0.8rem;
+  opacity: 0.8;
+}
+.reflect-box ul { margin-left: 1.2rem; }
+.reflect-box li { color: var(--text-mid); font-size: 0.98rem; }
+
+/* ── EXERCISE BOX ── */
+.exercise-box {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--crimson);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  margin: 1.8rem 0;
+}
+.exercise-box .ex-label {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 0.8rem;
+  display: block;
+  opacity: 0.85;
+}
+
+/* ── WARN BOX ── */
+.warn-box {
+  background: var(--crimson-pale);
+  border: 1px solid rgba(122,20,32,0.15);
+  border-left: 3px solid var(--crimson);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.6rem;
+  margin: 1.5rem 0;
+}
+.warn-box .warn-label {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+/* ── PRINCIPLE BOX ── */
+.principle-box {
+  background: var(--royal);
+  color: var(--silver);
+  border-radius: var(--radius);
+  padding: 1.8rem 2.2rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(168,184,204,0.12);
+  position: relative;
+  overflow: hidden;
+}
+.principle-box::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--crimson);
+}
+.principle-box .arabic {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: #fff;
+  display: block;
+  margin-bottom: 0.6rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.principle-box .translation {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: var(--platinum);
+  font-style: italic;
+}
+
+/* ── CARD GRID ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.card {
+  background: var(--paper);
+  padding: 1.3rem 1.4rem;
+  transition: background 0.15s;
+}
+.card:hover { background: var(--vellum); }
+.card .card-num {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--crimson);
+  opacity: 0.8;
+}
+.card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--royal);
+  margin: 0.35rem 0 0.5rem;
+}
+.card p {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── LAYERS ── */
+.layer-item {
+  display: flex;
+  gap: 1.4rem;
+  margin: 1rem 0;
+  padding: 1.3rem 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--platinum);
+  border-radius: var(--radius);
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+.layer-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--crimson);
+  min-width: 28px;
+  line-height: 1;
+  padding-top: 0.1rem;
+}
+.layer-content h4 {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: var(--royal);
+}
+.layer-content p {
+  margin: 0;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ── STEPS ── */
+.steps-container { counter-reset: step; }
+.step-item {
+  display: flex;
+  gap: 1.4rem;
+  margin: 0.9rem 0;
+  align-items: flex-start;
+}
+.step-dot {
+  counter-increment: step;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--royal);
+  border: 1px solid var(--crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--silver);
+  min-width: 28px;
+  margin-top: 0.1rem;
+}
+.step-content { flex: 1; }
+.step-content h4 {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0 0 0.3rem;
+  font-size: 1.02rem;
+  color: var(--royal);
+}
+.step-content p {
+  margin: 0;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+}
+.step-content ul {
+  margin: 0.4rem 0 0 1rem;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+}
+
+/* ── TABLE ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.92rem;
+  margin: 1.2rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+thead { background: var(--royal); color: var(--silver); }
+thead th {
+  padding: 0.8rem 1.1rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Crimson Pro', serif;
+}
+tbody tr { border-bottom: 1px solid var(--border); }
+tbody tr:nth-child(even) { background: var(--vellum); }
+tbody tr:last-child { border-bottom: none; }
+td { padding: 0.7rem 1.1rem; color: var(--text); }
+td:first-child {
+  font-weight: 600;
+  color: var(--royal);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+}
+
+/* ── ACCORDION ── */
+details {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0.6rem 0;
+}
+summary {
+  padding: 0.95rem 1.4rem;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--royal);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  list-style: none;
+  transition: background 0.15s;
+  letter-spacing: 0.01em;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: '▸';
+  color: var(--crimson);
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+details[open] > summary::before { transform: rotate(90deg); }
+details[open] > summary { background: var(--vellum); }
+.details-body {
+  padding: 1rem 1.4rem 1.3rem 1.4rem;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  border-top: 1px solid var(--border);
+}
+.details-body p { margin-bottom: 0.8rem; }
+.details-body ul { margin-left: 1.3rem; }
+.details-body li { margin-bottom: 0.35rem; }
+
+/* ── MAQASID GRID ── */
+.maqasid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.maqasid-card {
+  background: var(--paper);
+  padding: 1.3rem 1.4rem;
+}
+.maqasid-card .mq-icon { font-size: 1.3rem; margin-bottom: 0.5rem; opacity: 0.85; }
+.maqasid-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--royal);
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+.maqasid-card .mq-questions {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.86rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+.maqasid-card .mq-modern {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.8rem;
+  color: var(--crimson);
+  font-style: italic;
+  margin-top: 0.7rem;
+  opacity: 0.8;
+}
+
+/* ── SKILL LEVELS ── */
+.skill-level {
+  padding: 1rem 1.4rem;
+  margin: 0.6rem 0;
+  border-left: 3px solid var(--platinum);
+  background: var(--paper);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.skill-level.advanced { border-left-color: var(--indigo); }
+.skill-level.master {
+  border-left-color: var(--crimson);
+  background: linear-gradient(to right, #f9f4f5, var(--paper));
+}
+.skill-level h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--royal);
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+.skill-level p {
+  margin: 0;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+
+/* ── CASE STUDY ── */
+.case-study {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 1.8rem 0;
+  box-shadow: var(--shadow-sm);
+}
+.case-header {
+  background: var(--royal);
+  color: var(--silver);
+  padding: 1rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(168,184,204,0.15);
+}
+.case-header h4 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+.case-header .case-tag {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.68rem;
+  background: rgba(255,255,255,0.1);
+  padding: 0.2rem 0.7rem;
+  border-radius: 1px;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--platinum);
+  border: 1px solid rgba(168,184,204,0.2);
+}
+.case-body { padding: 1.3rem 1.4rem; background: var(--paper); }
+.case-body .case-row {
+  display: flex;
+  gap: 1rem;
+  margin: 0.7rem 0;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.93rem;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.7rem;
+}
+.case-body .case-row:last-child { border-bottom: none; padding-bottom: 0; }
+.case-row .cr-label {
+  font-weight: 600;
+  color: var(--royal);
+  min-width: 88px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-top: 0.18rem;
+  font-family: 'Crimson Pro', serif;
+  opacity: 0.8;
+}
+.case-row .cr-content { color: var(--text-mid); flex: 1; }
+
+/* ── FORMULA BOX ── */
+.formula-box {
+  background: var(--royal);
+  color: var(--silver);
+  border-radius: var(--radius);
+  padding: 1.8rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  border: 1px solid rgba(168,184,204,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.formula-box::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, transparent, var(--crimson), transparent);
+}
+.formula-box .formula-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--platinum);
+  margin-bottom: 1rem;
+  opacity: 0.75;
+}
+.formula-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+}
+.formula-chain .fc-item {
+  background: rgba(255,255,255,0.07);
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(168,184,204,0.2);
+  border-radius: 1px;
+  color: var(--silver);
+}
+.formula-chain .fc-arrow { color: var(--crimson); font-size: 0.9rem; opacity: 0.8; }
+
+/* ── INNER CHECKLIST ── */
+.checklist-section {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+.checklist-section h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--royal);
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+.checklist-section ul { list-style: none; margin: 0; padding: 0; }
+.checklist-section li {
+  padding: 0.38rem 0;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+.checklist-section li:last-child { border-bottom: none; }
+.checklist-section li::before {
+  content: '—';
+  color: var(--crimson);
+  min-width: 1rem;
+  opacity: 0.6;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ── TIMELINE ── */
+.timeline {
+  border-left: 1px solid var(--border-cool);
+  padding-left: 1.8rem;
+  margin: 1.5rem 0;
+}
+.timeline-item { position: relative; margin: 1.2rem 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.97rem;
+  top: 0.45rem;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--crimson);
+  opacity: 0.7;
+}
+.timeline-item h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.98rem;
+  color: var(--royal);
+  margin: 0 0 0.3rem;
+}
+.timeline-item p {
+  font-family: 'Crimson Pro', serif;
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  color: var(--platinum);
+  text-align: center;
+  padding: 2.5rem;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.85rem;
+  margin-top: 5rem;
+  border-top: 1px solid var(--crimson);
+}
+footer .footer-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--silver);
+  margin-bottom: 1rem;
+}
+
+/* ── CODE / PRE ── */
+pre {
+  background: var(--vellum);
+  border: 1px solid var(--border);
+  padding: 1.1rem 1.3rem;
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  line-height: 1.9;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  color: var(--text-mid);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  #sidebar { display: none; }
+  #sidebar.open {
+    display: block;
+    position: fixed;
+    top: 54px; left: 0;
+    height: calc(100vh - 54px);
+    z-index: 99;
+  }
+  #menu-toggle { display: block; }
+  #main { padding: 1.5rem 1.3rem; max-width: 100%; }
+  #hero { padding: 2.5rem 1.5rem; }
+  #hero h1 { font-size: 2rem; }
+  .card-grid, .maqasid-grid { grid-template-columns: 1fr; }
+  .session-header { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<div id="topbar">
+  <div>
+    <div class="title-bar">The Mujtahid's Path</div>
+    <div class="subtitle-bar">A Comprehensive Formation Guide</div>
+  </div>
+  <button id="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+</div>
+
+<div id="layout">
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="nav-section-label">Orientation</div>
+  <a href="#welcome"><span class="session-num">◈</span> Welcome Letter</a>
+  <a href="#calling"><span class="session-num">◈</span> The Calling</a>
+
+  <div class="nav-section-label">Core Formation</div>
+  <a href="#s1"><span class="session-num">1</span> The Inner Life</a>
+  <a href="#s2"><span class="session-num">2</span> Four Dimensions</a>
+  <a href="#s3"><span class="session-num">3</span> Layers of Reasoning</a>
+  <a href="#s4"><span class="session-num">4</span> The Decision Journey</a>
+  <a href="#s5"><span class="session-num">5</span> The Toolkit</a>
+  <a href="#s6"><span class="session-num">6</span> Maqasid & Priorities</a>
+
+  <div class="nav-section-label">Applied Wisdom</div>
+  <a href="#s7"><span class="session-num">7</span> Wisdom in Practice</a>
+  <a href="#s8"><span class="session-num">8</span> Common Pitfalls</a>
+
+  <div class="nav-section-label">Formation Program</div>
+  <a href="#s9"><span class="session-num">9</span> The Formation Path</a>
+  <a href="#s10"><span class="session-num">10</span> Knowledge Domains</a>
+  <a href="#s11"><span class="session-num">11</span> Daily Practice</a>
+
+  <div class="nav-section-label">Closing</div>
+  <a href="#checklist"><span class="session-num">◈</span> Inner Checklist</a>
+  <a href="#closing"><span class="session-num">◈</span> The Journey Forward</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+<!-- HERO -->
+<section id="hero-section">
+  <div id="hero">
+    <div class="arabic-header">الاجتهاد — المجتهد</div>
+    <h1>The Mujtahid's Path</h1>
+    <p class="hero-sub">A Comprehensive Formation Guide for Sacred Reasoning, Ethical Judgment & Spiritual Responsibility</p>
+    <div class="hero-tags">
+      <span class="tag">Ijtihād</span>
+      <span class="tag">Usul al-Fiqh</span>
+      <span class="tag">Maqasid al-Shariah</span>
+      <span class="tag">Character Formation</span>
+      <span class="tag">Spiritual Discipline</span>
+      <span class="tag">Applied Wisdom</span>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section id="welcome">
+  <div class="session-header">
+    <div class="session-badge"><span>✉</span></div>
+    <div class="session-title-block">
+      <h2>A Letter to the Seeker</h2>
+      <div class="session-subtitle">Orientation — Before You Begin</div>
+    </div>
+  </div>
+
+  <p>You have arrived at this guide because something in you recognizes that Islamic reasoning is not merely the retrieval of old answers. You sense that there is a discipline here — rigorous, layered, spiritually serious — that is worth understanding deeply, whether you aspire to formal scholarship or simply wish to think more faithfully and wisely.</p>
+
+  <p>This guide is built in the format of a spiritual formation journey. Think of it as a series of <em>sessions</em> — like meetings with a wise guide or a good therapist — where each session opens a new layer of how a mujtahid thinks, sees, and decides. You will find here not only concepts but reflective pauses, practical exercises, and honest warnings.</p>
+
+  <div class="pullquote">
+    This is not a guide for people who want quick answers. It is a guide for people who want to ask better questions — and to carry the weight of those questions responsibly before Allah.
+  </div>
+
+  <p>Read slowly. Return to sections. Practice the exercises. Let the ideas mature in you. Formation takes time. The scholars of the past often said that a person begins to truly understand a text only after reading it many times across many years of life.</p>
+
+  <div class="reflect-box">
+    <ul>
+      <li>Why am I drawn to understanding how Islamic scholars reason?</li>
+      <li>What does it mean to me to "speak responsibly about religion"?</li>
+      <li>What is the difference between having a strong opinion and having a sound judgment?</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- THE CALLING -->
+<section id="calling">
+  <div class="session-header">
+    <div class="session-badge"><span>◈</span></div>
+    <div class="session-title-block">
+      <h2>What Is a Mujtahid?</h2>
+      <div class="session-subtitle">Understanding the Calling Before the Method</div>
+    </div>
+  </div>
+
+  <p>A <em>mujtahid</em> in the Islamic tradition is not merely "someone who gives opinions." A mujtahid is a scholar capable of <strong>ijtihād</strong> — disciplined independent reasoning used to derive rulings, principles, judgments, or guidance from revelation when explicit answers are not directly available.</p>
+
+  <div class="pullquote">
+    The mindset is closer to a constitutional judge, systems philosopher, linguist, ethicist, historian, psychologist of society, and spiritual theologian — all combined within a sacred framework.
+  </div>
+
+  <p>The process is far deeper than: <em>"What do I personally think?"</em></p>
+  <p>Instead it is: <em>"What is most faithful to divine intent, reality, justice, wisdom, and human flourishing?"</em></p>
+
+  <h3>What a Mujtahid Is Not</h3>
+  <p>A true mujtahid is not merely a preacher, a memorizer of texts, a charismatic public intellectual, a political activist, or someone with strong opinions. These may all be valuable, but they fall short of ijtihād.</p>
+
+  <h3>The Modern Parallels</h3>
+  <p>To understand the scope of what a mujtahid brings together, consider these parallel domains — all functioning under revelation-centered epistemology:</p>
+
+  <table>
+    <thead>
+      <tr><th>Domain</th><th>Parallel Role</th><th>What It Contributes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Law</td><td>Supreme Court Justice</td><td>Precedent, constitutional reasoning, weighing evidence</td></tr>
+      <tr><td>Ethics</td><td>Moral Philosopher</td><td>Principled analysis of right and wrong</td></tr>
+      <tr><td>Systems</td><td>Strategic Analyst</td><td>Downstream effects, unintended consequences</td></tr>
+      <tr><td>Language</td><td>Classical Philologist</td><td>Precision of meaning, semantic range</td></tr>
+      <tr><td>Society</td><td>Sociologist</td><td>Cultural context, social structures</td></tr>
+      <tr><td>Human Behavior</td><td>Psychologist</td><td>Motivation, weakness, trauma, ego</td></tr>
+      <tr><td>Civilization</td><td>Policy Thinker</td><td>Long-term civilizational health</td></tr>
+      <tr><td>Spirituality</td><td>Mystic / Theologian</td><td>Divine intent, inner purification, sincerity</td></tr>
+    </tbody>
+  </table>
+
+  <div class="reflect-box">
+    <ul>
+      <li>Which of these domains do you naturally gravitate toward? Which feels most foreign?</li>
+      <li>Can you think of a time when a religious opinion seemed technically correct but missed something important — perhaps psychology, or consequences, or the spirit of the law?</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 1 -->
+<section id="s1">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">1</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Inner Life</h2>
+      <div class="session-subtitle">Foundational Character Before Method — The Soul of Ijtihād</div>
+    </div>
+  </div>
+
+  <p>Before any technique, before any textual analysis, before any reasoning tool — the mujtahid needs the right inner posture. This is not merely a moral extra. Classical scholars understood that spiritual corruption of the scholar produces corruption of the ruling. The inner life is an <em>epistemological necessity</em>.</p>
+
+  <h3>A. Humility Before Revelation</h3>
+  <p>The mujtahid does not approach revelation as raw material to reshape according to modern preferences or personal ideology. He approaches it as guidance — from One who knows what the mujtahid does not.</p>
+  <p>This means: the Qur'an and Sunnah are not forced to fit the age's assumptions; inherited tradition is respected but not worshiped; human reason serves truth rather than ego.</p>
+
+  <div class="pullquote">
+    "I am not the source of truth. I am trying to understand truth."
+    <div class="attribution">— The mujtahid's operating self-understanding</div>
+  </div>
+
+  <h3>B. Fear of Speaking Without Knowledge</h3>
+  <p>A serious mujtahid knows that issuing judgments carries real danger. A wrong ruling can misguide people, normalize injustice, create hardship, weaken religion, harm families, or — most gravely — falsely attribute something to Allah. This awareness breeds caution, not paralysis.</p>
+  <p>Classical scholars often preferred to say <em>"I do not know"</em> rather than speak carelessly. This was not weakness. It was integrity.</p>
+
+  <h3>C. Sincerity and Its Corruptions</h3>
+  <p>The mujtahid must constantly audit his own intentions. The corruptions of sincerity are subtle and numerous:</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-num">Corruption 1</div>
+      <h4>Desire for Fame</h4>
+      <p>Reasoning shaped by what will gain the most approval or followers.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Corruption 2</div>
+      <h4>Political Pressure</h4>
+      <p>Rulings adjusted to please rulers, movements, or institutional sponsors.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Corruption 3</div>
+      <h4>Ideological Loyalty</h4>
+      <p>Defending a school, sect, or position out of tribal belonging rather than evidence.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Corruption 4</div>
+      <h4>People-Pleasing</h4>
+      <p>Wanting to appear modern, or wanting to appear strict, rather than seeking truth.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Corruption 5</div>
+      <h4>Emotional Reaction</h4>
+      <p>Responding to anger, shame, or grief rather than disciplined reasoning.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Corruption 6</div>
+      <h4>Financial Incentives</h4>
+      <p>Opinions shaped by those who fund, hire, or patronize the scholar.</p>
+    </div>
+  </div>
+
+  <div class="exercise-box">
+    <span class="ex-label">📓 Daily Muhasabah Practice</span>
+    <p>Keep a brief daily journal using these questions. Not to punish yourself — but to see clearly:</p>
+    <ul>
+      <li>Where did ego appear in my learning or conversation today?</li>
+      <li>Where did I speak beyond my knowledge?</li>
+      <li>Where did I listen well and hold back judgment?</li>
+      <li>Where did I react emotionally rather than reason carefully?</li>
+      <li>What did I learn about my own weaknesses today?</li>
+    </ul>
+  </div>
+
+  <h3>D. The Virtues as Epistemological Tools</h3>
+  <p>The classical scholars considered these not optional moral extras, but necessary conditions for sound reasoning:</p>
+  <ul>
+    <li><strong>Ikhlas (Sincerity)</strong> — aligns reasoning toward truth rather than performance.</li>
+    <li><strong>Tawadu' (Humility)</strong> — keeps the scholar open to correction and aware of limits.</li>
+    <li><strong>Wara' (Cautious God-Consciousness)</strong> — creates the pause before attributing things to Allah.</li>
+    <li><strong>Adab al-Ikhtilaf (Ethics of Disagreement)</strong> — allows the scholar to engage opposing views without contempt, mockery, or bad faith.</li>
+  </ul>
+
+  <div class="reflect-box">
+    <ul>
+      <li>Think of a time you held a strong religious opinion. Was it driven by evidence — or by something else (identity, loyalty, discomfort)?</li>
+      <li>What is your relationship with saying "I don't know"? Does it feel like weakness or integrity?</li>
+      <li>Which of the six corruptions feels most personally relevant for you to watch?</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 2 -->
+<section id="s2">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">2</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Four Dimensions</h2>
+      <div class="session-subtitle">The Core Mental Model of Mujtahid Reasoning</div>
+    </div>
+  </div>
+
+  <p>At the heart of mujtahid thinking is not a single method but a <strong>set of four interacting dimensions</strong> that must always be held together. Neglecting any one produces distortion.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-num">Dimension 1</div>
+      <h4>Revelation (Nass)</h4>
+      <p>What has Allah revealed? The Qur'an and Sunnah are not merely "texts" — they are ontological guidance, moral structure, and epistemological authority.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Dimension 2</div>
+      <h4>Reality (Fiqh al-Waqi')</h4>
+      <p>What is actually happening in the world? The mujtahid must understand the situation before judging it — causes, consequences, psychology, economics, culture.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Dimension 3</div>
+      <h4>Reason (Usul)</h4>
+      <p>How do we connect revelation and reality coherently? This is the science of legal methodology — disciplined, principled, and governed by rules.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Dimension 4</div>
+      <h4>Responsibility (Maqasid)</h4>
+      <p>What judgment best preserves justice, mercy, wisdom, and human flourishing? The mujtahid is accountable for real-world effects.</p>
+    </div>
+  </div>
+
+  <div class="formula-box">
+    <div class="formula-title">Sound Ijtihād =</div>
+    <div class="formula-chain">
+      <span class="fc-item">Revelation (Nass)</span>
+      <span class="fc-arrow">+</span>
+      <span class="fc-item">Reality (Waqi')</span>
+      <span class="fc-arrow">+</span>
+      <span class="fc-item">Method (Usul)</span>
+      <span class="fc-arrow">+</span>
+      <span class="fc-item">Wisdom (Maqasid)</span>
+      <span class="fc-arrow">+</span>
+      <span class="fc-item">Sincerity (Ikhlas)</span>
+    </div>
+  </div>
+
+  <h3>Why Reality Must Come First in the Process</h3>
+
+  <div class="principle-box">
+    <span class="arabic">تصوّر المسألة نصف الحكم</span>
+    <div class="translation">"Correctly understanding the issue is half of the ruling." — Classical principle of Islamic jurisprudence</div>
+  </div>
+
+  <p>A mujtahid who issues a ruling on "cryptocurrency" without understanding blockchain architecture, ownership models, risk structures, and market dynamics is not doing ijtihād — he is doing speculation dressed as scholarship. The same applies to rulings on AI, medicine, finance, and family dynamics.</p>
+
+  <p>Without understanding reality, rulings become disconnected from life — and can cause real harm to real people while appearing technically virtuous.</p>
+
+  <div class="reflect-box">
+    <ul>
+      <li>Think of a religious ruling you've heard that felt disconnected from the reality it was addressing. What was missing — understanding of the situation? The psychology involved? The actual consequences?</li>
+      <li>Can divine wisdom and empirical reality ultimately contradict? How do you navigate moments when they seem to?</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 3 -->
+<section id="s3">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">3</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Layers of Reasoning</h2>
+      <div class="session-subtitle">How a Mujtahid Thinks Simultaneously on Multiple Levels</div>
+    </div>
+  </div>
+
+  <p>What distinguishes mujtahid thinking from ordinary opinion is the number of <em>simultaneous layers</em> being processed at once. A mujtahid is not thinking linearly. He holds all of these in view at the same time, constantly asking which layer is most relevant and how they interact.</p>
+
+  <div class="layer-item">
+    <div class="layer-num">1</div>
+    <div class="layer-content">
+      <h4>Textual Layer (Nass)</h4>
+      <p>What do the Qur'an and Hadith explicitly say? Is there direct evidence? Is it authentic? Universal or contextual? Literal or metaphorical? General or specific? Abrogated or still active? This requires Arabic mastery, grammar, rhetoric, classical usage, and hadith sciences.</p>
+    </div>
+  </div>
+
+  <div class="layer-item">
+    <div class="layer-num">2</div>
+    <div class="layer-content">
+      <h4>Principle Layer (Usul)</h4>
+      <p>What governing principle is operating <em>behind</em> the text? Examples: justice, preservation of life, prevention of oppression, dignity, trust, mercy, public welfare. This is the science of <em>maqāṣid al-sharī'a</em> — moving from surface form to deep wisdom.</p>
+    </div>
+  </div>
+
+  <div class="layer-item">
+    <div class="layer-num">3</div>
+    <div class="layer-content">
+      <h4>Analogy Layer (Qiyās)</h4>
+      <p>If no direct ruling exists: "What is this essentially similar to?" The mujtahid searches for the <em>'illah</em> (effective legal cause) — not asking "does this exact object appear in scripture?" but "what essential pattern does this belong to?" This is systems-oriented reasoning applied to sacred law.</p>
+    </div>
+  </div>
+
+  <div class="layer-item">
+    <div class="layer-num">4</div>
+    <div class="layer-content">
+      <h4>Harm/Benefit Layer (Maslaha/Mafsada)</h4>
+      <p>What are the societal effects, long-term consequences, unintended harms, corruption potential? Does this increase justice? Weaken family? Exploit the poor? Normalize vice? Increase human dignity? Destabilize society? This resembles ethics, systems analysis, and policy design.</p>
+    </div>
+  </div>
+
+  <div class="layer-item">
+    <div class="layer-num">5</div>
+    <div class="layer-content">
+      <h4>Human Nature Layer (Fitrah)</h4>
+      <p>The mujtahid assumes humans have spiritual needs, psychological limits, moral vulnerabilities, and social dependencies. Rulings therefore consider temptation, ego, trauma, greed, loneliness, power imbalance, and social contagion. Islamic law is not merely legal — it is civilizational psychology.</p>
+    </div>
+  </div>
+
+  <div class="layer-item">
+    <div class="layer-num">6</div>
+    <div class="layer-content">
+      <h4>Spiritual Layer (Taqwa)</h4>
+      <p>A true mujtahid fears ego, fame, self-deception, and political manipulation. Classical scholars often avoided giving rulings quickly — because a wrong ruling affects souls and societies. Sincerity, humility, and inner purification were understood as <em>epistemological necessities</em>, not moral extras.</p>
+    </div>
+  </div>
+
+  <div class="exercise-box">
+    <span class="ex-label">🔬 Exercise: Layer Analysis</span>
+    <p>Choose any Qur'anic prohibition you are familiar with. Write down what you find on each layer:</p>
+    <ol>
+      <li><strong>Textual:</strong> What exactly does the text say? What is the wording?</li>
+      <li><strong>Principle:</strong> What value or objective is being protected?</li>
+      <li><strong>Analogy:</strong> What modern situations share the same essential structure?</li>
+      <li><strong>Harm/Benefit:</strong> What harm does the prohibition prevent?</li>
+      <li><strong>Human Nature:</strong> What human weakness does it address?</li>
+      <li><strong>Spiritual:</strong> What does this cultivate in the heart of the one who obeys?</li>
+    </ol>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 4 -->
+<section id="s4">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">4</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Decision Journey</h2>
+      <div class="session-subtitle">A Step-by-Step Map of How a Mujtahid Moves from Question to Judgment</div>
+    </div>
+  </div>
+
+  <p>Ijtihād is not an event. It is a <em>journey</em>. The mujtahid does not arrive at judgment by inspiration or authority alone — he walks a disciplined path, step by step, with honesty about what he finds at each stage. Below is that path, in the order a serious mujtahid would walk it.</p>
+
+  <div class="steps-container">
+
+    <div class="step-item">
+      <div class="step-dot">1</div>
+      <div class="step-content">
+        <h4>Define the Question with Precision</h4>
+        <p>What exactly is being asked? Is this legal, ethical, spiritual, social, or political? Who is affected? What hidden assumptions are embedded? What is the real problem beneath the surface? A poorly defined question produces a misleading answer.</p>
+        <ul>
+          <li><em>Weak:</em> "Is technology halal or haram?"</li>
+          <li><em>Better:</em> "Does using this specific AI tool for religious teaching risk misattributing fabricated statements to scholars, thereby violating trust and misleading users?"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">2</div>
+      <div class="step-content">
+        <h4>Investigate the Reality (Fiqh al-Waqi')</h4>
+        <p>How does this practice, technology, or situation actually work? What are its mechanisms, normal uses, and common abuses? Who benefits? Who is harmed? What incentives does it create? For finance, medicine, AI — expert knowledge may be required before judgment can begin.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">3</div>
+      <div class="step-content">
+        <h4>Gather the Full Evidence Field</h4>
+        <p>Search for direct Qur'anic verses, authentic hadiths, companion opinions, and scholarly precedent. Do not cherry-pick one text — gather the whole landscape of evidence. Is there direct evidence or only indirect? Is it general or specific? Universal or contextual?</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">4</div>
+      <div class="step-content">
+        <h4>Analyze the Strength of Each Evidence</h4>
+        <p>Not all evidence carries equal weight. Evaluate certainty of transmission, clarity of meaning, authenticity, scope, and context. Some evidence is certain in transmission and meaning; some is probable; some is disputed or context-specific. This determines how confident the conclusion can be.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">5</div>
+      <div class="step-content">
+        <h4>Identify the Governing Principle ('Illah)</h4>
+        <p>What principle is this text protecting? Move from surface form to deeper wisdom. The prohibition of wine is not about grapes — the effective cause is intoxication and impairment. This distinction allows principles to remain stable while applications evolve across changing circumstances.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">6</div>
+      <div class="step-content">
+        <h4>Search for Analogous Cases (Qiyās)</h4>
+        <p>When the issue is new, what older case resembles it? What is the shared effective cause? Is the similarity real or superficial? Are there important differences that would break the analogy? Does the analogy preserve or distort the original ruling's purpose?</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">7</div>
+      <div class="step-content">
+        <h4>Weigh Benefits and Harms (Maslaha / Mafsada)</h4>
+        <p>What benefit does this produce? What harm may it cause? Is the harm certain or speculative? Is the benefit essential or merely convenient? Are there alternatives? Can harm be reduced? A greater harm may be tolerated to prevent an even greater one.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">8</div>
+      <div class="step-content">
+        <h4>Consider Necessity and Hardship</h4>
+        <p>Does genuine necessity apply? Is there real hardship? Is there a lawful alternative? Islamic law recognizes human limitation — but necessity and hardship are disciplined tools, not excuses for desire. The exception must be limited to the actual extent of the need.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">9</div>
+      <div class="step-content">
+        <h4>Consider Custom and Context ('Urf)</h4>
+        <p>What does sound local custom and professional standard say? What counts as reasonable conduct may vary by context. But corrupt custom cannot override divine principles. The rule: sound custom has weight; corrupt custom does not.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">10</div>
+      <div class="step-content">
+        <h4>Examine Downstream Consequences (Ma'alat)</h4>
+        <p>What happens if this ruling becomes widespread? What precedent does it create? How will people misuse it? Does it open a door to greater harm? Does it close a path to good? Will it empower the vulnerable or enable the oppressor? The mujtahid thinks strategically and civilizationally.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">11</div>
+      <div class="step-content">
+        <h4>Balance Competing Values</h4>
+        <p>Many hard questions involve legitimate values in genuine tension. The mujtahid does not absolutize one value blindly. He orders values properly according to evidence and maqasid. Common tensions: mercy vs. justice, freedom vs. social harm, privacy vs. public safety, truth vs. unnecessary harm.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">12</div>
+      <div class="step-content">
+        <h4>Consult Other Experts</h4>
+        <p>A mujtahid is not an expert in every worldly field. Modern rulings on AI require understanding AI; rulings on medical ethics require medical expertise; rulings on finance require financial architecture. Humility means knowing when to ask. This protects ijtihād from fantasy dressed as scholarship.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">13</div>
+      <div class="step-content">
+        <h4>Form a Judgment with an Honest Confidence Level</h4>
+        <p>A mature mujtahid does not speak with false certainty. He may say: "this is clearly required," "this is permitted under conditions," "scholars differ," "more investigation is needed," or "this is safer to avoid." Epistemic humility is not weakness — it is accuracy.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">14</div>
+      <div class="step-content">
+        <h4>Consider the Audience and Context for Communication</h4>
+        <p>Who needs to hear this? What level of knowledge do they have? What is their emotional state? What is the risk of misunderstanding? A correct ruling communicated unwisely may cause harm. The mujtahid distinguishes the ruling itself from how, when, and to whom to teach it.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-dot">15</div>
+      <div class="step-content">
+        <h4>Speak with Pastoral Sensitivity</h4>
+        <p>Especially in personal and family matters, wisdom and compassion are not separable from the ruling. People are not cases. They carry history, trauma, love, and fear. The mujtahid who forgets this produces correct logic and real harm.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="exercise-box">
+    <span class="ex-label">🗺 Exercise: Build a Fatwa Map</span>
+    <p>For any question you are genuinely curious about, work through this structured template:</p>
+    <pre style="background:var(--parchment);padding:1rem;border-radius:6px;font-size:0.8rem;font-family:'Segoe UI',sans-serif;line-height:2;overflow-x:auto;">
+Issue:
+Reality description:
+Relevant texts:
+Scholarly precedents:
+Effective cause ('Illah):
+Maqasid involved:
+Benefits:
+Harms:
+Necessity or hardship:
+Custom/context:
+Possible misuse:
+Final judgment:
+Confidence level: Low / Medium / High
+Conditions:
+Pastoral advice:
+    </pre>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 5 -->
+<section id="s5">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">5</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Reasoning Toolkit</h2>
+      <div class="session-subtitle">The Twelve Core Instruments of Islamic Legal Reasoning</div>
+    </div>
+  </div>
+
+  <p>These are the instruments a mujtahid reaches for — like a physician's diagnostic tools, each suited to a different situation. Mastery of the toolkit requires years of study, but understanding what each tool does is the beginning of reasoning wisely.</p>
+
+  <details>
+    <summary>1. Nass — Explicit Text</summary>
+    <div class="details-body">
+      <p>Direct evidence from the Qur'an or authentic Sunnah. The first and highest source. The key question: <em>Is there a clear, direct, unambiguous text on this matter?</em> When a genuine nass exists and is properly understood, it takes precedence. The mujtahid's task here is correct understanding, not invention.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Ijma — Scholarly Consensus</summary>
+    <div class="details-body">
+      <p>Agreement of qualified scholars of the ummah on a matter. Genuine ijma (when it exists) carries very strong evidential weight. The mujtahid asks: <em>Has the scholarly tradition reached a binding consensus?</em> If so, independent deviation from it requires extraordinary evidence and humility about one's own potential error.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Qiyās — Analogy</summary>
+    <div class="details-body">
+      <p>Extending a known ruling to a new case because of a shared effective cause (<em>'illah</em>). This is how Islamic law addresses genuinely new situations. The question: <em>What does this new case essentially resemble?</em> For example: a new intoxicant is not mentioned in classical texts, but if it impairs reason as wine does, the ruling follows the shared cause.</p>
+      <p>The analogy must be real, not superficial. The effective cause must be genuinely shared. Forced analogies produce distorted rulings.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Istihsan — Juristic Preference</summary>
+    <div class="details-body">
+      <p>Departing from strict analogy when it would produce hardship or injustice, by appealing to a stronger principle. The question: <em>Would strict analogy violate a higher principle of the law?</em> This tool prevents mechanical, context-blind application of rules. Primarily used in the Hanafi tradition.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Maslaha — Public Welfare</summary>
+    <div class="details-body">
+      <p>Considering the broader public benefit when consistent with revelation. The question: <em>Does this preserve a recognized good?</em> Maslaha is not a permission to override clear texts for convenience — it operates within the framework of the Shariah's objectives and cannot contradict established evidence. It is most powerful in areas where no direct text governs.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>6. Sadd al-Dhara'i — Blocking the Means</summary>
+    <div class="details-body">
+      <p>Preventing something technically permissible if it predictably and reliably leads to serious harm. The question: <em>Does this open a dangerous door?</em> Example: an otherwise neutral act that invariably leads to exploitation or injustice may be restricted preventively. This requires evidence of the likely harm, not mere speculation.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>7. Fath al-Dhara'i — Opening the Means</summary>
+    <div class="details-body">
+      <p>The positive counterpart: permitting or encouraging something because it enables an important good. The question: <em>Does this enable a necessary or valuable good?</em> If a practice is the only realistic path to a required objective, it may be permitted or even required despite discomfort or inconvenience.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>8. 'Urf — Custom</summary>
+    <div class="details-body">
+      <p>Recognizing sound local and professional custom as a factor in jurisprudence, where it does not contradict revelation. The question: <em>How is this practice normally understood in this society or profession?</em> What counts as reasonable care, respectful conduct, or professional standard may vary by context. Corrupt custom carries no legal weight.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>9. Istishab — Presumption of Continuity</summary>
+    <div class="details-body">
+      <p>Assuming the existing legal state continues until positive evidence changes it. The question: <em>What is the default ruling before new evidence appears?</em> For example: the default for contracts is permissibility; the default for objects of consumption is permissibility; the default for obligations is their absence unless established. This prevents inventing restrictions from thin air.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>10–12. Legal Maxims (al-Qawa'id al-Fiqhiyya)</summary>
+    <div class="details-body">
+      <p>These are distilled principles that help scholars reason consistently across cases. Key examples:</p>
+      <ul>
+        <li><em>Matters are judged by their purposes.</em> — Intention shapes the legal nature of an act.</li>
+        <li><em>Certainty is not removed by doubt.</em> — Strong evidence overrides speculation.</li>
+        <li><em>Harm must be removed.</em> — The law does not require people to endure preventable injury.</li>
+        <li><em>Hardship brings ease.</em> — Genuine difficulty activates facilitation mechanisms.</li>
+        <li><em>Custom has legal weight.</em> — Sound practice informs application.</li>
+        <li><em>Preventing harm takes priority over acquiring benefit.</em> — When in conflict, harm avoidance leads.</li>
+        <li><em>Necessity is measured according to its actual extent.</em> — Exceptions do not expand beyond their justification.</li>
+        <li><em>The lesser harm may be tolerated to prevent the greater harm.</em> — A hierarchy of harms governs triage decisions.</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="exercise-box">
+    <span class="ex-label">🔍 Exercise: Identify the 'Illah</span>
+    <p>For each case below, identify the effective legal cause, then apply it to a modern equivalent:</p>
+    <table>
+      <thead><tr><th>Classical Case</th><th>Effective Cause ('Illah)</th><th>Modern Application</th></tr></thead>
+      <tbody>
+        <tr><td>Wine (khamr)</td><td>Intoxication / impairment of reason</td><td>Narcotic drugs, certain medications, extreme caffeine abuse?</td></tr>
+        <tr><td>Theft</td><td>Unjust taking of another's property</td><td>Digital piracy, wage theft, deceptive contracts?</td></tr>
+        <tr><td>Riba (interest)</td><td>Exploitative guaranteed gain / debt injustice</td><td>Predatory lending, payday loans, hidden fees?</td></tr>
+        <tr><td>Slander</td><td>Violation of dignity and truth</td><td>Online defamation, algorithmic smear campaigns?</td></tr>
+        <tr><td>Gambling (maysir)</td><td>Wealth transfer through chance and addiction</td><td>Certain derivatives, loot boxes, speculative trading?</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 6 -->
+<section id="s6">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">6</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>Protecting What Matters</h2>
+      <div class="session-subtitle">Maqasid al-Shariah — The Higher Objectives & Hierarchy of Priorities</div>
+    </div>
+  </div>
+
+  <p>Maqasid al-Shariah is not a vague slogan for "the spirit of Islam." It is a disciplined framework of objectives that the law is designed to protect. Understanding maqasid prevents Islamic reasoning from becoming mechanical — and prevents shallow thinkers from obsessing over minor details while major injustices spread unchallenged.</p>
+
+  <h3>The Three Levels of Priority</h3>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-num">Level 1 — Daruriyyat</div>
+      <h4>Essentials</h4>
+      <p>Things without which human and spiritual life collapses. Must be protected above all else. If these fall, society falls.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Level 2 — Hajiyyat</div>
+      <h4>Needs</h4>
+      <p>Things that remove hardship and make life functional — business flexibility, travel concessions, community structures. Not life-or-death, but seriously harmful when absent.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Level 3 — Tahsiniyyat</div>
+      <h4>Beautifications</h4>
+      <p>Things that refine character and civilization — etiquette, excellence, generosity, nobility of conduct. Important but subordinate to the first two levels.</p>
+    </div>
+  </div>
+
+  <h3>The Six Core Objectives</h3>
+
+  <div class="maqasid-grid">
+    <div class="maqasid-card">
+      <div class="mq-icon">🕌</div>
+      <h4>Preservation of Religion (Din)</h4>
+      <div class="mq-questions">Does this protect sincere worship? Preserve access to sound knowledge? Prevent manipulation of religion? Guard against confusion?</div>
+      <div class="mq-modern">Modern concerns: AI religious misinformation, cult-like authority, commercialized spirituality, shallow online religiosity.</div>
+    </div>
+    <div class="maqasid-card">
+      <div class="mq-icon">🫀</div>
+      <h4>Preservation of Life (Nafs)</h4>
+      <div class="mq-questions">Does this protect physical safety? Reduce preventable harm? Support health? Reduce violence?</div>
+      <div class="mq-modern">Modern concerns: vaccines, mental health, workplace safety, environmental harm, war ethics.</div>
+    </div>
+    <div class="maqasid-card">
+      <div class="mq-icon">🧠</div>
+      <h4>Preservation of Intellect ('Aql)</h4>
+      <div class="mq-questions">Does this protect reason and clarity? Prevent addiction? Reduce manipulation? Support education?</div>
+      <div class="mq-modern">Modern concerns: algorithmic addiction, attention economy, drugs, misinformation, propaganda.</div>
+    </div>
+    <div class="maqasid-card">
+      <div class="mq-icon">👨‍👩‍👧</div>
+      <h4>Preservation of Family (Nasl)</h4>
+      <div class="mq-questions">Does this protect children? Strengthen responsibility? Preserve trust between spouses? Reduce exploitation?</div>
+      <div class="mq-modern">Modern concerns: divorce systems, digital pornography, parenting challenges, loneliness, gender confusion.</div>
+    </div>
+    <div class="maqasid-card">
+      <div class="mq-icon">💰</div>
+      <h4>Preservation of Property (Mal)</h4>
+      <div class="mq-questions">Does this protect ownership? Prevent fraud? Preserve fair exchange? Prevent exploitation?</div>
+      <div class="mq-modern">Modern concerns: crypto, interest-based debt, predatory lending, investment apps, data commodification.</div>
+    </div>
+    <div class="maqasid-card">
+      <div class="mq-icon">🛡️</div>
+      <h4>Preservation of Dignity ('Ird)</h4>
+      <div class="mq-questions">Does this protect honor? Prevent humiliation? Preserve privacy? Protect vulnerable people?</div>
+      <div class="mq-modern">Modern concerns: surveillance, online shaming, data privacy, exploitation, systemic racism.</div>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Important Boundary</span>
+    <p>Maqasid cannot be used to override clear, authentic textual evidence. They <em>interpret and apply</em> revelation — they do not replace it. A maqasid argument that contradicts an established text is not sound ijtihād. It is rationalization.</p>
+  </div>
+
+  <div class="exercise-box">
+    <span class="ex-label">📊 Exercise: Maqasid Mapping</span>
+    <p>For any modern issue you're thinking about, fill in this grid before forming any judgment:</p>
+    <pre style="background:var(--parchment);padding:1rem;border-radius:6px;font-size:0.8rem;font-family:'Segoe UI',sans-serif;line-height:2;overflow-x:auto;">
+Religion:   How does this affect faith, worship, access to sound knowledge?
+Life:       How does this affect physical safety and health?
+Intellect:  How does this affect reason, clarity, addiction risk?
+Family:     How does this affect children, spouses, kinship?
+Property:   How does this affect ownership, fairness, exploitation?
+Dignity:    How does this affect honor, privacy, vulnerability?
+
+Primary harm:    [identify the main maqasid threatened]
+Primary benefit: [identify the main maqasid served]
+Level:           Necessity / Need / Beautification
+    </pre>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 7 -->
+<section id="s7">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">7</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>Wisdom in Practice</h2>
+      <div class="session-subtitle">Three Extended Case Studies in Mujtahid-Style Reasoning</div>
+    </div>
+  </div>
+
+  <p>Theory means little without application. The following case studies demonstrate how a mujtahid-style analysis moves through reality, principle, benefit, harm, and judgment — arriving not at a simple "halal/haram" answer but at a <em>layered, conditional, humble</em> judgment.</p>
+
+  <!-- Case 1: AI -->
+  <div class="case-study">
+    <div class="case-header">
+      <h4>Case Study 1: Artificial Intelligence for Religious Teaching</h4>
+      <span class="case-tag">Technology</span>
+    </div>
+    <div class="case-body">
+      <div class="case-row">
+        <div class="cr-label">Question</div>
+        <div class="cr-content">Can AI tools be used to answer Islamic questions or teach religious knowledge?</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Reality</div>
+        <div class="cr-content">AI generates text by statistical pattern — it can hallucinate, fabricate citations, misquote scholars, and speak with false confidence. It has no scholarly chain, no accountability, and no spiritual discipline. It can also summarize, translate, organize, and retrieve information at scale.</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Principles</div>
+        <div class="cr-content">Obligation to preserve truth; prohibition of speaking about Allah without knowledge; importance of reliable scholarly chains; prohibition of deception; the value of spreading beneficial knowledge.</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Benefits</div>
+        <div class="cr-content">Increases access to knowledge for those without scholars nearby; assists with language translation; helps students form better questions; organizes large bodies of text; supports research efficiency.</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Harms</div>
+        <div class="cr-content">False attribution; fabricated hadiths presented as authentic; loss of scholarly chain; overconfidence in unverified content; spiritual shallowness; displacement of qualified scholars; potential for ideological manipulation.</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Judgment</div>
+        <div class="cr-content"><strong>Conditionally permissible as an assistant and research tool.</strong> AI may be used for summarizing, translating, organizing, and supporting learning — but should not function as an independent religious authority. Outputs must be grounded in verifiable sources and supervised by qualified scholarship for serious matters.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case 2: Social Media -->
+  <div class="case-study">
+    <div class="case-header">
+      <h4>Case Study 2: Social Media</h4>
+      <span class="case-tag">Technology / Society</span>
+    </div>
+    <div class="case-body">
+      <div class="case-row">
+        <div class="cr-label">Question</div>
+        <div class="cr-content">Is social media permissible?</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Reality</div>
+        <div class="cr-content">Social media is not one thing. It is a platform capable of communication, education, dawah, community-building, and business — and simultaneously an addiction engine, envy machine, misinformation channel, attention trap, and vehicle for harassment.</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Principles</div>
+        <div class="cr-content">Guarding the tongue; avoiding backbiting; protecting time; preserving modesty; spreading truth; avoiding fitna; maintaining family bonds; preserving intellect.</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Judgment by Use</div>
+        <div class="cr-content">
+          <table style="margin:0;box-shadow:none;">
+            <thead><tr><th>Use</th><th>Likely Evaluation</th></tr></thead>
+            <tbody>
+              <tr><td>Beneficial learning</td><td>Permissible or recommended</td></tr>
+              <tr><td>Family connection</td><td>Permissible</td></tr>
+              <tr><td>Dawah with wisdom</td><td>Potentially recommended</td></tr>
+              <tr><td>Addiction / wasted time</td><td>Disliked or harmful</td></tr>
+              <tr><td>Pornography / harassment</td><td>Prohibited</td></tr>
+              <tr><td>Spreading lies</td><td>Prohibited</td></tr>
+              <tr><td>Ego-display / envy cultivation</td><td>Spiritually dangerous</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Key Insight</div>
+        <div class="cr-content">The mujtahid thinks by <em>function, effect, and intention</em> — not merely by object. "Social media" is not a ruling category. The activity, intention, and effect determine the ruling.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case 3: Investment -->
+  <div class="case-study">
+    <div class="case-header">
+      <h4>Case Study 3: Modern Investment Products</h4>
+      <span class="case-tag">Finance</span>
+    </div>
+    <div class="case-body">
+      <div class="case-row">
+        <div class="cr-label">Question</div>
+        <div class="cr-content">Is this investment product permissible?</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Reality First</div>
+        <div class="cr-content">The mujtahid must understand: What exactly is owned? Is there interest (riba)? Excessive uncertainty (gharar)? Gambling-like speculation (maysir)? Leverage? Who bears the risk? Is the underlying business lawful? Is profit tied to real economic activity or to financial abstraction?</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Maqasid</div>
+        <div class="cr-content">Does this protect property? Prevent exploitation? Distribute risk fairly? Avoid unjust enrichment? Encourage productive economic activity? Concentrate or distribute wealth?</div>
+      </div>
+      <div class="case-row">
+        <div class="cr-label">Judgment</div>
+        <div class="cr-content">The answer depends not on the <em>marketing label</em> but on the actual <em>contract structure and economic reality</em>. An "Islamic investment product" with hidden riba mechanisms is prohibited. A conventional product with genuine asset-backing, risk-sharing, and no interest may be permissible. The name means nothing; the substance determines the ruling.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflect-box">
+    <ul>
+      <li>In each case above, the ruling was conditional, not absolute. Does this feel unsatisfying, or does it feel more honest than a simple yes/no?</li>
+      <li>Which aspects of these analyses would you not have thought to include on your own?</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 8 -->
+<section id="s8">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">8</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Common Pitfalls</h2>
+      <div class="session-subtitle">Eight Mistakes That Turn Reasoning Into Pseudo-Ijtihad</div>
+    </div>
+  </div>
+
+  <p>Knowing the method also means knowing how the method can go wrong. These eight mistakes appear regularly — not only in amateur religious reasoning, but sometimes in scholarship itself. Learning to recognize them is part of the mujtahid's discipline.</p>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 1 — Cherry-Picking Texts</span>
+    <p>Using one verse or hadith while ignoring the whole tradition. This produces rulings that look textually grounded but are actually selective and distorted. The mujtahid must gather the full evidence field before drawing conclusions.</p>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 2 — Ignoring Reality</span>
+    <p>Giving rulings without understanding the actual situation — the mechanisms, the affected people, the psychological dynamics, the economic structures. A technically elegant ruling based on a misunderstood reality may be practically harmful.</p>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 3 — Confusing Personal Preference with Divine Law</span>
+    <p>Saying "Islam says..." when one actually means "I feel..." or "my tradition assumes..." This is among the most dangerous errors — it attributes personal or cultural preference to Allah without evidence.</p>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 4 — Treating Historical Forms as Eternal Principles</span>
+    <p>Confusing the historical clothing, tools, institutions, or customs of a past era with the universal religious objectives those things expressed. The form was context-specific; the principle is what endures.</p>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 5 — Treating Modern Values as Absolute</span>
+    <p>The mirror image of Mistake 4: forcing revelation to conform to current ideological assumptions — whether liberal individualism, progressive politics, techno-utopianism, or nationalism. Revelation interprets modernity; modernity does not interpret revelation.</p>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 6 — Overusing Necessity</span>
+    <p>Turning emergency exceptions into permanent lifestyle permissions. Necessity (darura) is a disciplined legal category with strict conditions — genuine need, no lawful alternative, and limitation to the extent of the need. It is not an all-purpose justification.</p>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 7 — Ignoring Consequences</span>
+    <p>Issuing technically correct but socially destructive judgments without examining downstream effects. A ruling that opens a door to great harm, normalizes exploitation, or creates terrible precedent may be technically valid and practically a disaster.</p>
+  </div>
+
+  <div class="warn-box">
+    <span class="warn-label">⚠️ Mistake 8 — Lack of Spiritual Humility</span>
+    <p>Using knowledge to dominate rather than serve — issuing rulings to win debates, impress audiences, silence critics, or assert authority. Knowledge without taqwa becomes a tool of the ego, and the ego produces distorted reasoning.</p>
+  </div>
+
+  <div class="reflect-box">
+    <ul>
+      <li>Which of these eight mistakes do you observe most frequently in contemporary Islamic discourse?</li>
+      <li>Which mistake feels most personally tempting for you — given your own tendencies and background?</li>
+      <li>Can you think of a historical or contemporary example of each mistake?</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 9 -->
+<section id="s9">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">9</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Formation Path</h2>
+      <div class="session-subtitle">A Seven-Stage Journey from Student to Responsible Scholar</div>
+    </div>
+  </div>
+
+  <p>Mujtahid formation is not a course — it is a <em>life</em>. The following stages describe a long pipeline of development that cannot be rushed. Each stage has its own distinct focus, and advancing before readiness produces scholars who are technically capable but spiritually and intellectually incomplete.</p>
+
+  <p>This is as true of spiritual formation as it is of academic formation. A brilliant student with a dangerous ego should not be advanced quickly. The formation of the heart is not separate from the formation of the mind.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>Stage 1 — Early Formation (Ages 10–14)</h4>
+      <p>Love of Qur'an, basic worship, moral character, curiosity, Arabic exposure. The aim is to form a heart that loves truth — not a mind burdened with legal complexity before it is ready.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Stage 2 — Disciplined Learning (Ages 15–18)</h4>
+      <p>Arabic grammar, basic fiqh, seerah, hadith selections, logic, writing, debate etiquette. Students begin to see that Islamic knowledge has structure.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Stage 3 — Classical Foundations (Undergraduate)</h4>
+      <p>Madhhab-based fiqh, usul al-fiqh, tafsir, hadith methodology, Islamic history, logic, kalam, comparative fiqh. Students encounter genuine scholarly disagreement and learn how scholars reason.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Stage 4 — Advanced Integration (Graduate)</h4>
+      <p>Advanced usul, maqasid, qiyas, legal maxims, fatwa methodology, contemporary issues, research methods, modern disciplines. Students begin applying tradition to complex realities.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Stage 5 — Apprenticeship</h4>
+      <p>Students observe qualified scholars handling real cases — learning when to answer, when not to, how to detect hidden harm, how to communicate gently. This is what books alone cannot teach.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Stage 6 — Supervised Ijtihad Practice</h4>
+      <p>Students write structured opinions under supervision. Case analyses, research papers, comparative fiqh studies, maqasid assessments, and public guidance drafts — all reviewed and critiqued.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Stage 7 — Mature Practice</h4>
+      <p>Only a few reach this level in the full sense. They may contribute to fatwa councils, Islamic ethics boards, scholarly research, and community guidance — still accountable to peer review and scholarly humility.</p>
+    </div>
+  </div>
+
+  <h3>Specialization Tracks</h3>
+  <p>After broad formation, scholars may specialize. No one can master every modern field equally. The following tracks represent areas where Islamic jurisprudence most urgently meets contemporary life:</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-num">Track A</div>
+      <h4>Family & Personal Law</h4>
+      <p>Marriage, divorce, custody, inheritance, abuse, counseling, family psychology, gender ethics.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Track B</div>
+      <h4>Islamic Finance</h4>
+      <p>Contracts, riba, gharar, banking, investment, insurance, fintech, zakat, waqf.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Track C</div>
+      <h4>Bioethics</h4>
+      <p>Medicine, reproduction, genetics, death, disability, mental health, public health.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Track D</div>
+      <h4>Technology & AI Ethics</h4>
+      <p>AI, data, privacy, surveillance, misinformation, digital addiction, algorithmic bias.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Track E</div>
+      <h4>Minority Fiqh</h4>
+      <p>Citizenship, integration, religious freedom, schooling, employment, interfaith relations.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Track F</div>
+      <h4>Spiritual Guidance</h4>
+      <p>Tazkiyah, religious doubt, trauma, meaning-making, pastoral care, spiritual development.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 10 -->
+<section id="s10">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">10</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>The Knowledge Domains</h2>
+      <div class="session-subtitle">What a Mujtahid Must Know — and Why It Is So Difficult</div>
+    </div>
+  </div>
+
+  <p>Why is genuine mujtahid formation so rare and so long? Because it requires simultaneously developing competency in domains that modern academia separates into entirely different faculties. The mujtahid's mind is interdisciplinary by necessity — not by fashion.</p>
+
+  <details>
+    <summary>Qur'anic Knowledge</summary>
+    <div class="details-body">
+      <p>The mujtahid must understand legal verses, ethical principles, prophetic stories, universal values, commands and prohibitions, rhetorical structure, reasons for revelation (asbab al-nuzul), the relationship between general and specific wording, abrogation debates, and interpretive principles. He does not isolate one verse from the Qur'anic worldview — he reads the Qur'an as a coherent moral universe.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Sunnah and Hadith Sciences</summary>
+    <div class="details-body">
+      <p>The mujtahid evaluates authenticity, chains of transmission, textual meaning, and historical context. Crucially, he must distinguish <em>types of Prophetic action</em>: revelation-based legislation, local custom, leadership judgment, personal habit, pedagogical strategy, or temporary response to a specific circumstance. Not every Prophetic action carries the same legal weight — and confusing these categories produces serious distortion.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Classical Arabic Language</summary>
+    <div class="details-body">
+      <p>Because revelation came in Arabic, the mujtahid must understand grammar, morphology, rhetoric, metaphor, idiom, semantic range, pre-Islamic usage, and Qur'anic usage. A single word may carry multiple possible meanings. A ruling may depend on whether a command indicates obligation, recommendation, permission, or contextual instruction. This is not a decorative skill — it is foundational.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Usul al-Fiqh — Legal Methodology</summary>
+    <div class="details-body">
+      <p>The operating system of ijtihād. It teaches how to move from evidence to judgment through principled method. Key concepts: command and prohibition; general and specific; absolute and restricted; apparent and explicit meaning; consensus; analogy; effective cause; legal maxims; conflicting evidences; hierarchy of proofs; certainty and probability. Without usul, reasoning becomes arbitrary — impressive-sounding but structurally unsound.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Fiqh al-Waqi' — Understanding Modern Reality</summary>
+    <div class="details-body">
+      <p>A mujtahid who does not understand contemporary economics, psychology, technology, medicine, law, and social structures is operating with an incomplete picture of what he is judging. A ruling on artificial intelligence requires understanding how AI generates text. A ruling on medical ethics requires medical expertise. This is not about replacing Islamic knowledge — it is about understanding the reality that Islamic knowledge must address.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Spiritual and Ethical Formation</summary>
+    <div class="details-body">
+      <p>The knowledge domains above are necessary but insufficient. The mujtahid must also cultivate: truthfulness (in its full dimensions — not lying, not exaggerating, not hiding relevant facts, not pretending certainty); justice (hearing both sides, protecting the weak, not favoring one's own group); and awareness of the diseases of the heart — arrogance, envy, love of fame, greed, ostentation, tribalism, harshness, self-righteousness. These are not moral decorations. They are epistemological conditions.</p>
+    </div>
+  </details>
+
+  <h3>Skill Levels — Where Are You Now?</h3>
+
+  <div class="skill-level">
+    <h4>Beginner</h4>
+    <p>Can distinguish personal opinion from ijtihād. Can identify basic textual evidence. Can recognize maqasid. Can avoid simplistic binary answers. Knows when to say "I don't know."</p>
+  </div>
+  <div class="skill-level">
+    <h4>Intermediate</h4>
+    <p>Can analyze benefits and harms. Can identify analogies. Can distinguish form from principle. Understands differences among scholars and why they disagree. Can map modern issues to classical categories.</p>
+  </div>
+  <div class="skill-level advanced">
+    <h4>Advanced</h4>
+    <p>Can evaluate conflicting evidences. Can identify effective causes. Uses legal maxims fluently. Balances maqasid. Incorporates expert knowledge from other fields. Produces nuanced, context-sensitive judgments.</p>
+  </div>
+  <div class="skill-level master">
+    <h4>Master</h4>
+    <p>Possesses deep textual mastery, usul competence, spiritual maturity, social intelligence, legal reasoning, and humility — together. Can guide communities responsibly. Understands the weight of the trust they carry.</p>
+  </div>
+
+  <div class="reflect-box">
+    <ul>
+      <li>Honestly: at what level are you currently? What is the gap between where you are and where you want to be?</li>
+      <li>Which knowledge domain is your strongest? Which is most underdeveloped?</li>
+      <li>What would it take for you to take the next step — practically, not theoretically?</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- SESSION 11 -->
+<section id="s11">
+  <div class="session-header">
+    <div class="session-badge"><span class="num">11</span><span>Session</span></div>
+    <div class="session-title-block">
+      <h2>Daily Practice</h2>
+      <div class="session-subtitle">Building the Mujtahid Mindset Into Your Daily Rhythm</div>
+    </div>
+  </div>
+
+  <p>Formation does not happen only in classrooms or books. It happens in the daily discipline of attention — how you read, how you ask questions, how you engage disagreement, how you practice the methods on real situations. Here is a practical framework for building mujtahid-style thinking into ordinary life.</p>
+
+  <h3>The Daily Discipline</h3>
+
+  <div class="exercise-box">
+    <span class="ex-label">📅 One Question Per Day</span>
+    <p>Pick one real-life issue each day — not from a textbook, but from your actual life. Then work through this short analysis:</p>
+    <ol>
+      <li>What is the <strong>reality</strong> of this situation? What do I actually know about it?</li>
+      <li>What <strong>principle</strong> applies from Islamic teaching?</li>
+      <li>What are the <strong>benefits</strong>?</li>
+      <li>What are the <strong>harms</strong>?</li>
+      <li>What does <strong>wisdom</strong> require?</li>
+      <li>What does <strong>taqwa</strong> require — if Allah were watching this reasoning process right now?</li>
+    </ol>
+    <p style="margin-top:0.8rem;font-size:0.83rem;color:var(--text-light);font-family:'Segoe UI',sans-serif;">This builds disciplined judgment over time. Not theoretical knowledge — practical wisdom.</p>
+  </div>
+
+  <h3>Suggested Training Exercises</h3>
+
+  <details>
+    <summary>Exercise 1 — Text and Principle</summary>
+    <div class="details-body">
+      <p>Choose any Qur'anic command or prohibition. For that single text, write down answers to: (1) What is the surface ruling? (2) What value or harm is being addressed? (3) What human weakness does it target? (4) How might it apply to a situation today? Do not rush. Sit with the text.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Exercise 2 — New Issue Analysis</summary>
+    <div class="details-body">
+      <p>Choose a genuinely modern issue: AI, cryptocurrency, online education, digital privacy, remote work, social media, genetic testing, consumer debt. Walk it through all nine stages: Reality → Text → Principle → Analogy → Benefit → Harm → Maqasid → Conditions → Judgment. Write it out. Compare with a scholar's existing analysis if available.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Exercise 3 — Competing Values</summary>
+    <div class="details-body">
+      <p>Choose a genuine moral dilemma involving two real values in tension — privacy vs. safety; mercy vs. justice; freedom vs. social harm; truth vs. emotional harm. Write out how a mujtahid would hold both values honestly and order them wisely. Avoid the shortcut of collapsing one value entirely.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Exercise 4 — Identify the 'Illah</summary>
+    <div class="details-body">
+      <p>For five classical prohibitions, write the effective legal cause — not the historical form, not the surface description, but the operative principle that makes the ruling apply. Then identify two or three modern situations where the same 'illah is present. This is the core of analogical reasoning.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Exercise 5 — Comparative Views</summary>
+    <div class="details-body">
+      <p>Find any issue on which classical or contemporary scholars differ. Instead of deciding who is "right," write out: (1) What evidence does View 1 use? What is its strength? Its weakness? (2) Same for View 2. (3) What does the disagreement reveal about underlying methodological differences? (4) Which view seems stronger to you, and why?</p>
+    </div>
+  </details>
+
+  <h3>Rhythm of Practice</h3>
+
+  <table>
+    <thead><tr><th>Frequency</th><th>Practice</th></tr></thead>
+    <tbody>
+      <tr><td>Daily</td><td>Qur'an with linguistic attention, Arabic reading, short self-accounting (muhasabah), one question analysis</td></tr>
+      <tr><td>Weekly</td><td>Case lab exercise, hadith reading with context, group discussion or debate practice, service activity</td></tr>
+      <tr><td>Monthly</td><td>Written opinion on a real question, peer critique session, half-day spiritual retreat, community observation</td></tr>
+      <tr><td>Yearly</td><td>Research paper, oral examination, service project, portfolio review, character review, specialization planning</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- INNER CHECKLIST -->
+<section id="checklist">
+  <div class="session-header">
+    <div class="session-badge"><span>☐</span></div>
+    <div class="session-title-block">
+      <h2>The Inner Checklist</h2>
+      <div class="session-subtitle">What to Ask Yourself Before You Speak on Any Religious Matter</div>
+    </div>
+  </div>
+
+  <p>Before giving any judgment — however confident you feel — the mujtahid runs through this inner audit. It takes only a few moments, but it prevents many preventable errors. Print this. Post it. Return to it.</p>
+
+  <div class="checklist-section">
+    <h4>📚 Knowledge</h4>
+    <ul>
+      <li>Do I genuinely understand what is being asked?</li>
+      <li>Do I know the relevant texts, not just the convenient ones?</li>
+      <li>Do I know the scholarly debate around this issue?</li>
+      <li>Do I understand the actual reality of the situation, not just a description of it?</li>
+    </ul>
+  </div>
+
+  <div class="checklist-section">
+    <h4>⚙️ Method</h4>
+    <ul>
+      <li>Am I using sound usul, or am I reasoning from intuition alone?</li>
+      <li>Have I identified the effective cause rather than the historical form?</li>
+      <li>Am I respecting the hierarchy of evidence?</li>
+      <li>Am I distinguishing certainty from probability — and communicating that honestly?</li>
+    </ul>
+  </div>
+
+  <div class="checklist-section">
+    <h4>⚖️ Ethics</h4>
+    <ul>
+      <li>Who may be harmed by this judgment?</li>
+      <li>Who may be exploited or silenced by this judgment?</li>
+      <li>What is the public consequence if many people follow this ruling?</li>
+      <li>Does this preserve justice — not just technical correctness?</li>
+    </ul>
+  </div>
+
+  <div class="checklist-section">
+    <h4>🌿 Spiritual State</h4>
+    <ul>
+      <li>Am I responding to truth — or reacting to ego, fear, or social pressure?</li>
+      <li>Am I seeking popularity or validation?</li>
+      <li>Am I afraid of people rather than aware of Allah?</li>
+      <li>Am I about to attribute something to Allah that I am not certain about?</li>
+    </ul>
+  </div>
+
+  <div class="checklist-section">
+    <h4>🗣️ Communication</h4>
+    <ul>
+      <li>Is this the right time and place to speak?</li>
+      <li>Is this the right audience for this level of complexity?</li>
+      <li>Is my wording as clear and honest as possible?</li>
+      <li>Am I indicating my confidence level — or pretending certainty I don't have?</li>
+    </ul>
+  </div>
+
+  <div class="pullquote">
+    The deepest question of a mujtahid is not merely: "What is legally correct?" It is: "What judgment most faithfully reflects divine guidance, protects creation, preserves human dignity, removes harm, cultivates virtue, and leads people closer to truth?"
+  </div>
+</section>
+
+<div class="ornamental-divider">✦ ✦ ✦</div>
+
+<!-- CLOSING -->
+<section id="closing">
+  <div class="session-header">
+    <div class="session-badge"><span>◈</span></div>
+    <div class="session-title-block">
+      <h2>The Journey Forward</h2>
+      <div class="session-subtitle">A Final Word for the Seeker</div>
+    </div>
+  </div>
+
+  <p>You have come to the end of this guide — but only to the beginning of the practice. The ideas here are not meant to be understood once and filed away. They are meant to become a <em>lens</em> through which you read, observe, and reason about the world you live in.</p>
+
+  <p>Islamic intellectual history has always contained disagreement — because scholars differed in method, in weighting, in assumptions, and in their understanding of reality. That diversity became part of the tradition itself. Not every scholar achieved the ideal equally. Some became overly rigid; some became overly political; some became disconnected from reality; some overcorrected in the other direction. The ideal remains the standard precisely because it is difficult.</p>
+
+  <h3>The Summary Formula</h3>
+
+  <div class="formula-box">
+    <div class="formula-title">The Mujtahid's Chain of Reasoning</div>
+    <div class="formula-chain">
+      <span class="fc-item">Question</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Reality</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Revelation</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Language</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Usul</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Precedent</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">'Illah</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Maqasid</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Benefit/Harm</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Context</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Consequences</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Judgment</span>
+      <span class="fc-arrow">→</span>
+      <span class="fc-item">Humble Communication</span>
+    </div>
+  </div>
+
+  <p>Or, in a single sentence that a master mujtahid might speak to a student:</p>
+
+  <div class="pullquote">
+    See reality clearly. Read revelation faithfully. Reason methodically. Weigh consequences wisely. Speak humbly before Allah.
+    <div class="attribution">— The mujtahid's practice in five movements</div>
+  </div>
+
+  <h3>What Ijtihad Truly Is</h3>
+  <p>Ijtihād is not only a legal skill. It is an intellectual discipline, a moral responsibility, a spiritual trust, and a civilizational art. The person who walks this path with sincerity carries something precious — and something dangerous. Used faithfully, it is one of the greatest services a human being can render to their community. Used carelessly, it can cause generational harm.</p>
+
+  <p>The goal is not merely to answer: <em>"Is it halal or haram?"</em></p>
+  <p>The deeper goal is to answer: <em>"What judgment best preserves divine guidance, human dignity, justice, mercy, wisdom, and spiritual flourishing — in this specific reality, for these specific people, at this specific moment in history?"</em></p>
+
+  <p>May Allah grant you the clarity to see, the courage to reason honestly, and the humility to always return the trust to Him.</p>
+
+  <div class="principle-box" style="margin-top:2.5rem;">
+    <span class="arabic">اللهم أرنا الحق حقاً وارزقنا اتباعه، وأرنا الباطل باطلاً وارزقنا اجتنابه</span>
+    <div class="translation">"O Allah, show us the truth as truth and grant us the ability to follow it, and show us falsehood as falsehood and grant us the ability to avoid it."</div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <div class="footer-quote">"Stable principles + changing realities + disciplined reasoning + spiritual responsibility."</div>
+  <p>The Mujtahid's Path — A Comprehensive Formation Guide</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;">Based on the classical tradition of ijtihād and usul al-fiqh · For educational purposes · Consult qualified scholars for binding guidance</p>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('sidebar').classList.remove('open');
+    });
+  });
+
+  // Active sidebar highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('#sidebar a');
+
+  function onScroll() {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 80) current = sec.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+
+</body>
+</html>
