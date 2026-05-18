@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islam in China: Civilization, Synthesis, and Mutual Influence | Yasir Bilgin</title>
+
+  <!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400;700&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── Design Tokens ─────────────────────────────────────────── */
+    :root {
+      --ink:        #1a1410;
+      --ink-soft:   #3d3025;
+      --ink-muted:  #6b5a47;
+      --parchment:  #faf6ef;
+      --parchment2: #f3ece0;
+      --parchment3: #e8dece;
+      --gold:       #b5892a;
+      --gold-light: #d4a94a;
+      --gold-pale:  #f0e0b0;
+      --rust:       #8b3a2a;
+      --teal:       #2a5c5a;
+      --teal-light: #3a8280;
+      --border:     rgba(181,137,42,0.25);
+      --border-strong: rgba(181,137,42,0.55);
+
+      --font-display: 'Cinzel', 'Trajan Pro', Georgia, serif;
+      --font-body:    'Cormorant Garamond', 'Palatino Linotype', Georgia, serif;
+      --font-ui:      'Lato', system-ui, sans-serif;
+
+      --max-w: 860px;
+      --max-w-wide: 1080px;
+    }
+
+    /* ─── Reset & Base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 1.82;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Progress Bar ───────────────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── TOC Overlay ────────────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(26,20,16,0.6);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(5px);
+    }
+    .toc-panel {
+      background: var(--ink);
+      color: var(--parchment);
+      width: min(380px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.5rem 2rem 3rem;
+      border-left: 1px solid var(--border-strong);
+      animation: slideIn 0.22s ease-out;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(40px); opacity: 0; }
+      to   { transform: translateX(0);    opacity: 1; }
+    }
+    .toc-close {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--parchment2);
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.35rem 0.7rem;
+      border-radius: 3px;
+      float: right;
+      font-family: var(--font-ui);
+      transition: background 0.15s;
+    }
+    .toc-close:hover { background: rgba(255,255,255,0.1); }
+    .toc-panel h3 {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin: 2rem 0 1.4rem;
+      clear: both;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .toc-list a {
+      display: block;
+      padding: 0.7rem 0;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--parchment2);
+      text-decoration: none;
+      transition: color 0.15s, padding-left 0.15s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .toc-list a.toc-main {
+      font-weight: 500;
+      color: var(--parchment);
+      font-size: 1.08rem;
+    }
+    .toc-list a:hover { color: var(--gold-light); padding-left: 0.5rem; }
+    .toc-list a.toc-sub { font-size: 0.94rem; color: rgba(240,224,176,0.7); padding-left: 1rem; }
+
+    /* ─── Article Header ─────────────────────────────────────────── */
+    .article-header {
+      position: sticky;
+      top: 62px;
+      z-index: 50;
+      background: rgba(250,246,239,0.93);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 48px;
+    }
+    .site-name {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .read-time {
+      font-family: var(--font-ui);
+      font-size: 0.73rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+    }
+    .toc-btn {
+      background: var(--ink);
+      color: var(--parchment);
+      border: none;
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.42rem 1.1rem;
+      cursor: pointer;
+      border-radius: 2px;
+      min-height: 32px;
+      transition: background 0.15s;
+    }
+    .toc-btn:hover { background: var(--ink-soft); }
+
+    /* ─── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+      display: block;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5.5vw, 3.8rem);
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--rust); }
+
+    .hero-sub {
+      font-family: var(--font-body);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-style: italic;
+      color: var(--ink-muted);
+      max-width: 600px;
+      margin: 0 auto 2.4rem;
+      line-height: 1.65;
+    }
+
+    /* Geometric ornament */
+    .hero-ornament {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 2rem;
+      opacity: 0.55;
+    }
+
+    .byline-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--parchment);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .byline-text { text-align: left; }
+    .byline-name {
+      display: block;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+    .byline-meta {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.03em;
+    }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border-strong);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    /* ─── Article Body ───────────────────────────────────────────── */
+    .article-body {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4.5rem 2.5rem 9rem;
+    }
+
+    /* ─── Major Sections ─────────────────────────────────────────── */
+    .major-section {
+      margin-bottom: 5.5rem;
+      scroll-margin-top: 120px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.7rem;
+      border-bottom: 1px solid var(--gold-pale);
+      padding-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 1.8rem;
+      letter-spacing: 0.01em;
+    }
+    h2 em { font-style: italic; color: var(--rust); }
+
+    h3.sub-heading {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      margin: 2.8rem 0 1rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .sh-num {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    p { margin-bottom: 1.5rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ─── Drop cap ───────────────────────────────────────────────── */
+    .drop-cap::first-letter {
+      font-family: var(--font-display);
+      font-size: 4.2rem;
+      font-weight: 400;
+      line-height: 0.8;
+      float: left;
+      margin: 0.15em 0.12em 0 0;
+      color: var(--rust);
+    }
+
+    /* ─── Pull Quotes ────────────────────────────────────────────── */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      margin: 3rem 0 3rem -2rem;
+      padding: 1.2rem 1.8rem;
+      background: var(--parchment2);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
+
+    /* ─── Tables ─────────────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin: 2.5rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.97rem;
+      font-family: var(--font-body);
+    }
+    thead tr {
+      background: var(--ink);
+      color: var(--parchment);
+    }
+    thead th {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.1rem;
+      text-align: left;
+      font-weight: 400;
+    }
+    tbody tr:nth-child(even) { background: var(--parchment2); }
+    tbody tr:hover { background: var(--gold-pale); transition: background 0.15s; }
+    tbody td {
+      padding: 0.8rem 1.1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    tbody td:first-child { font-weight: 500; color: var(--rust); }
+
+    /* ─── Figure Cards ───────────────────────────────────────────── */
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .figure-card {
+      border: 1px solid var(--border);
+      background: var(--parchment2);
+      padding: 1.4rem 1.5rem 1.5rem;
+      position: relative;
+    }
+    .figure-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--gold);
+    }
+    .figure-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--rust);
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.02em;
+    }
+    .figure-card .figure-dates {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+    .figure-card p {
+      font-size: 0.97rem;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* ─── Concept Boxes ──────────────────────────────────────────── */
+    .concept-box {
+      border: 1px solid var(--border-strong);
+      background: linear-gradient(135deg, var(--parchment2), var(--parchment));
+      padding: 2rem 2.2rem;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+    .concept-box::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid var(--border);
+      pointer-events: none;
+    }
+    .concept-box h4 {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .concept-box p { font-size: 1rem; color: var(--ink-soft); margin-bottom: 0.8rem; }
+    .concept-box p:last-child { margin-bottom: 0; }
+
+    /* ─── Two-Stream Intro Box ───────────────────────────────────── */
+    .streams-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    @media (max-width: 560px) { .streams-grid { grid-template-columns: 1fr; } }
+    .stream-card {
+      background: var(--ink);
+      color: var(--parchment);
+      padding: 1.8rem 1.8rem 2rem;
+    }
+    .stream-card .sc-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .stream-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--parchment);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.03em;
+    }
+    .stream-card p { font-size: 0.97rem; line-height: 1.7; color: rgba(240,236,224,0.82); margin: 0; }
+
+    /* ─── Study Pathway ──────────────────────────────────────────── */
+    .pathway-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .pathway-card {
+      border-top: 3px solid var(--gold);
+      padding: 1.4rem 1.5rem;
+      background: var(--parchment2);
+    }
+    .pathway-card h4 {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+    .pathway-card ul {
+      list-style: none;
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: var(--ink-soft);
+    }
+    .pathway-card ul li::before {
+      content: '— ';
+      color: var(--gold);
+    }
+
+    /* ─── Art Form Cards ─────────────────────────────────────────── */
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .art-card {
+      border: 1px solid var(--border);
+      padding: 1.6rem;
+      background: var(--parchment);
+    }
+    .art-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+    }
+    .art-card p { font-size: 0.97rem; color: var(--ink-soft); line-height: 1.65; margin: 0; }
+
+    /* ─── Section Divider ────────────────────────────────────────── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin: 4rem 0 3rem;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-strong);
+    }
+    .section-divider svg { flex-shrink: 0; opacity: 0.55; }
+
+    /* ─── Summary Box ────────────────────────────────────────────── */
+    .summary-box {
+      background: var(--ink);
+      color: var(--parchment);
+      padding: 3rem 3.5rem;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .summary-box::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border: 1px solid rgba(181,137,42,0.2);
+      border-radius: 50%;
+    }
+    .summary-box::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 220px; height: 220px;
+      border: 1px solid rgba(181,137,42,0.12);
+      border-radius: 50%;
+    }
+    .summary-box p {
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(250,246,239,0.92);
+      position: relative;
+      z-index: 1;
+      margin: 0;
+    }
+    .summary-box p strong { color: var(--gold-light); font-style: normal; }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--parchment2);
+    }
+    .footer-logo {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .footer-copy {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .hero { padding: 3.5rem 1.4rem 2.5rem; }
+      .summary-box { padding: 2rem 1.8rem; }
+      .article-header { padding: 0 1rem; }
+    }
+    @media (max-width: 480px) {
+      .read-time { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC Overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close"
+              onclick="document.getElementById('tocOverlay').classList.remove('open')">✕ Close</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-main">I. Historical Overview</a></li>
+        <li><a href="#s1-1" class="toc-sub">1.1 Routes of Arrival</a></li>
+        <li><a href="#s1-2" class="toc-sub">1.2 The Two Major Streams</a></li>
+        <li><a href="#s2" class="toc-main">II. How Chinese Culture Shaped Islam</a></li>
+        <li><a href="#s2-1" class="toc-sub">2.1 The Ḥan Kitāb Tradition</a></li>
+        <li><a href="#s2-2" class="toc-sub">2.2 Mosque Architecture</a></li>
+        <li><a href="#s2-3" class="toc-sub">2.3 Sīnī Calligraphy</a></li>
+        <li><a href="#s2-4" class="toc-sub">2.4 Social Ethics</a></li>
+        <li><a href="#s3" class="toc-main">III. How Islam Shaped Chinese Civilization</a></li>
+        <li><a href="#s4" class="toc-main">IV. Major Muslim Communities</a></li>
+        <li><a href="#s5" class="toc-main">V. Distinct Art Forms</a></li>
+        <li><a href="#s6" class="toc-main">VI. Important Figures</a></li>
+        <li><a href="#s6-a" class="toc-sub">6.A Scholars &amp; Thinkers</a></li>
+        <li><a href="#s6-b" class="toc-sub">6.B Explorers &amp; Travelers</a></li>
+        <li><a href="#s6-c" class="toc-sub">6.C Administrators &amp; Statesmen</a></li>
+        <li><a href="#s6-d" class="toc-sub">6.D Military &amp; Resistance</a></li>
+        <li><a href="#s6-e" class="toc-sub">6.E Literary Figures</a></li>
+        <li><a href="#s6-f" class="toc-sub">6.F Artists &amp; Calligraphers</a></li>
+        <li><a href="#s6-g" class="toc-sub">6.G Modern Public Figures</a></li>
+        <li><a href="#s7" class="toc-main">VII. Key Literary &amp; Intellectual Works</a></li>
+        <li><a href="#s8" class="toc-main">VIII. Themes of Mutual Influence</a></li>
+        <li><a href="#s9" class="toc-main">IX. Study Pathway</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Article Sub-Header -->
+  <header class="article-header">
+    <a class="site-name" href="/">Yasir Bilgin</a>
+    <div class="header-right">
+      <span class="read-time">35 min read</span>
+      <button class="toc-btn"
+              onclick="document.getElementById('tocOverlay').classList.add('open')">
+        Contents
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-eyebrow">Civilization &amp; Culture</span>
+
+    <!-- Geometric ornament SVG -->
+    <svg class="hero-ornament" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="5" y="5" width="50" height="50" stroke="#b5892a" stroke-width="1"/>
+      <rect x="12" y="12" width="36" height="36" stroke="#b5892a" stroke-width="0.75" transform="rotate(45 30 30)"/>
+      <circle cx="30" cy="30" r="8" stroke="#b5892a" stroke-width="1"/>
+      <line x1="30" y1="5" x2="30" y2="22" stroke="#b5892a" stroke-width="0.75"/>
+      <line x1="30" y1="38" x2="30" y2="55" stroke="#b5892a" stroke-width="0.75"/>
+      <line x1="5" y1="30" x2="22" y2="30" stroke="#b5892a" stroke-width="0.75"/>
+      <line x1="38" y1="30" x2="55" y2="30" stroke="#b5892a" stroke-width="0.75"/>
+    </svg>
+
+    <h1>Islam in China:<br><em>Civilization, Synthesis,<br>and Mutual Influence</em></h1>
+    <p class="hero-sub">From Silk Road merchants to Han Kitāb philosophers, from Sīnī calligraphy to Uyghur muqam — how two great civilizations have shaped each other across fourteen centuries.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">2026 · Islam &amp; World Civilizations</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <!-- ─── Section I: Historical Overview ─────────────────────── -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>Historical <em>Overview</em></h2>
+
+      <p class="drop-cap">Islam reached China through multiple overlapping channels — trade, diplomacy, military service, and the centuries-long movement of peoples along the Silk Road. Muslim merchants, soldiers, scholars, administrators, and artisans arrived from Arabia, Persia, Central Asia, and Turkic regions over several centuries, beginning in earnest from the seventh century onward. Over generations, many settled, married locally, adopted Chinese language, and formed distinct Muslim communities whose descendants remain part of China's fabric to this day.</p>
+
+      <h3 id="s1-1" class="sub-heading"><span class="sh-num">1.1</span>Routes of Arrival</h3>
+      <p>The earliest documented contacts date to the Tang dynasty (618–907 CE), when Arab and Persian merchants established themselves in maritime trading cities such as Guangzhou, Quanzhou, and Yangzhou, and when Muslim soldiers served in imperial armies. The famous Arabic source <em>Akhbār al-Ṣīn wa'l-Hind</em> (c. 851 CE), attributed to Sulaymān al-Tājir, provides the earliest surviving eyewitness account of these merchant communities in China. Overland contact intensified through the Mongol period (Yuan dynasty, 1271–1368), when Central Asian Muslims were brought in large numbers as administrators, merchants, scientists, and craftsmen — a phase that dramatically expanded the Muslim presence into the interior of the country, including Yunnan, Shaanxi, and Henan.</p>
+      <p>Maritime trade via the Indian Ocean also played a decisive role. The port of Quanzhou (Zaytūn in Arabic sources) became one of the great cosmopolitan hubs of the medieval world, and its stone inscriptions in Arabic, Persian, and Tamil still survive as testimony to a thriving Muslim mercantile community. By the Ming dynasty (1368–1644), generations of intermarriage and cultural absorption had produced a recognizably Chinese-speaking Muslim population.</p>
+
+      <h3 id="s1-2" class="sub-heading"><span class="sh-num">1.2</span>The Two Major Streams</h3>
+      <p>Any serious engagement with Islam in China must begin by distinguishing two very different experiences:</p>
+
+      <div class="streams-grid">
+        <div class="stream-card">
+          <span class="sc-num">I</span>
+          <h4>Hui Islam</h4>
+          <p>Chinese-speaking Muslims, culturally shaped by Han Chinese language, Confucian ethics, Chinese architecture, and local social life. The Hui experience shows how Islam became Chinese: adopted, adapted, and deeply internalized through a process of organic civilizational synthesis.</p>
+        </div>
+        <div class="stream-card">
+          <span class="sc-num">II</span>
+          <h4>Uyghur &amp; Turkic Islam</h4>
+          <p>Turkic-speaking Muslims in Xinjiang and surrounding regions, culturally closer to Central Asia, Persianate-Islamic literature, Sufi shrine traditions, and the oasis cities of the Silk Road. Their experience shows how Central Asian Islamic civilization existed within — and sometimes in tension with — the Chinese imperial and modern state.</p>
+        </div>
+      </div>
+
+      <p>This distinction matters profoundly. The Hui and the Uyghurs are not simply two names for the same thing; they represent two civilizational trajectories that share a faith but inhabit very different cultural worlds. Conflating them is among the most common errors in popular writing about Islam in China.</p>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section II: Chinese Culture's Influence on Islam ───── -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>How Chinese Culture <em>Shaped Islam</em></h2>
+
+      <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>The Ḥan Kitāb Tradition</h3>
+      <p>Perhaps the most intellectually remarkable development was the emergence of the <strong>Ḥan Kitāb</strong> (漢克塔布, "Chinese-language books") tradition — a body of Islamic writing in which Hui scholars systematically explained Islam using the vocabulary and conceptual frameworks of Neo-Confucian philosophy. This was not superficial borrowing. It was a rigorous intellectual project, spanning the seventeenth through nineteenth centuries, that sought to demonstrate the deep compatibility of Islamic metaphysics, ethics, and prophecy with the highest traditions of Chinese moral philosophy.</p>
+
+      <p>The project was animated by a pressing social reality: Hui Muslims were deeply integrated into Chinese-speaking society and needed an Islam that could speak to educated Chinese contemporaries — Confucian literati who might otherwise dismiss Islam as foreign barbarism. The Ḥan Kitāb scholars argued, on the contrary, that Islam articulated the same ultimate truths as the Confucian sages, albeit with greater clarity and completeness.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Islamic Concept</th>
+              <th>Arabic/Persian Term</th>
+              <th>Confucian Bridge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Divine Unity</td>
+              <td>Tawḥīd (توحيد)</td>
+              <td>Tàijí (太極) — the Supreme Ultimate, the primordial principle</td>
+            </tr>
+            <tr>
+              <td>Sacred Law / Propriety</td>
+              <td>Sharīʿa / Adab</td>
+              <td>Lǐ (禮) — ritual propriety and moral order</td>
+            </tr>
+            <tr>
+              <td>Spiritual Excellence</td>
+              <td>Iḥsān (إحسان)</td>
+              <td>Rén (仁) — benevolence, cultivated virtue</td>
+            </tr>
+            <tr>
+              <td>The Perfect Human</td>
+              <td>Insān al-Kāmil</td>
+              <td>Jūnzǐ (君子) — the noble person, the Confucian exemplar</td>
+            </tr>
+            <tr>
+              <td>Prophetic Ethics</td>
+              <td>Akhlāq al-Nabī</td>
+              <td>Shèng (聖) — sagehood and moral exemplarity</td>
+            </tr>
+            <tr>
+              <td>Divine Names</td>
+              <td>Asmāʾ Allāh al-Ḥusnā</td>
+              <td>Dào (道) — the Way, the source and ground of all being</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>This produced a genuinely original school of Sino-Islamic philosophy, sophisticated enough to engage both the Islamic scholarly tradition and the Chinese intellectual mainstream simultaneously. Its major figures — Wang Daiyu, Ma Zhu, Liu Zhi, and Ma Dexin — represent some of the most creative religious thinkers of their era.</p>
+
+      <h3 id="s2-2" class="sub-heading"><span class="sh-num">2.2</span>Mosque Architecture</h3>
+      <p>The visual history of Chinese mosque architecture is one of the most striking examples of cultural synthesis in the Islamic world. Many classical Hui mosques — particularly those built before the twentieth century — bear little surface resemblance to mosques in the Middle East or Central Asia. In place of the Persian-Ottoman vocabulary of domes, pointed arches, and tall cylindrical minarets, Chinese mosque builders adopted the aesthetic language of imperial Chinese architecture: sweeping tiled rooflines with upturned eaves, timber-frame construction, enclosed courtyard sequences, carved screen walls, ornamental garden elements, and decorative ceramic work. Arabic and Persian calligraphy was incorporated into this framework, appearing on wooden plaques, stone inscriptions, and tiled panels.</p>
+
+      <div class="concept-box">
+        <h4>The Great Mosque of Xīʿān (清真大寺)</h4>
+        <p>Founded in 742 CE during the Tang dynasty, rebuilt extensively under the Ming and Qing, the Great Mosque of Xīʿān (Qīngzhēn Dàsì) is the paradigmatic example of Chinese mosque architecture. Spread across four courtyards totaling approximately 12,000 square metres, it looks — from the outside — like a classic Chinese temple complex. Yet everything within it is oriented toward Mecca: the prayer hall, the miḥrāb, the minbar, and every Qurʾānic inscription.</p>
+        <p>The tower often described as its "minaret" is in fact a pagoda-form structure — a Chinese architectural type adapted to the function of calling the faithful to prayer. The synthesis is so complete that the building cannot be read through either a purely Chinese or a purely Islamic lens alone; it requires both simultaneously.</p>
+      </div>
+
+      <p>Similar examples can be found across Shaanxi, Gansu, Ningxia, Yunnan, and Henan. The Dongguan Mosque in Xining, Qinghai, and the Niujie Mosque in Beijing (built c. 996 CE under the Liao dynasty) are among the other historic specimens of this tradition. In recent decades, some Chinese Muslims have deliberately opted for Middle Eastern architectural styles, and the Chinese state has at times pressured mosques to remove "Arabized" elements as part of its "sinicization of religion" (宗教中国化) campaign — a policy that raises serious questions about the difference between organic cultural synthesis and state-mandated identity.</p>
+
+      <h3 id="s2-3" class="sub-heading"><span class="sh-num">2.3</span>Sīnī Calligraphy</h3>
+      <p>Both Chinese civilization and Islamic civilization place calligraphy at the apex of visual art. In China, the calligrapher's brush is an instrument of moral cultivation, and mastery of brushwork is considered a mark of refined character. In Islam, the primacy of the Qurʾānic word gives Arabic calligraphy its sacred dimension — the script carries divine speech and is therefore the highest of arts. When these two calligraphic traditions encountered each other, they produced <strong>Sīnī calligraphy</strong> (ṣīniyya, 中国书法), a distinctive art form in which Arabic letters are rendered using Chinese brush technique.</p>
+      <p>The result is unmistakable: Arabic letters rendered with the flowing, tapered, energetic strokes of the Chinese brush, often with ink-wash gradations, compositions following Chinese pictorial conventions, and the use of seals and vertical orientation. The Museum für Islamische Kunst in Berlin holds important examples, and contemporary masters such as Ḥājj Nūr al-Dīn Mi Guangjiāng (نور الدين米广建) have brought this tradition to international recognition.</p>
+
+      <h3 id="s2-4" class="sub-heading"><span class="sh-num">2.4</span>Social Ethics and Community Life</h3>
+      <p>Hui Muslims also interpreted Islamic ethical life through values deeply embedded in Chinese society: filial piety (<em>xiào</em> 孝), respect for teachers and elders, social harmony, educational achievement, and ritual propriety. The mosque functioned not only as a place of worship but as a community centre, a school, a place of adjudication, and a node of economic solidarity — much as the temple and the scholarly hall functioned in broader Chinese society. This gave Hui Islam a distinctively communal, family-centered, and pedagogically serious character that persists today.</p>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section III: Islam's Influence on China ─────────────── -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>How Islam <em>Shaped Chinese Civilization</em></h2>
+
+      <p>The influence ran in both directions. Islam did not simply absorb Chinese forms; it left durable marks on Chinese civilization across trade, knowledge, cuisine, visual culture, and minority identity.</p>
+
+      <p><strong>Trade and global connectivity.</strong> Muslim merchants were among the principal brokers of China's connection to the Indian Ocean world, the Persian Gulf, Arabia, East Africa, and Mediterranean trade networks. They introduced Chinese goods — silk, porcelain, paper, gunpowder — to the Islamic world and brought back frankincense, glass, ivory, cotton, and astronomical knowledge. The famous Muslim admiral Zhèng Hé (鄭和, 1371–1433) embodied this maritime dimension. His seven voyages between 1405 and 1433, commanding fleets of up to 300 vessels and 28,000 men, reached Southeast Asia, India, Arabia, and East Africa, and represented the most ambitious peacetime maritime enterprise of the pre-modern world.</p>
+
+      <p><strong>Science and technology transfer.</strong> During the Yuan dynasty, Muslim astronomers — including Jamāl al-Dīn, who presented a Persian astronomical compendium to Kublai Khan — made significant contributions to the imperial bureau of astronomy. The "Western instruments" Jamāl al-Dīn introduced included a terrestrial globe, an armillary sphere, and an astrolabe. Muslim mathematicians, physicians, and engineers also participated actively in the Yuan bureaucratic and intellectual world.</p>
+
+      <p><strong>Halal cuisine.</strong> Chinese Muslim food is one of the most visible and enduring contributions of Islam to Chinese daily life. Hui cuisine adapts Chinese techniques and ingredients — noodles, dumplings, braising, wok cooking — to ḥalāl requirements, replacing pork with beef and lamb and building a distinctive culinary vocabulary. Lánzhōu hand-pulled beef noodles (兰州拉面) are now one of the most ubiquitous fast foods across China, eaten by people of all backgrounds, with thousands of restaurants bearing the phrase "Qīngzhēn" (清真, "pure and true" — the Chinese rendering of ḥalāl) in their names. This is a case where an Islamic dietary requirement produced a massive, widely adopted culinary innovation.</p>
+
+      <p><strong>Visual and material culture.</strong> Arabic script, Qurʾānic inscriptions, geometric ornamentation, and mosque architecture added new visual vocabularies to Chinese cities and material culture. Sīnī calligraphy contributed a hybrid art form that belongs simultaneously to both traditions. Qurʾān manuscripts produced in China often used Sīnī script within decorative frames that draw on Chinese manuscript aesthetics — floral borders, coloured inks, cloud motifs.</p>
+
+      <div class="pull-quote">
+        "The Hui demonstrate that a community can remain genuinely Muslim while becoming genuinely Chinese — that religious identity and civilizational belonging are not zero-sum."
+      </div>
+
+      <p><strong>Minority identity structures.</strong> Islam gave certain Chinese communities a basis for cohesive social organization and distinct identity that was not primarily ethnic but religious: shared dietary rules, shared ritual calendar, shared architectural space (the mosque), shared educational institutions (the mosque school, <em>jīngtáng jiàoyù</em> 經堂教育), and shared networks of intermarriage. This model of minority community organization has been remarkably resilient across dynasties, upheavals, and modernization.</p>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section IV: Communities ────────────────────────────── -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>Major Muslim <em>Communities</em></h2>
+
+      <h3 class="sub-heading"><span class="sh-num">4.1</span>Hui Muslims</h3>
+      <p>The Hui (回族) are the largest Muslim ethnic group in China, numbering approximately 11–12 million according to the 2020 census, though some estimates of the Muslim population as a whole — including Hui who may not be formally registered under that category — are higher. They are widely dispersed across the country, with concentrations in Ningxia Hui Autonomous Region, Gansu, Qinghai, Yunnan, Henan, Shaanxi, and major cities. Chinese is their mother tongue, and they are culturally very close to Han Chinese in many respects while remaining distinct through religion, dietary practice, and community organization. The Ḥan Kitāb intellectual tradition, Sīnī calligraphy, and classical Chinese-style mosques are all primarily Hui cultural contributions.</p>
+
+      <h3 class="sub-heading"><span class="sh-num">4.2</span>Uyghur Muslims</h3>
+      <p>The Uyghurs (维吾尔族) are a Turkic-speaking people concentrated primarily in the Xinjiang Uyghur Autonomous Region. They number approximately 12 million according to official figures, making them broadly comparable in size to the Hui. Uyghur culture is distinctly Central Asian in character: the Uyghur language is a Turkic language written in a Perso-Arabic script; Sufi shrine (<em>mazar</em>) pilgrimage traditions have deep roots; the historic oasis cities of Kashgar, Khotan (Hotan), Yarkand, Turfan, Kucha, and Aqsu were important nodes of the Central Asian Islamic world; and the Uyghur muqam musical tradition represents a synthesis of Turkic, Persian, and local musical heritages. The Uyghur experience differs profoundly from the Hui experience in its relationship with the Chinese state, its linguistic distinctness, and its connection to the broader Turkic and Central Asian world.</p>
+
+      <h3 class="sub-heading"><span class="sh-num">4.3</span>Other Muslim Communities</h3>
+      <p>China officially recognizes ten Muslim ethnic minorities. Beyond the Hui and Uyghurs, these include the Kazakhs, Kyrgyz, Uzbeks, Tatars, and Tajiks (Turkic and Iranian-related peoples of Xinjiang and neighboring areas) and the Dongxiang, Salar, and Bonan (smaller communities in Gansu and Qinghai, speaking Mongolic and Turkic languages and having distinct histories of conversion and cultural formation). Each of these communities has its own history, language, and relationship to Islamic practice.</p>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section V: Art Forms ────────────────────────────────── -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>Distinct <em>Art Forms</em></h2>
+
+      <div class="art-grid">
+        <div class="art-card">
+          <h4>Sīnī Calligraphy</h4>
+          <p>Arabic script rendered with Chinese brush technique. Combines Islamic devotional phrases — Allāh, Bismillāh, the Shahāda, Qurʾānic verses — with Chinese ink aesthetics: tapered strokes, wash gradations, seal stamps, and vertical composition. Can appear on paper, mosque walls, wooden plaques, ceramics, stone, and metalwork.</p>
+        </div>
+        <div class="art-card">
+          <h4>Chinese-Style Mosque Architecture</h4>
+          <p>Prayer halls oriented toward Mecca, housed within Chinese architectural bodies: sweeping tiled rooflines, timber framing, courtyard sequences, carved screen walls, pagoda-form minarets. The mosque as a Chinese building with an Islamic soul.</p>
+        </div>
+        <div class="art-card">
+          <h4>Sino-Islamic Qurʾān Manuscripts</h4>
+          <p>Qurʾān manuscripts produced in China using Sīnī script, coloured inks, cloud-and-floral decorative borders, and Chinese manuscript design conventions. Sacred text honoured through a Chinese visual sensibility.</p>
+        </div>
+        <div class="art-card">
+          <h4>Scriptural Pictorial Art (Jīngzì Huà)</h4>
+          <p>A devotional art form in which Arabic Qurʾānic script is arranged so that the composition suggests a Chinese character, landscape, animal, or plant. Bridges Islamic textual piety with Chinese pictorial-calligraphic imagination.</p>
+        </div>
+        <div class="art-card">
+          <h4>Uyghur Muqam</h4>
+          <p>A large-scale classical musical tradition encompassing twelve suites (on-ikki muqam), each containing dozens of pieces of poetry, melody, rhythm, and dance. A civilizational archive of Turkic, Persian, and local musical heritage, recognized by UNESCO as Intangible Cultural Heritage in 2005.</p>
+        </div>
+        <div class="art-card">
+          <h4>Uyghur Craft &amp; Material Culture</h4>
+          <p>Carpet weaving in geometric Islamic patterns, wood carving on mosque and domestic furniture, the doppa cap (a square embroidered skullcap), knife-making traditions in Yengisar, and bazaar architecture that reflects the spatial aesthetics of Central Asian Islamic urbanism.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section VI: Figures ────────────────────────────────── -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>Important <em>Figures</em></h2>
+
+      <h3 id="s6-a" class="sub-heading"><span class="sh-num">A</span>Scholars and Thinkers</h3>
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h4>Wang Daiyu 王岱舆</h4>
+          <div class="figure-dates">c. 1570 – c. 1660 · Hui Scholar</div>
+          <p>Generally regarded as the founder of the Ḥan Kitāb tradition. His <em>Zhèngjiào Zhēnquán</em> (正教真詮, "True Exposition of the Orthodox Teaching") was the first major attempt to systematically explain Islamic theology in Chinese Neo-Confucian vocabulary. He drew heavily on the philosophical categories of Zhāng Zài and Wáng Yángmíng to articulate Islamic concepts of God, creation, and moral cultivation.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Ma Zhu 马注</h4>
+          <div class="figure-dates">1640–1711 · Yunnan Hui Scholar</div>
+          <p>Author of <em>Qīngzhēn Zhǐnán</em> (清真指南, "The Compass of Islam"), one of the major works of Chinese Islamic thought. Ma Zhu was also notable for having traveled to Arabia and Persia to deepen his Islamic learning before returning to write in Chinese, giving him a perspective that bridged the Arabic and Chinese scholarly worlds.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Liu Zhi 刘智</h4>
+          <div class="figure-dates">c. 1660 – c. 1739 · Hui Philosopher</div>
+          <p>The most systematic and philosophically ambitious of the Ḥan Kitāb scholars. His trilogy — <em>Tiānfāng Xìnglǐ</em> (metaphysics and cosmology), <em>Tiānfāng Diǎnlǐ</em> (Islamic ritual and law), and <em>Tiānfāng Zhìshèng Shílù</em> (biography of the Prophet) — constitutes the fullest expression of Sino-Islamic philosophical synthesis. He was deeply conversant with Ibn ʿArabī's thought, Sufi cosmology, and Confucian classical texts simultaneously.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Ma Dexin 马德新</h4>
+          <div class="figure-dates">1794–1874 · Hui Scholar &amp; Reformer</div>
+          <p>A pivotal transitional figure who had studied in Mecca and Medina and translated the Qurʾān into Chinese. He sought to bring Chinese Islam into closer alignment with Arabic-language Islamic learning and introduced reform currents influenced by Wahhabi and Naqshbandī ideas he encountered during his pilgrimage. He was also a participant in the Yunnan Muslim rebellion and was executed by Qing authorities.</p>
+        </div>
+      </div>
+
+      <h3 id="s6-b" class="sub-heading"><span class="sh-num">B</span>Explorers and Travelers</h3>
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h4>Zhèng Hé 郑和</h4>
+          <div class="figure-dates">1371–1433/35 · Ming Admiral</div>
+          <p>Born Mǎ Sānbǎo to a Hui Muslim family in Yunnan, Zhèng Hé became the greatest maritime explorer of the pre-modern era. His grandfather and father had made the ḥajj to Mecca, and his Muslim background gave him crucial linguistic and cultural resources for diplomatic engagement with the Islamic world. His seven voyages (1405–1433) commanded the largest wooden ships ever built. The claim — popular but not documented in primary sources — that he "discovered" America is not accepted by mainstream historians.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Ma Huan 马欢</h4>
+          <div class="figure-dates">c. 1380 – c. 1460 · Muslim Traveler</div>
+          <p>A Hui Muslim translator and chronicler who accompanied three of Zhèng Hé's voyages. His <em>Yíng-yá Shènglǎn</em> (瀛涯勝覧, "Overall Survey of the Ocean's Shores," 1433) is one of the most important primary sources for the history of Southeast Asia, India, Arabia, and East Africa in the fifteenth century. He describes in detail the Muslim communities, trade goods, customs, and geography of every port visited.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Fèi Xīn 费信</h4>
+          <div class="figure-dates">b. 1388 · Ming Traveler</div>
+          <p>A participant in four of Zhèng Hé's voyages who wrote <em>Xīng Chá Shèng Lǎn</em> (星槎勝覧, "Triumphant Visions of the Starraft," c. 1436). His account complements Ma Huan's and describes many of the same ports and peoples in the Indian Ocean world.</p>
+        </div>
+      </div>
+
+      <h3 id="s6-c" class="sub-heading"><span class="sh-num">C</span>Administrators and Statesmen</h3>
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h4>Sayyid Ajall Shams al-Dīn ʿUmar</h4>
+          <div class="figure-dates">1211–1279 · Yuan Administrator</div>
+          <p>A Central Asian Muslim administrator of Bukharan origin who served under the Mongol rulers. Appointed governor of Yunnan in 1274, he is credited with introducing Islam systematically to southwest China, establishing the first mosques in Yunnan, developing agriculture and irrigation, and building the administrative infrastructure of the province. His descendants remained prominent in Yunnan for generations. He is revered among Chinese Muslims as a founding ancestor.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Bái Chónggǔi 白崇禧</h4>
+          <div class="figure-dates">1893–1966 · Republican General</div>
+          <p>A prominent Hui Muslim general of the Republic of China (ROC), nicknamed "Small諸葛 Zhūgě" for his strategic brilliance. He was one of the most important military commanders of the Second Sino-Japanese War and a key figure in the Guomindang military establishment. After 1949 he moved to Taiwan with the ROC government, where he remained an influential figure until his death.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Ma Bufang 马步芳</h4>
+          <div class="figure-dates">1903–1975 · Qinghai Warlord</div>
+          <p>A Hui Muslim general and de facto ruler of Qinghai province during the Republican era, belonging to the powerful Ma clique (<em>Mǎ jiā jūn</em>) of Muslim warlords who dominated northwest China. His legacy is deeply contested: celebrated by some Chinese Muslims for maintaining Muslim military power, criticized for severe repression of other Tibetan and Mongolian minorities.</p>
+        </div>
+      </div>
+
+      <h3 id="s6-d" class="sub-heading"><span class="sh-num">D</span>Military and Resistance Figures</h3>
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h4>Dù Wénxiù 杜文秀</h4>
+          <div class="figure-dates">1823–1872 · Panthay Rebel</div>
+          <p>Leader of the Panthay Rebellion (1856–1873), the major Hui Muslim uprising in Yunnan during the Qing dynasty. He established a rebel state centered at Dali and proclaimed himself Sultān, ruling for over a decade. The rebellion was a response to escalating anti-Muslim discrimination, resource conflicts, and massacres perpetrated by local officials and Han militia. It was eventually suppressed after massive casualties on all sides.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Ma Hualong 马化龙</h4>
+          <div class="figure-dates">d. 1871 · Sufi Leader</div>
+          <p>The paramount spiritual and political leader of the Jāhriyya Naqshbandī Sufi order in northwest China, based at Jīnjībǎo in Ningxia. He led the Hui uprising in Shaanxi and Gansu (1862–1873), one of the most devastating conflicts of the Qing dynasty, resulting in enormous casualties and the near-complete destruction of Muslim communities across northwest China. He surrendered in 1871 and was executed.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Yaʿqūb Beg (Yettishar)</h4>
+          <div class="figure-dates">1820–1877 · Kokandi Commander</div>
+          <p>A Kokandi military officer of Tajik or Uzbek origin who established control over most of Xinjiang (which he called Yettishahr, "Land of Seven Cities") during the chaos of the Qing Muslim rebellions. Recognized diplomatically by the Ottoman Empire and Britain, he was not himself a Chinese Muslim but a Central Asian figure who exploited the Qing vacuum. His state was destroyed by Zuǒ Zōngtáng's reconquest in 1877.</p>
+        </div>
+      </div>
+
+      <h3 id="s6-e" class="sub-heading"><span class="sh-num">E</span>Literary and Intellectual Figures</h3>
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h4>Yūsuf Khāṣṣ Ḥājib</h4>
+          <div class="figure-dates">fl. 1069–1070 · Chagatai Turkic Author</div>
+          <p>Author of <em>Qutadghu Bilig</em> (القتدغو بيلغ, "Wisdom that Brings Happiness"), composed in Kashgar in 1069–1070. Written in the Qarakhanid Turkic dialect, it is one of the earliest major works of Turkic-Islamic literature — a sophisticated "mirror for princes" text that synthesizes Islamic political ethics, Persianate courtly culture, and Turkic social values. It exists in three manuscript copies and has been enormously influential on Turkic literary identity.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Maḥmūd al-Kāshgharī</h4>
+          <div class="figure-dates">c. 1005 – c. 1102 · Kashgar Lexicographer</div>
+          <p>Author of the <em>Dīwān Lughāt al-Turk</em> (ديوان لغات الترك, "Compendium of Turkic Languages"), completed in Baghdad around 1072–1074 and presented to the Abbasid Caliph. This encyclopaedic work documents the Turkic languages, dialects, proverbs, poetry, geography, and customs of the steppe and oasis world with extraordinary ethnographic richness. It is the single most important primary source for early Turkic linguistic and cultural history.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Abdurehim Ötkür</h4>
+          <div class="figure-dates">1923–1995 · Uyghur Novelist &amp; Poet</div>
+          <p>One of the most celebrated Uyghur writers of the twentieth century. His historical novels — notably <em>Iz</em> ("Traces," 1985) and <em>Oyghan</em> ("Awakening," 1986) — explore Uyghur history, identity, and consciousness under successive political pressures. He was imprisoned during the Cultural Revolution. His poetry and prose are central to modern Uyghur cultural memory.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Zordun Sabir</h4>
+          <div class="figure-dates">1937–1987 · Uyghur Novelist</div>
+          <p>Author of <em>Anayurt</em> ("Homeland"), widely regarded as a foundational novel of modern Uyghur literature. His work engages questions of land, identity, displacement, and the relationship between the Uyghur people and their history — themes that became more politically charged in subsequent decades.</p>
+        </div>
+      </div>
+
+      <h3 id="s6-f" class="sub-heading"><span class="sh-num">F</span>Artists and Calligraphers</h3>
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h4>Ḥājj Nūr al-Dīn Mi Guangjiāng</h4>
+          <div class="figure-dates">b. 1964 · Sīnī Calligrapher</div>
+          <p>The best-known living master of Sīnī calligraphy. Born in Shandong to a Hui Muslim family, he trained in both Chinese brush calligraphy and Arabic script, eventually developing a distinctive synthesis. His work has been exhibited internationally, and the Museum für Islamische Kunst in Berlin has featured him as an exemplar of the living Sīnī tradition. He has also taught the form widely, helping to preserve and transmit it to a new generation.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Uyghur Muqam Traditions</h4>
+          <div class="figure-dates">Living Tradition</div>
+          <p>The performers and preservers of the Twelve Muqam are central cultural figures in Uyghur civilization. The tradition was at risk of being lost in the twentieth century but was partially documented under the PRC's cultural preservation programs in the 1950s, though some scholars note that standardization in this process altered regional variations. UNESCO inscribed the Uyghur Muqam as Intangible Cultural Heritage of Humanity in 2005.</p>
+        </div>
+      </div>
+
+      <h3 id="s6-g" class="sub-heading"><span class="sh-num">G</span>Modern Public Figures</h3>
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h4>Ilham Tohti 伊力哈木·土赫提</h4>
+          <div class="figure-dates">b. 1969 · Uyghur Economist</div>
+          <p>A Uyghur economics professor at Minzu University of China and founder of the website Uighurbiz.net, which he used to publish analyses of Uyghur-Han economic relations and minority policy. He consistently advocated for dialogue and genuine autonomy rather than separatism. Sentenced to life imprisonment in 2014 on charges of "separatism." He has received numerous international human rights awards, including the Martin Ennals Award (2016) and the Sakharov Prize (2019).</p>
+        </div>
+        <div class="figure-card">
+          <h4>Rebiya Kadeer 热依拉·卡德尔</h4>
+          <div class="figure-dates">b. 1946 · Uyghur Businesswoman &amp; Activist</div>
+          <p>A self-made businesswoman who became one of the wealthiest people in Xinjiang and was elected to the Chinese People's Political Consultative Conference, before her arrest in 1999 on charges of leaking state secrets. After release in 2005 under US pressure, she became president of the World Uyghur Congress and a prominent diaspora activist. She is celebrated in the Uyghur diaspora and viewed as a separatist by the Chinese government.</p>
+        </div>
+        <div class="figure-card">
+          <h4>Dilraba Dilmurat 迪麗熱巴</h4>
+          <div class="figure-dates">b. 1992 · Uyghur Actress</div>
+          <p>One of China's most prominent actresses, with a large following across East and Southeast Asia. Her career represents the complex position of Uyghur cultural identity within Chinese mainstream entertainment — simultaneously celebrated for her background and subjected to questions about cultural authenticity and political silence. She is evidence that Uyghur identity is not absent from Chinese public culture, even if that presence is often carefully managed.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section VII: Literary Works ───────────────────────── -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Section VII</span>
+      <h2>Key Literary and <em>Intellectual Works</em></h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Work</th>
+              <th>Author</th>
+              <th>Date</th>
+              <th>Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dīwān Lughāt al-Turk</td>
+              <td>Maḥmūd al-Kāshgharī</td>
+              <td>1072–1074</td>
+              <td>Encyclopaedic compendium of Turkic languages, poetry, and geography. The foundational source for Turkic cultural history.</td>
+            </tr>
+            <tr>
+              <td>Qutadghu Bilig</td>
+              <td>Yūsuf Khāṣṣ Ḥājib</td>
+              <td>1069–1070</td>
+              <td>Major Turkic-Islamic "mirror for princes" work. Synthesizes Islamic ethics with Persianate courtly culture in Chagatai Turkic verse.</td>
+            </tr>
+            <tr>
+              <td>Yíng-yá Shènglǎn</td>
+              <td>Ma Huan</td>
+              <td>1433</td>
+              <td>Primary travel account of Zhèng Hé's voyages. Priceless source for the history of the Indian Ocean world in the fifteenth century.</td>
+            </tr>
+            <tr>
+              <td>Zhèngjiào Zhēnquán</td>
+              <td>Wang Daiyu</td>
+              <td>c. 1642</td>
+              <td>First systematic work of the Ḥan Kitāb tradition. Explains Islamic theology using Neo-Confucian vocabulary.</td>
+            </tr>
+            <tr>
+              <td>Qīngzhēn Zhǐnán</td>
+              <td>Ma Zhu</td>
+              <td>1681</td>
+              <td>"The Compass of Islam." A comprehensive guide to Muslim belief and practice for Chinese readers.</td>
+            </tr>
+            <tr>
+              <td>Tiānfāng Xìnglǐ</td>
+              <td>Liu Zhi</td>
+              <td>c. 1704</td>
+              <td>Islamic metaphysics and human nature explained through Confucian and Sufi frameworks. The summit of Ḥan Kitāb philosophy.</td>
+            </tr>
+            <tr>
+              <td>Tiānfāng Diǎnlǐ</td>
+              <td>Liu Zhi</td>
+              <td>c. 1710</td>
+              <td>Explains Islamic ritual, sacred law, and religious practice in Chinese terms. The most accessible of Liu Zhi's major works.</td>
+            </tr>
+            <tr>
+              <td>Tiānfāng Zhìshèng Shílù</td>
+              <td>Liu Zhi</td>
+              <td>1724</td>
+              <td>Chinese biography of the Prophet Muḥammad. Presents the Prophet as a Confucian sage-king as well as a divine messenger.</td>
+            </tr>
+            <tr>
+              <td>On-Ikki Muqam</td>
+              <td>Traditional / Compiled</td>
+              <td>Various</td>
+              <td>The Twelve Muqam of the Uyghurs. A civilizational archive of poetry, music, and spiritual heritage. UNESCO Intangible Heritage.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section VIII: Themes ───────────────────────────────── -->
+    <section id="s8" class="major-section">
+      <span class="section-label">Section VIII</span>
+      <h2>Themes of <em>Mutual Influence</em></h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Chinese Influence on Islam</th>
+              <th>Islamic Influence on China</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Philosophy</td>
+              <td>Islam explained through Confucian and Neo-Confucian language</td>
+              <td>Chinese thought gained Islamic metaphysical vocabulary and Sufi cosmological frameworks</td>
+            </tr>
+            <tr>
+              <td>Architecture</td>
+              <td>Mosques adopted Chinese spatial design, rooflines, and materials</td>
+              <td>Chinese cityscapes gained mosque complexes, minarets, and Islamic ornamental vocabularies</td>
+            </tr>
+            <tr>
+              <td>Writing &amp; Art</td>
+              <td>Arabic script written with Chinese brush; Qurʾān manuscripts in Chinese aesthetic frames</td>
+              <td>Chinese calligraphy expanded into Sīnī Arabic forms; new devotional art traditions created</td>
+            </tr>
+            <tr>
+              <td>Cuisine</td>
+              <td>Chinese techniques and ingredients adapted to ḥalāl requirements</td>
+              <td>Ḥalāl restaurants and beef/lamb dishes became widespread features of Chinese urban life</td>
+            </tr>
+            <tr>
+              <td>Literature</td>
+              <td>Islamic theological and philosophical texts written in Chinese</td>
+              <td>Chinese literature gained Muslim travel accounts, religious works, and Turkic-Islamic classics</td>
+            </tr>
+            <tr>
+              <td>Statecraft</td>
+              <td>Muslims served dynasties and adopted Chinese bureaucratic culture</td>
+              <td>Muslim administrators shaped entire provinces; Yuan dynasty ran partly on Central Asian expertise</td>
+            </tr>
+            <tr>
+              <td>Trade</td>
+              <td>Muslims adapted to Chinese market structures and commercial law</td>
+              <td>China entered wider Islamic trade networks spanning the Indian Ocean to the Mediterranean</td>
+            </tr>
+            <tr>
+              <td>Identity</td>
+              <td>Hui became Chinese-speaking, Confucian-inflected Muslims</td>
+              <td>China became home to diverse Muslim peoples with distinct civilizational contributions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>One theme deserves particular emphasis: the distinction between <strong>organic cultural synthesis</strong> and <strong>state-enforced assimilation</strong>. The Ḥan Kitāb tradition, Sīnī calligraphy, and Chinese-style mosques are products of the former — communities making their own creative choices about how to inhabit two cultural worlds simultaneously. Current Chinese government policies promoting the "sinicization of religion" (宗教中国化) are a different matter: they involve administrative pressure, architectural modification, regulation of religious education, and in the case of Xinjiang, a surveillance and detention system that has drawn widespread international condemnation. Conflating these two processes would be a serious analytical error.</p>
+    </section>
+
+    <div class="section-divider">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" stroke="#b5892a" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ─── Section IX: Study Pathway ─────────────────────────── -->
+    <section id="s9" class="major-section">
+      <span class="section-label">Section IX</span>
+      <h2>A <em>Study Pathway</em></h2>
+
+      <div class="pathway-grid">
+        <div class="pathway-card">
+          <h4>Beginner</h4>
+          <ul>
+            <li>Hui and Uyghur Muslims — the two major streams</li>
+            <li>Great Mosque of Xīʿān — architecture as synthesis</li>
+            <li>Zhèng Hé — Islam and Chinese maritime power</li>
+            <li>Sīnī calligraphy — the meeting of two art traditions</li>
+            <li>Ḥalāl Chinese cuisine — Islam in everyday life</li>
+            <li>Silk Road — how Islam reached China</li>
+          </ul>
+        </div>
+        <div class="pathway-card">
+          <h4>Intermediate</h4>
+          <ul>
+            <li>Ḥan Kitāb tradition — Sino-Islamic philosophy</li>
+            <li>Wang Daiyu, Ma Zhu, Liu Zhi — the major thinkers</li>
+            <li>Chinese mosque architecture — regional variations</li>
+            <li>Ma Huan's travel writing — China and the Indian Ocean</li>
+            <li>Sayyid Ajall and Yunnan — Islam in the Yuan</li>
+            <li>Hui vs Uyghur — two very different experiences</li>
+          </ul>
+        </div>
+        <div class="pathway-card">
+          <h4>Advanced</h4>
+          <ul>
+            <li>Islam and Neo-Confucian moral philosophy</li>
+            <li>Qing Muslim rebellions — causes and consequences</li>
+            <li>Sufi orders in northwest China — Naqshbandī, Qādirī</li>
+            <li>Uyghur literature, muqam, and cultural memory</li>
+            <li>Modern Chinese religious policy and its debates</li>
+            <li>Diaspora Uyghur and Hui communities worldwide</li>
+            <li>Organic synthesis vs state sinicization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Summary Box ────────────────────────────────────────── -->
+    <div class="summary-box">
+      <p>Islam in China produced one of the world's most extraordinary cultural syntheses: <strong>a Chinese-speaking, Confucian-inflected, mosque-centred Hui Islam</strong>; a <strong>Turkic-Central Asian Uyghur Islam</strong> rooted in the oasis civilizations of the Silk Road; and a shared artistic world where <strong>Arabic revelation, Chinese brushwork, Silk Road commerce, ḥalāl cuisine, and imperial Chinese civilization</strong> met, negotiated, and transformed one another across fourteen centuries. To study it is to study not the margins but the very heart of how civilizations encounter and enrich each other.</p>
+    </div>
+
+  </article>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial. All rights reserved.</span>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progressBar');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+      }, { passive: true });
+    }
+
+    // Smooth scroll for TOC links accounting for sticky headers
+    document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        document.getElementById('tocOverlay').classList.remove('open');
+        setTimeout(() => {
+          const offset = 62 + 48 + 16;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }, 200);
+      });
+    });
+  </script>
+</body>
+</html>
