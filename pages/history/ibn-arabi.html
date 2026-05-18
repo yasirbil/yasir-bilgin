@@ -581,24 +581,25 @@
 
     /* ─── NUMBERED STATEMENTS ────────────────────────────── */
     .statements-list {
-      counter-reset: statement;
       list-style: none;
+      counter-reset: statement;
     }
     .statements-list li {
       counter-increment: statement;
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 0.75rem;
-      align-items: baseline;
+      display: grid;
+      grid-template-columns: 2.2rem 1fr;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.75;
     }
     .statements-list li::before {
       content: counter(statement, decimal-leading-zero);
       font-family: var(--font-display);
       font-size: 0.7rem;
       color: var(--gold);
-      flex-shrink: 0;
-      width: 2rem;
       letter-spacing: 0.05em;
+      padding-top: 0.28em;
+      line-height: 1;
     }
 
     /* ─── READING PATH ───────────────────────────────────── */
@@ -1915,21 +1916,21 @@
       <h2>The Core in 15 Statements</h2>
 
       <ol class="statements-list">
-        <li>God alone has absolute Being (<em>Wujūd</em>); all else exists by receiving existence from Him.</li>
+        <li>God alone has absolute Being (Wujūd); all else exists by receiving existence from Him.</li>
         <li>The divine names seek self-disclosure — this is the metaphysical root of creation.</li>
         <li>Creation is real, but its reality is borrowed, relational, and manifestational — not self-subsistent.</li>
-        <li>The world is a vast mirror in which divine names become visible (<em>tajallī</em>).</li>
+        <li>The world is a vast mirror in which divine names become visible (tajallī).</li>
         <li>Every being discloses some divine names; no being fully exhausts any single name.</li>
-        <li>God is absolutely beyond all things (<em>tanzīh</em>) and yet near to all through His names (<em>tashbīh</em>).</li>
+        <li>God is absolutely beyond all things (tanzīh) and yet near to all through His names (tashbīh).</li>
         <li>The human being is the most comprehensive mirror — constitutively capable of reflecting all names.</li>
         <li>The Perfect Human actually realizes this capacity — fully, balancedly, without distortion.</li>
         <li>The Prophet Muḥammad ﷺ is the supreme historical realization of this perfection.</li>
         <li>Revelation — Qurʾān and Sunna — is the primary frame; mystical insight illuminates its depth, never contradicts it.</li>
-        <li>Reason is valid but structurally limited; direct knowing (<em>kashf</em>, <em>dhawq</em>, <em>taḥqīq</em>) reaches further.</li>
-        <li>The Imaginal World (<em>ʿĀlam al-Khayāl</em>) is a real ontological domain — not mere subjective fantasy.</li>
-        <li>The <em>Barzakh</em> principle — the isthmus between opposites — governs all levels of reality.</li>
+        <li>Reason is valid but structurally limited; direct knowing (kashf, dhawq, taḥqīq) reaches further.</li>
+        <li>The Imaginal World (ʿĀlam al-Khayāl) is a real ontological domain — not mere subjective fantasy.</li>
+        <li>The Barzakh principle — the isthmus between opposites — governs all levels of reality.</li>
         <li>Spiritual development means purifying perception to see existence as continuous divine disclosure.</li>
-        <li>The highest human station is not egoic union with God, but complete servanthood (<em>ʿubūdiyya</em>) before God.</li>
+        <li>The highest human station is not egoic union with God, but complete servanthood (ʿubūdiyya) before God.</li>
       </ol>
 
       <blockquote style="margin-top:2.5rem;">
