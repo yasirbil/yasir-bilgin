@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="Zone X: Frontier Nations — Boundary Zones & Frontier Regions" />
+  <meta property="og:description" content="Zone X: Frontier Nations — Boundary Zones & Frontier Regions" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/civilization/Geopolitics/frontier-nations.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Zone X: Frontier Nations — Boundary Zones & Frontier Regions" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/civilization/Geopolitics/frontier-nations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>Zone X: Frontier Nations — Boundary Zones & Frontier Regions | Yasir Bilgin</title>
+
+  <!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --bg:          #0e0d0b;
+      --bg2:         #141310;
+      --bg3:         #1c1a16;
+      --surface:     #232018;
+      --border:      #2e2b24;
+      --border2:     #3a3628;
+      --gold:        #c9a84c;
+      --gold-dim:    #8a6f2e;
+      --gold-pale:   #e8d49a;
+      --amber:       #d4782a;
+      --rust:        #a04030;
+      --sage:        #4a6b5a;
+      --slate:       #4a5568;
+      --text:        #e8e0d0;
+      --text-dim:    #9a9080;
+      --text-faint:  #5a5248;
+      --accent:      #c9a84c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── Progress bar ── */
+    #progressBar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--amber));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(10,9,7,0.7);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(6px);
+    }
+    .toc-panel {
+      width: min(360px, 90vw);
+      height: 100vh;
+      background: var(--bg2);
+      border-left: 1px solid var(--border2);
+      padding: 2.5rem 2rem;
+      overflow-y: auto;
+      animation: slideIn 0.28s ease;
+    }
+    @keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+    .toc-close {
+      background: none;
+      border: 1px solid var(--border2);
+      color: var(--text-dim);
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 1.8rem;
+      font-family: 'DM Mono', monospace;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .toc-close:hover { border-color: var(--gold); color: var(--gold); }
+    .toc-panel h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list a {
+      display: block;
+      padding: 0.75rem 0;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s, padding-left 0.2s;
+    }
+    .toc-list a:hover { color: var(--gold-pale); padding-left: 0.5rem; }
+    .toc-list a.toc-main { color: var(--text); font-weight: 500; font-size: 0.9rem; }
+    .toc-list a.toc-main:hover { color: var(--gold); }
+    .toc-list .toc-sub { padding-left: 1rem; }
+
+    /* ── Article sub-header ── */
+    .article-header {
+      top: 62px;
+      z-index: 50;
+      background: rgba(14,13,11,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 2.5rem;
+      gap: 1rem;
+    
+      position: sticky;
+      background: rgba(14,13,11,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 2.5rem;
+      gap: 1rem;
+    }
+    .article-header .site-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .read-time {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-faint);
+    }
+    .toc-btn {
+      background: transparent;
+      border: 1px solid var(--border2);
+      color: var(--text-dim);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      padding: 0.45rem 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      min-height: 44px;
+    }
+    .toc-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 6rem 2.5rem 4rem;
+      position: relative;
+    }
+    .zone-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      border: 1px solid var(--gold-dim);
+      display: inline-block;
+      padding: 0.3rem 0.9rem;
+      border-radius: 2px;
+      margin-bottom: 1.6rem;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      font-weight: 700;
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-pale); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--text-dim);
+      max-width: 600px;
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dim), var(--amber));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--bg);
+      flex-shrink: 0;
+    }
+    .byline-name { display: block; font-weight: 500; font-size: 0.9rem; color: var(--text); }
+    .byline-meta { font-size: 0.8rem; color: var(--text-faint); }
+    .hero-rule { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ── Article body ── */
+    .article-body { max-width: 860px; margin: 0 auto; padding: 4rem 2.5rem 8rem; }
+    @media (max-width: 720px) {
+      .article-body { padding: 3rem 1.4rem 5rem; }
+    }
+
+    .major-section {
+      margin-bottom: 5rem;
+      scroll-margin-top: 120px;
+    }
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+    }
+    h2 em { font-style: italic; color: var(--gold-pale); }
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 600;
+      color: var(--text);
+      margin: 2.5rem 0 0.9rem;
+    }
+    p { color: var(--text-dim); line-height: 1.8; margin-bottom: 1.1rem; }
+    p strong { color: var(--text); font-weight: 500; }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      margin: 2.5rem 0 2.5rem -1.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--bg2);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--gold-pale);
+      line-height: 1.5;
+    }
+    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
+
+    /* ── Trait cards ── */
+    .trait-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .trait-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold-dim);
+      padding: 1.4rem 1.5rem;
+      border-radius: 2px;
+      transition: border-top-color 0.2s, background 0.2s;
+    }
+    .trait-card:hover { border-top-color: var(--gold); background: var(--bg3); }
+    .trait-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 0.4rem;
+    }
+    .trait-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .trait-card p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--text-dim);
+      margin: 0;
+    }
+
+    /* ── Nation explorer ── */
+    .explorer-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 200px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      padding: 0.6rem 1rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box:focus { border-color: var(--gold); }
+    .search-box::placeholder { color: var(--text-faint); }
+    .filter-group { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border2);
+      color: var(--text-dim);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 0.9rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-height: 36px;
+    }
+    .filter-btn:hover { border-color: var(--gold-dim); color: var(--text); }
+    .filter-btn.active { background: var(--gold-dim); border-color: var(--gold); color: var(--gold-pale); }
+    .results-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      margin-bottom: 1rem;
+    }
+
+    /* ── Nation cards ── */
+    .nations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .nation-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1.4rem 1.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .nation-card:hover { border-color: var(--gold-dim); background: var(--bg3); transform: translateY(-2px); }
+    .nation-card.expanded { border-color: var(--gold); }
+    .nation-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .nation-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .nation-region {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding-top: 0.2rem;
+    }
+    .nation-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0; }
+    .tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+      border: 1px solid;
+    }
+    .tag-religion { color: #a07840; border-color: #5a3e20; background: rgba(90,62,32,0.2); }
+    .tag-empire   { color: #6a8c7a; border-color: #2a4c3a; background: rgba(42,76,58,0.2); }
+    .tag-trade    { color: #8a70b0; border-color: #4a3a70; background: rgba(74,58,112,0.2); }
+    .tag-bloc     { color: #607090; border-color: #304060; background: rgba(48,64,96,0.2); }
+    .tag-ethnic   { color: #a06060; border-color: #604040; background: rgba(96,64,64,0.2); }
+    .tag-geo      { color: #708060; border-color: #405030; background: rgba(64,80,48,0.2); }
+    .nation-desc {
+      font-size: 0.86rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .nation-expanded {
+      display: none;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .nation-card.expanded .nation-expanded { display: block; }
+    .expand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.75rem;
+    }
+    .expand-hint {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-faint);
+      letter-spacing: 0.1em;
+    }
+    .expand-icon { color: var(--gold-dim); font-size: 0.9rem; transition: transform 0.2s; }
+    .nation-card.expanded .expand-icon { transform: rotate(180deg); }
+    .hidden-card { display: none !important; }
+
+    .expanded-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+    @media (max-width: 480px) { .expanded-grid { grid-template-columns: 1fr; } }
+    .expanded-item { }
+    .expanded-item .ei-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--gold-dim);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .expanded-item .ei-val {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    /* ── Strengths / Risks table ── */
+    .sr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    @media (max-width: 560px) { .sr-grid { grid-template-columns: 1fr; } }
+    .sr-col h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+    .sr-col.strengths h4 { color: var(--sage); }
+    .sr-col.risks h4 { color: var(--rust); }
+    .sr-list { list-style: none; }
+    .sr-list li {
+      display: flex;
+      gap: 0.7rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .sr-list li:last-child { border-bottom: none; }
+    .sr-icon { font-size: 0.8rem; margin-top: 0.15rem; flex-shrink: 0; }
+    .sr-col.strengths .sr-icon { color: var(--sage); }
+    .sr-col.risks .sr-icon { color: var(--rust); }
+    .sr-label { font-weight: 500; font-size: 0.88rem; color: var(--text); display: block; margin-bottom: 0.1rem; }
+    .sr-desc { font-size: 0.78rem; color: var(--text-dim); line-height: 1.45; }
+
+    /* ── The Four Instincts ── */
+    .instinct-list { list-style: none; margin: 1.2rem 0 2rem; }
+    .instinct-item {
+      display: flex;
+      gap: 1.2rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .instinct-item:last-child { border-bottom: none; }
+    .instinct-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 2rem;
+      color: var(--gold-dim);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 2.5rem;
+    }
+    .instinct-text .it-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gold-pale);
+      margin-bottom: 0.3rem;
+    }
+    .instinct-text p { font-size: 0.88rem; color: var(--text-dim); margin: 0; line-height: 1.6; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .footer-copy { font-size: 0.78rem; color: var(--text-faint); }
+
+    /* no results */
+    .no-results {
+      display: none;
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-faint);
+      font-style: italic;
+    }
+    .no-results.visible { display: block; }
+  </style>
+  <meta name="description" content="A structured profile of nations and regions located where major civilizations, empires, religions, languages, and geopolitical blocs physically meet —…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Zone X: Frontier Nations — Boundary Zones & Frontier Regions",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2021-08-01",
+  "url": "https://yasirbilgin.com/civilization/Geopolitics/frontier-nations.html",
+  "description": "A structured profile of nations and regions located where major civilizations, empires, religions, languages, and geopolitical blocs physically meet —…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/civilization/" style="color:#7a3b2e;text-decoration:none;">Civilization</a> <span style="opacity:0.5">›</span> <span>Geopolitics</span> <span style="opacity:0.5">›</span> <span>Zone X: Frontier Nations — Boundary Zones & Frontier Regions</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Civilization",
+      "item": "https://yasirbilgin.com/civilization/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Zone X: Frontier Nations — Boundary Zones & Frontier Regions",
+      "item": "https://yasirbilgin.com/civilization/Geopolitics/frontier-nations.html"
+    }
+  ]
+}
+</script>
+
+
+<div id="progressBar"></div>
+
+<!-- TOC overlay -->
+<div class="toc-overlay" id="tocOverlay"
+     onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕ close</button>
+    <h3>Contents</h3>
+    <ul class="toc-list">
+      <li><a href="#s-intro"   class="toc-main">Introduction</a></li>
+      <li><a href="#s-traits"  class="toc-main">Core Characteristics</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Hybrid Identity</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Strategic Importance</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Cultural Creativity</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Chronic Vulnerability</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Borderland Psychology</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Governance Challenges</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Imperial Memory</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Identity Ambiguity</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Local Elites as Balancers</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Trade & Security Paradox</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Religious Pluralism</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Diaspora Connections</a></li>
+      <li><a href="#s-traits"  class="toc-sub">Symbolic Battlegrounds</a></li>
+      <li><a href="#s-explorer" class="toc-main">Nation Explorer</a></li>
+      <li><a href="#s-sr"      class="toc-main">Strengths & Risks</a></li>
+      <li><a href="#s-psych"   class="toc-main">Political Personality</a></li>
+      <li><a href="#s-thesis"  class="toc-main">The Core Thesis</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Article sub-header -->
+
+
+<!-- Hero -->
+<section class="hero">
+  <span class="zone-badge">Zone X</span>
+  <h1>Frontier Nations<br><em>Boundary Zones &amp;<br>Frontier Regions</em></h1>
+  <p class="hero-sub">A structured profile of nations and regions located where major civilizations, empires, religions, languages, and geopolitical blocs physically meet — simultaneously bridges, buffers, battlegrounds, and laboratories of synthesis.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Yasir Bilgin · Civilizational Geography Series · 2026</span>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">18 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+</header>
+
+
+<article class="article-body">
+
+  <!-- Introduction -->
+  <section id="s-intro" class="major-section">
+    <span class="section-label">Introduction</span>
+    <h2>What Is a <em>Frontier Nation?</em></h2>
+    <p>Not all nations are created geographically equal. Most societies sit within a relatively stable civilizational zone, shaped by one dominant tradition — linguistic, religious, imperial, or ethnic. <strong>Frontier nations are different.</strong> They occupy the seams of history: the places where two or more civilizational worlds overlap, compete, and sometimes fuse.</p>
+    <p>The concept of Zone X draws on civilizational geography — the study of how geography shapes cultural, political, and strategic life. Frontier zones are where that shaping is most intense, most layered, and most consequential. They include the Balkans (where Ottoman, Byzantine, and Central European worlds met), Central Asia (the crossroads of steppe, Persian, Chinese, and Islamic civilizations), the Levant (the meeting point of Mediterranean, Arabian, and Mesopotamian worlds), and many more.</p>
+    <p>These regions share a recognizable profile. Thirteen core characteristics define how they form, how they function, and why they so often become the stage on which history's largest dramas play out.</p>
+
+    <div class="pull-quote">"Frontier nations are hybrid, strategic, creative, and vulnerable — they flourish when their complexity is protected, and collapse when larger powers try to simplify them by force."</div>
+  </section>
+
+  <!-- Core Characteristics -->
+  <section id="s-traits" class="major-section">
+    <span class="section-label">Section I</span>
+    <h2>Thirteen <em>Core Characteristics</em></h2>
+    <p>The following traits appear, in varying combinations, across virtually every frontier region in world history. They are not weaknesses to be overcome but defining features of a particular civilizational condition.</p>
+
+    <div class="trait-grid">
+
+      <div class="trait-card">
+        <div class="trait-num">01</div>
+        <h4>Hybrid Identity</h4>
+        <p>Frontier nations carry composite identities — multiple languages, mixed ethnic ancestry, layered religious traditions, and overlapping imperial memories. Their national question is perpetually: <em>"Are we one civilization, another, or a bridge between several?"</em></p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">02</div>
+        <h4>Strategic Importance</h4>
+        <p>Frontier nations control trade routes, mountain passes, straits, energy corridors, and military buffer zones. Because of this, their geography becomes destiny — and they are rarely ignored by great powers. <em>"Our land matters too much to too many outside powers."</em></p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">03</div>
+        <h4>High Cultural Creativity</h4>
+        <p>Where different peoples meet, new cuisines, architectures, literatures, musical forms, and philosophical syntheses emerge. Andalusia, the Silk Road cities, and Ottoman Balkan towns all exemplify this creative surplus. Difference, lived daily, produces innovation.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">04</div>
+        <h4>Chronic Vulnerability</h4>
+        <p>The same diversity that enables creativity opens frontier nations to invasion, partition, proxy wars, ethnic engineering, and competing nationalisms. Outside powers often seek to simplify their complexity — and that simplification is the primary source of violence in these zones.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">05</div>
+        <h4>Borderland Psychology</h4>
+        <p>Frontier peoples become pragmatic, multilingual, and context-sensitive in their identity. A person may feel local at home, religious in family life, national in politics, civilizational in historical memory, and global in economic aspiration — simultaneously. Identity is always situational.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">06</div>
+        <h4>Governance Under Pressure</h4>
+        <p>Governance problems in frontier zones stem not from incapacity but from extraordinary external and internal pressure: divided loyalties, foreign interference, smuggling economies, militarized politics, and disputed legitimacy all strain institutional building.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">07</div>
+        <h4>Memory of Empires</h4>
+        <p>Frontier nations carry memories of multiple empires — sometimes five or six in a single city: a Roman fortress, a Byzantine church, an Ottoman mosque, a Habsburg administrative building, a Soviet housing block. Historical consciousness is never linear; it is always layered.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">08</div>
+        <h4>Identity Ambiguity as Gift &amp; Danger</h4>
+        <p>In stable times, hybrid identity is celebrated as richness. In unstable times, it becomes an accusation: <em>"Which side are you really on?"</em> The tragedy is that natural complexity becomes politically unacceptable precisely when stability is most needed.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">09</div>
+        <h4>Local Elites as Balancers</h4>
+        <p>Frontier leaders survive by balancing competing powers — allying with one empire against another, using external patrons for internal advantage, presenting different identities to different audiences. This produces clever diplomacy, but also accusations of betrayal from all sides.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">10</div>
+        <h4>Trade &amp; Security Paradox</h4>
+        <p>Frontier nations desire openness — their geography makes them natural connectors and brokers. But they also fear domination. They combine commercial cosmopolitanism with strong border consciousness and defensive nationalism. <em>"We prosper through openness, but openness also exposes us."</em></p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">11</div>
+        <h4>Religious &amp; Cultural Pluralism</h4>
+        <p>Frontier regions typically host multiple religious traditions in proximity — Islam and Christianity, Orthodoxy and Catholicism, Buddhism and Islam. When religion is tied to ethnic nationalism, the same diversity that produced tolerance becomes explosive. Diversity itself is not the problem; its militarization is.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">12</div>
+        <h4>Strong Diaspora Connections</h4>
+        <p>Wars, trade, migration, and imperial collapse produce large diasporas. These provide money, lobbying power, and cultural preservation — but diaspora memory sometimes freezes trauma, remembering the homeland not as it is, but as it was at the moment of loss.</p>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-num">13</div>
+        <h4>Symbolic Battlegrounds</h4>
+        <p>Frontier nations become more than themselves. Outsiders project civilizational meanings onto them. Ukraine becomes the symbol of democracy vs. empire; Korea of capitalism vs. communism; Bosnia of coexistence vs. ethnic nationalism. Their tragedy is being forced to carry histories not entirely their own.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Nation Explorer -->
+  <section id="s-explorer" class="major-section">
+    <span class="section-label">Section II</span>
+    <h2>Nation <em>Explorer</em></h2>
+    <p>Browse, search, or filter the primary examples of frontier-type nations and regions. Each entry includes the dominant frontier-type, major civilizational pressures, and a contextual note. Click any card to expand full details.</p>
+
+    <div class="explorer-controls">
+      <input class="search-box" type="search" id="nationSearch"
+             placeholder="Search nations, regions, empires…"
+             oninput="filterNations()">
+      <div class="filter-group" id="filterBtns">
+        <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
+        <button class="filter-btn" data-filter="religion" onclick="setFilter('religion',this)">Religion</button>
+        <button class="filter-btn" data-filter="empire" onclick="setFilter('empire',this)">Empire Borders</button>
+        <button class="filter-btn" data-filter="trade" onclick="setFilter('trade',this)">Trade Routes</button>
+        <button class="filter-btn" data-filter="bloc" onclick="setFilter('bloc',this)">Geopolitical Blocs</button>
+        <button class="filter-btn" data-filter="ethnic" onclick="setFilter('ethnic',this)">Ethnic Mix</button>
+        <button class="filter-btn" data-filter="geo" onclick="setFilter('geo',this)">Strategic Geo</button>
+      </div>
+    </div>
+    <div class="results-count" id="resultsCount"></div>
+
+    <div class="nations-grid" id="nationsGrid">
+
+      <!-- TURKEY -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="empire religion geo ethnic bloc">
+        <div class="nation-card-header">
+          <span class="nation-name">Turkey</span>
+          <span class="nation-region">Anatolia / Near East</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-geo">Strategic Geo</span>
+        </div>
+        <p class="nation-desc">Controls the Bosphorus Strait — the only sea passage between the Black Sea and the Mediterranean — placing Turkey at the nexus of Europe, Asia, and the Middle East.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Civilizational Layers</div>
+              <div class="ei-val">Hittite, Hellenic, Roman, Byzantine, Seljuk, Ottoman, modern Turkish Republic</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Religious Mix</div>
+              <div class="ei-val">Predominantly Sunni Muslim; significant Alevi minority (~15–25%); historically Byzantine Christian, Jewish, Armenian Christian</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Strategic Asset</div>
+              <div class="ei-val">Turkish Straits (Bosphorus &amp; Dardanelles); NATO's southeastern anchor; gateway to Central Asia via Turkic kinship</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Identity Tension</div>
+              <div class="ei-val">East vs. West; Islamic-modern synthesis; post-Ottoman identity vs. secular Kemalism; Kurdish minority (c.15–20% of population)</div>
+            </div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--text-dim);">Turkey is perhaps the clearest living example of a frontier nation: it bridges NATO Europe and the Islamic Middle East, claims both Atatürk's secular revolution and Ottoman civilizational legacy, and sits astride the world's most strategically important waterway. Its domestic politics are perpetually shaped by the tension between these competing self-definitions.</p>
+        </div>
+      </div>
+
+      <!-- BOSNIA -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion empire ethnic">
+        <div class="nation-card-header">
+          <span class="nation-name">Bosnia &amp; Herzegovina</span>
+          <span class="nation-region">Western Balkans</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-ethnic">Ethnic Mix</span>
+        </div>
+        <p class="nation-desc">Where three faiths, three peoples, and two empires (Ottoman and Habsburg) met within a single territory roughly the size of West Virginia. A symbol of both coexistence and its fragility.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Constituent Peoples</div>
+              <div class="ei-val">Bosniaks (Muslim, ~50%), Serbs (Orthodox, ~31%), Croats (Catholic, ~15%) — all South Slavic, differentiated primarily by religion</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Imperial Memories</div>
+              <div class="ei-val">Roman, Byzantine, medieval Bosnian Kingdom, Ottoman (1463–1878), Austro-Hungarian (1878–1918), Yugoslav (1918–1992)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Post-War Structure</div>
+              <div class="ei-val">Dayton Agreement (1995) created two entities: Federation of Bosnia &amp; Herzegovina and Republika Srpska; High Representative retains external oversight powers</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Symbolic Weight</div>
+              <div class="ei-val">The 1990s war made Bosnia a global symbol of ethnic cleansing; the Srebrenica massacre (1995) was ruled genocide by the International Court of Justice</div>
+            </div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--text-dim);">Bosnia is a textbook case of what happens when a frontier society's complexity is militarized into mutually exclusive ethnic nationalisms. For centuries, Sarajevo's mosques, Orthodox churches, Catholic cathedrals, and synagogues stood within blocks of each other. The 1990s war represented an attempt to force this layered reality into the nation-state logic of ethnic purity — with catastrophic results.</p>
+        </div>
+      </div>
+
+      <!-- UKRAINE -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="empire bloc ethnic geo">
+        <div class="nation-card-header">
+          <span class="nation-name">Ukraine</span>
+          <span class="nation-region">Eastern Europe</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-bloc">Geopolitical Blocs</span>
+          <span class="tag tag-geo">Strategic Geo</span>
+        </div>
+        <p class="nation-desc">The largest country entirely within Europe, Ukraine occupies the buffer zone between the Russian sphere and the NATO/EU Western sphere — a position that has defined, and destabilized, its modern history.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Imperial Layers</div>
+              <div class="ei-val">Kyivan Rus, Polish-Lithuanian Commonwealth, Ottoman suzerainty (south), Russian Empire, Austro-Hungarian (Galicia), Soviet Union</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Internal Diversity</div>
+              <div class="ei-val">Ukrainian Orthodox, Ukrainian Greek Catholic, Russian Orthodox; Ukrainian and Russian as dual languages in much of the east and south (pre-2022)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Current Conflict</div>
+              <div class="ei-val">Russia's full-scale invasion began February 24, 2022 following the 2014 annexation of Crimea and Donbas conflict; ongoing as of 2026</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Symbolic Role</div>
+              <div class="ei-val">Has become the global symbol of the contest between liberal democratic order and imperial revisionism</div>
+            </div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--text-dim);">Ukraine's history embodies the frontier nation paradox with unusual clarity. Its western regions (Galicia, Volhynia) were shaped by Polish-Lithuanian and Habsburg rule; its eastern and southern regions by the Russian Empire and Soviet Union. This produced genuine cultural complexity that Russia's imperial logic could not accept as legitimate — demanding instead that Ukraine choose identity, not inhabit multiplicity.</p>
+        </div>
+      </div>
+
+      <!-- LEBANON -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion ethnic empire">
+        <div class="nation-card-header">
+          <span class="nation-name">Lebanon</span>
+          <span class="nation-region">Levant / Eastern Mediterranean</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-ethnic">Ethnic Mix</span>
+          <span class="tag tag-empire">Empire Borders</span>
+        </div>
+        <p class="nation-desc">Eighteen officially recognized religious communities in a country smaller than Connecticut. Lebanon's political system is literally built on confessionalism — governance distributed by sect — making it a living laboratory of managed pluralism and its limits.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Religious Composition</div>
+              <div class="ei-val">Shia Muslim (~27%), Sunni Muslim (~27%), Maronite Christian (~21%), Greek Orthodox (~8%), Druze (~5%), and 13 other recognized communities (no official census since 1932)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Political System</div>
+              <div class="ei-val">Confessional democracy: President must be Maronite Christian, PM Sunni, Speaker of Parliament Shia — a formula from the 1943 National Pact, last formally adjusted at Taif (1989)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">External Patrons</div>
+              <div class="ei-val">France (Maronites), Iran/Syria (Hezbollah/Shia), Saudi Arabia (Sunni), U.S. (state institutions); each community has historically cultivated different foreign patrons</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Crisis Context</div>
+              <div class="ei-val">2019 popular uprising; August 4, 2020 Beirut port explosion (over 200 dead, $15 billion damage); severe economic collapse (2019–ongoing); state near-collapse</div>
+            </div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--text-dim);">Lebanon produced one of the Arab world's most distinctive cosmopolitan cultures — Beirut as the "Paris of the Middle East" was not mere boosterism but reflected a genuine Mediterranean-Arab hybrid urbanism. Its collapse after 2019 illustrates the structural fragility of frontier governance: when the balancing act fails, the complexity that was the society's richness becomes its paralysis.</p>
+        </div>
+      </div>
+
+      <!-- AFGHANISTAN -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="geo empire ethnic religion">
+        <div class="nation-card-header">
+          <span class="nation-name">Afghanistan</span>
+          <span class="nation-region">Central-South Asian Crossroads</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-geo">Strategic Geo</span>
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-ethnic">Ethnic Mix</span>
+        </div>
+        <p class="nation-desc">Famously called the "graveyard of empires" — a phrase applied to every major power that has attempted conquest, from Alexander the Great to the British Raj, the Soviet Union, and the United States.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Ethnic Composition</div>
+              <div class="ei-val">Pashtun (~42%), Tajik (~27%), Hazara (~9%), Uzbek (~9%), Aimak (~4%), Turkmen (~3%), Baloch (~2%), others (~4%)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Strategic Position</div>
+              <div class="ei-val">Gateway between Central Asia, South Asia, Iran, and the Eurasian steppe; historically a major Silk Road corridor</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Imperial History</div>
+              <div class="ei-val">Achaemenid, Macedonian, Maurya, Kushan, Sassanid, Arab Caliphate, Ghaznavid, Mongol, Timurid, Mughal, Durrani, British/Russian "Great Game," Soviet, U.S.-led NATO</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Current Status</div>
+              <div class="ei-val">Taliban government since August 2021; internationally unrecognized; severe humanitarian crisis; women effectively excluded from public life and education beyond primary school</div>
+            </div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--text-dim);">Afghanistan's resistance to outside rule is not tribal stubbornness but a structural adaptation: a society that has survived by refusing to be consolidated by any single outside power. Its ecology of mountains, valleys, and ethnicities makes centralized rule from Kabul perpetually tenuous. The "graveyard of empires" is a frontier nation's survival strategy expressed as geography.</p>
+        </div>
+      </div>
+
+      <!-- GEORGIA -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion empire geo bloc">
+        <div class="nation-card-header">
+          <span class="nation-name">Georgia</span>
+          <span class="nation-region">South Caucasus</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-geo">Strategic Geo</span>
+        </div>
+        <p class="nation-desc">A small Christian nation flanked by Russia, Turkey, Armenia, and Azerbaijan — at the intersection of three great imperial traditions (Persian, Ottoman, Russian) and the contested borderland of today's Russia-West rivalry.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Disputed Territories</div>
+              <div class="ei-val">South Ossetia and Abkhazia — recognized by Russia and a handful of states as independent; controlled by Russian-backed de facto governments since the 2008 war</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Religious Identity</div>
+              <div class="ei-val">Georgian Orthodox Christianity (~83%); one of the world's oldest Christian nations (converted ~337 CE); faith is central to national identity</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Imperial Memories</div>
+              <div class="ei-val">Ancient Colchis and Iberia; Persian suzerainty; Arab invasions; Mongol invasions; Ottoman-Persian rivalry; Russian annexation (1801); Soviet republic</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Current Orientation</div>
+              <div class="ei-val">EU candidacy (granted 2023); NATO aspirant; significant Russian economic and political leverage; large-scale protests 2023–2024 over "foreign agents" law</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARMENIA -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion empire ethnic geo">
+        <div class="nation-card-header">
+          <span class="nation-name">Armenia</span>
+          <span class="nation-region">South Caucasus</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-ethnic">Ethnic Mix</span>
+        </div>
+        <p class="nation-desc">The world's first Christian state (301 CE), landlocked between hostile Turkey and Azerbaijan, and dependent on Iran and Russia — a case study in geopolitical encirclement and diaspora survival.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Key Historical Trauma</div>
+              <div class="ei-val">Armenian Genocide (1915–1923): systematic mass killings and deportations by the Ottoman government; est. 600,000–1.5 million deaths; recognized as genocide by ~35 countries including France, Germany, U.S.</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Diaspora</div>
+              <div class="ei-val">~7–10 million Armenians worldwide, vs. ~3 million in Armenia; major communities in Russia, France, U.S. (Los Angeles), Lebanon, Syria</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Nagorno-Karabakh</div>
+              <div class="ei-val">Armenian-majority enclave in Azerbaijan; subject of war 1988–1994, 2020 war (Azerbaijani victory), and 2023 Azerbaijani offensive — effectively ending Armenian presence in the region</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Current Pressures</div>
+              <div class="ei-val">Closed borders with Turkey and Azerbaijan; dependent on Georgia for transit; pivot away from Russia toward EU after 2022; signed EU partnership agreement 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AZERBAIJAN -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion empire geo trade bloc">
+        <div class="nation-card-header">
+          <span class="nation-name">Azerbaijan</span>
+          <span class="nation-region">South Caucasus</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-trade">Trade Routes</span>
+        </div>
+        <p class="nation-desc">A Shia-majority country that is constitutionally secular, allied with Israel, and Turkic in language — a set of contradictions that embody the frontier condition. Its Caspian oil wealth gives it strategic leverage beyond its size.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Religious Profile</div>
+              <div class="ei-val">~65% Shia Muslim, ~35% Sunni Muslim; officially secular; mosque attendance is among the lowest in Muslim-majority countries</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Strategic Assets</div>
+              <div class="ei-val">Caspian Sea oil and gas; BTC pipeline (Baku-Tbilisi-Ceyhan) and TANAP gas corridor to Europe; Middle Corridor (Trans-Caspian route to China)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Unusual Alliances</div>
+              <div class="ei-val">Close military/intelligence partnership with Israel (major drone supplier); good relations with Turkey; complex relations with Iran (large Azerbaijani minority in Iran)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Nagorno-Karabakh</div>
+              <div class="ei-val">Recovered full territorial control over Nagorno-Karabakh in September 2023 offensive; nearly all ethnic Armenians (~100,000) fled to Armenia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KOREA -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="geo bloc empire">
+        <div class="nation-card-header">
+          <span class="nation-name">Korean Peninsula</span>
+          <span class="nation-region">Northeast Asia</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-geo">Strategic Geo</span>
+          <span class="tag tag-bloc">Geopolitical Blocs</span>
+          <span class="tag tag-empire">Empire Borders</span>
+        </div>
+        <p class="nation-desc">A peninsula flanked by China, Japan, and Russia — divided since 1945 into two ideologically opposed states, each backed by a superpower. Korea is perhaps the world's clearest case of civilizational freezing caused by Cold War frontier logic.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Division</div>
+              <div class="ei-val">Korean War (1950–1953) ended in armistice, not peace treaty; DMZ at ~38th parallel; technically still at war; one of the world's most heavily fortified borders</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">South Korea</div>
+              <div class="ei-val">Population ~52 million; GDP ~$1.7 trillion (2024); U.S. ally with ~28,500 U.S. troops stationed; 4th largest economy in Asia</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">North Korea</div>
+              <div class="ei-val">Nuclear-armed state (~40–50 warheads estimated, 2024); population ~26 million; GDP estimated ~$17–28 billion (highly uncertain); deepening Russia-DPRK military partnership since 2023</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Imperial Background</div>
+              <div class="ei-val">Japanese colonial rule 1910–1945; previously tributary state of Qing China; distinct Korean civilization with ~5,000 years of continuous history</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KAZAKHSTAN -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="empire religion ethnic trade bloc">
+        <div class="nation-card-header">
+          <span class="nation-name">Kazakhstan</span>
+          <span class="nation-region">Central Asia / Eurasian Steppe</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-trade">Trade Routes</span>
+          <span class="tag tag-bloc">Geopolitical Blocs</span>
+        </div>
+        <p class="nation-desc">The world's ninth-largest country — a vast steppe nation balanced between Russia, China, and the Islamic world, pursuing a "multi-vector" foreign policy that has become a model for small frontier state survival.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Ethnic Composition</div>
+              <div class="ei-val">Kazakhs (~70%), Russians (~15%), Uzbeks (~3%), Ukrainians (~1.8%), Uighurs (~1.4%), and others; Russian was co-official language until 2023 transition to Kazakh-only official status</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Foreign Policy</div>
+              <div class="ei-val">"Multi-vector": member of Russia-led CSTO and SCO, but also strong ties with China (BRI transit), Turkey (Organization of Turkic States), and significant Western investment</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Nuclear History</div>
+              <div class="ei-val">Voluntarily relinquished Soviet nuclear arsenal (1991–1995); closed Semipalatinsk test site (world's largest nuclear test site); a model case of denuclearization</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Economy</div>
+              <div class="ei-val">Major oil exporter (Tengiz, Kashagan fields); GDP ~$260 billion (2024); significant transit revenues from China-Europe rail corridor; growing tech sector in Almaty</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UZBEKISTAN -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="empire religion trade ethnic">
+        <div class="nation-card-header">
+          <span class="nation-name">Uzbekistan</span>
+          <span class="nation-region">Central Asia / Silk Road</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-trade">Trade Routes</span>
+          <span class="tag tag-religion">Religion</span>
+        </div>
+        <p class="nation-desc">Home to Samarkand, Bukhara, and Khiva — cities that were for centuries among the world's great centers of Islamic learning, Persian culture, Turkic politics, and Silk Road commerce.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Historical Significance</div>
+              <div class="ei-val">Samarkand: capital of Timur's empire (Timurid Renaissance); Bukhara: one of Islam's greatest centers of scholarship (Al-Bukhari, Ibn Sina / Avicenna were Bukharans); Khiva: Khorezm caravan hub</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Civilizational Layers</div>
+              <div class="ei-val">Sogdian merchant culture, Persian Zoroastrian, Greek (Hellenistic Bactria), Buddhist, Arab-Islamic, Turkic, Mongol (Timurids), Russian Empire, Soviet</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Population</div>
+              <div class="ei-val">~36 million — the most populous Central Asian state; significant Uzbek minorities in Afghanistan (~9 million), Tajikistan (~1 million), Kyrgyzstan</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Opening Since 2016</div>
+              <div class="ei-val">Under President Mirziyoyev, Uzbekistan shifted from Karimov-era isolation to significant economic and diplomatic opening; joined international financial institutions, liberalized visa policy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BALKANS (Serbia, Kosovo, Albania, Croatia) -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion empire ethnic bloc">
+        <div class="nation-card-header">
+          <span class="nation-name">The Western Balkans</span>
+          <span class="nation-region">Southeast Europe</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-ethnic">Ethnic Mix</span>
+        </div>
+        <p class="nation-desc">Serbia, Kosovo, Albania, North Macedonia, Montenegro — the core of the former Yugoslav space minus Slovenia, where the Ottoman, Byzantine, Habsburg, and post-Cold War Western European spheres continue to compete.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Religious Map</div>
+              <div class="ei-val">Serbia/North Macedonia: Orthodox; Bosnia/Kosovo/Albania: majority Muslim; Croatia/Slovenia: Catholic — all overlapping in a small geographic area</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Kosovo Status</div>
+              <div class="ei-val">Declared independence from Serbia 2008; recognized by ~100 UN member states including U.S., UK, France, Germany; not recognized by Serbia, Russia, China, or 5 EU members</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">EU Integration</div>
+              <div class="ei-val">All Western Balkan states are EU candidates or applicants; Serbia formally opened accession negotiations 2014 (stalled); Montenegro most advanced; Kosovo applied 2022</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Historical Pattern</div>
+              <div class="ei-val">"Balkanization" as a word entered global vocabulary — meaning the fragmentation of a multi-ethnic state into smaller, hostile units. The Balkans gave modern political science its vocabulary for frontier zone collapse.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KASHMIR -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion ethnic geo bloc empire">
+        <div class="nation-card-header">
+          <span class="nation-name">Kashmir</span>
+          <span class="nation-region">South Asia / Himalayas</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-geo">Strategic Geo</span>
+          <span class="tag tag-bloc">Geopolitical Blocs</span>
+        </div>
+        <p class="nation-desc">Divided between India, Pakistan, and China, Kashmir is the world's most heavily militarized frontier — a Muslim-majority territory ruled by a Hindu-majority state, at the junction of three nuclear powers.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Control</div>
+              <div class="ei-val">India controls Jammu &amp; Kashmir (~45% of original princely state); Pakistan controls Azad Kashmir and Gilgit-Baltistan (~35%); China controls Aksai Chin (~20%)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">India's 2019 Changes</div>
+              <div class="ei-val">India revoked Article 370 (special autonomous status) in August 2019; reorganized the state into two Union Territories; sparked significant international criticism</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Three Nuclear Powers</div>
+              <div class="ei-val">India, Pakistan, and China all have territorial claims or interests in the region; India and Pakistan have fought three wars (1947, 1965, 1999 Kargil) over Kashmir</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Cultural Legacy</div>
+              <div class="ei-val">Kashmir Valley historically a center of Kashmiri Shaivism, Sufi Islam (brought by Shah-i-Hamadan 1372), Persian-influenced court culture, and distinctive handicraft tradition (pashmina, carpets)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAIWAN -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="geo bloc empire ethnic">
+        <div class="nation-card-header">
+          <span class="nation-name">Taiwan</span>
+          <span class="nation-region">East Asia / Western Pacific</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-geo">Strategic Geo</span>
+          <span class="tag tag-bloc">Geopolitical Blocs</span>
+          <span class="tag tag-empire">Empire Borders</span>
+        </div>
+        <p class="nation-desc">A de facto independent democracy of 23 million claimed by China as a province. Taiwan controls the world's most advanced semiconductor supply chain, giving a frontier island disproportionate global strategic weight.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Political Status</div>
+              <div class="ei-val">Self-governing democracy; officially Republic of China (ROC); recognized as a state by only 12 countries; de facto independent since 1949; operates in most respects as a sovereign state</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Semiconductor Weight</div>
+              <div class="ei-val">TSMC (~Taiwan Semiconductor Manufacturing Co.) produces ~90% of the world's most advanced chips (below 5nm); a disruption of Taiwan's chip production would halt global tech production</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Colonial Layers</div>
+              <div class="ei-val">Indigenous Austronesian peoples; Han Chinese migration (17th c.); Dutch colonial rule (1624–1662); Zheng Chenggong; Qing annexation (1683); Japanese colonial rule (1895–1945); ROC government relocated from mainland 1949</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Cross-Strait Dynamics</div>
+              <div class="ei-val">PRC military pressure has increased since 2020s; record number of PLA aircraft incursions 2021–2024; U.S. Taiwan Relations Act (1979) commits to defensive arms sales; "strategic ambiguity" on direct defense</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HISTORICALLY: ANDALUSIA -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="religion empire trade ethnic">
+        <div class="nation-card-header">
+          <span class="nation-name">Andalusia</span>
+          <span class="nation-region">Iberian Peninsula · Historical</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-empire">Empire Borders</span>
+          <span class="tag tag-trade">Trade Routes</span>
+        </div>
+        <p class="nation-desc">Muslim-ruled Iberia (711–1492 CE) was for several centuries the most sophisticated multiconfessional civilization in the Western world — where Islamic, Jewish, and Christian scholars translated, debated, and synthesized ancient knowledge.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">Convivencia</div>
+              <div class="ei-val">The period of relative coexistence between Muslims, Jews, and Christians in al-Andalus — idealized in later historiography, though punctuated by real episodes of persecution, particularly under Almoravid and Almohad dynasties</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Intellectual Output</div>
+              <div class="ei-val">Ibn Rushd (Averroës), Ibn Tufayl, Maimonides, Ibn Arabi, Al-Zahrawi (father of surgery) — all flourished in Andalusian frontier space; Toledo Translation School transmitted Greek science to medieval Europe</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Collapse</div>
+              <div class="ei-val">Reconquista completed January 2, 1492; expulsion of Jews (Alhambra Decree, March 1492); forced conversion or expulsion of Muslims; end of Moorish Spain as a political and cultural reality</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Legacy</div>
+              <div class="ei-val">Alhambra palace, Córdoba's Mezquita, Seville's Giralda; Arabic loanwords in Spanish (~4,000 words); agricultural innovations (irrigation, crops); architectural techniques still studied globally</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SILK ROAD CITIES -->
+      <div class="nation-card" onclick="toggleCard(this)" data-tags="trade religion empire ethnic">
+        <div class="nation-card-header">
+          <span class="nation-name">Silk Road Cities</span>
+          <span class="nation-region">Central Asia · Historical / Ongoing</span>
+        </div>
+        <div class="nation-tags">
+          <span class="tag tag-trade">Trade Routes</span>
+          <span class="tag tag-religion">Religion</span>
+          <span class="tag tag-empire">Empire Borders</span>
+        </div>
+        <p class="nation-desc">Samarkand, Bukhara, Merv, Dunhuang, Kashgar — nodes in the world's first globalization network, where Persian, Turkic, Chinese, Indian, Buddhist, Zoroastrian, Nestorian Christian, Manichaean, and Islamic traditions met in a single marketplace.</p>
+        <div class="expand-row">
+          <span class="expand-hint">click to expand</span>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="nation-expanded">
+          <div class="expanded-grid">
+            <div class="expanded-item">
+              <div class="ei-label">What Was Traded</div>
+              <div class="ei-val">Silk, spices, glass, papyrus, precious stones, horses, textiles — but also paper-making, printing, gunpowder, compass technology, mathematical knowledge, religious texts, artistic techniques</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Religious Pluralism</div>
+              <div class="ei-val">Archaeological finds in Dunhuang include Buddhist sutras, Nestorian Christian texts, Manichean manuscripts, and Zoroastrian documents — in the same cave library (Mogao Caves, sealed c. 1000 CE)</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Decline</div>
+              <div class="ei-val">Mongol invasions (13th c.) initially disrupted then briefly unified the route under Pax Mongolica; decline accelerated with rise of maritime trade routes (post-1492) and Ottoman-Safavid conflicts blocking transit</div>
+            </div>
+            <div class="expanded-item">
+              <div class="ei-label">Modern Revival</div>
+              <div class="ei-val">China's Belt and Road Initiative (BRI, launched 2013) explicitly invokes the Silk Road; its rail and infrastructure network follows many of the same corridors, now running ~$1 trillion in investment globally</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No results message -->
+      <div class="no-results" id="noResults">No nations match your search. Try a different term or filter.</div>
+
+    </div><!-- end nations-grid -->
+  </section>
+
+  <!-- Strengths & Risks -->
+  <section id="s-sr" class="major-section">
+    <span class="section-label">Section III</span>
+    <h2>Strengths &amp; <em>Risks</em></h2>
+    <p>Frontier nations are neither inherently strong nor inherently weak. They carry distinctive capabilities forged by the experience of living at civilizational intersections — and equally distinctive vulnerabilities produced by the same condition.</p>
+
+    <div class="sr-grid">
+      <div class="sr-col strengths">
+        <h4>▲ Characteristic Strengths</h4>
+        <ul class="sr-list">
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Adaptability</span>
+              <span class="sr-desc">Capacity to live with change, ambiguity, and shifting external conditions — developed through repeated historical pressure.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Multilingualism</span>
+              <span class="sr-desc">Practical cross-cultural communication as a survival skill; frontier peoples are frequently bilingual or trilingual.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Cultural Synthesis</span>
+              <span class="sr-desc">Capacity to combine traditions creatively rather than defensively — producing hybrid artistic, intellectual, and culinary forms.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Strategic Awareness</span>
+              <span class="sr-desc">Deep, experiential understanding of power politics — developed by living adjacent to competing great powers for generations.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Commercial Instinct</span>
+              <span class="sr-desc">Trade, exchange, brokerage, and mediation as core economic competencies; frontier peoples have historically been disproportionately represented in merchant networks.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Resilience</span>
+              <span class="sr-desc">Demonstrated capacity for survival and reconstruction after repeated invasions, partitions, and upheavals.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Diplomatic Intelligence</span>
+              <span class="sr-desc">Skill in balancing larger powers — what smaller states call "multi-vector foreign policy" and great powers call "hedging."</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Plural Memory</span>
+              <span class="sr-desc">Ability to understand multiple historical narratives simultaneously — a cognitive asset in multicultural diplomacy and scholarship.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sr-col risks">
+        <h4>▼ Characteristic Risks</h4>
+        <ul class="sr-list">
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Identity Conflict</span>
+              <span class="sr-desc">Competing definitions of the nation — who belongs, what language/religion is "authentic" — produce internal fragmentation.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Foreign Manipulation</span>
+              <span class="sr-desc">Great powers exploit local divisions, funding rival factions and parties to maintain influence and prevent consolidation.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Weak Institutions</span>
+              <span class="sr-desc">Governance structures overwhelmed by the combination of internal diversity and external pressure — particularly during imperial transitions.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Border Disputes</span>
+              <span class="sr-desc">Lines drawn by empires do not match lived communities; minority populations straddle borders, creating perpetual irredentist grievances.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Ethnic Nationalism</span>
+              <span class="sr-desc">Mixed societies forced into culturally "pure" categories — the most dangerous external imposition on frontier complexity.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Militarization</span>
+              <span class="sr-desc">Security concerns dominate politics, diverting resources from development and civic building; military culture becomes central to national identity.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Historical Trauma</span>
+              <span class="sr-desc">Past violence — genocides, partitions, deportations, occupations — shapes present-day political culture and interpersonal trust.</span>
+            </div>
+          </li>
+          <li>
+            <span class="sr-icon">◆</span>
+            <div>
+              <span class="sr-label">Fragmented Loyalty</span>
+              <span class="sr-desc">Local, national, religious, ethnic, and external loyalties compete — making national unity fragile and state authority contested.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Political Personality -->
+  <section id="s-psych" class="major-section">
+    <span class="section-label">Section IV</span>
+    <h2>The Political <em>Personality</em></h2>
+    <p>Beyond individual traits, frontier nations develop a recognizable national political personality — a set of shared instincts shaped by the accumulated experience of living at the intersection of civilizations. These four instincts appear across frontier societies regardless of geography, religion, or historical period.</p>
+
+    <ul class="instinct-list">
+      <li class="instinct-item">
+        <span class="instinct-num">01</span>
+        <div class="instinct-text">
+          <div class="it-title">"We must survive."</div>
+          <p>Because history has often been violent — and the violence has often come from outside. Frontier societies develop a deep political culture of survival consciousness: a pragmatic willingness to make difficult compromises in order to preserve the community's existence. This is not weakness; it is the wisdom of small peoples living near large powers.</p>
+        </div>
+      </li>
+      <li class="instinct-item">
+        <span class="instinct-num">02</span>
+        <div class="instinct-text">
+          <div class="it-title">"We must not be swallowed."</div>
+          <p>Stronger neighbors constantly seek to incorporate, dominate, or redefine frontier peoples. The response is a defensive nationalism — not necessarily aggressive, but firm. The frontier nation insists on its distinctiveness even when that distinctiveness is contested, partial, or difficult to articulate.</p>
+        </div>
+      </li>
+      <li class="instinct-item">
+        <span class="instinct-num">03</span>
+        <div class="instinct-text">
+          <div class="it-title">"We are more complex than outsiders understand."</div>
+          <p>Because frontier identity is layered, it is perpetually misread — reduced to one dominant characteristic by outsiders who need a simple story. Frontier peoples often feel a deep frustration with the gap between how they understand themselves and how they are represented externally. This produces a strong tradition of internal self-articulation: literature, philosophy, and political theory that insists on complexity.</p>
+        </div>
+      </li>
+      <li class="instinct-item">
+        <span class="instinct-num">04</span>
+        <div class="instinct-text">
+          <div class="it-title">"We can become a bridge, but only if we are respected."</div>
+          <p>Frontier nations know they have a unique value — as connectors, translators, and mediators between civilizations. But this role is only possible when their complexity is respected rather than exploited. When treated as mere buffers or battlegrounds, they resist. When treated as genuine bridges, they flourish. Their geography gives them civilizational potential; whether that potential is realized depends on the behavior of the larger powers around them.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Core Thesis -->
+  <section id="s-thesis" class="major-section">
+    <span class="section-label">Conclusion</span>
+    <h2>The Core <em>Thesis</em></h2>
+    <p>Civilizational geography divides the world's societies into zones based on their structural position within global patterns of empire, religion, language, and trade. Zone X nations occupy the most demanding position: the seams.</p>
+    <p>They are not failures of nation-building. They are a different kind of success — one that mainstream nation-state theory, built on assumptions of cultural homogeneity and clear territorial sovereignty, is poorly equipped to recognize.</p>
+    <p>The tools for understanding frontier nations require a different vocabulary: not purity but synthesis, not linearity but layering, not sovereignty but managed complexity.</p>
+    <p>The history of the modern world — from the Balkans of 1914 to Ukraine in 2022 — suggests that the failure to understand frontier complexity, and the attempt to resolve it through force or simplification, is among the most dangerous moves available to states and empires. The complexity itself is not the problem. The attempt to end it is.</p>
+
+    <div class="pull-quote">"Frontier nations flourish when their complexity is protected, and collapse into conflict when larger powers or nationalist projects try to simplify them by force."</div>
+
+    <p>What frontier nations need is not resolution but recognition: acknowledgment that layered, hybrid, and plural societies are not historical anomalies awaiting correction, but legitimate forms of human community that the modern state system has consistently, and catastrophically, failed to accommodate.</p>
+  </section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial. Civilizational Geography Series.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (scrollTop / docH * 100) + '%';
+  }, { passive: true });
+
+  // Nation card expand/collapse
+  function toggleCard(card) {
+    const wasExpanded = card.classList.contains('expanded');
+    // collapse all
+    document.querySelectorAll('.nation-card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  }
+
+  // Filter & search
+  let activeFilter = 'all';
+
+  function setFilter(tag, btn) {
+    activeFilter = tag;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterNations();
+  }
+
+  function filterNations() {
+    const query = document.getElementById('nationSearch').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.nation-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const tags = card.dataset.tags || '';
+      const text = card.innerText.toLowerCase();
+      const tagMatch = activeFilter === 'all' || tags.includes(activeFilter);
+      const queryMatch = !query || text.includes(query);
+      if (tagMatch && queryMatch) {
+        card.classList.remove('hidden-card');
+        visible++;
+      } else {
+        card.classList.add('hidden-card');
+      }
+    });
+
+    const nr = document.getElementById('noResults');
+    const rc = document.getElementById('resultsCount');
+    nr.classList.toggle('visible', visible === 0);
+    rc.textContent = visible === cards.length
+      ? `Showing all ${visible} entries`
+      : `${visible} of ${cards.length} entries`;
+  }
+
+  // Init count
+  filterNations();
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

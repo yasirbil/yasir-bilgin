@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+  <meta name="description" content="Suno Structure Extractor" />
+  <meta property="og:title"       content="Suno Structure Extractor" />
+  <meta property="og:description" content="Suno Structure Extractor" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/arts/Music/suno-structure-extractor.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Suno Structure Extractor" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/arts/Music/suno-structure-extractor.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Suno Structure Extractor</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0e0e0c;
+  --bg2: #161614;
+  --bg3: #1e1e1b;
+  --bg4: #272724;
+  --line: rgba(255,255,255,0.07);
+  --line2: rgba(255,255,255,0.13);
+  --text: #e8e4dc;
+  --text2: #8a8880;
+  --text3: #5a5855;
+  --accent: #c8a96e;
+  --accent2: #8b6f3e;
+  --accent-bg: rgba(200,169,110,0.08);
+  --green: #6db88a;
+  --green-bg: rgba(109,184,138,0.1);
+  --red: #c97070;
+  --mono: 'DM Mono', monospace;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --r: 6px;
+  --r2: 10px;
+}
+body {
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 2.5rem 1.25rem 4rem;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.container { max-width: 760px; margin: 0 auto; }
+
+.header { margin-bottom: 2.5rem; }
+.header h1 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header p { color: var(--text2); font-size: 12px; }
+
+.step {
+  background: var(--bg2);
+  border: 0.5px solid var(--line);
+  border-radius: var(--r2);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 12px;
+  position: relative;
+}
+.step-num {
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.step-num::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--line);
+}
+.step h2 {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+label { font-size: 11px; color: var(--text2); display: block; margin-bottom: 5px; letter-spacing: 0.04em; }
+
+input[type=text], textarea, select {
+  width: 100%;
+  background: var(--bg3);
+  border: 0.5px solid var(--line2);
+  border-radius: var(--r);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input[type=text]:focus, textarea:focus, select:focus {
+  border-color: var(--accent2);
+}
+textarea { resize: vertical; }
+select option { background: var(--bg3); }
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.copy-prompt-box {
+  background: var(--bg3);
+  border: 0.5px solid var(--line2);
+  border-radius: var(--r);
+  padding: 12px;
+  margin: 12px 0 6px;
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  font-style: italic;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.copy-prompt-box strong { color: var(--accent); font-style: normal; }
+
+.btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 7px 16px;
+  border-radius: var(--r);
+  cursor: pointer;
+  border: 0.5px solid var(--line2);
+  background: transparent;
+  color: var(--text);
+  transition: all 0.15s;
+}
+.btn:hover { background: var(--bg3); border-color: var(--line2); }
+.btn-accent {
+  background: var(--accent-bg);
+  border-color: var(--accent2);
+  color: var(--accent);
+}
+.btn-accent:hover { background: rgba(200,169,110,0.14); }
+.btn-green {
+  background: var(--green-bg);
+  border-color: rgba(109,184,138,0.3);
+  color: var(--green);
+}
+.btn-green:hover { background: rgba(109,184,138,0.15); }
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+
+.json-paste-area textarea { min-height: 100px; font-size: 11px; }
+
+.divider { height: 0.5px; background: var(--line); margin: 14px 0; }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag {
+  font-size: 11px; padding: 3px 10px; border-radius: 99px;
+  cursor: pointer; user-select: none; transition: all 0.15s;
+  border: 0.5px solid var(--line2);
+  background: var(--bg3); color: var(--text2);
+}
+.tag.on { background: var(--accent-bg); border-color: var(--accent2); color: var(--accent); }
+.add-row { display: flex; gap: 8px; margin-top: 8px; }
+.add-row input { flex: 1; }
+
+.lyric-section { margin-bottom: 8px; }
+.lyric-section-row { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 6px; }
+.lyric-section-row select { width: 140px; flex-shrink: 0; }
+.lyric-section-row textarea { flex: 1; min-height: 56px; }
+.del {
+  width: 26px; height: 26px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 0.5px solid var(--line); border-radius: var(--r);
+  cursor: pointer; color: var(--text3); font-size: 15px;
+  margin-top: 1px;
+}
+.del:hover { color: var(--red); border-color: var(--red); }
+
+/* Output */
+.output-panel {
+  background: var(--bg2);
+  border: 0.5px solid var(--accent2);
+  border-radius: var(--r2);
+  margin-top: 12px;
+  overflow: hidden;
+}
+.output-tabs { display: flex; border-bottom: 0.5px solid var(--line2); }
+.tab {
+  font-size: 11px; padding: 8px 16px; cursor: pointer;
+  color: var(--text2); border-right: 0.5px solid var(--line);
+  transition: all 0.15s; letter-spacing: 0.04em;
+}
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--accent); background: var(--accent-bg); }
+.tab-content { display: none; padding: 14px; }
+.tab-content.active { display: block; }
+.output-box {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  background: var(--bg3);
+  border: 0.5px solid var(--line);
+  border-radius: var(--r);
+  padding: 12px;
+  white-space: pre-wrap;
+  line-height: 1.75;
+  color: var(--text);
+  min-height: 60px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+.output-box .hl-bracket { color: var(--accent); font-weight: 500; }
+.output-box .hl-tag { color: var(--green); }
+.output-box .hl-key { color: var(--accent); }
+
+.status-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  display: inline-block; margin-right: 6px;
+  background: var(--text3);
+}
+.status-dot.filled { background: var(--green); }
+
+.field-status { display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 0 0; }
+.fs-item { font-size: 11px; color: var(--text3); display: flex; align-items: center; }
+
+.hint {
+  font-size: 11px; color: var(--text3);
+  background: var(--bg3);
+  border-left: 2px solid var(--accent2);
+  padding: 8px 12px;
+  border-radius: 0 var(--r) var(--r) 0;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.hint em { color: var(--accent); font-style: normal; }
+
+@media (max-width: 560px) { .row2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/arts/" style="color:#8a3a5a;text-decoration:none;">Arts</a> <span style="opacity:0.5">›</span> <span>Music</span> <span style="opacity:0.5">›</span> <span>Suno Structure Extractor</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Arts",
+      "item": "https://yasirbilgin.com/arts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Suno Structure Extractor",
+      "item": "https://yasirbilgin.com/arts/Music/suno-structure-extractor.html"
+    }
+  ]
+}
+</script>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Suno Structure Extractor</h1>
+    <p>Paste a song → extract its architecture → apply it to your own lyrics → export a Suno v4 prompt</p>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-num">Step 01 — Source song</div>
+    <h2>Identify the reference track</h2>
+    <div class="row2">
+      <div>
+        <label>YouTube URL (optional)</label>
+        <input type="text" id="yt-url" placeholder="https://youtube.com/watch?v=..." />
+      </div>
+      <div>
+        <label>Song title &amp; artist</label>
+        <input type="text" id="song-name" placeholder="e.g. As Vesta Was — Thomas Weelkes" />
+      </div>
+    </div>
+    <div class="hint" style="margin-top:12px">
+      Click <em>Copy analysis prompt</em> below → paste into Claude → paste Claude's JSON response into Step 2.
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-accent" onclick="buildAnalysisPrompt()">Copy analysis prompt ↗</button>
+      <span id="ap-status" style="font-size:11px;color:var(--text3)"></span>
+    </div>
+    <div id="analysis-prompt-preview" class="copy-prompt-box" style="display:none"></div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-num">Step 02 — Paste Claude's analysis</div>
+    <h2>Import extracted structure</h2>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:10px">Ask Claude with the prompt above, then paste its JSON response here. Or fill the fields manually below.</p>
+    <div class="json-paste-area">
+      <label>Claude's JSON response</label>
+      <textarea id="json-input" placeholder='{"genre":"Renaissance English madrigal","form":"through-composed","harmony":"modal","tempo":"flowing legato","techniques":["imitative counterpoint","word painting"],"ensemble":"SSATTB unaccompanied choir","texture_notes":"overlapping entries, male/female contrast","cadence":"overlapping, Picardy final","suno_style_tags":"Renaissance madrigal, imitative counterpoint, SSATTB choir, modal harmony, word painting, legato, polyphonic"}'></textarea>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-accent" onclick="parseJSON()">Import JSON</button>
+      <span id="json-status" style="font-size:11px;color:var(--text3)"></span>
+    </div>
+    <div class="divider"></div>
+
+    <!-- Manual fields -->
+    <div style="margin-bottom:10px">
+      <label>Genre / style period</label>
+      <input type="text" id="f-genre" placeholder="e.g. Renaissance English madrigal" />
+    </div>
+    <div class="row2" style="margin-bottom:10px">
+      <div>
+        <label>Form</label>
+        <input type="text" id="f-form" placeholder="e.g. through-composed" />
+      </div>
+      <div>
+        <label>Harmonic language</label>
+        <input type="text" id="f-harmony" placeholder="e.g. modal, tonal" />
+      </div>
+    </div>
+    <div class="row2" style="margin-bottom:10px">
+      <div>
+        <label>Tempo / rhythm character</label>
+        <input type="text" id="f-tempo" placeholder="e.g. flowing, stately" />
+      </div>
+      <div>
+        <label>Ensemble / voicing</label>
+        <input type="text" id="f-ensemble" placeholder="e.g. SSATTB unaccompanied choir" />
+      </div>
+    </div>
+    <div style="margin-bottom:10px">
+      <label>Techniques (toggle or add)</label>
+      <div class="tag-row" id="tech-tags">
+        <span class="tag" data-val="imitative counterpoint">imitative counterpoint</span>
+        <span class="tag" data-val="word painting">word painting</span>
+        <span class="tag" data-val="homophonic texture">homophonic texture</span>
+        <span class="tag" data-val="polyphonic texture">polyphonic texture</span>
+        <span class="tag" data-val="overlapping cadences">overlapping cadences</span>
+        <span class="tag" data-val="call and response">call and response</span>
+        <span class="tag" data-val="ostinato">ostinato</span>
+        <span class="tag" data-val="antiphony">antiphony</span>
+        <span class="tag" data-val="canon">canon</span>
+        <span class="tag" data-val="through-composed">through-composed</span>
+      </div>
+      <div class="add-row">
+        <input type="text" id="tech-custom" placeholder="Custom technique..." />
+        <button class="btn" onclick="addTag('tech-tags','tech-custom')">+ Add</button>
+      </div>
+    </div>
+    <div style="margin-bottom:10px">
+      <label>Texture / voice notes</label>
+      <textarea id="f-texture" placeholder="e.g. Male/female timbral contrast, 2-voice intimate sections, full 6-voice thunderous climaxes, seamless legato throughout..." style="min-height:52px"></textarea>
+    </div>
+    <div style="margin-bottom:10px">
+      <label>Cadence character</label>
+      <input type="text" id="f-cadence" placeholder="e.g. overlapping, deceptive, Picardy final" />
+    </div>
+    <div>
+      <label>Suno style tags (comma-separated — will be used directly)</label>
+      <input type="text" id="f-suno-tags" placeholder="e.g. Renaissance madrigal, imitative counterpoint, SSATTB, modal harmony, word painting, polyphonic" />
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-num">Step 03 — Word painting map</div>
+    <h2>Map lyric phrases to musical gestures</h2>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:10px">For each key word or phrase in your lyrics, assign a musical motion. These become inline Suno metatags.</p>
+    <div id="wp-rows"></div>
+    <button class="btn" onclick="addWPRow()" style="margin-top:4px">+ Add mapping</button>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-num">Step 04 — Your lyrics</div>
+    <h2>Paste &amp; structure your text</h2>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:12px">Add sections in order. Tags will be embedded in the final Suno prompt.</p>
+    <div id="lyric-rows"></div>
+    <button class="btn" onclick="addLyricSection()" style="margin-top:4px">+ Add section</button>
+    <div class="hint" style="margin-top:12px">
+      Available Suno v4 tags: <em>[Verse]</em> <em>[Chorus]</em> <em>[Bridge]</em> <em>[Pre-Chorus]</em> <em>[Outro]</em> <em>[Instrumental Break]</em> <em>[Spoken]</em> — also inline: <em>[ascending]</em> <em>[solo voice]</em> <em>[all voices]</em> etc.
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <div class="step-num">Step 05 — Generate</div>
+    <h2>Build Suno v4 prompt</h2>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:12px">Output is split into Suno's two actual input boxes. Each has its own 120 / 3000 character budget.</p>
+    <div class="btn-row">
+      <button class="btn btn-green" onclick="buildFinalPrompt()">Generate</button>
+      <button class="btn btn-accent" onclick="compressAll()">Smart compress</button>
+    </div>
+    <div class="field-status" id="field-status" style="margin-top:10px"></div>
+
+    <div id="output-panel" style="display:none;margin-top:14px">
+
+      <!-- BOX A: Style -->
+      <div style="margin-bottom:14px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+          <span style="font-size:11px;color:var(--accent);letter-spacing:0.06em;text-transform:uppercase">Suno — Style box</span>
+          <span id="style-counter" style="font-size:11px;color:var(--text3)">0 / 120</span>
+        </div>
+        <textarea id="out-style" oninput="updateCounter('out-style','style-counter',120)" style="min-height:64px;font-size:12px;background:var(--bg3);border:0.5px solid var(--line2);border-radius:var(--r);color:var(--text);font-family:var(--mono);width:100%;padding:10px 12px;resize:vertical;outline:none"></textarea>
+        <div style="display:flex;gap:8px;margin-top:6px;align-items:center">
+          <button class="btn btn-accent" onclick="copyBox('out-style','copy-style-btn')" id="copy-style-btn">Copy</button>
+          <button class="btn" onclick="compressBox('out-style','style-counter',120)">Compress</button>
+          <span id="style-warn" style="font-size:11px;color:var(--red);display:none">⚠ Over limit — compress or trim</span>
+        </div>
+      </div>
+
+      <!-- BOX B: Lyrics -->
+      <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+          <span style="font-size:11px;color:var(--accent);letter-spacing:0.06em;text-transform:uppercase">Suno — Lyrics box</span>
+          <span id="lyrics-counter" style="font-size:var(--text3);font-size:11px;color:var(--text3)">0 / 3000</span>
+        </div>
+        <textarea id="out-lyrics" oninput="updateCounter('out-lyrics','lyrics-counter',3000)" style="min-height:220px;font-size:12px;background:var(--bg3);border:0.5px solid var(--line2);border-radius:var(--r);color:var(--text);font-family:var(--mono);width:100%;padding:10px 12px;resize:vertical;outline:none"></textarea>
+        <div style="display:flex;gap:8px;margin-top:6px;align-items:center">
+          <button class="btn btn-accent" onclick="copyBox('out-lyrics','copy-lyrics-btn')" id="copy-lyrics-btn">Copy</button>
+          <button class="btn" onclick="compressBox('out-lyrics','lyrics-counter',3000)">Compress</button>
+          <span id="lyrics-warn" style="font-size:11px;color:var(--red);display:none">⚠ Over limit — compress or trim</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+const wpMotions = [
+  "ascending (rising melody)",
+  "descending (falling melody)",
+  "running passages (fast notes)",
+  "sustained (long held notes)",
+  "staccato (short detached)",
+  "solo voice",
+  "all voices unison",
+  "cascading (waterfall effect)",
+  "sudden silence",
+  "wide melodic leap",
+  "chromatic movement",
+  "modal shift",
+  "deep low register",
+  "high bright register",
+  "accelerando (speeding up)",
+  "decelerando (slowing down)",
+  "pianissimo (very soft)",
+  "fortissimo (very loud)"
+];
+
+const lyricTagOptions = [
+  "[Verse]","[Verse 1]","[Verse 2]","[Verse 3]",
+  "[Chorus]","[Pre-Chorus]","[Bridge]",
+  "[Outro]","[Intro]","[Instrumental Break]",
+  "[Spoken]","[Hook]","[Refrain]"
+];
+
+function addTag(containerId, inputId) {
+  const c = document.getElementById(containerId);
+  const inp = document.getElementById(inputId);
+  const val = inp.value.trim();
+  if (!val) return;
+  const s = document.createElement('span');
+  s.className = 'tag on';
+  s.dataset.val = val;
+  s.textContent = val;
+  s.onclick = () => s.classList.toggle('on');
+  c.appendChild(s);
+  inp.value = '';
+}
+document.querySelectorAll('.tag').forEach(t => t.onclick = () => t.classList.toggle('on'));
+
+function getTags(id) {
+  return [...document.querySelectorAll(`#${id} .tag.on`)].map(t => t.dataset.val);
+}
+
+function addWPRow(phrase='', motion='') {
+  const c = document.getElementById('wp-rows');
+  const d = document.createElement('div');
+  d.className = 'word-paint-row';
+  d.style.cssText = 'display:flex;gap:8px;align-items:center;margin-bottom:6px';
+  const selOpts = wpMotions.map(m => `<option${m===motion?' selected':''}>${m}</option>`).join('');
+  d.innerHTML = `
+    <input type="text" placeholder='Lyric phrase (e.g. "the Most High")' value="${phrase}" style="flex:1" />
+    <select style="width:200px;flex-shrink:0">${selOpts}</select>
+    <div class="del" onclick="this.parentElement.remove()">×</div>`;
+  c.appendChild(d);
+}
+
+function addLyricSection(tag='[Verse]', text='') {
+  const c = document.getElementById('lyric-rows');
+  const d = document.createElement('div');
+  d.className = 'lyric-section-row';
+  const selOpts = lyricTagOptions.map(o => `<option${o===tag?' selected':''}>${o}</option>`).join('');
+  d.innerHTML = `
+    <select style="width:140px;flex-shrink:0">${selOpts}</select>
+    <textarea placeholder="Paste your lyrics for this section...">${text}</textarea>
+    <div class="del" onclick="this.parentElement.remove()">×</div>`;
+  c.appendChild(d);
+}
+
+function buildAnalysisPrompt() {
+  const url = document.getElementById('yt-url').value.trim();
+  const name = document.getElementById('song-name').value.trim();
+  if (!url && !name) {
+    document.getElementById('ap-status').textContent = '⚠ Enter a URL or song name first';
+    return;
+  }
+  const ref = url ? `YouTube URL: ${url}${name ? ' ('+name+')' : ''}` : `Song: ${name}`;
+  const prompt = `Analyze the following piece of music and extract its structural architecture for use in Suno AI music generation.
+
+${ref}
+
+Return ONLY a JSON object (no markdown, no explanation) with these exact keys:
+{
+  "genre": "style period and genre",
+  "form": "musical form (through-composed, strophic, rondo, etc.)",
+  "harmony": "harmonic language (modal, tonal, chromatic, etc.)",
+  "tempo": "tempo and rhythmic character",
+  "techniques": ["array", "of", "compositional", "techniques"],
+  "ensemble": "instrumentation and voice configuration",
+  "texture_notes": "description of textural layers, contrasts, voice roles",
+  "cadence": "cadence types and character",
+  "word_painting": [{"phrase": "example phrase", "motion": "ascending (rising melody)"}],
+  "structure": [{"section": "Opening", "character": "2 voices intimate, imitative"}, ...],
+  "suno_style_tags": "comma-separated style tags optimized for Suno v4"
+}
+
+Be specific and detailed. For suno_style_tags, think about what tags would best reproduce this style in Suno — include tempo, texture, instruments, era, techniques.`;
+
+  const preview = document.getElementById('analysis-prompt-preview');
+  preview.style.display = 'block';
+  preview.textContent = prompt;
+
+  navigator.clipboard.writeText(prompt).then(() => {
+    document.getElementById('ap-status').textContent = '✓ Copied to clipboard';
+    setTimeout(() => document.getElementById('ap-status').textContent = '', 2000);
+  });
+}
+
+function parseJSON() {
+  const raw = document.getElementById('json-input').value.trim();
+  const status = document.getElementById('json-status');
+  if (!raw) { status.textContent = '⚠ Nothing to parse'; return; }
+  try {
+    let clean = raw.replace(/```json|```/g,'').trim();
+    const d = JSON.parse(clean);
+    if (d.genre) document.getElementById('f-genre').value = d.genre;
+    if (d.form) document.getElementById('f-form').value = d.form;
+    if (d.harmony) document.getElementById('f-harmony').value = d.harmony;
+    if (d.tempo) document.getElementById('f-tempo').value = d.tempo;
+    if (d.ensemble) document.getElementById('f-ensemble').value = d.ensemble;
+    if (d.texture_notes) document.getElementById('f-texture').value = d.texture_notes;
+    if (d.cadence) document.getElementById('f-cadence').value = d.cadence;
+    if (d.suno_style_tags) document.getElementById('f-suno-tags').value = d.suno_style_tags;
+
+    if (d.techniques && Array.isArray(d.techniques)) {
+      const container = document.getElementById('tech-tags');
+      d.techniques.forEach(tech => {
+        const existing = [...container.querySelectorAll('.tag')].find(t => t.dataset.val.toLowerCase() === tech.toLowerCase());
+        if (existing) { existing.classList.add('on'); }
+        else {
+          const s = document.createElement('span');
+          s.className = 'tag on';
+          s.dataset.val = tech;
+          s.textContent = tech;
+          s.onclick = () => s.classList.toggle('on');
+          container.appendChild(s);
+        }
+      });
+    }
+
+    if (d.word_painting && Array.isArray(d.word_painting)) {
+      d.word_painting.forEach(wp => addWPRow(wp.phrase || '', wp.motion || ''));
+    }
+
+    if (d.structure && Array.isArray(d.structure)) {
+      d.structure.forEach(sec => {
+        const matchTag = lyricTagOptions.find(o => o.toLowerCase().includes((sec.section||'').toLowerCase())) || '[Verse]';
+        addLyricSection(matchTag, '');
+      });
+    }
+
+    status.textContent = '✓ Imported successfully';
+    setTimeout(() => status.textContent = '', 2500);
+  } catch(e) {
+    status.textContent = '✗ Invalid JSON — check Claude\'s response';
+  }
+}
+
+// ── Compression dictionary: verbose phrase → short tag ──────────────────────
+const COMPRESS_MAP = [
+  [/operatic pop/gi,'operatic'],
+  [/crossover classical/gi,'classical crossover'],
+  [/full symphony orchestra/gi,'symphony orchestra'],
+  [/soprano and tenor duet/gi,'soprano tenor duet'],
+  [/dynamic contrast/gi,'dynamic contrast'],
+  [/orchestral swell/gi,'orch swell'],
+  [/imitative counterpoint/gi,'imitative cntpt'],
+  [/through-composed/gi,'through-composed'],
+  [/word painting/gi,'word painting'],
+  [/legato cantabile/gi,'legato cantabile'],
+  [/moderato cantabile/gi,'moderato'],
+  [/bittersweet farewell/gi,'bittersweet'],
+  [/key modulation/gi,'modulation'],
+  [/choir backing/gi,'choir'],
+  [/emotional climax/gi,'climax'],
+  [/fortissimo build/gi,'fortissimo'],
+  [/strings-led/gi,'strings'],
+  [/rubato/gi,'rubato'],
+  [/cinematic/gi,'cinematic'],
+  [/call and response/gi,'call-response'],
+  [/overlapping cadences/gi,'overlap cadences'],
+  [/cascading string arpeggios/gi,'string arpeggios'],
+  [/brass fanfare punctuation/gi,'brass fanfare'],
+  [/pedal point in bass strings/gi,'pedal point'],
+  [/\s{2,}/g,' '],
+];
+
+function smartCompress(text) {
+  let out = text;
+  COMPRESS_MAP.forEach(([pat, rep]) => { out = out.replace(pat, rep); });
+  return out.trim();
+}
+
+// Trim style tags to fit within limit, dropping least-important last tags
+function trimToLimit(text, limit) {
+  if (text.length <= limit) return text;
+  const tags = text.split(',').map(t => t.trim()).filter(Boolean);
+  let result = '';
+  for (let i = 0; i < tags.length; i++) {
+    const candidate = (result ? result + ', ' : '') + tags[i];
+    if (candidate.length <= limit) result = candidate;
+    else break;
+  }
+  return result;
+}
+
+function updateCounter(boxId, counterId, limit) {
+  const el = document.getElementById(boxId);
+  const counter = document.getElementById(counterId);
+  const warnId = boxId === 'out-style' ? 'style-warn' : 'lyrics-warn';
+  const warn = document.getElementById(warnId);
+  const len = el.value.length;
+  counter.textContent = `${len} / ${limit}`;
+  const over = len > limit;
+  counter.style.color = over ? 'var(--red)' : len > limit * 0.9 ? 'var(--accent)' : 'var(--text3)';
+  el.style.borderColor = over ? 'var(--red)' : 'var(--line2)';
+  if (warn) warn.style.display = over ? 'inline' : 'none';
+}
+
+function compressBox(boxId, counterId, limit) {
+  const el = document.getElementById(boxId);
+  let compressed = smartCompress(el.value);
+  if (compressed.length > limit) compressed = trimToLimit(compressed, limit);
+  el.value = compressed;
+  updateCounter(boxId, counterId, limit);
+}
+
+function compressAll() {
+  compressBox('out-style', 'style-counter', 120);
+  compressBox('out-lyrics', 'lyrics-counter', 3000);
+}
+
+function copyBox(boxId, btnId) {
+  const text = document.getElementById(boxId).value;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById(btnId);
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 1500);
+  });
+}
+
+function buildFinalPrompt() {
+  const genre    = document.getElementById('f-genre').value.trim();
+  const form     = document.getElementById('f-form').value.trim();
+  const harmony  = document.getElementById('f-harmony').value.trim();
+  const tempo    = document.getElementById('f-tempo').value.trim();
+  const ensemble = document.getElementById('f-ensemble').value.trim();
+  const texture  = document.getElementById('f-texture').value.trim();
+  const cadence  = document.getElementById('f-cadence').value.trim();
+  const sunoTags = document.getElementById('f-suno-tags').value.trim();
+  const techniques = getTags('tech-tags');
+
+  const wpRows = [...document.querySelectorAll('#wp-rows .word-paint-row')];
+  const wpMap = wpRows.map(r => {
+    const ins = r.querySelectorAll('input, select');
+    return { phrase: ins[0].value.trim(), motion: ins[1].value };
+  }).filter(p => p.phrase);
+
+  const lyricRows = [...document.querySelectorAll('#lyric-rows .lyric-section-row')];
+  const sections = lyricRows.map(r => ({
+    tag: r.querySelector('select').value,
+    text: r.querySelector('textarea').value.trim()
+  })).filter(s => s.text);
+
+  // ── STYLE BOX (120 char limit) ────────────────────────────────────────────
+  // Priority: suno_style_tags first (most curated), then techniques, tempo
+  const styleParts = [];
+  if (sunoTags) styleParts.push(sunoTags);
+  else {
+    if (genre) styleParts.push(genre);
+    if (techniques.length) styleParts.push(techniques.join(', '));
+    if (tempo) styleParts.push(tempo);
+    if (ensemble) styleParts.push(ensemble);
+  }
+  let styleBox = styleParts.join(', ');
+  // Auto-compress if over 120
+  if (styleBox.length > 120) styleBox = smartCompress(styleBox);
+  if (styleBox.length > 120) styleBox = trimToLimit(styleBox, 120);
+
+  // ── LYRICS BOX (3000 char limit) ─────────────────────────────────────────
+  // Structure: optional metatag block + structured lyrics with inline WP tags
+
+  function injectWPTags(text) {
+    let out = text;
+    wpMap.forEach(w => {
+      const escaped = w.phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const motion = w.motion;
+      const short = (motion.match(/\(([^)]+)\)/)?.[1] || motion.split(' ')[0]).replace(/\s+/g,'-').toLowerCase();
+      const inlineTag = `[${short}]`;
+      out = out.replace(new RegExp(escaped, 'gi'), match => match + inlineTag);
+    });
+    return out;
+  }
+
+  const structuredLyrics = sections.map(s => `${s.tag}\n${injectWPTags(s.text)}`).join('\n\n');
+
+  // Build compact metatag block — only add if budget allows
+  const metaLines = [];
+  if (genre && form) metaLines.push(`[${genre}, ${form}]`);
+  else if (genre) metaLines.push(`[${genre}]`);
+  if (harmony || tempo) metaLines.push(`[${[harmony, tempo].filter(Boolean).join(', ')}]`);
+  if (ensemble) metaLines.push(`[${ensemble}]`);
+  if (texture) metaLines.push(`[${texture}]`);
+  if (cadence) metaLines.push(`[cadence: ${cadence}]`);
+  const metaBlock = metaLines.join('\n');
+
+  // Assemble lyrics box: try with meta, fall back without if over 3000
+  let lyricsBox = [metaBlock, structuredLyrics].filter(Boolean).join('\n\n');
+  if (lyricsBox.length > 3000) lyricsBox = structuredLyrics; // drop meta block first
+  if (lyricsBox.length > 3000) lyricsBox = lyricsBox.slice(0, 2997) + '...';
+
+  // ── Render ────────────────────────────────────────────────────────────────
+  document.getElementById('out-style').value = styleBox;
+  document.getElementById('out-lyrics').value = lyricsBox;
+  document.getElementById('output-panel').style.display = 'block';
+  updateCounter('out-style', 'style-counter', 120);
+  updateCounter('out-lyrics', 'lyrics-counter', 3000);
+
+  // Field status dots
+  const fields = [
+    { label: 'Style tags', filled: !!styleBox },
+    { label: 'Genre/form', filled: !!(genre || form) },
+    { label: 'Lyrics', filled: sections.length > 0 },
+    { label: 'Word painting', filled: wpMap.length > 0 },
+    { label: 'Within limits', filled: styleBox.length <= 120 && lyricsBox.length <= 3000 }
+  ];
+  document.getElementById('field-status').innerHTML = fields.map(f =>
+    `<span class="fs-item"><span class="status-dot ${f.filled ? 'filled' : ''}"></span>${f.label}</span>`
+  ).join('');
+}
+
+// Init
+addWPRow();
+addLyricSection('[Verse]', '');
+addLyricSection('[Chorus]', '');
+</script>
+</body>
+</html>

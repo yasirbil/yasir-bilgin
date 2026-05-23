@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirit | Yasir Bilgin</title>
+  <meta name="description" content="Spiritual growth, ahlak and virtue, Sufism, moral psychology, and the practices of inner transformation." />
+  <meta property="og:title"       content="Spirit | Yasir Bilgin" />
+  <meta property="og:description" content="Spiritual growth, ahlak and virtue, Sufism, moral psychology, and the practices of inner transformation." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://yasirbilgin.com/spirit/" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Spirit | Yasir Bilgin" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/spirit/" />
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="/assets/section.css">
+  <style>
+    :root { --accent: #5c3d6e; --accent-rgb: 92, 61, 110; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="section-eyebrow">Spirit</div>
+    <h1>Spirituality &amp; <em>inner development</em></h1>
+    <p class="hero-desc">For spiritual growth, ahlak &amp; virtue, Sufism, moral psychology, spiritual therapy, and Ramadan practice.</p>
+  </div>
+
+  <hr class="hero-rule">
+
+  <main id="main-content">
+
+  <div class="areas-section">
+    <p class="areas-label">Key Areas</p>
+    <ul class="areas-list">
+      <li>Spiritual Growth</li>
+      <li>Ahlak &amp; Virtue</li>
+      <li>Sufism</li>
+      <li>Moral Psychology</li>
+      <li>Spiritual Therapy</li>
+      <li>Ramadan &amp; Practice</li>
+    </ul>
+  </div>
+
+  <div class="articles-section">
+    <div class="articles-header">
+      <h2>Articles</h2>
+      <span class="article-count" id="countLabel">Loading…</span>
+    </div>
+    <div class="articles-grid" id="articleGrid">
+      <div class="skeleton-card"><div class="skel-line short"></div><div class="skel-line long"></div><div class="skel-line med"></div></div>
+      <div class="skeleton-card"><div class="skel-line short"></div><div class="skel-line long"></div><div class="skel-line med"></div></div>
+      <div class="skeleton-card"><div class="skel-line short"></div><div class="skel-line long"></div><div class="skel-line med"></div></div>
+    </div>
+  </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span>© 2026 Yasir Bilgin Editorial</span>
+  </footer>
+
+  <script>
+  (async function() {
+    const SECTION = 'spirit';
+    const grid = document.getElementById('articleGrid');
+    const countLabel = document.getElementById('countLabel');
+    let metaMap = {};
+    try { const mRes = await fetch('/assets/meta.json'); if (mRes.ok) metaMap = await mRes.json(); } catch(e) {}
+    try {
+      const res = await fetch('https://yasirbilgin.com/sitemap.xml');
+      const text = await res.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, 'application/xml');
+      const urls = Array.from(xml.querySelectorAll('url > loc'))
+        .map(el => el.textContent.trim())
+        .filter(u => { const p = new URL(u).pathname.toLowerCase().split('/').filter(Boolean); return p[0] === SECTION && p.length >= 2; });
+      grid.innerHTML = '';
+      if (urls.length === 0) { grid.innerHTML = '<p class="empty-msg">No articles published yet in this section.</p>'; countLabel.textContent = '0 articles'; return; }
+      countLabel.textContent = urls.length + ' article' + (urls.length !== 1 ? 's' : '');
+      urls.forEach(url => {
+        const parts = new URL(url).pathname.split('/').filter(Boolean);
+        const slug = parts[parts.length - 1].replace(/\.html$/i, '');
+        const category = parts.length > 2 ? parts[1].replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase()) : '';
+        const meta = metaMap[url] || metaMap[new URL(url).pathname] || {};
+        const title = meta.title || slug.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+        const desc  = meta.desc  || '';
+        const a = document.createElement('a');
+        a.className = 'article-card';
+        a.href = url;
+        a.innerHTML = `${category ? `<div class="card-category">${category}</div>` : ''}<div class="card-title">${title}</div>${desc ? `<div class="card-desc">${desc}</div>` : ''}`;
+        grid.appendChild(a);
+      });
+    } catch(err) { grid.innerHTML = '<p class="empty-msg">Could not load articles at this time.</p>'; countLabel.textContent = ''; }
+  })();
+  </script>
+</body>
+</html>

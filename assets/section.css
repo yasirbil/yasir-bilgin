@@ -1,0 +1,277 @@
+/* ============================================================
+   section.css — Shared stylesheet for all yasirbilgin.com
+   section index pages (arts, atlas, civilization, faith, etc.)
+
+   Each section index only needs to override:
+     --accent     : the section's primary color (hex)
+     --accent-rgb : the same color as "R, G, B" for rgba() use
+
+   Example override (inline <style> in each index.html):
+     :root {
+       --accent:     #2d5a4a;
+       --accent-rgb: 45, 90, 74;
+     }
+   ============================================================ */
+
+/* ============================================================
+   SECTION ACCENT PALETTE — canonical reference
+   Override --accent and --accent-rgb in each section index.
+
+   Section        Hex       R,   G,   B
+   ─────────────────────────────────────
+   Arts           #8a3a5a   138,  58,  90
+   Atlas          #3b5f8a    59,  95, 138
+   Civilization   #7a3b2e   122,  59,  46
+   Faith          #2d5a4a    45,  90,  74
+   Hizmet         #1a4a6b    26,  74, 107
+   Learning       #7a4f1a   122,  79,  26
+   Life           #5a7a3a    90, 122,  58
+   Spirit         #5c3d6e    92,  61, 110
+   Tech           #1a3a5c    26,  58,  92
+   ─────────────────────────────────────
+   Shared accent2 #c4a96b (warm gold — do not override)
+   ============================================================ */
+
+/* ── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:wght@300;400;600&display=swap');
+
+/* ── Base tokens ──────────────────────────────────────────── */
+:root {
+  --bg:         #f7f4ef;
+  --ink:        #1a1714;
+  --mid:        #5a5248;
+  --accent:     #2d5a4a;          /* overridden per section */
+  --accent-rgb: 45, 90, 74;       /* overridden per section */
+  --accent2:    #c4a96b;
+  --rule:       rgba(90,82,72,0.18);
+  --card-bg:    #ffffff;
+  --tag-bg:     rgba(var(--accent-rgb), 0.08);
+  --tag-border: rgba(var(--accent-rgb), 0.18);
+}
+
+/* ── Dark mode ────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:         #131310;
+    --ink:        #f0ede5;
+    --mid:        #908d85;
+    --rule:       rgba(255,255,255,0.14);
+    --card-bg:    #1e1e1a;
+    --tag-bg:     rgba(var(--accent-rgb), 0.12);
+    --tag-border: rgba(var(--accent-rgb), 0.22);
+  }
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Body ─────────────────────────────────────────────────── */
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+  line-height: 1.7;
+  padding-top: 62px; /* offset for fixed nav injected by nav.js */
+}
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero {
+  padding: 5rem 2rem 3.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+.section-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+}
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 1.2rem;
+}
+h1 em { font-style: italic; color: var(--accent); }
+.hero-desc {
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  color: var(--mid);
+  max-width: 600px;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+.hero-rule { border: none; border-top: 1px solid var(--rule); margin: 0 2rem; }
+
+/* ── Key Areas ────────────────────────────────────────────── */
+.areas-section {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+}
+.areas-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mid);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.areas-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-bottom: 3rem;
+}
+.areas-list li {
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  color: var(--accent);
+  padding: 0.35rem 0.9rem;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ── Articles grid ────────────────────────────────────────── */
+.articles-section {
+  max-width: 900px;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+}
+.articles-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+.articles-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+.article-count {
+  font-size: 0.8rem;
+  color: var(--mid);
+  letter-spacing: 0.06em;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ── Article card ─────────────────────────────────────────── */
+.article-card {
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  padding: 1.4rem 1.4rem 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.article-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.article-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.card-category {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.card-desc {
+  font-size: 0.82rem;
+  color: var(--mid);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* ── Skeleton loader ──────────────────────────────────────── */
+.loading-msg, .empty-msg {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--mid);
+  font-style: italic;
+  padding: 3rem 0;
+  font-size: 0.95rem;
+}
+.skeleton-card {
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--rule);
+  padding: 1.4rem;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.skel-line { background: #e8e3dc; border-radius: 2px; margin-bottom: 0.6rem; }
+.skel-line.short { height: 10px; width: 45%; }
+.skel-line.long  { height: 14px; width: 88%; }
+.skel-line.med   { height: 14px; width: 70%; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.55} }
+
+/* ── Footer ───────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--mid);
+}
+footer .footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Mobile ───────────────────────────────────────────────── */
+@media (max-width: 560px) {
+  .articles-grid { grid-template-columns: 1fr; }
+  .hero { padding: 3.5rem 1.4rem 2.5rem; }
+  .areas-section, .articles-section { padding: 0 1.4rem; }
+}

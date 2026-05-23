@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="To Tame or to Tend" />
+  <meta property="og:description" content="To Tame or to Tend" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/life/Wellbeing/to-tame-or-to-tend.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="To Tame or to Tend" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/life/Wellbeing/to-tame-or-to-tend.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>To Tame or to Tend | Yasir Bilgin</title>
+
+  <!-- ① Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --ink:        #1a1510;
+      --ink-light:  #4a4035;
+      --parchment:  #f7f3ec;
+      --cream:      #faf7f2;
+      --gold:       #b8892a;
+      --gold-light: #d4a94a;
+      --moss:       #3d5a3e;
+      --rust:       #8b3a2a;
+      --rule:       rgba(26,21,16,0.15);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    /* ─── PROGRESS BAR ─── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 2px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── TOC OVERLAY ─── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(26,21,16,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--parchment);
+      width: min(380px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.5rem 2rem;
+      border-left: 1px solid var(--rule);
+    }
+    .toc-close {
+      background: none;
+      border: 1px solid var(--rule);
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 1.5rem;
+      color: var(--ink-light);
+    }
+    .toc-panel h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.8rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 0.25rem; }
+    .toc-list a {
+      color: var(--ink-light);
+      text-decoration: none;
+      font-size: 0.92rem;
+      display: block;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .toc-list a:hover { color: var(--gold); border-color: var(--rule); }
+    .toc-list a.toc-main {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.97rem;
+    }
+    .toc-list a.toc-main:hover { color: var(--gold); }
+    .toc-list li.sub { padding-left: 1rem; }
+
+    /* ─── ARTICLE SUB-HEADER ─── */
+    .article-header {
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 44px;
+    }
+    .article-header .site-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--ink-light);
+      text-decoration: none;
+    }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .read-time {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--rule);
+      font-family: inherit;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0.35rem 0.9rem;
+      color: var(--ink);
+      min-height: 32px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .toc-btn:hover { background: var(--ink); color: var(--cream); }
+
+    /* ─── HERO ─── */
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+      text-align: center;
+    }
+    .hero-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-family: 'Source Serif 4', serif;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      line-height: 1.08;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+      color: var(--ink-light);
+      max-width: 580px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.5;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+    .avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .byline-text { text-align: left; }
+    .byline-name {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+    .byline-meta {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--ink-light);
+    }
+
+    .hero-rule {
+      max-width: 120px;
+      margin: 0 auto 0;
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ─── ORNAMENT ─── */
+    .ornament {
+      text-align: center;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 3rem 0 2rem;
+      letter-spacing: 0.4em;
+    }
+
+    /* ─── ARTICLE BODY ─── */
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    .major-section { margin-bottom: 4.5rem; }
+
+    .section-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.7rem;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .major-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+    .major-section h2 em { font-style: italic; color: var(--gold); }
+
+    .sub-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1rem;
+      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+    .sh-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--gold);
+      min-width: 2rem;
+    }
+
+    p { margin-bottom: 1.4rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ─── PULL QUOTE ─── */
+    .pull-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.25rem, 3vw, 1.65rem);
+      line-height: 1.4;
+      color: var(--ink);
+      border-left: 3px solid var(--gold);
+      padding: 1rem 0 1rem 1.8rem;
+      margin: 3rem 0 3rem -2rem;
+    }
+    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
+
+    /* ─── CALLOUT BOX ─── */
+    .callout {
+      background: var(--parchment);
+      border-top: 2px solid var(--gold);
+      padding: 1.6rem 1.8rem;
+      margin: 2.5rem 0;
+      font-size: 0.95rem;
+    }
+    .callout-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ─── COMPARISON TABLE ─── */
+    .table-wrap { overflow-x: auto; margin: 2.5rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+    }
+    thead th {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      padding: 0.9rem 1.1rem;
+      text-align: left;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+    }
+    tbody tr:nth-child(even) { background: var(--parchment); }
+    tbody td {
+      padding: 0.8rem 1.1rem;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    tbody td:first-child {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--moss);
+      white-space: nowrap;
+    }
+
+    /* ─── GARDEN PANELS ─── */
+    .garden-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      margin: 2.5rem 0;
+    }
+    @media (max-width: 560px) { .garden-duo { grid-template-columns: 1fr; } }
+    .garden-card {
+      padding: 1.6rem;
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+    .garden-card.english {
+      background: var(--parchment);
+      border-left: 3px solid var(--moss);
+    }
+    .garden-card.french {
+      background: var(--parchment);
+      border-left: 3px solid var(--rust);
+    }
+    .garden-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+    .garden-card.english .garden-card-title { color: var(--moss); }
+    .garden-card.french  .garden-card-title { color: var(--rust); }
+
+    /* ─── ARABIC / OTTOMAN INSET ─── */
+    .tradition-block {
+      border: 1px solid var(--rule);
+      padding: 1.6rem 1.8rem;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+    .tradition-block::before {
+      content: '';
+      position: absolute;
+      top: 6px; left: 6px; right: 6px; bottom: 6px;
+      border: 1px solid var(--rule);
+      pointer-events: none;
+    }
+    .tradition-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.7rem;
+    }
+    .tradition-arabic {
+      font-size: 1.4rem;
+      color: var(--ink);
+      text-align: right;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* ─── SECTION DIVIDER ─── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 3.5rem 0;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      border-top: 1px solid var(--rule);
+    }
+    .section-divider span {
+      font-size: 1.1rem;
+      color: var(--gold);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.85rem;
+      color: var(--ink-light);
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--ink);
+    }
+
+    /* ─── SECTION SCROLL MARGIN ─── */
+    section[id] { scroll-margin-top: 120px; }
+    h3[id]      { scroll-margin-top: 120px; }
+
+    @media (max-width: 720px) {
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      body { font-size: 17px; }
+    }
+  </style>
+  <meta name="description" content="Should we shape nature — including human nature — or protect it from our own corrupting" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "To Tame or to Tend",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-05-01",
+  "url": "https://yasirbilgin.com/life/Wellbeing/to-tame-or-to-tend.html",
+  "description": "Should we shape nature — including human nature — or protect it from our own corrupting"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/life/" style="color:#5a7a3a;text-decoration:none;">Life</a> <span style="opacity:0.5">›</span> <span>Wellbeing</span> <span style="opacity:0.5">›</span> <span>To Tame or to Tend</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Life",
+      "item": "https://yasirbilgin.com/life/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "To Tame or to Tend",
+      "item": "https://yasirbilgin.com/life/Wellbeing/to-tame-or-to-tend.html"
+    }
+  ]
+}
+</script>
+
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕ Close</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-main">I. The Question Itself</a></li>
+        <li class="sub"><a href="#s1-1">1.1 The Stakes</a></li>
+        <li><a href="#s2" class="toc-main">II. Two Visions of Nature</a></li>
+        <li class="sub"><a href="#s2-1">2.1 Hobbes: Nature as War</a></li>
+        <li class="sub"><a href="#s2-2">2.2 Rousseau: Nature as Innocence</a></li>
+        <li class="sub"><a href="#s2-3">2.3 Islamic Fıtrat: Nature as Trust</a></li>
+        <li><a href="#s3" class="toc-main">III. The Garden as Metaphor</a></li>
+        <li class="sub"><a href="#s3-1">3.1 The French Garden</a></li>
+        <li class="sub"><a href="#s3-2">3.2 The English Garden</a></li>
+        <li class="sub"><a href="#s3-3">3.3 The Orchard of Responsibility</a></li>
+        <li><a href="#s4" class="toc-main">IV. Every Child is Born on Fıtrat</a></li>
+        <li class="sub"><a href="#s4-1">4.1 The Hadith and Its Implications</a></li>
+        <li class="sub"><a href="#s4-2">4.2 What Education Systems Assume</a></li>
+        <li><a href="#s5" class="toc-main">V. Is Taming a Human Responsibility?</a></li>
+        <li class="sub"><a href="#s5-1">5.1 Khilafa: Stewardship, not Mastery</a></li>
+        <li class="sub"><a href="#s5-2">5.2 The Corruption Problem</a></li>
+        <li><a href="#s6" class="toc-main">VI. A Synthesis</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Article sub-header -->
+  
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-kicker">Philosophy · Religion · Nature</p>
+    <h1>To <em>Tame</em> or<br>to Tend</h1>
+    <p class="hero-sub">Should we shape nature — including human nature — or protect it from our own corrupting hands?</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">May 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">18 min read</span>
+      <button class="toc-btn"
+              onclick="document.getElementById('tocOverlay').classList.add('open')">
+        Contents
+      </button>
+</header>
+
+
+  <!-- Article body -->
+  <article class="article-body">
+
+    <!-- ─── I. THE QUESTION ─── -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>The <em>Question</em> Itself</h2>
+
+      <p>There is an old Turkish proverb that contains, embedded inside its practical wisdom, a whole philosophy of nature: <em>bakarsan bağ olur, bakmazsan dağ.</em> Tend it, and it becomes a vineyard. Leave it, and it returns to mountain wilderness. The proverb does not say: conquer it, command it, master it. It says: <em>look after</em> it. The word is <em>bakmak</em> — to look, to attend, to care.</p>
+
+      <p>That distinction — between mastery and stewardship — sits at the heart of one of the oldest and most consequential questions in philosophy, theology, and political thought: <strong>What is our proper relationship to nature, including our own?</strong></p>
+
+      <p>Is nature something raw, dangerous, and in need of civilising? Or is it something original, innocent, and in need of protecting — from us? Does the human being arrive into the world as an unfinished rough draft that culture must complete? Or as a pure document that society gradually defaces?</p>
+
+      <h3 id="s1-1" class="sub-heading"><span class="sh-num">1.1</span>The Stakes</h3>
+
+      <p>These are not merely academic questions. The answer you give shapes how you raise children, how you design cities, how you build institutions, how you understand justice, and how you relate to the divine. A civilization that believes nature is hostile will build very differently from one that believes nature is sacred. An education system that assumes the child arrives corrupt will teach very differently from one that assumes the child arrives whole.</p>
+
+      <p>What follows is an attempt to map the major positions — from Thomas Hobbes to Jean-Jacques Rousseau, from the gardens of Versailles to the meadows of Capability Brown, and from the concept of <em>fıtrat</em> in Islamic theology to contemporary debates about rewilding, progressive education, and environmental ethics.</p>
+    </section>
+
+    <div class="section-divider"><span>❧</span></div>
+
+    <!-- ─── II. TWO VISIONS ─── -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>Two Visions of <em>Nature</em></h2>
+
+      <p>Before asking whether we should tame nature, we need to ask: which nature are we talking about? The word is doing enormous work, and different thinkers have meant radically different things by it.</p>
+
+      <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>Hobbes: Nature as War</h3>
+
+      <p>For Thomas Hobbes, writing in the shadow of English civil war, nature was the condition you got <em>without</em> civilisation — and it was terrifying. The natural state of mankind, he argued, is a state of perpetual conflict, where life is, in his devastating phrase, "solitary, poor, nasty, brutish, and short." Human beings are naturally acquisitive, competitive, and insecure. Without the Leviathan — the sovereign power of the state — they would destroy each other.</p>
+
+      <p>On this view, taming is not merely permitted; it is <em>the</em> civilizational project. The alternative to culture is chaos. The child must be disciplined because the natural child, left alone, is an agent of appetite. Authority, law, and hierarchy are not impositions on human nature — they are its only hope.</p>
+
+      <div class="callout">
+        <p class="callout-title">The Hobbesian Assumption in Education</p>
+        <p>A great deal of traditional schooling has been implicitly Hobbesian: the child's natural impulses — play, wandering, distraction, rebellion — are problems to be managed. The school is a civilising institution. Discipline is not cruelty; it is care. The teacher's job is to install order where disorder would otherwise reign.</p>
+      </div>
+
+      <h3 id="s2-2" class="sub-heading"><span class="sh-num">2.2</span>Rousseau: Nature as Innocence</h3>
+
+      <p>Jean-Jacques Rousseau is perhaps Hobbes's most famous opponent on this question. Where Hobbes saw nature as war, Rousseau saw it as peace — disrupted by civilisation itself. His famous formulation reverses the entire Hobbesian picture: man is born free, and everywhere he is in chains.</p>
+
+      <p>For Rousseau, the original human being is good. Characterised by <em>amour de soi</em> — a gentle, non-comparative self-love — and by natural compassion for others, the pre-social human is not predatory but calm. It is <em>society</em> — with its property regimes, its class distinctions, its artificial desires and vanities — that corrupts. The problem is not insufficient taming; the problem is too much of it.</p>
+
+      <blockquote class="pull-quote">
+        "Everything is good as it leaves the hands of the Author of things; everything degenerates in the hands of man."<br>
+        <small style="font-size:0.8rem; font-style:normal; color:var(--ink-light)">— Rousseau, <em>Émile</em>, 1762</small>
+      </blockquote>
+
+      <p>This has radical implications for education. Rousseau's <em>Émile</em> is a thought-experiment in what education would look like if we trusted the child's natural development rather than forcing it into pre-determined moulds. The teacher's job is not to install values but to protect the child from premature corruption long enough for those natural virtues to flower on their own.</p>
+
+      <h3 id="s2-3" class="sub-heading"><span class="sh-num">2.3</span>Islamic Fıtrat: Nature as Trust</h3>
+
+      <p>The Islamic concept of <em>fıtrat</em> offers a third position — one that cannot be easily mapped onto the Hobbes–Rousseau axis, though it has affinities with both and transcends both.</p>
+
+      <p><em>Fıtrat</em> (<span lang="ar" dir="rtl">فطرة</span>) derives from the root <em>f-t-r</em>, meaning to split open, to create, to originate. It refers to the original constitution in which human beings are created — a primordial disposition oriented toward tawhid, toward an intuitive recognition of the divine. The Quranic verse (30:30) speaks of the <em>fitrat Allah</em> — the pattern of God — as the nature upon which human beings are fashioned, unchangeable and universal.</p>
+
+      <div class="tradition-block">
+        <p class="tradition-label">The Hadith of Fıtrat</p>
+        <p class="tradition-arabic"><span lang="ar" dir="rtl">كُلُّ مَوْلُودٍ يُولَدُ عَلَى الْفِطْرَةِ</span></p>
+        <p style="margin-top:0.8rem; font-size:0.95rem; color:var(--ink-light);">"Every child is born upon the fıtrat; it is their parents who make them a Jew, a Christian, or a Magian." — Sahih al-Bukhari</p>
+      </div>
+
+      <p>This is neither Hobbes nor Rousseau. The child is not born corrupt, in need of civilisation to save it. But neither is the child born complete, needing only non-interference. The child is born with an orientation — a compass bearing, if you will — toward the divine, toward moral clarity, toward an innate sense of justice and wonder. But that compass can be deflected. External forces — family, culture, ideology — are not neutral; they actively shape where the needle points.</p>
+
+      <p>The question then becomes: what does the child's original nature need to <em>become</em> what it already points toward? And what distorts it? This is a question about tending, not taming.</p>
+    </section>
+
+    <div class="section-divider"><span>❧</span></div>
+
+    <!-- ─── III. THE GARDEN ─── -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>The Garden as <em>Metaphor</em></h2>
+
+      <p>Perhaps no set of images captures these competing philosophies more vividly than the design of gardens. Gardens are, by definition, a negotiation between human intention and natural growth. How you design a garden reveals what you think about that negotiation.</p>
+
+      <div class="garden-duo">
+        <div class="garden-card french">
+          <p class="garden-card-title">The French Garden</p>
+          <p>The jardins à la française — epitomised by André Le Nôtre's design at Versailles — impose geometric order on the natural world with breathtaking confidence. Hedges are cut into perfect cones and cubes. Water is channelled into straight canals. Trees are trained into walls. Symmetry extends to the horizon. Nature is not eliminated; it is <em>commanded</em>. The garden proclaims: reason can and should master the wild. The mind of the gardener is expressed in the submission of every branch.</p>
+        </div>
+        <div class="garden-card english">
+          <p class="garden-card-title">The English Garden</p>
+          <p>The English landscape garden — developed in the eighteenth century by figures like Capability Brown — was a deliberate reaction against French formalism. It cultivated the appearance of the natural, the wild, the accidentally beautiful. Paths wound. Lakes were irregular. Trees grew in asymmetric clumps. "Nature" was designed, paradoxically, to look undesigned. The ideal was not submission but <em>conversation</em> — a landscape that looked as though it had always been there, that the gardener had merely helped it become itself.</p>
+        </div>
+      </div>
+
+      <h3 id="s3-1" class="sub-heading"><span class="sh-num">3.1</span>The French Garden as Philosophical Statement</h3>
+
+      <p>The jardins à la française represent, in stone and hedgerow, the Enlightenment confidence in reason's capacity to order the world. They are Cartesian landscapes: nature as res extensa, pure extension, available for mathematical organisation. Behind them lies a deep assumption — that the natural world has no intrinsic order worth preserving; that order is imposed from above, by the rational mind, by the sovereign, by God as cosmic architect.</p>
+
+      <p>In educational terms, this corresponds to what Paulo Freire would later call the "banking model" of education: the student is an empty vessel; knowledge is deposited. The teacher's authority is total, and the student's task is obedient reception. There is a right answer, a correct form, and it is the educator's job to ensure the student conforms to it.</p>
+
+      <h3 id="s3-2" class="sub-heading"><span class="sh-num">3.2</span>The English Garden as Philosophical Statement</h3>
+
+      <p>The English landscape tradition, by contrast, assumes that the natural world has its own logic, its own beauty — and that the gardener's job is to <em>release</em> that beauty, to create conditions for it to emerge, not to impose a foreign order. The gardener reads the land and responds. Capability Brown famously spoke of seeing the "capabilities" of a landscape and helping them realise themselves.</p>
+
+      <p>This maps neatly onto Rousseau's educational philosophy, and onto later progressive education: the Montessori classroom as English garden. The child has a natural developmental logic; the educator's job is to prepare the environment, remove obstacles, and let the child's own curiosity drive the work. Control is loosened; trust is extended.</p>
+
+      <h3 id="s3-3" class="sub-heading"><span class="sh-num">3.3</span>The Orchard: A Third Way</h3>
+
+      <p>But neither the French nor the English garden quite captures the <em>fıtrat</em> model. There is a third image worth considering: the orchard, or the traditional kitchen garden. Here, the gardener neither imposes geometric order nor steps back to let nature do whatever it will. The gardener tends. They know what they are growing. They know the plant's nature — its needs, its tendencies, its vulnerabilities. They prune not to dominate but to help the tree bear fruit. They water. They train young branches toward the light, not to change the tree's essence, but to help it fulfil its own telos.</p>
+
+      <blockquote class="pull-quote">
+        The orchard gardener does not ask: how do I bend this tree to my will? They ask: what does this tree need to become what it is meant to be?
+      </blockquote>
+
+      <p>This is the metaphor that best fits the Islamic concept of <em>terbiye</em> — often translated as "education" but more precisely meaning upbringing, cultivation, the raising of something to its fullness. The root is <em>r-b-w</em>, related to growth, increase, the swelling of life toward its potential. <em>Terbiye</em> is what you do to a vine that wants to bear grapes: you help it, guide it, protect it from frost and disease, train it toward the sun. You do not decide what kind of fruit it should bear — that is given. But you are responsible for whether it bears it or not.</p>
+    </section>
+
+    <div class="section-divider"><span>❧</span></div>
+
+    <!-- ─── IV. FITRAT ─── -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>Every Child Born on <em>Fıtrat</em></h2>
+
+      <h3 id="s4-1" class="sub-heading"><span class="sh-num">4.1</span>The Hadith and Its Implications</h3>
+
+      <p>The hadith cited earlier — that every child is born upon the fıtrat, and it is the parents who shape the child's subsequent religious identity — is deceptively simple. It has generated centuries of theological debate, and its implications extend far beyond the question of religion into the heart of philosophy of education, developmental psychology, and political theory.</p>
+
+      <p>First, note what the hadith does <em>not</em> say. It does not say that the child is born <em>complete</em> — as if development were unnecessary. It does not say that the child is born a blank slate, to be written upon by culture. It says the child is born with a <em>disposition</em>, an orientation, a nature. That nature is not neutral. It has a direction — toward tawhid, toward moral intuition, toward wonder, toward the recognition of the good.</p>
+
+      <p>Second, note the force of the parental role. The parents — and by extension, culture, society, education — are not mere accessories. They are the agents who may confirm or deflect the original compass bearing. The hadith does not say that fıtrat is invulnerable. It says it is the original. What the world does with it is a separate, weighty question.</p>
+
+      <p>Third, note the universality. The hadith does not say "every Muslim child." It says every child — every <em>mawlud</em>. Fıtrat is not the property of a religious community; it is the structure of human nature as such. This has enormous implications for how one approaches the question of natural law, of moral universalism, of the cross-cultural recognition of justice.</p>
+
+      <h3 id="s4-2" class="sub-heading"><span class="sh-num">4.2</span>What Education Systems Assume</h3>
+
+      <p>How an education system relates to fıtrat reveals its deepest assumptions about human nature. We can sketch a rough typology:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>View of the Child</th>
+              <th>Goal of Education</th>
+              <th>Relation to Fıtrat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Traditional / Authoritarian</td>
+              <td>Unformed raw material; appetites must be controlled</td>
+              <td>Instil discipline, correct doctrine, obedience</td>
+              <td>Suspects fıtrat; imposes from outside</td>
+            </tr>
+            <tr>
+              <td>Progressive / Rousseauian</td>
+              <td>Naturally good; society is the problem</td>
+              <td>Remove obstacles; protect natural development</td>
+              <td>Trusts fıtrat entirely; too passive</td>
+            </tr>
+            <tr>
+              <td>Behaviourist</td>
+              <td>A blank slate; responses to stimuli</td>
+              <td>Shape behaviour through reinforcement</td>
+              <td>Denies fıtrat; treats child as neutral</td>
+            </tr>
+            <tr>
+              <td>Islamic Terbiye</td>
+              <td>Oriented toward good; vulnerable to distortion</td>
+              <td>Confirm, cultivate, protect, guide fıtrat</td>
+              <td>Begins with fıtrat; tends it toward its telos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The Islamic model is distinct in its refusal of both Hobbesian pessimism and Rousseauian passivity. The child is neither a monster to be tamed nor an angel to be left alone. The child is a trust — an <em>amanah</em> — whose original nature is good and whose flourishing requires both protection from corrupting influences and positive cultivation toward virtue.</p>
+    </section>
+
+    <div class="section-divider"><span>❧</span></div>
+
+    <!-- ─── V. HUMAN RESPONSIBILITY ─── -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>Is Taming a Human <em>Responsibility</em>?</h2>
+
+      <p>We have been speaking primarily about human nature. But the question applies equally — and in some ways more urgently — to the wider natural world. Is it our responsibility to tame nature? To manage, order, and shape the ecosystems and organisms we find ourselves among? Or is nature something that should be protected <em>from</em> human management?</p>
+
+      <h3 id="s5-1" class="sub-heading"><span class="sh-num">5.1</span>Khilafa: Stewardship, not Mastery</h3>
+
+      <p>The Islamic concept of <em>khilafa</em> (<span lang="ar" dir="rtl">خلافة</span>) — often translated as "vicegerency" or "stewardship" — describes the human role in relation to the natural world. The Quranic verse (2:30) presents the human being as God's khalifa on earth: a representative, a trustee, one who acts on behalf of another and is accountable to them.</p>
+
+      <p>This is a careful conceptual construction. The khalifa is not an owner. The earth does not belong to the human being; it belongs to God. The human being is a steward — given real authority, real responsibility, real capacity to shape — but within limits set by the original owner, and answerable to that owner for what they do.</p>
+
+      <p>Stewardship implies active engagement. A steward who does nothing is failing their responsibility. The earth does need tending. The <em>bakarsan bağ olur</em> proverb is not just descriptive; it is normative. Tend it — because you are responsible for what it becomes. Neglect is not neutrality; it is a failure of care.</p>
+
+      <p>But stewardship also implies limits. A steward who treats their master's property as their own — who exploits it for personal gain, who defaces it, who fails to account for it — is not a steward but a usurper. The Islamic critique of ecological destruction is rooted here: not primarily in utilitarian calculus about future human welfare (though that matters), but in the theological claim that the earth is not ours to destroy.</p>
+
+      <h3 id="s5-2" class="sub-heading"><span class="sh-num">5.2</span>The Corruption Problem</h3>
+
+      <p>Here the question becomes more complicated — and more urgent. What if the humans who are doing the taming are themselves corrupted? The Quran acknowledges what it calls <em>fasad fil ard</em> — corruption in the land, destruction of what God has created. The corrupting agent is not nature. It is the human being who has departed from their own fıtrat, who has lost their moral orientation, whose appetites have become unmoored from purpose.</p>
+
+      <p>This introduces a deep tension. The human being is called to stewardship — to active, responsible engagement with nature. But the human being is also capable of profound corruption. Our record is not encouraging. Climate change, mass extinction, deforestation, soil degradation — these are the outcomes of human management that forgot it was stewardship and became exploitation.</p>
+
+      <blockquote class="pull-quote">
+        Corruption has appeared on land and sea because of what people's own hands have brought about — so that they may taste something of what they have done.
+        <small style="font-size:0.8rem; font-style:normal; color:var(--ink-light)">— Quran 30:41</small>
+      </blockquote>
+
+      <p>So: should we tame nature, or protect it from ourselves? The honest answer is that we may need to do both — to tend where tending is needed, and to restrain our own tendency toward domination. The problem is not that we intervene in nature. The problem is the <em>spirit</em> of our intervention: whether it is oriented toward stewardship or extraction, toward completion or conquest.</p>
+    </section>
+
+    <div class="section-divider"><span>❧</span></div>
+
+    <!-- ─── VI. SYNTHESIS ─── -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>A <em>Synthesis</em></h2>
+
+      <p>We began with a proverb and a question. We end with something that is less a conclusion than a set of orienting principles.</p>
+
+      <p><strong>On human nature:</strong> Neither the Hobbesian nor the Rousseauian position is adequate on its own. The child is not born corrupt — the fıtrat doctrine preserves something important about the original goodness and moral orientation of the human person. But the child is also not born complete — the tradition of terbiye reminds us that tending, guidance, and cultivation are genuine responsibilities, not impositions. The task is not to overcome nature, nor to leave it alone, but to help it become what it is oriented toward.</p>
+
+      <p><strong>On education:</strong> Systems that treat children as problems to be managed will systematically suppress the very capacities they claim to develop. Systems that treat children as self-completing automatons will abandon them to environmental influences that may be far more distorting than deliberate guidance. The orchard model — knowing what you are growing, tending it appropriately, protecting it from what would harm it, training it toward the light — is the more adequate one.</p>
+
+      <p><strong>On the wider natural world:</strong> The stewardship framework dissolves the false choice between "tame nature" and "leave nature alone." The question is not whether to engage — we cannot but engage — but how. Engagement oriented by accountability, by humility, by awareness of our own tendency toward corruption, is different in kind from engagement oriented by dominance and extraction.</p>
+
+      <p><strong>On the garden:</strong> Perhaps the right image is neither Versailles nor Capability Brown. It is the traditional kitchen garden — modest, functional, intimate. The gardener knows each plant. They know what each needs. They intervene constantly, but their interventions are shaped by their attention to the plant's own nature. They do not ask: how do I make this rose into a perfectly trimmed cube? They ask: what does this rose need today? And they tend accordingly.</p>
+
+      <div class="callout">
+        <p class="callout-title">The Question That Remains</p>
+        <p>What does it mean to tend human nature — individually and collectively — when the very instruments of tending (institutions, ideologies, religions, education systems) are themselves produced by humans who are themselves in need of tending? The circularity is not a problem to be solved but a tension to be lived — with honesty, with humility, and with attention to the original compass bearing that, the tradition tells us, was given before any of our systems existed.</p>
+      </div>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <p style="text-align:center; font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--ink-light); font-size:1.05rem;">
+        Bakarsan bağ olur, bakmazsan dağ.<br>
+        <small style="font-style:normal; font-size:0.85rem;">Tend it, and it becomes a vineyard. Leave it, and it returns to mountain.</small>
+      </p>
+    </section>
+
+  </article>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progressBar');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (scrollTop / docH * 100) + '%';
+      }, { passive: true });
+    }
+  
+  (function () {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const section = parts[0];
+  if (!section) return;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+  const href  = '/' + section + '/';
+  const el = document.querySelector('a.site-name');
+  if (el) { el.textContent = label; el.href = href; }
+})();
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

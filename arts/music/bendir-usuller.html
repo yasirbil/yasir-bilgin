@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/assets/fonts.css">
+  <meta property="og:title"       content="Usüller Bendir" />
+  <meta property="og:description" content="Usüller Bendir" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/arts/Music/bendir-usuller.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Usüller Bendir" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/arts/Music/bendir-usuller.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+<title>Usüller Bendir</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<style>
+  :root {
+    --bg:#0e0b07; --surface:#16120c; --border:rgba(185,143,60,.22);
+    --gold:#b98f3c; --gold-bright:#d4aa5a; --gold-dim:rgba(185,143,60,.45);
+    --text:#e8dfc8; --text-dim:rgba(232,223,200,.52);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;min-height:100vh;line-height:1.65;}
+
+  header{text-align:center;padding:3.5rem 2rem 2.5rem;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#1a1309 0%,var(--bg) 100%);position:relative;}
+  header::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+  .ornament{color:var(--gold-dim);font-size:1.1rem;letter-spacing:.6rem;margin-bottom:.8rem;}
+  h1{font-family:'Cinzel',serif;font-size:clamp(2rem,6vw,4rem);font-weight:700;color:var(--gold-bright);letter-spacing:.06em;text-shadow:0 0 40px rgba(185,143,60,.3);}
+  .subtitle{margin-top:.5rem;color:var(--text-dim);font-size:1rem;font-style:italic;}
+  .meta-links{margin-top:1rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;}
+  .meta-links a{font-size:.75rem;color:var(--gold-dim);text-decoration:none;transition:color .2s;}
+  .meta-links a:hover{color:var(--gold-bright);}
+
+  #controls{position:sticky;top:0;z-index:100;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;padding:1rem 2rem;background:rgba(14,11,7,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+  #search-wrap{flex:1;min-width:200px;position:relative;}
+  #search{width:100%;padding:.55rem 1rem .55rem 2.4rem;background:var(--surface);border:1px solid var(--border);border-radius:3px;font-family:'Crimson Pro',serif;font-size:1rem;color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s;}
+  #search:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(185,143,60,.15);}
+  #search::placeholder{color:var(--text-dim);font-style:italic;}
+  .s-icon{position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:var(--gold-dim);font-size:.85rem;pointer-events:none;}
+  .filters{display:flex;gap:.4rem;flex-wrap:wrap;}
+  .filter-btn{padding:.3rem .8rem;background:transparent;border:1px solid var(--border);border-radius:2px;color:var(--text-dim);font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.08em;cursor:pointer;transition:all .2s;}
+  .filter-btn:hover{border-color:var(--gold-dim);color:var(--text);}
+  .filter-btn.active{background:var(--gold);border-color:var(--gold);color:#0e0b07;font-weight:600;}
+
+  #stats{padding:.5rem 2rem;font-size:.78rem;color:var(--text-dim);font-style:italic;border-bottom:1px solid rgba(185,143,60,.1);}
+
+  main{max-width:920px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+
+  .intro-card{margin-bottom:2.5rem;padding:1.2rem 1.6rem;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold-dim);font-size:.95rem;color:var(--text-dim);}
+  .intro-card strong{color:var(--gold-bright);}
+
+  .usul-card{margin-bottom:2rem;background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--gold);transition:border-color .2s,box-shadow .2s;}
+  .usul-card:hover{border-color:var(--gold-bright);box-shadow:0 4px 24px rgba(185,143,60,.08);}
+  .usul-card.hidden{display:none;}
+
+  .card-head{display:flex;align-items:center;gap:.8rem;padding:1rem 1.5rem .8rem;border-bottom:1px solid rgba(185,143,60,.12);flex-wrap:wrap;}
+  .usul-name{font-family:'Cinzel',serif;font-size:1.25rem;font-weight:600;color:var(--gold-bright);flex:1;}
+
+  .beat-badge{font-size:.7rem;padding:.15rem .55rem;border-radius:20px;font-family:'Cinzel',serif;letter-spacing:.06em;border:1px solid;}
+  .beat-2{color:#7aab6a;border-color:#7aab6a;background:rgba(122,171,106,.08);}
+  .beat-3{color:#6a8fab;border-color:#6a8fab;background:rgba(106,143,171,.08);}
+  .beat-4{color:var(--gold);border-color:var(--gold);background:rgba(185,143,60,.08);}
+  .beat-5{color:#ab6a6a;border-color:#ab6a6a;background:rgba(171,106,106,.08);}
+  .beat-6{color:#9a6aab;border-color:#9a6aab;background:rgba(154,106,171,.08);}
+  .beat-7{color:#ab8f6a;border-color:#ab8f6a;background:rgba(171,143,106,.08);}
+  .beat-8{color:#6aabab;border-color:#6aabab;background:rgba(106,171,171,.08);}
+  .beat-9{color:#c49a6a;border-color:#c49a6a;background:rgba(196,154,106,.08);}
+  .beat-10{color:#c4a06a;border-color:#c4a06a;background:rgba(196,160,106,.08);}
+
+  .card-body{padding:1rem 1.5rem 1.3rem;}
+  .rhythm-grid{display:grid;grid-template-columns:auto 1fr;gap:.25rem 1rem;margin-bottom:1rem;font-size:.92rem;}
+  .rh-label{color:var(--text-dim);font-style:italic;white-space:nowrap;}
+  .rh-value{font-family:monospace;color:var(--text);font-size:.95rem;background:rgba(255,255,255,.04);padding:.1rem .5rem;border-radius:2px;}
+
+  .examples-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold-dim);font-family:'Cinzel',serif;margin-bottom:.6rem;}
+
+  .example-block{margin-bottom:.5rem;border:1px solid rgba(185,143,60,.12);border-radius:2px;overflow:hidden;}
+  .example-header{display:flex;align-items:center;gap:.6rem;padding:.55rem 1rem;background:rgba(255,255,255,.025);user-select:none;transition:background .2s;}
+  .example-header:hover{background:rgba(185,143,60,.07);}
+  .example-header-left{display:flex;align-items:center;gap:.6rem;flex:1;cursor:pointer;}
+  .example-name{color:var(--text);font-style:italic;flex:1;font-size:.92rem;}
+  .example-note{color:var(--text-dim);font-size:.8rem;}
+  .example-yt{color:var(--gold-dim);text-decoration:none;font-size:.78rem;white-space:nowrap;transition:color .2s;}
+  .example-yt:hover{color:var(--gold-bright);}
+
+  .lyrics-toggle{font-size:.68rem;color:var(--gold-dim);font-family:'Cinzel',serif;letter-spacing:.06em;border:1px solid var(--border);border-radius:2px;padding:.1rem .45rem;background:transparent;cursor:pointer;transition:all .2s;white-space:nowrap;}
+  .lyrics-toggle:hover,.example-block.open .lyrics-toggle{border-color:var(--gold);color:var(--gold-bright);}
+
+  .lyrics-panel{display:none;padding:1rem 1.4rem 1.3rem;background:rgba(0,0,0,.2);border-top:1px solid rgba(185,143,60,.1);}
+  .example-block.open .lyrics-panel{display:block;}
+
+  /* Metadata grid inside lyrics panel */
+  .meta-grid{display:grid;grid-template-columns:auto 1fr;gap:.18rem .8rem;margin-bottom:1rem;font-size:.82rem;}
+  .meta-key{color:var(--gold-dim);font-style:italic;white-space:nowrap;}
+  .meta-val{color:var(--text-dim);}
+  .meta-val a{color:var(--gold-dim);text-decoration:underline;font-size:.78rem;}
+  .meta-val a:hover{color:var(--gold-bright);}
+
+  .lyrics-text{font-family:'Crimson Pro',serif;font-size:.97rem;line-height:2;color:rgba(232,223,200,.88);white-space:pre-line;border-top:1px solid rgba(185,143,60,.1);padding-top:.8rem;margin-top:.4rem;}
+
+  .no-lyrics{font-size:.85rem;color:var(--text-dim);font-style:italic;border-top:1px solid rgba(185,143,60,.1);padding-top:.8rem;margin-top:.4rem;}
+
+  mark{background:rgba(185,143,60,.3);color:#fff;border-radius:2px;padding:0 2px;}
+  #no-results{text-align:center;padding:4rem;color:var(--text-dim);font-style:italic;font-size:1.1rem;display:none;}
+  footer{text-align:center;padding:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--text-dim);font-style:italic;}
+
+
+  @media (max-width: 720px) {
+    /* baseline mobile styles */
+    body { font-size: 17px; }
+    h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+    h2 { font-size: clamp(1.3rem, 4vw, 1.8rem); }
+    img, video, iframe, pre, code { max-width: 100%; }
+    [class*="grid"] { grid-template-columns: 1fr !important; }
+  }
+
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Usüller Bendir",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/arts/Music/bendir-usuller.html",
+  "description": "An interactive reference guide to usül rhythmic patterns for the bendir — the frame drum at the heart of Turkish Sufi music and devotional practice."
+}
+  </script>
+
+  <meta name="description" content="An interactive reference guide to usül rhythmic patterns for the bendir — the frame drum at the heart of Turkish Sufi music and devotional practice." />
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/arts/" style="color:#8a3a5a;text-decoration:none;">Arts</a> <span style="opacity:0.5">›</span> <span>Music</span> <span style="opacity:0.5">›</span> <span>Usüller Bendir</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Arts",
+      "item": "https://yasirbilgin.com/arts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Usüller Bendir",
+      "item": "https://yasirbilgin.com/arts/Music/bendir-usuller.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<header>
+  <div class="ornament">✦ ✦ ✦</div>
+  <h1>Usüller Bendir</h1>
+  <div class="subtitle">Türk Müziği Ritim Usülleri Rehberi</div>
+  <div class="meta-links">
+    <a href="http://www.sanatmuziginotalari.com/" target="_blank">sanatmuziginotalari.com</a>
+    <a href="https://neyzen.com/ney_ilahiler.html" target="_blank">neyzen.com</a>
+    <a href="https://twitter.com/turkmuzigiusul" target="_blank">@turkmuzigiusul</a>
+  </div>
+</header>
+
+<div id="controls">
+  <div id="search-wrap">
+    <span class="s-icon">🔍</span>
+    <input id="search" type="text" placeholder="Usul adı, kalıp, eser, besteci, makam ara…">
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-f="all">Tümü</button>
+    <button class="filter-btn" data-f="Nim Sofyan">Nim Sofyan</button>
+    <button class="filter-btn" data-f="Semai">Semai</button>
+    <button class="filter-btn" data-f="Yürük Semai">Yürük Semai</button>
+    <button class="filter-btn" data-f="Sofyan">Sofyan</button>
+    <button class="filter-btn" data-f="Türk Aksağı">Türk Aksağı</button>
+    <button class="filter-btn" data-f="Devr-i Hindi">Devr-i Hindi</button>
+    <button class="filter-btn" data-f="Devr-i Turan">Devr-i Turan</button>
+    <button class="filter-btn" data-f="Düyek">Düyek</button>
+    <button class="filter-btn" data-f="Müsemmen">Müsemmen</button>
+    <button class="filter-btn" data-f="Aksak">Aksak</button>
+    <button class="filter-btn" data-f="Evfer">Evfer</button>
+    <button class="filter-btn" data-f="Oynak">Oynak</button>
+    <button class="filter-btn" data-f="Raks Aksağı">Raks Aksağı</button>
+    <button class="filter-btn" data-f="Curcuna">Curcuna</button>
+  </div>
+</div>
+<div id="stats"></div>
+
+<main>
+  <div class="intro-card">
+    <strong>Parmak Pozisyonları:</strong>&nbsp;
+    Sağ orta parmak → <strong>Düm</strong> &nbsp;|&nbsp;
+    Sağ işaret parmağı → <strong>Tek</strong> &nbsp;|&nbsp;
+    Sol yüzük parmağı → <strong>ke</strong> ve <strong>me</strong>
+  </div>
+  <div id="no-results">Arama sonucu bulunamadı.</div>
+</main>
+
+<footer>Usüller Bendir — Google Drive kaynaklı · Güfte ve eser bilgileri: salihbora.com, divanmakam.com, dilbeyti.com</footer>
+
+<script>
+// ─── Data ────────────────────────────────────────────────────────────────────
+// lyrics: verified text from credible sources (salihbora.com, dilbeyti.com, divanmakam.com, sarkilarnotalar.blogspot.com)
+// meta: {besteci, gufteci, makam, form, kaynak_url}
+// If lyrics not confirmed, lyrics:"" and a source link is provided.
+
+const USULS = [
+  { name:"Nim Sofyan", beats:2, kalip:"Düüm Teek", velvele:"Düüm Teke", extra:"Önce velvele sonra kalıp: Düüm Teke Düüm Teek",
+    examples:[
+      { name:"İlim ilim bilmektir",
+        url:"https://www.youtube.com/watch?v=FgRJIQkkTx8",
+        meta:{ besteci:"Bilinmiyor (halk bestesi)", gufteci:"Yunus Emre", makam:"Uşşak / Segâh (farklı besteler)", form:"İlahi", kaynak:"https://yunusemresiirleri.com/siir/ilim-ilim-bilmektir.html" },
+        lyrics:`İlim ilim bilmektir, ilim kendin bilmektir
+Sen kendini bilmezsin, ya nice okumaktır
+
+Okumaktan mana ne, kişi Hak'kı bilmektir
+Çün okudun bilmezsin, ha bir kuru emektir
+
+Okudum bildim deme, çok taat kıldım deme
+Eri hak bilmez isen, abes yere yelmektir
+
+Dört kitabın manası, bellidir bir elifte
+Sen elifi bilmezsin, bu nice okumaktır
+
+Yiğirmi dokuz hece, okursun uçtan uca
+Sen elif dersin hoca, manası ne demektir
+
+Yunus Emre der hoca, gerekse var bin hacca
+Hepisinden iyice, bir gönüle girmektir`},
+
+      { name:"Üsküdar'a gider iken",
+        url:"https://www.youtube.com/watch?v=SFwCw1mZd1g",
+        meta:{ besteci:"Bilinmiyor (İstanbul türküsü)", gufteci:"Anonim", makam:"Nihavend", form:"Türkü (Kâtibim)", kaynak:"https://tr.wikisource.org/wiki/%C3%9Csk%C3%BCdar%E2%80%99a_Gider_%C4%B0ken" },
+        lyrics:`Üsküdar'a gider iken aldı da bir yağmur
+Kâtibimin setresi uzun, eteği çamur
+Kâtip uykudan uyanmış, gözleri mahmur
+Kâtip benim, ben kâtibin, el ne karışır
+Kâtibime kolalı da gömlek ne güzel yaraşır
+
+Üsküdar'a gider iken bir mendil buldum
+Mendilimin içine de lokum doldurdum
+Kâtibimi arar iken yanımda buldum
+Kâtip benim, ben kâtibin, el ne karışır
+Kâtibime kolalı da gömlek ne güzel yaraşır`}
+    ]},
+
+  { name:"Semai", beats:3, kalip:"Düm Tek Tek", velvele:"Düm Tek Teke",
+    examples:[
+      { name:"Yine bir gül-nihâl aldı bu gönlümü",
+        url:"https://www.youtube.com/watch?v=e0Sy9tbl6DY",
+        meta:{ besteci:"Hammâmîzâde İsmail Dede Efendi", gufteci:"Bilinmiyor", makam:"Rast", form:"Şarkı", kaynak:"https://www.salihbora.com/eserlerimiz/sarkilarimiz/y-sarki/yine-bir-gul-nihal-aldi-bu-gonlumu-sarkisi/" },
+        lyrics:`Yine bir gül-nihâl aldı bu gönlümü
+Sîm-ten gonca-fem bî-bedel ol güzel
+Âteşîn ruhleri yaktı bu gönlümü
+Pür-edâ pür-cefâ pek küçük pek güzel
+
+Görmedim kimsede böyle bir dil-rübâ
+Böyle kaş böyle göz böyle el böyle yüz
+Âşıkın bağrını üzmeye göz süzer
+El'aman pek yaman her zaman ol güzel`}
+    ]},
+
+  { name:"Yürük Semai", beats:6, kalip:"Düm Tek Tek Düm Teek", velvele:"Düm Tek Ka Düme Tek Ka",
+    examples:[
+      { name:"Mevlâm sana ersem diye", note:"(notada semai usulünde)", url:"https://www.youtube.com/watch?v=buEP-a_isBM",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Uyan ey gözlerim", url:"https://www.youtube.com/watch?v=1ZMNbbiWd8U",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Dinle sözümü sana direm", url:"https://www.youtube.com/watch?v=P-OHZSCcJTs",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Fikrimin ince gülü", note:"(notada semai usulünde)", url:"https://www.youtube.com/watch?v=b0CQkKl5uYI",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Türkü", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Sofyan", beats:4, kalip:"Düüm Teke", velvele:"Düm Teke Düm Tek",
+    examples:[
+      { name:"Medet senden medet", url:"https://www.youtube.com/watch?v=dczS-cNv-Cc",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Feridem", url:"https://www.youtube.com/watch?v=v3riVf5qOFc",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi/Türkü", kaynak:"" }, lyrics:"" },
+      { name:"Cân ü dilde hâne kıldın âkibet", url:"https://www.youtube.com/watch?v=55FkooTMzmo",
+        meta:{ besteci:"—", gufteci:"—", makam:"Hüseyni", form:"Şarkı/İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Severim ben seni", url:"https://www.youtube.com/watch?v=xMyQz_TM84A",
+        meta:{ besteci:"Bilinmiyor (halk bestesi)", gufteci:"Yunus Emre", makam:"—", form:"İlahi", kaynak:"https://dilbeyti.com/gufteler/derman-arardim-derdime" },
+        lyrics:`Severim ben seni cândan içeru
+Yolun gider ol câna içeru
+Beni bende demen bende değilem
+Bir ben vardır bende benden içeru
+
+Sufilere sohbet gerek dükkânda
+Bana seni gerek senden içeru`},
+      { name:"Dermân arardım derdime", url:"https://www.youtube.com/watch?v=UhshlKmtQm0",
+        meta:{ besteci:"Belirsiz", gufteci:"Niyâzî-i Mısrî", makam:"Hüseyni", form:"İlahi", kaynak:"https://dilbeyti.com/gufteler/derman-arardim-derdime" },
+        lyrics:`Derman arardım derdime, derdim bana derman imiş
+Bürhan sorardım aslıma, aslım bana bürhan imiş
+
+Sağ u solu gözler idim, ben dost yüzün görsem deyü
+Ben taşrada arar iken ol can içinde can imiş
+
+Öyle sanırdım ayrıyam, dost gayrıdır ben gayrıyam
+Benden görüp işideni bildim ki ol canan imiş
+
+Savm u Salât u Hacc ile sanma biter zâhid işin
+İnsan-ı kâmil olmaya lazım olan irfan imiş
+
+Kanden gelir yolun senin, ya kande varır menzilin
+Nerden gelip gittiğini anlamayan hayvan imiş
+
+Mürşid gerektir bildire Hakk'ı sana hakkel-yakin
+Mürşidi olmayanların bildikleri güman imiş`}
+    ]},
+
+  { name:"Türk Aksağı", beats:5, kalip:"Düüm Teek Tek", velvele:"Dümedüm Teek Tek",
+    examples:[
+      { name:"Esti nesîm-i nevbahâr", url:"https://www.youtube.com/watch?v=844KEuMWLjs",
+        meta:{ besteci:"Hacı Ârif Bey", gufteci:"Nef'i Ömer Efendi", makam:"Rast", form:"Şarkı", kaynak:"https://www.salihbora.com/eserlerimiz/sarkilarimiz/e-sarki/esti-nesim-i-nev-bahar-acildi-guller-subh-dem/" },
+        lyrics:`Esti nesîm-i nevbahâr, açıldı güller subh-dem
+Açsın bizim de gönlümüz, sâkî medet sun câm-ı Cem
+Erdi yine ürdibehişt, oldu havâ anber-sirişt
+Âlem behîşt-ender-behîşt, her gûşe bir bâğ-ı irem
+
+Gül devri ayş eyyâmıdır, zevk u safâ hengâmıdır
+Âşıkların bayrâmıdır, bu mevsim-i ferhunde-dem
+Dönsün yine peymâneler, olsun tehî humhâneler
+Raks eylesin mestâneler, mutribler ettikçe negam`},
+      { name:"Dün gece sende ben derd-mende", url:"https://www.youtube.com/watch?v=-GqZWacggsw",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Devr-i Hindi", beats:7, kalip:"Düm Tek Tek Düüm Teek", velvele:"Düm Tek Tek Düm Teka Düm Tek / Düm Tek Tek Düm Teke Tek Ka",
+    examples:[
+      { name:"İbtidâdan yol sorarsan", url:"https://www.youtube.com/watch?v=4Ts8ks-HU5A",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi/Nefes", kaynak:"" }, lyrics:"" },
+      { name:"İster isen bulasın cânânı sen", url:"https://www.youtube.com/watch?v=tQ6Jp0WWsrY",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Yâr senden kalınca ayrı", url:"https://www.youtube.com/watch?v=xNdRIELord4",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı/Türkü", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Devr-i Turan", beats:7, kalip:"Düüm Te-ek (Dü-üm) Te-e-ek", velvele:"Düme Düme (Teke) Düm Tek Tek / Düm Tek Düm Tek Düm Tek Tek",
+    examples:[
+      { name:"Yağmur yağar taş üstüne", url:"https://www.youtube.com/watch?v=CR0DjZwGl_g",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Türkü", kaynak:"" }, lyrics:"" },
+      { name:"Hicaz mandıra", url:"https://www.youtube.com/watch?v=xXAOOE87Jfg",
+        meta:{ besteci:"—", gufteci:"—", makam:"Hicaz", form:"Saz eseri (mandıra)", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Düyek", beats:8, kalip:"Düm Te-ek Tek Dü-üm Te-ek", velvele:"Düm Teke Tek Ka  Düme Düm Tek Tek e / Düm Teke Düm Tek",
+    examples:[
+      { name:"Âmed nesîm-i subh u dem", url:"https://www.youtube.com/watch?v=z67UXN-YH1A",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Ben melâmet hırkasını kendim geydim eğnime", url:"https://www.youtube.com/watch?v=WdPzIZsa1iE",
+        meta:{ besteci:"Bilinmiyor (halk bestesi)", gufteci:"Yunus Emre", makam:"—", form:"İlahi", kaynak:"https://yunusemresiirleri.com" }, lyrics:"" },
+      { name:"N'oldu bu gönlüm", url:"https://www.youtube.com/watch?v=rswt4egxXwg",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı", kaynak:"" }, lyrics:"" },
+      { name:"Yıldızların altında", url:"https://www.youtube.com/watch?v=OH5xH7ipWyc",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı", kaynak:"" }, lyrics:"" },
+      { name:"Bir kızıl goncaya benzer dudağın", url:"https://www.youtube.com/watch?v=Q8kUr0Tdl0Q",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Müsemmen", beats:8, kalip:"Dü-ü-üm Te-ek Te-e-ek", velvele:"Düm Düm Teke Tek Ka Düme Tek-ka",
+    examples:[
+      { name:"Hem cemâlin gösterip çekmek olur mu kendini", url:"https://www.youtube.com/watch?v=PPFQP3E3T_s",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı", kaynak:"" }, lyrics:"" },
+      { name:"Gönlümün bir hâli var ki", url:"https://www.youtube.com/watch?v=YC-dtNMVImI",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı", kaynak:"" }, lyrics:"" },
+      { name:"Geçti sevdâlarla ömrüm", url:"https://www.youtube.com/watch?v=mrccNV-yZ8A",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Aksak", beats:9, kalip:"Dü-üm Te-ke Dü-üm Te-ek Tek", velvele:"Düm Teke Tek Ka Düme Düm Te-ek Tek",
+    examples:[
+      { name:"Bülbülüm altın kafeste", url:"https://www.youtube.com/watch?v=pThuxkPZB8U",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Halk türküsü", kaynak:"" }, lyrics:"" },
+      { name:"Gülşen-i hüsnüne kimler varıyor", url:"https://www.youtube.com/watch?v=lablZk3B9gs",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı/Fasıl", kaynak:"" }, lyrics:"" },
+      { name:"Ezelden âşinânım", url:"https://www.youtube.com/watch?v=bLQnqpkZgtE",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Zâhidler eyler t'anımız (Nefes)", url:"https://www.youtube.com/watch?v=Kjn4mbg8Z3o",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Bektaşi Nefesi", kaynak:"" }, lyrics:"" },
+      { name:"Hak'tır Allah'ım (Nefes)", url:"https://www.youtube.com/watch?v=EA7D9VL6RMc",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Bektaşi Nefesi", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Evfer", beats:9, kalip:"Dü-üm Te-ke Dü-üm Tek Te-ek", velvele:"Düm Teke Tek Ka Düme Düm Tek Te-ek",
+    examples:[
+      { name:"Segâh âyin-i şerîf (2. Selâm)", url:"https://www.youtube.com/watch?v=i3YUAGqecLc",
+        meta:{ besteci:"—", gufteci:"—", makam:"Segâh", form:"Mevlevî Âyini", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Oynak", beats:8, kalip:"Düm Tek Tek Dü-üm Te-ek Te-ek", velvele:"Düm Tek Ka Düme Düme Tek Ka Tek Ta",
+    examples:[
+      { name:"A benim mor çiçeğim", url:"https://www.youtube.com/watch?v=J-yAwk3a6SQ",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Türkü", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Raks Aksağı", beats:9, kalip:"—", velvele:"—",
+    examples:[
+      { name:"Dök zülfünü meydâna gel", url:"https://www.youtube.com/watch?v=GMELjJ65idM",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"Şarkı/Fasıl", kaynak:"" }, lyrics:"" },
+      { name:"Seyrimde bir şehre vardım", url:"https://www.youtube.com/watch?v=NfmznXHFNNM",
+        meta:{ besteci:"—", gufteci:"—", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" },
+      { name:"Hak bir gönül verdi bana", url:"https://www.youtube.com/watch?v=w4-dU57ExJs",
+        meta:{ besteci:"Bilinmiyor (halk bestesi)", gufteci:"Yunus Emre", makam:"—", form:"İlahi", kaynak:"" }, lyrics:"" }
+    ]},
+
+  { name:"Curcuna", beats:10, kalip:"Düüm Te Kaa Düüm Te Ek Tek", velvele:"10/8 — 3(Dü-üm Te) + 2(Ka-aa) + 2(Dü-üm) + 3(Te-ek Tek)",
+    examples:[]}
+];
+
+// ─── Render ──────────────────────────────────────────────────────────────────
+const beatLabels = {2:'2/4',3:'3/4',4:'4/4',5:'5/8',6:'6/8',7:'7/8',8:'8/8',9:'9/8',10:'10/8'};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function hl(text,term){if(!term)return text;return text.replace(new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi'),'<mark>$1</mark>');}
+
+const main=document.querySelector('main');
+
+USULS.forEach((u,i)=>{
+  const card=document.createElement('div');
+  card.className='usul-card';
+  card.dataset.beats=u.beats;
+  card.dataset.idx=i;
+
+  let exHtml='';
+  if(u.examples.length){
+    exHtml+=`<div class="examples-label">Örnek Eserler</div>`;
+    u.examples.forEach((e,j)=>{
+      const m=e.meta||{};
+      const hasMeta=m.besteci&&m.besteci!=='—';
+      const hasLyrics=e.lyrics&&e.lyrics.trim().length>0;
+      const showBtn=hasMeta||hasLyrics;
+
+      // Build meta grid rows
+      const metaRows=[
+        ['Besteci',m.besteci],['Güfte',m.gufteci],
+        ['Makam',m.makam],['Form',m.form]
+      ].filter(([,v])=>v&&v!=='—').map(([k,v])=>`<span class="meta-key">${k}</span><span class="meta-val">${esc(v)}</span>`).join('');
+
+      const sourceRow=m.kaynak?`<span class="meta-key">Kaynak</span><span class="meta-val"><a href="${m.kaynak}" target="_blank">Bilgi sayfası ↗</a></span>`:'';
+
+      const lyricsBlock=hasLyrics
+        ?`<div class="lyrics-text">${esc(e.lyrics)}</div>`
+        :`<div class="no-lyrics">Bu eser için doğrulanmış sözler henüz eklenmedi.</div>`;
+
+      exHtml+=`<div class="example-block" id="eb-${i}-${j}">
+        <div class="example-header">
+          <div class="example-header-left" onclick="${showBtn?`toggleBlock('eb-${i}-${j}')`:''}" style="${showBtn?'':'cursor:default'}">
+            ${showBtn?`<button class="lyrics-toggle">Bilgi ▾</button>`:''}
+            <span class="example-name">${esc(e.name)}</span>
+            ${e.note?`<span class="example-note">${esc(e.note)}</span>`:''}
+          </div>
+          ${e.url?`<a class="example-yt" href="${e.url}" target="_blank">▶ YouTube</a>`:''}
+        </div>
+        ${showBtn?`<div class="lyrics-panel">
+          ${(metaRows||sourceRow)?`<div class="meta-grid">${metaRows}${sourceRow}</div>`:''}
+          ${lyricsBlock}
+        </div>`:''}
+      </div>`;
+    });
+  }
+
+  card.innerHTML=`
+    <div class="card-head">
+      <span class="usul-name">${esc(u.name)}</span>
+      <span class="beat-badge beat-${u.beats}">${beatLabels[u.beats]||u.beats+'/8'}</span>
+    </div>
+    <div class="card-body">
+      <div class="rhythm-grid">
+        <span class="rh-label">Kalıp</span><span class="rh-value">${esc(u.kalip)}</span>
+        <span class="rh-label">Velvele</span><span class="rh-value">${esc(u.velvele)}</span>
+        ${u.extra?`<span class="rh-label">Not</span><span class="rh-value" style="font-family:'Crimson Pro',serif;font-size:.88rem;color:var(--text-dim)">${esc(u.extra)}</span>`:''}
+      </div>
+      ${exHtml}
+    </div>`;
+  main.appendChild(card);
+});
+
+function toggleBlock(id){
+  const b=document.getElementById(id);
+  if(b) b.classList.toggle('open');
+}
+
+// ─── Filter / Search ─────────────────────────────────────────────────────────
+let activeFilter='all',searchTerm='';
+
+function applyFilters(){
+  const cards=document.querySelectorAll('.usul-card');
+  let shown=0;
+  cards.forEach(card=>{
+    const idx=parseInt(card.dataset.idx);
+    const u=USULS[idx];
+    const matchFilter=activeFilter==='all'||u.name===activeFilter;
+    const searchable=(u.name+' '+u.kalip+' '+u.velvele+' '+
+      u.examples.map(e=>e.name+' '+(e.lyrics||'')+' '+(e.meta?Object.values(e.meta).join(' '):'')).join(' ')).toLowerCase();
+    const matchSearch=!searchTerm||searchable.includes(searchTerm.toLowerCase());
+
+    if(matchFilter&&matchSearch){
+      card.classList.remove('hidden');
+      shown++;
+      // Highlight name
+      card.querySelector('.usul-name').innerHTML=hl(esc(u.name),searchTerm);
+      const rv=card.querySelectorAll('.rh-value');
+      if(rv[0])rv[0].innerHTML=hl(esc(u.kalip),searchTerm);
+      if(rv[1])rv[1].innerHTML=hl(esc(u.velvele),searchTerm);
+      const en=card.querySelectorAll('.example-name');
+      u.examples.forEach((e,j)=>{if(en[j])en[j].innerHTML=hl(esc(e.name),searchTerm);});
+      // Auto-open if lyrics match
+      u.examples.forEach((e,j)=>{
+        const lt=card.querySelector(`#eb-${idx}-${j} .lyrics-text`);
+        if(lt&&e.lyrics){
+          lt.innerHTML=hl(esc(e.lyrics),searchTerm);
+          if(searchTerm&&e.lyrics.toLowerCase().includes(searchTerm.toLowerCase())){
+            const blk=document.getElementById(`eb-${idx}-${j}`);
+            if(blk)blk.classList.add('open');
+          }
+        }
+      });
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  document.getElementById('no-results').style.display=shown===0?'block':'none';
+  document.getElementById('stats').textContent=shown===USULS.length
+    ?`${USULS.length} usul gösteriliyor`
+    :`${USULS.length} usulden ${shown} tanesi gösteriliyor`;
+}
+
+document.getElementById('search').addEventListener('input',e=>{searchTerm=e.target.value.trim();applyFilters();});
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter=btn.dataset.f;
+    applyFilters();
+  });
+});
+applyFilters();
+</script>
+</article>
+</body>
+</html>

@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta property="og:title"       content="100 Universal Principles" />
+  <meta property="og:description" content="100 Universal Principles" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Universal-Principles/universal-principles.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="100 Universal Principles" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/atlas/Universal-Principles/universal-principles.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+<title>100 Universal Principles</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+  :root {
+    --ink: #0d0d0f;
+    --paper: #f5f0e8;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-dim: #8a6f32;
+    --rust: #a0503a;
+    --teal: #3a7a8a;
+    --text-primary: #e8e2d4;
+    --text-secondary: #9e9688;
+    --text-dim: #5c5750;
+    --border: #2a2820;
+    --border-light: #3d3a30;
+    --section-bg: #13120e;
+    --card-bg: #1a1914;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 80vw;
+    background: radial-gradient(ellipse, rgba(201,168,76,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.2s forwards;
+  }
+
+  .hero-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(9rem, 20vw, 18rem);
+    font-weight: 300;
+    line-height: 0.85;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(201,168,76,0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeIn 2s ease 0.5s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.6s forwards;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-sub {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+  }
+
+  .hero-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2.5rem auto;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.1s forwards;
+  }
+
+  .hero-desc {
+    max-width: 520px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.2s forwards;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-dim);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.8s forwards;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold-dim), transparent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  /* ── TOC ── */
+  .toc-section {
+    background: var(--section-bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 5rem 2rem;
+  }
+
+  .toc-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-light);
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .toc-item:hover {
+    background: rgba(201,168,76,0.06);
+    border-color: rgba(201,168,76,0.25);
+  }
+
+  .toc-item:hover .toc-text {
+    color: var(--text-primary);
+  }
+
+  .toc-item:hover .toc-roman {
+    color: var(--gold);
+  }
+
+  .toc-item::after {
+    content: '↗';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%) scale(0.7);
+    color: var(--gold-dim);
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .toc-item:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+
+  .toc-roman {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    color: var(--gold-dim);
+    min-width: 28px;
+    padding-top: 0.1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .toc-text {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── CHAPTER HEADER ── */
+  .chapter {
+    padding: 7rem 0 0;
+  }
+
+  .chapter-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .chapter-roman {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--gold-dim);
+    line-height: 1;
+    flex-shrink: 0;
+    opacity: 0.6;
+  }
+
+  .chapter-meta {
+    flex: 1;
+    padding-top: 0.8rem;
+  }
+
+  .chapter-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  .chapter-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+
+  /* ── PRINCIPLE CARD ── */
+  .principle {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .principle.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .principle:last-child {
+    border-bottom: none;
+  }
+
+  .p-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--gold-dim);
+    line-height: 1;
+    text-align: right;
+    padding-top: 0.2rem;
+    opacity: 0.7;
+  }
+
+  .p-body {}
+
+  .p-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin-bottom: 0.9rem;
+  }
+
+  .p-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: 0.9rem;
+  }
+
+
+  /* ── TWO-COLUMN PRINCIPLES GRID ── */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3.5rem;
+    position: relative;
+  }
+
+  /* vertical divider between columns */
+  .principles-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: var(--border);
+    transform: translateX(-50%);
+  }
+
+  /* principles in right column get a subtle left indent */
+  .principles-grid .principle:nth-child(even) {
+    padding-left: 1rem;
+  }
+
+  .principles-grid .principle:nth-child(odd) {
+    padding-right: 1rem;
+  }
+
+  /* ── SPECIAL PRINCIPLE 100 ── */
+  .principle-100 {
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(201,168,76,0.02) 100%);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 3rem;
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .principle-100.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .principle-100::before {
+    content: '100';
+    position: absolute;
+    right: -1rem;
+    top: -2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10rem;
+    font-weight: 300;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(201,168,76,0.1);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .principle-100 .p-number {
+    font-size: 3.5rem;
+    color: var(--gold);
+    opacity: 1;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .principle-100 .p-title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--gold-light);
+  }
+
+  .principle-100 .p-desc {
+    font-size: 0.95rem;
+    color: #b8b0a0;
+  }
+
+  /* ── COLOPHON ── */
+  .colophon {
+    border-top: 1px solid var(--border);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    line-height: 1.9;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .colophon em {
+    color: var(--text-secondary);
+    font-style: normal;
+  }
+
+  /* ── COLOR ACCENT BANDS ── */
+  .chapter[data-accent="gold"]    .chapter-tag { color: var(--gold); }
+  .chapter[data-accent="gold"]    .chapter-roman { -webkit-text-stroke-color: var(--gold-dim); }
+  .chapter[data-accent="rust"]    .chapter-tag { color: #c07060; }
+  .chapter[data-accent="rust"]    .chapter-roman { -webkit-text-stroke-color: #7a3e30; }
+  .chapter[data-accent="rust"]    .p-number { color: #8a4838; }
+  .chapter[data-accent="teal"]    .chapter-tag { color: #5aacbc; }
+  .chapter[data-accent="teal"]    .chapter-roman { -webkit-text-stroke-color: #2a5a68; }
+  .chapter[data-accent="teal"]    .p-number { color: #2a6070; }
+  .chapter[data-accent="sage"]    .chapter-tag { color: #7aaa80; }
+  .chapter[data-accent="sage"]    .chapter-roman { -webkit-text-stroke-color: #3a6040; }
+  .chapter[data-accent="sage"]    .p-number { color: #3a6040; }
+  .chapter[data-accent="lavender"] .chapter-tag { color: #a090c8; }
+  .chapter[data-accent="lavender"] .chapter-roman { -webkit-text-stroke-color: #5a4878; }
+  .chapter[data-accent="lavender"] .p-number { color: #5a4878; }
+  .chapter[data-accent="amber"]   .chapter-tag { color: #d4944c; }
+  .chapter[data-accent="amber"]   .chapter-roman { -webkit-text-stroke-color: #8a5028; }
+  .chapter[data-accent="amber"]   .p-number { color: #8a5028; }
+  .chapter[data-accent="rose"]    .chapter-tag { color: #c07080; }
+  .chapter[data-accent="rose"]    .chapter-roman { -webkit-text-stroke-color: #783048; }
+  .chapter[data-accent="rose"]    .p-number { color: #783048; }
+  .chapter[data-accent="silver"]  .chapter-tag { color: #8898a8; }
+  .chapter[data-accent="silver"]  .chapter-roman { -webkit-text-stroke-color: #445566; }
+  .chapter[data-accent="silver"]  .p-number { color: #445566; }
+  .chapter[data-accent="copper"]  .chapter-tag { color: #b07848; }
+  .chapter[data-accent="copper"]  .chapter-roman { -webkit-text-stroke-color: #7a4e28; }
+  .chapter[data-accent="copper"]  .p-number { color: #7a4e28; }
+  .chapter[data-accent="pine"]    .chapter-tag { color: #609878; }
+  .chapter[data-accent="pine"]    .chapter-roman { -webkit-text-stroke-color: #305040; }
+  .chapter[data-accent="pine"]    .p-number { color: #305040; }
+  .chapter[data-accent="indigo"]  .chapter-tag { color: #7888d8; }
+  .chapter[data-accent="indigo"]  .chapter-roman { -webkit-text-stroke-color: #384880; }
+  .chapter[data-accent="indigo"]  .p-number { color: #384880; }
+  .chapter[data-accent="crimson"] .chapter-tag { color: #c05060; }
+  .chapter[data-accent="crimson"] .chapter-roman { -webkit-text-stroke-color: #782038; }
+  .chapter[data-accent="crimson"] .p-number { color: #782038; }
+  .chapter[data-accent="stone"]   .chapter-tag { color: #9a8878; }
+  .chapter[data-accent="stone"]   .chapter-roman { -webkit-text-stroke-color: #605040; }
+  .chapter[data-accent="stone"]   .p-number { color: #605040; }
+  .chapter[data-accent="jade"]    .chapter-tag { color: #5aaa90; }
+  .chapter[data-accent="jade"]    .chapter-roman { -webkit-text-stroke-color: #285850; }
+  .chapter[data-accent="jade"]    .p-number { color: #285850; }
+  .chapter[data-accent="umber"]   .chapter-tag { color: #a87050; }
+  .chapter[data-accent="umber"]   .chapter-roman { -webkit-text-stroke-color: #704030; }
+  .chapter[data-accent="umber"]   .p-number { color: #704030; }
+  .chapter[data-accent="slate"]   .chapter-tag { color: #7898b8; }
+  .chapter[data-accent="slate"]   .chapter-roman { -webkit-text-stroke-color: #385878; }
+  .chapter[data-accent="slate"]   .p-number { color: #385878; }
+  .chapter[data-accent="pearl"]   .chapter-tag { color: var(--gold-light); }
+  .chapter[data-accent="pearl"]   .chapter-roman { -webkit-text-stroke-color: var(--gold); }
+  .chapter[data-accent="pearl"]   .p-number { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50%       { opacity: 1; }
+  }
+
+  /* ── STICKY CHAPTER NAV ── */
+  .chapter-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(13,13,15,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .chapter-nav.shown { opacity: 1; }
+
+  .nav-chapter-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .nav-chapter-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+  }
+
+  .nav-sep {
+    color: var(--border-light);
+    font-size: 0.8rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .content { padding: 0 2rem; }
+    .principles-grid { grid-template-columns: 1fr; }
+    .principles-grid::before { display: none; }
+    .principles-grid .principle:nth-child(even),
+    .principles-grid .principle:nth-child(odd) { padding-left: 0; padding-right: 0; }
+  }
+
+  @media (max-width: 600px) {
+    .principle { grid-template-columns: 40px 1fr; gap: 1rem; }
+    .p-number { font-size: 1.6rem; }
+    .chapter-header { gap: 1rem; }
+    .chapter-roman { font-size: 3rem; }
+    .principle-100 { padding: 2rem; }
+  }
+</style>
+  <meta name="description" content="One hundred principles distilled from over 1,620 book summaries spanning cognitive science, philosophy, neuroscience, leadership, economics, ethics, and…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "100 Universal Principles",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/atlas/Universal-Principles/universal-principles.html",
+  "description": "One hundred principles distilled from over 1,620 book summaries spanning cognitive science, philosophy, neuroscience, leadership, economics, ethics, and…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/atlas/" style="color:#3b5f8a;text-decoration:none;">Atlas</a> <span style="opacity:0.5">›</span> <span>Universal Knowledge & Big Picture</span> <span style="opacity:0.5">›</span> <span>100 Universal Principles</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Atlas",
+      "item": "https://yasirbilgin.com/atlas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "100 Universal Principles",
+      "item": "https://yasirbilgin.com/atlas/Universal-Principles/universal-principles.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="hero-number">100</div>
+  <p class="hero-eyebrow">Distilled from 1,620 books</p>
+  <h1 class="hero-title"><em>Universal</em><br>Principles</h1>
+  <p class="hero-sub">A Synthesis of Human Understanding</p>
+  <div class="hero-divider"></div>
+  <p class="hero-desc">One hundred principles distilled from over 1,620 book summaries spanning cognitive science, philosophy, neuroscience, leadership, economics, ethics, and human development. Each principle validated against convergence across multiple authors, traditions, and disciplines.</p>
+  <div class="scroll-cue">
+    <div class="scroll-line"></div>
+    <span>Scroll to read</span>
+  </div>
+</section>
+
+<!-- ══════════════ TABLE OF CONTENTS ══════════════ -->
+<section class="toc-section">
+  <div class="toc-inner">
+    <div class="section-label">Contents</div>
+    <div class="toc-grid">
+      <div class="toc-item" data-target="ch1"><span class="toc-roman">I</span><span class="toc-text">Learning, Mastery & Skill Development</span></div>
+      <div class="toc-item" data-target="ch2"><span class="toc-roman">II</span><span class="toc-text">Mindset, Belief & Growth</span></div>
+      <div class="toc-item" data-target="ch3"><span class="toc-roman">III</span><span class="toc-text">Failure, Resilience & Adversity</span></div>
+      <div class="toc-item" data-target="ch4"><span class="toc-roman">IV</span><span class="toc-text">Action, Habit & Discipline</span></div>
+      <div class="toc-item" data-target="ch5"><span class="toc-roman">V</span><span class="toc-text">Thinking, Perception & Cognition</span></div>
+      <div class="toc-item" data-target="ch6"><span class="toc-roman">VI</span><span class="toc-text">Emotional Intelligence & Self-Awareness</span></div>
+      <div class="toc-item" data-target="ch7"><span class="toc-roman">VII</span><span class="toc-text">Relationships, Connection & Community</span></div>
+      <div class="toc-item" data-target="ch8"><span class="toc-roman">VIII</span><span class="toc-text">Leadership & Organizations</span></div>
+      <div class="toc-item" data-target="ch9"><span class="toc-roman">IX</span><span class="toc-text">Purpose, Meaning & Values</span></div>
+      <div class="toc-item" data-target="ch10"><span class="toc-roman">X</span><span class="toc-text">Systems, Complexity & Emergence</span></div>
+      <div class="toc-item" data-target="ch11"><span class="toc-roman">XI</span><span class="toc-text">Change, Adaptation & Innovation</span></div>
+      <div class="toc-item" data-target="ch12"><span class="toc-roman">XII</span><span class="toc-text">Communication, Narrative & Influence</span></div>
+      <div class="toc-item" data-target="ch13"><span class="toc-roman">XIII</span><span class="toc-text">Health, Energy & Biological Foundations</span></div>
+      <div class="toc-item" data-target="ch14"><span class="toc-roman">XIV</span><span class="toc-text">Economics, Incentives & Power</span></div>
+      <div class="toc-item" data-target="ch15"><span class="toc-roman">XV</span><span class="toc-text">Ethics, Accountability & Consequences</span></div>
+      <div class="toc-item" data-target="ch16"><span class="toc-roman">XVI</span><span class="toc-text">Neuroscience, Plasticity & The Brain</span></div>
+      <div class="toc-item" data-target="ch17"><span class="toc-roman">XVII</span><span class="toc-text">Time, Finitude & The Cosmos</span></div>
+      <div class="toc-item" data-target="ch18"><span class="toc-roman">XVIII</span><span class="toc-text">The Meta-Principle</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CHAPTERS ══════════════ -->
+<main class="content">
+
+<!-- ─── I ─── -->
+<section class="chapter" id="ch1" data-accent="gold">
+  <div class="chapter-nav" data-chapter="I · Learning, Mastery &amp; Skill Development">
+    <span class="nav-chapter-tag">Chapter</span>
+    <span class="nav-sep">·</span>
+    <span class="nav-chapter-title">I &nbsp;·&nbsp; Learning, Mastery &amp; Skill Development</span>
+  </div>
+  <div class="chapter-header">
+    <div class="chapter-roman">I</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter One</div>
+      <h2 class="chapter-title">Learning, Mastery<br>&amp; Skill Development</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">1</div><div class="p-body">
+    <h3 class="p-title">Mastery is built on fundamentals, not complexity.</h3>
+    <p class="p-desc">The foundation determines the ceiling of what can be built upon it. Extraordinary performers are distinguished not by advanced technique but by extraordinary command of the basics — perpetually maintained regardless of level.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">2</div><div class="p-body">
+    <h3 class="p-title">Optimal learning occurs at the edge of current capability.</h3>
+    <p class="p-desc">Growth requires challenge just beyond current reach. Repetition within comfort produces automaticity, not development; the brain adapts to the demands placed upon it and prunes what it does not use.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">3</div><div class="p-body">
+    <h3 class="p-title">Errors are the engine of learning; failure is a prerequisite, not an obstacle.</h3>
+    <p class="p-desc">Mistakes are not obstacles to mastery but prerequisites for it. Reflection on error yields insight that success cannot. A failed solution to one problem may be the perfect solution to another.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">4</div><div class="p-body">
+    <h3 class="p-title">Deliberate practice outperforms mere repetition.</h3>
+    <p class="p-desc">Repetition without attention and reflection produces no improvement. What is practiced carelessly becomes the habit — including the mistakes. The quality of engagement determines the quality of growth.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">5</div><div class="p-body">
+    <h3 class="p-title">Teaching is the most reliable test of understanding.</h3>
+    <p class="p-desc">Teaching a subject exposes gaps in one's own understanding that private study conceals. The one who asks questions learns more than the one who passively receives answers.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">6</div><div class="p-body">
+    <h3 class="p-title">Novel learning stimulates growth; mastered routines do not.</h3>
+    <p class="p-desc">The brain generates new functional units in response to novel challenges, not to repetitions of mastered skills. Automaticity ends learning; novelty restarts it.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">7</div><div class="p-body">
+    <h3 class="p-title">Complex wholes are best mastered by decomposing them into simple sequential parts.</h3>
+    <p class="p-desc">Breaking overwhelming tasks into manageable steps enables accomplishment of what initially appears impossible. Foundations must be secure before elaborations can stand.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">8</div><div class="p-body">
+    <h3 class="p-title">Curiosity sustained over time produces compounding returns in understanding.</h3>
+    <p class="p-desc">What distinguishes extraordinary minds is not raw talent but sustained inquiry. Curiosity that never fades outlasts talent that never deepens.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── II ─── -->
+<section class="chapter" id="ch2" data-accent="rust">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">II · Mindset, Belief &amp; Growth</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">II</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Two</div>
+      <h2 class="chapter-title">Mindset, Belief<br>&amp; Growth</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">9</div><div class="p-body">
+    <h3 class="p-title">The self is a process, not a fixed product.</h3>
+    <p class="p-desc">Those who believe ability is innate and finished cannot grow it; those who believe it is cultivated through effort can develop it without limit. Mindset is learned, therefore it can be unlearned and relearned.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">10</div><div class="p-body">
+    <h3 class="p-title">Belief shapes outcome through belief-behavior-outcome chains.</h3>
+    <p class="p-desc">Self-fulfilling prophecies operate not through magic but through behavior: what you expect, you move toward. Teachers who believe students can learn create conditions in which students learn.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">11</div><div class="p-body">
+    <h3 class="p-title">Identity precedes behavior; what you practice becomes what you are.</h3>
+    <p class="p-desc">To act consistently, first adopt the identity of the person who performs that act. What becomes ritual becomes identity. What is practiced becomes the default self.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">12</div><div class="p-body">
+    <h3 class="p-title">Fixed beliefs about ability create ceilings; growth-oriented beliefs enable continuous development.</h3>
+    <p class="p-desc">Those who believe the self is a finished product cannot improve it. Those who believe the self is a process can shape it. Identity attached to outcomes creates brittleness; identity attached to process creates resilience.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">13</div><div class="p-body">
+    <h3 class="p-title">Willingness to appear incompetent is a prerequisite for becoming competent.</h3>
+    <p class="p-desc">Comfort zones preserve self-image but prevent development. Acceptance of difficulty as inherent to growth transforms obstacles into pathways.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── III ─── -->
+<section class="chapter" id="ch3" data-accent="teal">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">III · Failure, Resilience &amp; Adversity</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">III</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Three</div>
+      <h2 class="chapter-title">Failure, Resilience<br>&amp; Adversity</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">14</div><div class="p-body">
+    <h3 class="p-title">Progress requires passage through failure; there is no shortcut around it.</h3>
+    <p class="p-desc">Expecting to fail multiple times before succeeding removes the psychological barrier to beginning. Repeated failure is often the necessary precursor to breakthrough success.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">15</div><div class="p-body">
+    <h3 class="p-title">Resilience develops through managed adversity, not its elimination.</h3>
+    <p class="p-desc">Organisms consistently shielded from stressors never develop the capacity to withstand them. What is consistently protected from challenge becomes fragile; what is consistently challenged becomes strong.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">16</div><div class="p-body">
+    <h3 class="p-title">The interpretation of events, not the events themselves, determines their impact.</h3>
+    <p class="p-desc">Identical conditions produce different outcomes depending on the observer's internal state. Meaning-making is the mediating variable between experience and consequence.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">17</div><div class="p-body">
+    <h3 class="p-title">Crisis presents a binary: breakdown or breakthrough.</h3>
+    <p class="p-desc">The same force that destroys can strengthen. Adversity exposes latent weaknesses; whether those weaknesses become liabilities or catalysts is determined by the response, not the event.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">18</div><div class="p-body">
+    <h3 class="p-title">Failure, when small and reversible, is a cheaper teacher than success.</h3>
+    <p class="p-desc">Systems that punish failure suppress the experimentation necessary for adaptation. Permission to fail accelerates learning; fear of failure calcifies process.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">19</div><div class="p-body">
+    <h3 class="p-title">What you resist persists; what you accept can change.</h3>
+    <p class="p-desc">Suppression of thought or desire strengthens it; avoidance prolongs rather than resolves distress. Acceptance of internal states differs categorically from identification with them.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── IV ─── -->
+<section class="chapter" id="ch4" data-accent="sage">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">IV · Action, Habit &amp; Discipline</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">IV</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Four</div>
+      <h2 class="chapter-title">Action, Habit<br>&amp; Discipline</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">20</div><div class="p-body">
+    <h3 class="p-title">Consistent small actions compound into transformation disproportionate to any single act.</h3>
+    <p class="p-desc">Marginal changes, when repeated consistently, compound into substantial transformations beyond immediate perception. Current trajectory determines future outcomes more reliably than current state.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">21</div><div class="p-body">
+    <h3 class="p-title">Imperfect action outperforms perfect inaction; starting precedes optimizing.</h3>
+    <p class="p-desc">Beginning does not require complete planning; action generates its own clarity. Those who wait for certainty wait indefinitely — certainty arrives only through engagement.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">22</div><div class="p-body">
+    <h3 class="p-title">Environmental design shapes behavior more reliably than willpower.</h3>
+    <p class="p-desc">Habits emerge from environmental triggers, not heroic self-control. Making desired behaviors easier and undesired behaviors harder produces better outcomes than demanding discipline from a depleted resource.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">23</div><div class="p-body">
+    <h3 class="p-title">Willpower is finite and depletable; all acts of self-control draw from the same reservoir.</h3>
+    <p class="p-desc">What can be exhausted can also be trained. Physiological states — energy, rest, nourishment — constrain cognitive capacities including self-regulation. Brief recovery restores what extended effort depletes.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">24</div><div class="p-body">
+    <h3 class="p-title">Habits form through a four-stage cycle: cue, desire, response, reward.</h3>
+    <p class="p-desc">Behaviors that produce satisfying consequences tend to repeat until they become automatic. Removing the reward mechanism eliminates the motivation to perform the behavior.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">25</div><div class="p-body">
+    <h3 class="p-title">Discipline bridges intention and completion; scheduling transforms aspiration into commitment.</h3>
+    <p class="p-desc">What you consistently show up for defines who you become. Commitment precedes clarity, not the reverse.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── V ─── -->
+<section class="chapter" id="ch5" data-accent="lavender">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">V · Thinking, Perception &amp; Cognition</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">V</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Five</div>
+      <h2 class="chapter-title">Thinking, Perception<br>&amp; Cognition</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">26</div><div class="p-body">
+    <h3 class="p-title">A problem's essence is often obscured by irrelevant surface details.</h3>
+    <p class="p-desc">To perceive clearly, one must actively set aside expectations and preconceptions. What is missing often reveals more than what is present; unnamed constraints remain invisible.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">27</div><div class="p-body">
+    <h3 class="p-title">The quality of the question determines the quality of the solution.</h3>
+    <p class="p-desc">Vague questions produce vague answers; precise questions produce actionable insight. Before optimizing a solution, question whether you are solving the correct problem.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">28</div><div class="p-body">
+    <h3 class="p-title">Perspective shift precedes solution discovery; the same viewpoint yields the same answers.</h3>
+    <p class="p-desc">Reframing a question can dissolve an intractable problem into a solvable one. Creativity emerges when constraints force departure from habitual solutions.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">29</div><div class="p-body">
+    <h3 class="p-title">Confirmation bias impedes correction; actively seek disconfirming evidence.</h3>
+    <p class="p-desc">The most informative experiments are those designed to falsify, not confirm, your beliefs. Assumptions inherited from authority persist until someone examines reality directly.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">30</div><div class="p-body">
+    <h3 class="p-title">Attention is finite and directional; what you train it to seek, it finds.</h3>
+    <p class="p-desc">The brain has limited attentional resources; allocating attention to one experience necessarily withdraws it from another. The mind adopts patterns of perception; what you repeatedly focus on expands.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">31</div><div class="p-body">
+    <h3 class="p-title">Correlation does not establish causation; pattern-matching can produce correct outputs without understanding.</h3>
+    <p class="p-desc">Surface resemblance does not imply deep equivalence. Systems that succeed by exploiting statistical regularities fail when those regularities shift.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">32</div><div class="p-body">
+    <h3 class="p-title">When a metric becomes a target, it ceases to be a reliable measure.</h3>
+    <p class="p-desc">Optimizing for measurable proxies can diverge from optimizing for actual goals. What is easy to measure is not necessarily what matters; what matters is often hard to measure.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">33</div><div class="p-body">
+    <h3 class="p-title">Intuition is pattern recognition operating below conscious awareness.</h3>
+    <p class="p-desc">Rapid expert judgment is the product of accumulated experience, not mysticism. Sensory knowledge detects what explicit analysis misses. Both modes of cognition serve essential, complementary functions.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">34</div><div class="p-body">
+    <h3 class="p-title">Complex systems must be learned through engagement, not solved through analysis alone.</h3>
+    <p class="p-desc">Complicated systems are predictable; complex systems are dispositional and require repeated interaction to understand. Treating complex systems as complicated produces dysfunction.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── VI ─── -->
+<section class="chapter" id="ch6" data-accent="amber">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">VI · Emotional Intelligence &amp; Self-Awareness</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">VI</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Six</div>
+      <h2 class="chapter-title">Emotional Intelligence<br>&amp; Self-Awareness</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">35</div><div class="p-body">
+    <h3 class="p-title">Self-awareness of internal states precedes effective self-regulation.</h3>
+    <p class="p-desc">The capacity to pause between stimulus and response transforms reactive choices into reflective ones. Naming an internal state externalizes it, creating distance and enabling choice.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">36</div><div class="p-body">
+    <h3 class="p-title">Emotions must complete their natural cycle — rise, peak, fall — to be fully processed.</h3>
+    <p class="p-desc">Suppression transforms emotion into stress and dysfunction. Demanding a feeling produces its opposite. What is resisted amplifies; what is felt and released resolves.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">37</div><div class="p-body">
+    <h3 class="p-title">Inner dialogue shapes outer capacity; self-talk programs behavior.</h3>
+    <p class="p-desc">Harsh inner narratives diminish the ability to extend care outward. Self-compassion is not indulgence but the foundation of sustainable performance.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">38</div><div class="p-body">
+    <h3 class="p-title">Positive emotional states precede and enable high performance, not the reverse.</h3>
+    <p class="p-desc">Positive emotions expand cognitive capacity; negative emotions constrict it. The brain performs optimally when motivated by opportunity rather than fear.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">39</div><div class="p-body">
+    <h3 class="p-title">The body signals misalignment before the mind consciously recognizes it.</h3>
+    <p class="p-desc">Values function as early warning systems; discomfort signals drift from what matters before rational analysis can confirm it. Physical grounding provides emotional stability.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">40</div><div class="p-body">
+    <h3 class="p-title">Freedom without limits becomes self-imposed bondage; optimization without rest consumes the optimizer.</h3>
+    <p class="p-desc">Relentless pursuit of achievement produces exhaustion rather than fulfillment. When external discipline disappears, internal compulsion fills the void with greater intensity.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── VII ─── -->
+<section class="chapter" id="ch7" data-accent="rose">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">VII · Relationships, Connection &amp; Community</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">VII</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Seven</div>
+      <h2 class="chapter-title">Relationships, Connection<br>&amp; Community</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">41</div><div class="p-body">
+    <h3 class="p-title">Meaning emerges from connection, not isolation.</h3>
+    <p class="p-desc">Individual achievement finds its fullest expression through collaborative relationships. Purpose is not a solo endeavor; it is realized through partnership. Social connection predicts survival and health outcomes more powerfully than most individual lifestyle factors.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">42</div><div class="p-body">
+    <h3 class="p-title">Vulnerability is the gateway to authentic connection; invulnerability creates distance.</h3>
+    <p class="p-desc">What is hidden costs energy that authenticity releases. Shame is the belief that one is unworthy of connection; it severs belonging before any external rejection occurs.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">43</div><div class="p-body">
+    <h3 class="p-title">Trust is built through transparency, consistency, and the assumption of good intentions.</h3>
+    <p class="p-desc">Trust compounds: receiving it generates reciprocal trust; withholding it generates reciprocal withdrawal. Humility enables acknowledgment of mistakes; acknowledgment enables repair; repair rebuilds trust.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">44</div><div class="p-body">
+    <h3 class="p-title">Relational value compounds; transactional value depletes.</h3>
+    <p class="p-desc">Relationships grounded in shared purpose are more resilient during conflict than those grounded in convenience. Genuine listening creates the conditions for trust; distraction signals dismissal.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">45</div><div class="p-body">
+    <h3 class="p-title">The character of those you surround yourself with shapes the character you become.</h3>
+    <p class="p-desc">Proximity is a developmental force. People either add to or subtract from available energy and potential; environments that conflict with values erode well-being regardless of external rewards.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">46</div><div class="p-body">
+    <h3 class="p-title">Shared suffering strengthens bonds more than separate successes.</h3>
+    <p class="p-desc">Shared hardship with valued others becomes shared memory; solitary hardship remains burden. Synchronized activity — including struggle — triggers neurochemical bonding independent of task difficulty.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">47</div><div class="p-body">
+    <h3 class="p-title">Boundaries preserve the capacity to give; their absence leads to exhaustion.</h3>
+    <p class="p-desc">What you cannot give yourself, you cannot sustainably give others. Sustainable generosity requires knowing and respecting one's limits.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── VIII ─── -->
+<section class="chapter" id="ch8" data-accent="silver">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">VIII · Leadership &amp; Organizations</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">VIII</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Eight</div>
+      <h2 class="chapter-title">Leadership<br>&amp; Organizations</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">48</div><div class="p-body">
+    <h3 class="p-title">What is rewarded shapes behavior more reliably than what is commanded.</h3>
+    <p class="p-desc">Incentive structures are the actual operating system of any organization. Values observed in practice supersede values stated in policy. What leaders tolerate, they implicitly endorse.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">49</div><div class="p-body">
+    <h3 class="p-title">Systems that assume incompetence produce incompetence.</h3>
+    <p class="p-desc">People trusted to think will think; people commanded to obey will only obey. Autonomy granted is trust made visible; trust made visible is trust returned.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">50</div><div class="p-body">
+    <h3 class="p-title">Moral culture flows from the top downward; what is modeled at the center propagates to the periphery.</h3>
+    <p class="p-desc">Leaders who reveal their own struggles create permission structures for others to do the same. Culture change begins when individuals in positions of influence model the values they wish to propagate.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">51</div><div class="p-body">
+    <h3 class="p-title">Psychological safety — environments where honest speech carries no punishment — is the prerequisite for innovation.</h3>
+    <p class="p-desc">Where fear becomes the operating system, communication shuts down, creativity stalls, and capable people exit. Shame-based motivation produces disengagement; disengagement destroys creativity and learning.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">52</div><div class="p-body">
+    <h3 class="p-title">Individual excellence scales only through systematic knowledge transfer; hoarded expertise dies with the expert.</h3>
+    <p class="p-desc">Organizations improve when successful patterns are extracted and distributed, not when they remain tacit. Systems improve when successful patterns are shared rather than guarded.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">53</div><div class="p-body">
+    <h3 class="p-title">Rules designed to prevent specific failures accumulate into systemic dysfunction.</h3>
+    <p class="p-desc">Policies that outlive the problems they were designed to solve become the problems themselves. The cost of preventing small losses often exceeds the losses themselves.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">54</div><div class="p-body">
+    <h3 class="p-title">Decentralized control enables faster adaptation to local conditions than hierarchical control.</h3>
+    <p class="p-desc">Hierarchical mechanisms optimized for predictability reduce adaptive capacity in dynamic environments. Complex environments require distributed judgment, not centralized approval.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">55</div><div class="p-body">
+    <h3 class="p-title">A small minority of defectors can collapse trust across an entire system; protecting culture requires deliberate hiring.</h3>
+    <p class="p-desc">One misaligned hire can erode a culture that took years to build. Hiring for cultural contribution enables evolution; hiring for cultural fit produces stagnation.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── IX ─── -->
+<section class="chapter" id="ch9" data-accent="copper">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">IX · Purpose, Meaning &amp; Values</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">IX</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Nine</div>
+      <h2 class="chapter-title">Purpose, Meaning<br>&amp; Values</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">56</div><div class="p-body">
+    <h3 class="p-title">Understanding purpose should precede action toward any goal.</h3>
+    <p class="p-desc">Energy spent on battles misaligned with values is energy unavailable for what matters. Values clarified become decisions simplified. Values serve as a compass, especially during difficulty and uncertainty.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">57</div><div class="p-body">
+    <h3 class="p-title">Ethics should be immovable; opinions should yield to new evidence.</h3>
+    <p class="p-desc">Identity anchored in character is stable across circumstance; identity anchored in external markers is vulnerable to loss. The character of what you do consistently is who you are.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">58</div><div class="p-body">
+    <h3 class="p-title">A satisfying life integrates three elements: pleasure, virtue, and meaning.</h3>
+    <p class="p-desc">Achievement without the skill of enjoyment produces permanent grind. Joy arises not from acquiring what you desire but from becoming what you ought to be. Completion is not fulfillment.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">59</div><div class="p-body">
+    <h3 class="p-title">Philosophy that does not change behavior is merely ornament.</h3>
+    <p class="p-desc">Understanding without application is incomplete; knowledge realizes its value only through practice. Virtue is a skill practiced, not a possession held.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">60</div><div class="p-body">
+    <h3 class="p-title">Awareness of mortality focuses attention on what matters; scarcity of time transforms neutral experience into precious experience.</h3>
+    <p class="p-desc">Finitude contextualizes value rather than negating it. The search for meaning is not diminished by the certainty of destruction.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── X ─── -->
+<section class="chapter" id="ch10" data-accent="pine">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">X · Systems, Complexity &amp; Emergence</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">X</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Ten</div>
+      <h2 class="chapter-title">Systems, Complexity<br>&amp; Emergence</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">61</div><div class="p-body">
+    <h3 class="p-title">Every ordered system must expel entropy to maintain its structure.</h3>
+    <p class="p-desc">All structured things — from organisms to organizations — maintain internal order only by exporting disorder to their environment. Local order exists within global disorder; stability is local and temporary.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">62</div><div class="p-body">
+    <h3 class="p-title">The same forces that enable creation guarantee eventual destruction.</h3>
+    <p class="p-desc">Every stable configuration will eventually exhaust the conditions that permit its stability. Impermanence is structural, not accidental; apparent permanence is an illusion of temporal scale.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">63</div><div class="p-body">
+    <h3 class="p-title">Subtraction often delivers more progress than addition; removing obstacles outperforms adding solutions.</h3>
+    <p class="p-desc">Prevention at the source is more efficient than cleanup at the end. The instinct to add must be countered by the discipline to subtract. Simplicity reduces failure points; complexity multiplies them.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">64</div><div class="p-body">
+    <h3 class="p-title">Feedback loops determine whether systems learn or repeat.</h3>
+    <p class="p-desc">What cannot be easily measured escapes correction; weak feedback loops allow dysfunction to persist indefinitely. Unexamined systems drift toward dysfunction by default.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">65</div><div class="p-body">
+    <h3 class="p-title">In most systems, a small fraction of causes generates a disproportionate share of effects.</h3>
+    <p class="p-desc">Resources allocated to low-value activities dilute capacity for high-value ones. Focus amplifies impact; diffusion diminishes it. A few pivotal decisions influence outcomes more than many minor ones.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">66</div><div class="p-body">
+    <h3 class="p-title">Systems optimized for a single variable create vulnerabilities in all others.</h3>
+    <p class="p-desc">Efficiency removes redundancy and increases fragility; resilience requires slack. Just-in-time optimization trades resilience for efficiency. What a system refuses to reform, reality eventually destroys.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">67</div><div class="p-body">
+    <h3 class="p-title">Established systems persist far longer than revolutionary predictions suggest.</h3>
+    <p class="p-desc">Transitions away from entrenched systems occur through gradual substitution, not sudden collapse. Technologies create more opportunities than they destroy, though the distribution of gains and losses is uneven.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XI ─── -->
+<section class="chapter" id="ch11" data-accent="indigo">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XI · Change, Adaptation &amp; Innovation</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XI</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Eleven</div>
+      <h2 class="chapter-title">Change, Adaptation<br>&amp; Innovation</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">68</div><div class="p-body">
+    <h3 class="p-title">Iterative development — building, breaking, and learning rapidly — outpaces methodical linear processes in dynamic environments.</h3>
+    <p class="p-desc">Complex environments reward rapid iteration over careful initial planning. Failure, when small and reversible, is a cheaper teacher than success.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">69</div><div class="p-body">
+    <h3 class="p-title">Innovation is incremental; what appears as sudden breakthrough is the visible tip of accumulated effort.</h3>
+    <p class="p-desc">No idea emerges from nothing; every new thought is a recombination of prior thoughts. Great discoveries build on predecessors; originality lies in the final step, not the entire staircase.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">70</div><div class="p-body">
+    <h3 class="p-title">Disenchantment with the status quo is necessary but insufficient for transformation; action must follow perception.</h3>
+    <p class="p-desc">Dreams without execution remain fantasies; execution without dreams lacks direction. Recognition without action produces no change; transformation begins at the point of movement.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">71</div><div class="p-body">
+    <h3 class="p-title">What cannot adapt to changing conditions eventually fails; adversity is an evolutionary engine.</h3>
+    <p class="p-desc">Survival under constraint forces development of internal capabilities that would otherwise remain undeveloped. Environments that diverge from conditions under which a capacity evolved will degrade that capacity.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">72</div><div class="p-body">
+    <h3 class="p-title">Transformation occurs incrementally; attempting total change at once produces failure.</h3>
+    <p class="p-desc">Small, reversible experiments compound learning faster than large, irreversible bets. Two steps forward, one step back still constitutes net progress.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XII ─── -->
+<section class="chapter" id="ch12" data-accent="crimson">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XII · Communication, Narrative &amp; Influence</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XII</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Twelve</div>
+      <h2 class="chapter-title">Communication, Narrative<br>&amp; Influence</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">73</div><div class="p-body">
+    <h3 class="p-title">Stories bypass resistance that arguments cannot; narrative is constitutive of moral judgment.</h3>
+    <p class="p-desc">Information embedded in narrative persists; information presented as lists is poorly retained. Stories encode causal and temporal relationships that mere data cannot.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">74</div><div class="p-body">
+    <h3 class="p-title">Narrative without transformation is merely anecdote; the essential architecture of story is change over time.</h3>
+    <p class="p-desc">What the teller does not undergo, the listener cannot undergo. The most memorable element of a story is rarely its most dramatic event but its most emotionally universal moment.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">75</div><div class="p-body">
+    <h3 class="p-title">Authenticity generates trust; trust generates influence; performance severs connection.</h3>
+    <p class="p-desc">Integrity is being the same person in public and in private. People sense misalignment before they can prove it; facades create distance that authenticity dissolves.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">76</div><div class="p-body">
+    <h3 class="p-title">What is simple is remembered; what is remembered is acted upon.</h3>
+    <p class="p-desc">Brevity with clarity outperforms length without either. One powerful idea outlives a thousand complex arguments. Jargon obscures meaning; clarity of language enables clarity of thought.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">77</div><div class="p-body">
+    <h3 class="p-title">Questions open what statements close; inquiry reveals more than assertion.</h3>
+    <p class="p-desc">Those who ask questions learn more than those who passively receive answers. Asking "why" is more generative than asking "what"; causation illuminates where description merely catalogs.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">78</div><div class="p-body">
+    <h3 class="p-title">The frame of a conversation determines its outcome more than its content.</h3>
+    <p class="p-desc">Whoever controls the frame controls the direction. Reframing transforms perception without changing substance; the same information, differently named, produces different responses.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">79</div><div class="p-body">
+    <h3 class="p-title">Effective communication serves the receiver, not the sender.</h3>
+    <p class="p-desc">The effectiveness of a message is measured in the receiver's mind, not in the sender's intention. Demonstrated empathy persuades more effectively than enumerated benefits.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XIII ─── -->
+<section class="chapter" id="ch13" data-accent="stone">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XIII · Health, Energy &amp; Biological Foundations</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XIII</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Thirteen</div>
+      <h2 class="chapter-title">Health, Energy<br>&amp; Biological Foundations</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">80</div><div class="p-body">
+    <h3 class="p-title">Physical health is the foundation upon which all other capacities rest.</h3>
+    <p class="p-desc">The body is the instrument through which all work is performed; neglecting it degrades all output. Physical and mental health are bidirectionally linked; degradation in one propagates to the other.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">81</div><div class="p-body">
+    <h3 class="p-title">Sleep repairs the body and organizes the mind; protecting it transforms daily function.</h3>
+    <p class="p-desc">Sleep deprivation impairs judgment, creativity, patience, and leadership capacity simultaneously. What the brain consolidates during sleep is the substance of tomorrow's performance.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">82</div><div class="p-body">
+    <h3 class="p-title">Rest and recovery are not obstacles to performance but prerequisites for its sustainability.</h3>
+    <p class="p-desc">Intensity of effort determines output more than duration; deliberate work in concentrated periods outperforms diffuse work across extended ones. Burnout is removed by eliminating causes, not by adding wellness on top of unchanged demands.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">83</div><div class="p-body">
+    <h3 class="p-title">Movement clarifies thought, unlocks creativity, and processes what the mind cannot articulate.</h3>
+    <p class="p-desc">Physical motion serves cognitive and emotional functions that sedentary existence cannot replicate. The body processes what the mind cannot yet verbalize.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">84</div><div class="p-body">
+    <h3 class="p-title">Environments that diverge from ancestral conditions degrade the capacities those conditions built.</h3>
+    <p class="p-desc">Modern abundance of stimuli, food, and sedentary behavior conflicts with systems designed for scarcity, movement, and challenge. Unused capacities atrophy; the remedy is restoring challenge, not adding supplements.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XIV ─── -->
+<section class="chapter" id="ch14" data-accent="jade">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XIV · Economics, Incentives &amp; Power</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XIV</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Fourteen</div>
+      <h2 class="chapter-title">Economics, Incentives<br>&amp; Power</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">85</div><div class="p-body">
+    <h3 class="p-title">Power concentrates where information flows; knowledge asymmetry creates leverage.</h3>
+    <p class="p-desc">What cannot be found cannot be chosen; visibility enables opportunity. Institutions dependent on secrecy are structurally vulnerable to individual defectors with access to information.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">86</div><div class="p-body">
+    <h3 class="p-title">Compounding rewards patience and punishes impatience; exponential growth requires time to become visible.</h3>
+    <p class="p-desc">Consistent small contributions compound into significant impact. Short-term extraction erodes the social fabric that sustains long-term prosperity.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">87</div><div class="p-body">
+    <h3 class="p-title">Markets exist wherever unmet needs exist; the largest markets are often the least visible.</h3>
+    <p class="p-desc">Underserved populations desire the same quality and functionality as any other market segment. Profit and social benefit are not mutually exclusive; systems can be designed to optimize both simultaneously.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">88</div><div class="p-body">
+    <h3 class="p-title">Wanting benefits without accepting corresponding costs is a position that eventually collapses.</h3>
+    <p class="p-desc">Trade-offs between competing goods are structural, not negotiable away. Dependency on external resources creates strategic vulnerability; technological independence determines strategic autonomy.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">89</div><div class="p-body">
+    <h3 class="p-title">Globalization's benefits aggregate broadly while its costs concentrate locally; concentrated costs generate political instability.</h3>
+    <p class="p-desc">Those bearing concentrated costs become receptive to anti-integration appeals. Economic identity tied to a single model creates psychological resistance to acknowledging that model's failure.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XV ─── -->
+<section class="chapter" id="ch15" data-accent="umber">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XV · Ethics, Accountability &amp; Consequences</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XV</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Fifteen</div>
+      <h2 class="chapter-title">Ethics, Accountability<br>&amp; Consequences</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">90</div><div class="p-body">
+    <h3 class="p-title">Shielding someone from consequences for harmful acts enables repetition; accountability and love are complementary forces.</h3>
+    <p class="p-desc">Consequences shape behavior; non-response communicates permission. Cover-ups compound original harms by preventing the correction that accountability enables.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">91</div><div class="p-body">
+    <h3 class="p-title">Consequences are observable and assessable independent of intent; motives are often unknowable.</h3>
+    <p class="p-desc">Intent does not determine impact; well-meaning actions can still cause harm. The question "why did they do it?" is more generative than "what did they do?" — causation illuminates where description merely catalogs.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">92</div><div class="p-body">
+    <h3 class="p-title">What an institution conceals reveals what it values; patterns of protection expose operative priorities.</h3>
+    <p class="p-desc">Behavior toward the least powerful reveals the actual values of any system. Those who benefit from an inequitable system have diminished incentive — and often diminished perception — to recognize its inequities.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">93</div><div class="p-body">
+    <h3 class="p-title">Moral categorization is perspectival; binary framings obscure the complexity of human motivation.</h3>
+    <p class="p-desc">The same act can be classified as heroic or criminal depending on who controls the framing. Ethical choices are rarely binary; most moral agents operate in fields of competing loyalties, obligations, and self-interest.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">94</div><div class="p-body">
+    <h3 class="p-title">Integrity is being the same person in public and in private; small ethical compromises compound into large trust deficits.</h3>
+    <p class="p-desc">The true test of a choice is not whether you can escape consequences, but whether it builds trust with those who depend on you. What people sense before they can prove creates the atmosphere of any relationship or organization.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XVI ─── -->
+<section class="chapter" id="ch16" data-accent="slate">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XVI · Neuroscience, Plasticity &amp; The Brain</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XVI</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Sixteen</div>
+      <h2 class="chapter-title">Neuroscience, Plasticity<br>&amp; The Brain</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">95</div><div class="p-body">
+    <h3 class="p-title">The brain reorganizes itself in response to what it repeatedly does; neural pathways strengthen with use and weaken with neglect.</h3>
+    <p class="p-desc">Function shapes structure: repeated activity physically alters the substrate that performs it. Stimulating environments produce greater structural complexity than impoverished ones. Plasticity is the default property of neural tissue; rigidity is the exception.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">96</div><div class="p-body">
+    <h3 class="p-title">Trauma disrupts integration; healing requires integrating dissociated experiences into coherent narrative form.</h3>
+    <p class="p-desc">The body keeps the score — stress not processed through consciousness lodges in physiology. Unresolved trauma and absence of accountability create latent instability that manifests under sufficient pressure.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">97</div><div class="p-body">
+    <h3 class="p-title">Memory is reconstructive, not reproductive; subsequent experience modifies how past events are stored and recalled.</h3>
+    <p class="p-desc">The past is not fixed in the mind — it is reconstructed in the present through current context. Implicit memories shape perception and behavior without conscious awareness of their influence.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XVII ─── -->
+<section class="chapter" id="ch17" data-accent="teal">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XVII · Time, Finitude &amp; The Cosmos</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XVII</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Seventeen</div>
+      <h2 class="chapter-title">Time, Finitude<br>&amp; The Cosmos</h2>
+    </div>
+  </div>
+
+<div class="principles-grid">
+  <div class="principle"><div class="p-number">98</div><div class="p-body">
+    <h3 class="p-title">The same forces that build guarantee eventual destruction; impermanence is structural, not accidental.</h3>
+    <p class="p-desc">Every stable configuration will eventually exhaust the conditions that permit its stability. All ordered systems exist temporarily within a larger field of disorder. Possibility, however remote, is not equivalent to impossibility; given sufficient time, improbable outcomes occur.</p>
+  </div></div>
+
+  <div class="principle"><div class="p-number">99</div><div class="p-body">
+    <h3 class="p-title">Scarcity of time transforms neutral experience into precious experience; mortality focuses attention on what genuinely matters.</h3>
+    <p class="p-desc">Finitude contextualizes value rather than negating it. The search for meaning is not diminished by the certainty of destruction — it is intensified by it. Dreams deferred become dreams impossible.</p>
+  </div></div>
+</div>
+</section>
+
+<!-- ─── XVIII / 100 ─── -->
+<section class="chapter" id="ch18" data-accent="pearl">
+  <div class="chapter-nav"><span class="nav-chapter-tag">Chapter</span><span class="nav-sep">·</span><span class="nav-chapter-title">XVIII · The Meta-Principle</span></div>
+  <div class="chapter-header">
+    <div class="chapter-roman">XVIII</div>
+    <div class="chapter-meta">
+      <div class="chapter-tag">Chapter Eighteen</div>
+      <h2 class="chapter-title">The Meta-Principle</h2>
+    </div>
+  </div>
+
+  <div class="principle-100">
+    <div class="p-number">100</div>
+    <h3 class="p-title">Complexity yields to principle; beneath the surface diversity of phenomena lies a small number of deep patterns.</h3>
+    <p class="p-desc">Learning, love, power, entropy, failure, growth — across every domain of human experience, the same underlying structures recur. Revealing those patterns is the beginning of wisdom; applying them is the beginning of mastery. The principles that have been independently discovered by multiple civilizations across multiple eras are the ones most worth preserving.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════ COLOPHON ══════════════ -->
+<footer>
+  <div class="colophon">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold-dim);margin-bottom:1.5rem;letter-spacing:0.05em;">∴</div>
+    <p>Distilled from principles extracted across <em>1,620 book summaries</em> spanning cognitive science, stoic philosophy, neuroscience, evolutionary biology, systems theory, leadership, economics, ethics, narrative, history, and human development.</p>
+    <br>
+    <p>Each principle validated against convergence across multiple books, authors, traditions, and disciplines. The principles that survive are those that have been independently rediscovered by the greatest thinkers across the greatest range of human inquiry.</p>
+  </div>
+</footer>
+
+<script>
+// ── Scroll-triggered fade-in for principles
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) el.target.classList.add('visible');
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.principle, .principle-100').forEach(el => observer.observe(el));
+
+// ── Sticky chapter nav visibility
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const nav = entry.target.querySelector('.chapter-nav');
+    if (!nav) return;
+    nav.classList.toggle('shown', !entry.isIntersecting);
+  });
+}, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
+
+document.querySelectorAll('.chapter-header').forEach(el => {
+  const chapter = el.closest('.chapter');
+  if (chapter) navObserver.observe(el);
+});
+
+// ── Stagger principle animations within each chapter
+document.querySelectorAll('.chapter').forEach(chapter => {
+  chapter.querySelectorAll('.principle').forEach((p, i) => {
+    p.style.transitionDelay = `${i * 0.07}s`;
+  });
+});
+
+// ── TOC click navigation — scrollIntoView works inside sandboxed iframes
+document.querySelectorAll(".toc-item[data-target]").forEach(function(item) {
+  item.addEventListener("click", function() {
+    var targetId = this.getAttribute("data-target");
+    var target = document.getElementById(targetId);
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    var header = target.querySelector(".chapter-header");
+    if (header) {
+      header.style.transition = "opacity 0.15s ease";
+      header.style.opacity = "0.4";
+      setTimeout(function() { header.style.opacity = "1"; }, 200);
+    }
+  });
+});
+</script>
+</article>
+</body>
+</html>

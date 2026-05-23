@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="/assets/fonts.css">
+  <meta property="og:title"       content="Thermodynamics Reference" />
+  <meta property="og:description" content="Thermodynamics Reference" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Science-and-Mathematics/thermodynamics.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Thermodynamics Reference" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/atlas/Science-and-Mathematics/thermodynamics.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+<title>Thermodynamics Reference</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --card: #20243a;
+    --border: #2e3354;
+    --accent: #6c8cff;
+    --accent2: #ff7eb3;
+    --accent3: #56e0a0;
+    --accent4: #ffd166;
+    --text: #e8eaf6;
+    --muted: #8b90b8;
+    --tag-law: #3a2f6b;
+    --tag-law-text: #a78bfa;
+    --tag-concept: #1e3a4a;
+    --tag-concept-text: #56cfe1;
+    --tag-process: #1e3a2f;
+    --tag-process-text: #56e0a0;
+    --tag-cycle: #3a2a1e;
+    --tag-cycle-text: #ffd166;
+    --tag-formula: #3a1e2a;
+    --tag-formula-text: #ff7eb3;
+    --diff-basic: #1b3a2f;
+    --diff-basic-text: #4ade80;
+    --diff-inter: #2a2a1a;
+    --diff-inter-text: #facc15;
+    --diff-adv: #3a1a1a;
+    --diff-adv-text: #f87171;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: linear-gradient(135deg, #1a1d27 0%, #0f1117 60%, #1a1225 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 24px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px; width: 100%; height: 200px;
+    background: radial-gradient(ellipse, rgba(108,140,255,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 {
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #6c8cff, #a78bfa, #ff7eb3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+  }
+  header p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .stat-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* ── Controls ── */
+  .controls {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15,17,23,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+  }
+  .search-wrap {
+    max-width: 600px;
+    margin: 0 auto 14px;
+    position: relative;
+  }
+  .search-wrap svg {
+    position: absolute;
+    left: 14px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    pointer-events: none;
+  }
+  #searchInput {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  #searchInput:focus { border-color: var(--accent); }
+  #searchInput::placeholder { color: var(--muted); }
+  #clearBtn {
+    position: absolute;
+    right: 12px; top: 50%;
+    transform: translateY(-50%);
+    background: none; border: none;
+    color: var(--muted); cursor: pointer;
+    font-size: 1.1rem; padding: 4px 6px;
+    border-radius: 4px; display: none;
+  }
+  #clearBtn:hover { color: var(--text); background: var(--border); }
+
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .filter-group { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .filter-divider {
+    width: 1px; height: 24px;
+    background: var(--border);
+    margin: 0 4px;
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.18s;
+    white-space: nowrap;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  .filter-btn[data-cat="law"].active     { background: var(--tag-law-text); border-color: var(--tag-law-text); }
+  .filter-btn[data-cat="concept"].active { background: var(--tag-concept-text); border-color: var(--tag-concept-text); color: #0f1117; }
+  .filter-btn[data-cat="process"].active { background: var(--tag-process-text); border-color: var(--tag-process-text); color: #0f1117; }
+  .filter-btn[data-cat="cycle"].active   { background: var(--tag-cycle-text); border-color: var(--tag-cycle-text); color: #0f1117; }
+  .filter-btn[data-cat="formula"].active { background: var(--tag-formula-text); border-color: var(--tag-formula-text); color: #0f1117; }
+  .filter-btn[data-diff="basic"].active  { background: var(--diff-basic-text); border-color: var(--diff-basic-text); color: #0f1117; }
+  .filter-btn[data-diff="intermediate"].active { background: var(--diff-inter-text); border-color: var(--diff-inter-text); color: #0f1117; }
+  .filter-btn[data-diff="advanced"].active { background: var(--diff-adv-text); border-color: var(--diff-adv-text); color: #0f1117; }
+
+  /* ── Grid ── */
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+  }
+  .results-info {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .results-info span { color: var(--accent); font-weight: 600; }
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 18px;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+  }
+  .card[data-cat="law"]::before     { background: linear-gradient(90deg, #a78bfa, #6c8cff); }
+  .card[data-cat="concept"]::before { background: linear-gradient(90deg, #56cfe1, #00b4d8); }
+  .card[data-cat="process"]::before { background: linear-gradient(90deg, #56e0a0, #38b000); }
+  .card[data-cat="cycle"]::before   { background: linear-gradient(90deg, #ffd166, #f4a261); }
+  .card[data-cat="formula"]::before { background: linear-gradient(90deg, #ff7eb3, #e040fb); }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(108,140,255,0.4);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+    flex: 1;
+  }
+  .badge-group { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0; }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .badge-law     { background: var(--tag-law);     color: var(--tag-law-text); }
+  .badge-concept { background: var(--tag-concept); color: var(--tag-concept-text); }
+  .badge-process { background: var(--tag-process); color: var(--tag-process-text); }
+  .badge-cycle   { background: var(--tag-cycle);   color: var(--tag-cycle-text); }
+  .badge-formula { background: var(--tag-formula); color: var(--tag-formula-text); }
+  .badge-basic   { background: var(--diff-basic);  color: var(--diff-basic-text); }
+  .badge-intermediate { background: var(--diff-inter);  color: var(--diff-inter-text); }
+  .badge-advanced { background: var(--diff-adv);   color: var(--diff-adv-text); }
+
+  .card-desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.65;
+    flex: 1;
+  }
+  .card-desc mark {
+    background: rgba(108,140,255,0.3);
+    color: var(--text);
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+  .formula-block {
+    background: rgba(0,0,0,0.35);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .formula-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+  }
+  .formula-item {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--accent4);
+    margin-bottom: 3px;
+  }
+  .formula-item:last-child { margin-bottom: 0; }
+  .formula-note {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 5px;
+    line-height: 1.5;
+  }
+  .key-points {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .key-point {
+    font-size: 0.82rem;
+    color: var(--muted);
+    padding-left: 12px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .key-point::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.7rem;
+    top: 2px;
+  }
+
+  /* ── No results ── */
+  .no-results {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--muted);
+    grid-column: 1 / -1;
+  }
+  .no-results svg { margin-bottom: 16px; opacity: 0.4; }
+  .no-results h3 { font-size: 1.2rem; color: var(--text); margin-bottom: 8px; }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: clamp(1.8rem, 6vw, 1.8rem); }
+    #grid { grid-template-columns: 1fr; }
+    .filter-divider { display: none; }
+  }
+</style>
+  <meta name="description" content="A comprehensive interactive reference covering the laws, concepts, processes, cycles, and formulas of" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Thermodynamics Reference",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/atlas/Science-and-Mathematics/thermodynamics.html",
+  "description": "A comprehensive interactive reference covering the laws, concepts, processes, cycles, and formulas of"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/atlas/" style="color:#3b5f8a;text-decoration:none;">Atlas</a> <span style="opacity:0.5">›</span> <span>Universal Knowledge & Big Picture</span> <span style="opacity:0.5">›</span> <span>Thermodynamics Reference</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Atlas",
+      "item": "https://yasirbilgin.com/atlas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Thermodynamics Reference",
+      "item": "https://yasirbilgin.com/atlas/Science-and-Mathematics/thermodynamics.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<header>
+  <h1>⚛ Thermodynamics</h1>
+  <p>A comprehensive interactive reference covering the laws, concepts, processes, cycles, and formulas of thermodynamics.</p>
+  <div class="stat-bar">
+    <div class="stat"><div class="stat-num" id="totalCount">—</div><div class="stat-label">Total Topics</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Laws</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Processes</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Cycles</div></div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="searchInput" type="text" placeholder="Search topics, formulas, concepts…" autocomplete="off" />
+    <button id="clearBtn" title="Clear search">✕</button>
+  </div>
+  <div class="filter-row">
+    <div class="filter-group" id="catFilters">
+      <button class="filter-btn active" data-cat="all">All Categories</button>
+      <button class="filter-btn" data-cat="law">Laws</button>
+      <button class="filter-btn" data-cat="concept">Concepts</button>
+      <button class="filter-btn" data-cat="process">Processes</button>
+      <button class="filter-btn" data-cat="cycle">Cycles</button>
+      <button class="filter-btn" data-cat="formula">Formulas</button>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group" id="diffFilters">
+      <button class="filter-btn active" data-diff="all">All Levels</button>
+      <button class="filter-btn" data-diff="basic">Basic</button>
+      <button class="filter-btn" data-diff="intermediate">Intermediate</button>
+      <button class="filter-btn" data-diff="advanced">Advanced</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="results-info"><span id="visCount">—</span> topics shown</div>
+  <div id="grid"></div>
+</main>
+
+<footer>Thermodynamics Reference · All classical thermodynamics content · For educational use</footer>
+
+<script>
+const DATA = [
+  // ── LAWS ──
+  {
+    title: "Zeroth Law of Thermodynamics",
+    cat: "law",
+    diff: "basic",
+    desc: "If two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This law establishes temperature as a fundamental and measurable property, and is the logical foundation for thermometry.",
+    formulas: [],
+    points: [
+      "Defines transitive property of thermal equilibrium",
+      "Justifies the use of thermometers",
+      "Named 'zeroth' because it was formalized after the 1st and 2nd laws, yet precedes them logically"
+    ]
+  },
+  {
+    title: "First Law of Thermodynamics",
+    cat: "law",
+    diff: "basic",
+    desc: "Energy cannot be created or destroyed — only converted from one form to another. The change in internal energy of a closed system equals the heat added to the system minus the work done by the system.",
+    formulas: ["ΔU = Q − W", "Q = ΔU + W"],
+    formulaNote: "ΔU = change in internal energy, Q = heat added, W = work done by system",
+    points: [
+      "Conservation of energy applied to thermodynamic systems",
+      "W > 0 means work is done BY the system; sign conventions vary by convention",
+      "Basis of heat engine and refrigerator analysis"
+    ]
+  },
+  {
+    title: "Second Law of Thermodynamics",
+    cat: "law",
+    diff: "intermediate",
+    desc: "Heat flows spontaneously from hot to cold, never the reverse. The total entropy of an isolated system can never decrease over time — it either increases (irreversible process) or stays constant (reversible process). No heat engine can be 100% efficient.",
+    formulas: ["dS ≥ δQ / T", "η_max = 1 − T_C / T_H  (Carnot)"],
+    formulaNote: "S = entropy, T = absolute temperature, η = thermal efficiency",
+    points: [
+      "Kelvin–Planck statement: no device converts all heat to work",
+      "Clausius statement: no device moves heat from cold to hot without work",
+      "Defines the arrow of time in physics"
+    ]
+  },
+  {
+    title: "Third Law of Thermodynamics",
+    cat: "law",
+    diff: "intermediate",
+    desc: "As the temperature of a system approaches absolute zero (0 K), its entropy approaches a constant minimum value (zero for a perfect crystal). It is impossible to reach absolute zero in a finite number of steps.",
+    formulas: ["lim(T→0) S = 0"],
+    formulaNote: "Valid for a perfect crystalline substance at 0 K",
+    points: [
+      "Absolute entropy can be calculated by integrating Cp/T from 0 K",
+      "Explains why liquid helium can be cooled but 0 K is unreachable",
+      "Basis for standard molar entropies tabulated in chemistry"
+    ]
+  },
+
+  // ── CONCEPTS ──
+  {
+    title: "Internal Energy (U)",
+    cat: "concept",
+    diff: "basic",
+    desc: "The total microscopic energy of a system — the sum of kinetic energies of all particles and the potential energies of their interactions. It is a state function: its value depends only on the current state of the system, not on the path taken to reach it.",
+    formulas: ["ΔU = Q − W", "U = Σ(KE_i + PE_i)"],
+    formulaNote: "For an ideal monatomic gas: U = (3/2)nRT",
+    points: [
+      "State function — path independent",
+      "Includes translational, rotational, vibrational, and electronic energy",
+      "For ideal gases, U depends only on temperature"
+    ]
+  },
+  {
+    title: "Entropy (S)",
+    cat: "concept",
+    diff: "intermediate",
+    desc: "A measure of the disorder or randomness of a system, or equivalently the number of microscopic configurations consistent with its macroscopic state. Entropy always increases in spontaneous irreversible processes in an isolated system.",
+    formulas: ["S = k_B · ln(Ω)", "dS = δQ_rev / T", "ΔS_univ ≥ 0"],
+    formulaNote: "k_B = Boltzmann constant (1.38×10⁻²³ J/K), Ω = number of microstates",
+    points: [
+      "Statistical definition by Boltzmann; thermodynamic definition by Clausius",
+      "Entropy of mixing is always positive for ideal gases",
+      "Driving force for many spontaneous processes in nature and chemistry"
+    ]
+  },
+  {
+    title: "Enthalpy (H)",
+    cat: "concept",
+    diff: "basic",
+    desc: "A thermodynamic potential defined as the sum of a system's internal energy and the product of pressure and volume. At constant pressure, the change in enthalpy equals the heat exchanged — making it the key quantity for chemical reactions and engineering processes.",
+    formulas: ["H = U + PV", "ΔH = Q_p  (const. pressure)", "ΔH = ΔU + Δ(PV)"],
+    formulaNote: "ΔH < 0: exothermic; ΔH > 0: endothermic",
+    points: [
+      "State function, extensive property",
+      "Standard enthalpy of formation tabulated for thousands of compounds",
+      "Hess's Law: ΔH is path-independent, allowing summation of reactions"
+    ]
+  },
+  {
+    title: "Gibbs Free Energy (G)",
+    cat: "concept",
+    diff: "intermediate",
+    desc: "The thermodynamic potential that predicts spontaneity at constant temperature and pressure. A process is spontaneous if ΔG < 0, at equilibrium if ΔG = 0, and non-spontaneous if ΔG > 0. It combines enthalpy and entropy into a single criterion.",
+    formulas: ["G = H − TS", "ΔG = ΔH − TΔS", "ΔG° = −RT ln(K)"],
+    formulaNote: "R = 8.314 J/(mol·K); K = equilibrium constant",
+    points: [
+      "Maximum non-expansion work a system can do at constant T, P",
+      "Central to chemical equilibrium and electrochemistry",
+      "ΔG = ΔG° + RT ln(Q) relates to reaction quotient Q"
+    ]
+  },
+  {
+    title: "Helmholtz Free Energy (A or F)",
+    cat: "concept",
+    diff: "advanced",
+    desc: "The thermodynamic potential that predicts spontaneity at constant temperature and volume. Equals the maximum work a system can perform at constant T and V. Particularly important in statistical mechanics and systems at fixed volume.",
+    formulas: ["A = U − TS", "ΔA = ΔU − TΔS", "dA = −SdT − PdV"],
+    formulaNote: "Minimized at equilibrium for constant T, V systems",
+    points: [
+      "Also called the work function",
+      "Naturally related to the canonical partition function Z: A = −k_B T ln(Z)",
+      "Preferred over Gibbs free energy when volume is constant"
+    ]
+  },
+  {
+    title: "Heat (Q)",
+    cat: "concept",
+    diff: "basic",
+    desc: "Energy transferred between a system and its surroundings due to a temperature difference. Heat is not a property of a system — it is energy in transit. It flows from higher to lower temperature until thermal equilibrium is reached.",
+    formulas: ["Q = mcΔT  (sensible heat)", "Q = mL  (latent heat)", "Q = ∫ nCᵥ dT"],
+    formulaNote: "m = mass, c = specific heat capacity, L = latent heat, Cᵥ = molar heat capacity",
+    points: [
+      "Path function — depends on how the process occurs",
+      "Positive convention: Q > 0 means heat flows INTO the system",
+      "Latent heat involves phase change at constant temperature"
+    ]
+  },
+  {
+    title: "Work (W)",
+    cat: "concept",
+    diff: "basic",
+    desc: "Energy transferred between a system and surroundings when a force acts through a displacement — in thermodynamics, most commonly through expansion or compression of a gas against an external pressure.",
+    formulas: ["W = ∫ P dV  (expansion work)", "W = PΔV  (constant pressure)", "W = nRT ln(V₂/V₁)  (isothermal ideal gas)"],
+    formulaNote: "W > 0: work done BY the system; W < 0: work done ON the system",
+    points: [
+      "Path function — depends on the process",
+      "PV diagram: work is the area under the curve",
+      "Other forms: electrical work, shaft work, surface tension work"
+    ]
+  },
+  {
+    title: "Temperature & Thermal Equilibrium",
+    cat: "concept",
+    diff: "basic",
+    desc: "Temperature is a measure of the average kinetic energy of particles in a substance. Thermal equilibrium is the state reached when two systems in contact have the same temperature and no net heat flows between them.",
+    formulas: ["KE_avg = (3/2) k_B T", "T(K) = T(°C) + 273.15", "T(°F) = T(°C) × 9/5 + 32"],
+    formulaNote: "k_B = 1.38×10⁻²³ J/K",
+    points: [
+      "Absolute (Kelvin) scale is fundamental in thermodynamics",
+      "At 0 K, classical kinetic energy is zero (quantum zero-point energy remains)",
+      "Zeroth law underpins the concept of equilibrium"
+    ]
+  },
+  {
+    title: "Phase Transitions",
+    cat: "concept",
+    diff: "intermediate",
+    desc: "Changes of state between solid, liquid, gas, and plasma phases. Occur at constant temperature and pressure, absorbing or releasing latent heat. Phase diagrams map the equilibrium between phases as a function of temperature and pressure.",
+    formulas: ["ΔG = 0  (at phase boundary)", "Clausius–Clapeyron: dP/dT = ΔH_vap / (TΔV)"],
+    formulaNote: "Triple point: all three phases coexist; Critical point: liquid-gas distinction vanishes",
+    points: [
+      "1st-order: discontinuous enthalpy (melting, boiling); 2nd-order: continuous (superconducting)",
+      "Clausius–Clapeyron relates vapor pressure to temperature",
+      "Supercooling and superheating: metastable states beyond phase boundaries"
+    ]
+  },
+  {
+    title: "Heat Capacity",
+    cat: "concept",
+    diff: "basic",
+    desc: "The amount of heat required to raise the temperature of a substance by one unit. Differs depending on whether the process occurs at constant volume (Cv) or constant pressure (Cp). The ratio γ = Cp/Cv is critical for adiabatic processes.",
+    formulas: ["Cₚ = (∂H/∂T)_P", "Cᵥ = (∂U/∂T)_V", "Cₚ − Cᵥ = R  (ideal gas)", "γ = Cₚ/Cᵥ"],
+    formulaNote: "Monatomic ideal gas: Cᵥ = 3/2 R, Cₚ = 5/2 R, γ = 5/3",
+    points: [
+      "Molar vs. specific heat capacity: molar is per mole, specific is per kg",
+      "Dulong–Petit law: Cᵥ ≈ 3R for solid elements at high temperature",
+      "γ = 1.4 for diatomic gases (N₂, O₂) at room temperature"
+    ]
+  },
+  {
+    title: "Ideal Gas Law",
+    cat: "formula",
+    diff: "basic",
+    desc: "Relates pressure, volume, temperature, and amount of an ideal gas. An ideal gas assumes no intermolecular forces and negligible particle volume. It is an excellent approximation at low pressures and high temperatures.",
+    formulas: ["PV = nRT", "PV = Nk_BT", "P₁V₁/T₁ = P₂V₂/T₂"],
+    formulaNote: "R = 8.314 J/(mol·K); k_B = 1.38×10⁻²³ J/K; N = number of molecules",
+    points: [
+      "Combines Boyle's, Charles's, and Gay-Lussac's laws",
+      "Real gases deviate at high P or low T — use van der Waals equation instead",
+      "Van der Waals: (P + an²/V²)(V − nb) = nRT"
+    ]
+  },
+  {
+    title: "Maxwell Relations",
+    cat: "formula",
+    diff: "advanced",
+    desc: "A set of four equations derived from the exactness of the thermodynamic potentials (U, H, A, G), relating partial derivatives of state variables (T, S, P, V). They allow unmeasurable quantities like entropy to be related to measurable ones like pressure and volume.",
+    formulas: [
+      "(∂T/∂V)_S = −(∂P/∂S)_V",
+      "(∂T/∂P)_S =  (∂V/∂S)_P",
+      "(∂S/∂V)_T =  (∂P/∂T)_V",
+      "(∂S/∂P)_T = −(∂V/∂T)_P"
+    ],
+    formulaNote: "Derived from the equality of mixed second partial derivatives (Euler's theorem)",
+    points: [
+      "Arise from the mathematical exactness of dU, dH, dA, dG",
+      "Allow entropy changes to be calculated from measurable PVT data",
+      "Essential in deriving equations of state corrections and Joule–Thomson coefficients"
+    ]
+  },
+  {
+    title: "Clausius–Clapeyron Equation",
+    cat: "formula",
+    diff: "intermediate",
+    desc: "Describes the slope of the coexistence curve between two phases in a phase diagram, relating the rate of change of vapor pressure with temperature to the enthalpy of vaporization.",
+    formulas: ["dP/dT = ΔH_vap / (TΔV)", "ln(P₂/P₁) = −ΔH_vap/R · (1/T₂ − 1/T₁)"],
+    formulaNote: "Assumes vapor behaves ideally and ΔV ≈ RT/P",
+    points: [
+      "Predicts how boiling point changes with altitude (lower P → lower boiling point)",
+      "Used to calculate vapor pressures at different temperatures",
+      "Antoine equation is an empirical alternative for practical use"
+    ]
+  },
+  {
+    title: "Van der Waals Equation",
+    cat: "formula",
+    diff: "intermediate",
+    desc: "A modification of the ideal gas law that accounts for intermolecular attractions (parameter a) and the finite volume of gas molecules (parameter b). Better describes real gas behavior, especially near the critical point.",
+    formulas: ["(P + an²/V²)(V − nb) = nRT"],
+    formulaNote: "a [Pa·m⁶/mol²] accounts for attractions; b [m³/mol] for molecular volume",
+    points: [
+      "Predicts gas liquefaction and the liquid–vapor critical point",
+      "Critical point: T_c = 8a/(27Rb), P_c = a/(27b²)",
+      "More accurate than ideal gas law but still only approximate for real gases"
+    ]
+  },
+  {
+    title: "Statistical Thermodynamics & Partition Function",
+    cat: "concept",
+    diff: "advanced",
+    desc: "Bridges microscopic molecular behavior and macroscopic thermodynamic properties. The partition function Z (or q) encodes all thermodynamic information of a system by summing over all quantum states weighted by their Boltzmann factors.",
+    formulas: ["Z = Σᵢ e^(−Eᵢ/k_BT)", "A = −k_BT ln Z", "U = k_BT² (∂ ln Z/∂T)_V"],
+    formulaNote: "Eᵢ = energy of microstate i; Boltzmann factor = e^(−Eᵢ/k_BT)",
+    points: [
+      "Connects quantum mechanics and thermodynamics",
+      "Partition function separates into translational, rotational, vibrational, electronic contributions",
+      "Equipartition theorem: each quadratic energy mode contributes ½k_BT to average energy"
+    ]
+  },
+
+  // ── PROCESSES ──
+  {
+    title: "Isothermal Process",
+    cat: "process",
+    diff: "basic",
+    desc: "A thermodynamic process in which temperature remains constant. For an ideal gas, the internal energy is unchanged (ΔU = 0), so all heat absorbed is converted to work. Follows a hyperbola (PV = const) on a PV diagram.",
+    formulas: ["T = constant", "PV = constant  (ideal gas)", "W = nRT ln(V₂/V₁)", "Q = W  (ideal gas, ΔU = 0)"],
+    formulaNote: "Requires slow process in thermal contact with a large heat reservoir",
+    points: [
+      "Real-world approximation: slow compression/expansion in a temperature bath",
+      "Maximum work is done in an isothermal reversible expansion",
+      "Carnot cycle consists of two isothermal and two adiabatic steps"
+    ]
+  },
+  {
+    title: "Adiabatic Process",
+    cat: "process",
+    diff: "intermediate",
+    desc: "A thermodynamic process in which no heat is exchanged with the surroundings (Q = 0). The system does work at the expense of its internal energy. Temperature changes significantly. Reversible adiabatic processes are called isentropic (constant entropy).",
+    formulas: ["Q = 0", "ΔU = −W", "PV^γ = constant", "TV^(γ−1) = constant"],
+    formulaNote: "γ = Cₚ/Cᵥ (ratio of heat capacities)",
+    points: [
+      "Fast processes (no time for heat exchange) are often approximately adiabatic",
+      "Adiabatic compression raises temperature; expansion lowers it",
+      "Sound waves, atmospheric convection, and turbo-machinery are adiabatic approximations"
+    ]
+  },
+  {
+    title: "Isobaric Process",
+    cat: "process",
+    diff: "basic",
+    desc: "A thermodynamic process that occurs at constant pressure. Heat added to the system is used partly to do work and partly to increase internal energy. Most chemical reactions carried out in open containers occur at constant atmospheric pressure.",
+    formulas: ["P = constant", "W = PΔV", "Q = nCₚΔT", "ΔH = Q_p"],
+    formulaNote: "For ideal gas at const. P: V/T = nR/P = const. (Charles's Law)",
+    points: [
+      "Most relevant for atmospheric chemistry and open-system engineering",
+      "Enthalpy change equals heat exchanged at constant pressure",
+      "PV work is easily calculated: W = PΔV"
+    ]
+  },
+  {
+    title: "Isochoric (Isovolumetric) Process",
+    cat: "process",
+    diff: "basic",
+    desc: "A thermodynamic process that occurs at constant volume. Since the volume doesn't change, no PV work is done. All heat added goes directly into increasing the internal energy of the system.",
+    formulas: ["V = constant", "W = 0", "Q = ΔU = nCᵥΔT"],
+    formulaNote: "For ideal gas at const. V: P/T = nR/V = const. (Gay-Lussac's Law)",
+    points: [
+      "Bomb calorimeters measure combustion at constant volume",
+      "The Otto cycle approximates combustion as isochoric",
+      "No boundary work; only internal energy changes"
+    ]
+  },
+  {
+    title: "Polytropic Process",
+    cat: "process",
+    diff: "intermediate",
+    desc: "A generalized quasi-static process described by PV^n = constant, where n (the polytropic index) determines the type of process. Special cases include isothermal (n=1), adiabatic (n=γ), isobaric (n=0), and isochoric (n=∞).",
+    formulas: ["PVⁿ = constant", "W = (P₁V₁ − P₂V₂) / (n−1)  (n≠1)", "T₂/T₁ = (V₁/V₂)^(n−1)"],
+    formulaNote: "n=0: isobaric; n=1: isothermal; n=γ: adiabatic; n=∞: isochoric",
+    points: [
+      "Unifies all classical processes under one equation",
+      "Useful for modeling real compression and expansion in engines",
+      "Work expression derived by integrating ∫P dV with PV^n = const."
+    ]
+  },
+
+  // ── CYCLES ──
+  {
+    title: "Carnot Cycle",
+    cat: "cycle",
+    diff: "intermediate",
+    desc: "The most efficient possible heat engine cycle operating between two temperature reservoirs. Consists of two reversible isothermal and two reversible adiabatic processes. Defines the theoretical upper limit on heat engine efficiency.",
+    formulas: ["η_Carnot = 1 − T_C / T_H", "COP_refrigerator = T_C / (T_H − T_C)", "COP_heat pump = T_H / (T_H − T_C)"],
+    formulaNote: "T_H = hot reservoir temperature (K), T_C = cold reservoir temperature (K)",
+    points: [
+      "No real engine can exceed Carnot efficiency for given temperature limits",
+      "The cycle is reversible: run backwards it is a Carnot refrigerator",
+      "Derived by Sadi Carnot in 1824, inspiring the second law of thermodynamics"
+    ]
+  },
+  {
+    title: "Otto Cycle",
+    cat: "cycle",
+    diff: "intermediate",
+    desc: "The idealized thermodynamic cycle for spark-ignition (gasoline) engines. Consists of two adiabatic and two isochoric processes. Thermal efficiency depends only on the compression ratio.",
+    formulas: ["η = 1 − 1/r^(γ−1)", "r = V_max / V_min  (compression ratio)"],
+    formulaNote: "For air: γ ≈ 1.4. Typical gasoline engines: r ≈ 8–12",
+    points: [
+      "Four strokes: intake, compression (adiabatic), combustion (isochoric), exhaust",
+      "Higher compression ratio → higher efficiency (limited by knock/detonation)",
+      "Real engines fall short due to friction, heat loss, and non-ideal combustion"
+    ]
+  },
+  {
+    title: "Diesel Cycle",
+    cat: "cycle",
+    diff: "intermediate",
+    desc: "The ideal cycle for compression-ignition (diesel) engines. Combustion occurs at constant pressure rather than constant volume. Uses higher compression ratios than Otto cycles, allowing for higher efficiency and no need for spark plugs.",
+    formulas: ["η = 1 − (1/r^(γ−1)) · (r_c^γ − 1)/(γ(r_c − 1))", "r_c = V₃/V₂  (cutoff ratio)"],
+    formulaNote: "r = compression ratio; r_c = cutoff ratio (volume after/before combustion)",
+    points: [
+      "Higher compression ratios (14–25) than gasoline engines",
+      "Combustion at constant pressure (isobaric), unlike Otto's isochoric",
+      "For same compression ratio, Diesel < Otto efficiency; but diesels use higher r"
+    ]
+  },
+  {
+    title: "Rankine Cycle",
+    cat: "cycle",
+    diff: "intermediate",
+    desc: "The standard thermodynamic cycle for steam power plants. A working fluid (water) is pumped, heated to steam, expanded through a turbine to generate work, and then condensed back to liquid. Forms the basis of most electricity generation worldwide.",
+    formulas: ["η = (W_turbine − W_pump) / Q_boiler", "W_net = (h₃ − h₄) − (h₂ − h₁)"],
+    formulaNote: "h = specific enthalpy; states: 1=pump inlet, 2=boiler inlet, 3=turbine inlet, 4=condenser inlet",
+    points: [
+      "Uses phase change (boiling/condensing) of water as the thermodynamic cycle",
+      "Modifications: superheat, reheat, regeneration increase efficiency",
+      "Typical efficiency: 30–45%; combined cycle plants reach ~60%"
+    ]
+  },
+  {
+    title: "Brayton Cycle",
+    cat: "cycle",
+    diff: "intermediate",
+    desc: "The ideal thermodynamic cycle for gas turbine engines and jet engines. Consists of isentropic compression, isobaric heat addition, isentropic expansion, and isobaric heat rejection. Operates with a continuously flowing working gas (usually air).",
+    formulas: ["η = 1 − 1/r_P^((γ−1)/γ)", "r_P = P_max / P_min  (pressure ratio)"],
+    formulaNote: "γ ≈ 1.4 for air; typical jet engine pressure ratios: 10–40",
+    points: [
+      "Open or closed configuration; jet engines use open Brayton cycle",
+      "Regeneration, intercooling, and reheating improve real Brayton cycle efficiency",
+      "Combined with Rankine in combined-cycle power plants for ~60% efficiency"
+    ]
+  },
+
+  // ── ADDITIONAL CONCEPTS ──
+  {
+    title: "Heat Engines & the Efficiency Limit",
+    cat: "concept",
+    diff: "intermediate",
+    desc: "A heat engine converts heat from a hot source into work, rejecting waste heat to a cold sink. No engine can have 100% efficiency (2nd Law). The Carnot efficiency gives the maximum achievable for given reservoir temperatures.",
+    formulas: ["η = W_net / Q_H = 1 − Q_C/Q_H", "η_max = 1 − T_C/T_H  (Carnot)"],
+    formulaNote: "Q_H = heat absorbed; Q_C = heat rejected; W_net = Q_H − Q_C",
+    points: [
+      "Sankey diagrams visualize heat engine energy flows",
+      "Irreversibilities (friction, heat leaks) always reduce efficiency below Carnot",
+      "Coefficient of performance (COP) used instead of η for refrigerators and heat pumps"
+    ]
+  },
+  {
+    title: "Refrigerators & Heat Pumps",
+    cat: "concept",
+    diff: "basic",
+    desc: "Devices that use work to move heat from a cold reservoir to a hot one — the reverse of a heat engine. Refrigerators cool a space; heat pumps warm one. Both are characterized by a coefficient of performance (COP) rather than efficiency.",
+    formulas: ["COP_ref = Q_C / W = T_C / (T_H − T_C)", "COP_hp = Q_H / W = T_H / (T_H − T_C)"],
+    formulaNote: "COP can be greater than 1 — a key advantage over electric resistance heating",
+    points: [
+      "A heat pump COP of 3 means 3 kJ of heat delivered per 1 kJ of electricity",
+      "Vapor-compression refrigeration uses refrigerant (R-134a, R-410A, etc.)",
+      "COP_hp = COP_ref + 1 always holds"
+    ]
+  },
+  {
+    title: "Joule–Thomson Effect",
+    cat: "concept",
+    diff: "advanced",
+    desc: "The change in temperature of a real gas when it is forced through a porous plug or throttling valve at constant enthalpy (isenthalpic process). Most gases cool on expansion below their inversion temperature; hydrogen and helium can warm.",
+    formulas: ["μ_JT = (∂T/∂P)_H", "μ_JT = (1/Cₚ)[T(∂V/∂T)_P − V]"],
+    formulaNote: "μ_JT > 0: cooling on expansion (below inversion T); μ_JT < 0: warming",
+    points: [
+      "Basis of practical gas liquefaction (Linde–Hampson process)",
+      "Ideal gas: μ_JT = 0 (no temperature change on throttling)",
+      "Inversion temperature of N₂ is ~621 K; of H₂ is ~202 K"
+    ]
+  },
+  {
+    title: "Thermodynamic Equilibrium & State Functions",
+    cat: "concept",
+    diff: "basic",
+    desc: "A system in thermodynamic equilibrium has no driving force for change — it has uniform temperature, pressure, and composition. State functions (T, P, V, U, H, S, G, A) describe the current state regardless of how it was reached, unlike path functions (Q, W).",
+    formulas: ["dU = TdS − PdV  (fundamental relation)", "dG = −SdT + VdP"],
+    formulaNote: "The fundamental relation encodes all of classical thermodynamics",
+    points: [
+      "State functions: exact differentials; path functions: inexact differentials",
+      "Equilibrium requires mechanical, thermal, and chemical equilibrium simultaneously",
+      "Non-equilibrium thermodynamics deals with systems far from equilibrium"
+    ]
+  },
+  {
+    title: "Exergy (Available Work)",
+    cat: "concept",
+    diff: "advanced",
+    desc: "The maximum useful work obtainable from a system as it comes into equilibrium with its environment (dead state). Unlike energy, exergy can be destroyed by irreversibilities. Exergy analysis reveals where real systems waste their potential to do work.",
+    formulas: ["Ex = (U − U₀) + P₀(V − V₀) − T₀(S − S₀)", "Ex_destroyed = T₀ · S_gen"],
+    formulaNote: "Subscript 0 denotes dead-state (environmental) conditions",
+    points: [
+      "Also called 'availability' or 'available work'",
+      "Exergy efficiency = actual work / maximum (exergy) work",
+      "Key tool in second-law analysis of power plants, HVAC, and industrial processes"
+    ]
+  }
+];
+
+// ── Render ──
+const grid = document.getElementById('grid');
+const searchInput = document.getElementById('searchInput');
+const clearBtn = document.getElementById('clearBtn');
+const visCount = document.getElementById('visCount');
+const totalCount = document.getElementById('totalCount');
+totalCount.textContent = DATA.length;
+
+let activeCat = 'all';
+let activeDiff = 'all';
+let searchQuery = '';
+
+function highlight(text, query) {
+  if (!query) return text;
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+}
+
+function buildCard(item, query) {
+  const catBadge = `<span class="badge badge-${item.cat}">${item.cat}</span>`;
+  const diffBadge = `<span class="badge badge-${item.diff}">${item.diff}</span>`;
+  const title = highlight(item.title, query);
+  const desc = highlight(item.desc, query);
+  const formulaHTML = item.formulas && item.formulas.length ? `
+    <div class="formula-block">
+      <div class="formula-label">Key Formulas</div>
+      ${item.formulas.map(f => `<div class="formula-item">${highlight(f, query)}</div>`).join('')}
+      ${item.formulaNote ? `<div class="formula-note">${highlight(item.formulaNote, query)}</div>` : ''}
+    </div>` : '';
+  const pointsHTML = item.points && item.points.length ? `
+    <div class="key-points">
+      ${item.points.map(p => `<div class="key-point">${highlight(p, query)}</div>`).join('')}
+    </div>` : '';
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.cat = item.cat;
+  card.dataset.diff = item.diff;
+  card.innerHTML = `
+    <div class="card-header">
+      <div class="card-title">${title}</div>
+      <div class="badge-group">${catBadge}${diffBadge}</div>
+    </div>
+    <div class="card-desc">${desc}</div>
+    ${formulaHTML}
+    ${pointsHTML}
+  `;
+  return card;
+}
+
+function render() {
+  const q = searchQuery.toLowerCase().trim();
+  grid.innerHTML = '';
+  let shown = 0;
+  DATA.forEach(item => {
+    const catOk = activeCat === 'all' || item.cat === activeCat;
+    const diffOk = activeDiff === 'all' || item.diff === activeDiff;
+    const searchOk = !q || [
+      item.title, item.desc,
+      ...(item.formulas || []),
+      item.formulaNote || '',
+      ...(item.points || [])
+    ].some(s => s.toLowerCase().includes(q));
+    if (catOk && diffOk && searchOk) {
+      grid.appendChild(buildCard(item, q));
+      shown++;
+    }
+  });
+  visCount.textContent = shown;
+  if (shown === 0) {
+    grid.innerHTML = `<div class="no-results">
+      <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <h3>No results found</h3>
+      <p>Try a different search term or clear the filters.</p>
+    </div>`;
+  }
+}
+
+// Search
+searchInput.addEventListener('input', () => {
+  searchQuery = searchInput.value;
+  clearBtn.style.display = searchQuery ? 'block' : 'none';
+  render();
+});
+clearBtn.addEventListener('click', () => {
+  searchInput.value = '';
+  searchQuery = '';
+  clearBtn.style.display = 'none';
+  searchInput.focus();
+  render();
+});
+
+// Category filters
+document.getElementById('catFilters').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn[data-cat]');
+  if (!btn) return;
+  document.querySelectorAll('#catFilters .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeCat = btn.dataset.cat;
+  render();
+});
+
+// Difficulty filters
+document.getElementById('diffFilters').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn[data-diff]');
+  if (!btn) return;
+  document.querySelectorAll('#diffFilters .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeDiff = btn.dataset.diff;
+  render();
+});
+
+render();
+</script>
+</article>
+</body>
+</html>

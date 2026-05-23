@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="LLM vs RAG vs AI Agent vs Agentic AI — Practitioner's Build Guide" />
+  <meta property="og:description" content="LLM vs RAG vs AI Agent vs Agentic AI — Practitioner's Build Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/tech/AI-and-MLOps/llm-rag-agent-and-agentic-AI.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="LLM vs RAG vs AI Agent vs Agentic AI — Practitioner" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/tech/AI-and-MLOps/llm-rag-agent-and-agentic-AI.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>LLM vs RAG vs AI Agent vs Agentic AI — Practitioner's Build Guide | Yasir Bilgin</title>
+
+  <!-- ① Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- ② Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- ③ Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --ink: #0f0e0c;
+      --paper: #f5f2ec;
+      --cream: #ede8df;
+      --rule: #d4cfc5;
+      --llm-hue:   #c8860a;
+      --llm-soft:  #fdf3e0;
+      --llm-mid:   #e0a030;
+      --rag-hue:   #1a5fa8;
+      --rag-soft:  #e4eef9;
+      --rag-mid:   #5b9bd5;
+      --agent-hue: #6b35c2;
+      --agent-soft:#f0eafa;
+      --agent-mid: #a67de0;
+      --agentic-hue:#1a7a52;
+      --agentic-soft:#e2f4ec;
+      --agentic-mid: #3dac76;
+      --mono: 'DM Mono', monospace;
+      --sans: 'DM Sans', sans-serif;
+      --serif: 'Fraunces', serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.75; }
+
+    #progressBar { position: fixed; top: 62px; left: 0; height: 3px; background: var(--llm-hue); width: 0%; z-index: 100; transition: width 0.1s linear; }
+
+    .toc-overlay { display: none; position: fixed; inset: 0; z-index: 9000; background: rgba(15,14,12,0.55); }
+    .toc-overlay.open { display: flex; align-items: flex-start; justify-content: flex-end; backdrop-filter: blur(4px); }
+    .toc-panel { background: var(--paper); width: min(360px, 92vw); height: 100vh; padding: 2rem 1.8rem; overflow-y: auto; border-left: 1px solid var(--rule); }
+    .toc-panel h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; margin-bottom: 1.2rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .toc-close { float: right; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); opacity: 0.6; line-height: 1; margin-top: -2px; }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--rule); }
+    .toc-list a { display: block; padding: 0.65rem 0; font-size: 0.88rem; color: var(--ink); text-decoration: none; transition: opacity 0.15s; }
+    .toc-list a:hover { opacity: 0.6; }
+    .toc-list a.toc-main { font-weight: 600; }
+    .toc-list a.toc-sub { padding-left: 1.2rem; opacity: 0.7; font-size: 0.82rem; }
+    .toc-cat { display: block; padding: 1rem 0 0.3rem; font-size: 0.7rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.45; border-bottom: none; cursor: default; }
+
+    .article-header { background: var(--paper); border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 2.5rem; }
+    .article-header .site-name { font-family: var(--serif); font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; opacity: 0.5; }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .read-time { font-family: var(--mono); font-size: 0.75rem; opacity: 0.45; }
+    .toc-btn { font-family: var(--mono); font-size: 0.75rem; background: var(--ink); color: var(--paper); border: none; padding: 0.45rem 1rem; cursor: pointer; letter-spacing: 0.06em; min-height: 44px; }
+    .toc-btn:hover { opacity: 0.75; }
+
+    .hero { max-width: 860px; margin: 0 auto; padding: 5rem 2.5rem 3rem; }
+    .hero-kicker { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.45; margin-bottom: 1.2rem; }
+    .hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; margin-bottom: 1.4rem; }
+    .hero h1 em { font-style: italic; font-weight: 300; }
+    .hero-sub { font-size: 1.15rem; opacity: 0.65; max-width: 600px; margin-bottom: 2rem; }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar { width: 40px; height: 40px; background: var(--ink); color: var(--paper); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 0.85rem; font-weight: 700; flex-shrink: 0; }
+    .byline-name { display: block; font-weight: 600; font-size: 0.9rem; }
+    .byline-meta { display: block; font-size: 0.8rem; opacity: 0.45; font-family: var(--mono); }
+    .hero-rule { border: none; border-top: 1px solid var(--rule); margin: 0 2.5rem; }
+
+    .classification-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--rule); margin: 3rem 0 0; }
+    .cls-card { padding: 1.6rem 1.4rem; border-right: 1px solid var(--rule); }
+    .cls-card:last-child { border-right: none; }
+    .cls-label { font-family: var(--mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.5rem; opacity: 0.7; }
+    .cls-name { font-family: var(--serif); font-size: 1.3rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.4rem; }
+    .cls-role { font-size: 0.78rem; opacity: 0.6; }
+    .cls-llm    { background: var(--llm-soft);    color: var(--llm-hue); }
+    .cls-rag    { background: var(--rag-soft);    color: var(--rag-hue); }
+    .cls-agent  { background: var(--agent-soft);  color: var(--agent-hue); }
+    .cls-agentic{ background: var(--agentic-soft);color: var(--agentic-hue); }
+
+    .article-body { max-width: 860px; margin: 0 auto; padding: 4rem 2.5rem 8rem; }
+    .major-section { scroll-margin-top: 130px; margin-bottom: 5rem; }
+    .section-label { display: inline-block; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.4; margin-bottom: 0.6rem; }
+    h2 { font-family: var(--serif); font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.2rem; }
+    h2 em { font-style: italic; font-weight: 300; }
+    h3.sub-heading { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; margin: 2.5rem 0 0.8rem; scroll-margin-top: 130px; display: flex; align-items: baseline; gap: 0.5rem; }
+    .sh-num { font-family: var(--mono); font-size: 0.78rem; opacity: 0.35; }
+    p { margin-bottom: 1.2rem; }
+    p:last-child { margin-bottom: 0; }
+    strong { font-weight: 600; }
+    code { font-family: var(--mono); font-size: 0.85em; background: var(--cream); padding: 0.1em 0.4em; border-radius: 2px; }
+
+    .concept-stripe { border-left: 4px solid; padding: 1.2rem 1.4rem; margin: 2rem 0; border-radius: 0 4px 4px 0; }
+    .concept-stripe.llm    { border-color: var(--llm-hue);    background: var(--llm-soft); }
+    .concept-stripe.rag    { border-color: var(--rag-hue);    background: var(--rag-soft); }
+    .concept-stripe.agent  { border-color: var(--agent-hue);  background: var(--agent-soft); }
+    .concept-stripe.agentic{ border-color: var(--agentic-hue);background: var(--agentic-soft); }
+    .cs-tag { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; opacity: 0.6; }
+
+    .step-list { list-style: none; margin: 1.5rem 0 2rem; }
+    .step-list li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 0 1rem; margin-bottom: 1.2rem; align-items: start; }
+    .step-num { width: 2.4rem; height: 2.4rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.8rem; font-weight: 500; flex-shrink: 0; margin-top: 0.1rem; }
+    .step-num.llm    { background: var(--llm-mid);    color: #fff; }
+    .step-num.rag    { background: var(--rag-mid);    color: #fff; }
+    .step-num.agent  { background: var(--agent-mid);  color: #fff; }
+    .step-num.agentic{ background: var(--agentic-mid);color: #fff; }
+    .step-body strong { display: block; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .step-body p { margin: 0; font-size: 0.9rem; opacity: 0.75; }
+
+    .code-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    pre { background: #18181a; color: #e8e4db; font-family: var(--mono); font-size: 0.8rem; line-height: 1.7; padding: 1.5rem 1.8rem; border-radius: 2px; white-space: pre; tab-size: 2; }
+    .code-label { display: inline-block; font-family: var(--mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; background: #18181a; color: #888; padding: 0.3rem 0.9rem; margin-bottom: 0; border-radius: 2px 2px 0 0; }
+    .code-wrap .code-label + pre { border-radius: 0 2px 2px 2px; }
+    .t-comment { color: #5c6370; }
+    .t-key  { color: #7dd3fc; }
+    .t-str  { color: #86efac; }
+    .t-num  { color: #fca5a5; }
+    .t-fn   { color: #fde68a; }
+    .t-kw   { color: #c4b5fd; }
+    .t-op   { color: #94a3b8; }
+
+    .table-wrap { overflow-x: auto; margin: 2rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    thead tr { background: var(--ink); color: var(--paper); }
+    thead th { padding: 0.85rem 1rem; text-align: left; font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+    tbody tr { border-bottom: 1px solid var(--rule); }
+    tbody tr:hover { background: var(--cream); }
+    tbody td { padding: 0.8rem 1rem; vertical-align: top; line-height: 1.5; }
+    tbody td:first-child { font-weight: 600; font-size: 0.82rem; font-family: var(--mono); }
+
+    .callout { background: var(--cream); border: 1px solid var(--rule); padding: 1.3rem 1.6rem; margin: 2rem 0; font-size: 0.9rem; }
+    .callout-icon { font-size: 1.1rem; margin-right: 0.4rem; }
+
+    .arch-diagram { border: 1px solid var(--rule); background: var(--cream); padding: 1.8rem; margin: 2rem 0; font-family: var(--mono); font-size: 0.78rem; overflow-x: auto; }
+    .arch-row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: nowrap; white-space: nowrap; margin-bottom: 0.5rem; }
+    .arch-box { border: 1px solid; padding: 0.3rem 0.85rem; border-radius: 3px; font-size: 0.74rem; line-height: 1.6; }
+    .arch-box.llm    { border-color: var(--llm-hue);    color: var(--llm-hue);    background: var(--llm-soft); }
+    .arch-box.rag    { border-color: var(--rag-hue);    color: var(--rag-hue);    background: var(--rag-soft); }
+    .arch-box.agent  { border-color: var(--agent-hue);  color: var(--agent-hue);  background: var(--agent-soft); }
+    .arch-box.agentic{ border-color: var(--agentic-hue);color: var(--agentic-hue);background: var(--agentic-soft); }
+    .arch-box.neutral{ border-color: var(--rule);       color: var(--ink);        background: #fff; }
+    .arch-arrow { opacity: 0.5; font-size: 0.9rem; }
+
+    .usecase-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+    .usecase-badge { font-family: var(--mono); font-size: 0.72rem; padding: 0.3rem 0.75rem; border-radius: 2px; }
+    .usecase-badge.llm    { background: var(--llm-soft);    color: var(--llm-hue); }
+    .usecase-badge.rag    { background: var(--rag-soft);    color: var(--rag-hue); }
+    .usecase-badge.agent  { background: var(--agent-soft);  color: var(--agent-hue); }
+    .usecase-badge.agentic{ background: var(--agentic-soft);color: var(--agentic-hue); }
+
+    .section-rule { border: none; border-top: 1px solid var(--rule); margin: 4rem 0; }
+
+    footer { border-top: 1px solid var(--rule); padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--serif); font-weight: 700; font-size: 1.1rem; }
+    .footer-copy { font-family: var(--mono); font-size: 0.72rem; opacity: 0.4; }
+
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .hero { padding: 3rem 1.4rem 2rem; }
+      .hero-rule { margin: 0 1.4rem; }
+      .article-header { padding: 0.65rem 1.4rem; }
+      .classification-grid { grid-template-columns: 1fr 1fr; }
+      .cls-card { border-bottom: 1px solid var(--rule); }
+    }
+    @media (max-width: 480px) {
+      .classification-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <meta name="description" content="A hands-on build guide for practitioners learn what each paradigm actually is, when to use it, and how to construct a working example from scratch using…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LLM vs RAG vs AI Agent vs Agentic AI — Practitioner's Build Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-05-02",
+  "url": "https://yasirbilgin.com/tech/AI-and-MLOps/llm-rag-agent-and-agentic-AI.html",
+  "description": "A hands-on build guide for practitioners learn what each paradigm actually is, when to use it, and how to construct a working example from scratch using…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/tech/" style="color:#1a3a5c;text-decoration:none;">Tech</a> <span style="opacity:0.5">›</span> <span>Ai, Llms & Mlops</span> <span style="opacity:0.5">›</span> <span>LLM vs RAG vs AI Agent vs Agentic AI — Practitioner's Build Guide</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech",
+      "item": "https://yasirbilgin.com/tech/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LLM vs RAG vs AI Agent vs Agentic AI — Practitioner's Build Guide",
+      "item": "https://yasirbilgin.com/tech/AI-and-MLOps/llm-rag-agent-and-agentic-AI.html"
+    }
+  ]
+}
+</script>
+
+
+<div id="progressBar"></div>
+
+<div class="toc-overlay" id="tocOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">&#10005;</button>
+    <h3>Contents</h3>
+    <ul class="toc-list">
+      <li><span class="toc-cat">Overview</span></li>
+      <li><a href="#s0" class="toc-main">The Four Paradigms</a></li>
+      <li><a href="#s0-compare" class="toc-sub">Quick comparison table</a></li>
+      <li><span class="toc-cat">Tier 1 — Foundation</span></li>
+      <li><a href="#s1" class="toc-main">I. Building with LLMs</a></li>
+      <li><a href="#s1-what" class="toc-sub">What it actually is</a></li>
+      <li><a href="#s1-build" class="toc-sub">Step-by-step build</a></li>
+      <li><a href="#s1-code" class="toc-sub">Code walkthrough</a></li>
+      <li><span class="toc-cat">Tier 2 — Knowledge</span></li>
+      <li><a href="#s2" class="toc-main">II. Building RAG Systems</a></li>
+      <li><a href="#s2-what" class="toc-sub">What it actually is</a></li>
+      <li><a href="#s2-build" class="toc-sub">Step-by-step build</a></li>
+      <li><a href="#s2-code" class="toc-sub">Code walkthrough</a></li>
+      <li><span class="toc-cat">Tier 3 — Action</span></li>
+      <li><a href="#s3" class="toc-main">III. Building AI Agents</a></li>
+      <li><a href="#s3-what" class="toc-sub">What it actually is</a></li>
+      <li><a href="#s3-build" class="toc-sub">Step-by-step build</a></li>
+      <li><a href="#s3-code" class="toc-sub">Code walkthrough</a></li>
+      <li><span class="toc-cat">Tier 4 — Orchestration</span></li>
+      <li><a href="#s4" class="toc-main">IV. Building Agentic AI</a></li>
+      <li><a href="#s4-what" class="toc-sub">What it actually is</a></li>
+      <li><a href="#s4-build" class="toc-sub">Step-by-step build</a></li>
+      <li><a href="#s4-code" class="toc-sub">Code walkthrough</a></li>
+      <li><span class="toc-cat">Decision guide</span></li>
+      <li><a href="#s5" class="toc-main">V. Which Should You Use?</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <p class="hero-kicker">Practitioner&#39;s Guide &middot; AI Engineering</p>
+  <h1>LLM vs RAG vs AI Agent<br><em>vs Agentic AI</em></h1>
+  <p class="hero-sub">A hands-on build guide for practitioners &mdash; learn what each paradigm actually is, when to use it, and how to construct a working example from scratch using Claude&#39;s API.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Yasir Bilgin &middot; May 2026</span>
+    </div>
+  </div>
+
+  <div class="classification-grid">
+    <div class="cls-card cls-llm">
+      <div class="cls-label">Tier 1 &middot; Foundation</div>
+      <div class="cls-name">LLM</div>
+      <div class="cls-role">The Thinker &mdash; reasons with language</div>
+    </div>
+    <div class="cls-card cls-rag">
+      <div class="cls-label">Tier 2 &middot; Knowledge</div>
+      <div class="cls-name">RAG</div>
+      <div class="cls-role">The Researcher &mdash; finds answers in your data</div>
+    </div>
+    <div class="cls-card cls-agent">
+      <div class="cls-label">Tier 3 &middot; Action</div>
+      <div class="cls-name">AI Agent</div>
+      <div class="cls-role">The Doer &mdash; completes tasks with tools</div>
+    </div>
+    <div class="cls-card cls-agentic">
+      <div class="cls-label">Tier 4 &middot; Orchestration</div>
+      <div class="cls-name">Agentic AI</div>
+      <div class="cls-role">The Coordinator &mdash; orchestrates multiple agents</div>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">~22 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+</header>
+
+
+<article class="article-body">
+
+  <section id="s0" class="major-section">
+    <span class="section-label">Overview</span>
+    <h2>The Four <em>Paradigms</em></h2>
+
+    <p>The infographic from GenAI.works captures something practitioners often get confused about: these four terms are not competing products. They are four <strong>different architectural patterns</strong> for building AI-powered software, each adding a new capability layer on top of the previous.</p>
+
+    <p>Think of it as a stack. Every RAG system contains an LLM. Every AI Agent contains either a raw LLM or a RAG system. Every Agentic AI system is composed of multiple Agents. You cannot skip a tier &mdash; the tiers build upward.</p>
+
+    <div class="arch-diagram">
+      <div class="arch-row">
+        <div class="arch-box agentic">Agentic AI (Orchestrator)</div>
+      </div>
+      <div class="arch-row" style="padding-left:1.5rem; opacity:0.55; font-size:0.7rem;">&#8627; coordinates</div>
+      <div class="arch-row" style="padding-left:1.5rem;">
+        <div class="arch-box agent">Agent A</div>
+        <div class="arch-arrow">&#183;</div>
+        <div class="arch-box agent">Agent B</div>
+        <div class="arch-arrow">&#183;</div>
+        <div class="arch-box agent">Agent C</div>
+      </div>
+      <div class="arch-row" style="padding-left:3rem; opacity:0.55; font-size:0.7rem;">&#8627; each agent uses</div>
+      <div class="arch-row" style="padding-left:3rem;">
+        <div class="arch-box rag">RAG</div>
+        <div class="arch-arrow">+</div>
+        <div class="arch-box neutral">Tools</div>
+      </div>
+      <div class="arch-row" style="padding-left:4.5rem; opacity:0.55; font-size:0.7rem;">&#8627; built on</div>
+      <div class="arch-row" style="padding-left:4.5rem;">
+        <div class="arch-box llm">LLM (Claude)</div>
+      </div>
+    </div>
+
+    <p>This guide walks you through building each tier from scratch using a single running example: <strong>a customer support system for a fictional SaaS product, &ldquo;Clarion&rdquo;</strong>. Keeping the use case constant lets you see exactly what each tier adds &mdash; and why you might, or might not, need it.</p>
+
+    <h3 id="s0-compare" class="sub-heading"><span class="sh-num">0.1</span>Quick comparison</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Pattern</th>
+            <th>Uses external data?</th>
+            <th>Takes actions?</th>
+            <th>Multiple AI instances?</th>
+            <th>Complexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LLM</td><td>No</td><td>No</td><td>No</td><td>&#9733;&#9734;&#9734;&#9734;</td></tr>
+          <tr><td>RAG</td><td>Yes</td><td>No</td><td>No</td><td>&#9733;&#9733;&#9734;&#9734;</td></tr>
+          <tr><td>AI Agent</td><td>Optional</td><td>Yes</td><td>No</td><td>&#9733;&#9733;&#9733;&#9734;</td></tr>
+          <tr><td>Agentic AI</td><td>Yes</td><td>Yes</td><td>Yes</td><td>&#9733;&#9733;&#9733;&#9733;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">&#9888;&#65039;</span> <strong>Prerequisites:</strong> All code examples use Python 3.10+ and the <code>anthropic</code> SDK. Install with <code>pip install anthropic</code>. You will need a Claude API key set as the environment variable <code>ANTHROPIC_API_KEY</code>.
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- SECTION 1: LLM -->
+  <section id="s1" class="major-section">
+    <span class="section-label">Tier 1 &middot; Foundation</span>
+    <h2>Building with <em>LLMs</em></h2>
+
+    <div class="concept-stripe llm">
+      <div class="cs-tag">LLM &middot; Large Language Model</div>
+      <p><strong>The Thinker.</strong> An LLM is a neural network trained on vast amounts of text. You send it a message; it generates a response. That is the entire primitive. Everything else in this guide is built on top of this single interaction.</p>
+    </div>
+
+    <h3 id="s1-what" class="sub-heading"><span class="sh-num">1.1</span>What it actually is</h3>
+
+    <p>When you call Claude&rsquo;s API, you are sending a structured HTTP request containing a list of messages and receiving back a generated completion. The model has no memory, no internet access, no tools &mdash; it only knows what you put in the request and what it learned during training.</p>
+
+    <p>This makes it ideal for tasks that only require language reasoning: writing, summarising, classifying text, answering general knowledge questions, drafting, explaining concepts, and transforming text from one format to another.</p>
+
+    <div class="usecase-row">
+      <span class="usecase-badge llm">Draft email</span>
+      <span class="usecase-badge llm">Summarise meeting notes</span>
+      <span class="usecase-badge llm">Answer general Q&amp;A</span>
+      <span class="usecase-badge llm">Rewrite content</span>
+      <span class="usecase-badge llm">Classify intent</span>
+      <span class="usecase-badge llm">Explain a concept</span>
+    </div>
+
+    <p><strong>Watch out for:</strong> The model has no knowledge of your internal data. It cannot look up a user&rsquo;s account. It cannot tell you yesterday&rsquo;s sales figures. It will hallucinate specific facts it does not know. For the Clarion support case, a raw LLM can only answer general product questions &mdash; and your specific product was not in its training data.</p>
+
+    <h3 id="s1-build" class="sub-heading"><span class="sh-num">1.2</span>Step-by-step build</h3>
+
+    <p>We are building: <strong>A basic support chat widget for Clarion.</strong> The user types a question; Claude responds using only its general knowledge.</p>
+
+    <ul class="step-list">
+      <li>
+        <div class="step-num llm">1</div>
+        <div class="step-body">
+          <strong>Get your API key</strong>
+          <p>Sign up at console.anthropic.com. Copy the key and set it as the environment variable <code>ANTHROPIC_API_KEY</code> &mdash; never hardcode it in source files.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num llm">2</div>
+        <div class="step-body">
+          <strong>Write a system prompt</strong>
+          <p>The system prompt defines the AI&rsquo;s role, tone, and constraints. For support, you want it to be helpful, concise, and honest about what it does not know.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num llm">3</div>
+        <div class="step-body">
+          <strong>Call the Messages API</strong>
+          <p>Pass the system prompt and the user&rsquo;s message. Read back <code>response.content[0].text</code>.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num llm">4</div>
+        <div class="step-body">
+          <strong>Maintain conversation history</strong>
+          <p>Claude is stateless. For multi-turn conversations you must accumulate all previous messages and pass them with every request.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num llm">5</div>
+        <div class="step-body">
+          <strong>Surface the response</strong>
+          <p>Print it, stream it into a UI, or pipe it to your application layer.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="s1-code" class="sub-heading"><span class="sh-num">1.3</span>Code walkthrough</h3>
+
+    <div class="code-wrap">
+      <span class="code-label">Python &middot; llm_basic.py</span>
+<pre><span class="t-kw">import</span> anthropic
+
+<span class="t-comment"># 1. Initialise client — reads ANTHROPIC_API_KEY from environment</span>
+client = anthropic.Anthropic()
+
+<span class="t-comment"># 2. System prompt: who the assistant is and how it should behave</span>
+SYSTEM = <span class="t-str">"""You are a friendly support assistant for Clarion,
+a project management SaaS. Answer questions clearly and concisely.
+If you do not know a specific answer, say so honestly rather than
+guessing. Never fabricate feature names or pricing details."""</span>
+
+<span class="t-comment"># 3. In-memory conversation history (list of message dicts)</span>
+history = []
+
+<span class="t-kw">def</span> <span class="t-fn">chat</span>(user_message: <span class="t-fn">str</span>) <span class="t-op">-></span> <span class="t-fn">str</span>:
+    history.append({<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: user_message})
+
+    <span class="t-comment"># 4. Call the Messages API with full history on every turn</span>
+    response = client.messages.create(
+        model=<span class="t-str">"claude-sonnet-4-20250514"</span>,
+        max_tokens=<span class="t-num">1024</span>,
+        system=SYSTEM,
+        messages=history
+    )
+
+    assistant_text = response.content[<span class="t-num">0</span>].text
+
+    <span class="t-comment"># Append assistant turn so next call includes it</span>
+    history.append({<span class="t-str">"role"</span>: <span class="t-str">"assistant"</span>, <span class="t-str">"content"</span>: assistant_text})
+    <span class="t-kw">return</span> assistant_text
+
+<span class="t-comment"># 5. Simple interactive loop</span>
+<span class="t-kw">if</span> __name__ == <span class="t-str">"__main__"</span>:
+    <span class="t-fn">print</span>(<span class="t-str">"Clarion Support (LLM only). Type 'quit' to exit.\n"</span>)
+    <span class="t-kw">while</span> <span class="t-kw">True</span>:
+        q = <span class="t-fn">input</span>(<span class="t-str">"You: "</span>)
+        <span class="t-kw">if</span> q.lower() == <span class="t-str">"quit"</span>: <span class="t-kw">break</span>
+        <span class="t-fn">print</span>(<span class="t-str">f"\nClarion: {</span><span class="t-fn">chat</span>(q)<span class="t-str">}\n"</span>)</pre>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">&#128161;</span> <strong>What you have now:</strong> A working chatbot that can answer general questions about software and project management. It cannot answer &ldquo;Does Clarion integrate with Jira?&rdquo; accurately because it has no knowledge of your specific product. That is the problem RAG solves.
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- SECTION 2: RAG -->
+  <section id="s2" class="major-section">
+    <span class="section-label">Tier 2 &middot; Knowledge</span>
+    <h2>Building <em>RAG</em> Systems</h2>
+
+    <div class="concept-stripe rag">
+      <div class="cs-tag">RAG &middot; Retrieval-Augmented Generation</div>
+      <p><strong>The Researcher.</strong> RAG is the pattern of retrieving relevant documents from a knowledge base and injecting them into the LLM&rsquo;s context window before it generates a response. The model&rsquo;s answer is grounded in your actual data, dramatically reducing hallucination on domain-specific facts.</p>
+    </div>
+
+    <h3 id="s2-what" class="sub-heading"><span class="sh-num">2.1</span>What it actually is</h3>
+
+    <p>RAG separates <em>knowledge storage</em> from <em>reasoning</em>. You maintain a searchable collection of documents. At query time, you retrieve the most relevant chunks and prepend them to the user&rsquo;s question before sending it to Claude. Claude then answers based on that retrieved context.</p>
+
+    <p>The key insight: <strong>you are not fine-tuning the model.</strong> You are using in-context learning &mdash; stuffing relevant facts into the prompt at runtime. This means your knowledge base can be updated instantly, without retraining.</p>
+
+    <div class="arch-diagram">
+      <div class="arch-row">
+        <div class="arch-box neutral">User query</div>
+        <div class="arch-arrow">&rarr;</div>
+        <div class="arch-box rag">Vector search</div>
+        <div class="arch-arrow">&rarr;</div>
+        <div class="arch-box neutral">Top-K chunks</div>
+      </div>
+      <div class="arch-row" style="padding-left:1rem; margin-top:0.2rem; opacity:0.5; font-size:0.7rem;">combined &darr;</div>
+      <div class="arch-row">
+        <div class="arch-box neutral">Query + chunks</div>
+        <div class="arch-arrow">&rarr;</div>
+        <div class="arch-box llm">Claude (LLM)</div>
+        <div class="arch-arrow">&rarr;</div>
+        <div class="arch-box neutral">Grounded answer</div>
+      </div>
+    </div>
+
+    <div class="usecase-row">
+      <span class="usecase-badge rag">Internal HR chatbot</span>
+      <span class="usecase-badge rag">Product docs Q&amp;A</span>
+      <span class="usecase-badge rag">Legal document search</span>
+      <span class="usecase-badge rag">Support knowledge base</span>
+      <span class="usecase-badge rag">Research assistant</span>
+    </div>
+
+    <p><strong>Watch out for:</strong> RAG quality depends entirely on retrieval quality. If the relevant chunk is not in your knowledge base, or if your search fails to find it, the model will either hallucinate or say it does not know. A poorly curated knowledge base produces a poorly performing RAG system.</p>
+
+    <h3 id="s2-build" class="sub-heading"><span class="sh-num">2.2</span>Step-by-step build</h3>
+
+    <p>We are building: <strong>Clarion Support with product knowledge.</strong> The bot can now accurately answer &ldquo;Does Clarion integrate with Jira?&rdquo; because that answer lives in our help docs.</p>
+
+    <ul class="step-list">
+      <li>
+        <div class="step-num rag">1</div>
+        <div class="step-body">
+          <strong>Prepare your knowledge base</strong>
+          <p>Collect your documents: help articles, FAQs, product specs. Split them into chunks of 200&ndash;500 tokens each. Overlapping chunks (50-token overlap) improve retrieval continuity.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num rag">2</div>
+        <div class="step-body">
+          <strong>Embed your chunks</strong>
+          <p>Convert each chunk to a vector using an embedding model. Store vectors in a vector database (Pinecone, Weaviate, Chroma, or an in-memory list for prototyping).</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num rag">3</div>
+        <div class="step-body">
+          <strong>Embed the query at runtime</strong>
+          <p>Convert the user&rsquo;s question to a vector using the same embedding model you used at indexing time.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num rag">4</div>
+        <div class="step-body">
+          <strong>Retrieve top-K chunks</strong>
+          <p>Compute cosine similarity between the query vector and all stored vectors. Return the top 3&ndash;5 most similar chunks.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num rag">5</div>
+        <div class="step-body">
+          <strong>Augment the prompt</strong>
+          <p>Inject the retrieved chunks into the system or user message. Instruct Claude to answer from this context and to say when it does not have sufficient information.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num rag">6</div>
+        <div class="step-body">
+          <strong>Call Claude and return the grounded answer</strong>
+          <p>The model&rsquo;s response is now anchored to your actual documentation.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="s2-code" class="sub-heading"><span class="sh-num">2.3</span>Code walkthrough</h3>
+
+    <p>For simplicity, this example uses a pure-Python in-memory vector store with word-overlap similarity. In production replace the embedding function with OpenAI, Cohere, or a local model. The RAG logic stays identical.</p>
+
+    <div class="code-wrap">
+      <span class="code-label">Python &middot; rag_support.py</span>
+<pre><span class="t-kw">import</span> anthropic, math
+
+client = anthropic.Anthropic()
+
+<span class="t-comment"># ── STEP 1: Knowledge base (normally loaded from files or a DB) ──</span>
+DOCS = [
+    <span class="t-str">"Clarion integrates with Jira, Asana, Linear, and GitHub via OAuth."</span>,
+    <span class="t-str">"Clarion pricing: Starter $12/user/month, Pro $28/user/month, Enterprise custom."</span>,
+    <span class="t-str">"To reset your password: go to Settings > Security > Reset Password."</span>,
+    <span class="t-str">"Clarion supports SSO via SAML 2.0 on Pro and Enterprise plans."</span>,
+    <span class="t-str">"File upload limit is 50 MB per file on Starter; 500 MB on Pro."</span>,
+    <span class="t-str">"API rate limit is 1,000 requests/hour on Pro; 10,000/hour on Enterprise."</span>,
+]
+
+<span class="t-comment"># ── STEP 2: Toy embedding (word-overlap; replace with a real model) ──</span>
+<span class="t-kw">def</span> <span class="t-fn">embed</span>(text):
+    words = text.lower().split()
+    vec = {}
+    <span class="t-kw">for</span> w <span class="t-kw">in</span> words: vec[w] = vec.get(w, <span class="t-num">0</span>) + <span class="t-num">1</span>
+    <span class="t-kw">return</span> vec
+
+<span class="t-kw">def</span> <span class="t-fn">cosine</span>(a, b):
+    keys = <span class="t-fn">set</span>(a) &amp; <span class="t-fn">set</span>(b)
+    dot  = <span class="t-fn">sum</span>(a[k] * b[k] <span class="t-kw">for</span> k <span class="t-kw">in</span> keys)
+    mag  = (math.sqrt(<span class="t-fn">sum</span>(v**<span class="t-num">2</span> <span class="t-kw">for</span> v <span class="t-kw">in</span> a.values())) *
+            math.sqrt(<span class="t-fn">sum</span>(v**<span class="t-num">2</span> <span class="t-kw">for</span> v <span class="t-kw">in</span> b.values())))
+    <span class="t-kw">return</span> dot / mag <span class="t-kw">if</span> mag <span class="t-kw">else</span> <span class="t-num">0</span>
+
+doc_vecs = [(<span class="t-fn">embed</span>(d), d) <span class="t-kw">for</span> d <span class="t-kw">in</span> DOCS]
+
+<span class="t-comment"># ── STEP 3 + 4: Retrieve top-K chunks ──</span>
+<span class="t-kw">def</span> <span class="t-fn">retrieve</span>(query, k=<span class="t-num">3</span>):
+    qvec   = <span class="t-fn">embed</span>(query)
+    scored = [(<span class="t-fn">cosine</span>(qvec, dv), doc) <span class="t-kw">for</span> dv, doc <span class="t-kw">in</span> doc_vecs]
+    scored.sort(reverse=<span class="t-kw">True</span>)
+    <span class="t-kw">return</span> [doc <span class="t-kw">for</span> _, doc <span class="t-kw">in</span> scored[:k]]
+
+<span class="t-comment"># ── STEP 5 + 6: Augment and call Claude ──</span>
+<span class="t-kw">def</span> <span class="t-fn">rag_chat</span>(question):
+    chunks  = <span class="t-fn">retrieve</span>(question)
+    context = <span class="t-str">"\n"</span>.join(<span class="t-str">f"- {c}"</span> <span class="t-kw">for</span> c <span class="t-kw">in</span> chunks)
+
+    prompt = <span class="t-str">f"""Answer using ONLY the context below.
+If the answer is not there, say: "I don't have that in my knowledge base."
+
+Context:
+{context}
+
+Question: {question}"""</span>
+
+    r = client.messages.create(
+        model=<span class="t-str">"claude-sonnet-4-20250514"</span>,
+        max_tokens=<span class="t-num">512</span>,
+        messages=[{<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: prompt}]
+    )
+    <span class="t-kw">return</span> r.content[<span class="t-num">0</span>].text
+
+<span class="t-kw">if</span> __name__ == <span class="t-str">"__main__"</span>:
+    <span class="t-kw">for</span> q <span class="t-kw">in</span> [
+        <span class="t-str">"Does Clarion integrate with Jira?"</span>,
+        <span class="t-str">"What is the file upload limit on the Starter plan?"</span>,
+        <span class="t-str">"Can I use my own email domain?"</span>,    <span class="t-comment"># not in KB</span>
+    ]:
+        <span class="t-fn">print</span>(<span class="t-str">f"Q: {q}\nA: {</span><span class="t-fn">rag_chat</span>(q)<span class="t-str">}\n"</span>)</pre>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">&#128161;</span> <strong>What you have now:</strong> A support bot that answers accurately about your product and correctly says &ldquo;I don&rsquo;t have that information&rdquo; when a question isn&rsquo;t in the knowledge base. But it still <em>cannot take action</em> &mdash; it cannot look up a user&rsquo;s account, create a ticket, or send an email. That is what an AI Agent adds.
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- SECTION 3: AI AGENT -->
+  <section id="s3" class="major-section">
+    <span class="section-label">Tier 3 &middot; Action</span>
+    <h2>Building <em>AI Agents</em></h2>
+
+    <div class="concept-stripe agent">
+      <div class="cs-tag">AI Agent &middot; The Doer</div>
+      <p><strong>The Doer.</strong> An AI Agent is an LLM that has been given <em>tools</em> &mdash; callable functions that can read and write to the world. The model decides which tool to call, calls it, reads the result, and continues reasoning until the task is complete. It acts, not just answers.</p>
+    </div>
+
+    <h3 id="s3-what" class="sub-heading"><span class="sh-num">3.1</span>What it actually is</h3>
+
+    <p>Claude&rsquo;s tool use works like this: you describe your available tools as JSON schemas. When Claude determines a tool call is needed, it returns a <code>tool_use</code> content block. Your code executes the function and sends back a <code>tool_result</code> message. Claude continues reasoning &mdash; potentially calling more tools &mdash; until it produces a final text answer.</p>
+
+    <p>This loop &mdash; <strong>reason &rarr; call tool &rarr; observe result &rarr; reason again</strong> &mdash; is the agent loop. A single-agent system runs this loop until the task is complete or a maximum iteration limit is reached.</p>
+
+    <div class="arch-diagram">
+      <div class="arch-row">
+        <div class="arch-box neutral">User request</div>
+        <div class="arch-arrow">&rarr;</div>
+        <div class="arch-box agent">Claude (reason)</div>
+        <div class="arch-arrow">&rarr;</div>
+        <div class="arch-box neutral">tool_use block</div>
+      </div>
+      <div class="arch-row" style="padding-left:1rem; opacity:0.5; font-size:0.7rem;">&darr; your code runs the function</div>
+      <div class="arch-row">
+        <div class="arch-box agent">Claude (reason again)</div>
+        <div class="arch-arrow">&larr;</div>
+        <div class="arch-box neutral">tool_result</div>
+      </div>
+      <div class="arch-row" style="padding-left:1rem; opacity:0.5; font-size:0.7rem;">&darr; loop until stop_reason = end_turn</div>
+      <div class="arch-row">
+        <div class="arch-box neutral">Final answer (text)</div>
+      </div>
+    </div>
+
+    <div class="usecase-row">
+      <span class="usecase-badge agent">Look up order status</span>
+      <span class="usecase-badge agent">Create support ticket</span>
+      <span class="usecase-badge agent">Send email notification</span>
+      <span class="usecase-badge agent">Update CRM record</span>
+      <span class="usecase-badge agent">Run a database query</span>
+    </div>
+
+    <p><strong>Watch out for:</strong> Tool definitions must be precise. Ambiguous descriptions lead to incorrect calls. Always cap the agent loop at a maximum iteration count, validate tool inputs server-side, and log every tool call and result.</p>
+
+    <h3 id="s3-build" class="sub-heading"><span class="sh-num">3.2</span>Step-by-step build</h3>
+
+    <p>We are building: <strong>A Clarion support agent that can look up account status and create tickets.</strong></p>
+
+    <ul class="step-list">
+      <li>
+        <div class="step-num agent">1</div>
+        <div class="step-body">
+          <strong>Define your tools as JSON schemas</strong>
+          <p>Each tool needs a <code>name</code>, a <code>description</code> (what it does and when to call it), and an <code>input_schema</code>. The description is what Claude reads to decide whether to invoke it &mdash; make it precise.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num agent">2</div>
+        <div class="step-body">
+          <strong>Implement the actual tool functions</strong>
+          <p>These are regular Python functions that call your database, REST API, email service &mdash; whatever the agent needs.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num agent">3</div>
+        <div class="step-body">
+          <strong>Write the agent loop</strong>
+          <p>Call Claude with <code>tools=your_tools</code>. If the response contains a <code>tool_use</code> block, execute it, append a <code>tool_result</code>, and call Claude again. Repeat until <code>stop_reason == "end_turn"</code> with only text blocks.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num agent">4</div>
+        <div class="step-body">
+          <strong>Set guardrails</strong>
+          <p>Cap the loop at N iterations (10 is a safe start). Log every tool call. Validate inputs before destructive operations.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="s3-code" class="sub-heading"><span class="sh-num">3.3</span>Code walkthrough</h3>
+
+    <div class="code-wrap">
+      <span class="code-label">Python &middot; agent_support.py</span>
+<pre><span class="t-kw">import</span> anthropic, json
+
+client = anthropic.Anthropic()
+
+<span class="t-comment"># ── STEP 1: Tool definitions ──────────────────────────────────────</span>
+TOOLS = [
+    {
+        <span class="t-str">"name"</span>: <span class="t-str">"get_account_status"</span>,
+        <span class="t-str">"description"</span>: <span class="t-str">"Look up a Clarion account by email. Returns plan, status, and last login."</span>,
+        <span class="t-str">"input_schema"</span>: {
+            <span class="t-str">"type"</span>: <span class="t-str">"object"</span>,
+            <span class="t-str">"properties"</span>: {<span class="t-str">"email"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"string"</span>}},
+            <span class="t-str">"required"</span>: [<span class="t-str">"email"</span>]
+        }
+    },
+    {
+        <span class="t-str">"name"</span>: <span class="t-str">"create_ticket"</span>,
+        <span class="t-str">"description"</span>: <span class="t-str">"Create a support ticket when the issue cannot be resolved in chat."</span>,
+        <span class="t-str">"input_schema"</span>: {
+            <span class="t-str">"type"</span>: <span class="t-str">"object"</span>,
+            <span class="t-str">"properties"</span>: {
+                <span class="t-str">"email"</span>:    {<span class="t-str">"type"</span>: <span class="t-str">"string"</span>},
+                <span class="t-str">"subject"</span>:  {<span class="t-str">"type"</span>: <span class="t-str">"string"</span>},
+                <span class="t-str">"priority"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"string"</span>, <span class="t-str">"enum"</span>: [<span class="t-str">"low"</span>, <span class="t-str">"medium"</span>, <span class="t-str">"high"</span>]}
+            },
+            <span class="t-str">"required"</span>: [<span class="t-str">"email"</span>, <span class="t-str">"subject"</span>, <span class="t-str">"priority"</span>]
+        }
+    }
+]
+
+<span class="t-comment"># ── STEP 2: Tool implementations (mocked — replace with real calls) ─</span>
+<span class="t-kw">def</span> <span class="t-fn">get_account_status</span>(email):
+    db = {
+        <span class="t-str">"alice@example.com"</span>: {<span class="t-str">"plan"</span>: <span class="t-str">"Pro"</span>,     <span class="t-str">"status"</span>: <span class="t-str">"active"</span>,    <span class="t-str">"last_login"</span>: <span class="t-str">"2026-05-02"</span>},
+        <span class="t-str">"bob@example.com"</span>:   {<span class="t-str">"plan"</span>: <span class="t-str">"Starter"</span>, <span class="t-str">"status"</span>: <span class="t-str">"suspended"</span>, <span class="t-str">"last_login"</span>: <span class="t-str">"2026-03-10"</span>},
+    }
+    <span class="t-kw">return</span> db.get(email, {<span class="t-str">"error"</span>: <span class="t-str">"Account not found"</span>})
+
+<span class="t-kw">def</span> <span class="t-fn">create_ticket</span>(email, subject, priority):
+    ticket_id = <span class="t-str">f"TKT-{abs(hash(email+subject)) % 10000:04d}"</span>
+    <span class="t-fn">print</span>(<span class="t-str">f"  [TICKET CREATED] {ticket_id}: {subject} ({priority}) for {email}"</span>)
+    <span class="t-kw">return</span> {<span class="t-str">"ticket_id"</span>: ticket_id, <span class="t-str">"status"</span>: <span class="t-str">"created"</span>}
+
+<span class="t-kw">def</span> <span class="t-fn">execute_tool</span>(name, inputs):
+    <span class="t-kw">if</span>   name == <span class="t-str">"get_account_status"</span>: <span class="t-kw">return</span> <span class="t-fn">get_account_status</span>(**inputs)
+    <span class="t-kw">elif</span> name == <span class="t-str">"create_ticket"</span>:      <span class="t-kw">return</span> <span class="t-fn">create_ticket</span>(**inputs)
+    <span class="t-kw">raise</span> <span class="t-fn">ValueError</span>(<span class="t-str">f"Unknown tool: {name}"</span>)
+
+<span class="t-comment"># ── STEP 3: The agent loop ────────────────────────────────────────</span>
+<span class="t-kw">def</span> <span class="t-fn">run_agent</span>(user_message):
+    messages = [{<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: user_message}]
+
+    <span class="t-kw">for</span> step <span class="t-kw">in</span> <span class="t-fn">range</span>(<span class="t-num">10</span>):                        <span class="t-comment"># STEP 4: max 10 iterations</span>
+        response = client.messages.create(
+            model=<span class="t-str">"claude-sonnet-4-20250514"</span>,
+            max_tokens=<span class="t-num">1024</span>,
+            tools=TOOLS,
+            messages=messages,
+            system=<span class="t-str">"You are a Clarion support agent. Use get_account_status "</span>
+                   <span class="t-str">"before answering any account-specific questions."</span>
+        )
+
+        tool_results = []
+        <span class="t-kw">for</span> block <span class="t-kw">in</span> response.content:
+            <span class="t-kw">if</span> block.type == <span class="t-str">"tool_use"</span>:
+                result = <span class="t-fn">execute_tool</span>(block.name, block.input)
+                tool_results.append({
+                    <span class="t-str">"type"</span>:        <span class="t-str">"tool_result"</span>,
+                    <span class="t-str">"tool_use_id"</span>: block.id,
+                    <span class="t-str">"content"</span>:     json.dumps(result)
+                })
+
+        messages.append({<span class="t-str">"role"</span>: <span class="t-str">"assistant"</span>, <span class="t-str">"content"</span>: response.content})
+
+        <span class="t-kw">if</span> <span class="t-kw">not</span> tool_results:
+            <span class="t-kw">return</span> <span class="t-fn">next</span>(b.text <span class="t-kw">for</span> b <span class="t-kw">in</span> response.content <span class="t-kw">if</span> b.type == <span class="t-str">"text"</span>)
+
+        messages.append({<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: tool_results})
+
+    <span class="t-kw">return</span> <span class="t-str">"Max steps reached without a final answer."</span>
+
+<span class="t-kw">if</span> __name__ == <span class="t-str">"__main__"</span>:
+    q = <span class="t-str">"My account is alice@example.com and I can't upload files larger than 10 MB."</span>
+    <span class="t-fn">print</span>(<span class="t-str">f"User: {q}\n"</span>)
+    <span class="t-fn">print</span>(<span class="t-str">f"Agent: {</span><span class="t-fn">run_agent</span>(q)<span class="t-str">}"</span>)</pre>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">&#128161;</span> <strong>What you have now:</strong> An agent that looks up Alice&rsquo;s account (discovering she&rsquo;s on Pro, where 500&nbsp;MB is allowed), reasons about the discrepancy, and creates a ticket if needed &mdash; all within a single conversation turn. But what if the support workload involves specialised sub-tasks like billing vs. technical, spanning multiple systems? That is where Agentic AI comes in.
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- SECTION 4: AGENTIC AI -->
+  <section id="s4" class="major-section">
+    <span class="section-label">Tier 4 &middot; Orchestration</span>
+    <h2>Building <em>Agentic AI</em></h2>
+
+    <div class="concept-stripe agentic">
+      <div class="cs-tag">Agentic AI &middot; The Coordinator</div>
+      <p><strong>The Coordinator.</strong> Agentic AI is a system of multiple AI agents working together, orchestrated by a central planner. It spans workflows across teams, tools, and timeframes. It adapts when conditions change and recovers from sub-agent failures without human intervention.</p>
+    </div>
+
+    <h3 id="s4-what" class="sub-heading"><span class="sh-num">4.1</span>What it actually is</h3>
+
+    <p>An Agentic AI system has at minimum two layers: an <strong>Orchestrator</strong> that plans and delegates, and <strong>Sub-agents</strong> that execute specialised tasks. The orchestrator itself is an LLM whose &ldquo;tools&rdquo; are calls to other agents rather than calls to raw APIs.</p>
+
+    <p>Each sub-agent can be independently tuned &mdash; given its own system prompt, its own knowledge base, its own tools &mdash; while the orchestrator maintains the overall goal, handles routing, retries, and consolidates results into a single coherent response.</p>
+
+    <div class="arch-diagram">
+      <div class="arch-row">
+        <div class="arch-box neutral">Inbound request</div>
+        <div class="arch-arrow">&rarr;</div>
+        <div class="arch-box agentic">Orchestrator (Claude)</div>
+      </div>
+      <div class="arch-row" style="padding-left:1rem; opacity:0.5; font-size:0.7rem;">&darr; routes to specialist agents</div>
+      <div class="arch-row">
+        <div class="arch-box agent" style="flex:1; max-width:150px;">Billing Agent</div>
+        <div class="arch-arrow">+</div>
+        <div class="arch-box agent" style="flex:1; max-width:150px;">Technical Agent</div>
+        <div class="arch-arrow">+</div>
+        <div class="arch-box agent" style="flex:1; max-width:150px;">Escalation Agent</div>
+      </div>
+      <div class="arch-row" style="padding-left:1rem; opacity:0.5; font-size:0.7rem;">&uarr; results merged by orchestrator</div>
+      <div class="arch-row">
+        <div class="arch-box agentic">Orchestrator &rarr; final unified response</div>
+      </div>
+    </div>
+
+    <div class="usecase-row">
+      <span class="usecase-badge agentic">Multi-team incident response</span>
+      <span class="usecase-badge agentic">End-to-end hiring pipeline</span>
+      <span class="usecase-badge agentic">Automated research + report</span>
+      <span class="usecase-badge agentic">Cross-system data migration</span>
+      <span class="usecase-badge agentic">Autonomous QA pipeline</span>
+    </div>
+
+    <p><strong>Watch out for:</strong> Agentic AI is the hardest pattern to debug and audit. Errors compound across agents. Instrument every agent call, maintain a full event log, and implement human-in-the-loop checkpoints for high-stakes actions. Start with two agents before building a fleet.</p>
+
+    <h3 id="s4-build" class="sub-heading"><span class="sh-num">4.2</span>Step-by-step build</h3>
+
+    <p>We are building: <strong>A Clarion multi-agent support system</strong> with an orchestrator that routes to a Billing Agent or a Technical Agent, then consolidates and responds.</p>
+
+    <ul class="step-list">
+      <li>
+        <div class="step-num agentic">1</div>
+        <div class="step-body">
+          <strong>Design your agent topology</strong>
+          <p>Map out which specialised agents you need and what each owns. Keep agents focused &mdash; a billing agent should not know about bug reports.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num agentic">2</div>
+        <div class="step-body">
+          <strong>Implement each sub-agent as a callable function</strong>
+          <p>Each sub-agent is the single-agent loop from Section&nbsp;3, packaged as a Python function that accepts a task string and returns a result string.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num agentic">3</div>
+        <div class="step-body">
+          <strong>Build the orchestrator</strong>
+          <p>The orchestrator is a Claude call where the &ldquo;tools&rdquo; are your sub-agent functions. It decides which agent(s) to invoke, in what order, and how to merge their outputs.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num agentic">4</div>
+        <div class="step-body">
+          <strong>Add observability</strong>
+          <p>Log every orchestrator decision and sub-agent invocation. Track wall time and token usage per request. Set per-agent timeouts.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num agentic">5</div>
+        <div class="step-body">
+          <strong>Define human-in-the-loop checkpoints</strong>
+          <p>For actions above a defined risk threshold (refunding over $X, deleting data, sending external communications), require explicit human confirmation before proceeding.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="s4-code" class="sub-heading"><span class="sh-num">4.3</span>Code walkthrough</h3>
+
+    <div class="code-wrap">
+      <span class="code-label">Python &middot; agentic_support.py</span>
+<pre><span class="t-kw">import</span> anthropic, json
+
+client = anthropic.Anthropic()
+
+<span class="t-comment"># ══ SUB-AGENT 1: Billing Agent ════════════════════════════════════</span>
+BILLING_TOOLS = [{
+    <span class="t-str">"name"</span>: <span class="t-str">"check_invoice"</span>,
+    <span class="t-str">"description"</span>: <span class="t-str">"Check invoice and payment status for a Clarion account."</span>,
+    <span class="t-str">"input_schema"</span>: {
+        <span class="t-str">"type"</span>: <span class="t-str">"object"</span>,
+        <span class="t-str">"properties"</span>: {<span class="t-str">"email"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"string"</span>}},
+        <span class="t-str">"required"</span>: [<span class="t-str">"email"</span>]
+    }
+}]
+
+<span class="t-kw">def</span> <span class="t-fn">check_invoice</span>(email):
+    <span class="t-kw">return</span> {<span class="t-str">"invoice"</span>: <span class="t-str">"INV-0042"</span>, <span class="t-str">"amount"</span>: <span class="t-str">"$28"</span>,
+            <span class="t-str">"status"</span>: <span class="t-str">"paid"</span>, <span class="t-str">"due"</span>: <span class="t-str">"2026-05-01"</span>}
+
+<span class="t-kw">def</span> <span class="t-fn">billing_agent</span>(task):
+    <span class="t-fn">print</span>(<span class="t-str">f"  [BILLING AGENT] {task}"</span>)
+    messages = [{<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: task}]
+    <span class="t-kw">for</span> _ <span class="t-kw">in</span> <span class="t-fn">range</span>(<span class="t-num">5</span>):
+        r = client.messages.create(
+            model=<span class="t-str">"claude-sonnet-4-20250514"</span>, max_tokens=<span class="t-num">512</span>,
+            system=<span class="t-str">"You are the Clarion billing specialist. Only handle billing and payment questions."</span>,
+            tools=BILLING_TOOLS, messages=messages
+        )
+        tool_results = []
+        <span class="t-kw">for</span> b <span class="t-kw">in</span> r.content:
+            <span class="t-kw">if</span> b.type == <span class="t-str">"tool_use"</span>:
+                res = <span class="t-fn">check_invoice</span>(**b.input)
+                tool_results.append({<span class="t-str">"type"</span>: <span class="t-str">"tool_result"</span>,
+                                     <span class="t-str">"tool_use_id"</span>: b.id, <span class="t-str">"content"</span>: json.dumps(res)})
+        messages.append({<span class="t-str">"role"</span>: <span class="t-str">"assistant"</span>, <span class="t-str">"content"</span>: r.content})
+        <span class="t-kw">if</span> <span class="t-kw">not</span> tool_results:
+            <span class="t-kw">return</span> <span class="t-fn">next</span>(b.text <span class="t-kw">for</span> b <span class="t-kw">in</span> r.content <span class="t-kw">if</span> b.type == <span class="t-str">"text"</span>)
+        messages.append({<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: tool_results})
+    <span class="t-kw">return</span> <span class="t-str">"Billing agent could not resolve."</span>
+
+<span class="t-comment"># ══ SUB-AGENT 2: Technical Agent ══════════════════════════════════</span>
+<span class="t-kw">def</span> <span class="t-fn">technical_agent</span>(task):
+    <span class="t-fn">print</span>(<span class="t-str">f"  [TECH AGENT] {task}"</span>)
+    r = client.messages.create(
+        model=<span class="t-str">"claude-sonnet-4-20250514"</span>, max_tokens=<span class="t-num">512</span>,
+        system=<span class="t-str">"You are Clarion's technical support specialist. Diagnose technical issues. "</span>
+               <span class="t-str">"If you cannot resolve, recommend opening a bug report."</span>,
+        messages=[{<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: task}]
+    )
+    <span class="t-kw">return</span> r.content[<span class="t-num">0</span>].text
+
+<span class="t-comment"># ══ ORCHESTRATOR ══════════════════════════════════════════════════</span>
+ORCH_TOOLS = [
+    {
+        <span class="t-str">"name"</span>: <span class="t-str">"route_to_billing"</span>,
+        <span class="t-str">"description"</span>: <span class="t-str">"Route to the billing specialist for invoices, payments, or plan changes."</span>,
+        <span class="t-str">"input_schema"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"object"</span>,
+                         <span class="t-str">"properties"</span>: {<span class="t-str">"task"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"string"</span>}},
+                         <span class="t-str">"required"</span>: [<span class="t-str">"task"</span>]}
+    },
+    {
+        <span class="t-str">"name"</span>: <span class="t-str">"route_to_technical"</span>,
+        <span class="t-str">"description"</span>: <span class="t-str">"Route to the technical specialist for bugs, errors, integrations, or performance."</span>,
+        <span class="t-str">"input_schema"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"object"</span>,
+                         <span class="t-str">"properties"</span>: {<span class="t-str">"task"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"string"</span>}},
+                         <span class="t-str">"required"</span>: [<span class="t-str">"task"</span>]}
+    }
+]
+
+<span class="t-kw">def</span> <span class="t-fn">orchestrate</span>(user_message):
+    messages = [{<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: user_message}]
+
+    <span class="t-kw">for</span> _ <span class="t-kw">in</span> <span class="t-fn">range</span>(<span class="t-num">6</span>):
+        r = client.messages.create(
+            model=<span class="t-str">"claude-sonnet-4-20250514"</span>, max_tokens=<span class="t-num">1024</span>,
+            system=<span class="t-str">"You are the Clarion support orchestrator. Analyse the user's issue "</span>
+                   <span class="t-str">"and route to the appropriate specialist. You may call multiple agents "</span>
+                   <span class="t-str">"if the issue spans billing and technical concerns."</span>,
+            tools=ORCH_TOOLS, messages=messages
+        )
+        tool_results = []
+        <span class="t-kw">for</span> b <span class="t-kw">in</span> r.content:
+            <span class="t-kw">if</span> b.type == <span class="t-str">"tool_use"</span>:
+                result = (<span class="t-fn">billing_agent</span>(b.input[<span class="t-str">"task"</span>]) <span class="t-kw">if</span> b.name == <span class="t-str">"route_to_billing"</span>
+                          <span class="t-kw">else</span> <span class="t-fn">technical_agent</span>(b.input[<span class="t-str">"task"</span>]))
+                tool_results.append({<span class="t-str">"type"</span>: <span class="t-str">"tool_result"</span>,
+                                     <span class="t-str">"tool_use_id"</span>: b.id, <span class="t-str">"content"</span>: result})
+        messages.append({<span class="t-str">"role"</span>: <span class="t-str">"assistant"</span>, <span class="t-str">"content"</span>: r.content})
+        <span class="t-kw">if</span> <span class="t-kw">not</span> tool_results:
+            <span class="t-kw">return</span> <span class="t-fn">next</span>(b.text <span class="t-kw">for</span> b <span class="t-kw">in</span> r.content <span class="t-kw">if</span> b.type == <span class="t-str">"text"</span>)
+        messages.append({<span class="t-str">"role"</span>: <span class="t-str">"user"</span>, <span class="t-str">"content"</span>: tool_results})
+    <span class="t-kw">return</span> <span class="t-str">"Orchestrator could not resolve."</span>
+
+<span class="t-kw">if</span> __name__ == <span class="t-str">"__main__"</span>:
+    msg = (<span class="t-str">"Hi, I'm alice@example.com. My last invoice looks wrong AND "</span>
+           <span class="t-str">"the Jira integration stopped syncing yesterday."</span>)
+    <span class="t-fn">print</span>(<span class="t-str">f"User: {msg}\n"</span>)
+    <span class="t-fn">print</span>(<span class="t-str">f"System: {</span><span class="t-fn">orchestrate</span>(msg)<span class="t-str">}"</span>)</pre>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">&#128161;</span> <strong>What you have now:</strong> The orchestrator reads Alice&rsquo;s message, recognises two distinct issues, routes to both the Billing Agent and the Technical Agent, collects both results, and synthesises a single coherent response. Claude supports parallel tool use, so both sub-agents can be invoked in the same turn. You have a genuine multi-agent system.
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- SECTION 5: DECISION GUIDE -->
+  <section id="s5" class="major-section">
+    <span class="section-label">Decision Guide</span>
+    <h2>Which Should <em>You Use?</em></h2>
+
+    <p>The most common mistake practitioners make is reaching for Agentic AI when a plain LLM would do, or stopping at a raw LLM when the use case clearly needs tools. Use this decision framework:</p>
+
+    <div class="arch-diagram">
+      <div style="margin-bottom:0.8rem; font-size:0.7rem; opacity:0.55;">START HERE &darr;</div>
+      <div class="arch-row">
+        <div class="arch-box neutral" style="flex:1;">Does the task require acting on live systems or external data?</div>
+      </div>
+      <div class="arch-row" style="gap:2rem; margin-top:0.4rem; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:0.5rem; opacity:0.6; font-size:0.75rem;">NO &darr;</div>
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <span style="opacity:0.6; font-size:0.75rem;">YES &rarr;</span>
+          <div class="arch-box agent">AI Agent (Tier 3)</div>
+          <span style="opacity:0.6; font-size:0.75rem;">+ multiple sub-tasks? &rarr;</span>
+          <div class="arch-box agentic">Agentic AI (Tier 4)</div>
+        </div>
+      </div>
+      <div class="arch-row" style="margin-top:0.6rem;">
+        <div class="arch-box neutral" style="flex:1;">Does the task require private or domain-specific knowledge?</div>
+      </div>
+      <div class="arch-row" style="gap:2rem; margin-top:0.4rem; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:0.5rem; opacity:0.6; font-size:0.75rem;">NO &darr;</div>
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <span style="opacity:0.6; font-size:0.75rem;">YES &rarr;</span>
+          <div class="arch-box rag">RAG (Tier 2)</div>
+        </div>
+      </div>
+      <div class="arch-row" style="margin-top:0.6rem;">
+        <div class="arch-box llm">Plain LLM (Tier 1)</div>
+      </div>
+    </div>
+
+    <div class="table-wrap" style="margin-top:2.5rem;">
+      <table>
+        <thead>
+          <tr>
+            <th>If your use case is&hellip;</th>
+            <th>Start with</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Summarise meeting notes</td><td>LLM</td><td>Pure language task, no domain data or action needed</td></tr>
+          <tr><td>Answer questions about your product docs</td><td>RAG</td><td>Needs private knowledge, no action required</td></tr>
+          <tr><td>Let users check their order status via chat</td><td>AI Agent</td><td>Needs to query a live database</td></tr>
+          <tr><td>Incident triage across Slack, PagerDuty, and Jira</td><td>Agentic AI</td><td>Multiple systems, specialised sub-tasks, coordination</td></tr>
+          <tr><td>Generate a personalised email from CRM data</td><td>RAG or Agent</td><td>Live API &rarr; Agent; static export &rarr; RAG</td></tr>
+          <tr><td>End-to-end employee onboarding</td><td>Agentic AI</td><td>Multi-step, multi-system, coordination required</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout" style="margin-top:2rem;">
+      <span class="callout-icon">&#129517;</span> <strong>The practitioner&rsquo;s rule:</strong> Build the simplest tier that solves the problem. Every tier you add multiplies operational complexity, latency, and cost. A plain LLM call costs milliseconds and fractions of a cent. An Agentic AI workflow can take minutes and dozens of API calls. Match the architecture to the actual requirements, not to what sounds impressive.
+    </div>
+  </section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">&copy; 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+  }
+
+  (function () {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const section = parts[0];
+  if (!section) return;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+  const href  = '/' + section + '/';
+  const el = document.querySelector('a.site-name');
+  if (el) { el.textContent = label; el.href = href; }
+})();
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

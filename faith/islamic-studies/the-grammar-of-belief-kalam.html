@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="The Grammar of Belief: A Complete Guide to Kalām" />
+  <meta property="og:description" content="The Grammar of Belief: A Complete Guide to Kalām" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/faith/Islamic-Studies/the-grammar-of-belief-kalam.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="The Grammar of Belief: A Complete Guide to Kalām" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/faith/Islamic-Studies/the-grammar-of-belief-kalam.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>The Grammar of Belief: A Complete Guide to Kalām | Yasir Bilgin</title>
+
+  <!-- ① Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- ② Favicon -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- ③ Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --ink:        #1a1410;
+      --ink-soft:   #3d3530;
+      --ink-muted:  #7a6e68;
+      --paper:      #faf7f2;
+      --paper-warm: #f3ede3;
+      --paper-deep: #e8dfd2;
+      --accent:     #7a3b2e;
+      --accent-2:   #4a6741;
+      --gold:       #c89b5a;
+      --gold-light: #e8d5a3;
+      --rule:       rgba(120,100,80,0.18);
+      --rule-heavy: rgba(120,100,80,0.35);
+      --serif:      'Cormorant Garamond', 'Georgia', serif;
+      --body:       'Source Serif 4', 'Georgia', serif;
+      --mono:       'JetBrains Mono', monospace;
+      --nav-h:      62px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 19px;
+      line-height: 1.78;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Progress bar ── */
+    #progressBar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 2px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(20,15,10,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(3px);
+    }
+    .toc-panel {
+      background: var(--paper);
+      width: min(380px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.5rem 2rem 4rem;
+      border-left: 1px solid var(--rule-heavy);
+      box-shadow: -8px 0 40px rgba(0,0,0,0.15);
+    }
+    .toc-panel h3 {
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.8rem;
+    }
+    .toc-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--ink-muted);
+      padding: 0.4rem;
+    }
+    .toc-close:hover { color: var(--ink); }
+    .toc-list { list-style: none; }
+    .toc-list li { border-top: 1px solid var(--rule); }
+    .toc-list li:first-child { border-top: none; }
+    .toc-list a {
+      display: block;
+      padding: 0.65rem 0;
+      font-family: var(--body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--ink-soft);
+      text-decoration: none;
+      line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-list a.toc-main {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .toc-list a.toc-main:hover { color: var(--accent); }
+    .toc-list a.toc-sub {
+      padding-left: 1rem;
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    /* ── Article sub-header ── */
+    .article-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 48px;
+    }
+    .article-header .site-name {
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .read-time {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      font-family: var(--body);
+      font-weight: 400;
+    }
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--rule-heavy);
+      padding: 0.3rem 0.9rem;
+      font-family: var(--serif);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.15s;
+      min-height: 30px;
+    }
+    .toc-btn:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3.5rem;
+    }
+    .hero-kicker {
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+      display: block;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      font-weight: 700;
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-family: var(--body);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 2.2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .byline-text { display: flex; flex-direction: column; gap: 0.1rem; }
+    .byline-name {
+      font-family: var(--serif);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .byline-meta {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+    .hero-rule {
+      max-width: 860px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid var(--rule-heavy);
+    }
+
+    /* ── Article body ── */
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    section[id] {
+      scroll-margin-top: 120px;
+    }
+
+    .major-section {
+      margin-bottom: 5rem;
+    }
+
+    .section-label {
+      display: block;
+      font-family: var(--serif);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.6rem;
+      letter-spacing: -0.01em;
+    }
+    h2 em { font-style: italic; color: var(--accent); }
+
+    h3.sub-heading {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2.5rem 0 0.9rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+    .sh-num {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding-top: 0.1em;
+    }
+
+    h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2rem 0 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+      color: var(--ink-soft);
+    }
+
+    p strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--ink); }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2.5rem;
+      padding: 1.5rem 2rem 1.5rem 2rem;
+      border-left: 3px solid var(--accent);
+      background: var(--paper-warm);
+    }
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.55;
+    }
+    .pull-quote cite {
+      display: block;
+      font-family: var(--body);
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      font-style: normal;
+      margin-top: 0.7rem;
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule-heavy);
+      border-radius: 3px;
+      padding: 1.4rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .callout-label {
+      font-family: var(--serif);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .callout p { margin-bottom: 0; font-size: 0.92rem; }
+    .callout p + p { margin-top: 0.6rem; }
+
+    /* ── School comparison grid ── */
+    .school-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .school-card {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--accent);
+      padding: 1.2rem 1.3rem;
+      border-radius: 2px;
+    }
+    .school-card.mat { border-top-color: var(--accent-2); }
+    .school-card.ath { border-top-color: var(--gold); }
+    .school-card.muz { border-top-color: #6b7bb0; }
+    .school-card h5 {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .school-card p {
+      font-size: 0.82rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      background: var(--rule-heavy);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.35rem;
+      top: 0.5rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--paper);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+    .timeline-date {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+    .timeline-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .timeline-body {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ── Definition list ── */
+    .def-list { margin: 1.5rem 0; }
+    .def-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 0.5rem 1.5rem;
+      padding: 0.9rem 0;
+      border-top: 1px solid var(--rule);
+      align-items: baseline;
+    }
+    .def-item:last-child { border-bottom: 1px solid var(--rule); }
+    .def-term {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .def-term em { font-style: italic; font-size: 0.85rem; color: var(--ink-muted); }
+    .def-body { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6; }
+
+    /* ── Debate comparison ── */
+    .debate-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .debate-col {
+      padding: 1.2rem 1.4rem;
+      border-radius: 2px;
+    }
+    .debate-col.col-a { background: #f0ece4; border-left: 3px solid var(--accent); }
+    .debate-col.col-b { background: #eaf0e8; border-left: 3px solid var(--accent-2); }
+    .debate-col h6 {
+      font-family: var(--serif);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.6rem;
+    }
+    .debate-col p { font-size: 0.86rem; margin: 0; }
+
+    /* ── Figures table ── */
+    .table-wrap { overflow-x: auto; margin: 2rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+    }
+    thead tr { border-bottom: 2px solid var(--rule-heavy); }
+    thead th {
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding: 0.7rem 0.9rem;
+      text-align: left;
+    }
+    tbody tr { border-bottom: 1px solid var(--rule); }
+    tbody tr:hover { background: var(--paper-warm); }
+    tbody td {
+      padding: 0.75rem 0.9rem;
+      vertical-align: top;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+    tbody td:first-child { font-weight: 500; color: var(--ink); }
+
+    /* ── Horizontal rule ── */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 4rem 0;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      color: var(--paper-deep);
+      padding: 3rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .hero { padding: 3.5rem 1.4rem 2.5rem; }
+      .article-header { padding: 0 1.2rem; }
+    }
+    @media (max-width: 640px) {
+      .pull-quote { margin-left: 0; }
+      .debate-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .school-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .def-item { grid-template-columns: 1fr; }
+      .read-time { display: none; }
+    }
+  </style>
+  <meta name="description" content="Before a Muslim can say what God does , she must ask what God is . Kalām is the discipline that makes that question answerable — the rational theology…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Grammar of Belief: A Complete Guide to Kalām",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-05-01",
+  "url": "https://yasirbilgin.com/faith/Islamic-Studies/the-grammar-of-belief-kalam.html",
+  "description": "Before a Muslim can say what God does , she must ask what God is . Kalām is the discipline that makes that question answerable — the rational theology…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/faith/" style="color:#2d5a4a;text-decoration:none;">Faith</a> <span style="opacity:0.5">›</span> <span>Islamic Studies</span> <span style="opacity:0.5">›</span> <span>The Grammar of Belief: A Complete Guide to Kalām</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Faith",
+      "item": "https://yasirbilgin.com/faith/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Grammar of Belief: A Complete Guide to Kalām",
+      "item": "https://yasirbilgin.com/faith/Islamic-Studies/the-grammar-of-belief-kalam.html"
+    }
+  ]
+}
+</script>
+
+
+<div id="progressBar"></div>
+
+<!-- TOC overlay -->
+<div class="toc-overlay" id="tocOverlay"
+     onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+    <h3>Table of Contents</h3>
+    <ul class="toc-list">
+      <li><a href="#s1" class="toc-main">I. Defining the Discipline</a></li>
+      <li><a href="#s2" class="toc-main">II. The Big Questions</a></li>
+      <li><a href="#s2-1" class="toc-sub">2.1 Reason and Revelation</a></li>
+      <li><a href="#s2-2" class="toc-sub">2.2 Divine Attributes</a></li>
+      <li><a href="#s2-3" class="toc-sub">2.3 The Qurʾān and Divine Speech</a></li>
+      <li><a href="#s2-4" class="toc-sub">2.4 Free Will and Predestination</a></li>
+      <li><a href="#s2-5" class="toc-sub">2.5 Nature of Faith</a></li>
+      <li><a href="#s2-6" class="toc-sub">2.6 Prophecy and Revelation</a></li>
+      <li><a href="#s2-7" class="toc-sub">2.7 Eschatology</a></li>
+      <li><a href="#s2-8" class="toc-sub">2.8 The Problem of Evil</a></li>
+      <li><a href="#s3" class="toc-main">III. Timeline of Development</a></li>
+      <li><a href="#s4" class="toc-main">IV. Theoretical Frameworks</a></li>
+      <li><a href="#s5" class="toc-main">V. Methodology & Tools</a></li>
+      <li><a href="#s6" class="toc-main">VI. Key Figures</a></li>
+      <li><a href="#s7" class="toc-main">VII. Canonical Texts</a></li>
+      <li><a href="#s8" class="toc-main">VIII. Glossary of Concepts</a></li>
+      <li><a href="#s9" class="toc-main">IX. Internal Debates</a></li>
+      <li><a href="#s10" class="toc-main">X. Interdisciplinary Links</a></li>
+      <li><a href="#s11" class="toc-main">XI. Modern Challenges</a></li>
+      <li><a href="#s12" class="toc-main">XII. Comparative Perspectives</a></li>
+      <li><a href="#s13" class="toc-main">XIII. Key Case Studies</a></li>
+      <li><a href="#s14" class="toc-main">XIV. Applications to Life</a></li>
+      <li><a href="#s15" class="toc-main">XV. Future Directions</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Article sub-header -->
+
+
+<!-- Hero -->
+<section class="hero">
+  <span class="hero-kicker">Kalām · Islamic Theology</span>
+  <h1>The <em>Grammar</em> of Belief: A Complete Guide to Kalām</h1>
+  <p class="hero-sub">Before a Muslim can say what God <em>does</em>, she must ask what God <em>is</em>. Kalām is the discipline that makes that question answerable — the rational theology that translates revelation into defended doctrine, and contested faith into articulated certainty.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Yasir Bilgin · Fikir Defteri Editorial · May 2026</span>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">70 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+</header>
+
+
+<!-- Article body -->
+<article class="article-body">
+
+  <!-- ── SECTION I ── -->
+  <section id="s1" class="major-section">
+    <span class="section-label">Section I</span>
+    <h2>Defining the <em>Discipline</em></h2>
+
+    <p>Imagine two scholars presented with the same Quranic verse — <em>"The Most Merciful rose over the Throne"</em> (Q. 20:5). One reads it and says: this is a metaphor for divine sovereignty; the word <em>istawā</em> means "took dominion," not "sat." The other says: we affirm it as it stands, "without asking how" (<em>bilā kayf</em>). Both are learned, both reverent, both quoting the same text. Their disagreement is not about piety; it is about <em>method</em>. And the discipline that makes such methodological disagreements legible — that maps their implications, adjudicates their warrants, and prevents them from fragmenting the community into incompatible sects — is Kalām.</p>
+
+    <p>The word itself is prosaic: <em>kalām</em> means "speech" or "discourse." But as a technical term, it designates the Islamic science of theology (<em>ʿilm al-kalām</em>) — the rational articulation, systematic defense, and principled clarification of matters of creed (<em>ʿaqīdah</em>). It is the discipline that asks not merely <em>what</em> Muslims believe, but <em>why</em> those beliefs are rationally defensible, how apparently conflicting texts should be understood, and where the boundary lies between orthodoxy and deviation.</p>
+
+    <div class="callout">
+      <span class="callout-label">Classical Definition</span>
+      <p>Al-Ījī (d. 1355) defined Kalām as "the science that establishes religious doctrines by adducing proofs and refuting doubts." Al-Jurjānī added that its subject matter is "the Essence of God and His attributes, and the states of possibles insofar as they lead to knowledge of the origin and the return." Both definitions point to the same core: reason in the service of revelation, proofs in the defense of faith.</p>
+    </div>
+
+    <p>Kalām emerged in the first and second centuries of Islam not as an academic luxury but as a practical necessity. The early Muslim community, expanding with extraordinary speed into territories shaped by Greek philosophy, Persian cosmology, and centuries of Jewish and Christian theological debate, found itself confronted with questions its earliest teachers had not systematically addressed. When Byzantine Christians charged that Islamic monotheism was incoherent because it affirmed divine attributes (knowledge, will, power) that sounded dangerously like a plurality of Gods — what was the answer? When Zoroastrian dualists pressed the problem of evil — if God is one and omnipotent, why does evil exist? — what response did Islam have? Kalām was the instrument forged to answer.</p>
+
+    <p>Its relationship to the other Islamic sciences is that of a foundation to a building. Without a settled theology, the other sciences have nothing to stand on. Quranic exegesis (<em>tafsīr</em>) must decide how to read God's attributes before it can interpret the verses that describe them. Jurisprudence (<em>fiqh</em>) presupposes the authority of revelation — and that presupposition is a theological claim. Hadith scholarship rests on a doctrine of prophetic reliability that only theology can justify. Even Sufism, which often positioned itself against the "dry argumentation" of the theologians, implicitly operated within a theological framework it had inherited from them.</p>
+
+    <div class="pull-quote">
+      <p>"Kalām is the guardian of the creed as Uṣūl is the guardian of the law — each disciplines the mind before it disciplines conduct."</p>
+      <cite>— Contemporary formulation summarizing the classical view</cite>
+    </div>
+
+    <p>Yet Kalām has always been contested. A significant strand of Islamic scholarship — running from Aḥmad ibn Ḥanbal (d. 855) through Ibn Taymiyyah (d. 1328) to various modern movements — has warned that rational speculation on divine matters is itself a form of innovation (<em>bidʿah</em>) that the early community wisely avoided. The Prophet's Companions, on this view, affirmed the creed without arguing about it; and argument about it opens doors that should remain shut. This is not an anti-intellectual position — its proponents were often formidable scholars — but a principled conservatism about the proper scope of human reason in matters of the unseen.</p>
+
+    <p>The tension between these orientations — rational engagement vs. textual restraint — is not a defect in the tradition; it is a constitutive feature of it. Understanding Kalām means understanding both impulses, and the long, sophisticated history of their interaction.</p>
+  </section>
+
+  <!-- ── SECTION II ── -->
+  <section id="s2" class="major-section">
+    <span class="section-label">Section II</span>
+    <h2>The <em>Big Questions</em> in Kalām</h2>
+
+    <p>Every mature discipline is defined by its constitutive questions — the problems it exists to address and around which its debates organize. In Kalām, these questions cluster into eight fundamental areas, each generating centuries of sophisticated disputation.</p>
+
+    <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>Reason and Revelation</h3>
+
+    <p>The deepest question in Kalām — from which almost all others flow — is the relationship between <em>ʿaql</em> (reason) and <em>naql</em> (transmitted revelation). Can reason, operating without the aid of scripture, determine that something is morally good or evil? The Muʿtazila answered with a confident yes: God is rational, and His creation reflects rational moral order; human minds can therefore perceive that cruelty is wrong and justice is right independently of any revelation. The Ashʿarīs, by contrast, argued that moral categories are constituted by divine command — an act is obligatory because God commanded it, not because reason recognized its goodness prior to that command.</p>
+
+    <p>This is not a purely theoretical dispute. If reason can independently determine good and evil, then the scope of rational revision in theology is wide. If it cannot, then revelation is the non-negotiable bedrock, and apparent conflicts between reason and text must be resolved in the text's favor. The Māturīdī school staked out a middle position: reason can access basic moral truths (unprovoked killing is wrong; gratitude to benefactors is right), but revelation is necessary for completeness and binding obligation. This tripartite division among Sunni schools shaped how each one interpreted Quranic verses, evaluated hadith, and approached questions of law.</p>
+
+    <h3 id="s2-2" class="sub-heading"><span class="sh-num">2.2</span>Divine Attributes (<em>Ṣifāt Allāh</em>)</h3>
+
+    <p>God's attributes — His knowledge, power, will, speech, life — are affirmed throughout the Quran. But what does it mean to affirm them? Are these attributes real, eternal, distinct from God's essence? If they are real and eternal, does that compromise divine unity (<em>tawḥīd</em>), since we now seem to have multiple eternal realities? If they are not real, are we not effectively denying that God truly knows or truly wills?</p>
+
+    <div class="callout">
+      <span class="callout-label">A Concrete Example</span>
+      <p>Consider God's attribute of <em>knowledge</em>. The Muʿtazila, to protect divine unity, argued that God's knowledge is not a distinct eternal attribute but is simply identical to His essence — "He knows by His essence, not by a knowledge." The Ashʿarīs responded that this collapses meaningful theological language: if God's knowledge is identical to His essence, the phrase "God knows" becomes linguistically empty. They affirmed a real, eternal attribute of knowledge, distinct from the essence, while insisting — against Christian Trinitarian theology — that this does not fragment divine unity because attributes are not distinct <em>persons</em>.</p>
+    </div>
+
+    <p>Then there is the further problem of anthropomorphic language. The Quran speaks of God's "hand" (Q. 5:64), God "descending" to the lowest heaven at night (a widely transmitted hadith), God's "face" remaining after all else perishes (Q. 55:27). These expressions were acutely uncomfortable for scholars shaped by Greek philosophical insistence on divine incorporeality. Three responses emerged: literal affirmation "without asking how" (<em>bilā kayf</em>); metaphorical interpretation (<em>taʾwīl</em>), where "hand" means "power" and "descending" means "sending mercy"; and complete suspension of judgment (<em>tafwīḍ</em>), affirming the word while entrusting its meaning to God.</p>
+
+    <h3 id="s2-3" class="sub-heading"><span class="sh-num">2.3</span>The Qurʾān and Divine Speech</h3>
+
+    <p>Is the Quran created or uncreated? This question, which precipitated the most serious political crisis in classical Islamic theology — the Mihnah inquisition of 833–848 CE — may seem remote today, but its logic is compelling. If God's speech is an eternal attribute, then the Quran as the expression of that speech is uncreated and eternal. If, however, the words and sounds and letters of the Quran are created in time, then the eternal divine speech is something distinct from the physical text we hold in our hands — and the two must be carefully distinguished.</p>
+
+    <p>The Muʿtazila insisted on the created Quran: an uncreated, co-eternal Quran would introduce a second eternal alongside God, compromising tawḥīd. The eventual Sunni consensus, crystallized through the resistance of figures like Aḥmad ibn Ḥanbal, was that the Quran is the uncreated speech of God — while conceding that the ink and paper and human voice that convey it are created. This distinction between the speech itself and its material vehicle became standard doctrine.</p>
+
+    <h3 id="s2-4" class="sub-heading"><span class="sh-num">2.4</span>Free Will and Predestination (<em>Qadar</em>)</h3>
+
+    <p>If God decrees all events before they occur — and the Quran's affirmations of divine decree are unmistakable — in what sense can human beings be held morally responsible for their choices? This question, perhaps the most existentially pressing in all of Kalām, generated three major responses.</p>
+
+    <p>The <strong>Jabriyyah</strong> (compulsionists) accepted the logic of full divine causation: humans are, in effect, compelled by divine power in all their acts. This position was widely rejected as rendering moral responsibility incoherent and divine punishment unjust. The <strong>Qadariyyah</strong> (libertarians) moved to the opposite pole: humans are the genuine, independent authors of their acts, which God does not create. The mainstream Sunni schools sought a middle path. The Ashʿarī solution — the doctrine of <em>kasb</em> (acquisition) — held that God creates every act while the human being "acquires" it through intention and will. Critics (especially Muʿtazilīs) charged that this was a verbal compromise that preserved the form of human agency without its substance. The Māturīdī school gave slightly stronger content to human agency, holding that the human will (<em>irādah juzʾiyyah</em>) is a real causal factor, though always within and dependent on God's overarching power.</p>
+
+    <h3 id="s2-5" class="sub-heading"><span class="sh-num">2.5</span>Nature of Faith (<em>Īmān</em>)</h3>
+
+    <p>What exactly constitutes faith? Is it an internal state of the heart, a verbal confession, an embodied practice — or some combination? Does a Muslim who commits a grave sin (murder, adultery) remain a believer? If so, what is their status before God? These questions were among the first to divide the early community.</p>
+
+    <div class="school-grid">
+      <div class="school-card muz">
+        <h5>Khawārij</h5>
+        <p>The grave sinner exits Islam entirely. Faith requires both belief and righteous action; without the latter, the former is void.</p>
+      </div>
+      <div class="school-card">
+        <h5>Murjiʾah</h5>
+        <p>Judgment is deferred to God. Sin does not diminish faith; God's mercy and the sinner's belief are a matter for the afterlife, not human tribunals.</p>
+      </div>
+      <div class="school-card muz">
+        <h5>Muʿtazila</h5>
+        <p>The grave sinner occupies an "intermediate station" (<em>manzilah bayna al-manzilatayn</em>) — neither believer nor unbeliever.</p>
+      </div>
+      <div class="school-card">
+        <h5>Ashʿarī</h5>
+        <p>Faith is primarily affirmation of the heart and confession of the tongue. Deeds perfect faith but are not its essence; the grave sinner remains a deficient believer.</p>
+      </div>
+      <div class="school-card mat">
+        <h5>Māturīdī</h5>
+        <p>Faith does not increase or decrease in essence. Deeds are not part of <em>īmān</em>; the sinner remains a Muslim liable to punishment but not excluded from the community.</p>
+      </div>
+      <div class="school-card ath">
+        <h5>Ḥanbalī / Atharī</h5>
+        <p>Faith consists of belief, speech, and action, and increases with obedience and decreases with sin — a more demanding account than either Ashʿarī or Māturīdī.</p>
+      </div>
+    </div>
+
+    <h3 id="s2-6" class="sub-heading"><span class="sh-num">2.6</span>Prophecy and Revelation</h3>
+
+    <p>How do we rationally establish that prophets are necessary and that their claims can be verified? Kalām developed sophisticated arguments for the necessity of prophecy: reason can establish that God exists, but the specific obligations He places on humanity cannot be known without authoritative revelation; therefore prophets are rationally necessary, not merely convenient. The proof of a specific prophet's mission rests on miracles (<em>muʿjizāt</em>) — extraordinary acts that challenge human replication, publicly witnessed, and inseparably associated with the prophetic claim. The Quran's inimitability (<em>iʿjāz al-Qurʾān</em>) was developed as the primary miracle of the Prophet Muḥammad (peace be upon him) — a claim that generated its own sub-discipline in Kalām.</p>
+
+    <h3 id="s2-7" class="sub-heading"><span class="sh-num">2.7</span>Eschatology (<em>Samʿiyyāt</em>)</h3>
+
+    <p>The Quran is dense with descriptions of the afterlife — the resurrection of bodies, the weighing of deeds, the bridge over hell, paradise and its pleasures, the beatific vision of God. Kalām placed these doctrines in a special category: <em>samʿiyyāt</em>, "heard matters" — things known exclusively through revelation, beyond reason's capacity to establish independently. The theologians did not regard this as a failure of reason but as a principled acknowledgment of reason's proper scope. What reason <em>could</em> do was demonstrate the possibility of resurrection (against those who charged it was incoherent) and justify trust in the revelation that affirmed it.</p>
+
+    <h3 id="s2-8" class="sub-heading"><span class="sh-num">2.8</span>The Problem of Evil</h3>
+
+    <p>If God is omnipotent and perfectly just, why does the world contain suffering, injustice, and evil? The Muʿtazila gave a clean answer: God <em>cannot</em> will evil, because His justice is a real, rationally binding constraint on His will. Evil in the world results from human free will; God permits it but does not will it. The Ashʿarīs resisted this, arguing that it subjected God's will to a rational standard external to Him — which compromised divine sovereignty. For the Ashʿarīs, God creates all acts, including those we call evil; His justice is defined by His will rather than constrained by it. The Māturīdī position sought a middle ground: God's wisdom ensures that His acts are just, and human agency is real enough that evil acts are genuinely attributable to creatures.</p>
+  </section>
+
+  <!-- ── SECTION III ── -->
+  <section id="s3" class="major-section">
+    <span class="section-label">Section III</span>
+    <h2>Timeline of <em>Development</em></h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">1st–2nd Century AH / 7th–8th CE</div>
+        <div class="timeline-title">Foundational Period: Proto-Kalām</div>
+        <div class="timeline-body">The first theological controversies emerge from political fractures. The Khawārij, who rebelled against ʿAlī ibn Abī Ṭālib, held that grave sinners were apostates — a theological position with violent political consequences. In response, the Murjiʾah deferred judgment. Early figures like Maʿbad al-Juhanī (d. 80/699) and Ghaylān al-Dimashqī (d. 125/742) — both executed by Umayyad authorities — argued for human free will against the determinism that caliphal ideology conveniently favored. Jahm ibn Ṣafwān (d. 128/745) denied God's attributes entirely to protect transcendence, founding the Jahmiyyah. These were not yet systematic schools but contested positions crystallizing under political and intellectual pressure.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">3rd–4th Century AH / 9th–10th CE</div>
+        <div class="timeline-title">The Muʿtazilī Systematization</div>
+        <div class="timeline-body">The Muʿtazila, crystallized around Wāṣil ibn ʿAṭāʾ (d. 131/748) and developed by Abū al-Hudhayl al-ʿAllāf (d. 227/841) and Ibrāhīm al-Naẓẓām (d. c. 231/845), became the first truly systematic school of Kalām. They absorbed Aristotelian logic and Neoplatonic metaphysics from the massive translation movement under the Abbasid caliphate, and applied these tools to five central principles: divine unity, divine justice, the promise and threat, the intermediate state, and commanding right. Their engagement with Greek thought was not capitulation — it was a principled attempt to equip Islamic theology with the best available intellectual tools.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">833–848 CE</div>
+        <div class="timeline-title">The Mihnah: Inquisition on the Created Qurʾān</div>
+        <div class="timeline-body">Caliph al-Maʾmūn imposed the Muʿtazilī doctrine of the created Quran as state policy, requiring scholars to affirm it under threat of imprisonment. The resistance of Aḥmad ibn Ḥanbal (d. 241/855), who endured flogging and imprisonment rather than capitulate, became the defining symbol of traditionalist refusal to subject revelation to political or rational dictate. When the Mihnah was abandoned under al-Mutawakkil (848), it permanently damaged the Muʿtazila's reputation and ensured that state-enforced theology would be viewed with deep suspicion in Sunni thought.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">4th–5th Century AH / 10th–11th CE</div>
+        <div class="timeline-title">Rise of Sunni Kalām: Ashʿarī and Māturīdī</div>
+        <div class="timeline-body">Abū al-Ḥasan al-Ashʿarī (d. 324/935), himself a student of the leading Muʿtazilī al-Jubbāʾī, dramatically broke with his teacher and aligned himself with Aḥmad ibn Ḥanbal's creed while retaining rational methods. His al-Lumaʿ and al-Ibānah became founding documents of a school that would dominate the central Islamic lands. Simultaneously, in Samarqand, Abū Manṣūr al-Māturīdī (d. 333/944) was developing an independently parallel theology that would become standard among Ḥanafīs in Central Asia and the Ottoman world. The two schools share most positions but differ notably on rational ethics and the definition of faith.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">5th–7th Century AH / 11th–13th CE</div>
+        <div class="timeline-title">Classical Maturity: Ghazālī, Rāzī, and Philosophical Engagement</div>
+        <div class="timeline-body">Al-Ghazālī (d. 505/1111) synthesized Kalām, philosophy, and Sufism with unprecedented sophistication. His Tahāfut al-Falāsifah (The Incoherence of the Philosophers) attacked the philosophical tradition's claims to certainty on key metaphysical questions — the eternity of the world, God's knowledge of particulars, bodily resurrection — not by abandoning reason but by turning rigorous logic against the philosophers' premises. Fakhr al-Dīn al-Rāzī (d. 606/1210) pushed the integration of philosophy and Kalām even further, producing encyclopedic works that absorbed Avicennan metaphysics into the theological tradition.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">7th–10th Century AH / 13th–16th CE</div>
+        <div class="timeline-title">Scholastic Period: Commentaries and Systematization</div>
+        <div class="timeline-body">Kalām entered a highly scholastic phase in which the creative work of the founding generation was refined through layers of commentary (<em>shurūḥ</em>) and glosses (<em>ḥawāshī</em>). Al-Ījī's al-Mawāqif (d. 756/1355) and al-Taftāzānī's commentary on al-ʿAqāʾid al-Nasafiyyah (d. 793/1389) became the standard pedagogical texts in madrasahs from Morocco to Bengal. This period is often criticized for prioritizing refinement over innovation, but it achieved something important: it made Kalām teachable, reproducible, and resistant to distortion.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">19th–21st Century CE</div>
+        <div class="timeline-title">Modern Reform and the Question of Relevance</div>
+        <div class="timeline-body">Colonial encounter and the prestige of Western science placed classical Kalām under intense pressure. Muḥammad ʿAbduh (d. 1905) argued that scholastic Kalām had become a dead language — technically refined but spiritually inert — and called for a return to Quranic theology. Muḥammad Iqbal (d. 1938) proposed a wholesale reconstruction of Islamic religious thought in dialogue with Bergson, Kant, and Einstein. Meanwhile, in Western academies, the "kalām cosmological argument" (associated with William Lane Craig's revival) became one of the most widely debated proofs for God's existence in analytic philosophy of religion — a striking irony in which a medieval Islamic argument achieved global philosophical currency through Western interlocutors.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION IV ── -->
+  <section id="s4" class="major-section">
+    <span class="section-label">Section IV</span>
+    <h2>Theoretical <em>Frameworks</em> &amp; Schools</h2>
+
+    <p>Four major schools emerged from the centuries of Kalām debate, each with a distinctive methodology and doctrinal profile. Understanding them requires holding in mind both their agreements — all four affirm monotheism, prophecy, and revelation — and their genuine disagreements about how to interpret and defend those affirmations.</p>
+
+    <h3 id="s4-1" class="sub-heading"><span class="sh-num">4.1</span>Muʿtazila: The Rationalist School</h3>
+
+    <p>The Muʿtazila organized their theology around five principles (<em>al-uṣūl al-khamsa</em>): divine unity (<em>tawḥīd</em>), divine justice (<em>ʿadl</em>), the divine promise and threat (<em>al-waʿd wa-l-waʿīd</em>), the intermediate state of the grave sinner, and the obligation to command right and forbid wrong. Their theology was genuinely rational in a strong sense: they believed reason could, in principle, access moral truth without revelation, and that any interpretation of scripture that contradicted rational demonstration required metaphorical reinterpretation.</p>
+
+    <p>The Muʿtazila are often portrayed as "the losers" of classical Islamic theology — their political defeat during and after the Mihnah led to their marginalization in Sunni circles. But this caricature obscures their lasting influence. Their methods were absorbed by both Ashʿarī and Māturīdī Kalām; their doctrines survived in Shiʿi theology; and their arguments for divine justice and human responsibility remain live options in contemporary Islamic philosophy.</p>
+
+    <h3 id="s4-2" class="sub-heading"><span class="sh-num">4.2</span>Ashʿarīyah: Sunni Kalām, Middle Path</h3>
+
+    <p>Al-Ashʿarī's founding gesture was dialectical: he used the Muʿtazila's own rational methods to dismantle their conclusions. Where the Muʿtazila denied real divine attributes to protect unity, al-Ashʿarī argued that real, eternal attributes were compatible with unity — what violated unity was not attributes but <em>independent</em> divine persons, which attributes are not. Where the Muʿtazila granted humans genuine causal power over their acts, al-Ashʿarī developed the <em>kasb</em> doctrine to preserve both divine omnipotence and human responsibility, even at the cost of a conceptual tension that critics have never entirely dissolved.</p>
+
+    <p>Ashʿarism became the dominant theology of the Shāfiʿī and Mālikī schools and is today the official creed of major Islamic institutions including al-Azhar University in Cairo — an institution that has shaped Islamic learning for over a millennium.</p>
+
+    <h3 id="s4-3" class="sub-heading"><span class="sh-num">4.3</span>Māturīdīyah: Rational-Sunni Kalām</h3>
+
+    <p>Al-Māturīdī's school, based in Samarqand and embraced by the Ḥanafī tradition, agreed with the Ashʿarīs on most points but diverged meaningfully on two: the scope of rational ethics and the definition of faith. On ethics, al-Māturīdī held that reason can independently know some moral truths — not merely with revelation's help but in advance of it. On faith, Māturīdī doctrine maintained that <em>īmān</em> is fundamentally affirmation of the heart and does not intrinsically include works, meaning faith does not increase or decrease. These differences may seem minor, but they have ramifications across jurisprudence and spiritual anthropology.</p>
+
+    <h3 id="s4-4" class="sub-heading"><span class="sh-num">4.4</span>Ḥanbalī / Atharī: Traditionalist Creed</h3>
+
+    <p>The Atharī school — associated with the followers of Aḥmad ibn Ḥanbal and later elaborated by Ibn Taymiyyah — is not simply "anti-rational"; it is committed to a specific epistemological thesis: that the Quran and authenticated Sunnah, read in the light of Companion practice, provide a sufficient theological foundation, and that Hellenistic philosophical frameworks import conceptual baggage alien to revelation. When the Quran says God's hand — Ibn Ḥanbal affirms God's hand, with the qualifier "without asking how." He does not translate it into "power" or "grace" because those translations introduce a layer of interpretation unauthorized by scripture.</p>
+
+    <p>This position gained a major intellectual elaborator in Ibn Taymiyyah (d. 728/1328), who argued not that reason is irrelevant to theology but that the <em>type</em> of reasoning the Kalām schools employed — specifically their adoption of Aristotelian categories of substance and accident to analyze divine attributes — systematically distorted Islamic theology by forcing it into a Greek conceptual framework. His critiques remain influential in contemporary Salafi and traditionalist thought.</p>
+
+    <h3 id="s4-5" class="sub-heading"><span class="sh-num">4.5</span>New Kalām (<em>al-Kalām al-Jadīd</em>)</h3>
+
+    <p>From the nineteenth century onward, a fourth orientation has crystallized: the attempt to reframe Kalām's classical questions in dialogue with modern philosophy, science, and ethics. Iqbal's <em>Reconstruction of Religious Thought in Islam</em> (1930) is its most celebrated monument, but the project continues in contemporary analytic Islamic philosophy, in Moroccan and Turkish theological institutions, and in the work of scholars like Saʿīd Fuʾād who engage classical doctrine with the tools of contemporary epistemology. Its central question is not whether Islam is true but whether the classical framework for <em>expressing</em> that truth remains adequate to modern intellectual conditions.</p>
+  </section>
+
+  <!-- ── SECTION V ── -->
+  <section id="s5" class="major-section">
+    <span class="section-label">Section V</span>
+    <h2>Methodology <em>&amp; Tools</em></h2>
+
+    <p>Kalām is not merely a body of doctrine; it is a method. Its tools — inherited partly from Greek philosophy, partly from indigenous Arabic logical and rhetorical traditions — were deployed with the explicit purpose of defending revelation rather than replacing it.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.1</span>The Contingency Argument (<em>Dalīl al-Ḥudūth</em>)</h3>
+
+    <p>The most characteristic argument of classical Kalām for God's existence proceeds from the temporality of the world. Every body is either in motion or at rest — a contingent state that must have been caused. The world is therefore temporally originated (<em>ḥādith</em>), and every originated thing requires an originator. The world therefore has an originator who is neither temporal nor corporeal — i.e., God. This argument is the "kalām cosmological argument" that William Lane Craig revived in analytic philosophy of religion in the 1970s and 1980s, making it one of the most discussed proofs for God's existence in contemporary Western philosophy.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.2</span>Dialectical Method (<em>Jadal</em>)</h3>
+
+    <p>The Kalām scholars developed a formalized culture of disputation (<em>munāẓarah</em>) with strict rules: state your claim (<em>daʿwā</em>), provide evidence (<em>dalīl</em>), anticipate objections (<em>iʿtirāḍ</em>), and rebut them (<em>muʿāraḍah</em>). The goal was not rhetorical victory but the exposure of logical contradictions and the clarification of truth. A characteristic move was <em>ilzām</em> — showing that your opponent's premises logically entail conclusions they would reject, forcing them to revise either their premises or their objections. Al-Ghazālī's critiques of the philosophers in the Tahāfut are masterclasses in this method.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.3</span>Interpretation (<em>Taʾwīl</em>) and Its Limits</h3>
+
+    <p>When a Quranic verse, read literally, appears to attribute a body or a spatial location to God, Kalām offers interpretive tools. <em>Taʾwīl</em> — metaphorical or figurative interpretation — was accepted by both Ashʿarī and Māturīdī scholars in cases where literal reading contradicts established rational principles (e.g., divine incorporeality). The limits of taʾwīl were hotly debated: too much produces rationalist dissolution of revealed content; too little risks crude anthropomorphism. Ibn Taymiyyah argued that the Ashʿarīs applied taʾwīl inconsistently — accepting it for spatial attributes but not for others — and that the correct procedure was consistent affirmation <em>bilā kayf</em> across the board.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.4</span>Revealed Matters (<em>Samʿiyyāt</em>)</h3>
+
+    <p>Kalām distinguishes between what reason can establish and what must be accepted on the authority of revelation alone. The existence and unity of God, the possibility of prophecy, the rational coherence of bodily resurrection — these are within reason's competence. But the specific details of paradise and hell, the nature of the questioning in the grave, the mechanics of the resurrection — these are <em>samʿiyyāt</em>, affirmed because authentic revelation reports them, not because they can be derived from first principles. This distinction preserves reason's authority within its proper domain without artificially extending it beyond it.</p>
+  </section>
+
+  <!-- ── SECTION VI ── -->
+  <section id="s6" class="major-section">
+    <span class="section-label">Section VI</span>
+    <h2>Key <em>Figures</em> &amp; Thinkers</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Scholar</th>
+            <th>Dates</th>
+            <th>School</th>
+            <th>Contribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wāṣil ibn ʿAṭāʾ</td>
+            <td>d. 131/748</td>
+            <td>Muʿtazila (founder)</td>
+            <td>First articulated the "intermediate state" doctrine; established the Muʿtazilī school after separating from Ḥasan al-Baṣrī's circle.</td>
+          </tr>
+          <tr>
+            <td>Jahm ibn Ṣafwān</td>
+            <td>d. 128/745</td>
+            <td>Jahmiyyah</td>
+            <td>Denied God's attributes to protect transcendence; his radical positions were rejected by all mainstream schools but forced them to articulate clearer positions.</td>
+          </tr>
+          <tr>
+            <td>Aḥmad ibn Ḥanbal</td>
+            <td>d. 241/855</td>
+            <td>Atharī</td>
+            <td>Symbol of traditionalist resistance to the Mihnah; his creed became the Atharī standard, though he himself wrote no systematic Kalām treatise.</td>
+          </tr>
+          <tr>
+            <td>Abū al-Ḥasan al-Ashʿarī</td>
+            <td>d. 324/935</td>
+            <td>Ashʿarīyah (founder)</td>
+            <td>Founded the dominant school of Sunni Kalām, reconciling rational method with traditional creed. Key works: <em>al-Ibānah</em>, <em>al-Lumaʿ</em>, <em>Maqālāt al-Islāmiyyīn</em>.</td>
+          </tr>
+          <tr>
+            <td>Abū Manṣūr al-Māturīdī</td>
+            <td>d. 333/944</td>
+            <td>Māturīdīyah (founder)</td>
+            <td>Founded the Ḥanafī-aligned Kalām school with greater emphasis on rational ethics. Key work: <em>Kitāb al-Tawḥīd</em>.</td>
+          </tr>
+          <tr>
+            <td>Imām al-Juwaynī</td>
+            <td>d. 478/1085</td>
+            <td>Ashʿarīyah</td>
+            <td>"Imām of the Two Sanctuaries"; refined Ashʿarī proofs and trained al-Ghazālī. Key work: <em>al-Irshād</em>.</td>
+          </tr>
+          <tr>
+            <td>Abū Ḥāmid al-Ghazālī</td>
+            <td>d. 505/1111</td>
+            <td>Ashʿarīyah</td>
+            <td>Greatest synthesizer of Kalām, philosophy, and Sufism. <em>Tahāfut al-Falāsifah</em> attacked philosophical overreach; <em>Iḥyāʾ ʿUlūm al-Dīn</em> integrated theology with spiritual practice.</td>
+          </tr>
+          <tr>
+            <td>Fakhr al-Dīn al-Rāzī</td>
+            <td>d. 606/1210</td>
+            <td>Ashʿarīyah</td>
+            <td>Extended Kalām to cosmology and metaphysics; his encyclopedic works absorbed Avicennan philosophy into the Sunni tradition.</td>
+          </tr>
+          <tr>
+            <td>Ibn Taymiyyah</td>
+            <td>d. 728/1328</td>
+            <td>Atharī</td>
+            <td>Most systematic critic of Kalām; argued Aristotelian categories distort Islamic theology. Enormously influential on later reform movements.</td>
+          </tr>
+          <tr>
+            <td>al-Taftāzānī</td>
+            <td>d. 793/1389</td>
+            <td>Māturīdīyah / Ashʿarīyah</td>
+            <td>His commentary on <em>al-ʿAqāʾid al-Nasafiyyah</em> became the standard pedagogical text in madrasahs for five centuries.</td>
+          </tr>
+          <tr>
+            <td>Muḥammad Iqbal</td>
+            <td>d. 1938</td>
+            <td>New Kalām</td>
+            <td><em>Reconstruction of Religious Thought in Islam</em> (1930) — proposed integrating Islamic theology with modern philosophy, science, and psychology.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── SECTION VII ── -->
+  <section id="s7" class="major-section">
+    <span class="section-label">Section VII</span>
+    <h2>Canonical <em>Texts</em></h2>
+
+    <div class="def-list">
+      <div class="def-item">
+        <div class="def-term">al-Ibānah ʿan Uṣūl al-Diyānah <em>al-Ashʿarī (d. 935)</em></div>
+        <div class="def-body">Al-Ashʿarī's declaration of creed after his break from the Muʿtazila. Landmark in that it used rational tools to defend traditional Sunni positions, establishing the genre and method of Ashʿarī Kalām.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Kitāb al-Tawḥīd <em>al-Māturīdī (d. 944)</em></div>
+        <div class="def-body">The founding text of the Māturīdī school; systematic demonstration of divine unity and attributes with strong emphasis on rational proofs, reflecting the Central Asian intellectual context.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">al-ʿAqīdah al-Ṭaḥāwiyyah <em>al-Ṭaḥāwī (d. 321/933)</em></div>
+        <div class="def-body">A brief creed text by the Egyptian Ḥanafī scholar al-Ṭaḥāwī, widely accepted across Sunni schools as a baseline statement of orthodoxy. Its brevity and measured tone allowed it to bridge the Ashʿarī–Māturīdī–Atharī divide.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Tahāfut al-Falāsifah <em>al-Ghazālī (d. 1111)</em></div>
+        <div class="def-body">"The Incoherence of the Philosophers." Identified twenty philosophical claims — including the eternity of the world, God's knowledge only of universals, and the denial of bodily resurrection — and argued that the philosophers had failed to demonstrate them rigorously. Enormously influential in both Islamic and European scholasticism.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">al-Mawāqif fī ʿIlm al-Kalām <em>al-Ījī (d. 1355)</em></div>
+        <div class="def-body">An encyclopedic systematization of Kalām organized into six "stations" covering logic, philosophy, cosmology, theology, prophecy, and eschatology. Became the central reference text for advanced Kalām study, generating a library of commentaries and glosses.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Sharḥ al-ʿAqāʾid al-Nasafiyyah <em>al-Taftāzānī (d. 1389)</em></div>
+        <div class="def-body">Commentary on al-Nasafī's brief creed statement; the most widely taught Sunni theology text in madrasahs from the fifteenth century onward. Its combination of accessibility and technical depth made it the ideal pedagogical vehicle for transmitting Ashʿarī–Māturīdī doctrine.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Reconstruction of Religious Thought in Islam <em>Muḥammad Iqbal (1930)</em></div>
+        <div class="def-body">Six lectures delivered at Aligarh, Hyderabad, and Lahore, proposing a fundamental reconstruction of Islamic theology in dialogue with Bergson, Kant, and Einstein. The most ambitious attempt at New Kalām in the modern period, though also one of the most contested.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION VIII ── -->
+  <section id="s8" class="major-section">
+    <span class="section-label">Section VIII</span>
+    <h2>Glossary of <em>Concepts</em></h2>
+
+    <h4>Core Terms</h4>
+    <div class="def-list">
+      <div class="def-item">
+        <div class="def-term">Kalām <em>(<span lang="ar" dir="rtl">كلام</span>)</em></div>
+        <div class="def-body">Literally "speech" or "discourse"; technically, the science of Islamic rational theology — the articulation and defense of creed through reasoned argument.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">ʿAqīdah <em>(<span lang="ar" dir="rtl">عقيدة</span>)</em></div>
+        <div class="def-body">Creed; the set of beliefs a Muslim is required to hold. Kalām is the discipline that defends and systematizes ʿaqīdah.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Tawḥīd <em>(<span lang="ar" dir="rtl">توحيد</span>)</em></div>
+        <div class="def-body">Divine unity — the foundational affirmation that God is one, without partners, equals, or rivals. All Kalām debates ultimately circle back to how to understand and protect tawḥīd.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Tanzīh <em>(<span lang="ar" dir="rtl">تنزيه</span>)</em></div>
+        <div class="def-body">Declaring God's transcendence and incomparability with creation. The opposite is tashbīh (anthropomorphism), which all schools reject — though they disagree sharply on where the line falls.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Bilā kayf <em>(<span lang="ar" dir="rtl">بلا كيف</span>)</em></div>
+        <div class="def-body">"Without asking how." The formula used to affirm divine attributes or actions described in scripture without specifying their modality. Originally an Atharī formula, it was adopted by Ashʿarīs and Māturīdīs for different purposes.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Taʾwīl <em>(<span lang="ar" dir="rtl">تأويل</span>)</em></div>
+        <div class="def-body">Figurative or metaphorical interpretation of a text whose literal sense creates theological difficulty. Accepted by Ashʿarīs and Māturīdīs with qualifications; rejected by Atharīs as unauthorized innovation.</div>
+      </div>
+    </div>
+
+    <h4>Agency and Decree</h4>
+    <div class="def-list">
+      <div class="def-item">
+        <div class="def-term">Qadar <em>(<span lang="ar" dir="rtl">قدر</span>)</em></div>
+        <div class="def-body">Divine decree; the doctrine that all events occur by God's foreknowledge and will. Affirmed by all schools; the dispute is over its implications for human freedom.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Kasb <em>(<span lang="ar" dir="rtl">كسب</span>)</em></div>
+        <div class="def-body">"Acquisition." The Ashʿarī doctrine that while God creates all acts, the human being "acquires" the act through their intention and will, grounding moral responsibility. Criticized by Muʿtazilīs as an illusory form of agency.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Jabr <em>(<span lang="ar" dir="rtl">جبر</span>)</em></div>
+        <div class="def-body">Compulsion; the doctrine that humans have no genuine choice. Universally rejected as making moral accountability incoherent, but critics accused the Ashʿarī kasb doctrine of amounting to the same thing under a different name.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Ḥusn wa-qubḥ ʿaqlī <em>(<span lang="ar" dir="rtl">الحسن والقبح العقلي</span>)</em></div>
+        <div class="def-body">Rational morality — the thesis that human reason can independently determine good and evil. Affirmed by the Muʿtazila and Māturīdīs (partially); denied by Ashʿarīs.</div>
+      </div>
+    </div>
+
+    <h4>Faith and Sin</h4>
+    <div class="def-list">
+      <div class="def-item">
+        <div class="def-term">Īmān <em>(<span lang="ar" dir="rtl">إيمان</span>)</em></div>
+        <div class="def-body">Faith. Its precise definition — whether it includes works, whether it increases and decreases, whether it can coexist with grave sin — was among the most contested questions in early Kalām.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Manzilah bayna al-manzilatayn <em>(<span lang="ar" dir="rtl">منزلة بين المنزلتين</span>)</em></div>
+        <div class="def-body">"A station between two stations." The Muʿtazilī position on the grave sinner: neither a full believer nor an unbeliever, but occupying an intermediate category.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Samʿiyyāt <em>(<span lang="ar" dir="rtl">سمعيات</span>)</em></div>
+        <div class="def-body">"Heard matters." Doctrines knowable only through revelation — resurrection, paradise, hell, angels — as distinguished from what reason can demonstrate. Not a lesser category, but a distinct one requiring a distinct mode of justification.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION IX ── -->
+  <section id="s9" class="major-section">
+    <span class="section-label">Section IX</span>
+    <h2>Internal <em>Debates</em></h2>
+
+    <p>The internal debates of Kalām are not mere academic disputes; each had political, legal, and spiritual consequences that shaped Islamic civilization. Here are the most consequential, reconstructed with the care their complexity deserves.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">9.1</span>Reason vs. Revelation</h3>
+    <div class="debate-row">
+      <div class="debate-col col-a">
+        <h6>Muʿtazilī Position</h6>
+        <p>God is rational; His creation reflects rational moral order. Reason can independently determine good and evil — gratitude to benefactors is right, oppression is wrong — prior to and independent of revelation. Any revealed text that seems to contradict rational morality requires metaphorical reinterpretation.</p>
+      </div>
+      <div class="debate-col col-b">
+        <h6>Ashʿarī Response</h6>
+        <p>Moral categories are constituted by divine command, not discovered by reason. An act is obligatory because God commanded it; "goodness" is not a property reason can detect in acts independent of revelation. This does not make morality arbitrary — God's commands are consistent and wise — but it means reason has no independent legislative authority.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><span class="sh-num">9.2</span>The Created Qurʾān Debate</h3>
+    <p>The Mihnah (833–848 CE) forced this abstract dispute into violent political reality. The Muʿtazilī argument was formally sound: if the Quran is uncreated and eternal, it is co-eternal with God, introducing plurality into divine eternity. The Sunni response distinguished between God's eternal, uncreated attribute of speech and the temporal, created vehicle through which that speech is expressed — the words, letters, and sounds. The speech itself is uncreated; the material instantiation is created. This distinction became a standard Sunni formula, though critics (including some Atharīs) found it insufficiently clear.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">9.3</span>The Vision of God in the Hereafter</h3>
+    <div class="debate-row">
+      <div class="debate-col col-a">
+        <h6>Muʿtazilī Position</h6>
+        <p>Seeing requires a direction and a spatial relationship between viewer and seen. God has no direction or spatial location. Therefore, the "vision of God" mentioned in Q. 75:22-23 ("faces that day radiant, looking at their Lord") must be interpreted metaphorically — perhaps as spiritual awareness or cognitive certainty.</p>
+      </div>
+      <div class="debate-col col-b">
+        <h6>Sunni Response</h6>
+        <p>The Ashʿarīs and Māturīdīs affirmed the beatific vision as a real perceptual experience, while denying that it requires direction or spatial relation — conditions that apply to creaturely vision but need not apply to divine-creaturely encounter in the unique conditions of the afterlife. The vision is real; its modality is beyond analogy.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><span class="sh-num">9.4</span>The Role of Kalām Itself</h3>
+    <p>Perhaps the most distinctive meta-debate in Kalām is whether Kalām should exist. The Atharī tradition never fully reconciled with rational theology. Ibn Ḥanbal reportedly said: "The people of kalām will never prosper." Ibn Taymiyyah argued more analytically: the Kalām scholars' adoption of Aristotelian substance-accident metaphysics was not a neutral tool but a contaminating framework that systematically distorted Islamic doctrine. The Ashʿarī response was pragmatic: without rational tools, Islam's creed cannot be defended against philosophically sophisticated critics; the tools do not determine the conclusions if used carefully. This debate remains unresolved, and probably unresolvable — it is a disagreement about the proper scope of reason in matters of faith that admits no empirical settlement.</p>
+  </section>
+
+  <!-- ── SECTION X ── -->
+  <section id="s10" class="major-section">
+    <span class="section-label">Section X</span>
+    <h2>Interdisciplinary <em>Links</em></h2>
+
+    <p>Kalām does not exist in isolation. Its questions intersect with every other Islamic discipline, and its answers have consequences that reach well beyond theology proper.</p>
+
+    <h4>Kalām ↔ Uṣūl al-Fiqh</h4>
+    <p>Legal theory (<em>uṣūl al-fiqh</em>) rests on theological premises: the authority of revelation, the reliability of the Prophet's transmission, the epistemological status of consensus. The debate over whether single-chain (<em>āḥād</em>) hadith can ground creedal positions — accepted by Atharīs, rejected by many Ḥanafīs — directly affects both theology and law. Al-Ghazālī was simultaneously a major theologian and one of the most important legal theorists in Islamic history; his Kalām directly shaped his methodology in uṣūl.</p>
+
+    <h4>Kalām ↔ Tafsīr</h4>
+    <p>The same Quranic verse read by three different schools of Kalām produces three different exegeses. Al-Ṭabarī's <em>Jāmiʿ al-Bayān</em> is Atharī in its approach to divine attributes; al-Zamakhsharī's <em>al-Kashshāf</em> is saturated with Muʿtazilī theology; al-Rāzī's <em>Mafātīḥ al-Ghayb</em> is Ashʿarī to the core. The exegete who does not know Kalām is, as the tradition says, "an imitator without knowledge" — applying patterns of interpretation whose theological commitments he does not understand.</p>
+
+    <h4>Kalām ↔ Tasawwuf</h4>
+    <p>The relationship between Kalām and Sufism is one of productive tension. Al-Ghazālī's synthesis — using Kalām to establish what must be believed and Sufism to make belief living rather than dead — remains the most influential attempt to resolve it. But the tension never disappeared: the Sufi emphasis on experiential knowledge of God (<em>maʿrifah</em>) and the Kalām emphasis on propositional knowledge about God were always in potential conflict, and later figures like Ibn ʿArabī developed speculative mystical theologies that placed them firmly outside the Kalām mainstream.</p>
+
+    <h4>Kalām ↔ Philosophy</h4>
+    <p>The relationship is one of rivalry and mutual borrowing. Kalām borrowed logic from Aristotle, cosmological categories from Neoplatonism, and systematic method from the falāsifah. It then turned those tools against the philosophers' metaphysical conclusions — particularly on the eternity of the world, divine knowledge of particulars, and bodily resurrection. The exchange produced some of the most intellectually sophisticated debates in medieval philosophy, and was transmitted into European scholasticism through Latin translations of al-Ghazālī and Ibn Rushd.</p>
+  </section>
+
+  <!-- ── SECTION XI ── -->
+  <section id="s11" class="major-section">
+    <span class="section-label">Section XI</span>
+    <h2>Modern <em>Challenges</em></h2>
+
+    <p>The encounter with modernity has produced both the sharpest critiques of classical Kalām and its most interesting renewals.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">11.1</span>Science and Creation</h3>
+    <p>The Big Bang cosmology — the discovery that the universe has a finite temporal origin — is, on its face, remarkably consonant with the Kalām argument from temporality (<em>dalīl al-ḥudūth</em>). William Lane Craig's revival of the argument in the 1970s made this consonance globally visible. But the picture is more complex: quantum cosmology (Hartle-Hawking, Vilenkin) has attempted to describe a "universe without boundaries" that avoids the classical initial singularity, and physicists debate whether the Big Bang represents a genuine temporal beginning or merely the limit of our current models. Contemporary Kalām must engage this literature with genuine technical competence, not merely cherry-pick congenial results.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">11.2</span>The Problem of Evil in the Modern World</h3>
+    <p>Classical theodicy was developed against the background of individual suffering — disease, bereavement, natural disaster. The modern period added mass atrocities whose scale strains the classical frameworks. The Ashʿarī response — God creates all acts; His justice is defined by His will — can seem, in the context of genocide or systemic oppression, to verge on moral quietism. Contemporary Islamic philosophy has increasingly turned to the Māturīdī and Muʿtazilī emphasis on genuine human agency and divine wisdom as resources for a more ethically robust theodicy that preserves both divine sovereignty and human accountability.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">11.3</span>AI and Moral Personhood</h3>
+    <p>Classical Kalām defined moral accountability (<em>taklīf</em>) in terms of rationality (<em>ʿaql</em>), legal capacity (<em>ahliyyah</em>), and revealed obligation — all of which presuppose an ensouled human agent. Artificial intelligence systems challenge these categories: they exhibit behaviors that functionally resemble rational deliberation; they make decisions with real moral consequences; and their "intentions," if any, are radically different from human ones. Contemporary Kalām's contribution here is not to dissolve the question but to articulate, with classical precision, what conditions ground moral responsibility — and to evaluate whether AI systems can meet them.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">11.4</span>Pluralism and the Scope of Salvation</h3>
+    <p>Classical Kalām, with its sharp division between Islamic orthodoxy and deviation (<em>kufr</em>), was not designed for a world of sustained interfaith encounter. Contemporary Kalām must ask: what is the scope of divine mercy? Does the person who never encountered a compelling version of Islamic truth bear the same accountability as one who did and rejected it? The classical concept of "excuse through ignorance" (<em>ʿudhr bi-l-jahl</em>) provides some resources, but its development into a robust theology of religious plurality requires work that remains in progress.</p>
+  </section>
+
+  <!-- ── SECTION XII ── -->
+  <section id="s12" class="major-section">
+    <span class="section-label">Section XII</span>
+    <h2>Comparative <em>Perspectives</em></h2>
+
+    <p>Islamic Kalām did not develop in intellectual isolation. Its debates were shaped by encounter with other traditions and have, in turn, contributed to global philosophical discourse.</p>
+
+    <h4>Kalām and Christian Scholasticism</h4>
+    <p>The parallels between Ashʿarī Kalām and Thomistic scholasticism are striking and historically connected. Both traditions used Aristotelian logic to defend monotheistic revelation; both debated divine attributes, providence, free will, and the problem of evil with extraordinary precision; both developed sophisticated theodicies. The differences are equally instructive: the Trinitarian commitments of Christian scholasticism introduced a problem — how three persons are one God — that Islamic theology never faced. Thomas Aquinas knew al-Ghazālī and engaged (via Latin translations) with Islamic philosophical theology. The medieval conversation between the traditions was richer than either side's contemporary heirs typically recognize.</p>
+
+    <h4>Kalām and Jewish Rationalism</h4>
+    <p>Saadia Gaon (d. 942 CE), writing in Arabic and deeply engaged with Muʿtazilī Kalām, used Kalām methods to defend Jewish monotheism against the same philosophical challenges. Maimonides (d. 1204 CE), though critical of Kalām's methods, shared its commitment to divine transcendence and developed a radical negative theology — knowing God only by what He is <em>not</em> — that stands in instructive contrast to the Ashʿarī affirmation of positive attributes.</p>
+
+    <h4>The Kalām Cosmological Argument in Contemporary Philosophy</h4>
+    <p>William Lane Craig's 1979 book <em>The Kalām Cosmological Argument</em> introduced a medieval Islamic proof to contemporary analytic philosophy of religion. The argument — everything that begins to exist has a cause; the universe began to exist; therefore the universe has a cause — has since become one of the most discussed proofs for God's existence in the global philosophical literature, generating hundreds of articles and books. Islamic scholars have observed with mixed feelings that their tradition's contribution is most widely known through a Christian philosopher's revival — but the argument is genuinely classical Kalām, and its global reception is a testament to the tradition's enduring intellectual force.</p>
+  </section>
+
+  <!-- ── SECTION XIII ── -->
+  <section id="s13" class="major-section">
+    <span class="section-label">Section XIII</span>
+    <h2>Key <em>Case Studies</em></h2>
+
+    <h3 class="sub-heading"><span class="sh-num">13.1</span>The Mihnah (833–848 CE)</h3>
+    <p>The Mihnah — the Abbasid inquisition on the created Quran — is the defining political crisis of classical Kalām. Caliph al-Maʾmūn, a patron of the translation movement and sympathetic to the Muʿtazilī rationalism that had flourished at his court, imposed the doctrine of the Quran's createdness as state orthodoxy in 833 CE. Scholars who refused to affirm it were imprisoned or flogged. Aḥmad ibn Ḥanbal, the most prominent traditionalist of his generation, endured two years of imprisonment and public flogging before being released, never having recanted.</p>
+
+    <p>The aftermath was decisive. When Caliph al-Mutawakkil abandoned the policy in 848 CE, the Muʿtazila never recovered their political influence. The episode permanently associated Muʿtazilī rationalism with political overreach, and permanently associated traditionalist resistance with a kind of principled intellectual courage. It also established a lasting Sunni wariness about state-enforced theological conformity — a wariness with obvious contemporary relevance.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">13.2</span>Ghazālī vs. the Philosophers</h3>
+    <p>Al-Ghazālī's <em>Tahāfut al-Falāsifah</em> (1095 CE) is one of the most consequential polemical texts in intellectual history. Trained in philosophy to a level sufficient to attack it from within, al-Ghazālī identified twenty positions in which the Islamic philosophical tradition (primarily al-Fārābī and Ibn Sīnā) had, he argued, exceeded demonstrative proof and made metaphysical claims irreconcilable with Islamic doctrine. Three of these positions — the eternity of the world, God's knowledge of universals only, and the denial of bodily resurrection — he declared heresy. The other seventeen he considered reprehensible innovations rather than unbelief.</p>
+
+    <p>Ibn Rushd's <em>Tahāfut al-Tahāfut</em> (1180 CE) responded point by point, arguing that al-Ghazālī had misunderstood the philosophers' positions and that his own Ashʿarī occasionalism (denying natural causation) was more destructive to rational inquiry than anything the philosophers had proposed. The exchange marks the apex of the Kalām-philosophy dialogue and was transmitted into European scholasticism through Latin translations, influencing Thomas Aquinas and the later scholastic tradition.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">13.3</span>The Kalām Cosmological Argument in Contemporary Philosophy</h3>
+    <p>When William Lane Craig published <em>The Kalām Cosmological Argument</em> in 1979, he brought a medieval Islamic proof to the attention of analytic philosophy of religion. The argument's basic form — (1) everything that begins to exist has a cause; (2) the universe began to exist; (3) therefore the universe has a cause — had been developed by Ashʿarī theologians as the <em>dalīl al-ḥudūth</em> and been refined for centuries. Craig's innovation was to support premise (2) with modern Big Bang cosmology and mathematical arguments about the impossibility of actual infinities. The argument has since generated an enormous secondary literature and become a standard topic in philosophy of religion courses globally — a remarkable instance of a classical Islamic intellectual contribution achieving global philosophical currency.</p>
+  </section>
+
+  <!-- ── SECTION XIV ── -->
+  <section id="s14" class="major-section">
+    <span class="section-label">Section XIV</span>
+    <h2>Applications to <em>Life &amp; Reasoning</em></h2>
+
+    <h3 class="sub-heading"><span class="sh-num">14.1</span>Strengthening Intellectual Faith</h3>
+    <p>Doubt is not the opposite of faith; it is often its precondition. The person who has never been confronted with a serious challenge to their beliefs has never had to examine them. Kalām provides the tools to face challenges without being overwhelmed by them: structured proofs for God's existence, principled accounts of how revelation and reason relate, frameworks for understanding what theological claims do and do not assert. The student who has worked through even an introductory Kalām text is equipped to engage intellectual challenges with composure — not because they have memorized the "right answers," but because they understand the structure of the questions.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">14.2</span>Intellectual Humility Before Mystery</h3>
+    <p>Paradoxically, Kalām also cultivates intellectual humility. The doctrine of <em>bilā kayf</em> — affirming divine attributes without claiming to know their modality — is not a retreat from reason; it is a principled acknowledgment of reason's limits. The universe is older and stranger than our categories. A tradition that spent fourteen centuries refining arguments for God's existence and attributes, while insisting that the ultimate reality exceeds all our concepts, models something important: that the rigorous exercise of reason can lead to a deeper appreciation of what reason cannot reach.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">14.3</span>Ethics and Responsibility</h3>
+    <p>The Kalām debate on <em>qadar</em> and <em>kasb</em> is not merely academic; it shapes how Muslims understand moral agency. The Sunni consensus — that human acts are genuinely imputable to human agents even within God's overarching decree — grounds moral accountability without undermining tawakkul (reliance on God). The person who internalizes this framework is neither fatalistic ("everything is decreed, so my choices don't matter") nor presumptuous ("I am the complete author of my outcomes"). They are what the tradition has always called <em>mukallaf</em>: addressed by moral obligation, capable of genuine choice, and ultimately accountable before God.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">14.4</span>Navigating Disagreement</h3>
+    <p>Kalām schools disagreed with each other — sometimes sharply — for over a millennium, yet developed rules of engagement (<em>adab al-munāẓarah</em>) that kept disagreement productive rather than destructive. The tradition's internal pluralism — Ashʿarī vs. Māturīdī vs. Atharī — is not a scandal but a model: principled disagreement, bounded by shared commitments, conducted with mutual respect for the integrity of the opposing argument. In a contemporary world where theological and political discourse tends toward caricature and dismissal, this model of structured, respectful disagreement is worth recovering.</p>
+  </section>
+
+  <!-- ── SECTION XV ── -->
+  <section id="s15" class="major-section">
+    <span class="section-label">Section XV</span>
+    <h2>Future <em>Directions</em></h2>
+
+    <p>Kalām has survived every intellectual revolution in Islamic history by absorbing its best tools while retaining its fundamental commitments. There is no reason to suppose the twenty-first century will be different.</p>
+
+    <h4>Analytic Islamic Theology</h4>
+    <p>The most promising development in contemporary Kalām is the emergence of analytic Islamic philosophy — scholars trained in the methods of analytic philosophy (modal logic, formal epistemology, philosophy of language) who apply those methods to classical Islamic theological questions. This tradition, represented by scholars like Sajjad Rizvi, Ramon Harvey, and Feriel Bouhafa, brings the precision of analytic method to classical texts while taking seriously the intellectual and spiritual commitments those texts embody. It is, in essence, a continuation of what the classical mutakallimūn themselves did — adopting the best available philosophical tools in the service of revealed truth.</p>
+
+    <h4>Science and Theology</h4>
+    <p>The dialogue between Islamic theology and modern science — cosmology, evolutionary biology, neuroscience, quantum mechanics — is still in its early stages. The classical Kalām tradition offers resources for this dialogue that are less often drawn upon than they should be: a sophisticated account of causation (including the occasionalist tradition), a principled distinction between reason's proper scope and revelation's unique contribution, and centuries of experience in distinguishing core doctrinal commitments from their contingent philosophical formulations.</p>
+
+    <h4>Applied Kalām</h4>
+    <p>The extension of Kalām to applied ethics — bioethics, AI ethics, environmental theology, political theology — requires both the classical apparatus and genuine engagement with the empirical and normative questions those fields raise. The most important contribution Kalām can make here is not particular answers but a rigorous framework: for distinguishing what reason establishes from what revelation specifies, for identifying genuine creedal commitments as opposed to their historical formulations, and for applying the tradition's hard-won methodological wisdom to questions its founders never anticipated.</p>
+
+    <div class="callout">
+      <span class="callout-label">A Closing Thought</span>
+      <p>The opening question of Kalām — "What must we believe, and why?" — is not a question that any civilization can indefinitely defer. A tradition that cannot articulate its deepest commitments will not long sustain them. The discipline that al-Ashʿarī and al-Māturīdī built, that al-Ghazālī synthesized with spiritual practice, that Ibn Taymiyyah critiqued with fierce precision, and that Iqbal tried to reconstruct for modernity — is not a museum piece. It is an unfinished conversation about the most important questions human beings face. The next generation of mutakallimūn has not yet arrived. But the questions are waiting.</p>
+    </div>
+  </section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin · Fikir Defteri Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+  }
+
+  // TOC anchor scroll — accounts for global nav (62px) + article header (~48px)
+  document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      document.getElementById('tocOverlay').classList.remove('open');
+      const offset = 62 + 48 + 12;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  (function () {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const section = parts[0];
+  if (!section) return;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+  const href  = '/' + section + '/';
+  const el = document.querySelector('a.site-name');
+  if (el) { el.textContent = label; el.href = href; }
+})();
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

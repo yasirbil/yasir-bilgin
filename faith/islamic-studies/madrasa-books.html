@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+  <meta property="og:title"       content="Medrese Kitapları" />
+  <meta property="og:description" content="Medrese Kitapları" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/faith/Islamic-Studies/madrasa-books.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Medrese Kitapları" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/faith/Islamic-Studies/madrasa-books.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+<title>Medrese Kitapları</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+:root {
+  --bg:          #f2ebe0;
+  --ink:         #1a1308;
+  --ink-mid:     #3b2c13;
+  --ink-light:   #7a6340;
+  --gold:        #8c6d1f;
+  --gold-bright: #c49a28;
+  --gold-pale:   #d4b96a;
+  --card:        #faf6ee;
+  --border:      rgba(140,109,31,0.2);
+  --border-med:  rgba(140,109,31,0.38);
+  --shadow-sm:   0 1px 12px rgba(26,19,8,0.07);
+  --shadow-lg:   0 6px 36px rgba(26,19,8,0.14);
+  --r: 3px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'EB Garamond', Georgia, serif;
+  min-height: 100vh;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238c6d1f' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 15% 0%,rgba(196,154,40,.08) 0%,transparent 55%),
+    radial-gradient(ellipse at 85% 100%,rgba(122,51,24,.05) 0%,transparent 55%);
+}
+
+/* ── HEADER ── */
+header { text-align:center; padding:72px 24px 48px; position:relative; }
+header::before {
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(140,109,31,.07) 0%,transparent 80%);
+  pointer-events:none;
+}
+.orn {
+  display:flex; align-items:center; justify-content:center;
+  gap:16px; margin-bottom:24px;
+}
+.orn::before,.orn::after {
+  content:''; height:1px; width:80px;
+}
+.orn::before { background:linear-gradient(90deg,transparent,var(--gold-pale)); }
+.orn::after  { background:linear-gradient(90deg,var(--gold-pale),transparent); }
+.orn span { color:var(--gold); font-size:1.1rem; letter-spacing:.6em; }
+header h1 {
+  font-family:'Cinzel',serif;
+  font-size:clamp(1.9rem,5vw,3.6rem);
+  font-weight:700; color:var(--ink);
+  letter-spacing:.04em; line-height:1.15;
+}
+header h1 em { font-style:normal; color:var(--gold); }
+.h-sub { margin-top:12px; font-size:1.1rem; color:var(--ink-light); font-style:italic; }
+.h-rule {
+  width:120px; height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-pale),transparent);
+  margin:20px auto 12px;
+}
+.h-meta {
+  font-family:'Cinzel',serif; font-size:.72rem;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--ink-light);
+}
+
+/* ── CONTROLS ── */
+.controls {
+  max-width:1240px; margin:40px auto 0;
+  padding:0 24px; display:flex; flex-direction:column; gap:18px;
+}
+.search-wrap { position:relative; }
+.search-icon {
+  position:absolute; left:16px; top:50%;
+  transform:translateY(-50%);
+  color:var(--ink-light); pointer-events:none;
+  width:17px; height:17px;
+}
+#search {
+  width:100%; padding:13px 16px 13px 46px;
+  border:1.5px solid var(--border-med); border-radius:var(--r);
+  background:var(--card);
+  font-family:'EB Garamond',serif; font-size:1.05rem; color:var(--ink);
+  outline:none; transition:border-color .2s,box-shadow .2s;
+  box-shadow:var(--shadow-sm);
+}
+#search::placeholder { color:var(--ink-light); font-style:italic; }
+#search:focus {
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(140,109,31,.12),var(--shadow-sm);
+}
+
+.filters-row { display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
+.filter-label {
+  font-family:'Cinzel',serif; font-size:.7rem;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-light); margin-right:6px; flex-shrink:0;
+}
+.tag-btn {
+  padding:5px 13px;
+  border:1.5px solid var(--border); border-radius:2px;
+  background:transparent;
+  font-family:'EB Garamond',serif; font-size:.88rem; color:var(--ink-mid);
+  cursor:pointer; transition:all .16s; letter-spacing:.02em; white-space:nowrap;
+}
+.tag-btn:hover { background:rgba(140,109,31,.1); border-color:var(--gold); color:var(--ink); }
+.tag-btn.active {
+  background:var(--gold); border-color:var(--gold);
+  color:#fff; font-weight:600; letter-spacing:.03em;
+}
+
+/* ── INFO ── */
+.results-info {
+  max-width:1240px; margin:20px auto 0; padding:0 24px;
+  font-size:.82rem; color:var(--ink-light);
+  letter-spacing:.06em; text-transform:uppercase;
+  font-family:'Cinzel',serif;
+}
+
+/* ── GRID ── */
+.grid {
+  max-width:1240px; margin:16px auto 100px;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  gap:18px;
+}
+
+/* ── CARD ── */
+.card {
+  background:var(--card);
+  border:1px solid var(--border); border-radius:var(--r);
+  padding:24px 22px 20px;
+  box-shadow:var(--shadow-sm);
+  display:flex; flex-direction:column; position:relative;
+  transition:transform .22s,box-shadow .22s,border-color .22s;
+  animation:fadeUp .3s ease both; overflow:hidden;
+}
+.card::before {
+  content:''; position:absolute;
+  top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-bright) 50%,var(--gold) 100%);
+  opacity:0; transition:opacity .22s;
+}
+.card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:var(--border-med); }
+.card:hover::before { opacity:1; }
+
+.cat-badge {
+  display:inline-flex; align-items:center; gap:5px;
+  font-family:'Cinzel',serif; font-size:.63rem;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:9px;
+}
+.cat-badge::before {
+  content:''; width:14px; height:1px;
+  background:var(--gold-pale); display:inline-block;
+}
+
+.card-title {
+  font-family:'Cinzel',serif; font-size:1.05rem; font-weight:600;
+  color:var(--ink); line-height:1.3; margin-bottom:5px;
+}
+.card-title a { color:inherit; text-decoration:none; transition:color .16s; }
+.card-title a:hover { color:var(--gold); }
+.link-badge {
+  display:inline-block; font-size:.55rem; vertical-align:super;
+  margin-left:4px; color:var(--gold); opacity:0;
+  transition:opacity .16s; font-family:'EB Garamond',serif;
+}
+.card-title a:hover .link-badge { opacity:1; }
+
+.card-author {
+  font-size:.88rem; color:var(--ink-light);
+  font-style:italic; line-height:1.4;
+}
+
+.card-divider {
+  width:28px; height:1px;
+  background:var(--gold-pale);
+  margin:13px 0; flex-shrink:0;
+}
+
+.card-desc {
+  font-size:.93rem; color:var(--ink-mid);
+  line-height:1.72; flex:1;
+}
+
+.card-footer {
+  margin-top:15px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.cat-pill {
+  font-size:.7rem; color:var(--ink-light);
+  border:1px solid var(--border); padding:2px 9px; border-radius:1px;
+  letter-spacing:.05em; background:rgba(140,109,31,.05);
+}
+.usul-link {
+  font-size:.75rem; color:var(--gold);
+  text-decoration:none; letter-spacing:.04em;
+  font-family:'Cinzel',serif;
+  border-bottom:1px solid transparent;
+  transition:border-color .15s;
+}
+.usul-link:hover { border-color:var(--gold); }
+
+.empty {
+  grid-column:1/-1; text-align:center;
+  padding:100px 24px; color:var(--ink-light);
+  font-style:italic; font-size:1.15rem;
+}
+
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ── CATEGORY ACCENT COLORS ── */
+[data-cat="Sarf"]             .cat-badge { color:#6e5010; }
+[data-cat="Nahiv"]            .cat-badge { color:#3a6a10; }
+[data-cat="Belagat"]          .cat-badge { color:#104a7a; }
+[data-cat="Mantık"]           .cat-badge { color:#6a104a; }
+[data-cat="Fıkıh"]            .cat-badge { color:#7a2810; }
+[data-cat="Fıkıh Usulü"]      .cat-badge { color:#5a2010; }
+[data-cat="Ferâiz"]           .cat-badge { color:#7a4810; }
+[data-cat="Kelâm / Akâid"]    .cat-badge { color:#10387a; }
+[data-cat="Hadis"]            .cat-badge { color:#106a3a; }
+[data-cat="Hadis Usulü"]      .cat-badge { color:#105a30; }
+[data-cat="Tefsir"]           .cat-badge { color:#481a7a; }
+[data-cat="Tefsir Usulü"]     .cat-badge { color:#381a6a; }
+[data-cat="Kıraat / Tecvid"]  .cat-badge { color:#7a1010; }
+[data-cat="Tasavvuf"]         .cat-badge { color:#10587a; }
+[data-cat="Hikmet"]           .cat-badge { color:#386a10; }
+[data-cat="Hey'et"]           .cat-badge { color:#102a7a; }
+[data-cat="Hesap"]            .cat-badge { color:#5a4010; }
+[data-cat="Tıp"]              .cat-badge { color:#7a1030; }
+
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr}
+  header{padding:48px 16px 36px}
+  .controls,.results-info,.grid{padding-left:16px;padding-right:16px}
+}
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Medrese Kitapları",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/faith/Islamic-Studies/madrasa-books.html",
+  "description": "A structured guide to the classical madrasa curriculum — the foundational texts in Arabic grammar, logic, theology, jurisprudence, and Islamic sciences."
+}
+  </script>
+
+  <meta name="description" content="A structured guide to the classical madrasa curriculum — the foundational texts in Arabic grammar, logic, theology, jurisprudence, and Islamic sciences." />
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/faith/" style="color:#2d5a4a;text-decoration:none;">Faith</a> <span style="opacity:0.5">›</span> <span>Islamic Studies</span> <span style="opacity:0.5">›</span> <span>Medrese Kitapları</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Faith",
+      "item": "https://yasirbilgin.com/faith/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Medrese Kitapları",
+      "item": "https://yasirbilgin.com/faith/Islamic-Studies/madrasa-books.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<header>
+  <div class="orn"><span>✦ ✦ ✦</span></div>
+  <h1>Medrese <em>Kitapları</em></h1>
+  <div class="h-sub">Osmanlı medreselerinde okutulan dersler ve ders kitapları</div>
+  <div class="h-rule"></div>
+  <div class="h-meta" id="hdr-meta"></div>
+</header>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input id="search" type="text" placeholder="Eser adı, yazar veya konu ile arayın…" autocomplete="off">
+  </div>
+  <div class="filters-row" id="filters">
+    <span class="filter-label">İlim Dalı</span>
+    <button class="tag-btn active" data-f="all">Tümü</button>
+  </div>
+</div>
+
+<div class="results-info" id="info"></div>
+<div class="grid" id="grid"></div>
+
+<script>
+const BOOKS = [
+  {cat:"Fıkıh Usulü",    name:"Şârihu'l-Menâr",                                       author:"Abdülhalim Efendi (ö.1678)",                                        url:"",                                                                           desc:"Menâr üzerine yazılmış bir diğer önemli şerh olup medreselerde yardımcı kaynak olarak kullanılmıştır."},
+  {cat:"Tasavvuf",        name:"Mektûbât-ı İmâm-ı Rabbânî",                            author:"Ahmed Sirhindî (ö.1624)",                                           url:"",                                                                           desc:"Tasavvufî mektuplardan oluşan bu eser, Nakşibendî düşüncenin temel metinlerinden biri olup tasavvufî eğitimde önemli bir yer tutar."},
+  {cat:"Sarf",            name:"Merâh",                                                  author:"Ahmed b. Ali b. Mesud (ö.?)",                                        url:"",                                                                           desc:"Sarf ve nahiv konularını kapsayan, özellikle şerhleriyle meşhur olmuş ve medrese öğrencileri arasında yaygın kullanılan bir metindir."},
+  {cat:"Mantık",          name:"er-Risâletü'l-Esîriyye fi'l-Mantık (İsagûcî)",         author:"El-Ebherî (ö.1266)",                                                url:"",                                                                           desc:"Mantığın temel kavramlarını (tasavvur ve tasdik) öğreten kısa ama yoğun içerikli giriş metnidir."},
+  {cat:"Tasavvuf",        name:"er-Risâletü'l-Kuşeyriyye",                              author:"El-Kuşeyrî (ö.1072)",                                               url:"https://usul.ai/t/risala-qushayriyya",                                       desc:"Tasavvufun temel kavramlarını, makamlarını ve adabını sistematik şekilde ele alan klasik bir tasavvuf eseridir."},
+  {cat:"Kıraat / Tecvid", name:"Karabaş Tecvidi",                                       author:"Ali Efendi (Halveti Şeyhi) / Abdurrahim Karabaşî (ö.1498)",          url:"",                                                                           desc:"Tecvid kurallarını Türkçe olarak öğreten, Osmanlı döneminde yaygın kullanılan pratik bir eğitim metni olup özellikle doğru Kur'an okuma üzerine yoğunlaşır."},
+  {cat:"Kıraat / Tecvid", name:"Dürr-i Yetim (Dürrü'l-Yetîm fî İlmi't-Tecvîd)",       author:"Birgivî Muhammed Efendi (ö.1573)",                                   url:"",                                                                           desc:"Tecvid ilminin temel kurallarını sistemli şekilde sunan ve medreselerde okutulan, anlaşılır ve öğretici bir klasik eserdir."},
+  {cat:"Nahiv",           name:"Avâmil",                                                 author:"Birgivî Muhammed Efendi (ö.1573)",                                   url:"https://archive.org/details/nahiv-cumlesi/page/n23/mode/2up",                                                                           desc:"Arapça cümlede kelimelerin sonlarını etkileyen unsurları (âmil) açıklayan, kısa ama yoğun içeriğiyle temel nahiv kitabı olarak okutulmuştur."},
+  {cat:"Nahiv",           name:"İzhâr (İzhâru'l-Esrâr fi'n-Nahv)",                      author:"Birgivî Muhammed Efendi (ö.1573)",                                   url:"https://archive.org/details/nahiv-cumlesi/page/n23/mode/2up",                                                                           desc:"Avâmil'deki konuları daha derinlemesine işleyen, i'rab sistemini detaylı şekilde açıklayan önemli bir nahiv eseridir."},
+  {cat:"Kelâm / Akâid",  name:"Şerhu Akâidi Adûdiye",                                  author:"Celâleddin ed-Devvânî (ö.1502)",                                     url:"",                                                                           desc:"Akâid konularını açıklayan ve yorumlayan, medreselerde yaygın olarak okutulan önemli bir kelâm şerhidir."},
+  {cat:"Fıkıh",           name:"Mahallî",                                                author:"Celâleddin el-Mahallî (ö.1459)",                                     url:"",                                                                           desc:"Fıkıh ve tefsir alanında eserleri olan Mahallî'nin, fıkhî meseleleri açıklayan öğretici metinlerinden biridir."},
+  {cat:"Fıkıh Usulü",    name:"Takvîmü'l-Edille",                                      author:"Ed-Debûsî (ö.1038)",                                                url:"https://usul.ai/t/taqwim",                                                   desc:"Fıkıh usulünün temel prensiplerini ortaya koyan ve Hanefi metodolojisinin önemli kaynaklarından biridir."},
+  {cat:"Fıkıh",           name:"Ekmel (el-İnâye)",                                      author:"El-Babertî (ö.1348)",                                               url:"",                                                                           desc:"Hidâye üzerine yazılmış önemli bir şerh olup fıkhi meseleleri daha ayrıntılı şekilde ele alır."},
+  {cat:"Hadis",           name:"Mesâbîh / Mişkât",                                      author:"El-Begavî (ö.1126)",                                                url:"https://usul.ai/t/masabih-sunna",                                            desc:"Hadisleri konu başlıklarına göre sınıflandırarak sunan, eğitim amaçlı kullanılan sistematik bir hadis derlemesidir."},
+  {cat:"Kelâm / Akâid",  name:"Tevâli'u Envâr",                                        author:"El-Beydâvî (ö.1286)",                                               url:"https://usul.ai/t/tafsir-al-baydawi",                                        desc:"Kelâm ve metafizik konularını sistematik olarak inceleyen, medreselerde okutulan klasik bir eserdir."},
+  {cat:"Hadis",           name:"Delâilü'n-Nübüvve",                                     author:"El-Beyhakî (ö.1065)",                                               url:"https://usul.ai/t/dalail-nubuwwa-3",                                         desc:"Peygamberliğin delillerini ve mucizeleri anlatan kapsamlı bir hadis eseridir."},
+  {cat:"Fıkıh Usulü",    name:"el-Mugni",                                              author:"El-Habbâzî (ö.1272)",                                               url:"https://usul.ai/t/al-mughni-fi-usul-al-fiqh",                               desc:"Fıkıh usulüne dair meseleleri ele alan, medreselerde yardımcı kaynak olarak okutulan önemli bir eserdir."},
+  {cat:"Fıkıh",           name:"Mültekâ (Mültekâ'l-Ebhûr)",                             author:"El-Halebî (ö.1549)",                                                url:"https://usul.ai/t/multaqa-al-abhur",                                         desc:"Hanefi mezhebindeki farklı görüşleri bir araya getirerek pratik bir hukuk metni haline getiren, Osmanlı'da en çok kullanılan fıkıh kitaplarından biridir."},
+  {cat:"Hadis",           name:"İnsânü'l-Uyûn fî Sîreti'l-Emîni'l-Me'mûn",             author:"El-Halebî (ö.1634)",                                                url:"",                                                                           desc:"Hz. Peygamber'in hayatını detaylı şekilde anlatan siyer eserlerinden biri olup tarihsel ve rivayet temelli bilgiler içerir."},
+  {cat:"Fıkıh",           name:"ed-Dürrü'l-Muhtâr",                                    author:"El-Haskefî (ö.1676)",                                               url:"https://usul.ai/t/al-durr-al-muntaqa-fi-sharh-al-multaqa",                   desc:"Hanefi fıkhının klasik hükümlerini sistematik şekilde sunan ve üzerine birçok hâşiye yazılmış önemli bir eserdir."},
+  {cat:"Kelâm / Akâid",  name:"Şerhu't-Tecrîd",                                        author:"El-İsfehânî (ö.1348)",                                              url:"",                                                                           desc:"Tecrîd metnini açıklayan ve genişleten, kelâm konularını daha anlaşılır hale getiren önemli bir şerhtir."},
+  {cat:"Hadis",           name:"İrşâdu's-Sârî li-Şerhi Sahihil-Buhârî",                 author:"El-Kastalânî (ö.1517)",                                             url:"https://usul.ai/t/irshad-sari",                                              desc:"Sahih-i Buhârî üzerine yazılmış kapsamlı bir şerh olup hadislerin anlamını ve bağlamını detaylı şekilde açıklar."},
+  {cat:"Fıkıh",           name:"Kudûrî (Muhtasaru'l-Kudûrî)",                           author:"El-Kudûrî (ö.1036)",                                                url:"https://usul.ai/t/mukhtasar-4",                                              desc:"Hanefi fıkhının en temel özet metinlerinden biri olup başlangıç seviyesinde okutulan klasik bir ders kitabıdır."},
+  {cat:"Fıkıh",           name:"Vikâye",                                                 author:"El-Mahbubî (ö.1274)",                                               url:"https://usul.ai/t/al-wiqaya",                                                desc:"Hanefi fıkhını sistematik şekilde özetleyen ve medreselerde temel metin olarak okutulan önemli bir eserdir."},
+  {cat:"Fıkıh",           name:"Bidâyetü'l-Mübtedî",                                    author:"El-Merginânî (ö.1197)",                                             url:"https://usul.ai/t/bidayat-al-mubtadi",                                       desc:"Hanefi fıkhının temel meselelerini özetleyen ve Hidâye'nin temelini oluşturan başlangıç seviyesinde bir metindir."},
+  {cat:"Fıkıh",           name:"Hidâye",                                                 author:"El-Merginânî (ö.1197)",                                             url:"https://usul.ai/t/al-hidayah-sharh-bidayat-al-mubtadi",                     desc:"Hanefi fıkhının en önemli klasiklerinden biri olup hükümlerin delilleriyle birlikte açıklandığı kapsamlı bir eserdir."},
+  {cat:"Fıkıh Usulü",    name:"Usûlü Pezdevî",                                         author:"El-Pezdevî (ö.1089)",                                               url:"https://usul.ai/t/usul-al-bazdawi",                                          desc:"Hanefi usulünün klasik eserlerinden biri olup hüküm çıkarma yöntemlerini sistemli şekilde açıklar."},
+  {cat:"Fıkıh Usulü",    name:"Menâr (Menârü'l-Envâr)",                                author:"En-Nesefî (ö.1310)",                                                url:"https://usul.ai/t/manar-al-anwar-fi-usul-al-fiqh",                           desc:"Fıkıh usulünü özetleyen ve şerhleriyle birlikte medreselerde yaygın olarak okutulan temel bir metindir."},
+  {cat:"Hadis",           name:"Meşârık",                                                author:"Es-Sâgânî (ö.1253)",                                                url:"https://usul.ai/t/mashariq-al-anwar-al-nabawiyya-min-sihah-al-akhbar-al-mustafawiyya", desc:"Sahih hadisleri derleyen ve özellikle eğitim amacıyla kullanılan önemli hadis koleksiyonlarından biridir."},
+  {cat:"Kıraat / Tecvid", name:"Şâtıbiyye",                                             author:"Eş-Şâtıbî (ö.1194)",                                               url:"https://usul.ai/t/hirz-amani",                                               desc:"Yedi kıraat sistemini manzum olarak sunan ve ezberlenerek öğrenilen, kıraat ilminin temel eserlerinden biridir."},
+  {cat:"Ferâiz",          name:"Ferâizü's-Secâvendî (Ferâiz-i Sirâciye)",               author:"Es-Secâvendî (ö.1200)",                                             url:"https://usul.ai/t/al-faraid-al-sirajiyya",                                   desc:"Miras hukukunu sistematik şekilde ele alan, paylaştırma kurallarını detaylı olarak açıklayan klasik bir ferâiz kitabıdır."},
+  {cat:"Fıkıh",           name:"Tenbîh",                                                 author:"Eş-Şirâzî (ö.1083)",                                               url:"",                                                                           desc:"Şafiî fıkhına dair temel konuları ele alan ve medreselerde giriş metni olarak okutulan önemli bir eserdir."},
+  {cat:"Fıkıh Usulü",    name:"Cem'u'l-Cevâmî",                                        author:"Es-Subkî (ö.1355)",                                                 url:"https://usul.ai/t/jam-al-jawami",                                            desc:"Şafiî fıkıh usulünü özetleyen ve ezberlenerek öğrenilen, sistematik yapısıyla medreselerde yaygın kullanılan bir metindir."},
+  {cat:"Tefsir Usulü",   name:"İtkân (el-İtkân fî Ulûmi'l-Kur'ân)",                    author:"Es-Suyûtî (ö.1505)",                                                url:"https://usul.ai/t/itqan",                                                    desc:"Kur'an ilimlerini daha geniş ve sistemli şekilde ele alan, tefsir metodolojisinin en kapsamlı klasiklerinden biridir."},
+  {cat:"Mantık",          name:"İsagûcî",                                                author:"Esîruddin el-Ebherî (ö.1266)",                                       url:"",                                                                           desc:"Mantığın temel kavramlarını (tasavvur ve tasdik) kısa ve öz şekilde öğreten, medrese mantık eğitiminin giriş kitabıdır."},
+  {cat:"Fıkıh Usulü",    name:"et-Telvîh fî Keşfi Hakâiki't-Tenkîh",                   author:"Et-Teftâzânî (ö.1389)",                                             url:"https://usul.ai/t/al-talwih-fi-kashf-haqaiq-al-tanqih",                     desc:"Tenkîh üzerine yazılmış kapsamlı bir şerh olup fıkıh usulünün derin meselelerini analiz eden ileri düzey bir eserdir."},
+  {cat:"Fıkıh",           name:"Tenvîru'l-Ebsâr",                                      author:"Et-Timurtâşî (ö.1595)",                                             url:"",                                                                           desc:"Hanefi fıkhını özetleyen ve daha sonra Dürrü'l-Muhtâr gibi şerhlere temel oluşturan önemli bir metindir."},
+  {cat:"Hadis",           name:"Şemâil-i Şerif",                                        author:"Et-Tirmizî (ö.892)",                                                url:"https://usul.ai/t/shamail-muhammadiyya",                                     desc:"Hz. Peygamber'in fiziksel özelliklerini ve günlük hayatını anlatan önemli bir hadis koleksiyonudur."},
+  {cat:"Tefsir",          name:"Keşşâf (el-Keşşâf an Hakâiki't-Tenzîl)",               author:"Ez-Zemahşerî (ö.1143)",                                             url:"https://usul.ai/t/kashshaf",                                                 desc:"Dil ve belagat açısından Kur'an ayetlerini derinlemesine analiz eden, edebî yönü güçlü ve dirayet tefsirinin en önemli örneklerinden biridir."},
+  {cat:"Tefsir Usulü",   name:"Burhân-ı Zerkeşî (el-Burhân fî Ulûmi'l-Kur'ân)",       author:"Ez-Zerkeşî (ö.1392)",                                               url:"https://usul.ai/t/burhan-fi-culum-quran",                                    desc:"Kur'an ilimlerini sistematik şekilde ele alan, ayetlerin inişi, dili ve anlamı gibi konuları inceleyen kapsamlı bir usul kitabıdır."},
+  {cat:"Fıkıh",           name:"Kenzü'd-Dekâîk Şerhi / Meraku'l-Felâh",               author:"Ez-Zeylâî (ö.1342)",                                                url:"https://usul.ai/t/tabyin-haqaiq",                                            desc:"Hanefi fıkhının temel metinlerinden biri üzerine yazılmış şerh olup ibadet ve muamelat konularını detaylandırır."},
+  {cat:"Fıkıh",           name:"Muhtasar-ı Halil",                                      author:"Halil b. İshak el-Cündî (ö.1374)",                                   url:"",                                                                           desc:"Malikî mezhebinin en önemli özet fıkıh metinlerinden biri olup sistematik yapısıyla dikkat çeker."},
+  {cat:"Kelâm / Akâid",  name:"Şerh-i Hayâlî",                                         author:"Hayâlî (ö.1481)",                                                   url:"",                                                                           desc:"Nesefî akâidi üzerine yazılmış önemli bir hâşiye olup ileri düzey öğrenciler için açıklayıcı bir metindir."},
+  {cat:"Mantık",          name:"Hüseyniyye",                                             author:"Hüseyin Şah Çelebi (ö.1512)",                                        url:"",                                                                           desc:"Münazara ve tartışma adabını ele alan, mantığın uygulamalı yönüne odaklanan bir eserdir."},
+  {cat:"Fıkıh",           name:"İbn Âbidîn (Reddü'l-Muhtâr ale'd-Dürri'l-Muhtâr)",    author:"İbn Âbidîn (ö.1836)",                                               url:"https://usul.ai/t/hashiyat-ibn-abidin",                                      desc:"Hanefi fıkhının en kapsamlı hâşiyelerinden biri olup klasik görüşleri sistematik şekilde açıklayan ve uygulamaya dönük fetva kaynağı olarak kullanılan temel bir eserdir."},
+  {cat:"Tıp",             name:"el-Mûcez fî't-Tıbb",                                   author:"İbn en-Nefîs (ö.1288)",                                             url:"",                                                                           desc:"Tıp ilmini özetleyen bu eser, özellikle anatomi ve fizyoloji alanındaki katkılarıyla İslam tıp geleneğinde önemli bir yer tutar."},
+  {cat:"Tasavvuf",        name:"el-Fütûhâtü'l-Mekkiyye",                               author:"İbn Arabî (ö.1240)",                                                url:"https://usul.ai/t/futuhat-makkiyya",                                         desc:"Tasavvuf, metafizik ve kozmoloji konularını kapsayan, İbn Arabî'nin en geniş ve en derin eserlerinden biridir."},
+  {cat:"Tasavvuf",        name:"Fusûsü'l-Hikem",                                        author:"İbn Arabî (ö.1240)",                                                url:"https://usul.ai/t/fusus-hikam",                                              desc:"Peygamberler üzerinden ilahi hikmetleri açıklayan, tasavvuf düşüncesinin en yoğun ve yorum gerektiren metinlerinden biridir."},
+  {cat:"Fıkıh",           name:"Umde (Umdetü'l-Ahkâm)",                                author:"İbn Dakîkü'l-İyd (ö.1302)",                                          url:"",                                                                           desc:"Fıkhî hükümlerle ilgili hadisleri toplayan ve hadis ile fıkıh arasındaki ilişkiyi kuran önemli bir eserdir."},
+  {cat:"Hadis Usulü",    name:"Nuhbe (Nuhbetü'l-Fiker)",                               author:"İbn Hacer (ö.1447)",                                                url:"https://usul.ai/t/nukhbat-al-fikar-fi-mustalah-ahl-al-athar",               desc:"Hadis usulünü kısa ve sistematik şekilde özetleyen, medrese eğitiminde yaygın kullanılan bir giriş kitabıdır."},
+  {cat:"Fıkıh",           name:"Muhtasar (Câmiʿu'l-ümmehât)",                          author:"İbn Hâcib (ö.1174)",                                                url:"https://usul.ai/t/jamic-ummahat",                                            desc:"Mâlikî fıkhına dair temel başvuru kaynağı. Mağrib bölgesinde büyük kabul gören bu yoğun metin, Mâlikî fıkhının sistematikleşmesinde bir dönüm noktası olmuştur."},
+  {cat:"Nahiv",           name:"Kâfiye",                                                 author:"İbn Hâcib (ö.1174)",                                                url:"https://usul.ai/t/kafiya-fi-cilm-nahw",                                      desc:"Nahiv ilminin ileri düzey konularını ele alan, sadece kuralları değil dilin mantığını da açıklayan klasik bir başvuru kitabıdır."},
+  {cat:"Sarf",            name:"eş-Şâfiye fî't-Tasrîf (Şâfiye)",                       author:"İbn Hâcib (ö.1174)",                                                url:"https://usul.ai/t/shafiya-fi-cilm-tasrif",                                   desc:"Arapça sarf ilminin ileri düzey metinlerinden biri olup kelime türetme ve fiil yapıları üzerine sistematik bir yapı sunar."},
+  {cat:"Nahiv",           name:"Mugni'l-Lebîb",                                          author:"İbn Hişâm (ö.1360)",                                                url:"https://usul.ai/t/mughni-al-labib",                                          desc:"Arapçadaki edatlar ve anlam ilişkilerini derinlemesine inceleyen, nahiv alanında en gelişmiş analizlerden birini sunan önemli bir eserdir."},
+  {cat:"Fıkıh",           name:"Muknî",                                                  author:"İbn Kudâme (ö.1233)",                                               url:"https://usul.ai/t/muqnic-fi-fiqh",                                           desc:"Hanbelî fıkhının temel eserlerinden biri olup mezhebin görüşlerini sistematik şekilde sunar."},
+  {cat:"Nahiv",           name:"Elfiye",                                                  author:"İbn Mâlik (ö.1273)",                                                url:"https://usul.ai/t/alfiyyat-ibn-malik",                                       desc:"Nahiv kurallarını 1000 beyitlik manzum bir formatta sunan, ezberlenerek öğrenilen ve üzerine yüzlerce şerh yazılmış temel bir metindir."},
+  {cat:"Hadis",           name:"İbn Melek (Mebâriku'l-Ezhâr)",                          author:"İbn Melek (ö.1398)",                                                url:"",                                                                           desc:"Meşârık üzerine yazılmış bir şerh olup hadislerin anlamlarını açıklayan önemli bir medrese metnidir."},
+  {cat:"Fıkıh Usulü",    name:"İbn Melek (Şerhu Menâri'l-Envâr)",                      author:"İbn Melek (ö.1480)",                                                url:"https://usul.ai/t/sharh-manar-al-anwar",                                     desc:"Menâr üzerine yazılmış önemli bir şerh olup usul konularını daha anlaşılır hale getirir."},
+  {cat:"Fıkıh",           name:"Eşbâh ve'n-Nezâir",                                    author:"İbn Nüceym (ö.1562)",                                               url:"https://usul.ai/t/al-ashbah-wa-al-nazair",                                   desc:"Fıkhî kaideleri ve benzer meseleleri karşılaştırmalı şekilde ele alan, hukuk metodolojisi açısından önemli bir eserdir."},
+  {cat:"Hadis Usulü",    name:"İbn Salah Elfiyesi (Ulûmu Hadis)",                       author:"İbn Salah (ö.1245)",                                                url:"https://usul.ai/t/muqaddimat-culum-hadith",                                  desc:"Hadis ilminin temel kavramlarını ve sınıflandırmalarını açıklayan, usul alanının en önemli metinlerinden biridir."},
+  {cat:"Kelâm / Akâid",  name:"İrşâd",                                                  author:"İbni Mukrî (ö.1434)",                                               url:"https://usul.ai/t/irshad-al-ghawi-ila-masalik-al-hawi",                     desc:"Fıkıh ve kelâm bağlantılı konuları ele alan, özellikle Şafiî geleneğinde kullanılan önemli bir öğretim metnidir."},
+  {cat:"Kıraat / Tecvid", name:"Cezeriyye",                                              author:"İbnü'l-Cezerî (ö.1429)",                                            url:"https://usul.ai/t/al-muqaddimah-al-jazariyah-tahqiq-al-mughni",             desc:"Kur'an kıraat kurallarını manzum şekilde öğreten, tecvid ilminin en önemli klasik eserlerinden biridir."},
+  {cat:"Hadis Usulü",    name:"Câmiu'l-Usûl",                                          author:"İbnü'l-Esîr (ö.1209)",                                              url:"https://usul.ai/t/jamic-usul",                                               desc:"Farklı hadis kaynaklarını bir araya getirerek sistemli şekilde sunan önemli bir derleme ve usul eseridir."},
+  {cat:"Hesap",           name:"el-Fevâʾidü'l-Behâʾiyye",                              author:"İmâdeddin b. Abdullah (ö.?)",                                        url:"",                                                                           desc:"Matematik ve hesap kurallarını ele alan klasik bir risale olup Osmanlı medreselerinde temel hesap metinlerinden biri olarak okutulmuştur."},
+  {cat:"Hadis",           name:"Sahih-i Buhârî (el-Câmiu's-Sahîh)",                    author:"İmam Buhârî (ö.870)",                                               url:"https://usul.ai/t/sahih-al-bukhari",                                         desc:"Sahih hadisleri toplama konusunda en güvenilir eser kabul edilen bu kitap, hadis ilminin en temel kaynaklarından biridir."},
+  {cat:"Fıkıh",           name:"Minhâc",                                                 author:"İmam Nevevî (ö.1277)",                                              url:"https://usul.ai/t/minhaj-talibin",                                           desc:"Şafiî fıkhının temel metinlerinden biri olup kısa ve sistematik yapısıyla medreselerde yaygın olarak okutulmuştur."},
+  {cat:"Hadis",           name:"Kitâbu'l-Erbaîn",                                       author:"İmam Nevevî (ö.1277)",                                              url:"",                                                                           desc:"İslam'ın temel prensiplerini özetleyen kırk hadisi içeren, ezberlenmesi ve öğretilmesi kolay bir hadis koleksiyonudur."},
+  {cat:"Fıkıh Usulü",    name:"Mir'ât Hâşiyesi",                                       author:"İzmirli Muhammed ibn Veli Efendi (ö.1751)",                          url:"",                                                                           desc:"Mir'ât üzerine yazılmış hâşiye olup metni açıklayan ve detaylandıran yardımcı bir çalışmadır."},
+  {cat:"Sarf",            name:"İzzî",                                                   author:"İzzeddin Abdülvehhab b. İbrahim ez-Zincânî (ö.1257)",               url:"",                                                                           desc:"Sarf, nahiv ve lugat konularını birlikte ele alan, medreselerde yaygın olarak okutulan ve üzerine birçok şerh yazılmış önemli bir gramer eseridir."},
+  {cat:"Hadis",           name:"Kitabu'ş-Şifâ",                                         author:"Kadı İyâz (ö.1150)",                                                url:"https://usul.ai/t/shifa",                                                    desc:"Hz. Peygamber'in faziletlerini, ahlakını ve mucizelerini anlatan klasik bir siyer ve hadis eseridir."},
+  {cat:"Hadis",           name:"Meşârıku'l-Envâr alâ Sıhâhı'l-Asâr",                  author:"Kadı İyâz (ö.1150)",                                                url:"https://usul.ai/t/mashariq-anwar",                                           desc:"Sahih hadisleri bir araya getiren ve sistematik şekilde sunan önemli bir hadis derlemesidir."},
+  {cat:"Hikmet",          name:"Şerhu Hidâyeti'l-Hikme (Kadımir)",                      author:"Kadı Mîr Hüseyin b. Mu'înüddin el-Meybûdî (ö.?)",                   url:"",                                                                           desc:"Mantık, fizik ve metafizik konularını kapsayan 'Hidâyetü'l-Hikme' üzerine yazılmış şerh olup hikmet ilminin temel metinlerindendir."},
+  {cat:"Mantık",          name:"Şerhu'l-Metâliʿ",                                       author:"Kadı Siraceddin Mahmud el-Urmevî (ö.1283)",                          url:"",                                                                           desc:"Mantık ve özellikle kıyas teorisini ele alan 'Metâliʿu'l-Envâr' üzerine yazılmış önemli bir şerhtir."},
+  {cat:"Hesap",           name:"er-Risâletü'l-Muhammediyye (Muhammediye)",              author:"Kadızâde-i Rûmî (ö.1436)",                                          url:"",                                                                           desc:"Matematik ve astronomi alanında yazılmış olup geometri ve hesap konularını sistematik şekilde sunan önemli bir eserdir."},
+  {cat:"Hikmet",          name:"Şerh-i Çağminî",                                        author:"Kadızâde-i Rûmî (ö.1436)",                                          url:"",                                                                           desc:"Çağminî'nin astronomi metni üzerine yazılmış olup gök cisimleri ve evren yapısını açıklayan önemli bir yorum eseridir."},
+  {cat:"Mantık",          name:"Şerhu'ş-Şemsiyye",                                     author:"Kutbüddin Şirâzî (ö.1311) — metin: Necmeddin el-Kazvinî (ö.1293)", url:"",                                                                           desc:"Mantığın en sistematik metinlerinden biri olan Şemsiyye üzerine yazılmış kapsamlı bir şerhtir."},
+  {cat:"Tefsir",          name:"Celâleyn Tefsiri",                                       author:"Mahallî – Suyûtî",                                                  url:"https://usul.ai/t/tafsir-jalalayn",                                          desc:"Kur'an tefsirini kısa ve öz şekilde açıklayan, öğrenciler için anlaşılır yapısıyla en yaygın başvuru tefsirlerinden biridir."},
+  {cat:"Hey'et",          name:"el-Mülehhas fî'l-Hey'e (Çağminî)",                     author:"Mahmud el-Chaghmini (ö.1221)",                                       url:"",                                                                           desc:"Astronomi ve kozmoloji konularını özetleyen, medreselerde en yaygın okutulan hey'et (astronomi) kitaplarından biridir."},
+  {cat:"Hey'et",          name:"Şerhu'l-Fethiyye fî İlmi'l-Hey'e",                     author:"Mirim Çelebi (ö.1525)",                                             url:"",                                                                           desc:"Uluğ Bey ve Ali Kuşçu geleneğine dayanan astronomi bilgisini açıklayan ve geliştiren önemli bir şerh eseridir."},
+  {cat:"Mantık",          name:"Şerh-i İsagûcî (Fenarî)",                               author:"Molla Fenarî (ö.1431)",                                             url:"",                                                                           desc:"İsagûcî üzerine yazılmış olup kıyas ve mantık ilkelerini açıklayan medreselerde yaygın okutulan bir şerhtir."},
+  {cat:"Fıkıh",           name:"Dûreru'l-Hukkâm fî Şerh-i Gureri'l-Ahkâm",            author:"Molla Hüsrev (ö.1480)",                                             url:"https://usul.ai/t/durar-hukkam",                                             desc:"Fıkhî hükümleri detaylı şekilde açıklayan ve özellikle Osmanlı medreselerinde yaygın olarak okutulan sistematik bir şerh eseridir."},
+  {cat:"Fıkıh Usulü",    name:"Mir'ât",                                                 author:"Molla Hüsrev (ö.1480)",                                             url:"https://usul.ai/t/mirat-al-usul-fi-sharh-mirqat-al-wusul",                  desc:"Fıkıh usulünü sistematik şekilde sunan ve Osmanlı medreselerinde yaygın olarak okutulan önemli bir eserdir."},
+  {cat:"Kelâm / Akâid",  name:"Kelâm risalesi",                                         author:"Müeyyedzâde Abdurrahman Efendi (ö.1516)",                             url:"",                                                                           desc:"Kelâm konularını özet şekilde ele alan, medrese eğitiminde yardımcı metin olarak kullanılan bir risaledir."},
+  {cat:"Tasavvuf",        name:"Mektûbât-ı Muhammed Ma'sûm",                            author:"Muhammed Ma'sûm (ö.1668)",                                          url:"",                                                                           desc:"İmam Rabbânî'nin oğluna ait olan bu mektuplar, Nakşibendî tasavvuf anlayışını açıklayan önemli bir devam metnidir."},
+  {cat:"Fıkıh",           name:"Mevkûfât",                                               author:"Muhammed Mevkufâtî (ö.1654)",                                        url:"",                                                                           desc:"Fıkhî meseleleri kısa ve özet şekilde ele alan, öğretim ve tekrar amacıyla kullanılan yardımcı bir metindir."},
+  {cat:"Kelâm / Akâid",  name:"Tecrîdü'l-Kelâm",                                       author:"Nasîruddin et-Tûsî (ö.1274)",                                       url:"",                                                                           desc:"Kelâm ilminin temel meselelerini felsefi bir çerçevede ele alan ve medreselerde ana metin olarak okutulan önemli bir eserdir."},
+  {cat:"Tefsir",          name:"Kadı Beydâvî (Envâru't-Tenzîl ve Esrâru't-Te'vil)",    author:"Nasreddin Abdullah el-Beydâvî (ö.1286)",                             url:"",                                                                           desc:"Rivayet ve dirayet tefsirini birleştiren, kısa ama yoğun anlatımıyla medreselerde en yaygın okutulan klasik tefsirlerden biridir."},
+  {cat:"Mantık",          name:"Şemsiyye",                                               author:"Necmeddin el-Kazvinî (ö.1293)",                                      url:"",                                                                           desc:"Mantığın sistematik yapısını ortaya koyan, özellikle kıyas ve akıl yürütme yöntemlerini detaylı şekilde işleyen önemli bir metindir."},
+  {cat:"Kelâm / Akâid",  name:"Akâid-i Nesefî",                                        author:"Ömer en-Nesefî (ö.1142)",                                            url:"",                                                                           desc:"Ehl-i sünnet inanç esaslarını kısa ve öz şekilde ortaya koyan, medrese eğitiminde temel akâid metinlerinden biridir."},
+  {cat:"Tasavvuf",        name:"Mesnevî",                                                 author:"Mevlânâ Celâleddin Rûmî (ö.1273)",                                  url:"",                                                                           desc:"Tasavvufî hikâyeler ve semboller üzerinden insanın manevi yolculuğunu anlatan, İslam dünyasının en etkili eserlerinden biridir."},
+  {cat:"Belagat",         name:"Mutavvel",                                                author:"Sa'düddin et-Teftâzânî (ö.1390)",                                   url:"",                                                                           desc:"Telhis üzerine yazılmış geniş bir şerh olup Kur'an'ın edebî inceliklerini açıklayan en kapsamlı belagat kitaplarından biridir."},
+  {cat:"Belagat",         name:"Muhtasar",                                                author:"Sa'düddin et-Teftâzânî (ö.1390)",                                   url:"https://usul.ai/t/mukhtasar-macani",                                         desc:"Mutavvel'in kısaltılmış versiyonu olup, belagat ilmini daha sistematik ve özet bir şekilde sunar."},
+  {cat:"Belagat",         name:"Telhîs",                                                  author:"Sa'düddin et-Teftâzânî (ö.1390)",                                   url:"",                                                                           desc:"Belagat ilminin temel konularını sade ve sistemli bir şekilde açıklayan, medreselerde yaygın okutulan ana metinlerden biridir."},
+  {cat:"Fıkıh Usulü",    name:"Tavzih ve Tenkih",                                       author:"Sadrüşşerîa (ö.1274)",                                              url:"",                                                                           desc:"Fıkıh usulü konularını detaylı şekilde ele alan ve medreselerde ana metin olarak okutulan eserlerdir."},
+  {cat:"Fıkıh Usulü",    name:"Tenkîhu'l-Usûl",                                        author:"Sadrüşşerîa (ö.1274)",                                              url:"",                                                                           desc:"Fıkıh usulünün temel prensiplerini sistematik şekilde ele alan ve medreselerde ana metin olarak okutulan önemli bir eserdir."},
+  {cat:"Fıkıh",           name:"Sadrüşşerîa Şerhi / Nikâye",                           author:"Sadrüşşerîa (ö.1349)",                                              url:"",                                                                           desc:"Vikâye üzerine yazılmış açıklayıcı bir şerh olup fıkhî meseleleri detaylandırır."},
+  {cat:"Hesap",           name:"Eşkâlü't-Te'sîs",                                       author:"Şemseddin Semerkandî (ö.1303)",                                      url:"",                                                                           desc:"Geometriye giriş niteliğinde olup şekiller ve ispat yöntemlerini ele alan, hendese alanında temel bir metindir."},
+  {cat:"Fıkıh Usulü",    name:"Tenkîhu'l-Ahdâs fî Ref'i't-Teyemmümi'l-Ahdâs",        author:"Şerafeddin Ahmed (ö.1369)",                                          url:"",                                                                           desc:"Usul konularına dair özel meseleleri ele alan, özellikle ibadet hükümlerine yönelik tartışmaları içeren bir metindir."},
+  {cat:"Ferâiz",          name:"Şerh-i Feraiz (Şerhu's-Sirâciyye)",                    author:"Seyyid Şerif el-Cürcânî (ö.1413)",                                  url:"https://usul.ai/t/al-sharifiyya-sharh-al-sirajiyya",                        desc:"Secâvendî'nin eserine yazılmış şerh olup miras hükümlerini daha anlaşılır ve detaylı şekilde açıklayan önemli bir metindir."},
+  {cat:"Kelâm / Akâid",  name:"Hâşiye-i Tecrîd",                                       author:"Seyyid Şerif el-Cürcânî (ö.1413)",                                  url:"",                                                                           desc:"Tecrîd üzerine yazılmış en meşhur hâşiyelerden biri olup medreselerde ileri düzey kelâm eğitiminin temel metinlerinden biridir."},
+  {cat:"Kelâm / Akâid",  name:"Şerhu Mevâkıf (Şerhu'l-Adudiyye)",                     author:"Seyyid Şerif el-Cürcânî (ö.1413)",                                  url:"",                                                                           desc:"Kelâmın temel meselelerini geniş kapsamlı şekilde ele alan ve ileri düzeyde okutulan sistematik bir eserdir."},
+  {cat:"Belagat",         name:"Miftâhu'l-Ulûm",                                        author:"Siracüddin es-Sekkâkî (ö.1228)",                                     url:"https://usul.ai/t/miftah-culum",                                             desc:"Belagat ilminin temelini oluşturan bu eser, meânî ve beyân ilimlerini sistematik hale getirmiş ve sonraki tüm belagat çalışmalarına kaynak olmuştur."},
+  {cat:"Mantık",          name:"Kavl-i Ahmed (el-Câmiʿ fi'l-Mantık - muhtemel)",       author:"Taşköprüzâde Ahmed Efendi (ö.1561)",                                 url:"",                                                                           desc:"Mantık konularını özetleyen ve medreselerde okutulan, ancak ismi ve atfı konusunda bazı belirsizlikler bulunan bir risaledir."},
+  {cat:"Hadis",           name:"Mefâtih",                                                 author:"Yakup Avfî (ö.1736)",                                               url:"",                                                                           desc:"Hadis metinlerini açıklamaya yönelik hazırlanmış yardımcı bir eser olup medreselerde destekleyici kaynak olarak kullanılmıştır."},
+  {cat:"Sarf",            name:"Emsile",                                                  author:"Yazarı bilinmiyor",                                                  url:"",                                                                           desc:"Arapça fiil ve isim çekimlerini örnekler üzerinden öğreten, medrese eğitiminde başlangıç seviyesinde ezberlenen temel bir sarf risalesidir."},
+  {cat:"Sarf",            name:"Binâ",                                                    author:"Yazarı bilinmiyor",                                                  url:"",                                                                           desc:"Kelime türetme (tasrif) kurallarını sistematik şekilde veren, öğrencilerin kalıpları ezberleyerek öğrendiği klasik bir sarf kitabıdır."},
+  {cat:"Sarf",            name:"Maksûd",                                                  author:"Yazarı bilinmiyor",                                                  url:"",                                                                           desc:"Fiil çekimleri ve sarf kurallarını daha düzenli bir yapı içinde sunan, Binâ'dan sonra okutulan orta seviyeli bir sarf metnidir."},
+];
+
+// Preferred display order
+const CAT_ORDER = [
+  "Sarf","Nahiv","Belagat","Mantık",
+  "Fıkıh","Fıkıh Usulü","Ferâiz",
+  "Kelâm / Akâid","Hadis","Hadis Usulü",
+  "Tefsir","Tefsir Usulü","Kıraat / Tecvid",
+  "Tasavvuf","Hikmet","Hey'et","Hesap","Tıp"
+];
+
+const CAT_LABELS = {
+  "Sarf":            "Sarf — Morfoloji",
+  "Nahiv":           "Nahiv — Sözdizimi",
+  "Belagat":         "Belagat — Retorik",
+  "Mantık":          "Mantık",
+  "Fıkıh":           "Fıkıh — İslam Hukuku",
+  "Fıkıh Usulü":     "Fıkıh Usulü",
+  "Ferâiz":          "Ferâiz — Miras",
+  "Kelâm / Akâid":   "Kelâm / Akâid",
+  "Hadis":           "Hadis",
+  "Hadis Usulü":     "Hadis Usulü",
+  "Tefsir":          "Tefsir",
+  "Tefsir Usulü":    "Tefsir Usulü",
+  "Kıraat / Tecvid": "Kıraat & Tecvid",
+  "Tasavvuf":        "Tasavvuf",
+  "Hikmet":          "Hikmet — Felsefe",
+  "Hey'et":          "Hey'et — Astronomi",
+  "Hesap":           "Hesap & Hendese",
+  "Tıp":             "Tıp",
+};
+
+const cats = CAT_ORDER.filter(c => BOOKS.some(b => b.cat === c));
+
+// Build filter buttons
+const filtersEl = document.getElementById('filters');
+cats.forEach(c => {
+  const btn = document.createElement('button');
+  btn.className = 'tag-btn';
+  btn.dataset.f = c;
+  btn.textContent = c;
+  filtersEl.appendChild(btn);
+});
+
+document.getElementById('hdr-meta').textContent =
+  `${BOOKS.length} Eser  ·  ${cats.length} İlim Dalı`;
+
+let activeCat = 'all';
+let query = '';
+
+function render() {
+  const q = query.toLowerCase();
+  const filtered = BOOKS.filter(b => {
+    const mc = activeCat === 'all' || b.cat === activeCat;
+    const mq = !q ||
+      b.name.toLowerCase().includes(q)   ||
+      b.author.toLowerCase().includes(q) ||
+      b.desc.toLowerCase().includes(q)   ||
+      b.cat.toLowerCase().includes(q);
+    return mc && mq;
+  });
+
+  document.getElementById('info').textContent =
+    `${filtered.length} / ${BOOKS.length} eser gösteriliyor`;
+
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+
+  if (!filtered.length) {
+    grid.innerHTML = '<div class="empty">Aramanızla eşleşen eser bulunamadı.</div>';
+    return;
+  }
+
+  filtered.forEach((b, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.cat = b.cat;
+    card.style.animationDelay = `${Math.min(i * 0.03, 0.5)}s`;
+
+    const titleInner = b.url
+      ? `<a href="${b.url}" target="_blank" rel="noopener">${b.name}<span class="link-badge">↗</span></a>`
+      : b.name;
+
+    card.innerHTML = `
+      <div class="cat-badge">${CAT_LABELS[b.cat] || b.cat}</div>
+      <div class="card-title">${titleInner}</div>
+      <div class="card-author">${b.author}</div>
+      <div class="card-divider"></div>
+      <div class="card-desc">${b.desc}</div>
+      <div class="card-footer">
+        <span class="cat-pill">${b.cat}</span>
+        ${b.url ? `<a class="usul-link" href="${b.url}" target="_blank" rel="noopener">${b.url.includes('archive.org') ? 'archive.org ↗' : 'usul.ai ↗'}</a>` : ''}
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+filtersEl.addEventListener('click', e => {
+  const btn = e.target.closest('.tag-btn');
+  if (!btn) return;
+  document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeCat = btn.dataset.f;
+  render();
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  query = e.target.value;
+  render();
+});
+
+render();
+</script>
+</article>
+</body>
+</html>

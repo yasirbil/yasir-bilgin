@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta property="og:title"       content="Japanese Survival Language" />
+  <meta property="og:description" content="Essential phrases for travellers" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/learning/Languages/survival-japanese.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Japanese Survival Language" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/learning/Languages/survival-japanese.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+<title>Japanese Survival Language</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+  :root {
+    --ink: #1a1209;
+    --red: #c0392b;
+    --gold: #b8860b;
+    --cream: #faf6ee;
+    --paper: #f2ead8;
+    --fade: #8c7b5e;
+    --light: #e8dfc8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(139,110,60,0.08) 31px, rgba(139,110,60,0.08) 32px);
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 0 1.5rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  header::before {
+    content: '日本語';
+    font-family: 'Noto Serif JP', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: rgba(192,57,43,0.08);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.3em;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.8rem, 6vw, 2rem);
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fade);
+  }
+
+  .corner-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    color: var(--red);
+    position: absolute;
+  }
+  .corner-kanji.tl { top: 0.75rem; left: 0.75rem; }
+  .corner-kanji.tr { top: 0.75rem; right: 0.75rem; }
+
+  .section {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.4rem;
+    color: var(--red);
+    line-height: 1;
+    min-width: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--fade);
+    border-bottom: 1px solid var(--light);
+    padding-bottom: 0.3rem;
+    flex: 1;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    background: var(--cream);
+    border: 1px solid var(--light);
+    padding: 0.6rem 0.75rem;
+    position: relative;
+    transition: border-color 0.15s;
+  }
+
+  .card:hover {
+    border-color: var(--red);
+  }
+
+  .card .en {
+    font-size: 0.62rem;
+    color: var(--fade);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.3rem;
+  }
+
+  .card .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .card .rom {
+    font-size: 0.72rem;
+    color: var(--red);
+    margin-top: 0.2rem;
+    font-style: italic;
+  }
+
+  .card.wide {
+    grid-column: span 2;
+  }
+
+  .card.accent {
+    border-left: 3px solid var(--red);
+  }
+
+  .note-bar {
+    background: var(--ink);
+    color: var(--cream);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.75rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .note-bar span { opacity: 0.7; }
+  .note-bar strong { opacity: 1; color: #f0c040; }
+
+  .phonetics {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.3rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .ph-card {
+    background: var(--ink);
+    color: var(--cream);
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .ph-card .kana {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    display: block;
+  }
+
+  .ph-card .sound {
+    font-size: 0.6rem;
+    opacity: 0.6;
+    letter-spacing: 0.1em;
+  }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.3rem;
+  }
+
+  .num-card {
+    text-align: center;
+    background: var(--cream);
+    border: 1px solid var(--light);
+    padding: 0.5rem 0.2rem;
+  }
+
+  .num-card .digit {
+    font-size: 0.65rem;
+    color: var(--fade);
+    display: block;
+  }
+
+  .num-card .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+  }
+
+  .num-card .rom {
+    font-size: 0.6rem;
+    color: var(--red);
+    font-style: italic;
+    display: block;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+    border-top: 1px solid var(--light);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--fade);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 480px) {
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .numbers { grid-template-columns: repeat(4, 1fr); }
+    .phonetics { grid-template-columns: repeat(4, 1fr); }
+    h1 { font-size: clamp(1.8rem, 6vw, 1.5rem); }
+  }
+  @media print {
+    body { padding: 0.5rem; }
+    .card:hover { border-color: var(--light); }
+  }
+
+
+  @media (max-width: 720px) {
+    /* grid collapse for mobile */
+    .grid { grid-template-columns: 1fr !important; }
+    .grid-3 { grid-template-columns: 1fr !important; }
+     { grid-template-columns: 1fr !important; }
+  }
+
+</style>
+  <meta name="description" content="Essential phrases for travellers" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Japanese Survival Language",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/learning/Languages/survival-japanese.html",
+  "description": "Essential phrases for travellers"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/learning/" style="color:#7a4f1a;text-decoration:none;">Learning</a> <span style="opacity:0.5">›</span> <span>Languages</span> <span style="opacity:0.5">›</span> <span>Japanese Survival Language</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learning",
+      "item": "https://yasirbilgin.com/learning/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Japanese Survival Language",
+      "item": "https://yasirbilgin.com/learning/Languages/survival-japanese.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+<div class="page">
+
+  <header>
+    <span class="corner-kanji tl">旅</span>
+    <span class="corner-kanji tr">生</span>
+    <h1>Survival Japanese</h1>
+    <p class="subtitle">Essential phrases for travellers &amp; beginners</p>
+  </header>
+
+  <!-- Pronunciation tip bar -->
+  <div class="note-bar">
+    <div><span>Vowels: </span><strong>a</strong>=ah &nbsp;<strong>i</strong>=ee &nbsp;<strong>u</strong>=oo &nbsp;<strong>e</strong>=eh &nbsp;<strong>o</strong>=oh</div>
+    <div><span>Double consonant: </span><strong>tt/kk</strong> = short pause before it</div>
+    <div><span>Long vowel: </span><strong>ō/ū</strong> = held longer</div>
+  </div>
+
+  <!-- Greetings -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-kanji">挨</span>
+      <span class="section-title">Greetings &amp; Basics</span>
+    </div>
+    <div class="grid">
+      <div class="card accent">
+        <div class="en">Good morning</div>
+        <div class="jp">おはようございます</div>
+        <div class="rom">Ohayō gozaimasu</div>
+      </div>
+      <div class="card">
+        <div class="en">Good afternoon</div>
+        <div class="jp">こんにちは</div>
+        <div class="rom">Konnichiwa</div>
+      </div>
+      <div class="card">
+        <div class="en">Good evening</div>
+        <div class="jp">こんばんは</div>
+        <div class="rom">Konbanwa</div>
+      </div>
+      <div class="card">
+        <div class="en">Goodbye</div>
+        <div class="jp">さようなら</div>
+        <div class="rom">Sayōnara</div>
+      </div>
+      <div class="card">
+        <div class="en">See you later</div>
+        <div class="jp">またね</div>
+        <div class="rom">Mata ne</div>
+      </div>
+      <div class="card">
+        <div class="en">Thank you</div>
+        <div class="jp">ありがとうございます</div>
+        <div class="rom">Arigatō gozaimasu</div>
+      </div>
+      <div class="card">
+        <div class="en">You're welcome</div>
+        <div class="jp">どういたしまして</div>
+        <div class="rom">Dō itashimashite</div>
+      </div>
+      <div class="card">
+        <div class="en">I'm sorry / Excuse me</div>
+        <div class="jp">すみません</div>
+        <div class="rom">Sumimasen</div>
+      </div>
+      <div class="card">
+        <div class="en">Yes / No</div>
+        <div class="jp">はい　／　いいえ</div>
+        <div class="rom">Hai / Iie</div>
+      </div>
+      <div class="card">
+        <div class="en">Please (requesting)</div>
+        <div class="jp">〜をください</div>
+        <div class="rom">~ o kudasai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Self Introduction -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-kanji">自</span>
+      <span class="section-title">Introducing Yourself</span>
+    </div>
+    <div class="grid">
+      <div class="card accent wide">
+        <div class="en">My name is ___</div>
+        <div class="jp">私の名前は ___ です</div>
+        <div class="rom">Watashi no namae wa ___ desu</div>
+      </div>
+      <div class="card">
+        <div class="en">I am from ___</div>
+        <div class="jp">___ から来ました</div>
+        <div class="rom">___ kara kimashita</div>
+      </div>
+      <div class="card">
+        <div class="en">Nice to meet you</div>
+        <div class="jp">よろしくお願いします</div>
+        <div class="rom">Yoroshiku onegaishimasu</div>
+      </div>
+      <div class="card">
+        <div class="en">Do you speak English?</div>
+        <div class="jp">英語を話しますか？</div>
+        <div class="rom">Eigo o hanashimasu ka?</div>
+      </div>
+      <div class="card">
+        <div class="en">I don't understand</div>
+        <div class="jp">わかりません</div>
+        <div class="rom">Wakarimasen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Getting Around -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-kanji">道</span>
+      <span class="section-title">Getting Around</span>
+    </div>
+    <div class="grid">
+      <div class="card accent">
+        <div class="en">Where is ___?</div>
+        <div class="jp">___ はどこですか？</div>
+        <div class="rom">___ wa doko desu ka?</div>
+      </div>
+      <div class="card">
+        <div class="en">Train station</div>
+        <div class="jp">駅</div>
+        <div class="rom">Eki</div>
+      </div>
+      <div class="card">
+        <div class="en">Bus stop</div>
+        <div class="jp">バス停</div>
+        <div class="rom">Basu-tei</div>
+      </div>
+      <div class="card">
+        <div class="en">Airport</div>
+        <div class="jp">空港</div>
+        <div class="rom">Kūkō</div>
+      </div>
+      <div class="card">
+        <div class="en">Hotel</div>
+        <div class="jp">ホテル</div>
+        <div class="rom">Hoteru</div>
+      </div>
+      <div class="card">
+        <div class="en">Toilet / Restroom</div>
+        <div class="jp">トイレ</div>
+        <div class="rom">Toire</div>
+      </div>
+      <div class="card">
+        <div class="en">Left / Right / Straight</div>
+        <div class="jp">左／右／まっすぐ</div>
+        <div class="rom">Hidari / Migi / Massugu</div>
+      </div>
+      <div class="card">
+        <div class="en">Please take me to ___</div>
+        <div class="jp">___ まで行ってください</div>
+        <div class="rom">___ made itte kudasai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Food & Restaurants -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-kanji">食</span>
+      <span class="section-title">Food &amp; Restaurants</span>
+    </div>
+    <div class="grid">
+      <div class="card accent">
+        <div class="en">One table for ___</div>
+        <div class="jp">___ 人です</div>
+        <div class="rom">___ nin desu</div>
+      </div>
+      <div class="card">
+        <div class="en">Menu, please</div>
+        <div class="jp">メニューをください</div>
+        <div class="rom">Menyū o kudasai</div>
+      </div>
+      <div class="card">
+        <div class="en">I'll have this</div>
+        <div class="jp">これをください</div>
+        <div class="rom">Kore o kudasai</div>
+      </div>
+      <div class="card">
+        <div class="en">Delicious!</div>
+        <div class="jp">おいしい！</div>
+        <div class="rom">Oishii!</div>
+      </div>
+      <div class="card">
+        <div class="en">The bill, please</div>
+        <div class="jp">お会計をください</div>
+        <div class="rom">Okaikei o kudasai</div>
+      </div>
+      <div class="card">
+        <div class="en">Water, please</div>
+        <div class="jp">お水をください</div>
+        <div class="rom">Omizu o kudasai</div>
+      </div>
+      <div class="card">
+        <div class="en">I'm allergic to ___</div>
+        <div class="jp">___ アレルギーがあります</div>
+        <div class="rom">___ arerugī ga arimasu</div>
+      </div>
+      <div class="card">
+        <div class="en">No meat / vegetarian</div>
+        <div class="jp">肉なしでお願いします</div>
+        <div class="rom">Niku nashi de onegaishimasu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-kanji">買</span>
+      <span class="section-title">Shopping</span>
+    </div>
+    <div class="grid grid-3">
+      <div class="card accent">
+        <div class="en">How much?</div>
+        <div class="jp">いくらですか？</div>
+        <div class="rom">Ikura desu ka?</div>
+      </div>
+      <div class="card">
+        <div class="en">Too expensive</div>
+        <div class="jp">高すぎます</div>
+        <div class="rom">Takasugimasu</div>
+      </div>
+      <div class="card">
+        <div class="en">I'll take it</div>
+        <div class="jp">これにします</div>
+        <div class="rom">Kore ni shimasu</div>
+      </div>
+      <div class="card">
+        <div class="en">Do you have ___?</div>
+        <div class="jp">___ はありますか？</div>
+        <div class="rom">___ wa arimasu ka?</div>
+      </div>
+      <div class="card">
+        <div class="en">Credit card OK?</div>
+        <div class="jp">カードは使えますか？</div>
+        <div class="rom">Kādo wa tsukaemasu ka?</div>
+      </div>
+      <div class="card">
+        <div class="en">A bag, please</div>
+        <div class="jp">袋をください</div>
+        <div class="rom">Fukuro o kudasai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emergencies -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-kanji">急</span>
+      <span class="section-title">Emergencies</span>
+    </div>
+    <div class="grid">
+      <div class="card accent">
+        <div class="en">Help!</div>
+        <div class="jp">助けてください！</div>
+        <div class="rom">Tasukete kudasai!</div>
+      </div>
+      <div class="card">
+        <div class="en">Call an ambulance!</div>
+        <div class="jp">救急車を呼んでください！</div>
+        <div class="rom">Kyūkyūsha o yonde kudasai!</div>
+      </div>
+      <div class="card">
+        <div class="en">Call the police!</div>
+        <div class="jp">警察を呼んでください！</div>
+        <div class="rom">Keisatsu o yonde kudasai!</div>
+      </div>
+      <div class="card">
+        <div class="en">I'm lost</div>
+        <div class="jp">迷子になりました</div>
+        <div class="rom">Maigo ni narimashita</div>
+      </div>
+      <div class="card">
+        <div class="en">I'm sick</div>
+        <div class="jp">具合が悪いです</div>
+        <div class="rom">Guai ga warui desu</div>
+      </div>
+      <div class="card">
+        <div class="en">I need a doctor</div>
+        <div class="jp">医者が必要です</div>
+        <div class="rom">Isha ga hitsuyō desu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Numbers -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-kanji">数</span>
+      <span class="section-title">Numbers</span>
+    </div>
+    <div class="numbers">
+      <div class="num-card"><span class="digit">1</span><span class="jp">一</span><span class="rom">ichi</span></div>
+      <div class="num-card"><span class="digit">2</span><span class="jp">二</span><span class="rom">ni</span></div>
+      <div class="num-card"><span class="digit">3</span><span class="jp">三</span><span class="rom">san</span></div>
+      <div class="num-card"><span class="digit">4</span><span class="jp">四</span><span class="rom">shi/yon</span></div>
+      <div class="num-card"><span class="digit">5</span><span class="jp">五</span><span class="rom">go</span></div>
+      <div class="num-card"><span class="digit">6</span><span class="jp">六</span><span class="rom">roku</span></div>
+      <div class="num-card"><span class="digit">7</span><span class="jp">七</span><span class="rom">nana/shichi</span></div>
+      <div class="num-card"><span class="digit">8</span><span class="jp">八</span><span class="rom">hachi</span></div>
+      <div class="num-card"><span class="digit">9</span><span class="jp">九</span><span class="rom">kyū/ku</span></div>
+      <div class="num-card"><span class="digit">10</span><span class="jp">十</span><span class="rom">jū</span></div>
+      <div class="num-card"><span class="digit">100</span><span class="jp">百</span><span class="rom">hyaku</span></div>
+      <div class="num-card"><span class="digit">1000</span><span class="jp">千</span><span class="rom">sen</span></div>
+    </div>
+  </div>
+
+  <footer>
+    Japanese Survival Sheet &nbsp;·&nbsp; 日本語早見表 &nbsp;·&nbsp; Print-friendly · Romaji + Kanji
+  </footer>
+
+</div>
+</article>
+</body>
+</html>

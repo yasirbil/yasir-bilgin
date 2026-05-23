@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta property="og:title"       content="World Languages — A Multidimensional Guide" />
+  <meta property="og:description" content="World Languages — A Multidimensional Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/learning/Languages/world-languages.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="World Languages — A Multidimensional Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/learning/Languages/world-languages.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+<title>World Languages — A Multidimensional Guide</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+  :root {
+    --ink: #1a1208;
+    --paper: #f5f0e8;
+    --warm: #c8a96e;
+    --rust: #b5451b;
+    --sage: #4a6741;
+    --slate: #3d5a6b;
+    --cream: #ede7d9;
+    --shadow: rgba(26,18,8,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  header {
+    position: relative;
+    padding: 80px 40px 60px;
+    text-align: center;
+    background: var(--ink);
+    color: var(--paper);
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(200,169,110,0.04) 40px,
+      rgba(200,169,110,0.04) 41px
+    );
+  }
+
+  .header-script {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(14px, 2vw, 18px);
+    color: var(--warm);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 88px);
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--warm);
+  }
+
+  .header-sub {
+    margin-top: 20px;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 300;
+    color: rgba(245,240,232,0.7);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--warm);
+  }
+
+  .stat-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(245,240,232,0.5);
+  }
+
+  /* NAV TABS */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream);
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar { display: none; }
+
+  .tab {
+    flex-shrink: 0;
+    padding: 16px 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: rgba(26,18,8,0.5);
+    border-right: 1px solid rgba(26,18,8,0.1);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .tab:hover { color: var(--ink); background: rgba(200,169,110,0.1); }
+
+  .tab.active {
+    color: var(--paper);
+    background: var(--ink);
+  }
+
+  /* SECTIONS */
+  .section {
+    display: none;
+    padding: 64px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .section.active { display: block; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+  .section-intro {
+    max-width: 720px;
+    margin-bottom: 48px;
+  }
+
+  .section-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .section-intro p {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(26,18,8,0.7);
+    font-style: italic;
+  }
+
+  /* CARDS */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid rgba(26,18,8,0.12);
+    border-radius: 2px;
+    padding: 28px 32px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent, var(--warm));
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px var(--shadow);
+  }
+
+  .card-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent, var(--warm));
+    margin-bottom: 10px;
+  }
+
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(26,18,8,0.75);
+    line-height: 1.65;
+  }
+
+  .card .examples {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(26,18,8,0.08);
+  }
+
+  .ex-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(26,18,8,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .lang-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .pill {
+    display: inline-block;
+    background: var(--cream);
+    border: 1px solid rgba(26,18,8,0.12);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* WIDE CARDS */
+  .card.wide {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .card.wide .card-num {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 72px;
+    color: var(--accent, var(--warm));
+    opacity: 0.3;
+    line-height: 1;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  /* TABLE */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background: white;
+    border: 1px solid rgba(26,18,8,0.12);
+  }
+
+  .data-table th {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 14px 20px;
+    text-align: left;
+  }
+
+  .data-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(26,18,8,0.08);
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: var(--cream); }
+
+  .data-table .rank {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: rgba(26,18,8,0.4);
+    width: 40px;
+  }
+
+  .data-table .lang-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .data-table .bar-cell { width: 200px; }
+
+  .bar-bg {
+    background: var(--cream);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: var(--rust);
+    transition: width 1s ease;
+  }
+
+  /* WRITING SYSTEMS */
+  .script-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .script-card {
+    border: 1px solid rgba(26,18,8,0.15);
+    background: white;
+    padding: 24px;
+    border-radius: 2px;
+    transition: transform 0.2s;
+  }
+
+  .script-card:hover { transform: translateY(-2px); }
+
+  .script-sample {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+  }
+
+  .script-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .script-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: rgba(26,18,8,0.45);
+    margin-bottom: 10px;
+  }
+
+  .script-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(26,18,8,0.7);
+    line-height: 1.6;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--warm), var(--rust));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 36px;
+    background: white;
+    border: 1px solid rgba(26,18,8,0.1);
+    padding: 24px 28px;
+    border-radius: 2px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--warm);
+    border: 3px solid var(--paper);
+    box-shadow: 0 0 0 2px var(--warm);
+  }
+
+  .timeline-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--warm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+
+  .timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .timeline-body {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(26,18,8,0.7);
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(26,18,8,0.1);
+    margin: 48px 0;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(26,18,8,0.35);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(26,18,8,0.1);
+  }
+
+  /* COLOR ACCENT VARIANTS */
+  .accent-rust { --accent: var(--rust); }
+  .accent-sage { --accent: var(--sage); }
+  .accent-slate { --accent: var(--slate); }
+  .accent-warm { --accent: var(--warm); }
+
+  /* FOOTNOTE */
+  footer {
+    background: var(--ink);
+    color: rgba(245,240,232,0.5);
+    text-align: center;
+    padding: 32px 40px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 640px) {
+    .section { padding: 40px 20px; }
+    header { padding: 60px 20px 40px; }
+    .card.wide { grid-template-columns: 1fr; }
+    .card.wide .card-num { display: none; }
+    .header-stats { gap: 24px; }
+  }
+</style>
+  <meta name="description" content="Language Families Languages descend from common ancestors, forming family trees that stretch back thousands of years. A family is a group of languages…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "World Languages — A Multidimensional Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/learning/Languages/world-languages.html",
+  "description": "Language Families Languages descend from common ancestors, forming family trees that stretch back thousands of years. A family is a group of languages…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/learning/" style="color:#7a4f1a;text-decoration:none;">Learning</a> <span style="opacity:0.5">›</span> <span>Languages</span> <span style="opacity:0.5">›</span> <span>World Languages — A Multidimensional Guide</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learning",
+      "item": "https://yasirbilgin.com/learning/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "World Languages — A Multidimensional Guide",
+      "item": "https://yasirbilgin.com/learning/Languages/world-languages.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<header>
+  <div class="header-script">A Multidimensional Guide</div>
+  <h1>World <em>Languages</em></h1>
+  <p class="header-sub">Explored through geography, genealogy, script, speakers, and the weight of history</p>
+  <div class="header-stats">
+    <div class="stat"><span class="stat-num">~7,000</span><span class="stat-label">Living Languages</span></div>
+    <div class="stat"><span class="stat-num">8B+</span><span class="stat-label">Human Speakers</span></div>
+    <div class="stat"><span class="stat-num">~3,000</span><span class="stat-label">Endangered</span></div>
+    <div class="stat"><span class="stat-num">23</span><span class="stat-label">Languages = 50% of world</span></div>
+  </div>
+</header>
+
+<nav>
+  <button class="tab active" onclick="showTab('families')">① Language Families</button>
+  <button class="tab" onclick="showTab('speakers')">② By Speakers</button>
+  <button class="tab" onclick="showTab('geography')">③ By Geography</button>
+  <button class="tab" onclick="showTab('scripts')">④ Writing Systems</button>
+  <button class="tab" onclick="showTab('typology')">⑤ Typology</button>
+  <button class="tab" onclick="showTab('status')">⑥ Status & Vitality</button>
+  <button class="tab" onclick="showTab('history')">⑦ Historical Depth</button>
+</nav>
+
+<!-- ① LANGUAGE FAMILIES -->
+<section id="families" class="section active">
+  <div class="section-intro">
+    <h2>Language Families</h2>
+    <p>Languages descend from common ancestors, forming family trees that stretch back thousands of years. A family is a group of languages sharing a provable common origin.</p>
+  </div>
+
+  <div class="section-label">Major families — by number of speakers</div>
+  <div class="card-grid">
+
+    <div class="card accent-rust">
+      <div class="card-tag">~3.2 Billion speakers</div>
+      <h3>Indo-European</h3>
+      <p>The world's largest and most studied family. Originated on the Eurasian steppe ~5,000 years ago. Spread through migration across Europe, Iran, and South Asia. Includes most of Europe's languages plus Persian, Hindi, Bengali, and more.</p>
+      <div class="examples">
+        <div class="ex-label">Major Branches</div>
+        <div class="lang-pills">
+          <span class="pill">Germanic</span><span class="pill">Romance</span><span class="pill">Slavic</span>
+          <span class="pill">Indo-Iranian</span><span class="pill">Celtic</span><span class="pill">Hellenic</span>
+          <span class="pill">Baltic</span><span class="pill">Albanian</span><span class="pill">Armenian</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-sage">
+      <div class="card-tag">~1.5 Billion speakers</div>
+      <h3>Sino-Tibetan</h3>
+      <p>The second-largest family, dominated by the Chinese varieties. Originated in the Yellow River basin. Includes hundreds of Tibeto-Burman languages spoken across the Himalayas and Southeast Asia highlands.</p>
+      <div class="examples">
+        <div class="ex-label">Notable Languages</div>
+        <div class="lang-pills">
+          <span class="pill">Mandarin</span><span class="pill">Cantonese</span><span class="pill">Tibetan</span>
+          <span class="pill">Burmese</span><span class="pill">Wu</span><span class="pill">Min</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-slate">
+      <div class="card-tag">~500 Million speakers</div>
+      <h3>Afro-Asiatic</h3>
+      <p>Spans North Africa, the Horn of Africa, and the Middle East. Includes the ancient Semitic branch (Arabic, Hebrew, Amharic) and the vast Cushitic and Berber groups of Africa. Some of humanity's oldest written languages belong here.</p>
+      <div class="examples">
+        <div class="ex-label">Notable Languages</div>
+        <div class="lang-pills">
+          <span class="pill">Arabic</span><span class="pill">Hebrew</span><span class="pill">Amharic</span>
+          <span class="pill">Hausa</span><span class="pill">Somali</span><span class="pill">Tamazight</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-warm">
+      <div class="card-tag">~430 Million speakers</div>
+      <h3>Niger-Congo</h3>
+      <p>The world's largest family by number of individual languages (~1,500+). The Bantu branch alone spans half of sub-Saharan Africa. Characterized by noun class systems, tonal distinctions, and remarkable grammatical complexity.</p>
+      <div class="examples">
+        <div class="ex-label">Notable Languages</div>
+        <div class="lang-pills">
+          <span class="pill">Swahili</span><span class="pill">Yoruba</span><span class="pill">Igbo</span>
+          <span class="pill">Zulu</span><span class="pill">Shona</span><span class="pill">Wolof</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-rust">
+      <div class="card-tag">~400 Million speakers</div>
+      <h3>Austronesian</h3>
+      <p>Remarkably widespread, stretching from Madagascar to Easter Island — the most geographically distributed family on Earth. Originated in Taiwan ~5,000 years ago, spreading via seafaring peoples across the Pacific and Indian Oceans.</p>
+      <div class="examples">
+        <div class="ex-label">Notable Languages</div>
+        <div class="lang-pills">
+          <span class="pill">Malay/Indonesian</span><span class="pill">Tagalog</span><span class="pill">Javanese</span>
+          <span class="pill">Malagasy</span><span class="pill">Hawaiian</span><span class="pill">Māori</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-sage">
+      <div class="card-tag">~250 Million speakers</div>
+      <h3>Dravidian</h3>
+      <p>Concentrated in South India and Sri Lanka. Possibly predates Indo-European arrival in the subcontinent. Known for retroflex consonants and agglutinative grammar. Brahui, spoken in Pakistan, is a fascinating outlier far from the main group.</p>
+      <div class="examples">
+        <div class="ex-label">Notable Languages</div>
+        <div class="lang-pills">
+          <span class="pill">Tamil</span><span class="pill">Telugu</span><span class="pill">Kannada</span>
+          <span class="pill">Malayalam</span><span class="pill">Brahui</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-slate">
+      <div class="card-tag">~200 Million speakers</div>
+      <h3>Turkic</h3>
+      <p>Spread from Turkey through Central Asia to Siberia. Originally nomadic steppe languages, carried west by migrations. Highly agglutinative and vowel-harmonic — a new suffix can completely change meaning. Mutually intelligible across distances.</p>
+      <div class="examples">
+        <div class="ex-label">Notable Languages</div>
+        <div class="lang-pills">
+          <span class="pill">Turkish</span><span class="pill">Uzbek</span><span class="pill">Kazakh</span>
+          <span class="pill">Azerbaijani</span><span class="pill">Uyghur</span><span class="pill">Kyrgyz</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-warm">
+      <div class="card-tag">~80 Million speakers</div>
+      <h3>Japonic & Koreanic</h3>
+      <p>Two isolated families — each with only one major language (Japanese and Korean). Possibly distantly related, though debated. Both are agglutinative with SOV word order and elaborate honorific systems encoding social hierarchy into grammar.</p>
+      <div class="examples">
+        <div class="ex-label">Languages</div>
+        <div class="lang-pills">
+          <span class="pill">Japanese</span><span class="pill">Ryukyuan varieties</span><span class="pill">Korean</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-rust">
+      <div class="card-tag">Isolates & Mysteries</div>
+      <h3>Language Isolates</h3>
+      <p>Some languages have no known relatives — they stand alone. Basque (spoken in Spain/France) is Europe's great mystery, predating Indo-European arrival. Others include Burushaski (Pakistan), Zuni (USA), and Elamite (ancient Iran).</p>
+      <div class="examples">
+        <div class="ex-label">Known Isolates</div>
+        <div class="lang-pills">
+          <span class="pill">Basque</span><span class="pill">Burushaski</span><span class="pill">Zuni</span>
+          <span class="pill">Ainu</span><span class="pill">Sumerian †</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ② BY SPEAKERS -->
+<section id="speakers" class="section">
+  <div class="section-intro">
+    <h2>Languages by Number of Speakers</h2>
+    <p>Most of humanity communicates in surprisingly few languages. The distribution is radically unequal — a handful of giants and thousands of small communities.</p>
+  </div>
+
+  <div class="section-label">Top 15 — native speakers (approximate, 2024)</div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th class="rank">#</th>
+        <th>Language</th>
+        <th>Family</th>
+        <th>Native Speakers</th>
+        <th class="bar-cell">Relative Scale</th>
+        <th>Primary Region</th>
+      </tr>
+    </thead>
+    <tbody id="speakersTable"></tbody>
+  </table>
+
+  <hr class="divider">
+  <div class="section-label">Interesting speaker facts</div>
+  <div class="card-grid">
+    <div class="card accent-rust">
+      <div class="card-tag">The Long Tail</div>
+      <h3>Half the World's Languages</h3>
+      <p>Roughly half of all living languages have fewer than 1,000 speakers. Many of these exist only in remote or indigenous communities, often undocumented. About one language goes extinct every two weeks.</p>
+    </div>
+    <div class="card accent-sage">
+      <div class="card-tag">Second Language Power</div>
+      <h3>English's True Reach</h3>
+      <p>English ranks only 3rd by native speakers, but becomes the largest by total speakers when L2 (second-language) speakers are counted — over 1.5 billion people use it globally. French and Arabic have similar "L2 amplification."</p>
+    </div>
+    <div class="card accent-slate">
+      <div class="card-tag">Regional Giants</div>
+      <h3>Dominant in Their Region</h3>
+      <p>Some languages have modest global counts but dominate their regions entirely: Swahili (East Africa), Persian (Iran/Afghanistan/Tajikistan), Ukrainian (Eastern Europe), and Tagalog (Philippines) each shape vast cultural zones.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ③ GEOGRAPHY -->
+<section id="geography" class="section">
+  <div class="section-intro">
+    <h2>Languages by Geography</h2>
+    <p>Where languages are spoken reveals history, migration, colonialism, and the diversity of human settlement. Some regions are extraordinarily dense; others have just one language for thousands of miles.</p>
+  </div>
+
+  <div class="section-label">Regional breakdowns</div>
+  <div class="card-grid">
+
+    <div class="card accent-rust wide">
+      <div class="card-num">PNG</div>
+      <div>
+        <div class="card-tag">World's Most Linguistically Dense Region</div>
+        <h3>Papua New Guinea</h3>
+        <p>With over 850 languages for ~9 million people, Papua New Guinea is the most linguistically dense nation on Earth. Isolated mountain valleys separated communities for millennia, producing extraordinary diversity. Tok Pisin (an English-based creole) serves as the national lingua franca.</p>
+        <div class="examples">
+          <div class="lang-pills">
+            <span class="pill">850+ languages</span><span class="pill">Tok Pisin (creole)</span><span class="pill">Hiri Motu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-sage">
+      <div class="card-tag">Sub-Saharan Africa</div>
+      <h3>The Continent of Languages</h3>
+      <p>Africa hosts ~30% of the world's languages (~2,000+) despite having 17% of its population. The Niger-Congo and Nilo-Saharan families dominate, with colonial languages (English, French, Portuguese) overlaid as official tongues. Most Africans speak 3–5 languages naturally.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">~2,000 languages</span><span class="pill">54 countries</span><span class="pill">Arabic dominant north</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-slate">
+      <div class="card-tag">South & Southeast Asia</div>
+      <h3>The Subcontinent's Mosaic</h3>
+      <p>India alone has 22 official languages and hundreds more. The region contains Indo-European, Dravidian, Sino-Tibetan, Austroasiatic, and Tai-Kadai families coexisting. Indonesia recognizes 700+ regional languages alongside Bahasa Indonesia.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">India: 700+ languages</span><span class="pill">Indonesia: 700+</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-warm">
+      <div class="card-tag">Europe</div>
+      <h3>Deceptively Diverse</h3>
+      <p>Europe appears monolithic but holds Indo-European, Uralic (Finnish, Hungarian, Estonian), Basque (isolate), and Caucasian families. Many minority languages survive: Welsh, Breton, Catalan, Frisian, Sami. The EU has 24 official languages.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">~300 languages</span><span class="pill">24 EU official</span><span class="pill">Basque (isolate)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-rust">
+      <div class="card-tag">The Americas</div>
+      <h3>Indigenous Richness</h3>
+      <p>Pre-contact Americas held ~1,000 languages across dozens of families. European colonization devastated most. Today, Spanish, Portuguese, English, and French dominate, but hundreds of indigenous languages survive: Quechua (~9M), Guaraní (~6M), Nahuatl (~2M), and Navajo (~170K) among them.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Quechua</span><span class="pill">Guaraní</span><span class="pill">Nahuatl</span><span class="pill">Navajo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-sage">
+      <div class="card-tag">The Pacific</div>
+      <h3>Austronesian Ocean</h3>
+      <p>The Pacific Islands form an Austronesian world stretching 15,000 miles. Hawaiian, Tahitian, Tongan, Samoan, Māori, and hundreds more are all related descendants of ancient Taiwanese languages. Many are endangered; revitalization efforts are ongoing.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Hawaiian</span><span class="pill">Māori</span><span class="pill">Samoan</span><span class="pill">Fijian</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ④ WRITING SYSTEMS -->
+<section id="scripts" class="section">
+  <div class="section-intro">
+    <h2>Writing Systems</h2>
+    <p>Scripts encode language into visible form. They differ radically in what unit they represent — syllables, consonants, full sounds, or meanings — and carry the cultural DNA of their civilizations.</p>
+  </div>
+
+  <div class="section-label">Major writing system types</div>
+  <div class="script-grid" id="scriptGrid"></div>
+</section>
+
+<!-- ⑤ TYPOLOGY -->
+<section id="typology" class="section">
+  <div class="section-intro">
+    <h2>Linguistic Typology</h2>
+    <p>Typology studies how languages differ structurally — in grammar, sound systems, and word order. These patterns reveal universal constraints on human language and fascinating exceptions.</p>
+  </div>
+
+  <div class="section-label">Word Order</div>
+  <div class="card-grid">
+    <div class="card accent-rust">
+      <div class="card-tag">~45% of languages</div>
+      <h3>SOV — Subject-Object-Verb</h3>
+      <p>The most common word order globally. The subject acts, the object receives, and the verb comes last. Often associated with postpositions ("the park to") rather than prepositions.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Japanese</span><span class="pill">Korean</span><span class="pill">Turkish</span>
+          <span class="pill">Hindi</span><span class="pill">Latin</span><span class="pill">Basque</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-sage">
+      <div class="card-tag">~42% of languages</div>
+      <h3>SVO — Subject-Verb-Object</h3>
+      <p>Subject, then the action, then what it affects. Familiar to English and Chinese speakers. Often goes with prepositions ("to the park") and tends to be more analytic (fewer word endings).</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">English</span><span class="pill">Mandarin</span><span class="pill">French</span>
+          <span class="pill">Spanish</span><span class="pill">Russian</span><span class="pill">Swahili</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-slate">
+      <div class="card-tag">~9% of languages</div>
+      <h3>VSO / VOS / OVS / OSV</h3>
+      <p>Rarer orders. VSO puts the verb first (Classical Arabic, Welsh, Irish). VOS is found in Malagasy. OVS and OSV are quite rare, seen in some Amazonian languages. Some languages have free word order entirely.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Welsh (VSO)</span><span class="pill">Arabic (VSO)</span><span class="pill">Malagasy (VOS)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="section-label">Morphological Type</div>
+  <div class="card-grid">
+    <div class="card accent-warm">
+      <div class="card-tag">Morphological Type</div>
+      <h3>Analytic Languages</h3>
+      <p>Words don't change form; meaning comes from word order and helper words. Grammatically transparent but require strict word order. Chinese and Vietnamese are prime examples.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Mandarin</span><span class="pill">Vietnamese</span><span class="pill">Modern English</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-rust">
+      <div class="card-tag">Morphological Type</div>
+      <h3>Synthetic / Fusional</h3>
+      <p>Grammatical information is packed into word endings (case, gender, tense). A single suffix can carry multiple meanings. Latin rosa / rosam / rosae all mean "rose" but in different roles.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Latin</span><span class="pill">Russian</span><span class="pill">Arabic</span>
+          <span class="pill">German</span><span class="pill">Polish</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-sage">
+      <div class="card-tag">Morphological Type</div>
+      <h3>Agglutinative</h3>
+      <p>Words grow by stringing affixes together, each adding one meaning. Turkish <em>evlerinizden</em> ("from your houses") is a single word built from house + plural + your + from. Each piece is cleanly separable.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Turkish</span><span class="pill">Finnish</span><span class="pill">Swahili</span>
+          <span class="pill">Japanese</span><span class="pill">Quechua</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-slate">
+      <div class="card-tag">Morphological Type</div>
+      <h3>Polysynthetic</h3>
+      <p>Entire sentences can be expressed in a single word, incorporating subject, object, verb, and modifiers together. Common in indigenous American and Siberian languages. Inuit <em>tusaatsiarunnanngitsiorpassuit</em> is a famous example.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Inuktitut</span><span class="pill">Mohawk</span><span class="pill">Yupik</span>
+          <span class="pill">Chukchi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="section-label">Phonological Features</div>
+  <div class="card-grid">
+    <div class="card accent-warm">
+      <div class="card-tag">Tonal Languages</div>
+      <h3>Pitch Carries Meaning</h3>
+      <p>In tonal languages, the pitch of a syllable is as meaningful as its consonants and vowels. Mandarin has 4 tones; Cantonese has 6–9; Vietnamese has 6; Yoruba has 3. Getting tone wrong changes the word entirely.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Mandarin</span><span class="pill">Cantonese</span><span class="pill">Vietnamese</span>
+          <span class="pill">Yoruba</span><span class="pill">Thai</span><span class="pill">Lao</span>
+        </div>
+      </div>
+    </div>
+    <div class="card accent-rust">
+      <div class="card-tag">Clicks & Unusual Sounds</div>
+      <h3>Extraordinary Phonologies</h3>
+      <p>Khoisan languages (Khoikhoi, !Kung, ǂHoan) use click consonants as regular speech sounds — something found almost nowhere else. Ubykh (now extinct) had 84 consonants. Some languages, like Hawaiian, have only 13 phonemes total.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Zulu (clicks)</span><span class="pill">Xhosa (clicks)</span><span class="pill">!Kung</span>
+          <span class="pill">Hawaiian (13 phonemes)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ STATUS & VITALITY -->
+<section id="status" class="section">
+  <div class="section-intro">
+    <h2>Language Status & Vitality</h2>
+    <p>Languages exist on a spectrum from thriving and growing to critically endangered and silent. Status is shaped by politics, demographics, prestige, and the choices of speakers themselves.</p>
+  </div>
+
+  <div class="section-label">The UNESCO vitality spectrum</div>
+  <div class="card-grid">
+    <div class="card" style="--accent: #2d6a4f">
+      <div class="card-tag" style="color:#2d6a4f">Safe</div>
+      <h3>Vigorous & Growing</h3>
+      <p>Spoken by large populations across multiple generations, with institutional support, media, education, and political backing. Gaining speakers, not losing them.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Mandarin</span><span class="pill">Spanish</span><span class="pill">Arabic</span>
+          <span class="pill">English</span><span class="pill">Hindi</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="--accent: #52b788">
+      <div class="card-tag" style="color:#52b788">Stable</div>
+      <h3>Vulnerable but Surviving</h3>
+      <p>Spoken by most children, but restricted to certain domains (home, community). May face pressure from dominant neighbors but maintains intergenerational transmission.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Welsh</span><span class="pill">Catalan</span><span class="pill">Breton</span>
+          <span class="pill">Māori</span><span class="pill">Quechua</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="--accent: #e9c46a">
+      <div class="card-tag" style="color:#b5851a">Endangered</div>
+      <h3>Definitely Endangered</h3>
+      <p>Children no longer learn the language as mother tongue at home. The intergenerational chain is broken. Requires active revitalization to survive beyond current adult speakers.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Frisian</span><span class="pill">Cornish</span><span class="pill">Scots Gaelic</span>
+          <span class="pill">Navajo</span><span class="pill">Hawaiian</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="--accent: #e76f51">
+      <div class="card-tag" style="color:#e76f51">Severely Endangered</div>
+      <h3>Critically Endangered</h3>
+      <p>Language is known to grandparents; the parental generation may understand it but doesn't use it with children. Fewer than a few hundred speakers remain.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Livonian (~30)</span><span class="pill">Ter Sami (~10)</span>
+          <span class="pill">Njerep (~4)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="--accent: #b5451b">
+      <div class="card-tag" style="color:#b5451b">Extinct / Dormant</div>
+      <h3>Sleeping Languages</h3>
+      <p>No native speakers remain, but some have been revived. Hebrew is the greatest revival success — a liturgical language brought back to native daily use. Cornish, Manx, and Wampanoag are in active revival.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Hebrew (revived!)</span><span class="pill">Cornish (revival)</span>
+          <span class="pill">Latin (liturgical)</span><span class="pill">Sanskrit (liturgical)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card accent-slate">
+      <div class="card-tag">New Languages</div>
+      <h3>Creoles & Emerging Languages</h3>
+      <p>Languages are also born. Creoles emerge when pidgins (simple trade languages) become native tongues. Nicaraguan Sign Language famously emerged spontaneously from deaf children in the 1980s — linguistics watching a language be born in real time.</p>
+      <div class="examples">
+        <div class="lang-pills">
+          <span class="pill">Haitian Creole</span><span class="pill">Tok Pisin</span>
+          <span class="pill">Nicaraguan SL</span><span class="pill">Singlish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ HISTORICAL DEPTH -->
+<section id="history" class="section">
+  <div class="section-intro">
+    <h2>Historical Depth</h2>
+    <p>Languages carry history in their structure, vocabulary, and scripts. Some have ancient written records; others have never been written down. The oldest attested languages open windows into antiquity.</p>
+  </div>
+
+  <div class="section-label">Oldest attested languages</div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">~3200 BCE</div>
+      <div class="timeline-title">Sumerian</div>
+      <div class="timeline-body">The world's oldest written language, recorded in cuneiform on clay tablets in Mesopotamia (modern Iraq). A language isolate — no known relatives. Gave humanity its first literature, including the Epic of Gilgamesh. Extinct as a spoken language by ~2000 BCE, but used in scholarship for centuries after.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">~3100 BCE</div>
+      <div class="timeline-title">Ancient Egyptian</div>
+      <div class="timeline-body">Afro-Asiatic language recorded in hieroglyphics. Spoken continuously for 4,000 years across Old, Middle, and Late Egyptian phases. Its descendant, Coptic, survives today as the liturgical language of Egyptian Christians — making Egyptian one of the longest-surviving language lineages.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">~2600 BCE</div>
+      <div class="timeline-title">Akkadian</div>
+      <div class="timeline-body">A Semitic language that became the first great international language — the diplomatic tongue of the ancient Near East. Cuneiform tablets in Akkadian have been found across Mesopotamia, Syria, Egypt, and Turkey. Extinct by ~100 CE.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">~1500 BCE</div>
+      <div class="timeline-title">Sanskrit</div>
+      <div class="timeline-body">The sacred language of Hinduism, Buddhism, and Jainism. Its grammar, systematized by Pāṇini (~4th century BCE), remains one of the most precise linguistic analyses ever produced. The "mother of most Indo-European languages" is a popular but imprecise description — Sanskrit is a sister, not an ancestor, of Greek and Latin. Still used in religious ceremonies.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">~1400 BCE</div>
+      <div class="timeline-title">Chinese (Oracle Bone Script)</div>
+      <div class="timeline-body">Inscriptions on oracle bones used in divination constitute the earliest Chinese writing. Modern Mandarin is, in structural terms, vastly different from Classical Chinese — but the writing system provides an unbroken thread from antiquity to today's billion+ speakers.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">~800 BCE</div>
+      <div class="timeline-title">Ancient Greek</div>
+      <div class="timeline-body">Homer's Iliad and Odyssey mark the beginning of Western literary tradition. Greek gave us the foundation of scientific, philosophical, and theological vocabulary. Modern Greek, spoken today by ~13 million, descends directly from Ancient Greek — though the difference between them is substantial.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">~600 BCE</div>
+      <div class="timeline-title">Tamil</div>
+      <div class="timeline-body">The oldest living language with a continuous literary tradition still in daily use. Sangam literature (~300 BCE–300 CE) is among the oldest in the world. Tamil is remarkable for how recognizable ancient Tamil poetry is to modern speakers — less drift than Latin-to-Italian, or Ancient-to-Modern Greek.</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  ✦ A Guide to World Languages &nbsp;|&nbsp; ~7,000 living languages documented &nbsp;|&nbsp; One language lost every two weeks ✦
+</footer>
+
+<script>
+  // TAB SWITCHING
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+    window.scrollTo({ top: document.querySelector('nav').offsetTop, behavior: 'smooth' });
+  }
+
+  // SPEAKERS TABLE
+  const languages = [
+    { rank: 1, name: "Mandarin Chinese", family: "Sino-Tibetan", speakers: 920, region: "China, SE Asia" },
+    { rank: 2, name: "Spanish",          family: "Indo-European (Romance)", speakers: 480, region: "Spain, Latin America" },
+    { rank: 3, name: "English",          family: "Indo-European (Germanic)", speakers: 380, region: "Worldwide" },
+    { rank: 4, name: "Hindi",            family: "Indo-European (Indo-Iranian)", speakers: 340, region: "India" },
+    { rank: 5, name: "Bengali",          family: "Indo-European (Indo-Iranian)", speakers: 234, region: "Bangladesh, India" },
+    { rank: 6, name: "Portuguese",       family: "Indo-European (Romance)", speakers: 236, region: "Brazil, Portugal, Africa" },
+    { rank: 7, name: "Russian",          family: "Indo-European (Slavic)", speakers: 147, region: "Russia, Central Asia" },
+    { rank: 8, name: "Japanese",         family: "Japonic", speakers: 125, region: "Japan" },
+    { rank: 9, name: "Yue (Cantonese)",  family: "Sino-Tibetan", speakers: 86, region: "South China, diaspora" },
+    { rank: 10, name: "Vietnamese",      family: "Austroasiatic", speakers: 85, region: "Vietnam" },
+    { rank: 11, name: "Turkish",         family: "Turkic", speakers: 84, region: "Turkey, Central Asia" },
+    { rank: 12, name: "Wu (Shanghainese)",family: "Sino-Tibetan", speakers: 82, region: "East China" },
+    { rank: 13, name: "Marathi",         family: "Indo-European (Indo-Iranian)", speakers: 83, region: "India (Maharashtra)" },
+    { rank: 14, name: "Telugu",          family: "Dravidian", speakers: 82, region: "India (Andhra Pradesh)" },
+    { rank: 15, name: "Korean",          family: "Koreanic", speakers: 77, region: "Korea" },
+  ];
+
+  const tbody = document.getElementById('speakersTable');
+  const maxSpeakers = 920;
+  languages.forEach(l => {
+    const pct = Math.round((l.speakers / maxSpeakers) * 100);
+    tbody.innerHTML += `
+      <tr>
+        <td class="rank">${l.rank}</td>
+        <td><div class="lang-name">${l.name}</div></td>
+        <td style="font-size:14px;color:rgba(26,18,8,0.6)">${l.family}</td>
+        <td style="font-family:'DM Mono',monospace;font-size:15px">${l.speakers}M</td>
+        <td class="bar-cell">
+          <div class="bar-bg"><div class="bar-fill" style="width:${pct}%"></div></div>
+        </td>
+        <td style="font-size:14px;color:rgba(26,18,8,0.65)">${l.region}</td>
+      </tr>`;
+  });
+
+  // SCRIPTS
+  const scripts = [
+    { sample: "𓂀𓏤𓆑𓅓", name: "Hieroglyphics / Egyptian", type: "Logographic + phonetic", dir: "Left-to-right, right-to-left, or vertical", desc: "An ancient Egyptian script mixing word-signs and sound-signs. Used ~3100 BCE–400 CE. Deciphered in 1822 via the Rosetta Stone. Parent of the Coptic alphabet." },
+    { sample: "<span lang="ar" dir="rtl">الْعَرَبِيَّة</span>", name: "Arabic Script", type: "Abjad (consonants only)", dir: "Right to left", desc: "Used for Arabic, Persian, Urdu, Pashto, and others. Vowels are typically omitted (readers infer them). The script connects letters fluidly, changing letter shapes by position. 2nd most widely used script in the world." },
+    { sample: "한글", name: "Hangul (Korean)", type: "Featural alphabet", dir: "Left to right", desc: "Invented in 1443 CE by King Sejong — one of the few scripts with a known inventor. Uniquely, letter shapes encode phonetic features (e.g., tongue position). Organized into syllabic blocks despite being alphabetic." },
+    { sample: "あいうえお", name: "Hiragana / Katakana", type: "Syllabary", dir: "Left to right (or top to bottom)", desc: "Japanese uses three scripts simultaneously: Hiragana (native words), Katakana (foreign words), and Kanji (Chinese characters). Each hiragana character represents one syllable." },
+    { sample: "𒀭𒂗𒍪", name: "Cuneiform", type: "Logo-syllabic", dir: "Left to right", desc: "The world's oldest writing system, developed by Sumerians ~3200 BCE. Made by pressing a reed stylus into clay. Used for Sumerian, Akkadian, Elamite, Hittite, and others. Deciphered in the 1800s." },
+    { sample: "देवनागरी", name: "Devanagari", type: "Abugida (syllabic alphabet)", dir: "Left to right", desc: "Used for Sanskrit, Hindi, Marathi, Nepali, and others. An abugida: consonants have an inherent vowel, modified by diacritic marks. Horizontal line (mātrā) connects letters into words. Over 600 million users." },
+    { sample: "Αβγδεζ", name: "Greek Alphabet", type: "True alphabet", dir: "Left to right", desc: "The first fully phonemic alphabet — the first to include vowels. Derived from Phoenician abjad ~800 BCE. Parent of Latin, Cyrillic, and Coptic scripts. Still used for Greek and in science/math worldwide." },
+    { sample: "中文漢字", name: "Chinese Characters (Hanzi)", type: "Logographic", dir: "Left to right (traditionally top-down)", desc: "The most complex writing system in daily use. ~50,000 characters exist; literacy requires ~3,000. Each character encodes meaning (and sometimes sound). Used in Chinese, Japanese (Kanji), and historically Korean and Vietnamese." },
+    { sample: "ሀለሐ", name: "Ethiopic (Ge'ez)", type: "Abugida", dir: "Left to right", desc: "Used for Amharic, Tigrinya, and other Ethiopian/Eritrean languages. Unique to Africa. Each base character (consonant) has 7 forms for different vowels, creating a matrix of ~250+ distinct characters." },
+  ];
+
+  const grid = document.getElementById('scriptGrid');
+  scripts.forEach(s => {
+    grid.innerHTML += `
+      <div class="script-card">
+        <div class="script-sample">${s.sample}</div>
+        <div class="script-name">${s.name}</div>
+        <div class="script-meta">${s.type} &nbsp;·&nbsp; ${s.dir}</div>
+        <div class="script-desc">${s.desc}</div>
+      </div>`;
+  });
+</script>
+</article>
+</body>
+</html>

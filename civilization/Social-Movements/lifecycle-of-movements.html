@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="Lifecycle of Social & Religious Movements" />
+  <meta property="og:description" content="Lifecycle of Social & Religious Movements" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/civilization/Social-Movements/lifecycle-of-movements.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Lifecycle of Social & Religious Movements" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/civilization/Social-Movements/lifecycle-of-movements.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>Lifecycle of Social & Religious Movements | Yasir Bilgin</title>
+
+  <!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --bg:          #0e0c0a;
+      --bg2:         #141210;
+      --bg3:         #1c1916;
+      --bg4:         #242018;
+      --border:      rgba(255,245,220,0.08);
+      --border-mid:  rgba(255,245,220,0.14);
+      --text:        #f0e8d8;
+      --text-mid:    #b8a888;
+      --text-dim:    #786855;
+      --gold:        #c9a84c;
+      --gold-light:  #e8c878;
+      --gold-dim:    #8a6e30;
+      --rust:        #b85c38;
+      --rust-light:  #d4784c;
+      --teal:        #4a8c7c;
+      --teal-light:  #68b09e;
+      --violet:      #7c5c8c;
+      --violet-light:#a07ab8;
+      --green:       #5a7c4a;
+      --green-light: #7ca870;
+      --radius:      6px;
+      --radius-lg:   12px;
+      --shadow:      0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── PROGRESS BAR ─────────────────────────────────────── */
+    #progressBar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--rust));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── TOC OVERLAY ────────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(10,8,6,0.72);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(6px);
+    }
+    .toc-panel {
+      background: var(--bg3);
+      border-left: 1px solid var(--border-mid);
+      width: min(380px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem 3rem;
+      animation: slideIn 0.22s ease;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(40px); opacity: 0; }
+      to   { transform: translateX(0);    opacity: 1; }
+    }
+    .toc-close {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 1.4rem;
+    }
+    .toc-close button {
+      background: var(--bg4);
+      border: 1px solid var(--border-mid);
+      color: var(--text-mid);
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toc-close button:hover { background: var(--gold-dim); color: var(--text); }
+    .toc-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list a {
+      display: block;
+      padding: 0.65rem 0;
+      color: var(--text-mid);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s, padding-left 0.15s;
+    }
+    .toc-list a:hover { color: var(--gold-light); padding-left: 6px; }
+    .toc-list a.toc-main {
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .toc-list a.toc-main:hover { color: var(--gold-light); }
+    .toc-list .toc-sub { padding-left: 1rem; }
+    .toc-divider {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 1rem 0 0.3rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ─── ARTICLE HEADER ─────────────────────────────────────── */
+    .article-header {
+      top: 62px;
+      z-index: 50;
+      background: rgba(14,12,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 50px;
+    
+      position: sticky;
+      background: rgba(14,12,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 50px;
+    }
+    .read-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+    }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .toc-btn {
+      background: transparent;
+      border: 1px solid var(--border-mid);
+      color: var(--text-mid);
+      padding: 0.3rem 0.9rem;
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .toc-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.06); }
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    .hero {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+    }
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px; height: 1px;
+      background: var(--gold);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.4rem;
+    }
+    h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-mid);
+      max-width: 640px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dim), var(--rust));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--bg);
+      flex-shrink: 0;
+    }
+    .byline-text { display: flex; flex-direction: column; gap: 0.15rem; }
+    .byline-name { font-size: 0.9rem; font-weight: 500; color: var(--text); }
+    .byline-meta { font-size: 0.8rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border-mid);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ─── SEARCH & FILTER BAR ────────────────────────────────── */
+    .search-bar-wrap {
+      position: sticky;
+      top: 112px; /* 62px nav + 50px article-header */
+      z-index: 40;
+      background: rgba(14,12,10,0.96);
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 2.5rem;
+    }
+    .search-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .search-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-icon {
+      position: absolute;
+      left: 0.9rem;
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      pointer-events: none;
+    }
+    #searchInput {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 0.6rem 1rem 0.6rem 2.6rem;
+      color: var(--text);
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #searchInput::placeholder { color: var(--text-dim); }
+    #searchInput:focus { border-color: var(--gold); }
+    #searchClear {
+      position: absolute;
+      right: 0.7rem;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.2rem;
+      display: none;
+      line-height: 1;
+    }
+    #searchClear:hover { color: var(--text); }
+    .filter-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.28rem 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+    .filter-btn.active {
+      background: var(--gold-dim);
+      border-color: var(--gold);
+      color: var(--text);
+    }
+    #searchResults {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      display: none;
+    }
+
+    /* ─── ARTICLE BODY ───────────────────────────────────────── */
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    /* ─── INTRO BLOCK ────────────────────────────────────────── */
+    .intro-block {
+      background: var(--bg3);
+      border: 1px solid var(--border-mid);
+      border-left: 3px solid var(--gold);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem 2rem;
+      margin-bottom: 3.5rem;
+    }
+    .intro-block p { color: var(--text-mid); font-size: 1rem; margin-bottom: 0.8rem; }
+    .intro-block p:last-child { margin-bottom: 0; }
+    .theorists-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1.2rem;
+    }
+    .theorist-tag {
+      background: var(--bg4);
+      border: 1px solid var(--border-mid);
+      border-radius: 3px;
+      padding: 0.2rem 0.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── META-PATTERN FLOW ──────────────────────────────────── */
+    .meta-flow {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 3.5rem;
+      overflow-x: auto;
+    }
+    .meta-flow h3 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1.4rem;
+    }
+    .flow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: center;
+    }
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .flow-node {
+      background: var(--bg4);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 0.35rem 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-mid);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-decoration: none;
+    }
+    .flow-node:hover { border-color: var(--gold); color: var(--gold-light); }
+    .flow-node.crisis { border-color: var(--rust); color: var(--rust-light); }
+    .flow-node.charisma { border-color: var(--gold); color: var(--gold-light); }
+    .flow-node.institution { border-color: var(--teal); color: var(--teal-light); }
+    .flow-node.danger { border-color: var(--rust); color: var(--rust-light); }
+    .flow-node.renewal { border-color: var(--green); color: var(--green-light); }
+    .flow-arrow {
+      color: var(--text-dim);
+      padding: 0 0.3rem;
+      font-size: 0.8rem;
+    }
+    .flow-note {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    /* ─── STAGE SECTIONS ─────────────────────────────────────── */
+    .stage-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .stage-card:hover { border-color: var(--border-mid); }
+    .stage-card[data-tags~="crisis"] { border-left: 3px solid var(--rust); }
+    .stage-card[data-tags~="charisma"] { border-left: 3px solid var(--gold); }
+    .stage-card[data-tags~="institution"] { border-left: 3px solid var(--teal); }
+    .stage-card[data-tags~="renewal"] { border-left: 3px solid var(--green); }
+
+    .stage-header {
+      background: var(--bg3);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .stage-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      background: var(--bg4);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.25rem 0.5rem;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .stage-title-wrap { flex: 1; }
+    .stage-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .stage-title em { font-style: italic; color: var(--gold-light); }
+    .stage-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+    .stage-tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-top: 0.6rem;
+    }
+    .stage-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      border-radius: 3px;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid;
+    }
+    .tag-theory   { color: var(--violet-light); border-color: var(--violet); background: rgba(124,92,140,0.1); }
+    .tag-risk     { color: var(--rust-light);   border-color: var(--rust);   background: rgba(184,92,56,0.1); }
+    .tag-religion { color: var(--gold-light);   border-color: var(--gold-dim); background: rgba(201,168,76,0.1); }
+    .tag-civ      { color: var(--teal-light);   border-color: var(--teal);   background: rgba(74,140,124,0.1); }
+    .tag-warning  { color: #e8a020;             border-color: #a06018;       background: rgba(160,96,24,0.12); }
+
+    .stage-body { padding: 1.8rem 2rem; background: var(--bg2); }
+
+    /* ─── STAGE CONTENT ELEMENTS ────────────────────────────── */
+    .stage-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.6rem 0 0.7rem;
+    }
+    .stage-body h3:first-child { margin-top: 0; }
+    .stage-body p {
+      color: var(--text-mid);
+      margin-bottom: 1rem;
+      font-size: 0.97rem;
+    }
+    .stage-body p:last-child { margin-bottom: 0; }
+
+    .char-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+    .char-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.5rem 0.8rem;
+      font-size: 0.84rem;
+      color: var(--text-mid);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .char-item::before {
+      content: '·';
+      color: var(--gold-dim);
+      font-size: 1.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .concept-block {
+      background: var(--bg3);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+    }
+    .concept-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .concept-block p { font-size: 0.88rem; margin-bottom: 0; }
+
+    /* ─── WARNING / CRITICAL BOX ─────────────────────────────── */
+    .warn-box {
+      background: rgba(184,92,56,0.08);
+      border: 1px solid rgba(184,92,56,0.3);
+      border-left: 3px solid var(--rust);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+    }
+    .warn-box .warn-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rust-light);
+      margin-bottom: 0.5rem;
+    }
+    .warn-box p { font-size: 0.88rem; color: var(--text-mid); margin-bottom: 0; }
+
+    /* ─── SUCCESS / NOTE BOX ─────────────────────────────────── */
+    .note-box {
+      background: rgba(74,140,124,0.07);
+      border: 1px solid rgba(74,140,124,0.25);
+      border-left: 3px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+    }
+    .note-box .note-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 0.5rem;
+    }
+    .note-box p { font-size: 0.88rem; color: var(--text-mid); margin-bottom: 0; }
+
+    /* ─── INSIGHT BOX ────────────────────────────────────────── */
+    .insight-box {
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-left: 3px solid var(--gold-dim);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+    }
+    .insight-box .insight-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .insight-box p { font-size: 0.88rem; color: var(--text-mid); margin-bottom: 0.5rem; }
+    .insight-box p:last-child { margin-bottom: 0; }
+
+    /* ─── EXAMPLE CALLOUTS ───────────────────────────────────── */
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.7rem;
+      margin: 1rem 0;
+    }
+    .example-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.8rem 1rem;
+    }
+    .example-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.3rem;
+    }
+    .example-name {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .example-desc {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    /* ─── SPLIT COMPARISON ───────────────────────────────────── */
+    .split-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+    @media (max-width: 560px) { .split-compare { grid-template-columns: 1fr; } }
+    .split-col {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+    }
+    .split-col-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .split-col.benefit .split-col-label { color: var(--teal-light); }
+    .split-col.cost .split-col-label { color: var(--rust-light); }
+    .split-list { list-style: none; }
+    .split-list li {
+      font-size: 0.84rem;
+      color: var(--text-mid);
+      padding: 0.2rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .split-col.benefit .split-list li::before { content: '+'; color: var(--teal); position: absolute; left: 0; }
+    .split-col.cost    .split-list li::before { content: '−'; color: var(--rust); position: absolute; left: 0; }
+
+    /* ─── TENSION TABLE ──────────────────────────────────────── */
+    .tension-section {
+      margin-bottom: 2.5rem;
+      scroll-margin-top: 180px;
+    }
+    .tension-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      margin-top: 1rem;
+    }
+    .tension-card {
+      background: var(--bg3);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .tension-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold-dim), transparent);
+    }
+    .tension-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--bg4);
+      position: absolute;
+      top: 0.8rem; right: 1rem;
+      line-height: 1;
+    }
+    .tension-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+    .tension-vs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.7rem 0;
+    }
+    .tension-pole {
+      background: var(--bg4);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.8rem;
+      color: var(--text-mid);
+    }
+    .tension-sep {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+    .tension-desc { font-size: 0.84rem; color: var(--text-dim); line-height: 1.6; }
+
+    /* ─── FAILURE MODE SECTION ───────────────────────────────── */
+    .failure-section {
+      scroll-margin-top: 180px;
+      margin-bottom: 2.5rem;
+    }
+    .failure-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .failure-section .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rust-light);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .failure-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      margin-top: 1.5rem;
+    }
+    .failure-card {
+      background: var(--bg3);
+      border: 1px solid rgba(184,92,56,0.2);
+      border-top: 2px solid var(--rust);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem 1.5rem;
+    }
+    .failure-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--rust-light);
+      margin-bottom: 0.6rem;
+    }
+    .failure-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+
+    /* ─── SECTION HEADINGS ───────────────────────────────────── */
+    .major-section {
+      scroll-margin-top: 180px;
+      margin-bottom: 0;
+    }
+    .section-label-top {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .section-h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+    .section-h2 em { font-style: italic; color: var(--gold-light); }
+    .section-intro {
+      font-size: 1rem;
+      color: var(--text-mid);
+      margin-bottom: 2rem;
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    /* ─── CIV SCALE ──────────────────────────────────────────── */
+    .civ-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.7rem;
+      margin: 1rem 0;
+    }
+    .civ-card {
+      background: var(--bg3);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+      border-top: 2px solid var(--teal);
+    }
+    .civ-name { font-size: 0.9rem; font-weight: 600; color: var(--teal-light); margin-bottom: 0.3rem; }
+    .civ-desc { font-size: 0.78rem; color: var(--text-dim); line-height: 1.5; }
+
+    /* ─── NO RESULTS ─────────────────────────────────────────── */
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-dim);
+    }
+    #noResults p { font-size: 1rem; }
+    #noResults span { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+
+    /* ─── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2.5rem;
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--text-mid);
+    }
+    .footer-copy {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .article-body { padding: 2.5rem 1.4rem 5rem; }
+      .hero { padding: 3.5rem 1.4rem 2rem; }
+      .hero-rule { margin: 0 1.4rem; }
+      .search-bar-wrap { padding: 0.75rem 1.4rem; }
+      .article-header { padding: 0 1.4rem;  padding: 0 1.4rem; }
+      .stage-header { padding: 1.2rem 1.4rem; }
+      .stage-body { padding: 1.4rem 1.4rem; }
+      footer { padding: 2rem 1.4rem; flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .char-grid { grid-template-columns: 1fr 1fr; }
+      .examples-grid { grid-template-columns: 1fr; }
+      .tension-grid { grid-template-columns: 1fr; }
+      .failure-grid { grid-template-columns: 1fr; }
+      .civ-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ─── HIDDEN (FILTERED) ──────────────────────────────────── */
+    .stage-card.hidden, .tension-section.hidden, .failure-section.hidden { display: none; }
+    .stage-card.search-highlight { border-color: var(--gold-dim); }
+
+    /* ─── SMOOTH APPEAR ──────────────────────────────────────── */
+    .stage-card {
+      animation: fadeUp 0.3s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <meta name="description" content="A synthesized framework — drawing on Weber, Ibn Khaldun, Troeltsch, Toynbee, and Berger — for understanding how movements are born, institutionalize,…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Lifecycle of Social & Religious Movements",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/civilization/Social-Movements/lifecycle-of-movements.html",
+  "description": "A synthesized framework — drawing on Weber, Ibn Khaldun, Troeltsch, Toynbee, and Berger — for understanding how movements are born, institutionalize,…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/civilization/" style="color:#7a3b2e;text-decoration:none;">Civilization</a> <span style="opacity:0.5">›</span> <span>Civilizations Cultures & Influence</span> <span style="opacity:0.5">›</span> <span>Lifecycle of Social & Religious Movements</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Civilization",
+      "item": "https://yasirbilgin.com/civilization/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lifecycle of Social & Religious Movements",
+      "item": "https://yasirbilgin.com/civilization/Social-Movements/lifecycle-of-movements.html"
+    }
+  ]
+}
+</script>
+
+
+<!-- Progress bar -->
+<div id="progressBar"></div>
+
+<!-- TOC Overlay -->
+<div class="toc-overlay" id="tocOverlay"
+     onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <div class="toc-close">
+      <button onclick="document.getElementById('tocOverlay').classList.remove('open')" aria-label="Close TOC">✕</button>
+    </div>
+    <h3>Table of Contents</h3>
+    <ul class="toc-list">
+      <li class="toc-divider">Framework</li>
+      <li><a href="#intro" class="toc-main">Introduction & Theorists</a></li>
+      <li><a href="#meta-pattern" class="toc-main">Meta-Pattern Flow</a></li>
+
+      <li class="toc-divider">The Eleven Stages</li>
+      <li><a href="#s1" class="toc-main">1. Latency / Pre-Conditions</a></li>
+      <li><a href="#s2" class="toc-main">2. Emergence</a></li>
+      <li><a href="#s3" class="toc-main">3. Formation / Consolidation</a></li>
+      <li><a href="#s4" class="toc-main">4. Expansion / Mobilization</a></li>
+      <li><a href="#s5" class="toc-main">5. Institutionalization</a></li>
+      <li><a href="#s6" class="toc-main">6. Stabilization / Establishment</a></li>
+      <li><a href="#s7" class="toc-main">7. Differentiation</a></li>
+      <li><a href="#s8" class="toc-main">8. Fragmentation / Crisis</a></li>
+      <li><a href="#s9" class="toc-main">9. Decline / Decomposition</a></li>
+      <li><a href="#s10" class="toc-main">10. Dissolution or Calcification</a></li>
+      <li><a href="#s11" class="toc-main">11. Renewal / Rebirth</a></li>
+
+      <li class="toc-divider">Critical Analysis</li>
+      <li><a href="#failure-modes" class="toc-main">Failure Modes & What the Model Misses</a></li>
+      <li><a href="#tensions" class="toc-main">Structural Tensions</a></li>
+      <li><a href="#religious" class="toc-main">Religious Movements: Special Case</a></li>
+      <li><a href="#civilizational" class="toc-main">Civilizational Scale</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Article Sub-Header -->
+
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-eyebrow">Sociology · History of Movements · Civilizational Studies</div>
+  <h1>Lifecycle of Social &amp; <em>Religious</em> Movements</h1>
+  <p class="hero-sub">A synthesized framework — drawing on Weber, Ibn Khaldun, Troeltsch, Toynbee, and Berger — for understanding how movements are born, institutionalize, fracture, and either dissolve or renew. Critically expanded with failure modes, contested transitions, and cases the standard model does not cover.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Yasir Bilgin · 2026</span>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">~18 min read</span>
+  
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+</header>
+
+
+<!-- Search & Filter Bar -->
+<div class="search-bar-wrap">
+  <div class="search-inner">
+    <div class="search-input-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="searchInput" placeholder="Search stages, concepts, theorists, examples…" autocomplete="off" spellcheck="false" />
+      <button id="searchClear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+    </div>
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All Stages</button>
+      <button class="filter-btn" data-filter="theory">Theory &amp; Concepts</button>
+      <button class="filter-btn" data-filter="risk">Risks &amp; Failure</button>
+      <button class="filter-btn" data-filter="religion">Religious</button>
+      <button class="filter-btn" data-filter="civ">Civilizational</button>
+      <button class="filter-btn" data-filter="charisma">Charisma &amp; Leadership</button>
+    </div>
+    <div id="searchResults"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ARTICLE BODY                                               -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<article class="article-body">
+
+  <!-- INTRO -->
+  <section id="intro" class="major-section" style="scroll-margin-top:180px; margin-bottom:3rem;">
+    <span class="section-label-top">Framework Overview</span>
+    <h2 class="section-h2"><em>Synthesized</em> Framework</h2>
+    <div class="intro-block">
+      <p>Social, religious, intellectual, and civilizational movements often follow recognizable developmental patterns. Different sociologists, historians, and theorists use different terminology, but there are recurring structural stages.</p>
+      <p>This framework draws on multiple traditions. No single theorist accounts for the full arc — each illuminates a different segment of it.</p>
+      <p style="font-size:0.85rem; color:var(--text-dim); font-style:italic; margin-bottom:0.3rem;">Key thinkers behind this synthesis:</p>
+      <div class="theorists-row">
+        <span class="theorist-tag">Max Weber</span>
+        <span class="theorist-tag">Ernst Troeltsch</span>
+        <span class="theorist-tag">Ibn Khaldun</span>
+        <span class="theorist-tag">Arnold J. Toynbee</span>
+        <span class="theorist-tag">Peter Berger</span>
+        <span class="theorist-tag">Émile Durkheim</span>
+        <span class="theorist-tag">Social Movement Theory</span>
+        <span class="theorist-tag">Organizational Lifecycle Theory</span>
+        <span class="theorist-tag">Islamic Historical Experience</span>
+        <span class="theorist-tag">Civilizational Studies</span>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-label">⚠ Critical Limitation</div>
+      <p>This model is <strong>heuristic, not deterministic</strong>. Movements do not inevitably pass through all stages in sequence. They can skip stages, regress, loop, stall indefinitely, or experience multiple stages simultaneously in different branches. The model is a map for asking better questions — not a prediction machine.</p>
+    </div>
+  </section>
+
+  <!-- META-PATTERN -->
+  <section id="meta-pattern" class="major-section" style="scroll-margin-top:180px; margin-bottom:3rem;">
+    <span class="section-label-top">Simplified Arc</span>
+    <h2 class="section-h2">Meta-<em>Pattern</em></h2>
+    <div class="meta-flow">
+      <h3>The Typical Arc (click any node to jump to that stage)</h3>
+      <div class="flow-steps">
+        <div class="flow-step"><a href="#s1" class="flow-node crisis">Crisis</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s2" class="flow-node charisma">Emergence</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s2" class="flow-node charisma">Charisma</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s3" class="flow-node">Formation</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s4" class="flow-node">Expansion</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s5" class="flow-node institution">Institutionalization</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s6" class="flow-node institution">Stabilization</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s7" class="flow-node">Diversification</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s8" class="flow-node danger">Fragmentation</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s9" class="flow-node danger">Decline</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s10" class="flow-node danger">Dissolution</a><span class="flow-arrow">→</span></div>
+        <div class="flow-step"><a href="#s11" class="flow-node renewal">Renewal</a><span class="flow-arrow">or</span><span class="flow-node danger" style="cursor:default;">Death</span></div>
+      </div>
+      <p class="flow-note">The model is non-linear. Movements may loop back, stall, or branch. See the <a href="#failure-modes" style="color:var(--gold); text-decoration:none;">Failure Modes</a> section for deviations the standard model underestimates.</p>
+    </div>
+  </section>
+
+  <!-- STAGES CONTAINER (searchable/filterable) -->
+  <div id="stagesContainer">
+
+    <!-- STAGE 1 -->
+    <div class="stage-card major-section" id="s1"
+         data-tags="theory crisis religion"
+         data-search="latency pre-movement conditions anomie durkheim social strain crisis legitimacy spiritual hunger moral dissatisfaction identity dislocation">
+      <div class="stage-header">
+        <span class="stage-num">01</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Latency / <em>Pre-Movement</em> Conditions</div>
+          <div class="stage-subtitle">Before the movement appears, pressures accumulate in silence</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Durkheim · Anomie</span>
+            <span class="stage-tag tag-theory">Social Strain</span>
+            <span class="stage-tag tag-religion">Religious Context</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>Underlying Conditions</h3>
+        <p>No movement emerges from a vacuum. A period of latency precedes all visible emergence — a phase where tensions accumulate without yet crystallizing into organized action.</p>
+        <div class="char-grid">
+          <div class="char-item">Moral dissatisfaction</div>
+          <div class="char-item">Social dislocation</div>
+          <div class="char-item">Identity crisis</div>
+          <div class="char-item">Institutional failure</div>
+          <div class="char-item">Spiritual hunger</div>
+          <div class="char-item">Economic pressure</div>
+          <div class="char-item">Political oppression</div>
+          <div class="char-item">Cultural fragmentation</div>
+        </div>
+
+        <h3>In Religious Contexts</h3>
+        <p>People experience a deepening gap between the ideals their tradition promises and the reality institutions deliver. Spiritual dryness, clerical corruption, and ritual emptiness are the typical signs.</p>
+
+        <h3>Key Theoretical Concepts</h3>
+        <div class="concept-block">
+          <div class="concept-label">Anomie — Émile Durkheim (1897)</div>
+          <p>Coined in <em>Suicide</em> and developed in <em>The Division of Labour</em>. Anomie describes a condition of norm breakdown — where social rules lose binding force. Individuals feel unmoored, unsure of the rules, standards, or purposes that should govern their lives. This is fertile soil for movements that promise reintegration around a new normative order. Durkheim observed that anomie spikes during periods of rapid economic change or social disruption.</p>
+        </div>
+        <div class="concept-block">
+          <div class="concept-label">Civilizational Exhaustion — Toynbee</div>
+          <p>Arnold Toynbee argued in <em>A Study of History</em> (12 vols., 1934–1961) that civilizations do not collapse from external blows alone — they first lose their "creative minority's" capacity to respond imaginatively to challenges. When a civilization's leadership class becomes merely a "dominant minority" holding power without creative vision, the internal proletariat grows ready for alternative movements. Pre-Islamic Arabia, pre-Reformation Europe, and pre-revolutionary France all exhibit this pattern.</p>
+        </div>
+        <div class="concept-block">
+          <div class="concept-label">Crisis of Legitimacy</div>
+          <p>When institutions can no longer justify their authority through performance, belief, or tradition, they face legitimacy collapse. Max Weber distinguished three sources of legitimacy: rational-legal, traditional, and charismatic. Latency conditions often involve rational-legal and traditional legitimacy failing simultaneously — opening space for charismatic alternatives.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Pre-Islamic Arabia (6th–7th c.)</div>
+            <div class="example-desc">Tribal warfare, moral disorder, the collapse of Yemeni and Byzantine-Persian proxy structures, and the spiritual inadequacy of Arabian polytheism created acute latency conditions before the emergence of Islam.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Pre-Reformation Europe (14th–15th c.)</div>
+            <div class="example-desc">The Black Death, the Avignon papacy, the Great Schism, and widespread clerical corruption generated intense religious anomie. The Lollards and Hussites were failed early emergence movements from this latency.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Modern Example</div>
+            <div class="example-name">Post-1960s Western secularism</div>
+            <div class="example-desc">The decline of mainline Protestant churches from the 1960s onward was preceded by a generation of theological liberalism that weakened doctrinal identity. This created latency conditions that produced both evangelical renewal and the "nones."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 2 -->
+    <div class="stage-card major-section" id="s2"
+         data-tags="charisma theory religion crisis"
+         data-search="emergence charismatic leader weber charismatic authority early christianity sufism buddhist sangha mecca early adopters missionary enthusiasm informal structure">
+      <div class="stage-header">
+        <span class="stage-num">02</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title"><em>Emergence</em></div>
+          <div class="stage-subtitle">The movement first appears around a charismatic core</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Weber · Charismatic Authority</span>
+            <span class="stage-tag tag-religion">Religious Emergence</span>
+            <span class="stage-tag tag-warning">Succession Risk</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>Typical Features</h3>
+        <div class="char-grid">
+          <div class="char-item">Charismatic leader emerges</div>
+          <div class="char-item">New interpretation appears</div>
+          <div class="char-item">Reform impulse begins</div>
+          <div class="char-item">Network of early adopters</div>
+          <div class="char-item">High sacrifice demanded</div>
+          <div class="char-item">Missionary energy</div>
+          <div class="char-item">Existential commitment</div>
+          <div class="char-item">Informal structure</div>
+        </div>
+
+        <h3>Weberian Concept: Charismatic Authority</h3>
+        <div class="concept-block">
+          <div class="concept-label">Max Weber — Economy and Society (1922, posth.)</div>
+          <p>Weber identified charisma as a form of authority grounded not in rules or tradition but in the personal extraordinariness of a leader — their perceived divine gift, heroism, or exemplary quality. Crucially, charismatic authority is <em>anti-institutional</em>: it demands personal loyalty, not procedural compliance. Weber noted that charisma is inherently unstable — it must be routinized or it collapses with the leader.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ Critical Gap in the Standard Model: The Succession Problem</div>
+          <p>The standard framework treats emergence as naturally leading to formation. But this underestimates the <strong>succession crisis</strong> — the single most common point of early movement collapse. When the charismatic founder dies, is imprisoned, or becomes incapacitated, the movement faces an immediate existential question: <em>who carries the authority?</em></p>
+          <p style="margin-top:0.5rem;">Weber called this the "problem of the charismatic succession." Solutions attempted include: (1) hereditary succession (authority passes to the founder's family — early Islam, Shia imamate); (2) charismatic designation (founder names a successor — Abu Bakr after Muhammad); (3) democratic election among disciples (many Protestant movements); (4) magical transmission (authority passes through ritual — Catholic apostolic succession); (5) doctrinal depersonalization (authority transfers to a text — Protestant Reformation's <em>sola scriptura</em>). Each solution introduces new structural tensions.</p>
+        </div>
+
+        <div class="failure-card" style="margin:1rem 0; border-left:none; border-top:2px solid var(--rust);">
+          <h4>When Succession Fails: Common Outcomes</h4>
+          <p><strong>Fragmentation at origin:</strong> The movement splits immediately after the founder's death, each faction claiming authentic succession. The Shia–Sunni split over ʿAlī's succession is the most consequential historical example. <strong>Cult collapse:</strong> Without institutionalized succession, purely personality-dependent movements simply dissolve — most 19th-century American millenarian groups followed this pattern. <strong>Hostile takeover:</strong> A powerful patron or state absorbs the leaderless movement and redirects it — many Sufi orders after the death of their founding sheikh were redirected by local dynastic power.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Religious Example</div>
+            <div class="example-name">Early Islamic Community in Mecca (610–622)</div>
+            <div class="example-desc">Classic emergence: a single charismatic figure, a small circle of committed early adopters (Khadija, Ali, Abu Bakr, Zaid), intense persecution, high sacrifice, no formal institutions. The movement was entirely built around personal loyalty to the Prophet.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Religious Example</div>
+            <div class="example-name">Early Sufism (8th–9th c.)</div>
+            <div class="example-desc">Hasan al-Basri and Rabia al-Adawiyya represent early Sufi emergence: intense personal piety, informal networks, no institutions. The <em>khanqah</em> (Sufi lodge) system came only generations later — a classic emergence-to-institution arc.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Modern Example</div>
+            <div class="example-name">Gülen Movement (1970s)</div>
+            <div class="example-desc">Emerged around Fethullah Gülen's charismatic preaching in İzmir mosques. Small circles of committed young men, high personal sacrifice (living communally, pooling resources), strong meaning-making before any formal institutions existed.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 3 -->
+    <div class="stage-card major-section" id="s3"
+         data-tags="theory religion risk"
+         data-search="formation consolidation doctrine ritual identity sect boundary maintenance succession anxiety purity conflicts inner circle symbols">
+      <div class="stage-header">
+        <span class="stage-num">03</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Formation / <em>Consolidation</em></div>
+          <div class="stage-subtitle">The movement gains coherence, identity, and internal structure</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Sect Formation</span>
+            <span class="stage-tag tag-theory">Boundary Maintenance</span>
+            <span class="stage-tag tag-risk">Purity Conflicts</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>Key Developments</h3>
+        <p>The fluid early movement begins to solidify. Doctrines are clarified, rituals standardized, narratives formed. This is where the movement decides what it <em>is</em> — and, crucially, what it is not.</p>
+        <div class="char-grid">
+          <div class="char-item">Doctrines clarified</div>
+          <div class="char-item">Rituals standardized</div>
+          <div class="char-item">Narratives formed</div>
+          <div class="char-item">Identity boundaries created</div>
+          <div class="char-item">Internal education begins</div>
+          <div class="char-item">Symbols solidify</div>
+          <div class="char-item">Roles appear</div>
+          <div class="char-item">Trusted inner circle forms</div>
+        </div>
+
+        <div class="concept-block">
+          <div class="concept-label">Sect Formation — Troeltsch / Bryan Wilson</div>
+          <p>Ernst Troeltsch's classic typology (<em>The Social Teaching of the Christian Churches</em>, 1912) distinguishes between the <em>church</em> (inclusive, accommodating, hierarchical) and the <em>sect</em> (exclusive, demanding, egalitarian). Sociologist Bryan Wilson later developed a detailed sect typology. Formation is precisely the moment a movement chooses how exclusive or inclusive to be — a foundational decision with long consequences.</p>
+        </div>
+
+        <div class="concept-block">
+          <div class="concept-label">Boundary Maintenance — Peter Berger</div>
+          <p>In <em>The Sacred Canopy</em> (1967), Berger argued that religious communities must maintain a "plausibility structure" — a social environment that makes their beliefs seem natural and real. Boundary maintenance (marking insiders from outsiders) is the mechanism. The sharper the boundaries, the more intense the internal commitment — but the harder the external growth.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ The Purity Trap</div>
+          <p>Movements at this stage frequently tear themselves apart over questions of doctrinal purity or behavioral standards. The earliest followers, who sacrificed most, often resist any compromise. Later joiners bring different expectations. This tension can be productive (sharpening identity) or destructive (purges that exile the most capable members). The Kharijite movement in early Islam — which declared all major sinners to be apostates — represents an extreme purity-trap collapse at formation stage.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Early Church Councils (4th–5th c.)</div>
+            <div class="example-desc">The Council of Nicaea (325 CE) and subsequent councils were classic formation-stage events: defining doctrine (Trinitarian theology vs. Arianism), excluding heretics, and creating institutional mechanisms (creeds, canon lists) to enforce boundaries.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Medina Period of Early Islam (622–632)</div>
+            <div class="example-desc">The Hijra inaugurated formation: the Constitution of Medina created political-social structures; the qibla was changed from Jerusalem to Mecca (identity differentiation from Judaism); the five pillars were formalized. A distinct Muslim identity was consolidated.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 4 -->
+    <div class="stage-card major-section" id="s4"
+         data-tags="theory civ religion"
+         data-search="expansion mobilization asabiyya ibn khaldun group solidarity recruitment institutions publications schools fundraising transregional optimism mission">
+      <div class="stage-header">
+        <span class="stage-num">04</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Expansion / <em>Mobilization</em></div>
+          <div class="stage-subtitle">Rapid growth fueled by group solidarity and mission consciousness</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Ibn Khaldun · ʿAsabiyyah</span>
+            <span class="stage-tag tag-civ">Civilizational Scale</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>Characteristics of Rapid Growth</h3>
+        <div class="char-grid">
+          <div class="char-item">Recruitment accelerates</div>
+          <div class="char-item">Institutions spread</div>
+          <div class="char-item">Publications emerge</div>
+          <div class="char-item">Schools develop</div>
+          <div class="char-item">Fundraising expands</div>
+          <div class="char-item">Transregional influence</div>
+          <div class="char-item">Collective destiny felt</div>
+          <div class="char-item">Mission consciousness high</div>
+        </div>
+
+        <div class="concept-block">
+          <div class="concept-label">ʿAsabiyyah — Ibn Khaldun, Muqaddimah (1377)</div>
+          <p>Ibn Khaldun's concept of ʿasabiyyah — usually translated as "group feeling," "social solidarity," or "esprit de corps" — is perhaps the most sophisticated pre-modern theory of social cohesion. ʿAsabiyyah is the force that enables collective action: sacrifice, discipline, coordinated effort. It is strongest in desert/nomadic groups and weakens as groups become urbanized and prosperous. A movement in expansion is powered by high ʿasabiyyah — members feel deeply bound to one another and to the mission. Ibn Khaldun's key insight: expansion is possible only as long as ʿasabiyyah remains high. Once it weakens, decline is inevitable.</p>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-label">Critical Insight: The Scale-Intensity Tradeoff</div>
+          <p>Expansion inevitably dilutes the intensity that powered emergence. Early members accepted extreme sacrifice; mass recruits typically do not. This is not a failure — it is structural. The question for movement leaders at this stage is: what minimum level of commitment do we require, and how do we keep standards without choking growth?</p>
+          <p>The Jesuits (Society of Jesus, founded 1540) managed this through a two-tier membership structure: highly committed "Professed Fathers" who took a fourth vow of special obedience to the Pope, and a much larger body of less-committed members. This structural solution allowed both scale and intensity.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Early Islamic Conquests (632–750)</div>
+            <div class="example-desc">Ibn Khaldun himself analyzed this: the Arabian tribes united by Islam's ʿasabiyyah were able to defeat both the exhausted Byzantine and Sassanid empires. The expansion was astonishing in speed precisely because of this solidarity — but Khaldun predicted, correctly, that urbanization and wealth would eventually weaken it.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Modern Example</div>
+            <div class="example-name">Evangelical Christianity in the Global South (1960s–present)</div>
+            <div class="example-desc">Pentecostal and evangelical movements in Latin America, sub-Saharan Africa, and East Asia represent an ongoing expansion stage, driven by high ʿasabiyyah among first-generation converts, strong social networks, and powerful meaning-making for populations experiencing dislocation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 5 -->
+    <div class="stage-card major-section" id="s5"
+         data-tags="theory risk charisma"
+         data-search="institutionalization routinization charisma weber bureaucracy schools boards constitutions careerism rigidity spontaneity movement to institution">
+      <div class="stage-header">
+        <span class="stage-num">05</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title"><em>Institutionalization</em></div>
+          <div class="stage-subtitle">The charismatic energy is routinized into stable structures — with costs</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Weber · Routinization</span>
+            <span class="stage-tag tag-risk">Loss of Spontaneity</span>
+            <span class="stage-tag tag-warning">Critical Transition</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>The Most Important Transition</h3>
+        <p>Institutionalization is where a movement either survives beyond its founders or collapses. It is the most consequential transition in the lifecycle — and the one most fraught with tension.</p>
+
+        <div class="concept-block">
+          <div class="concept-label">Routinization of Charisma — Max Weber</div>
+          <p>Weber argued in <em>Economy and Society</em> that charisma is inherently unstable and must be routinized — converted into stable, transmissible forms — or it dies with its bearer. Routinization converts personal authority into institutional authority: the prophet's words become scripture; the teacher's example becomes curriculum; the healer's gift becomes sacrament. This preserves the movement but transforms it.</p>
+        </div>
+
+        <div class="split-compare">
+          <div class="split-col benefit">
+            <div class="split-col-label">Benefits of Institutionalization</div>
+            <ul class="split-list">
+              <li>Continuity beyond founders</li>
+              <li>Scalability to millions</li>
+              <li>Protection of accumulated knowledge</li>
+              <li>Resistance to external suppression</li>
+              <li>Predictable resource allocation</li>
+            </ul>
+          </div>
+          <div class="split-col cost">
+            <div class="split-col-label">Costs of Institutionalization</div>
+            <ul class="split-list">
+              <li>Reduced spiritual spontaneity</li>
+              <li>Bureaucratic inertia</li>
+              <li>Careerism replaces vocation</li>
+              <li>Rigidity in adapting</li>
+              <li>Loss of early intensity</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ What If Institutionalization Never Happens?</div>
+          <p>The standard model assumes institutionalization eventually occurs. But many movements never successfully institutionalize — they remain <strong>charismatic dependencies</strong>, entirely reliant on the personal authority of a leader. When that leader dies or is removed, the movement collapses or explodes into warring factions.</p>
+          <p style="margin-top:0.5rem;">Examples of failed institutionalization: The Kharijite movement repeatedly fragmented because it rejected all institutional authority on principle. Many 20th-century guru movements (Rajneeshees, Jim Jones's People's Temple) failed to institutionalize because the leader resisted any structure that might constrain him — with catastrophic results. The leader's charisma became a bottleneck rather than a foundation.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ What If Institutionalization Happens Too Fast?</div>
+          <p>Premature institutionalization — imposing bureaucratic structures before the movement has developed sufficient shared identity and commitment — can kill the energy before it scales. The movement ends up with all the costs of institutionalization (rigidity, careerism) without the benefits (scale, continuity) because the foundation is too shallow.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Successful Institutionalization</div>
+            <div class="example-name">Benedictine Order (6th c.)</div>
+            <div class="example-desc">Benedict of Nursia's <em>Rule</em> (c. 516 CE) is arguably the most successful act of routinization in Western history — converting the charismatic energy of early monasticism into a scalable, durable institutional form that survived for 1,500 years.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Institutionalization Under Pressure</div>
+            <div class="example-name">Early Caliphate (632–661)</div>
+            <div class="example-desc">The first four caliphs (Rashidun) represent a partially successful institutionalization under extreme pressure: Abu Bakr's immediate response to the <em>ridda</em> wars shows the fragility of the transition. The Umayyad consolidation completed it — but at the cost of the egalitarian ethos of the early community.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Failed Institutionalization</div>
+            <div class="example-name">People's Temple / Jim Jones</div>
+            <div class="example-desc">Jones actively resisted institutional checks on his authority. No succession mechanisms existed. The movement's total dependence on his charisma meant that when he deteriorated psychologically, there was no institutional structure to constrain or correct him — with fatal consequences in 1978.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 6 -->
+    <div class="stage-card major-section" id="s6"
+         data-tags="theory risk religion"
+         data-search="stabilization establishment troeltsch sect church typology legitimacy intergenerational continuity elite capture complacency property assets">
+      <div class="stage-header">
+        <span class="stage-num">06</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Stabilization / <em>Establishment</em></div>
+          <div class="stage-subtitle">The movement becomes part of the social order — and risks losing its edge</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Troeltsch · Sect-to-Church</span>
+            <span class="stage-tag tag-risk">Elite Capture</span>
+            <span class="stage-tag tag-risk">Complacency</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>The Movement Becomes Establishment</h3>
+        <div class="char-grid">
+          <div class="char-item">Recognized legitimacy</div>
+          <div class="char-item">Stable leadership structures</div>
+          <div class="char-item">Intergenerational continuity</div>
+          <div class="char-item">Professional class emerges</div>
+          <div class="char-item">State relationships develop</div>
+          <div class="char-item">Property accumulates</div>
+          <div class="char-item">Less revolutionary</div>
+          <div class="char-item">More managerial</div>
+        </div>
+
+        <div class="concept-block">
+          <div class="concept-label">Troeltsch's Sect-to-Church Typology (1912)</div>
+          <p>Troeltsch observed that Christian movements tend to begin as sect-like (small, voluntary, demanding high commitment, in tension with society) and drift toward church-like (large, inclusive, accommodating to society, professionally staffed). This drift is not merely sociological — it reflects a deep theological shift: from a community of the elect to a sacramental provider to the whole society. H. Richard Niebuhr later argued (<em>The Social Sources of Denominationalism</em>, 1929) that denominations are essentially sects that have accommodated to the middle class.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ The Founder-Generation Gap</div>
+          <p>The most underappreciated danger of stabilization is the <strong>generational inheritance problem</strong>. The founder generation has an irreplaceable asset: lived existential commitment — they chose the movement at personal cost, often under persecution. Their children inherit the structures but not the urgency. Sociologist Robert Bellah called this the move from "constitutive memory" to "mere tradition." The second generation knows the forms but has not had the forming experience. The third generation often has only cultural affiliation.</p>
+          <p style="margin-top:0.5rem;">This is not a failure of education — it is structural. No education system can fully transmit the existential urgency of a founding crisis to those who did not live it. The Mishnaic and Talmudic traditions in Judaism are partially a response to this problem: elaborate pedagogical systems designed to re-enact, rather than merely transmit, foundational experience.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Constantinian Christianity (313 CE)</div>
+            <div class="example-desc">Constantine's Edict of Milan transformed Christianity from a persecuted sect to the empire's favored religion within a generation. This dramatically accelerated stabilization — and produced the exact risks Troeltsch identified: mass nominal membership, loss of intensity, and deep entanglement with state power.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Modern Example</div>
+            <div class="example-name">Mainline Protestant Churches (20th c.)</div>
+            <div class="example-desc">Methodism began as an intensely demanding renewal movement within Anglicanism (field preaching, class meetings, strict accountability). By the mid-20th century, United Methodist congregations in suburban America were indistinguishable in culture from their neighbors — a textbook sect-to-church trajectory.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 7 -->
+    <div class="stage-card major-section" id="s7"
+         data-tags="theory religion"
+         data-search="differentiation diversification denominations factions schools of thought generational change doctrinal disputes class differences pluralization polarization">
+      <div class="stage-header">
+        <span class="stage-num">07</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Differentiation / Internal <em>Diversification</em></div>
+          <div class="stage-subtitle">Subgroups emerge — healthy pluralism or destructive fragmentation?</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Denominationalism</span>
+            <span class="stage-tag tag-religion">Schools of Thought</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>Why Differentiation Occurs</h3>
+        <p>As movements spread geographically, span generations, and encounter diverse contexts, internal diversity is inevitable. The question is whether it becomes productive plurality or destructive fragmentation.</p>
+
+        <div class="char-grid">
+          <div class="char-item">Geographical spread</div>
+          <div class="char-item">Generational change</div>
+          <div class="char-item">Doctrinal disputes</div>
+          <div class="char-item">Political disagreements</div>
+          <div class="char-item">Class differences</div>
+          <div class="char-item">Institutional specialization</div>
+        </div>
+
+        <div class="split-compare">
+          <div class="split-col benefit">
+            <div class="split-col-label">Healthy Differentiation</div>
+            <ul class="split-list">
+              <li>Different schools explore different aspects</li>
+              <li>Intellectual creativity within shared framework</li>
+              <li>Adaptability to different contexts</li>
+              <li>Resilience (no single point of failure)</li>
+            </ul>
+          </div>
+          <div class="split-col cost">
+            <div class="split-col-label">Unhealthy Differentiation</div>
+            <ul class="split-list">
+              <li>Factions claim sole legitimacy</li>
+              <li>Energy spent on internal conflict</li>
+              <li>Outsiders see chaos, not diversity</li>
+              <li>Grassroots confused about identity</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-label">Critical Insight: The Four Madhhabs as Managed Differentiation</div>
+          <p>The classical Islamic legal tradition's acceptance of four major schools of jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) — all considered legitimate expressions of Sunni fiqh — is one of history's most successful examples of institutionalizing healthy differentiation. Rather than forcing uniformity, the tradition declared: "the difference of the scholars is a mercy." This managed pluralism was a conscious response to the destructive intra-Muslim conflicts of the early period.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Religious Example</div>
+            <div class="example-name">Buddhist Schools (3rd c. BCE onward)</div>
+            <div class="example-desc">Early Buddhism differentiated into Theravada, Mahayana, and Vajrayana over centuries — reflecting genuine doctrinal differences (nature of the bodhisattva, role of lay practice) and geographical spread. Each tradition maintained its own coherence while remaining recognizably Buddhist.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Secular Example</div>
+            <div class="example-name">Marxist Differentiation (1880s–1920s)</div>
+            <div class="example-desc">The differentiation of Marxism into social democracy (Bernstein), Bolshevism (Lenin), council communism (Luxemburg), and anarcho-communism illustrates how a single founding vision can generate schools that become functionally separate movements — and in this case, bitterly hostile ones.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 8 -->
+    <div class="stage-card major-section" id="s8"
+         data-tags="risk theory charisma"
+         data-search="fragmentation crisis leadership disputes mission confusion ideological rigidity corruption burnout loss of trust bureaucratic inertia ibn khaldun luxury solidarity preservation adaptation purity relevance">
+      <div class="stage-header">
+        <span class="stage-num">08</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Fragmentation / <em>Crisis</em></div>
+          <div class="stage-subtitle">Internal cohesion weakens — the movement turns on itself</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-theory">Ibn Khaldun · Decline</span>
+            <span class="stage-tag tag-risk">Leadership Crisis</span>
+            <span class="stage-tag tag-risk">Mission Drift</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>Symptoms of Fragmentation</h3>
+        <div class="char-grid">
+          <div class="char-item">Leadership disputes</div>
+          <div class="char-item">Mission confusion</div>
+          <div class="char-item">Ideological rigidity</div>
+          <div class="char-item">Corruption</div>
+          <div class="char-item">Burnout</div>
+          <div class="char-item">Loss of trust</div>
+          <div class="char-item">Bureaucratic inertia</div>
+          <div class="char-item">External pressure</div>
+          <div class="char-item">Moral scandal</div>
+        </div>
+
+        <h3>The Core Dynamic</h3>
+        <p>Movements at this stage are trapped between competing imperatives, each with legitimate claims:</p>
+
+        <div class="split-compare">
+          <div class="split-col benefit">
+            <div class="split-col-label">Preservation Faction</div>
+            <ul class="split-list">
+              <li>Protect original vision</li>
+              <li>Maintain doctrinal purity</li>
+              <li>Resist external compromise</li>
+              <li>Honor founding generation</li>
+            </ul>
+          </div>
+          <div class="split-col cost">
+            <div class="split-col-label">Adaptation Faction</div>
+            <ul class="split-list">
+              <li>Engage changed reality</li>
+              <li>Attract new generations</li>
+              <li>Reform outdated structures</li>
+              <li>Maintain relevance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="concept-block">
+          <div class="concept-label">Ibn Khaldun on Decline — Muqaddimah (1377)</div>
+          <p>Khaldun's analysis of dynastic decline maps directly onto movement fragmentation. As groups move from desert hardship to urban luxury, ʿasabiyyah weakens: members begin to prioritize personal comfort over collective sacrifice; the group's internal solidarity, the very source of its power, erodes. Luxury is not merely moral corruption — it is structural: it changes the material incentives that held the group together. Crucially, Khaldun saw this as <em>inevitable</em> — not a failure of will but a structural consequence of success.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ Moral Scandal as Accelerant</div>
+          <p>A particularly destructive form of fragmentation occurs when leaders whose authority rests on moral exemplarity are exposed as hypocrites. Because religious and reformist movements derive legitimacy from their superior moral claims, scandal hits them disproportionately hard. The Catholic Church's clerical abuse crisis (systematically documented from the 1990s onward) is a contemporary case study: the scandal did not merely damage reputation — it undermined the institution's entire legitimacy claim. Membership in Ireland, once near-total, fell below 50% in some surveys within two decades.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Abbasid Caliphate (9th–10th c.)</div>
+            <div class="example-desc">The Abbasid fragmentation under al-Mu'tasim and successors shows classic Khaldunian decline: Turkish guards replacing Arab solidarity; provincial governors becoming independent; the caliph becoming a ceremonial figurehead. The form of unity was maintained long after the substance had dissolved.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Modern Example</div>
+            <div class="example-name">Soviet Communist Party (1970s–80s)</div>
+            <div class="example-desc">The Brezhnev era ("stagnation") represents textbook fragmentation: ideological rigidity, elite corruption, institutional survivalism, mission confusion (was the USSR still pursuing communism?), and deep burnout among the professional class — all before external pressure (Reagan, Afghanistan) became decisive.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 9 -->
+    <div class="stage-card major-section" id="s9"
+         data-tags="risk religion civ"
+         data-search="decline decomposition ritual without meaning institutional survivalism aging membership intellectual stagnation loss credibility zombie institution">
+      <div class="stage-header">
+        <span class="stage-num">09</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Decline / <em>Decomposition</em></div>
+          <div class="stage-subtitle">The movement loses vitality while institutions may remain standing</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-risk">Hollow Institutions</span>
+            <span class="stage-tag tag-risk">Ritual Without Meaning</span>
+            <span class="stage-tag tag-religion">Spiritual Decline</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>The Hollow Shell Problem</h3>
+        <p>Perhaps the most important — and most commonly overlooked — distinction in this entire lifecycle: <strong>institutions can remain materially powerful while spiritually and intellectually hollow</strong>. Buildings, budgets, titles, and traditions persist long after the animating vision has departed.</p>
+
+        <div class="char-grid">
+          <div class="char-item">Declining participation</div>
+          <div class="char-item">Ritual without meaning</div>
+          <div class="char-item">Institutional survivalism</div>
+          <div class="char-item">Aging membership</div>
+          <div class="char-item">Intellectual stagnation</div>
+          <div class="char-item">Reduced sacrifice</div>
+          <div class="char-item">Loss of moral credibility</div>
+          <div class="char-item">Nostalgic rather than transformative</div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-label">Critical Insight: The "Zombie Institution"</div>
+          <p>Sociologists have noted a phenomenon they variously call "spiritual but not religious," "believing without belonging" (Grace Davie), or "vicarious religion." It describes institutions that no longer command active commitment but continue to function as symbolic repositories — maintained by a small core for a large passive majority. The Church of England is often cited: formal membership high, active practice low. These are "zombie institutions" — technically alive, functionally undead.</p>
+          <p style="margin-top:0.5rem;">The danger of zombie institutions is that they consume resources and occupy the cultural space that a renewal movement would need — preventing both genuine death (which might clear the field) and genuine renewal (which requires admitting the death of the old form).</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ Decline Can Be Invisible for Decades</div>
+          <p>Institutional metrics (property values, endowment size, nominal membership, political influence) can mask profound internal decline. The Roman Catholic Church in France maintained enormous institutional presence — thousands of churches, schools, hospitals — while actual Mass attendance collapsed from ~25% (1960s) to ~5% (2020s). The institutional shell outlasts the living community by generations.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Historical Example</div>
+            <div class="example-name">Late Byzantine Christianity</div>
+            <div class="example-desc">By the 14th–15th centuries, the Eastern Church maintained elaborate liturgical sophistication and theological refinement while the empire contracted to a city-state. Intellectual vitality (Hesychasm, Palamas) coexisted with complete political-social decline.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Modern Example</div>
+            <div class="example-name">European Mainline Protestantism</div>
+            <div class="example-desc">The Lutheran and Reformed state churches of northern Europe maintain historic buildings, cultural significance, and legal status while weekly attendance has fallen to single digits percentagewise. Classic hollow-shell decline.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 10 -->
+    <div class="stage-card major-section" id="s10"
+         data-tags="risk religion civ"
+         data-search="dissolution death disappearance absorption suppression assimilation heritage identity calcification undead institution memory literature rituals myths diaspora not dissolving">
+      <div class="stage-header">
+        <span class="stage-num">10</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Dissolution, <em>Death</em> — or Calcification</div>
+          <div class="stage-subtitle">The original model understates a third outcome: neither death nor renewal, but permanent ossification</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-risk">Calcification</span>
+            <span class="stage-tag tag-religion">Religious Persistence</span>
+            <span class="stage-tag tag-warning">Model Limitation</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>The Standard Model's Three Outcomes</h3>
+        <p>The original framework offers: complete disappearance, absorption into another movement, state suppression, cultural assimilation, or transformation into "heritage identity only." These are real outcomes. But the model significantly underweights a fourth possibility.</p>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ Critical Model Gap: Calcification Without Death or Renewal</div>
+          <p>Many movements — especially religious ones — do not dissolve, nor do they genuinely renew. They <strong>calcify</strong>: they persist indefinitely as institutional forms without either dying or recovering genuine vitality. This is different from the "zombie institution" of Stage 9, which is still in motion. Calcification is stable ossification — the institution has settled into a permanent low-energy equilibrium.</p>
+          <p style="margin-top:0.5rem;">This represents a distinct terminal state that the model's linear arc of "dissolution → renewal or death" does not capture. Calcified movements can persist for centuries — structurally alive, spiritually inert, resistant to both genuine death and genuine renewal because the institutional form itself becomes an end rather than a means.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Example of Dissolution</div>
+            <div class="example-name">Catharism (12th–14th c.)</div>
+            <div class="example-desc">The Cathar movement in southern France was effectively annihilated by the Albigensian Crusade (1209–1229) and the Inquisition — a textbook case of state suppression leading to near-complete dissolution. Small remnants survived in northern Italy until the 14th century but left no living tradition.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Example of Survival as Memory</div>
+            <div class="example-name">Zoroastrianism</div>
+            <div class="example-desc">Zoroastrianism lost its civilizational scale with the Arab conquest of Persia (7th c.) but survived as a living minority religion — in Iran (Yazdi Zoroastrians) and among the Parsis in India. It persists as a genuine community of practice, not merely heritage, 1,400 years after political dissolution.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Example of Calcification</div>
+            <div class="example-name">Many Sufi Orders (19th–20th c.)</div>
+            <div class="example-desc">Numerous Ottoman-era Sufi orders survived the Kemalist suppression of 1925 formally but ceased genuine spiritual formation. They persisted as cultural-heritage associations, transmitting forms (dhikr rituals, hierarchical titles) without the transformative content that originally animated them.</div>
+          </div>
+        </div>
+
+        <h3>Why Movements Don't Dissolve: The Religion Exception</h3>
+        <div class="concept-block">
+          <div class="concept-label">The Peculiar Persistence of Religious Institutions</div>
+          <p>Religious movements are unusually resistant to dissolution because they operate simultaneously on spiritual, moral, psychological, communal, political, civilizational, and metaphysical levels. A movement can lose political power, intellectual creativity, and social influence while retaining spiritual meaning for a core community — and that core community will maintain the institutional form almost indefinitely. This is why the world's oldest continuing institutions are almost all religious (the Papacy, Al-Azhar, the Rabbinic tradition, Buddhist sanghas). Secular movements lack this multi-level redundancy and dissolve more readily when their social utility declines.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 11 -->
+    <div class="stage-card major-section" id="s11"
+         data-tags="religion theory charisma renewal"
+         data-search="renewal reform rebirth revivalists mystics tajdid reformation awakening younger generations founding vision new charisma against old bureaucracy">
+      <div class="stage-header">
+        <span class="stage-num">11</span>
+        <div class="stage-title-wrap">
+          <div class="stage-title">Renewal / Reform / <em>Rebirth</em></div>
+          <div class="stage-subtitle">New charisma rises against old bureaucracy — the cycle can begin again</div>
+          <div class="stage-tags">
+            <span class="stage-tag tag-religion">Tajdīd · Revival</span>
+            <span class="stage-tag tag-theory">Reformation</span>
+            <span class="stage-tag tag-charisma">New Charisma</span>
+          </div>
+        </div>
+      </div>
+      <div class="stage-body">
+        <h3>Regeneration Instead of Death</h3>
+        <p>Some movements arrest decline and regenerate. This renewal typically comes through reformers, revivalists, mystics, crises, younger generations, or a return to the founding vision.</p>
+
+        <div class="concept-block">
+          <div class="concept-label">Tajdīd — Islamic Concept of Renewal</div>
+          <p>The hadith of the mujaddid — "God sends to this community, at the head of each century, someone who will renew (yujaddid) its religion for it" (Abu Dawud) — reflects a sophisticated Islamic theological understanding of the renewal cycle. The community expects and institutionally prepares for the need for renewal. Scholars identified figures like Umar ibn Abd al-Aziz (2nd century AH), al-Shafi'i (3rd), al-Ghazali (5th), and Ibn Taymiyya (8th) as mujaddids. This concept acknowledges that decline is normal and renewal is a repeating pattern — not a one-time event.</p>
+        </div>
+
+        <div class="concept-block">
+          <div class="concept-label">The Protestant Reformation as Renewal</div>
+          <p>Luther, Calvin, and Zwingli represent classic renewal-against-institutionalization: charismatic figures appealing to original sources (Scripture, early Church) against the calcified bureaucracy of the medieval papacy. The Reformation itself then institutionalized and generated its own renewal movements (Pietism, Methodism, Pentecostalism) — demonstrating that the lifecycle is recursive, not linear.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-label">⚠ When Renewal Fails: The Calcification Trap</div>
+          <p>Not all renewal attempts succeed. Three patterns of failed renewal are common: <strong>(1) Renewal movements absorbed:</strong> The reformers are co-opted by the institution — given titles, positions, resources — and their energy is neutralized. Many would-be reformers within the medieval Church (Francis of Assisi's movement, partially) were absorbed rather than allowed to transform. <strong>(2) Renewal movements expelled:</strong> The institution expels the reformers before they reach critical mass, and the reform movement becomes a separate sect rather than renewing the parent body. <strong>(3) Renewal too late:</strong> The institution has calcified so deeply that no internal reform can reach its structural foundations — the renewal movement either fails or becomes a new movement that supersedes the old one.</p>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-label">Critical Insight: The Recursive Lifecycle</div>
+          <p>Every renewal movement is itself a new movement beginning its own lifecycle. Methodism began as a renewal movement within Anglicanism; it then institutionalized, stabilized, and generated its own renewal movements (Holiness movement, Pentecostalism). Each generation's radical renewal is the next generation's stale institution.</p>
+          <p style="margin-top:0.5rem;">This recursion is the deepest structural truth the framework captures: the lifecycle is not a single arc but a nested series of overlapping cycles, each one a response to the institutionalization failures of the previous one.</p>
+        </div>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <div class="example-label">Islamic Renewal</div>
+            <div class="example-name">Al-Ghazali (d. 1111)</div>
+            <div class="example-desc">Al-Ghazali's <em>Ihya Ulum al-Din</em> (Revival of the Religious Sciences) is perhaps the most celebrated act of tajdid: integrating Sufi spirituality with mainstream Islamic law and theology, rescuing a tradition falling into either dry legalism or undisciplined mysticism. He is widely recognized as the mujaddid of the 5th Islamic century.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Christian Renewal</div>
+            <div class="example-name">Pentecostalism (1906–present)</div>
+            <div class="example-desc">Emerging from Azusa Street, Los Angeles, in 1906 as a renewal movement within Protestant Christianity, Pentecostalism is now the fastest-growing segment of global Christianity — with an estimated 600 million adherents. A textbook Stage 2 emergence that has reached Stage 5–6 in the global North while still at Stage 4 in the global South.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-label">Secular Renewal</div>
+            <div class="example-name">Social Democracy's Post-War Renewal</div>
+            <div class="example-desc">The exhausted European socialist movement of the 1930s–40s was renewed through the post-war social democratic settlement: abandoning revolutionary goals for welfare-state institutionalism. A successful renewal — but at the cost of the original vision, illustrating how renewal always involves negotiation with what is preserved and what is abandoned.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /#stagesContainer -->
+
+  <!-- No-results message (shown when search/filter yields nothing) -->
+  <div id="noResults">
+    <p>No stages match your current filter or search.</p>
+    <span>Try broadening your search or selecting "All Stages".</span>
+  </div>
+
+  <!-- ─── FAILURE MODES ──────────────────────────────────────── -->
+  <section id="failure-modes" class="failure-section">
+    <span class="section-label">Critical Analysis</span>
+    <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:700; margin-bottom:0.5rem;">What the Standard Model <em style="color:var(--rust-light); font-style:italic;">Misses</em></h2>
+    <p style="color:var(--text-mid); font-size:0.97rem; margin-bottom:1.5rem; max-width:640px;">The framework's linear arc describes the typical path — but several important structural possibilities are underweighted or absent.</p>
+
+    <div class="failure-grid">
+      <div class="failure-card">
+        <h4>1. Non-Linear Trajectories</h4>
+        <p>Movements do not always pass through stages in sequence. They can <strong>skip stages</strong> (a movement may jump from emergence directly to crisis without ever properly institutionalizing), <strong>regress</strong> (a moment of scandal can push a stabilized movement back to formation-stage boundary disputes), or <strong>experience multiple stages simultaneously</strong> in different geographical branches. The Reformation produced Stage 2 conditions in England while Germany was already at Stage 6.</p>
+      </div>
+      <div class="failure-card">
+        <h4>2. The Perpetual Sect</h4>
+        <p>Some movements never leave Stage 3–4. They maintain sect-like intensity indefinitely — through deliberate exclusivity, persecution, or ideological prohibition of institutional development. The Amish communities in North America represent a movement that has institutionalized its <em>resistance</em> to institutionalization: their <em>Ordnung</em> (rules) carefully maintains the material conditions (agricultural life, geographic separation) that prevent drift toward the church-type. They have survived at Stage 3–4 intensity for over 300 years.</p>
+      </div>
+      <div class="failure-card">
+        <h4>3. External Termination</h4>
+        <p>The model implicitly assumes movements develop and decline internally. But many movements are terminated externally — by state suppression, conquest, genocide, or persecution — before completing any internal lifecycle. The Cathar movement, the Aztec religious tradition, the Yazidi community under ISIS: all were subjected to external termination that bypasses the entire internal lifecycle. The model needs an "external termination" pathway that is structurally distinct from internal decline.</p>
+      </div>
+      <div class="failure-card">
+        <h4>4. Successful Charisma Without Succession</h4>
+        <p>The model assumes successful charisma leads to institutionalization. But some movements succeed precisely by <em>never</em> resolving the succession question — they remain perpetually in emergence/formation mode by constantly regenerating charismatic leadership. Many Sufi silsilas (chains of transmission) operate this way: each generation's sheikh is a new charismatic center. The structure enables renewal without full institutionalization — but it also means that a particularly weak link can collapse the entire chain.</p>
+      </div>
+      <div class="failure-card">
+        <h4>5. The "Long Establishment" — Centuries of Stage 6</h4>
+        <p>The model implies movements pass through stabilization toward decline. But some movements remain at Stage 6 for centuries without either fragmenting or renewing. Rabbinic Judaism after the destruction of the Temple (70 CE) entered a "long establishment" phase that lasted, with adaptations, for nearly two millennia — maintaining high internal intensity and intellectual productivity without either expanding to civilizational scale or declining to symbolic identity. This is a distinct and undertheorized outcome.</p>
+      </div>
+      <div class="failure-card">
+        <h4>6. Civilizational Absorption — The Movement Wins</h4>
+        <p>The model treats civilizational scale as the apex of expansion. But some movements are so successful that they effectively dissolve by <em>winning</em> — their vision becomes so embedded in the surrounding culture that the movement itself becomes unnecessary. Liberal modernity's transformation of Western civilization is partially this: many liberal ideals (individual rights, scientific rationalism) are now so culturally embedded that "liberalism" as a distinct movement has partly dissolved into the water supply. This is a success-dissolution, not a failure-dissolution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STRUCTURAL TENSIONS ───────────────────────────────── -->
+  <section id="tensions" class="tension-section">
+    <span class="section-label-top">Throughout the Lifecycle</span>
+    <h2 class="section-h2">Structural <em>Tensions</em></h2>
+    <p class="section-intro">These tensions run through every stage. They do not resolve — they must be continuously managed. Every stage presents them in a different form.</p>
+
+    <div class="tension-grid">
+      <div class="tension-card">
+        <div class="tension-num">01</div>
+        <div class="tension-title">Charisma vs. Institution</div>
+        <div class="tension-vs">
+          <span class="tension-pole">Charisma</span>
+          <span class="tension-sep">↔</span>
+          <span class="tension-pole">Institution</span>
+        </div>
+        <div class="tension-desc">Excess charisma without structure produces cults, dependency, and collapse at the leader's death. Excess institution without charisma produces bureaucratic shells with no spiritual energy. The tension is never resolved — only managed. The Catholic Church's history is largely a series of responses to this tension: charismatic movements (Franciscans, Dominicans, Jesuits) periodically injected energy into an increasingly bureaucratic structure.</div>
+      </div>
+      <div class="tension-card">
+        <div class="tension-num">02</div>
+        <div class="tension-title">Purity vs. Scale</div>
+        <div class="tension-vs">
+          <span class="tension-pole">Purity</span>
+          <span class="tension-sep">↔</span>
+          <span class="tension-pole">Scale</span>
+        </div>
+        <div class="tension-desc">Movements that maintain high purity standards limit their growth. Movements that compromise for scale risk losing their distinctive character. No movement has fully escaped this tension. The Quaker example is instructive: their refusal to compromise on pacifism and simplicity kept them small but remarkably coherent over 350 years — a deliberate choice of purity over scale.</div>
+      </div>
+      <div class="tension-card">
+        <div class="tension-num">03</div>
+        <div class="tension-title">Mission vs. Survival</div>
+        <div class="tension-vs">
+          <span class="tension-pole">Mission</span>
+          <span class="tension-sep">↔</span>
+          <span class="tension-pole">Survival</span>
+        </div>
+        <div class="tension-desc">As movements institutionalize, they develop survival interests — property, reputation, legal standing, staff employment — that can diverge from the original mission. Institutions begin protecting themselves rather than their purpose. This is not corruption in the moral sense; it is structural. The question is not whether this happens but how long it takes and whether the movement can course-correct before mission and survival become wholly decoupled.</div>
+      </div>
+      <div class="tension-card">
+        <div class="tension-num">04</div>
+        <div class="tension-title">Founder Generation vs. Later Generations</div>
+        <div class="tension-vs">
+          <span class="tension-pole">Founders</span>
+          <span class="tension-sep">↔</span>
+          <span class="tension-pole">Inheritors</span>
+        </div>
+        <div class="tension-desc">Later generations inherit structures without the existential urgency that created them. This is not a failure of transmission but a structural feature of inheritance. The founding crisis cannot be re-experienced — only remembered, symbolized, or partially re-enacted through ritual. The question for later generations is: how do we develop genuine commitment rather than mere cultural affiliation? The Islamic Hajj — literally a re-enactment of Abrahamic existential commitment — is a sophisticated institutional response to this problem.</div>
+      </div>
+      <div class="tension-card">
+        <div class="tension-num">05</div>
+        <div class="tension-title">Universalism vs. Particularity</div>
+        <div class="tension-vs">
+          <span class="tension-pole">Universal Message</span>
+          <span class="tension-sep">↔</span>
+          <span class="tension-pole">Particular Community</span>
+        </div>
+        <div class="tension-desc">Most powerful movements begin with a universal claim (salvation for all humanity, liberation for all workers, truth for all seekers) but are embodied in a particular community with specific cultural, linguistic, and historical characteristics. The tension between the universal claim and the particular embodiment is permanent: too much universalism dissolves the specific community; too much particularity contradicts the universal mission. Buddhism, Christianity, and Islam have each navigated this tension differently — with markedly different civilizational outcomes.</div>
+      </div>
+      <div class="tension-card">
+        <div class="tension-num">06</div>
+        <div class="tension-title">Memory vs. Adaptation</div>
+        <div class="tension-vs">
+          <span class="tension-pole">Faithful Memory</span>
+          <span class="tension-sep">↔</span>
+          <span class="tension-pole">Creative Adaptation</span>
+        </div>
+        <div class="tension-desc">Movements must remember their founding vision accurately to remain coherent, but must adapt that vision creatively to remain relevant. Too much memory produces fossilization; too much adaptation produces identity dissolution. The Islamic jurisprudential concept of <em>ijtihad</em> (independent legal reasoning) vs. <em>taqlid</em> (following established precedent) is a formal institutional expression of this tension — one of the few cases where the tension itself has been theorized and institutionalized.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RELIGIOUS MOVEMENTS SPECIAL CASE ───────────────────── -->
+  <section id="religious" class="major-section" style="scroll-margin-top:180px; margin-bottom:3rem;">
+    <span class="section-label-top">Special Case</span>
+    <h2 class="section-h2">Religious Movements: <em>A Different Animal</em></h2>
+    <p class="section-intro">Religious movements follow the general lifecycle but with important structural differences that make them harder to analyze using purely sociological frameworks.</p>
+
+    <div class="intro-block" style="margin-bottom:1.5rem;">
+      <p>Religious movements operate simultaneously on multiple levels — spiritual, moral, psychological, communal, political, civilizational, and metaphysical. This multi-level operation means that decline can happen on some levels while other levels remain vital.</p>
+      <div class="split-compare" style="margin-top:1rem;">
+        <div class="split-col benefit">
+          <div class="split-col-label">Can Decline Independently</div>
+          <ul class="split-list">
+            <li>Political power</li>
+            <li>Institutional influence</li>
+            <li>Intellectual creativity</li>
+            <li>Social prestige</li>
+            <li>Numerical membership</li>
+          </ul>
+        </div>
+        <div class="split-col cost">
+          <div class="split-col-label">Can Remain Vital Independently</div>
+          <ul class="split-list">
+            <li>Spiritual depth</li>
+            <li>Moral exemplarity</li>
+            <li>Community cohesion</li>
+            <li>Personal meaning-making</li>
+            <li>Intellectual tradition</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-label">The Paradox of Persecution and Growth</div>
+      <p>Religious movements often grow under persecution and decline under toleration. Persecution forces Stage 2–3 intensity: high commitment, tight boundaries, clear identity, willingness to sacrifice. Toleration produces Stage 5–6 drift: casual membership, accommodation, institutional comfort.</p>
+      <p style="margin-top:0.5rem;">Tertullian's famous observation — "the blood of the martyrs is the seed of the Church" — points to a structural reality: external pressure maintains the ʿasabiyyah that internal success erodes. This is why several major religious traditions maintain a <em>theology of suffering</em> — not as masochism, but as a structural response to the recognition that comfort is the greatest threat to spiritual vitality.</p>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-label">⚠ The Disenchantment Problem — Weber / Berger</div>
+      <p>Weber's thesis of the "disenchantment of the world" (Entzauberung) — the progressive rationalization of modern life that removes magic, mystery, and sacred meaning — poses a distinctive long-run challenge to religious movements. Peter Berger's <em>The Sacred Canopy</em> (1967) extended this: modernity creates "plausibility crises" for religion because the social conditions that made religious claims seem self-evident (shared sacred worldview, unified community, absence of credible alternatives) are systematically undermined by pluralism, mobility, and scientific rationalism.</p>
+      <p style="margin-top:0.5rem;">Berger later revised his secularization thesis, acknowledging that religious movements proved far more resilient than he predicted — particularly outside Europe. But the challenge remains: religious movements in late modernity must maintain plausibility structures against constant competitive pressure from secular meaning-systems, in a way that pre-modern religious movements did not face.</p>
+    </div>
+  </section>
+
+  <!-- ─── CIVILIZATIONAL SCALE ──────────────────────────────── -->
+  <section id="civilizational" class="major-section" style="scroll-margin-top:180px; margin-bottom:3rem;">
+    <span class="section-label-top">Civilizational Scale</span>
+    <h2 class="section-h2">When Movements Become <em>Civilizations</em></h2>
+    <p class="section-intro">At very large scale and over very long time, the lifecycle becomes not merely organizational but civilizational. The movement's structures become the structures of entire societies.</p>
+
+    <p style="color:var(--text-mid); margin-bottom:1.2rem;">Some movements expand beyond organizations into civilizational forms — generating legal systems, educational traditions, philosophical frameworks, aesthetic cultures, and political structures that outlast any individual organizational form.</p>
+
+    <div class="civ-grid">
+      <div class="civ-card">
+        <div class="civ-name">Islamic Civilization</div>
+        <div class="civ-desc">From religious movement (610 CE) to legal-intellectual civilization spanning 3 continents. The sharīʿa tradition, the madrasa system, and the waqf (endowment) institution represent successful civilizational institutionalization that persists despite the dissolution of the caliphate.</div>
+      </div>
+      <div class="civ-card">
+        <div class="civ-name">Buddhist Civilization</div>
+        <div class="civ-desc">From the Buddha's wandering community to civilizational traditions in South, Southeast, and East Asia. Buddhism's lack of a centralized institutional form made it more resilient to political disruption — but also easier to absorb into syncretic local traditions.</div>
+      </div>
+      <div class="civ-card">
+        <div class="civ-name">Christendom</div>
+        <div class="civ-desc">Medieval Latin Christendom represents the most complete organizational expression of a religious movement as civilization — unified law (canon law), unified education (the university system), unified art, unified political legitimation. Its fragmentation via Reformation and Enlightenment is a civilizational-scale Stage 7–8.</div>
+      </div>
+      <div class="civ-card">
+        <div class="civ-name">Marxism</div>
+        <div class="civ-desc">From a 19th-century intellectual movement to a civilizational force governing 35% of the world's population by 1960. Its rapid collapse in 1989–1991 (combined institutional, ideological, and economic failure) represents one of the fastest civilizational-scale Stage 9–10 transitions in recorded history.</div>
+      </div>
+      <div class="civ-card">
+        <div class="civ-name">Liberal Modernity</div>
+        <div class="civ-desc">The most successful modern movement in terms of civilizational penetration — individual rights, scientific rationalism, market economies, and democratic governance have become the operating system of global institutions. Currently at Stage 7–8: internal differentiation (neoliberalism vs. social liberalism) and fragmentation (populist backlash) are underway.</div>
+      </div>
+      <div class="civ-card">
+        <div class="civ-name">The Confucian Tradition</div>
+        <div class="civ-desc">Perhaps the longest-running example of civilizational lifecycle: from Confucius's teaching circle (5th c. BCE) to the backbone of Chinese governance and culture for 2,500 years. Multiple cycles of decline and renewal (Han Confucianism, Neo-Confucianism, the Cheng-Zhu school) within a single overarching tradition.</div>
+      </div>
+    </div>
+
+    <div class="insight-box" style="margin-top:1.5rem;">
+      <div class="insight-label">Toynbee's Challenge-and-Response</div>
+      <p>Arnold Toynbee's framework in <em>A Study of History</em> offers the most systematic analysis of civilizational lifecycle. Civilizations grow by responding creatively to challenges — environmental, military, social. Growth continues as long as the creative minority generates adequate responses. Decline begins when the minority becomes merely dominant — holding power without generating creative responses to new challenges.</p>
+      <p style="margin-top:0.5rem;">Applied to movements: the question is not whether a movement faces challenges (it always does), but whether its leadership retains the creative capacity to generate adequate responses. When it loses this capacity — and begins merely defending existing arrangements — the transition from growth to decline has occurred, regardless of what institutional metrics show.</p>
+    </div>
+  </section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SCRIPTS                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+  // ── Progress Bar ──────────────────────────────────────────
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+  }, { passive: true });
+
+  // ── Filter Logic ───────────────────────────────────────────
+  const filterMap = {
+    theory:   ['theory'],
+    risk:     ['risk'],
+    religion: ['religion'],
+    civ:      ['civ'],
+    charisma: ['charisma'],
+  };
+
+  let activeFilter = 'all';
+  let activeSearch = '';
+
+  function applyFilters() {
+    const cards = document.querySelectorAll('.stage-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const tags = (card.dataset.tags || '').split(' ');
+      const searchText = (card.dataset.search || '') + ' ' + card.textContent;
+      const matchesFilter = activeFilter === 'all' || tags.some(t => filterMap[activeFilter]?.includes(t));
+      const matchesSearch = !activeSearch || searchText.toLowerCase().includes(activeSearch.toLowerCase());
+      const show = matchesFilter && matchesSearch;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    const noRes = document.getElementById('noResults');
+    noRes.style.display = visible === 0 ? 'block' : 'none';
+
+    const resEl = document.getElementById('searchResults');
+    if (activeSearch) {
+      resEl.style.display = 'block';
+      resEl.textContent = `${visible} result${visible !== 1 ? 's' : ''} for "${activeSearch}"`;
+    } else {
+      resEl.style.display = 'none';
+    }
+  }
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  // Search input
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+
+  searchInput.addEventListener('input', () => {
+    activeSearch = searchInput.value.trim();
+    searchClear.style.display = activeSearch ? 'block' : 'none';
+    applyFilters();
+  });
+
+  function clearSearch() {
+    searchInput.value = '';
+    activeSearch = '';
+    searchClear.style.display = 'none';
+    applyFilters();
+  }
+
+  // ── TOC smooth scroll (accounting for stacked bars) ───────
+  document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      document.getElementById('tocOverlay').classList.remove('open');
+      setTimeout(() => {
+        const offset = 62 + 50 + 56 + 16; // global nav + article header + search bar + buffer
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }, 120);
+    });
+  });
+
+  // Flow node clicks
+  document.querySelectorAll('.flow-node[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      const offset = 62 + 50 + 56 + 16;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // ── Keyboard shortcut: / focuses search ───────────────────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape') {
+      if (document.activeElement === searchInput) {
+        clearSearch();
+        searchInput.blur();
+      }
+      document.getElementById('tocOverlay').classList.remove('open');
+    }
+  });
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

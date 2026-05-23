@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="The Hidden Wires of Ibn Khaldun" />
+  <meta property="og:description" content="The Hidden Wires of Ibn Khaldun" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/faith/Islamic-Intellectual-History/the-hidden-wires-of-ibn-khaldun.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="The Hidden Wires of Ibn Khaldun" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/faith/Islamic-Intellectual-History/the-hidden-wires-of-ibn-khaldun.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>The Hidden Wires of Ibn Khaldun | Yasir Bilgin</title>
+
+  <!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Color palette ── */
+    :root {
+      --bg:              #0f0e0c;
+      --surface:         #1a1814;
+      --surface2:        #242118;
+      --border:          #2e2b24;
+      --text:            #e8e2d4;
+      --text-muted:      #8a8070;
+      --accent:          #c9a84c;
+      --accent-dim:      #7a5f24;
+
+      --color-upstream:     #D97706;
+      --color-parallel:     #2563EB;
+      --color-transmission: #0D9488;
+      --color-downstream:   #7C3AED;
+      --color-hidden:       #DC2626;
+      --color-counter:      #6B7280;
+      --color-structural:   #16A34A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    /* ── Progress bar ── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      width: min(340px, 90vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+    }
+    .toc-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.05em;
+    }
+    .toc-close {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.3rem 0.7rem;
+      cursor: pointer;
+      border-radius: 4px;
+      float: right;
+      font-size: 0.85rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 0.5rem; }
+    .toc-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-main { color: var(--text) !important; font-weight: 600; }
+
+    /* ── Article sub-header ── */
+    .article-header {
+      background: rgba(15,14,12,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 2rem;
+    }
+    .site-name {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .read-time { font-size: 0.8rem; color: var(--text-muted); }
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--accent-dim);
+      color: var(--accent);
+      padding: 0.35rem 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .toc-btn:hover { background: var(--accent-dim); }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.2rem 0.7rem;
+      border-radius: 3px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em { color: var(--accent); font-style: italic; }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 2rem;
+      max-width: 680px;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.8rem; }
+    .avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; color: var(--accent);
+      flex-shrink: 0;
+    }
+    .byline-name { font-weight: 600; font-size: 0.95rem; display: block; }
+    .byline-meta { font-size: 0.8rem; color: var(--text-muted); }
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ── Timeline ── */
+    .timeline-wrap {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .timeline-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .timeline-scroll {
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .timeline-track {
+      display: flex;
+      align-items: center;
+      min-max-width: 760px; width: 100%;
+      position: relative;
+      padding: 1.5rem 1rem;
+    }
+    .tl-line {
+      position: absolute;
+      top: 50%;
+      left: 0; right: 0;
+      height: 2px;
+      background: var(--border);
+      transform: translateY(-50%);
+    }
+    .tl-event {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      cursor: pointer;
+    }
+    .tl-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      border: 2px solid var(--bg);
+      z-index: 2;
+      transition: transform 0.2s;
+    }
+    .tl-event:hover .tl-dot { transform: scale(1.4); }
+    .tl-event.anchor .tl-dot {
+      width: 18px; height: 18px;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+    .tl-event.anchor:hover .tl-dot { transform: rotate(45deg) scale(1.3); }
+    .tl-year {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+    .tl-event.anchor .tl-year { color: var(--accent); font-weight: 700; }
+    .tl-name {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 80px;
+      line-height: 1.3;
+      margin-top: 0.2rem;
+    }
+    /* tooltip hidden in DOM — rendered via JS floating div instead */
+    .tl-tooltip { display: none; }
+
+    /* Floating tooltip — appended to body, escapes overflow:hidden */
+    #tl-float {
+      position: fixed;
+      z-index: 9999;
+      background: var(--surface);
+      border: 1px solid var(--accent-dim);
+      border-radius: 7px;
+      padding: 0.55rem 0.9rem;
+      font-size: 0.78rem;
+      color: var(--text);
+      max-width: 240px;
+      line-height: 1.5;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    #tl-float.visible { opacity: 1; }
+
+    /* ── Article body ── */
+    .article-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem 8rem;
+    }
+    @media (max-width: 720px) {
+      .article-body { padding: 3rem 1.4rem 5rem; }
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.85;
+      margin-bottom: 3rem;
+    }
+    .intro-text p { margin-bottom: 1.2rem; }
+
+    /* ── Connection cards ── */
+    .connection-card {
+      margin-bottom: 3.5rem;
+      border-left: 4px solid var(--border);
+      padding-left: 1.5rem;
+      scroll-margin-top: 130px;
+    }
+    .connection-card.upstream  { border-color: var(--color-upstream); }
+    .connection-card.parallel  { border-color: var(--color-parallel); }
+    .connection-card.transmission { border-color: var(--color-transmission); }
+    .connection-card.downstream { border-color: var(--color-downstream); }
+    .connection-card.hidden    { border-color: var(--color-hidden); }
+    .connection-card.structural { border-color: var(--color-structural); }
+
+    .type-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.7rem;
+    }
+    .upstream  .type-badge { background: rgba(217,119,6,0.15); color: var(--color-upstream); }
+    .parallel  .type-badge { background: rgba(37,99,235,0.15); color: var(--color-parallel); }
+    .transmission .type-badge { background: rgba(13,148,136,0.15); color: var(--color-transmission); }
+    .downstream .type-badge { background: rgba(124,58,237,0.15); color: var(--color-downstream); }
+    .hidden .type-badge    { background: rgba(220,38,38,0.15); color: var(--color-hidden); }
+    .structural .type-badge { background: rgba(22,163,74,0.15); color: var(--color-structural); }
+
+    .connection-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .connection-card p { margin-bottom: 1rem; color: var(--text); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      margin: 1.5rem 0;
+      padding: 0.8rem 1.2rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--accent);
+      line-height: 1.65;
+    }
+    @media (max-width: 640px) {
+      .pull-quote { margin-left: 0; }
+    }
+
+    /* ── Hidden wire callout ── */
+    .hidden-wire-box {
+      background: rgba(220,38,38,0.08);
+      border: 1px solid rgba(220,38,38,0.35);
+      border-radius: 6px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+    .hw-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-hidden);
+      margin-bottom: 0.5rem;
+    }
+    .hidden-wire-box p {
+      font-size: 0.95rem;
+      color: #e0c0c0;
+      margin: 0;
+    }
+
+    /* ── SVG Map ── */
+    .map-section {
+      margin: 4rem 0;
+      scroll-margin-top: 130px;
+    }
+    .map-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+    .map-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .map-container svg { width: 100%; height: auto; display: block; }
+
+    .node-label {
+      font-size: 11px;
+      fill: #b0a898;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .node-circle {
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .node-circle:hover { opacity: 0.8; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      font-size: 1rem;
+    }
+    .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* ── Section label ── */
+    .section-label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+  </style>
+  <meta name="description" content="Ibn Khaldun wrote the first theory of how civilizations rise and fall — not in an ivory tower, but in the wreckage of a world being destroyed by plague,…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Hidden Wires of Ibn Khaldun",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-05-01",
+  "url": "https://yasirbilgin.com/faith/Islamic-Intellectual-History/the-hidden-wires-of-ibn-khaldun.html",
+  "description": "Ibn Khaldun wrote the first theory of how civilizations rise and fall — not in an ivory tower, but in the wreckage of a world being destroyed by plague,…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/faith/" style="color:#2d5a4a;text-decoration:none;">Faith</a> <span style="opacity:0.5">›</span> <span>Islamic Intellectual History</span> <span style="opacity:0.5">›</span> <span>The Hidden Wires of Ibn Khaldun</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Faith",
+      "item": "https://yasirbilgin.com/faith/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Hidden Wires of Ibn Khaldun",
+      "item": "https://yasirbilgin.com/faith/Islamic-Intellectual-History/the-hidden-wires-of-ibn-khaldun.html"
+    }
+  ]
+}
+</script>
+
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- TOC overlay -->
+<div class="toc-overlay" id="tocOverlay"
+     onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="toc-close"
+            onclick="document.getElementById('tocOverlay').classList.remove('open')">✕ Close</button>
+    <h3>Contents</h3>
+    <ul class="toc-list">
+      <li><a href="#intro" class="toc-main">Introduction</a></li>
+      <li><a href="#s1" class="toc-main">I. The Black Death's Gift</a></li>
+      <li><a href="#s2" class="toc-main">II. The Mongol Horizon</a></li>
+      <li><a href="#s3" class="toc-main">III. The Forgotten Parallel</a></li>
+      <li><a href="#s4" class="toc-main">IV. How His Ideas Traveled</a></li>
+      <li><a href="#s5" class="toc-main">V. The Downstream Cascade</a></li>
+      <li><a href="#s6" class="toc-main">VI. The Hidden Wire</a></li>
+      <li><a href="#map" class="toc-main">Connection Map</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Article sub-header -->
+
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-tags">
+    <span class="tag">Ibn Khaldun</span>
+    <span class="tag">14th Century</span>
+    <span class="tag">Islamic Civilization</span>
+    <span class="tag">Social Theory</span>
+  </div>
+  <h1>The Man Who Invented History<br><em>Before History Existed</em></h1>
+  <p class="hero-sub">Ibn Khaldun wrote the first theory of how civilizations rise and fall — not in an ivory tower, but in the wreckage of a world being destroyed by plague, Mongols, and the collapse of everything familiar. To understand him, you have to understand the catastrophe.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">May 2026 · Global Context Series</span>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">16 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+</header>
+
+
+<!-- Timeline -->
+<div class="timeline-wrap">
+  <p class="timeline-label">Global wave: crisis-driven intellectual revolutions</p>
+  <div class="timeline-scroll">
+    <div class="timeline-track">
+      <div class="tl-line"></div>
+
+      <div class="tl-event">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1206</div>
+        <div class="tl-name">Mongol Empire Founded</div>
+        <div class="tl-tooltip">Chinggis Khan unifies the steppe — the engine of destruction is born</div>
+      </div>
+
+      <div class="tl-event">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1258</div>
+        <div class="tl-name">Baghdad Falls</div>
+        <div class="tl-tooltip">Mongols destroy the Abbasid Caliphate — the intellectual center of Islam is erased</div>
+      </div>
+
+      <div class="tl-event">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1347</div>
+        <div class="tl-name">Black Death Arrives</div>
+        <div class="tl-tooltip">Plague reaches the Mediterranean — kills a third of Europe and the Muslim world</div>
+      </div>
+
+      <div class="tl-event anchor">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1377</div>
+        <div class="tl-name">Muqaddimah Written</div>
+        <div class="tl-tooltip">◆ Ibn Khaldun completes the Muqaddimah — the first scientific theory of history and society</div>
+      </div>
+
+      <div class="tl-event">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1401</div>
+        <div class="tl-name">Meets Timur</div>
+        <div class="tl-tooltip">Ibn Khaldun negotiates with Tamerlane outside Damascus — the last act of a world being remade</div>
+      </div>
+
+      <div class="tl-event">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1513</div>
+        <div class="tl-name">Machiavelli's Prince</div>
+        <div class="tl-tooltip">Western Europe produces its own political realism — independently, in another era of crisis</div>
+      </div>
+
+      <div class="tl-event">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1776</div>
+        <div class="tl-name">Gibbon's Decline and Fall</div>
+        <div class="tl-tooltip">Europe finally catches up: a cyclical theory of civilizational rise and fall, 400 years later</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Article body -->
+<article class="article-body">
+
+  <!-- Intro -->
+  <section id="intro" class="intro-text">
+    <p>Most people who know Ibn Khaldun think of him as a medieval Islamic scholar — brilliant, yes, but filed under "precursor," someone European historians occasionally nod to before moving on to Montesquieu or Marx. That framing is exactly backwards. Ibn Khaldun wasn't a precursor to anything. He was a man working at the absolute frontier of what human thought had attempted. He built the first general theory of how civilizations are born, peak, decay, and collapse — a theory so structurally sophisticated that modern sociologists, economists, and political scientists are still unpacking it.</p>
+    <p>Here's what's stranger still: he wrote it in five months, in a desert fortress in what is now Algeria, after watching the world he grew up in get destroyed. The plague had killed his parents and most of his teachers. The Marinid dynasty he had served was falling apart. The Hafsid sultanate to the east was collapsing. Every political entity he had staked his career on had either disintegrated or was about to. He retreated to the Qal'at Ibn Salama — a fortress in the hills — and wrote the most ambitious intellectual project of the medieval world.</p>
+    <p>To understand why Ibn Khaldun thought what he thought, you have to understand the catastrophe that made him. And to understand the catastrophe, you have to go global.</p>
+  </section>
+
+  <!-- Card 1: Upstream Cause — Black Death -->
+  <section id="s1" class="connection-card upstream">
+    <span class="type-badge">Upstream Cause</span>
+    <h2>The Black Death Made Him</h2>
+
+    <p>In 1349, Ibn Khaldun was seventeen years old. The plague arrived in Tunis and killed both his parents. It also killed most of his teachers — the scholars who were transmitting the classical Islamic intellectual tradition to him. He later wrote, with shocking precision, that the plague "devastated nations and caused populations to vanish. It swallowed up many of the good things of civilization and wiped them out."</p>
+
+    <p>Most historians treat this as biography. It's actually structural. The Black Death didn't just kill people — it killed institutions. In North Africa and the Levant, it wiped out the transmitters of knowledge: the scholars, the judges, the administrators, the chroniclers. The social infrastructure that reproduced civilization from one generation to the next simply broke. What Ibn Khaldun watched, as a teenager and then a young man navigating the political wreckage of the Maghreb, was civilizational collapse in real time.</p>
+
+    <p>That's exactly what the Muqaddimah is about. The word is often translated as "Introduction" — it was the prolegomena to his massive world history, the <em>Kitab al-Ibar</em>. But the Muqaddimah isn't really an introduction. It's a complete science of social organization and civilizational dynamics. And its driving question is: <em>why do civilizations collapse?</em> Ibn Khaldun wasn't asking this abstractly. He was asking it because he had watched it happen, around him, repeatedly, his entire life.</p>
+
+    <blockquote class="pull-quote">"He wasn't theorizing about civilizational collapse. He was taking notes on one."</blockquote>
+
+    <p>The 14th century killed roughly one third of the population of the Islamic world and Europe combined. No intellectual tradition can survive that kind of rupture unchanged. Ibn Khaldun's genius was to turn the rupture itself into the object of study.</p>
+  </section>
+
+  <!-- Card 2: Structural Force — Mongol Disruption -->
+  <section id="s2" class="connection-card structural">
+    <span class="type-badge">Structural Force</span>
+    <h2>The Mongol Horizon: How the Old World Was Deleted</h2>
+
+    <p>The plague was the proximate catastrophe. But behind it, shaping the entire political and intellectual landscape of the Islamic world in which Ibn Khaldun came of age, was something older and larger: the Mongol destruction of the Abbasid Caliphate.</p>
+
+    <p>In 1258, Hulagu Khan's armies sacked Baghdad and killed the last Abbasid Caliph. This wasn't just a military defeat. It was the annihilation of the institutional center of Islamic civilization. The House of Wisdom — the great translation and research institution that had made Baghdad the intellectual capital of the medieval world — was destroyed. According to chronicles, the Tigris ran black with the ink of books thrown into the river. Whether or not that's literally true, the symbolic weight is accurate: a century's accumulation of Greek, Persian, and original Islamic science was simply gone.</p>
+
+    <p>What replaced the unified Abbasid world? Fragmentation. The Sultanate of Rum in Anatolia. The Mamluk Sultanate in Egypt. The Ilkhanate in Persia. The Marinids and Hafsids and Zayyanids in the Maghreb — the western end of the Islamic world where Ibn Khaldun spent most of his life. These were successor states to a destroyed center. And they were constantly fighting each other.</p>
+
+    <blockquote class="pull-quote">"The world Ibn Khaldun was born into was already a ruin — an intellectual archipelago where a unified civilization used to be."</blockquote>
+
+    <p>Ibn Khaldun's concept of <em>asabiyya</em> — group solidarity, tribal cohesion, the glue that holds a political community together — is incomprehensible without this context. He was watching successor dynasties rise and fall across the Maghreb and Andalus, and he was asking: what makes a dynasty cohere, and what makes it fall apart? The answer he arrived at was fundamentally about the social bond — the shared purpose and solidarity — that a ruling group either has or doesn't. Without the Mongol destruction of the old order, he wouldn't have had so many examples to theorize from.</p>
+  </section>
+
+  <!-- Card 3: Parallel Wave — Machiavelli -->
+  <section id="s3" class="connection-card parallel">
+    <span class="type-badge">Parallel Wave</span>
+    <h2>The Italian Mirror: Machiavelli Without the Connection</h2>
+
+    <p>Here's a question most intellectual historians don't sit with long enough: why did two of the sharpest political realists in pre-modern history — Ibn Khaldun in the 1370s and Machiavelli in the 1510s — produce structurally similar frameworks, with no evidence of direct contact or transmission?</p>
+
+    <p>Both men watched political entities they cared about collapse. Ibn Khaldun watched the Marinid dynasty and the Hafsid sultanate disintegrate through cycles of tribal vigor and courtly decadence. Machiavelli watched the Florentine Republic fall, was tortured by the Medici, and wrote <em>The Prince</em> and <em>The Discourses</em> in political exile. Both men asked the same fundamental question: what are the actual mechanisms by which power is gained, maintained, and lost? And both arrived at answers that stripped away moral rationalization to look at structural dynamics.</p>
+
+    <p>The parallel is what scholars call a "structural echo" — the same underlying pressure (political fragmentation, the collapse of stable order, the need to understand power without the comfort of theological teleology) producing similar intellectual responses in different places, through independent pathways. This is not a coincidence. It is what intellectual crisis produces when it finds a mind capable of rising to meet it.</p>
+
+    <blockquote class="pull-quote">"Political realism is not a tradition — it's a response. When the world stops making sense through inherited frameworks, someone always builds a new one from scratch."</blockquote>
+
+    <p>What's striking is the divergence as much as the similarity. Machiavelli focused on the individual prince and the tactics of power. Ibn Khaldun focused on the group — the dynasty, the tribe, the urban civilization — and the sociological forces that govern its lifecycle. One produced political advice. The other produced social science. That difference reflects the different intellectual traditions they were working within, and it makes both all the more interesting in comparison.</p>
+  </section>
+
+  <!-- Card 4: Transmission Route -->
+  <section id="s4" class="connection-card transmission">
+    <span class="type-badge">Transmission Route</span>
+    <h2>How His Ideas Escaped the Arabic World</h2>
+
+    <p>For roughly 400 years after Ibn Khaldun's death in 1406, the Muqaddimah was almost entirely unknown to European thinkers. This is one of the great accidents of intellectual history — and understanding why it happened reveals something important about how ideas travel (or don't).</p>
+
+    <p>Within the Ottoman Empire, the Muqaddimah was known and respected. Sultan Bayezid II had a copy brought to Istanbul in the late 15th century. Ottoman historians like Kâtib Çelebi in the 17th century explicitly engaged with Ibn Khaldun's framework for understanding the rise and fall of dynasties — and applied it, with remarkable self-awareness, to their own empire. The Ottoman intellectual tradition essentially absorbed Ibn Khaldun's cyclical theory of dynastic decline and used it as a diagnostic tool.</p>
+
+    <p>The breakthrough into European intellectual life came through a specific channel: Silvestre de Sacy, a French orientalist who published a partial Latin translation in 1806. The timing matters enormously. Napoleon had just conquered Egypt. European powers were deeply engaged in the Islamic world for the first time in centuries. There was suddenly both the practical motivation and the scholarly infrastructure to translate Arabic texts. De Sacy's translation landed in a European intellectual world already primed — by Montesquieu, Vico, and Adam Ferguson — to receive a theory of societal dynamics.</p>
+
+    <blockquote class="pull-quote">"Ibn Khaldun's ideas had to wait 400 years for Europe to build the conceptual vocabulary needed to understand them."</blockquote>
+
+    <p>The irony is layered. By the time Europe "discovered" Ibn Khaldun, it had already independently developed many of the questions he had answered. But the specificity of his answers — particularly his theory of <em>asabiyya</em> and the urban-nomad dynamic — remained genuinely novel and had to be confronted on their own terms.</p>
+  </section>
+
+  <!-- Card 5: Downstream Cascade -->
+  <section id="s5" class="connection-card downstream">
+    <span class="type-badge">Downstream Cascade</span>
+    <h2>What He Made Possible: Social Science Before Sociology</h2>
+
+    <p>The Muqaddimah contains, embedded within a 14th-century Arabic text, the first systematic statements of what we now call sociology, economics, historiography, and political science. The question of whether Ibn Khaldun "invented" these disciplines is partly semantic — but the specificity of his claims is not.</p>
+
+    <p>He argued that history cannot be understood through the actions of individuals alone — you need a science of social organization, what he called <em>ilm al-umran</em>, the science of human civilization. He theorized that economic value is produced by labor, anticipating ideas that Adam Smith would systematize 400 years later. He argued that governments have a natural lifecycle — they rise through vigorous tribal cohesion, peak in their second or third generation, and then decay as the ruling class becomes soft, expensive, and disconnected from the population — a framework that maps, with uncomfortable precision, onto political dynamics from Rome to the 20th century.</p>
+
+    <p>The downstream cascade runs in two directions. Within the Islamic world, his diagnostic framework was used by Ottoman intellectuals to understand their own decline — a tradition of self-critical historical thinking that directly shaped reformers in the 18th and 19th centuries. In the Western tradition, his rediscovery in the 19th century gave sociologists like Franz Rosenthal and later scholars a genuine medieval interlocutor — evidence that the systematic study of social dynamics was not a European invention.</p>
+
+    <blockquote class="pull-quote">"His concept of asabiyya — group solidarity as the engine of political power — has been rediscovered by political scientists so many times that some have stopped citing him and started calling it by other names."</blockquote>
+
+    <p>More recently, economists like Peter Turchin have built what they call "cliodynamics" — mathematical modeling of historical cycles — and explicitly credit Ibn Khaldun's cyclical theory as a founding inspiration. The Muqaddimah is not a historical curiosity. It is an active research program.</p>
+  </section>
+
+  <!-- Card 6: Hidden Wire -->
+  <section id="s6" class="connection-card hidden">
+    <span class="type-badge">⚡ Hidden Wire</span>
+    <h2>The Meeting with Timur: The Last Act of a Theory</h2>
+
+    <div class="hidden-wire-box">
+      <span class="hw-label">⚡ Hidden Wire</span>
+      <p>This is the connection most people — including scholars who know the Muqaddimah well — fail to fully register. In January 1401, Ibn Khaldun was lowered by rope from the walls of besieged Damascus to negotiate with Tamerlane (Timur). What happened in that meeting is one of the most extraordinary encounters in intellectual history — and Ibn Khaldun wrote a detailed account of it that almost nobody reads.</p>
+    </div>
+
+    <p>By 1401, Ibn Khaldun was 69 years old, serving as chief Maliki judge in Cairo. Timur's forces had swept through Anatolia, defeating the Ottoman Sultan Bayezid I at Ankara — a shock that nearly destroyed the Ottoman Empire in its infancy. Now Timur had besieged Damascus. The Mamluk Sultan who was nominally protecting Egypt and Syria effectively abandoned the city. Ibn Khaldun was among the scholars and notables trapped inside.</p>
+
+    <p>For 35 days, Ibn Khaldun met with Timur — not as a supplicant, but as an interlocutor. He wrote that Timur asked him about the Maghreb, about North African geography, about the nature of the Bedouin tribes he had spent his career studying. And Ibn Khaldun, apparently, gave him a detailed account — including a written document describing the political geography of North Africa — in exchange for safe passage for himself and some of the scholars of Damascus.</p>
+
+    <p>Think about what this moment represents. Ibn Khaldun had spent his career developing a theory of how empires rise through tribal solidarity and fall through luxury and decadence. And now he was sitting face to face with a man who was, by his own framework, the purest living example of the vigorous tribal conqueror — a man who had just defeated the greatest power in the Islamic world while leading cavalry from the Central Asian steppe. Ibn Khaldun recognized Timur, in his own terms, as a world-historical force. His account of their meetings is suffused with an almost clinical fascination.</p>
+
+    <blockquote class="pull-quote">"He was the theorist of civilizational destruction, meeting the man who was enacting it. It was as if Weber had sat down for coffee with Lenin."</blockquote>
+
+    <p>The hidden wire here is methodological. Ibn Khaldun's theory was not built from libraries. It was built from direct observation of political power — from being inside failing dynasties, negotiating with warlords, watching courts collapse from within. The meeting with Timur was the final data point in a lifetime of participant-observation that no scholar working from texts alone could have accessed. Modern social scientists call this "field research." Ibn Khaldun called it his career.</p>
+  </section>
+
+  <!-- SVG Map -->
+  <section id="map" class="map-section">
+    <h2>Connection Map</h2>
+    <div class="map-container">
+      <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ibn Khaldun connection map">
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Background -->
+        <rect width="600" height="380" fill="#1a1814"/>
+
+        <!-- Connection lines -->
+        <!-- upstream: Black Death -->
+        <line x1="300" y1="190" x2="105" y2="80" stroke="#D97706" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="6,3"/>
+        <!-- structural: Mongols -->
+        <line x1="300" y1="190" x2="495" y2="80" stroke="#16A34A" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="6,3"/>
+        <!-- parallel: Machiavelli -->
+        <line x1="300" y1="190" x2="105" y2="300" stroke="#2563EB" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="6,3"/>
+        <!-- transmission: How ideas traveled -->
+        <line x1="300" y1="190" x2="495" y2="300" stroke="#0D9488" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="6,3"/>
+        <!-- downstream: Social science -->
+        <line x1="300" y1="190" x2="300" y2="330" stroke="#7C3AED" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="6,3"/>
+        <!-- hidden: Timur meeting -->
+        <line x1="300" y1="190" x2="300" y2="55" stroke="#DC2626" stroke-width="2.5" stroke-opacity="0.8"/>
+
+        <!-- Center node: Ibn Khaldun -->
+        <circle cx="300" cy="190" r="36" fill="#c9a84c" fill-opacity="0.15" stroke="#c9a84c" stroke-width="2" filter="url(#glow)"/>
+        <text x="300" y="186" text-anchor="middle" fill="#c9a84c" font-size="12" font-weight="700" font-family="Georgia, serif">Ibn Khaldun</text>
+        <text x="300" y="200" text-anchor="middle" fill="#a08030" font-size="10" font-family="Georgia, serif">Muqaddimah</text>
+        <text x="300" y="213" text-anchor="middle" fill="#a08030" font-size="10" font-family="Georgia, serif">1377</text>
+
+        <!-- Node: Black Death (upstream) -->
+        <g class="node-circle" onclick="showTip('The Black Death (1347–1353) killed his parents, his teachers, and the institutions transmitting Islamic knowledge. It made civilizational collapse his subject of study.')">
+          <circle cx="105" cy="80" r="28" fill="#D97706" fill-opacity="0.15" stroke="#D97706" stroke-width="1.5"/>
+          <text x="105" y="76" text-anchor="middle" fill="#D97706" font-size="10" font-weight="600" font-family="sans-serif">Black</text>
+          <text x="105" y="89" text-anchor="middle" fill="#D97706" font-size="10" font-weight="600" font-family="sans-serif">Death</text>
+        </g>
+        <text x="105" y="117" text-anchor="middle" fill="#8a8070" font-size="9" font-family="sans-serif">UPSTREAM CAUSE</text>
+
+        <!-- Node: Mongols (structural) -->
+        <g class="node-circle" onclick="showTip('The Mongol destruction of Baghdad (1258) fragmented the Islamic world into competing successor states — giving Ibn Khaldun the laboratory of dynastic cycles he needed.')">
+          <circle cx="495" cy="80" r="28" fill="#16A34A" fill-opacity="0.15" stroke="#16A34A" stroke-width="1.5"/>
+          <text x="495" y="76" text-anchor="middle" fill="#16A34A" font-size="10" font-weight="600" font-family="sans-serif">Mongol</text>
+          <text x="495" y="89" text-anchor="middle" fill="#16A34A" font-size="10" font-weight="600" font-family="sans-serif">Collapse</text>
+        </g>
+        <text x="495" y="117" text-anchor="middle" fill="#8a8070" font-size="9" font-family="sans-serif">STRUCTURAL FORCE</text>
+
+        <!-- Node: Timur (hidden wire) -->
+        <g class="node-circle" onclick="showTip('In 1401, Ibn Khaldun met Tamerlane for 35 days outside Damascus — the theorist of empire meeting its greatest destroyer. He wrote a detailed account almost no one reads.')">
+          <circle cx="300" cy="55" r="28" fill="#DC2626" fill-opacity="0.15" stroke="#DC2626" stroke-width="2"/>
+          <text x="300" y="51" text-anchor="middle" fill="#DC2626" font-size="10" font-weight="600" font-family="sans-serif">Meets</text>
+          <text x="300" y="64" text-anchor="middle" fill="#DC2626" font-size="10" font-weight="600" font-family="sans-serif">Timur</text>
+        </g>
+        <text x="300" y="13" text-anchor="middle" fill="#DC2626" font-size="9" font-weight="700" font-family="sans-serif">⚡ HIDDEN WIRE</text>
+
+        <!-- Node: Machiavelli (parallel) -->
+        <g class="node-circle" onclick="showTip('Machiavelli, writing 130 years later in crisis-ridden Florence, independently developed political realism — the same intellectual response to the same structural pressure, no transmission required.')">
+          <circle cx="105" cy="300" r="28" fill="#2563EB" fill-opacity="0.15" stroke="#2563EB" stroke-width="1.5"/>
+          <text x="105" y="296" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="600" font-family="sans-serif">Machiavelli</text>
+          <text x="105" y="309" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="600" font-family="sans-serif">1513</text>
+        </g>
+        <text x="105" y="339" text-anchor="middle" fill="#8a8070" font-size="9" font-family="sans-serif">PARALLEL WAVE</text>
+
+        <!-- Node: Transmission (teal) -->
+        <g class="node-circle" onclick="showTip('The Muqaddimah reached Europe via de Sacy\'s 1806 French translation — 400 years late, carried by Napoleon\'s Egyptian expedition and the birth of Orientalism.')">
+          <circle cx="495" cy="300" r="28" fill="#0D9488" fill-opacity="0.15" stroke="#0D9488" stroke-width="1.5"/>
+          <text x="495" y="296" text-anchor="middle" fill="#0D9488" font-size="10" font-weight="600" font-family="sans-serif">De Sacy's</text>
+          <text x="495" y="309" text-anchor="middle" fill="#0D9488" font-size="10" font-weight="600" font-family="sans-serif">Translation</text>
+        </g>
+        <text x="495" y="339" text-anchor="middle" fill="#8a8070" font-size="9" font-family="sans-serif">TRANSMISSION ROUTE</text>
+
+        <!-- Node: Social science (downstream) -->
+        <g class="node-circle" onclick="showTip('Cliodynamics, institutional economics, political science — all draw on frameworks Ibn Khaldun pioneered. Peter Turchin explicitly credits the Muqaddimah as a founding source.')">
+          <circle cx="300" cy="330" r="28" fill="#7C3AED" fill-opacity="0.15" stroke="#7C3AED" stroke-width="1.5"/>
+          <text x="300" y="326" text-anchor="middle" fill="#7C3AED" font-size="10" font-weight="600" font-family="sans-serif">Modern</text>
+          <text x="300" y="339" text-anchor="middle" fill="#7C3AED" font-size="10" font-weight="600" font-family="sans-serif">Social Science</text>
+        </g>
+        <text x="300" y="372" text-anchor="middle" fill="#8a8070" font-size="9" font-family="sans-serif">DOWNSTREAM CASCADE</text>
+
+        <!-- Tooltip display -->
+        <rect id="tipBox" x="10" y="155" width="0" height="0" rx="4" fill="#242118" stroke="#2e2b24" visibility="hidden"/>
+        <text id="tipText" x="20" y="172" fill="#e8e2d4" font-size="10" font-family="sans-serif" visibility="hidden"/>
+      </svg>
+    </div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.7rem;text-align:center;">Click any node for details · Dashed lines = indirect connections · Solid line = ⚡ hidden wire</p>
+  </section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // ── Progress bar ──
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+  }, { passive: true });
+
+  // ── Timeline: floating tooltip that escapes overflow:hidden ──
+  const float = document.createElement('div');
+  float.id = 'tl-float';
+  document.body.appendChild(float);
+
+  document.querySelectorAll('.tl-event').forEach(ev => {
+    const tip = ev.querySelector('.tl-tooltip');
+    if (!tip) return;
+    const text = tip.textContent.trim();
+
+    ev.addEventListener('mouseenter', e => {
+      float.textContent = text;
+      float.classList.add('visible');
+      positionFloat(e);
+    });
+    ev.addEventListener('mousemove', positionFloat);
+    ev.addEventListener('mouseleave', () => float.classList.remove('visible'));
+  });
+
+  function positionFloat(e) {
+    const pad = 14;
+    const fw = float.offsetWidth  || 240;
+    const fh = float.offsetHeight || 60;
+    let x = e.clientX - fw / 2;
+    let y = e.clientY - fh - pad;
+    // Keep within viewport
+    if (x < pad) x = pad;
+    if (x + fw > window.innerWidth - pad) x = window.innerWidth - fw - pad;
+    if (y < pad) y = e.clientY + pad; // flip below cursor if too close to top
+    float.style.left = x + 'px';
+    float.style.top  = y + 'px';
+  }
+
+  // ── SVG map node tooltips ──
+  function showTip(msg) {
+    float.textContent = msg;
+    float.style.left = (window.innerWidth / 2 - 120) + 'px';
+    float.style.top  = (window.innerHeight / 2 - 40) + 'px';
+    float.classList.add('visible');
+    setTimeout(() => float.classList.remove('visible'), 4000);
+  }
+
+  (function () {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const section = parts[0];
+  if (!section) return;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+  const href  = '/' + section + '/';
+  const el = document.querySelector('a.site-name');
+  if (el) { el.textContent = label; el.href = href; }
+})();
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+url: "https://yasirbilgin.com"
+baseurl: ""
+
+plugins:
+  - jekyll-sitemap

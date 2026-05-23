@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="Why Humans Make Bad Decisions" />
+  <meta property="og:description" content="Why Humans Make Bad Decisions" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Mental-Models/why-humans-make-bad-decisions.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Why Humans Make Bad Decisions" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/atlas/Mental-Models/why-humans-make-bad-decisions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>Why Humans Make Bad Decisions | Yasir Bilgin</title>
+
+  <!-- ① Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+
+  <!-- ② Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --bg: #0e0e11;
+      --surface: #16161a;
+      --surface2: #1e1e24;
+      --border: #2a2a34;
+      --accent: #c8a96e;
+      --accent2: #7c6cfc;
+      --text: #e8e6e0;
+      --text-muted: #8a8790;
+      --text-dim: #5a5860;
+
+      --cat-epistemic: #4a9eff;
+      --cat-cognitive: #ff6b6b;
+      --cat-psychological: #a855f7;
+      --cat-structural: #22c55e;
+      --cat-social: #f97316;
+      --cat-temporal: #eab308;
+      --cat-metacognitive: #ec4899;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Progress bar */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* TOC overlay */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(10,10,14,0.7);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(6px);
+    }
+    .toc-panel {
+      width: min(380px, 92vw);
+      height: 100vh;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      animation: slideIn 0.25s ease;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to   { transform: translateX(0);   opacity: 1; }
+    }
+    .toc-close {
+      background: none; border: 1px solid var(--border); color: var(--text-muted);
+      width: 32px; height: 32px; border-radius: 6px; cursor: pointer;
+      font-size: 1rem; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem; transition: all 0.2s;
+    }
+    .toc-close:hover { border-color: var(--accent); color: var(--accent); }
+    .toc-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list a {
+      display: block;
+      padding: 0.7rem 0.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-list a.toc-main { color: var(--text); font-weight: 500; }
+    .toc-cat-dot {
+      display: inline-block;
+      width: 8px; height: 8px; border-radius: 50%;
+      margin-right: 8px; flex-shrink: 0;
+      vertical-align: middle;
+    }
+
+    /* Article sub-header */
+    .article-header {
+      top: 62px;
+      z-index: 50;
+      background: rgba(14,14,17,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 2rem;
+      gap: 1rem;
+    
+      position: sticky;
+      background: rgba(14,14,17,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 2rem;
+      gap: 1rem;
+    }
+    .read-time {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-family: 'DM Mono', monospace;
+    }
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.2s;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Hero */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+    }
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.15;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 620px;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 600; color: #000; flex-shrink: 0;
+    }
+    .byline-name { font-weight: 600; font-size: 0.9rem; display: block; }
+    .byline-meta { font-size: 0.78rem; color: var(--text-dim); display: block; }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 860px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Summary box */
+    .summary-box {
+      max-width: 860px;
+      margin: 0 auto 3rem;
+      padding: 0 2rem;
+    }
+    .summary-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+    }
+    .summary-inner p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.8;
+    }
+    .summary-inner strong { color: var(--accent); font-style: normal; }
+
+    /* Search & filter bar */
+    .controls {
+      max-width: 1100px;
+      margin: 0 auto 2.5rem;
+      padding: 0 2rem;
+    }
+    .search-wrap {
+      position: relative;
+      margin-bottom: 1.2rem;
+    }
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+      font-size: 1rem;
+    }
+    #searchInput {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.85rem 1rem 0.85rem 2.8rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #searchInput:focus { border-color: var(--accent); }
+    #searchInput::placeholder { color: var(--text-dim); }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .filter-label {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.08em;
+      margin-right: 0.25rem;
+    }
+    .filter-btn {
+      border: 1px solid var(--border);
+      background: none;
+      color: var(--text-muted);
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .filter-btn .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: currentColor;
+      background: rgba(255,255,255,0.05);
+    }
+    .filter-btn.active { font-weight: 600; }
+    .filter-btn[data-cat="all"].active { color: var(--accent); border-color: var(--accent); }
+    .filter-btn[data-cat="epistemic"].active { color: var(--cat-epistemic); border-color: var(--cat-epistemic); }
+    .filter-btn[data-cat="cognitive"].active { color: var(--cat-cognitive); border-color: var(--cat-cognitive); }
+    .filter-btn[data-cat="psychological"].active { color: var(--cat-psychological); border-color: var(--cat-psychological); }
+    .filter-btn[data-cat="structural"].active { color: var(--cat-structural); border-color: var(--cat-structural); }
+    .filter-btn[data-cat="social"].active { color: var(--cat-social); border-color: var(--cat-social); }
+    .filter-btn[data-cat="temporal"].active { color: var(--cat-temporal); border-color: var(--cat-temporal); }
+    .filter-btn[data-cat="metacognitive"].active { color: var(--cat-metacognitive); border-color: var(--cat-metacognitive); }
+
+    .results-count {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-family: 'DM Mono', monospace;
+      margin-top: 0.75rem;
+    }
+
+    /* Main grid */
+    .main-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+    }
+
+    /* Category section */
+    .cat-section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 135px;
+    }
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .cat-number {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+    .cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .cat-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+    }
+    .cat-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .cat-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      max-width: 720px;
+    }
+
+    /* Cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Error card */
+    .error-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.3rem 1.4rem;
+      transition: border-color 0.2s, transform 0.2s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .error-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      border-radius: 10px 0 0 10px;
+    }
+    .error-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hover, var(--border));
+    }
+    .error-card[data-cat="epistemic"]::before { background: var(--cat-epistemic); }
+    .error-card[data-cat="cognitive"]::before { background: var(--cat-cognitive); }
+    .error-card[data-cat="psychological"]::before { background: var(--cat-psychological); }
+    .error-card[data-cat="structural"]::before { background: var(--cat-structural); }
+    .error-card[data-cat="social"]::before { background: var(--cat-social); }
+    .error-card[data-cat="temporal"]::before { background: var(--cat-temporal); }
+    .error-card[data-cat="metacognitive"]::before { background: var(--cat-metacognitive); }
+
+    .card-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.06);
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+    .card-desc {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .card-example {
+      margin-top: 0.8rem;
+      padding: 0.6rem 0.8rem;
+      background: rgba(0,0,0,0.3);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+    .card-example::before { content: '↳ '; color: var(--accent); font-style: normal; }
+
+    .card-ref {
+      margin-top: 0.6rem;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+    .card-ref span { color: var(--accent); font-style: italic; }
+
+    /* No results */
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-dim);
+    }
+    .no-results.visible { display: block; }
+    .no-results h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Hidden cards */
+    .error-card.hidden, .cat-section.hidden { display: none; }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .hero { padding: 3rem 1.4rem 2rem; }
+      .summary-box { padding: 0 1.4rem; }
+      .controls { padding: 0 1.4rem; }
+      .main-grid { padding: 0 1.4rem 4rem; }
+      .article-header { padding: 0.6rem 1.2rem;  padding: 0.6rem 1.2rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .filter-btn { font-size: 0.72rem; padding: 0.3rem 0.6rem; }
+    }
+  </style>
+  <meta name="description" content="A comprehensive taxonomy of decision errors — spanning knowledge gaps, cognitive biases, psychological forces, social pressures, and the systems we…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Humans Make Bad Decisions",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/atlas/Mental-Models/why-humans-make-bad-decisions.html",
+  "description": "A comprehensive taxonomy of decision errors — spanning knowledge gaps, cognitive biases, psychological forces, social pressures, and the systems we…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/atlas/" style="color:#3b5f8a;text-decoration:none;">Atlas</a> <span style="opacity:0.5">›</span> <span>Universal Knowledge & Big Picture</span> <span style="opacity:0.5">›</span> <span>Why Humans Make Bad Decisions</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Atlas",
+      "item": "https://yasirbilgin.com/atlas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Why Humans Make Bad Decisions",
+      "item": "https://yasirbilgin.com/atlas/Mental-Models/why-humans-make-bad-decisions.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#epistemic" class="toc-main"><span class="toc-cat-dot" style="background:var(--cat-epistemic)"></span>I. Epistemic Failures</a></li>
+        <li><a href="#cognitive" class="toc-main"><span class="toc-cat-dot" style="background:var(--cat-cognitive)"></span>II. Cognitive Biases</a></li>
+        <li><a href="#psychological" class="toc-main"><span class="toc-cat-dot" style="background:var(--cat-psychological)"></span>III. Psychological Factors</a></li>
+        <li><a href="#structural" class="toc-main"><span class="toc-cat-dot" style="background:var(--cat-structural)"></span>IV. Structural & Incentive</a></li>
+        <li><a href="#social" class="toc-main"><span class="toc-cat-dot" style="background:var(--cat-social)"></span>V. Social & Cultural</a></li>
+        <li><a href="#temporal" class="toc-main"><span class="toc-cat-dot" style="background:var(--cat-temporal)"></span>VI. Temporal Pressures</a></li>
+        <li><a href="#metacognitive" class="toc-main"><span class="toc-cat-dot" style="background:var(--cat-metacognitive)"></span>VII. Meta-Cognitive</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Article sub-header -->
+  
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-eyebrow">Decision Science · Cognitive Psychology</p>
+    <h1>Why Humans Make <em>Bad</em> Decisions</h1>
+    <p class="hero-sub">A comprehensive taxonomy of decision errors — spanning knowledge gaps, cognitive biases, psychological forces, social pressures, and the systems we operate within.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">Yasir Bilgin · 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">~14 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+</header>
+
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <div class="summary-inner">
+      <p>Humans make bad decisions because they <strong>see reality incompletely</strong> (epistemic), <strong>interpret it wrongly</strong> (cognitive), <strong>distort it emotionally</strong> (psychological), are <strong>shaped by their environment</strong> (social), operate under <strong>misaligned incentives</strong> (structural), are constrained by <strong>time and stress</strong> (temporal), and rarely <strong>question their own thinking</strong> (meta-cognitive). No single cause explains everything — most poor decisions involve several of these layers at once.</p>
+    </div>
+  </div>
+
+  <!-- Epistemics note -->
+  <div class="summary-box" style="margin-top:-1rem;">
+    <div class="summary-inner" style="border-left-color: var(--text-dim); background: rgba(255,255,255,0.02);">
+      <p style="font-size:0.85rem; font-style:normal; color: var(--text-dim); line-height:1.75;">
+        <strong style="color:var(--text-muted); font-style:normal;">A note on evidence quality:</strong> Psychology has undergone a significant replication crisis since ~2010. Some classic findings in this field — particularly around ego depletion, power poses, and certain priming effects — have not held up under rigorous pre-registered replication. Where entries in this guide touch on contested or partially replicated research, that is noted on the card. The majority of findings here (cognitive biases, social influence, epistemic failures) are well-replicated and drawn from mainstream cognitive and social psychology.
+      </p>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="searchInput" placeholder="Search errors, biases, concepts…" autocomplete="off">
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">FILTER:</span>
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="epistemic"><span class="dot" style="background:var(--cat-epistemic)"></span>Epistemic</button>
+      <button class="filter-btn" data-cat="cognitive"><span class="dot" style="background:var(--cat-cognitive)"></span>Cognitive</button>
+      <button class="filter-btn" data-cat="psychological"><span class="dot" style="background:var(--cat-psychological)"></span>Psychological</button>
+      <button class="filter-btn" data-cat="structural"><span class="dot" style="background:var(--cat-structural)"></span>Structural</button>
+      <button class="filter-btn" data-cat="social"><span class="dot" style="background:var(--cat-social)"></span>Social</button>
+      <button class="filter-btn" data-cat="temporal"><span class="dot" style="background:var(--cat-temporal)"></span>Temporal</button>
+      <button class="filter-btn" data-cat="metacognitive"><span class="dot" style="background:var(--cat-metacognitive)"></span>Meta-Cognitive</button>
+    </div>
+    <div class="results-count" id="resultsCount"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-grid" id="mainGrid">
+
+    <div class="no-results" id="noResults">
+      <h3>No matches found</h3>
+      <p>Try a different search term or clear the filter.</p>
+    </div>
+
+    <!-- SECTION 1: EPISTEMIC -->
+    <section class="cat-section" id="epistemic" data-cat="epistemic">
+      <div class="cat-header">
+        <span class="cat-number">01</span>
+        <span class="cat-badge" style="background:rgba(74,158,255,0.12);color:var(--cat-epistemic)">● Epistemic</span>
+        <div>
+          <div class="cat-title">Knowledge Failures</div>
+          <div class="cat-subtitle">Problems with the raw information we hold</div>
+        </div>
+      </div>
+      <p class="cat-desc">Before any reasoning begins, the quality of our information sets hard limits on the quality of our decisions. Garbage in, garbage out — but the garbage often looks perfectly clean from the inside.</p>
+      <div class="cards-grid">
+
+        <div class="error-card" data-cat="epistemic">
+          <div class="card-name">Factual Ignorance <span class="card-tag">knowledge</span></div>
+          <div class="card-desc">Simply not knowing a relevant fact. The most basic failure — deciding without the information the decision requires.</div>
+          <div class="card-example">Investing in a sector without understanding its regulatory environment.</div>
+        </div>
+
+        <div class="error-card" data-cat="epistemic">
+          <div class="card-name">Outdated Information <span class="card-tag">knowledge</span></div>
+          <div class="card-desc">Acting on facts that were once true but have since changed. A particularly dangerous failure because it feels like competence.</div>
+          <div class="card-example">Applying a negotiation strategy that worked five years ago in a market that has fundamentally shifted.</div>
+        </div>
+
+        <div class="error-card" data-cat="epistemic">
+          <div class="card-name">Information Asymmetry <span class="card-tag">access</span></div>
+          <div class="card-desc">One party has access to information another doesn't. You cannot compensate for what you cannot see.</div>
+          <div class="card-example">Buying a used car from a seller who knows the vehicle's full history while you don't.</div>
+          <div class="card-ref">See: <span>George Akerlof, "The Market for Lemons" (1970)</span></div>
+        </div>
+
+        <div class="error-card" data-cat="epistemic">
+          <div class="card-name">Analysis Paralysis <span class="card-tag">overload</span></div>
+          <div class="card-desc">Too much information triggers decision avoidance or indefinite delay. Paradoxically, more data can lead to worse or no decisions.</div>
+          <div class="card-example">Unable to choose a health insurance plan after reading 200 pages of options; defaulting to the worst plan by inaction.</div>
+          <div class="card-ref">See: <span>Barry Schwartz, "The Paradox of Choice"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="epistemic">
+          <div class="card-name">Authority Bias in Sources <span class="card-tag">trust</span></div>
+          <div class="card-desc">Trusting a source because of who it is rather than evaluating the quality of its claims. Credentials and confidence are not the same as correctness.</div>
+          <div class="card-example">Following a financial influencer's advice without checking their track record or conflicts of interest.</div>
+        </div>
+
+        <div class="error-card" data-cat="epistemic">
+          <div class="card-name">Unknown Unknowns <span class="card-tag">blind spots</span></div>
+          <div class="card-desc">The information you don't know you're missing. The hardest epistemic failure to defend against because you can't search for what you don't know exists.</div>
+          <div class="card-example">Launching a product in a new country without knowing a local competitor already owns that market segment.</div>
+          <div class="card-ref">See: <span>Nassim Taleb, "The Black Swan"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="epistemic">
+          <div class="card-name">Selective Exposure <span class="card-tag">filter bubbles</span></div>
+          <div class="card-desc">Systematically consuming only information that confirms existing beliefs, creating an increasingly distorted model of reality over time.</div>
+          <div class="card-example">Only reading media outlets that align with your political views, making your beliefs increasingly extreme and unfounded.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: COGNITIVE -->
+    <section class="cat-section" id="cognitive" data-cat="cognitive">
+      <div class="cat-header">
+        <span class="cat-number">02</span>
+        <span class="cat-badge" style="background:rgba(255,107,107,0.12);color:var(--cat-cognitive)">● Cognitive</span>
+        <div>
+          <div class="cat-title">Cognitive Biases & Reasoning Errors</div>
+          <div class="cat-subtitle">How our minds systematically distort what we see</div>
+        </div>
+      </div>
+      <p class="cat-desc">Even with perfect information, the human mind introduces systematic errors at the processing stage. These are not random mistakes — they are predictable, repeatable distortions built into how cognition works. Kahneman's System 1 vs System 2 framework is the canonical lens here.</p>
+      <div class="cards-grid">
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Confirmation Bias <span class="card-tag">bias</span></div>
+          <div class="card-desc">Seeking, interpreting, and remembering information in ways that confirm what you already believe. The mind becomes a lawyer, not a judge. One of the most robustly replicated findings in cognitive psychology — it appears across cultures, domains, and expertise levels.</div>
+          <div class="card-example">A manager convinced a hire is talented ignores clear warning signs and over-weights every small success.</div>
+          <div class="card-ref">See: <span>Kahneman, "Thinking, Fast and Slow"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Availability Heuristic <span class="card-tag">heuristic</span></div>
+          <div class="card-desc">Judging the probability of something by how easily an example comes to mind. Vivid or recent events are dramatically overweighted.</div>
+          <div class="card-example">Fearing plane crashes more than car accidents because crashes get media coverage, despite cars being statistically far more dangerous.</div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Anchoring Effect <span class="card-tag">bias</span></div>
+          <div class="card-desc">The first number or piece of information seen disproportionately influences all subsequent judgments, even when the anchor is arbitrary.</div>
+          <div class="card-example">A salary negotiation that starts at £40k anchors the entire conversation there, even if the role is worth £60k.</div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Loss Aversion <span class="card-tag">bias</span></div>
+          <div class="card-desc">Losses feel more painful than equivalent gains feel pleasurable — Kahneman & Tversky estimated a roughly 2:1 ratio in their original work, though subsequent research shows this varies considerably by individual and context. The consistent finding is the <em>asymmetry</em>, not a fixed multiplier.</div>
+          <div class="card-example">Holding a failing stock far too long to avoid "locking in" a loss, even when selling and reallocating would be clearly better.</div>
+          <div class="card-ref">See: <span>Kahneman & Tversky, Prospect Theory (1979)</span></div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Overconfidence Bias <span class="card-tag">bias</span></div>
+          <div class="card-desc">Systematically overestimating the accuracy of your own knowledge, predictions, and abilities. Experts are frequently more overconfident, not less.</div>
+          <div class="card-example">A founder's financial projections are consistently 40% more optimistic than reality, every single year.</div>
+          <div class="card-ref">See: <span>Philip Tetlock, "Superforecasting"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Sunk Cost Fallacy <span class="card-tag">reasoning</span></div>
+          <div class="card-desc">Continuing an endeavor because of previously invested resources (time, money, effort) that cannot be recovered — rather than on future expected value.</div>
+          <div class="card-example">Finishing a bad book, staying in a failing project, or running a product no one wants because "we've already invested so much."</div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Correlation ≠ Causation <span class="card-tag">logic</span></div>
+          <div class="card-desc">Concluding that because two things happen together, one causes the other. One of the most common and consequential reasoning errors.</div>
+          <div class="card-example">Concluding a product caused a sales increase when both were driven by a third factor (a viral moment) you hadn't noticed.</div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">False Dilemma <span class="card-tag">logic</span></div>
+          <div class="card-desc">Artificially reducing a complex situation to only two options when more exist. Creates unnecessary either/or pressure.</div>
+          <div class="card-example">"We either fire half the team or shut down" — when refinancing, pivoting, or a staged restructure were viable alternatives.</div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Slippery Slope Fallacy <span class="card-tag">logic</span></div>
+          <div class="card-desc">Assuming one step inevitably leads to extreme consequences without demonstrating the causal links in between.</div>
+          <div class="card-example">Refusing a moderate policy because "it will inevitably lead to" an extreme outcome, without evidencing the mechanism.</div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Broken Mental Models <span class="card-tag">frameworks</span></div>
+          <div class="card-desc">Using a mental model that was useful in one context in another where it doesn't apply. Maps that don't match the territory.</div>
+          <div class="card-example">Applying a management style learned in a startup to a large corporation and wondering why nothing works.</div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Second-Order Blindness <span class="card-tag">systems</span></div>
+          <div class="card-desc">Failing to anticipate the downstream consequences of consequences. Most unintended policy and strategic failures live here.</div>
+          <div class="card-example">Reducing customer support costs without modeling what higher churn from poor support will cost in the long run.</div>
+          <div class="card-ref">See: <span>Donella Meadows, "Thinking in Systems"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Narrow Framing <span class="card-tag">frameworks</span></div>
+          <div class="card-desc">Defining the decision too narrowly so that the real range of options is never considered. The "whether or not" trap.</div>
+          <div class="card-example">Asking "Should we hire this person?" instead of "What are all the ways we could solve this capacity problem?"</div>
+          <div class="card-ref">See: <span>Heath & Heath, "Decisive"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="cognitive">
+          <div class="card-name">Halo Effect <span class="card-tag">bias</span></div>
+          <div class="card-desc">One positive trait (attractiveness, confidence, early success) causes you to assume other unrelated positive traits in someone or something.</div>
+          <div class="card-example">Hiring a candidate because they went to a prestigious university without rigorously evaluating the actual skills required.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: PSYCHOLOGICAL -->
+    <section class="cat-section" id="psychological" data-cat="psychological">
+      <div class="cat-header">
+        <span class="cat-number">03</span>
+        <span class="cat-badge" style="background:rgba(168,85,247,0.12);color:var(--cat-psychological)">● Psychological</span>
+        <div>
+          <div class="cat-title">Psychological & Emotional Factors</div>
+          <div class="cat-subtitle">When internal states override rational judgment</div>
+        </div>
+      </div>
+      <p class="cat-desc">Emotions are not the enemy of good decisions — they are an essential signal. But unregulated or unexamined emotional states systematically distort what we perceive as rational. Trauma, fear, ego, and bodily states all shape decisions in ways we rarely acknowledge in the moment.</p>
+      <div class="cards-grid">
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Fear-Based Decisions <span class="card-tag">emotion</span></div>
+          <div class="card-desc">Decisions driven primarily by avoiding a feared outcome rather than pursuing a valued one. Fear prioritizes the short-term and the visible.</div>
+          <div class="card-example">Staying in a miserable job for years because the fear of failure during a career change feels overwhelming.</div>
+        </div>
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Ego & Pride <span class="card-tag">ego</span></div>
+          <div class="card-desc">Protecting self-image overrides updating on evidence. Admitting a mistake, reversing a decision, or asking for help is experienced as a threat to identity.</div>
+          <div class="card-example">A leader doubles down on a failed strategy publicly rather than reversing course, because reversing feels like admitting they were wrong.</div>
+        </div>
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Physiological State Effects <span class="card-tag">physiology</span></div>
+          <div class="card-desc">Hunger, anger, fatigue, and loneliness measurably degrade judgment quality. The underlying physiology (sleep deprivation reducing prefrontal function, blood glucose effects on self-control) is well-documented. Note: Baumeister's broader "ego depletion" theory — that willpower is a depletable resource like a muscle — has faced significant replication failures since 2015 and remains contested; the specific mechanism is debated even if the general phenomenon is real. The HALT acronym (Hungry, Angry, Lonely, Tired) originates in addiction recovery frameworks but maps usefully onto decision science.</div>
+          <div class="card-example">Sending an aggressive email at midnight after a stressful day that you would never have sent at 10am well-rested.</div>
+          <div class="card-ref">See: <span>Harrison & Horne on sleep deprivation (2000); Hagger et al. pre-registered replication (2016) for the ego depletion debate</span></div>
+        </div>
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Trauma-Informed Reactivity <span class="card-tag">trauma</span></div>
+          <div class="card-desc">Past traumatic experiences create automatic responses that are appropriate for the past situation but misapplied in the present.</div>
+          <div class="card-example">Avoiding all confrontation in a new, healthy workplace because past environments made conflict dangerous.</div>
+        </div>
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Present Bias / Hyperbolic Discounting <span class="card-tag">impulse</span></div>
+          <div class="card-desc">The present is dramatically overweighted relative to the future. Immediate rewards are systematically preferred over larger future rewards.</div>
+          <div class="card-example">Eating the cake today despite committing yesterday to a health goal you still care about. Both desires are real; recency wins.</div>
+          <div class="card-ref">See: <span>Thaler & Sunstein, "Nudge"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Anxiety-Driven Avoidance <span class="card-tag">emotion</span></div>
+          <div class="card-desc">Anxiety causes avoidance of the very situations needed to resolve the anxiety. Decisions are deferred or never made, compounding the problem.</div>
+          <div class="card-example">Not opening financial statements because they cause anxiety, which allows financial problems to compound unchecked.</div>
+        </div>
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Dopamine-Driven Short-Termism <span class="card-tag">reward</span></div>
+          <div class="card-desc">The brain's reward system prioritizes immediate dopamine hits over long-term wellbeing, creating predictable preference for novelty and immediacy.</div>
+          <div class="card-example">Scrolling social media instead of working on a meaningful project, repeatedly, even when you genuinely prefer the project's outcome.</div>
+        </div>
+
+        <div class="error-card" data-cat="psychological">
+          <div class="card-name">Emotional Reasoning <span class="card-tag">emotion</span></div>
+          <div class="card-desc">Treating feelings as direct evidence about external reality. "I feel afraid, therefore this situation is dangerous."</div>
+          <div class="card-example">Concluding a business idea is bad because it creates anxiety, when the anxiety comes from novelty rather than risk.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: STRUCTURAL -->
+    <section class="cat-section" id="structural" data-cat="structural">
+      <div class="cat-header">
+        <span class="cat-number">04</span>
+        <span class="cat-badge" style="background:rgba(34,197,94,0.12);color:var(--cat-structural)">● Structural</span>
+        <div>
+          <div class="cat-title">Structural & Incentive Failures</div>
+          <div class="cat-subtitle">When the system itself generates bad decisions</div>
+        </div>
+      </div>
+      <p class="cat-desc">Often the individual is not the problem. The incentive structure, measurement system, or organizational design produces predictably bad decisions regardless of who is making them. Fix the person all you want — the system will win.</p>
+      <div class="cards-grid">
+
+        <div class="error-card" data-cat="structural">
+          <div class="card-name">Incentive Misalignment <span class="card-tag">incentives</span></div>
+          <div class="card-desc">What is rewarded diverges from what is actually valuable. People rationally pursue the incentive, not the intended outcome.</div>
+          <div class="card-example">Sales teams maximizing commissions by selling inappropriate products to customers, because that's what the compensation structure rewards.</div>
+          <div class="card-ref">See: <span>Charlie Munger on incentive-caused bias</span></div>
+        </div>
+
+        <div class="error-card" data-cat="structural">
+          <div class="card-name">Goodhart's Law <span class="card-tag">measurement</span></div>
+          <div class="card-desc">"When a measure becomes a target, it ceases to be a good measure." Optimizing for the metric destroys the goal the metric was supposed to represent.</div>
+          <div class="card-example">Teaching to standardized tests instead of teaching genuine understanding, because test scores became the official measure of educational quality.</div>
+        </div>
+
+        <div class="error-card" data-cat="structural">
+          <div class="card-name">Short-Term Incentive Horizon <span class="card-tag">time</span></div>
+          <div class="card-desc">Quarterly earnings pressure, annual bonuses, election cycles — structural forces that reward short-term thinking at the expense of long-term value.</div>
+          <div class="card-example">Cutting R&D budget to hit this quarter's profit target, while destroying the innovation pipeline for the next five years.</div>
+        </div>
+
+        <div class="error-card" data-cat="structural">
+          <div class="card-name">Institutional Inertia <span class="card-tag">systems</span></div>
+          <div class="card-desc">Large systems resist change because decision-makers are insulated from the consequences of bad decisions. "We've always done it this way" becomes policy.</div>
+          <div class="card-example">A hospital system continuing an inefficient process for 20 years because no one person has both the authority and incentive to change it.</div>
+        </div>
+
+        <div class="error-card" data-cat="structural">
+          <div class="card-name">Resource Scarcity Thinking <span class="card-tag">constraint</span></div>
+          <div class="card-desc">Operating under scarcity (time, money, cognitive bandwidth) narrows attention and causes poor tradeoffs. Scarcity itself reduces decision quality.</div>
+          <div class="card-example">Payday loan borrowing: financial scarcity reduces cognitive bandwidth, leading to decisions that worsen financial scarcity.</div>
+          <div class="card-ref">See: <span>Mullainathan & Shafir, "Scarcity"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="structural">
+          <div class="card-name">Diffusion of Responsibility <span class="card-tag">systems</span></div>
+          <div class="card-desc">When many people share responsibility, each assumes someone else is handling it. Group decision-making can paradoxically produce no real decision.</div>
+          <div class="card-example">A critical product bug goes unfixed for months because every team assumed another team owned the resolution.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: SOCIAL -->
+    <section class="cat-section" id="social" data-cat="social">
+      <div class="cat-header">
+        <span class="cat-number">05</span>
+        <span class="cat-badge" style="background:rgba(249,115,22,0.12);color:var(--cat-social)">● Social</span>
+        <div>
+          <div class="cat-title">Social & Cultural Influences</div>
+          <div class="cat-subtitle">The invisible pressure of belonging and norms</div>
+        </div>
+      </div>
+      <p class="cat-desc">Humans are intensely social animals. What our group believes, what our culture teaches, and what our community rewards shapes our decisions at a level far deeper than conscious reasoning. We underestimate this constantly.</p>
+      <div class="cards-grid">
+
+        <div class="error-card" data-cat="social">
+          <div class="card-name">Groupthink <span class="card-tag">social</span></div>
+          <div class="card-desc">The desire for group harmony overrides realistic appraisal of alternatives. Dissenting voices are silenced; the group converges on a shared illusion of consensus.</div>
+          <div class="card-example">A board unanimously approves an acquisition no individual member privately believed was wise, because no one wanted to be the dissenter.</div>
+          <div class="card-ref">See: <span>Irving Janis, "Victims of Groupthink" (1972)</span></div>
+        </div>
+
+        <div class="error-card" data-cat="social">
+          <div class="card-name">Authority Obedience <span class="card-tag">social</span></div>
+          <div class="card-desc">People defer to authority figures — even when those authorities are wrong, harmful, or acting outside their domain of competence.</div>
+          <div class="card-example">A team implements a strategy they all know is flawed because the CEO is visibly committed to it and no one will say so.</div>
+          <div class="card-ref">See: <span>Stanley Milgram, "Behavioral Study of Obedience," Journal of Abnormal Psychology (1963)</span></div>
+        </div>
+
+        <div class="error-card" data-cat="social">
+          <div class="card-name">Social Proof Bias <span class="card-tag">social</span></div>
+          <div class="card-desc">Using what others are doing as the primary guide for what to do, especially under uncertainty. "If everyone is doing it, it must be right."</div>
+          <div class="card-example">Joining a speculative investment frenzy because "everyone" seems to be making money, without independently evaluating the fundamentals.</div>
+          <div class="card-ref">See: <span>Cialdini, "Influence"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="social">
+          <div class="card-name">Social Approval Motivation <span class="card-tag">social</span></div>
+          <div class="card-desc">Making decisions that maximize social approval rather than personal values or objective outcomes. Identity management replaces judgment.</div>
+          <div class="card-example">Choosing a career path parents approve of rather than one that aligns with genuine skills and interests.</div>
+        </div>
+
+        <div class="error-card" data-cat="social">
+          <div class="card-name">Cultural Conditioning <span class="card-tag">culture</span></div>
+          <div class="card-desc">Deep assumptions inherited from culture — about risk, gender, hierarchy, time, success — shape decisions invisibly and are rarely examined.</div>
+          <div class="card-example">A culture that equates busyness with virtue systematically overworks its members and devalues rest, recovery, and deep thinking.</div>
+          <div class="card-ref">See: <span>Jonathan Haidt, "The Righteous Mind"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="social">
+          <div class="card-name">Peer Comparison Trap <span class="card-tag">social</span></div>
+          <div class="card-desc">Using a reference group's choices to set your own goals rather than independently determining what you actually value.</div>
+          <div class="card-example">Buying a house you can't comfortably afford because peers at the same career stage are buying houses.</div>
+        </div>
+
+        <div class="error-card" data-cat="social">
+          <div class="card-name">Family & Childhood Conditioning <span class="card-tag">culture</span></div>
+          <div class="card-desc">Patterns, beliefs, and behavioral scripts formed in childhood persist as defaults in adult decision-making, often without conscious awareness.</div>
+          <div class="card-example">Consistently avoiding conflict in professional settings because conflict was dangerous in your childhood environment.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: TEMPORAL -->
+    <section class="cat-section" id="temporal" data-cat="temporal">
+      <div class="cat-header">
+        <span class="cat-number">06</span>
+        <span class="cat-badge" style="background:rgba(234,179,8,0.12);color:var(--cat-temporal)">● Temporal</span>
+        <div>
+          <div class="cat-title">Temporal Pressures</div>
+          <div class="cat-subtitle">How time and stress degrade thinking</div>
+        </div>
+      </div>
+      <p class="cat-desc">The conditions under which a decision is made matter as much as the decision itself. Time pressure, stress, and cognitive load systematically shift processing from careful deliberation to reactive shortcuts.</p>
+      <div class="cards-grid">
+
+        <div class="error-card" data-cat="temporal">
+          <div class="card-name">Time Pressure Shortcuts <span class="card-tag">stress</span></div>
+          <div class="card-desc">Urgency compresses deliberation time and forces reliance on heuristics, the first option considered, or the loudest voice in the room.</div>
+          <div class="card-example">A hiring decision made in 48 hours due to "business urgency" that would have been made very differently with a normal timeline.</div>
+        </div>
+
+        <div class="error-card" data-cat="temporal">
+          <div class="card-name">Decision Fatigue <span class="card-tag">depletion</span></div>
+          <div class="card-desc">The quality of decisions may deteriorate over a sequence of choices, with later decisions defaulting toward inaction or the easier option. This is plausible and widely observed, though the specific psychological mechanism (ego depletion) remains debated after replication failures. The broader principle — that cognitive resources are finite and depleted by use — is well-supported in applied settings.</div>
+          <div class="card-example">The widely-cited Danziger et al. (2011) parole study found judges granted parole far more often after breaks than before them. However, later re-analyses suggested scheduling patterns (simpler cases after breaks) may partially explain the effect — making it a more complex finding than originally reported.</div>
+          <div class="card-ref">See: <span>Danziger et al. (2011); Weinshall-Margel & Shapard (2011) for methodological critique</span></div>
+        </div>
+
+        <div class="error-card" data-cat="temporal">
+          <div class="card-name">Planning Fallacy <span class="card-tag">time</span></div>
+          <div class="card-desc">Systematically underestimating how long tasks will take and how much they will cost, even when you have direct evidence from past projects.</div>
+          <div class="card-example">The Sydney Opera House was originally estimated to be complete in 6 years (by 1963); it took 16, finishing in 1973 at roughly 14× its original budget.</div>
+          <div class="card-ref">See: <span>Kahneman & Tversky (1979)</span></div>
+        </div>
+
+        <div class="error-card" data-cat="temporal">
+          <div class="card-name">Urgency Bias <span class="card-tag">attention</span></div>
+          <div class="card-desc">Urgent but less important tasks consistently crowd out important but non-urgent ones. The tyranny of the inbox over the strategic.</div>
+          <div class="card-example">Spending all day responding to emails while the company's core strategy goes unexamined for another quarter.</div>
+          <div class="card-ref">See: <span>Stephen Covey popularized this in "The 7 Habits" (1989); the underlying attention-allocation problem is documented in time-use and productivity research</span></div>
+        </div>
+
+        <div class="error-card" data-cat="temporal">
+          <div class="card-name">Ignoring Long-Term Consequences <span class="card-tag">time</span></div>
+          <div class="card-desc">Systematically discounting what happens beyond a certain time horizon. Distant negative consequences feel unreal while immediate benefits feel vivid.</div>
+          <div class="card-example">Climate policy: short-term economic disruption feels real and present; long-term catastrophe feels abstract and deferrable.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: METACOGNITIVE -->
+    <section class="cat-section" id="metacognitive" data-cat="metacognitive">
+      <div class="cat-header">
+        <span class="cat-number">07</span>
+        <span class="cat-badge" style="background:rgba(236,72,153,0.12);color:var(--cat-metacognitive)">● Meta-Cognitive</span>
+        <div>
+          <div class="cat-title">Meta-Cognitive Failures</div>
+          <div class="cat-subtitle">Not knowing how you think</div>
+        </div>
+      </div>
+      <p class="cat-desc">The deepest layer. Even someone who has read everything above can still fail to examine their own thinking in practice. Metacognition — thinking about thinking — is the master skill that enables correcting all other errors. Its absence makes every other failure invisible.</p>
+      <div class="cards-grid">
+
+        <div class="error-card" data-cat="metacognitive">
+          <div class="card-name">Blind Spots About Blind Spots <span class="card-tag">meta</span></div>
+          <div class="card-desc">The least self-aware people are consistently the most confident they are self-aware. Bias blindspot: knowing about biases doesn't make you less susceptible to them.</div>
+          <div class="card-example">Someone who has read extensively about cognitive biases and believes this makes them immune to them — while exhibiting them consistently.</div>
+          <div class="card-ref">See: <span>Pronin, Lin & Ross (2002)</span></div>
+        </div>
+
+        <div class="error-card" data-cat="metacognitive">
+          <div class="card-name">Absence of Self-Questioning <span class="card-tag">meta</span></div>
+          <div class="card-desc">Never asking "Why do I believe this?" or "What would it take for me to be wrong?" This is the habit that keeps every other error in place.</div>
+          <div class="card-example">Building an entire strategy on an assumption that has never once been explicitly articulated or tested.</div>
+        </div>
+
+        <div class="error-card" data-cat="metacognitive">
+          <div class="card-name">Rationalization Masquerading as Reasoning <span class="card-tag">meta</span></div>
+          <div class="card-desc">The conclusion is chosen first (by emotion, identity, or desire), then reasons are constructed to justify it. This feels exactly like rational deliberation.</div>
+          <div class="card-example">Deciding to hire someone you liked in the interview, then constructing a post-hoc case for why they're the most qualified candidate.</div>
+          <div class="card-ref">See: <span>Jonathan Haidt, Social Intuitionist Model (2001) — originally developed for moral judgment, but the post-hoc rationalization pattern is broadly observed across decision domains</span></div>
+        </div>
+
+        <div class="error-card" data-cat="metacognitive">
+          <div class="card-name">Identity-Protective Cognition <span class="card-tag">meta</span></div>
+          <div class="card-desc">Beliefs that are tied to group identity become nearly impossible to update through evidence. Changing the belief would mean leaving the group.</div>
+          <div class="card-example">A political belief held not because of evidence but because it defines membership in a tribe that provides meaning and belonging.</div>
+          <div class="card-ref">See: <span>Dan Kahan, Yale Cultural Cognition Project</span></div>
+        </div>
+
+        <div class="error-card" data-cat="metacognitive">
+          <div class="card-name">Fixed Mindset About Judgment <span class="card-tag">meta</span></div>
+          <div class="card-desc">Believing that decision-making ability is fixed — that you either have good judgment or you don't — forecloses any deliberate effort to improve it. Note: Dweck's growth mindset research, while conceptually influential, has shown mixed results in large-scale replications; the specific intervention effects (e.g. in schools) are more modest than early studies suggested. The core insight about beliefs shaping effort and learning remains well-supported.</div>
+          <div class="card-example">Never reviewing past decisions to extract lessons because the whole premise of "decision quality" as a learnable skill seems alien.</div>
+          <div class="card-ref">See: <span>Carol Dweck, "Mindset"</span></div>
+        </div>
+
+        <div class="error-card" data-cat="metacognitive">
+          <div class="card-name">Absence of Pre-Mortem Thinking <span class="card-tag">meta</span></div>
+          <div class="card-desc">Never imagining, before committing, how a decision could fail. This forecloses identifying preventable failure modes while there's still time to act.</div>
+          <div class="card-example">Launching a product without anyone on the team ever explicitly asking "How does this fail? What would have to be true for this to go wrong?"</div>
+          <div class="card-ref">See: <span>Gary Klein, pre-mortem method</span></div>
+        </div>
+
+        <div class="error-card" data-cat="metacognitive">
+          <div class="card-name">No Decision Hygiene Practice <span class="card-tag">meta</span></div>
+          <div class="card-desc">Making important decisions without any structured process — no checklists, no devil's advocate, no cooling periods, no written pre-commitments.</div>
+          <div class="card-example">A hiring committee with no rubric, no structured interview, and no calibration process — making consequential decisions entirely by feel.</div>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- end main-grid -->
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span>© 2026 Yasir Bilgin Editorial. A taxonomy of decision errors.</span>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+
+    // Search & filter logic
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.error-card');
+    const sections = document.querySelectorAll('.cat-section');
+    const noResults = document.getElementById('noResults');
+    const resultsCount = document.getElementById('resultsCount');
+
+    let activeFilter = 'all';
+    let searchTerm = '';
+
+    function updateDisplay() {
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.dataset.cat;
+        const text = card.innerText.toLowerCase();
+        const catMatch = activeFilter === 'all' || cat === activeFilter;
+        const searchMatch = !searchTerm || text.includes(searchTerm);
+        if (catMatch && searchMatch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Hide sections that have no visible cards
+      sections.forEach(section => {
+        const visibleCards = section.querySelectorAll('.error-card:not(.hidden)');
+        if (visibleCards.length === 0) {
+          section.classList.add('hidden');
+        } else {
+          section.classList.remove('hidden');
+        }
+      });
+
+      noResults.classList.toggle('visible', visibleCount === 0);
+
+      const total = cards.length;
+      if (searchTerm || activeFilter !== 'all') {
+        resultsCount.textContent = `Showing ${visibleCount} of ${total} entries`;
+      } else {
+        resultsCount.textContent = `${total} entries across 7 categories`;
+      }
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.cat;
+        updateDisplay();
+      });
+    });
+
+    searchInput.addEventListener('input', () => {
+      searchTerm = searchInput.value.toLowerCase().trim();
+      updateDisplay();
+    });
+
+    // TOC smooth scroll with offset
+    document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        document.getElementById('tocOverlay').classList.remove('open');
+        setTimeout(() => {
+          const offset = 62 + 52 + 16;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }, 200);
+      });
+    });
+
+    // Initial count
+    updateDisplay();
+  </script>
+</article>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

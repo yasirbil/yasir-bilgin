@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="Foci of Transformation" />
+  <meta property="og:description" content="Foci of Transformation" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/spirit/Spiritual-Growth/foci-of-transformation.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Foci of Transformation" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/spirit/Spiritual-Growth/foci-of-transformation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>Foci of Transformation | Yasir Bilgin</title>
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --bg:        #f7f4ef;
+      --bg2:       #eee9e0;
+      --bg3:       #e5ddd0;
+      --ink:       #1c1a16;
+      --ink-soft:  #4a4438;
+      --ink-muted: #8c7f6e;
+      --rule:      #d8cfc0;
+      --white:     #fdfcf9;
+
+      /* focus colours */
+      --mind:      #2c5282;
+      --heart:     #9b2335;
+      --will:      #744210;
+      --body:      #276749;
+      --knowledge: #553c9a;
+      --community: #2c6b6e;
+      --grace:     #8b5e1a;
+
+      /* light tints */
+      --mind-lt:      #ebf0f8;
+      --heart-lt:     #fdf0f2;
+      --will-lt:      #fef8ee;
+      --body-lt:      #edf7f2;
+      --knowledge-lt: #f5f0fd;
+      --community-lt: #edf6f7;
+      --grace-lt:     #fef8ed;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    /* ── Progress bar ── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 3px;
+      background: var(--ink);
+      width: 0%;
+      z-index: 100;
+    }
+
+    /* ── TOC overlay ── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(28,26,22,0.5);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--white);
+      width: min(340px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem 3rem;
+      border-left: 1px solid var(--rule);
+    }
+    .toc-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    .toc-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--ink-muted);
+      cursor: pointer;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--rule); }
+    .toc-list a {
+      display: block;
+      padding: 0.6rem 0;
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+    .toc-list a:hover { color: var(--ink); }
+    .toc-list a.toc-main { font-weight: 500; color: var(--ink); }
+    .toc-list a.toc-sub { padding-left: 1rem; color: var(--ink-muted); font-size: 0.76rem; }
+
+    /* ── Sub-header ── */
+    .article-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.65rem 2.5rem;
+    }
+    .site-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .header-right { display: flex; align-items: center; gap: 1.2rem; }
+    .read-time { font-size: 0.72rem; color: var(--ink-muted); letter-spacing: 0.05em; }
+    .toc-btn {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: none;
+      border: 1px solid var(--rule);
+      color: var(--ink-soft);
+      padding: 0.32rem 0.85rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .toc-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* ── Hero ── */
+    .hero {
+      border-bottom: 1px solid var(--rule);
+      padding: 5.5rem 2.5rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1.4rem;
+      font-family: 'DM Mono', monospace;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: var(--ink);
+      margin-bottom: 1.6rem;
+    }
+    .hero h1 em { font-style: italic; }
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--ink-soft);
+      max-width: 620px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.8rem; }
+    .avatar {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+    }
+    .byline-text { line-height: 1.3; }
+    .byline-name { display: block; font-size: 0.82rem; font-weight: 500; }
+    .byline-meta { font-size: 0.7rem; color: var(--ink-muted); }
+
+    /* ── Body ── */
+    .article-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ── Intro / editorial ── */
+    .intro-note {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--ink);
+      padding: 1.6rem 2rem;
+      margin-bottom: 4rem;
+      border-radius: 0 3px 3px 0;
+    }
+    .intro-note p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.8; margin-bottom: 0.8rem; }
+    .intro-note p:last-child { margin-bottom: 0; }
+    .intro-note strong { color: var(--ink); font-weight: 500; }
+
+    /* ── Section rule ── */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 4rem 0;
+    }
+
+    /* ── Framework intro ── */
+    .framework-intro {
+      margin-bottom: 3.5rem;
+    }
+    .framework-intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+      scroll-margin-top: 170px;
+    }
+    .framework-intro p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      max-width: 700px;
+      line-height: 1.8;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ── Radar chart section ── */
+    .radar-section {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      scroll-margin-top: 170px;
+    }
+    .radar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .radar-subtitle {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      margin-bottom: 1.6rem;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.04em;
+    }
+
+    .tradition-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .trad-btn {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 99px;
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.18s;
+      white-space: nowrap;
+    }
+    .trad-btn:hover { border-color: var(--ink-soft); color: var(--ink); }
+    .trad-btn.active { background: var(--ink); border-color: var(--ink); color: var(--white); }
+
+    .radar-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    #radarCanvas {
+      flex-shrink: 0;
+      max-width: 100%;
+    }
+    .radar-legend {
+      flex: 1;
+      min-width: 160px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+    }
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .legend-label { font-weight: 500; color: var(--ink); }
+
+    /* ── Focus sections ── */
+    .focus-block {
+      margin-bottom: 4.5rem;
+      scroll-margin-top: 170px;
+    }
+    .focus-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--rule);
+    }
+    .focus-number {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+    }
+    .focus-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+    .focus-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.65rem;
+      border-radius: 99px;
+      color: white;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+    .focus-tag.mind       { background: var(--mind); }
+    .focus-tag.heart      { background: var(--heart); }
+    .focus-tag.will       { background: var(--will); }
+    .focus-tag.body       { background: var(--body); }
+    .focus-tag.knowledge  { background: var(--knowledge); }
+    .focus-tag.community  { background: var(--community); }
+    .focus-tag.grace      { background: var(--grace); }
+
+    .focus-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin-bottom: 1.4rem;
+    }
+
+    .focus-body {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.85;
+      max-width: 720px;
+      margin-bottom: 1.6rem;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+    .focus-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1.1rem 1.3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .focus-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .mind       .focus-card::before { background: var(--mind); }
+    .heart      .focus-card::before { background: var(--heart); }
+    .will       .focus-card::before { background: var(--will); }
+    .body       .focus-card::before { background: var(--body); }
+    .knowledge  .focus-card::before { background: var(--knowledge); }
+    .community  .focus-card::before { background: var(--community); }
+    .grace      .focus-card::before { background: var(--grace); }
+
+    .focus-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .focus-card p {
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+    }
+
+    .tradition-list {
+      margin-top: 1.2rem;
+    }
+    .tradition-list h4 {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.7rem;
+    }
+    .tradition-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .trad-chip {
+      font-size: 0.72rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 99px;
+      border: 1px solid var(--rule);
+      color: var(--ink-soft);
+      background: var(--bg);
+    }
+    .trad-chip.primary { font-weight: 600; color: var(--ink); border-color: var(--ink-soft); }
+
+    .core-belief {
+      background: var(--bg2);
+      border-left: 3px solid;
+      padding: 0.9rem 1.3rem;
+      margin-top: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--ink-soft);
+      border-radius: 0 3px 3px 0;
+    }
+    .mind      .core-belief { border-color: var(--mind); }
+    .heart     .core-belief { border-color: var(--heart); }
+    .will      .core-belief { border-color: var(--will); }
+    .body      .core-belief { border-color: var(--body); }
+    .knowledge .core-belief { border-color: var(--knowledge); }
+    .community .core-belief { border-color: var(--community); }
+    .grace     .core-belief { border-color: var(--grace); }
+
+    .caveat-note {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      margin-top: 0.8rem;
+      font-style: italic;
+      border-top: 1px solid var(--rule);
+      padding-top: 0.8rem;
+    }
+
+    /* ── Summary table ── */
+    .summary-section { scroll-margin-top: 170px; }
+    .summary-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+    .summary-section .sub-desc {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      margin-bottom: 2rem;
+      max-width: 680px;
+      line-height: 1.8;
+    }
+    .table-wrap { overflow-x: auto; }
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      min-max-width: 560px; width: 100%;
+    }
+    .summary-table th {
+      background: var(--bg3);
+      padding: 0.6rem 1rem;
+      text-align: left;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--rule);
+    }
+    .summary-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink-soft);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .summary-table td:first-child { font-weight: 500; color: var(--ink); white-space: nowrap; }
+    .summary-table tr:hover td { background: var(--bg2); }
+    .summary-table tr:last-child td { border-bottom: none; }
+
+    .color-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .dot-mind      { background: var(--mind); }
+    .dot-heart     { background: var(--heart); }
+    .dot-will      { background: var(--will); }
+    .dot-body      { background: var(--body); }
+    .dot-knowledge { background: var(--knowledge); }
+    .dot-community { background: var(--community); }
+    .dot-grace     { background: var(--grace); }
+
+    /* ── Critical notes ── */
+    .crit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .crit-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      padding: 1.2rem 1.4rem;
+      border-radius: 4px;
+    }
+    .crit-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .crit-card p {
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      border-top: 1px solid var(--rule);
+      color: var(--ink-muted);
+      font-size: 0.75rem;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 720px) {
+      .hero { padding: 3.5rem 1.4rem 2.5rem; }
+      .article-header { padding: 0.6rem 1.2rem; }
+      .article-body { padding: 2.5rem 1.2rem 5rem; }
+      .focus-grid { grid-template-columns: 1fr; }
+      .focus-header { flex-wrap: wrap; }
+      .focus-tag { margin-left: 0; }
+      .radar-container { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .focus-name { font-size: 1.4rem; }
+    }
+  </style>
+  <meta name="description" content="Instead of comparing religions by doctrine, ask a different question: what does each tradition tell you to focus on in order to awaken? Seven answers —…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Foci of Transformation",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/foci-of-transformation.html",
+  "description": "Instead of comparing religions by doctrine, ask a different question: what does each tradition tell you to focus on in order to awaken? Seven answers —…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/spirit/" style="color:#5c3d6e;text-decoration:none;">Spirit</a> <span style="opacity:0.5">›</span> <span>Spiritual Growth & Inner Transformation</span> <span style="opacity:0.5">›</span> <span>Foci of Transformation</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Spirit",
+      "item": "https://yasirbilgin.com/spirit/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Foci of Transformation",
+      "item": "https://yasirbilgin.com/spirit/Spiritual-Growth/foci-of-transformation.html"
+    }
+  ]
+}
+</script>
+
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- TOC overlay -->
+<div class="toc-overlay" id="tocOverlay"
+     onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+    <h3>Contents</h3>
+    <ul class="toc-list">
+      <li><a href="#intro" class="toc-main">The Framework</a></li>
+      <li><a href="#radar" class="toc-main">Interactive Radar Chart</a></li>
+      <li><a href="#mind" class="toc-main">I. Mind &amp; Awareness</a></li>
+      <li><a href="#heart" class="toc-main">II. Heart &amp; Devotion</a></li>
+      <li><a href="#will" class="toc-main">III. Will &amp; Action</a></li>
+      <li><a href="#body" class="toc-main">IV. Body &amp; Energy</a></li>
+      <li><a href="#knowledge" class="toc-main">V. Knowledge &amp; Wisdom</a></li>
+      <li><a href="#community" class="toc-main">VI. Community &amp; Ritual</a></li>
+      <li><a href="#grace" class="toc-main">VII. Grace &amp; Receptivity</a></li>
+      <li><a href="#summary" class="toc-main">Summary &amp; Notes</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Sub-header -->
+
+
+<!-- Hero -->
+<section class="hero">
+  <p class="hero-eyebrow">Comparative Religion · Philosophy of Transformation</p>
+  <h1>Foci of <em>Transformation</em></h1>
+  <p class="hero-sub">Instead of comparing religions by doctrine, ask a different question: what does each tradition tell you to focus on in order to awaken? Seven answers — and what they reveal about each other.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Yasir Bilgin · 2026</span>
+    </div>
+  </div>
+</section>
+
+<article class="article-body">
+
+  <!-- Intro / framework -->
+  <section id="intro" class="framework-intro" style="scroll-margin-top:170px;">
+    <span class="section-label">The Framework</span>
+    <h2>A Unified Map</h2>
+    <div class="intro-note">
+      <p><strong>The right abstraction layer.</strong> Comparing religions by doctrine — the nature of God, the afterlife, the sources of authority — tends to highlight irreconcilable differences. But there is a more revealing question: <em>what does each tradition direct your attention toward in order to change?</em> Beneath the doctrinal surface, a smaller number of fundamental orientations emerge.</p>
+      <p><strong>On the framework itself.</strong> This is an analytical tool, not a theological claim. Every tradition below combines multiple foci; what differs is primary emphasis. A Theravāda Buddhist and a Sufi might both engage in disciplined practice, but one primarily cultivates clear seeing while the other cultivates the heart's surrender. The distinction is real even if neither is ever "pure." Some traditions — Tantric Buddhism, for instance — deliberately weave together three or four foci as part of their design.</p>
+      <p><strong>Corrections to a common version of this framework.</strong> The "seven foci" model circulates in various forms in popular comparative religion writing. This presentation makes several deliberate corrections: Stoicism is treated as a philosophical tradition with spiritual dimensions rather than a spiritual tradition proper. Confucianism is placed primarily in the Relational/Community focus, not the Will/Discipline focus — its central concern is right relationship, not self-cultivation as an end in itself. "Indigenous traditions" are not treated as a single category — their diversity precludes generalisation; specific examples are given instead.</p>
+    </div>
+
+    <p class="focus-body">No tradition uses only one focus. Hinduism's four yoga paths (jñāna, bhakti, karma, rāja) were explicitly designed to suit the full range of human temperaments — the intellectual, the devotional, the active, the meditative. The Sufi tradition combines Heart, Will, and Knowledge. Vajrayāna Buddhism integrates Mind, Body, and Knowledge. What the framework identifies is which focus each tradition treats as primary — its characteristic "entry point."</p>
+  </section>
+
+  <!-- RADAR CHART -->
+  <section id="radar" class="radar-section" style="scroll-margin-top:170px;">
+    <div class="radar-title">Tradition Radar — Distribution of Focus</div>
+    <div class="radar-subtitle">Select a tradition to see how it distributes emphasis across the seven foci</div>
+    <div class="tradition-selector" id="tradSelector"></div>
+    <div class="radar-container">
+      <canvas id="radarCanvas" width="360" height="360"></canvas>
+      <div class="radar-legend" id="radarLegend"></div>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+<header class="article-header">
+  <span class="read-time">~14 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+</header>
+
+
+  <!-- ── I. MIND ── -->
+  <section id="mind" class="focus-block mind" style="scroll-margin-top:170px;">
+    <div class="focus-header">
+      <span class="focus-number">Focus I</span>
+      <h2 class="focus-name">Mind &amp; Awareness</h2>
+      <span class="focus-tag mind">Insight</span>
+    </div>
+    <p class="focus-tagline">"See clearly → awaken"</p>
+    <p class="focus-body">The Mind/Awareness focus treats human suffering and limitation as fundamentally a problem of perception: we see reality wrongly, and this wrong-seeing generates craving, aversion, and confusion. The corrective is not moral improvement or devotional surrender but the refinement of attention itself — learning to observe what is actually present without the distortions introduced by habit, desire, and narrative. Clear seeing is itself transformative; there is nothing else that needs to be added.</p>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h4>Theravāda Buddhism — Vipassanā</h4>
+        <p>Vipassanā (insight meditation) involves the sustained, precise observation of bodily sensations, emotions, and mental phenomena as they arise and pass. The practitioner notices impermanence (<em>anicca</em>), the unsatisfactory nature of clinging (<em>dukkha</em>), and the absence of a fixed self (<em>anattā</em>). Insight into these three characteristics is itself liberating — no separate metaphysical "awakening event" is added from outside.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Zen Buddhism — Direct Seeing</h4>
+        <p>Zen holds that the mind is already fundamentally clear — what obscures it is conceptual overlay. Kōan practice and <em>zazen</em> are not techniques for achieving something absent but for stripping away what was never necessary. The Zen phrase "direct pointing to the mind, seeing one's nature" (<em>直指人心 見性成佛</em>) captures the orientation: the problem is looking in the wrong place, not lacking something.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Advaita Vedānta — Self-Inquiry</h4>
+        <p>Ramana Maharshi's "Who am I?" practice is the archetypal mind-focus method: turn attention toward the observer itself. The Advaita claim is that the separate self that appears to exist is a confusion, not a fact. When the mind examines itself closely enough, the apparent boundary between self and Brahman dissolves. Liberation (<em>mokṣa</em>) is the recognition of what was always already true.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Stoicism — Attention to Judgements</h4>
+        <p>The Stoics held that suffering arises not from events but from our <em>judgements</em> about events (Marcus Aurelius: "things do not touch the soul"). The philosophical practice of <em>prosochē</em> (attention to oneself) involves continuous monitoring of one's mental assents. This is a mind-focus method — though distinctly philosophical rather than mystical in orientation, and without the liberation-goal of the Eastern systems.</p>
+      </div>
+    </div>
+
+    <div class="tradition-list">
+      <h4>Traditions in this focus</h4>
+      <div class="tradition-chips">
+        <span class="trad-chip primary">Theravāda Buddhism</span>
+        <span class="trad-chip primary">Zen Buddhism</span>
+        <span class="trad-chip primary">Advaita Vedānta</span>
+        <span class="trad-chip">Stoicism (philosophical)</span>
+        <span class="trad-chip">Early Daoism (Zhuangzi)</span>
+        <span class="trad-chip">Jñāna Yoga</span>
+      </div>
+    </div>
+    <div class="core-belief">
+      Core claim: ignorance is the root problem; clear seeing is the solution. Liberation does not require a different world — it requires seeing this world without distortion.
+    </div>
+    <p class="caveat-note">Note: Buddhism in its totality is not reducible to Mind focus alone — Mahāyāna emphasises compassion (Heart), and Vajrayāna integrates Body/Energy. Theravāda vipassanā is the clearest example of Mind-primary orientation.</p>
+  </section>
+
+  <!-- ── II. HEART ── -->
+  <section id="heart" class="focus-block heart" style="scroll-margin-top:170px;">
+    <div class="focus-header">
+      <span class="focus-number">Focus II</span>
+      <h2 class="focus-name">Heart &amp; Devotion</h2>
+      <span class="focus-tag heart">Love</span>
+    </div>
+    <p class="focus-tagline">"Love deeply → unite"</p>
+    <p class="focus-body">The Heart/Devotion focus treats the fundamental problem as separation — from God, from the divine ground, from one's own deepest nature — and the corrective as love. Love is not sentiment here but a total reorientation of the being toward its source. This focus is characterised by surrender, longing (<em>shawq</em>), and the dissolution of the hard boundaries of the ego through the intensity of love's pull. The goal is union, not merely understanding.</p>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h4>Sufism — The Path of Love</h4>
+        <p>Sufi love mysticism — from Rābiʿa al-ʿAdawiyya (d.801), who first articulated pure love of God without hope of paradise or fear of hell, to Rūmī's Masnawī and ʿAṭṭār's <em>Conference of the Birds</em> — treats maḥabba (love) and shawq (longing) as the highest stations of the path. The <em>fanāʾ</em> (annihilation of the ego in God) is the ultimate consummation of love: the lover dissolves into the Beloved.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Bhakti Yoga — Devotional Surrender</h4>
+        <p>The Bhakti tradition of Hinduism, running from the <em>Bhāgavata Purāṇa</em> through the Āḻvār saints of South India (7th–9th century CE) to Mirabai and Tukaram (16th–17th century), treats love of a personal deity as the highest form of spiritual practice. Narada's <em>Bhakti Sūtra</em> defines bhakti as "supreme love of God." The Vaishnava tradition particularly develops the theology of God as the Beloved and the soul as the lover.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Christian Mysticism — Transforming Love</h4>
+        <p>Teresa of Ávila's seven mansions culminate in "spiritual marriage" — a permanent union with God through love that is not absorbed identity but intimate presence. Bernard of Clairvaux's commentaries on the Song of Songs describe four degrees of love. The apophatic tradition (Meister Eckhart, The Cloud of Unknowing) strips away all images until only love remains: "by love he may be gotten and holden; by thought, never."</p>
+      </div>
+      <div class="focus-card">
+        <h4>Pure Land Buddhism — Faith and Aspiration</h4>
+        <p>Pure Land Buddhism — the dominant tradition in East Asia — centres on sincere devotion to Amitābha Buddha and aspiration to be reborn in the Pure Land. The Japanese master Shinran (1173–1263) radicalised this: liberation comes entirely from Amitābha's compassionate vow (<em>tariki</em>, "other-power"), not from human effort. This is the closest Buddhism comes to a Heart/Grace approach.</p>
+      </div>
+    </div>
+
+    <div class="tradition-list">
+      <h4>Traditions in this focus</h4>
+      <div class="tradition-chips">
+        <span class="trad-chip primary">Sufism</span>
+        <span class="trad-chip primary">Bhakti Yoga / Vaishnavism</span>
+        <span class="trad-chip primary">Christian Mysticism</span>
+        <span class="trad-chip">Pure Land Buddhism</span>
+        <span class="trad-chip">Hasidic Judaism</span>
+        <span class="trad-chip">Sikh tradition (Gurbhakti)</span>
+      </div>
+    </div>
+    <div class="core-belief">
+      Core claim: separation is the wound; love is the medicine. The self is not extinguished but fulfilled — it discovers its true nature in relation to the divine, not in isolation from it.
+    </div>
+  </section>
+
+  <!-- ── III. WILL ── -->
+  <section id="will" class="focus-block will" style="scroll-margin-top:170px;">
+    <div class="focus-header">
+      <span class="focus-number">Focus III</span>
+      <h2 class="focus-name">Will &amp; Action</h2>
+      <span class="focus-tag will">Discipline</span>
+    </div>
+    <p class="focus-tagline">"Act rightly → become aligned"</p>
+    <p class="focus-body">The Will/Action focus holds that character is built through repeated choices — that what you become is primarily determined by what you do. Transformation is a project of moral self-formation: cultivating virtuous habits, performing prescribed duties, and ordering one's will in alignment with a larger moral reality. This focus tends to produce traditions with strong ethical codes, practices of self-discipline, and frameworks of duty.</p>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h4>Karma Yoga — Selfless Action</h4>
+        <p>The <em>Bhagavad Gītā</em>'s teaching to Arjuna on the battlefield: perform all actions as an offering to God, without attachment to outcomes (<em>nishkāma karma</em>). The soldier who fights without ego-investment in victory, the servant who serves without personal agenda — these are spiritual actors regardless of whether they meditate. Action purifies the ego when correctly oriented.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Islamic Sharīʿa — Sanctification of Life</h4>
+        <p>Classical Islamic jurisprudence is not merely law but a total framework for the sanctification of ordinary action. Every category of human act — obligatory, recommended, neutral, discouraged, forbidden — shapes the soul through repetition. The five daily prayers, the fast of Ramaḍān, the ḥajj: these are not merely external duties but techniques of will-formation that restructure consciousness over decades.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Confucianism — Ritual and Self-Cultivation</h4>
+        <p>Confucius held that the cultivation of virtue (<em>dé</em>) proceeds through the practice of ritual propriety (<em>lǐ</em>): performing the rites correctly, not as mechanical repetition, but with full inner engagement, gradually forms the person of genuine humanity (<em>rén</em>). The superior person (<em>jūnzǐ</em>) does not fight their nature — they cultivate it until right action becomes effortless. This is closer to Relational (community-embedded ritual) than pure self-discipline.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Ignatian Spirituality — Discernment and Election</h4>
+        <p>Ignatius of Loyola's <em>Spiritual Exercises</em> (1548) are perhaps the most systematically "Will"-focused exercise in the Christian tradition. The retreatant is led through structured reflection on sin, the life of Christ, and the two standards, culminating in an "election" — a decisive commitment of the will. "Love is shown in deeds rather than words" (<em>amor se demuestra en las obras</em>) is the governing maxim.</p>
+      </div>
+    </div>
+
+    <div class="tradition-list">
+      <h4>Traditions in this focus</h4>
+      <div class="tradition-chips">
+        <span class="trad-chip primary">Karma Yoga</span>
+        <span class="trad-chip primary">Islamic Sharīʿa observance</span>
+        <span class="trad-chip primary">Confucianism</span>
+        <span class="trad-chip">Ignatian Spirituality</span>
+        <span class="trad-chip">Theravāda monastic discipline (Vinaya)</span>
+        <span class="trad-chip">Stoicism (practical ethics)</span>
+      </div>
+    </div>
+    <div class="core-belief">
+      Core claim: you become what you repeatedly do. The will is both the problem and the solution — it must be trained rather than eliminated or surrendered.
+    </div>
+    <p class="caveat-note">Note: Confucianism's primary emphasis is relational and ritual — it belongs at the intersection of Will and Community. Its goal is not individual liberation but the cultivation of right relationship, which makes it distinct from pure will-focused traditions like Ignatian spirituality.</p>
+  </section>
+
+  <!-- ── IV. BODY ── -->
+  <section id="body" class="focus-block body" style="scroll-margin-top:170px;">
+    <div class="focus-header">
+      <span class="focus-number">Focus IV</span>
+      <h2 class="focus-name">Body &amp; Energy</h2>
+      <span class="focus-tag body">Vitality</span>
+    </div>
+    <p class="focus-tagline">"Transform energy → expand consciousness"</p>
+    <p class="focus-body">The Body/Energy focus holds that consciousness is not separate from the body's energetic substrate — that transforming how energy flows through the body directly transforms the quality of awareness. This is the least "cognitive" of the seven foci: it works through breath, posture, movement, and the subtle manipulation of forces that the traditions in question regard as real but which ordinary cognition cannot access. The body is not an obstacle to liberation — it is the vehicle.</p>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h4>Haṭha Yoga — The Body as Instrument</h4>
+        <p>The classical Haṭha texts — <em>Haṭhayoga Pradīpikā</em> (15th century), <em>Gheraṇḍa Saṃhitā</em> (17th century) — present the body as a complete spiritual laboratory. Āsana (posture), prāṇāyāma (breath control), mudrā (energetic seals), and bandha (locks) purify the subtle body's channels (<em>nāḍīs</em>) and awaken dormant energy (<em>kuṇḍalinī</em>). The goal is not fitness but the refinement of consciousness through the body's transformation.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Vajrayāna Buddhism — Tantric Practice</h4>
+        <p>Vajrayāna treats the body as a "vajra" (diamond/thunderbolt) vehicle for rapid awakening. Practices include visualisation of deities as representations of awakened qualities, <em>tummo</em> (inner heat), and the manipulation of subtle winds (<em>prāṇa</em>) and channels (<em>nāḍī</em>). The Tibetan Book of the Dead guides the deceased through post-mortem states — even death becomes a moment of potential liberation for the trained practitioner.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Daoist Neidan — Inner Alchemy</h4>
+        <p>The inner alchemy tradition (<em>nèidān</em>) describes the path as the refinement of three treasures — Essence (<em>jīng</em>), Breath-Energy (<em>qì</em>), and Spirit (<em>shén</em>). Practices like qìgōng and taijíquán are not merely exercise but methods of aligning the practitioner's subtle body with the Tao's natural energetic patterns. Illness is understood as energetic blockage; health and awakening are the same movement.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Hindu Tantra — Śakti and the Subtle Body</h4>
+        <p>Hindu Tantra (distinct from the modern Western "tantra" popularised in Western contexts) holds that the divine energy (<em>Śakti</em>) pervades all reality and can be directly accessed through the body. The chakra system maps the subtle body's energy centres; mantra engages the body's vibrational dimension; ritual touches invoke the divine in the physical world. The universe is the body of the goddess.</p>
+      </div>
+    </div>
+
+    <div class="tradition-list">
+      <h4>Traditions in this focus</h4>
+      <div class="tradition-chips">
+        <span class="trad-chip primary">Haṭha Yoga</span>
+        <span class="trad-chip primary">Vajrayāna Buddhism</span>
+        <span class="trad-chip primary">Daoist Neidan / Qìgōng</span>
+        <span class="trad-chip">Hindu Tantra (Śākta)</span>
+        <span class="trad-chip">Kundalini traditions</span>
+        <span class="trad-chip">Some Shamanic healing practices</span>
+      </div>
+    </div>
+    <div class="core-belief">
+      Core claim: consciousness is shaped by — and accessible through — the body's energetic reality. Spiritual liberation and physical transformation are not separate projects.
+    </div>
+    <p class="caveat-note">Note: Modern postural yoga as practiced in gyms is largely de-contextualised from this framework. Classical Haṭha yoga's goal was liberation (<em>mokṣa</em>), not flexibility or fitness.</p>
+  </section>
+
+  <!-- ── V. KNOWLEDGE ── -->
+  <section id="knowledge" class="focus-block knowledge" style="scroll-margin-top:170px;">
+    <div class="focus-header">
+      <span class="focus-number">Focus V</span>
+      <h2 class="focus-name">Knowledge &amp; Wisdom</h2>
+      <span class="focus-tag knowledge">Gnosis</span>
+    </div>
+    <p class="focus-tagline">"Understand truth → transcend illusion"</p>
+    <p class="focus-body">The Knowledge/Wisdom focus is related to but distinct from Mind/Awareness. Where Mind focuses on the quality of attention, Knowledge focuses on the content of understanding — on having the right picture of reality. Its characteristic method is study, reasoning, and contemplation of sacred texts or philosophical arguments. The assumption is that error about fundamental realities (the nature of God, the self, creation) generates misaligned living — and that correct understanding, properly integrated, transforms the soul.</p>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h4>Jñāna Yoga — Vedantic Discrimination</h4>
+        <p>The Vedantic tradition distinguishes <em>viveka</em> (discrimination between the real and the unreal) as the foundational spiritual capacity. Through study of the Upaniṣads, reflection (<em>manana</em>), and deep contemplation (<em>nididhyāsana</em>), the seeker dismantles false identifications until only Brahman remains. Adi Śaṅkara (8th century CE) systematised this into Advaita Vedānta — though his system also has strong Mind-focus elements.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Islamic Kalām and Philosophy</h4>
+        <p>The Islamic tradition produced systematic philosophical theology (<em>kalām</em>) not merely as academic exercise but as a path to certainty about God's reality. Al-Ghazālī's <em>Deliverance from Error</em> (<em>al-Munqidh min al-Ḍalāl</em>) is a spiritual autobiography in which philosophical certainty about God's existence is itself presented as transformative. The Avicennan tradition held that the soul's perfection consists in becoming an "acquired intellect" — a mirror of universal truth.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Greek Philosophy as Spiritual Practice</h4>
+        <p>Pierre Hadot's influential work <em>Philosophy as a Way of Life</em> (1995) argues that ancient Greek philosophy — Platonism in particular — was not academic theorising but a set of "spiritual exercises" aimed at transforming the philosopher's relation to reality. Plato's <em>Republic</em> describes the philosopher's ascent from shadows to the Form of the Good as a process of genuine ontological transformation, not merely intellectual improvement.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Kabbalah — Contemplating the Divine Structure</h4>
+        <p>The Kabbalistic tradition holds that the ten <em>sefirot</em> of the Tree of Life are not merely theological concepts but the actual structure of divine reality — and that meditating on them, aligning one's virtues with their qualities, and understanding their relationships constitutes genuine spiritual transformation. The Lurianic concept of <em>tikkun</em> (repair) involves the human soul participating in the cosmic restoration of divine unity through precise spiritual knowledge.</p>
+      </div>
+    </div>
+
+    <div class="tradition-list">
+      <h4>Traditions in this focus</h4>
+      <div class="tradition-chips">
+        <span class="trad-chip primary">Jñāna Yoga / Advaita Vedānta</span>
+        <span class="trad-chip primary">Islamic Philosophy (Avicenna, al-Ghazālī)</span>
+        <span class="trad-chip primary">Platonic / Neoplatonic Philosophy</span>
+        <span class="trad-chip">Kabbalah</span>
+        <span class="trad-chip">Scholastic Christian Theology</span>
+        <span class="trad-chip">Gnostic traditions</span>
+      </div>
+    </div>
+    <div class="core-belief">
+      Core claim: truth properly understood transforms the soul. The problem is not bad habits or wrong feeling but wrong belief — a mistaken picture of reality that generates everything else.
+    </div>
+    <p class="caveat-note">Note: the distinction between Mind (quality of attention) and Knowledge (content of understanding) is important but not absolute. Advaita Vedānta occupies both — its method is careful attention, but its content is a specific metaphysical claim about identity with Brahman.</p>
+  </section>
+
+  <!-- ── VI. COMMUNITY ── -->
+  <section id="community" class="focus-block community" style="scroll-margin-top:170px;">
+    <div class="focus-header">
+      <span class="focus-number">Focus VI</span>
+      <h2 class="focus-name">Community &amp; Ritual</h2>
+      <span class="focus-tag community">Belonging</span>
+    </div>
+    <p class="focus-tagline">"Align with the whole → become whole"</p>
+    <p class="focus-body">The Community/Ritual focus treats the individual not as a self-sufficient unit of spiritual effort but as a node in a living network — of ancestors, contemporaries, natural cycles, and spiritual forces. Transformation happens through participation: performing the rites correctly, maintaining right relationship with the community, honouring obligations to the dead and the unborn, and aligning oneself with the larger rhythms of which human life is a part. The self that needs transformation is the self that imagines itself separate.</p>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h4>Yoruba Tradition — Ubuntu and Ancestral Connection</h4>
+        <p>The Yoruba religious tradition of West Africa (and its diaspora expressions in Candomblé, Ifá, Lucumí/Santería) centres on right relationship with the <em>Orisha</em> (divine forces), the community, and the ancestors. Divination, ritual offering, and the maintenance of communal covenant are spiritual practices precisely because they restore and maintain the web of relations in which the individual exists. The Yoruba concept <em>iwa pẹlẹ</em> (gentle character) is achieved relationally, not in isolation.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Confucianism — Relational Ethics</h4>
+        <p>Confucius held that the person is constituted through their relationships — the five relationships (ruler/minister, parent/child, husband/wife, elder/younger, friend/friend) define who one is. Cultivation happens by performing each relationship rightly, with appropriate care and ritual expression. The goal is not individual awakening but the harmonious community (<em>hé</em>) in which the fully human person (<em>rén rén</em>) can exist.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Jewish Halakha — Covenant Practice</h4>
+        <p>Judaism's halakhic framework situates the individual within a covenant community stretching back to Sinai and forward to the messianic age. The 613 commandments are not merely legal obligations but the practical form of covenant relationship. Shabbat, kashrut, prayer — these are communally-shared rhythms that constitute Jewish identity as a relational, temporal, and bodily practice. Transformation happens through sustained participation in this living covenant.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Indigenous Andean Traditions — Reciprocity and Pachamama</h4>
+        <p>Andean cosmovision centres on <em>ayni</em> (reciprocity) — the principle that human wellbeing depends on maintaining right reciprocal relationship with the earth (<em>Pachamama</em>), the mountain spirits (<em>Apus</em>), the community, and the dead. Spiritual practice consists of maintaining these relationships through offering, gratitude, and correct participation in communal life. Illness is typically understood as a breakdown of reciprocity.</p>
+      </div>
+    </div>
+
+    <div class="tradition-list">
+      <h4>Traditions in this focus</h4>
+      <div class="tradition-chips">
+        <span class="trad-chip primary">Yoruba tradition and diaspora</span>
+        <span class="trad-chip primary">Confucianism</span>
+        <span class="trad-chip primary">Jewish Halakhic tradition</span>
+        <span class="trad-chip">Andean cosmovision</span>
+        <span class="trad-chip">Many Indigenous traditions worldwide</span>
+        <span class="trad-chip">Early Christianity (communal practice)</span>
+      </div>
+    </div>
+    <div class="core-belief">
+      Core claim: the self is relational at its foundation. You are not a unit seeking connection — you are a node in a network that already exists. Spiritual practice is the maintenance and restoration of that network.
+    </div>
+    <p class="caveat-note">Important: "Indigenous traditions" is not a single category. The traditions of the Yoruba, the Lakota, the Māori, the Australian Aboriginal peoples, and the Andean communities differ profoundly in cosmology and practice. What they often share — compared to the Western philosophical traditions — is a greater emphasis on relational and communal dimensions of spiritual life.</p>
+  </section>
+
+  <!-- ── VII. GRACE ── -->
+  <section id="grace" class="focus-block grace" style="scroll-margin-top:170px;">
+    <div class="focus-header">
+      <span class="focus-number">Focus VII</span>
+      <h2 class="focus-name">Grace &amp; Receptivity</h2>
+      <span class="focus-tag grace">Surrender</span>
+    </div>
+    <p class="focus-tagline">"Receive → be transformed"</p>
+    <p class="focus-body">The Grace/Receptivity focus holds that the decisive transformation cannot be produced by human effort alone — it must be received. This does not mean passivity: the traditions in this focus typically prescribe rigorous preparation, purification, and disposition. But the transformative event itself — healing, deification, salvation, liberation — comes from beyond the self's own capacity. The soul's task is not to achieve but to open, to consent, to present itself for what it cannot manufacture.</p>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h4>Eastern Orthodox Theosis — Participation in Divine Life</h4>
+        <p>Eastern Orthodox Christianity holds that the goal of human existence is <em>theosis</em>: genuine participation in the divine nature (2 Peter 1:4), not metaphorically but ontologically. This is not achieved through human effort but through the divine energies — the real presence of God that can be encountered in prayer, the sacraments, and the ascetic life. Gregory Palamas (1296–1359) defended the reality of this encounter: the Hesychast monk who sees the uncreated light of Tabor genuinely encounters God.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Lutheran Grace — Justification by Faith Alone</h4>
+        <p>Martin Luther's revolutionary insight (1517 onward) was that the soul is justified — set right before God — not through accumulated meritorious actions but through faith alone (<em>sola fide</em>). This is perhaps the most radical Grace-focus position in the Western tradition: not merely that God's help is needed, but that human effort is categorically incapable of generating transformation. The soul can only receive what God gives.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Pure Land Buddhism — Other-Power</h4>
+        <p>Shinran's Jōdo Shinshū tradition holds that in the age of <em>mappō</em> (the decline of the Dharma), human beings lack the capacity to achieve liberation through their own practice. The only available path is <em>tariki</em> (other-power) — the compassionate vow of Amitābha Buddha to save all beings who sincerely entrust themselves to him. The <em>nembutsu</em> (recitation of Amitābha's name) is not a practice that earns liberation but an expression of gratitude for what has already been given.</p>
+      </div>
+      <div class="focus-card">
+        <h4>Sufi Aḥwāl — States as Divine Gifts</h4>
+        <p>The Sufi tradition distinguishes <em>maqāmāt</em> (stations, earned through effort) from <em>aḥwāl</em> (states, received as gifts). The highest transformative experiences — genuine tasting of the divine presence, the opening of the heart in mushāhada (witnessing), moments of <em>fanāʾ</em> — are not produced by the seeker's exertion. They are poured in from above. The mystic can prepare the ground; they cannot command the rain.</p>
+      </div>
+    </div>
+
+    <div class="tradition-list">
+      <h4>Traditions in this focus</h4>
+      <div class="tradition-chips">
+        <span class="trad-chip primary">Eastern Orthodox Christianity (Theosis)</span>
+        <span class="trad-chip primary">Lutheran / Reformed Protestantism</span>
+        <span class="trad-chip primary">Pure Land Buddhism (Jōdo Shinshū)</span>
+        <span class="trad-chip">Catholic sacramental tradition</span>
+        <span class="trad-chip">Sufi states (aḥwāl)</span>
+        <span class="trad-chip">Bhakti traditions (grace aspect)</span>
+      </div>
+    </div>
+    <div class="core-belief">
+      Core claim: the decisive transformation cannot be produced by human effort alone. The soul's work is preparation and openness; the transformative event is received, not achieved.
+    </div>
+    <p class="caveat-note">Note: Grace-focus and Will-focus are not simply opposites — Catholic theology, for instance, holds both: grace is necessary and efficacious, and human cooperation with grace is real and required. The placement here reflects primary emphasis in each tradition's characteristic spirituality.</p>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- SUMMARY TABLE -->
+  <section id="summary" class="summary-section" style="scroll-margin-top:170px;">
+    <span class="section-label">Summary</span>
+    <h2>The Seven Foci</h2>
+    <p class="sub-desc">A condensed reference. Traditions listed under each focus represent its clearest expressions; most traditions in practice blend multiple foci.</p>
+
+    <div class="table-wrap">
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Focus</th>
+            <th>Core Question</th>
+            <th>Primary Method</th>
+            <th>Root Problem</th>
+            <th>Key Traditions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="color-dot dot-mind"></span>Mind &amp; Awareness</td>
+            <td>What am I actually experiencing?</td>
+            <td>Observation, inquiry, non-grasping attention</td>
+            <td>Ignorance / wrong seeing</td>
+            <td>Theravāda, Zen, Advaita</td>
+          </tr>
+          <tr>
+            <td><span class="color-dot dot-heart"></span>Heart &amp; Devotion</td>
+            <td>What do I love?</td>
+            <td>Prayer, remembrance, surrender of the will</td>
+            <td>Separation from the divine</td>
+            <td>Sufism, Bhakti, Christian mysticism</td>
+          </tr>
+          <tr>
+            <td><span class="color-dot dot-will"></span>Will &amp; Action</td>
+            <td>What am I doing?</td>
+            <td>Ethical discipline, prescribed practice, duty</td>
+            <td>Disordered will / bad habits</td>
+            <td>Karma Yoga, Islamic Sharīʿa, Ignatian</td>
+          </tr>
+          <tr>
+            <td><span class="color-dot dot-body"></span>Body &amp; Energy</td>
+            <td>How is energy flowing?</td>
+            <td>Breath, posture, subtle body practices</td>
+            <td>Blocked or misaligned energy</td>
+            <td>Haṭha Yoga, Vajrayāna, Daoist Neidan</td>
+          </tr>
+          <tr>
+            <td><span class="color-dot dot-knowledge"></span>Knowledge &amp; Wisdom</td>
+            <td>What is real?</td>
+            <td>Study, reasoning, contemplation of truth</td>
+            <td>Metaphysical error / false belief</td>
+            <td>Jñāna Yoga, Islamic philosophy, Platonism</td>
+          </tr>
+          <tr>
+            <td><span class="color-dot dot-community"></span>Community &amp; Ritual</td>
+            <td>How am I related?</td>
+            <td>Ritual practice, ancestral connection, covenant</td>
+            <td>Relational rupture / isolation</td>
+            <td>Yoruba, Confucianism, Jewish Halakha</td>
+          </tr>
+          <tr>
+            <td><span class="color-dot dot-grace"></span>Grace &amp; Receptivity</td>
+            <td>What am I open to receiving?</td>
+            <td>Sacraments, faith, watchful waiting</td>
+            <td>Human incapacity / pride of self-sufficiency</td>
+            <td>Orthodox theosis, Lutheran, Pure Land</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="crit-grid">
+      <div class="crit-card">
+        <h4>On "Primary Emphasis"</h4>
+        <p>Every tradition uses multiple foci. What this framework identifies is which dimension each tradition treats as the characteristic entry point or highest expression. Islam, for example, weaves together Will (Sharīʿa), Heart (Sufism), Knowledge (Kalām), and Community (Umma) — but its characteristic "shape" in popular piety is predominantly Will + Heart + Community.</p>
+      </div>
+      <div class="crit-card">
+        <h4>What the Framework Cannot Show</h4>
+        <p>Foci are structural, not theological. Two traditions can share the same focus — say, Heart/Devotion — and hold completely different beliefs about what or who is being loved, and whether the soul ultimately merges, communes with, or remains distinct from its object. Shared structure does not imply shared content or equivalence of goal.</p>
+      </div>
+      <div class="crit-card">
+        <h4>Traditions Deliberately Integrating All Foci</h4>
+        <p>Some traditions self-consciously integrate multiple foci as a design feature. Swami Vivekananda's presentation of the four yoga paths (jñāna, bhakti, karma, rāja) offers a complete system in which temperament determines emphasis but the goal integrates all four. Sri Aurobindo's Integral Yoga explicitly aims to transform mind, heart, will, and body simultaneously.</p>
+      </div>
+      <div class="crit-card">
+        <h4>The Missing Dimension</h4>
+        <p>This framework describes <em>how</em> traditions work, not <em>whether</em> they work. It takes no position on the metaphysical claims underlying each focus — on whether there is a God to be united with, a subtle body to be transformed, or a Dharma to be realised. These are genuinely separate questions from the phenomenological observation that different traditions cultivate different capacities.</p>
+      </div>
+    </div>
+  </section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (window.scrollY / docH * 100) + '%';
+  }, { passive: true });
+
+  // TOC smooth scroll
+  document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById(this.getAttribute('href').slice(1));
+      if (!target) return;
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 170, behavior: 'smooth' });
+      document.getElementById('tocOverlay').classList.remove('open');
+    });
+  });
+
+  // ── RADAR CHART ──
+  const FOCI = ['Mind', 'Heart', 'Will', 'Body', 'Knowledge', 'Community', 'Grace'];
+  const COLORS = {
+    Mind:      '#2c5282',
+    Heart:     '#9b2335',
+    Will:      '#744210',
+    Body:      '#276749',
+    Knowledge: '#553c9a',
+    Community: '#2c6b6e',
+    Grace:     '#8b5e1a'
+  };
+
+  // Scores 0–5 for each focus across traditions
+  const traditions = {
+    'Theravāda Buddhism':         [5, 1, 3, 1, 2, 2, 1],
+    'Zen Buddhism':               [5, 2, 2, 2, 1, 2, 1],
+    'Vajrayāna Buddhism':         [4, 3, 3, 5, 4, 2, 2],
+    'Pure Land Buddhism':         [1, 4, 1, 1, 1, 2, 5],
+    'Sufism':                     [2, 5, 4, 1, 3, 3, 3],
+    'Advaita Vedānta':            [5, 2, 2, 1, 5, 1, 1],
+    'Bhakti Yoga':                [1, 5, 2, 2, 1, 2, 3],
+    'Karma Yoga':                 [1, 2, 5, 2, 1, 3, 2],
+    'Haṭha Yoga':                 [2, 1, 3, 5, 2, 1, 1],
+    'Christian Mysticism':        [2, 5, 3, 1, 3, 3, 4],
+    'Eastern Orthodoxy':          [2, 4, 3, 1, 3, 4, 5],
+    'Islam (general)':            [2, 4, 5, 1, 3, 4, 3],
+    'Confucianism':               [1, 2, 3, 1, 3, 5, 1],
+    'Daoist Neidan':              [3, 1, 2, 5, 2, 2, 2],
+    'Kabbalah':                   [2, 3, 3, 1, 5, 3, 3],
+    'Yoruba Tradition':           [1, 3, 2, 2, 2, 5, 3],
+    'Judaism (Halakhic)':         [1, 3, 4, 1, 3, 5, 3],
+  };
+
+  const canvas  = document.getElementById('radarCanvas');
+  const ctx     = canvas.getContext('2d');
+  const cx      = canvas.width  / 2;
+  const cy      = canvas.height / 2;
+  const radius  = Math.min(cx, cy) - 48;
+  const N       = FOCI.length;
+  const angleStep = (Math.PI * 2) / N;
+  const startAngle = -Math.PI / 2;
+
+  function getPoint(i, val, r) {
+    const angle = startAngle + i * angleStep;
+    const dist  = (val / 5) * r;
+    return { x: cx + dist * Math.cos(angle), y: cy + dist * Math.sin(angle) };
+  }
+
+  function drawBase() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Grid rings
+    [1,2,3,4,5].forEach(r => {
+      ctx.beginPath();
+      for (let i = 0; i < N; i++) {
+        const p = getPoint(i, r, radius);
+        i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+      }
+      ctx.closePath();
+      ctx.strokeStyle = r === 5 ? '#c8c0b4' : '#e2dbd0';
+      ctx.lineWidth   = r === 5 ? 1.5 : 1;
+      ctx.stroke();
+    });
+
+    // Spokes
+    for (let i = 0; i < N; i++) {
+      const p = getPoint(i, 5, radius);
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(p.x, p.y);
+      ctx.strokeStyle = '#d8cfc0';
+      ctx.lineWidth   = 1;
+      ctx.stroke();
+    }
+
+    // Labels
+    ctx.font = '500 11px "Libre Franklin", sans-serif';
+    ctx.textAlign = 'center';
+    for (let i = 0; i < N; i++) {
+      const angle = startAngle + i * angleStep;
+      const lx = cx + (radius + 26) * Math.cos(angle);
+      const ly = cy + (radius + 26) * Math.sin(angle);
+      ctx.fillStyle = COLORS[FOCI[i]];
+      ctx.fillText(FOCI[i], lx, ly + 4);
+    }
+  }
+
+  function drawTradition(name, scores, color, alpha) {
+    ctx.beginPath();
+    for (let i = 0; i < N; i++) {
+      const p = getPoint(i, scores[i], radius);
+      i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+    }
+    ctx.closePath();
+    ctx.fillStyle   = color + Math.round(alpha * 255).toString(16).padStart(2,'0');
+    ctx.strokeStyle = color;
+    ctx.lineWidth   = 2;
+    ctx.fill();
+    ctx.stroke();
+  }
+
+  function buildLegend(active) {
+    const leg = document.getElementById('radarLegend');
+    leg.innerHTML = '';
+    if (!active.length) {
+      leg.innerHTML = '<p style="font-size:0.78rem;color:var(--ink-muted);font-style:italic;">Select a tradition above to plot it.</p>';
+      return;
+    }
+    active.forEach(name => {
+      const scores = traditions[name];
+      const primary = scores.indexOf(Math.max(...scores));
+      const el = document.createElement('div');
+      el.className = 'legend-item';
+      el.innerHTML = `
+        <span class="legend-dot" style="background:${COLORS[FOCI[primary]]}"></span>
+        <div>
+          <span class="legend-label">${name}</span><br>
+          <span style="font-size:0.7rem;color:var(--ink-muted)">Primary: ${FOCI[primary]}</span>
+        </div>`;
+      leg.appendChild(el);
+    });
+  }
+
+  let activeTrads = [];
+
+  function render() {
+    drawBase();
+    activeTrads.forEach(name => {
+      const scores = traditions[name];
+      const primary = scores.indexOf(Math.max(...scores));
+      drawTradition(name, scores, COLORS[FOCI[primary]], 0.22);
+    });
+    buildLegend(activeTrads);
+  }
+
+  // Build buttons
+  const selector = document.getElementById('tradSelector');
+  Object.keys(traditions).forEach(name => {
+    const btn = document.createElement('button');
+    btn.className = 'trad-btn';
+    btn.textContent = name;
+    btn.addEventListener('click', () => {
+      const idx = activeTrads.indexOf(name);
+      if (idx === -1) {
+        if (activeTrads.length < 4) {
+          activeTrads.push(name);
+          btn.classList.add('active');
+        }
+      } else {
+        activeTrads.splice(idx, 1);
+        btn.classList.remove('active');
+      }
+      render();
+    });
+    selector.appendChild(btn);
+  });
+
+  // Default: show two
+  ['Sufism', 'Theravāda Buddhism'].forEach(name => {
+    activeTrads.push(name);
+    selector.querySelectorAll('.trad-btn').forEach(b => {
+      if (b.textContent === name) b.classList.add('active');
+    });
+  });
+  render();
+
+  (function () {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const section = parts[0];
+  if (!section) return;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+  const href  = '/' + section + '/';
+  const el = document.querySelector('a.site-name');
+  if (el) { el.textContent = label; el.href = href; }
+})();
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

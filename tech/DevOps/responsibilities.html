@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta property="og:title"       content="DevOps Roles & Responsibilities" />
+  <meta property="og:description" content="DevOps Roles & Responsibilities" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/tech/DevOps/responsibilities.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="DevOps Roles & Responsibilities" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/tech/DevOps/responsibilities.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>DevOps Roles & Responsibilities</title>
+  <script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f5f2eb; --ink: #0e0e0e; --muted: #7a7060; --border: #d8d2c4; --card: #ffffff;
+      --display: 'Bebas Neue', sans-serif; --body: 'Outfit', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.6; cursor: none; }
+    @media (pointer: coarse) { body { cursor: auto; } .cursor { display: none; } }
+    .cursor { position: fixed; width: 12px; height: 12px; background: var(--ink); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width .15s, height .15s, background .15s, border-color .15s; border: 2px solid #fff; mix-blend-mode: difference; }
+    .cursor.expanded { width: 38px; height: 38px; }
+    body::after { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events:none; z-index:9000; opacity:.5; }
+
+    nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:16px 48px; background:rgba(245,242,235,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); }
+    .nav-logo { font-family:var(--display); font-size:1.6rem; letter-spacing:0.04em; }
+    .nav-count { font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); }
+    .nav-links { display:flex; gap:28px; list-style:none; }
+    .nav-links a { font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .2s; }
+    .nav-links a:hover { color:var(--ink); }
+
+    .hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; border-bottom:2px solid var(--ink); padding-top:70px; }
+    .hero-left { padding:80px 48px 60px; border-right:1px solid var(--border); display:flex; flex-direction:column; justify-content:space-between; }
+    .hero-right { padding:80px 48px 60px; display:flex; flex-direction:column; justify-content:flex-end; background:var(--ink); color:#f5f2eb; }
+    .hero-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:24px; }
+    .hero-title { font-family:var(--display); font-size:clamp(4.5rem,9vw,8rem); line-height:0.9; letter-spacing:0.02em; }
+    .hero-title em { font-style:normal; color:#e8380d; }
+    .hero-desc { font-size:14px; color:var(--muted); max-width:400px; line-height:1.8; margin-top:32px; }
+    .hero-right-label { font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(245,242,235,0.4); margin-bottom:40px; }
+    .category-ticker { display:flex; flex-direction:column; gap:12px; }
+    .ticker-item { display:flex; align-items:center; justify-content:space-between; padding-bottom:12px; border-bottom:1px solid rgba(245,242,235,0.1); opacity:0; transform:translateX(20px); animation:slideIn .5s ease forwards; }
+    .ticker-name { font-family:var(--display); font-size:1.3rem; letter-spacing:0.05em; color:#f5f2eb; }
+    .ticker-dot { width:8px; height:8px; border-radius:50%; background:var(--dot-color,#f5f2eb); }
+    @keyframes slideIn { to { opacity:1; transform:translateX(0); } }
+
+    .marquee-wrap { overflow:hidden; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:14px 0; background:var(--ink); }
+    .marquee-track { display:flex; animation:marquee 32s linear infinite; white-space:nowrap; }
+    .marquee-item { font-family:var(--display); font-size:1rem; letter-spacing:0.08em; color:rgba(245,242,235,0.45); padding:0 32px; }
+    .marquee-item span { color:#e8380d; margin-right:32px; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    .stats-strip { display:grid; grid-template-columns:repeat(4,1fr); border:2px solid var(--ink); border-top:none; }
+    .stat-cell { padding:36px 32px; border-right:1px solid var(--border); text-align:center; }
+    .stat-cell:last-child { border-right:none; }
+    .stat-big { font-family:var(--display); font-size:3.2rem; color:var(--ink); line-height:1; display:block; margin-bottom:6px; }
+    .stat-desc { font-size:12px; color:var(--muted); letter-spacing:0.05em; }
+
+    .section { max-width:1280px; margin:0 auto; padding:100px 48px; }
+    .section-header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:56px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+    .section-num { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+    .section-title { font-family:var(--display); font-size:clamp(2.4rem,4vw,3.6rem); letter-spacing:0.02em; line-height:1; }
+    .section-meta { font-size:12px; color:var(--muted); text-align:right; }
+
+    .categories-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--border); border:2px solid var(--ink); }
+    .cat-card { background:var(--card); padding:40px 36px; position:relative; overflow:hidden; transition:background .25s; }
+    .cat-card:hover { background:#faf8f3; }
+    .cat-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cat-color); }
+
+    .cat-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:16px; }
+    .cat-num { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); }
+    .cat-tag { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:3px 10px; border-radius:2px; background:var(--cat-color); color:#fff; }
+    .cat-title { font-family:var(--display); font-size:1.6rem; letter-spacing:0.03em; color:var(--ink); margin-bottom:10px; line-height:1; }
+    .cat-objective { font-size:13px; color:var(--muted); line-height:1.75; margin-bottom:24px; }
+
+    .goals-list { margin-bottom:24px; }
+    .goals-label { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--cat-color); margin-bottom:10px; }
+    .goal-item { display:flex; gap:10px; font-size:12.5px; color:var(--ink); padding:6px 0; border-bottom:1px solid var(--border); line-height:1.5; }
+    .goal-item::before { content:'→'; color:var(--cat-color); flex-shrink:0; margin-top:1px; }
+
+    .tools-section { margin-bottom:24px; }
+    .tools-label { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+    .tools-tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .tool-tag { font-size:11px; padding:4px 10px; background:var(--bg); border:1px solid var(--border); color:var(--ink); border-radius:2px; transition:border-color .2s; }
+    .cat-card:hover .tool-tag { border-color:var(--cat-color); }
+
+    .bn-label { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+    .bn-item { font-size:12px; padding:7px 0; border-bottom:1px solid var(--border); display:flex; gap:10px; align-items:flex-start; color:var(--ink); line-height:1.55; }
+    .bn-title { font-weight:600; color:var(--ink); }
+    .bn-why { color:var(--muted); }
+    .bn-icon { color:var(--cat-color); flex-shrink:0; }
+
+    .cat-toggle { margin-top:20px; display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--cat-color); cursor:pointer; background:none; border:none; padding:0; font-family:var(--body); }
+    .cat-toggle-arrow { transition:transform .25s; }
+    .cat-toggle.open .cat-toggle-arrow { transform:rotate(180deg); }
+    .cat-expandable { max-height:0; overflow:hidden; transition:max-height .45s ease; }
+    .cat-expandable.open { max-height:1400px; }
+
+    .questions-panel { margin-top:20px; padding:20px; background:var(--bg); border:1px solid var(--border); }
+    .questions-label { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+    .question-item { font-size:12.5px; color:var(--ink); padding:7px 0; border-bottom:1px solid var(--border); display:flex; gap:10px; line-height:1.6; }
+    .question-item:last-child { border-bottom:none; }
+    .question-item::before { content:'?'; color:var(--cat-color); font-weight:600; flex-shrink:0; }
+
+    .reality-note { margin-top:16px; padding:14px 16px; background:rgba(0,0,0,0.03); border-left:3px solid var(--cat-color); font-size:12px; color:var(--muted); line-height:1.7; font-style:italic; }
+
+    .fw-divider { height:2px; background:var(--ink); }
+    footer { background:var(--ink); color:#f5f2eb; padding:60px 48px; display:flex; justify-content:space-between; align-items:flex-end; }
+    .footer-logo { font-family:var(--display); font-size:2.2rem; letter-spacing:0.04em; }
+    .footer-note { font-size:12px; color:rgba(245,242,235,0.4); text-align:right; }
+
+    .fade-up { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+    .fade-up.visible { opacity:1; transform:none; }
+
+    @media(max-width:900px) {
+      .hero { grid-template-columns:1fr; }
+      .hero-right { display:none; }
+      .categories-grid { grid-template-columns:1fr; }
+      .stats-strip { grid-template-columns:repeat(2,1fr); }
+      nav { padding:14px 24px; }
+      .nav-links { display:none; }
+      .section { padding:60px 24px; }
+      footer { flex-direction:column; gap:16px; }
+    }
+  
+
+  @media (max-width: 720px) {
+    /* grid collapse for mobile */
+    .hero { grid-template-columns: 1fr !important; }
+  }
+
+</style>
+  <meta name="description" content="Ten disciplines that define modern DevOps — each with a clear objective, what good looks like, the tools teams actually use, and the bottlenecks that…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DevOps Roles & Responsibilities",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/tech/DevOps/responsibilities.html",
+  "description": "Ten disciplines that define modern DevOps — each with a clear objective, what good looks like, the tools teams actually use, and the bottlenecks that…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/tech/" style="color:#1a3a5c;text-decoration:none;">Tech</a> <span style="opacity:0.5">›</span> <span>Devops & Platform Engineering</span> <span style="opacity:0.5">›</span> <span>DevOps Roles & Responsibilities</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech",
+      "item": "https://yasirbilgin.com/tech/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "DevOps Roles & Responsibilities",
+      "item": "https://yasirbilgin.com/tech/DevOps/responsibilities.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<div class="cursor" id="cursor"></div>
+
+<nav>
+  <div class="nav-logo">DevOps R&R</div>
+  <div class="nav-count">10 Disciplines · Grounded in Reality</div>
+  <ul class="nav-links">
+    <li><a href="#categories">Disciplines</a></li>
+    <li><a href="#overview">Overview</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div>
+      <div class="hero-label">Roles & Responsibilities Framework</div>
+      <h1 class="hero-title">Dev<br><em>Ops</em><br>Break<br>down.</h1>
+      <p class="hero-desc">Ten disciplines that define modern DevOps — each with a clear objective, what good looks like, the tools teams actually use, and the bottlenecks that don't show up in job descriptions.</p>
+    </div>
+    <div style="font-size:12px;color:var(--muted);letter-spacing:0.08em;margin-top:40px;">10 DISCIPLINES &nbsp;·&nbsp; REAL BOTTLENECKS &nbsp;·&nbsp; TOOLS &nbsp;·&nbsp; BIG QUESTIONS</div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-label">All Disciplines</div>
+    <div class="category-ticker">
+      <div class="ticker-item" style="animation-delay:.05s"><span class="ticker-name">CI/CD</span><span class="ticker-dot" style="--dot-color:#e8380d"></span></div>
+      <div class="ticker-item" style="animation-delay:.1s"><span class="ticker-name">Infrastructure as Code</span><span class="ticker-dot" style="--dot-color:#1a5cff"></span></div>
+      <div class="ticker-item" style="animation-delay:.15s"><span class="ticker-name">Config & Dependency Mgmt</span><span class="ticker-dot" style="--dot-color:#00943a"></span></div>
+      <div class="ticker-item" style="animation-delay:.2s"><span class="ticker-name">Observability</span><span class="ticker-dot" style="--dot-color:#9b2fd4"></span></div>
+      <div class="ticker-item" style="animation-delay:.25s"><span class="ticker-name">Automation & Platform Eng</span><span class="ticker-dot" style="--dot-color:#e8380d"></span></div>
+      <div class="ticker-item" style="animation-delay:.3s"><span class="ticker-name">Security & Compliance</span><span class="ticker-dot" style="--dot-color:#c4000f"></span></div>
+      <div class="ticker-item" style="animation-delay:.35s"><span class="ticker-name">FinOps</span><span class="ticker-dot" style="--dot-color:#00943a"></span></div>
+      <div class="ticker-item" style="animation-delay:.4s"><span class="ticker-name">Reliability Engineering</span><span class="ticker-dot" style="--dot-color:#1a5cff"></span></div>
+      <div class="ticker-item" style="animation-delay:.45s"><span class="ticker-name">Continuous Improvement</span><span class="ticker-dot" style="--dot-color:#f97316"></span></div>
+      <div class="ticker-item" style="animation-delay:.5s"><span class="ticker-name">Culture & Collaboration</span><span class="ticker-dot" style="--dot-color:#9b2fd4"></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span>✦</span>CI/CD</span><span class="marquee-item"><span>✦</span>Infrastructure as Code</span><span class="marquee-item"><span>✦</span>Config Management</span><span class="marquee-item"><span>✦</span>Observability</span><span class="marquee-item"><span>✦</span>Platform Engineering</span><span class="marquee-item"><span>✦</span>DevSecOps</span><span class="marquee-item"><span>✦</span>FinOps</span><span class="marquee-item"><span>✦</span>Reliability Engineering</span><span class="marquee-item"><span>✦</span>Continuous Improvement</span><span class="marquee-item"><span>✦</span>Culture & Collaboration</span>
+    <span class="marquee-item"><span>✦</span>CI/CD</span><span class="marquee-item"><span>✦</span>Infrastructure as Code</span><span class="marquee-item"><span>✦</span>Config Management</span><span class="marquee-item"><span>✦</span>Observability</span><span class="marquee-item"><span>✦</span>Platform Engineering</span><span class="marquee-item"><span>✦</span>DevSecOps</span><span class="marquee-item"><span>✦</span>FinOps</span><span class="marquee-item"><span>✦</span>Reliability Engineering</span><span class="marquee-item"><span>✦</span>Continuous Improvement</span><span class="marquee-item"><span>✦</span>Culture & Collaboration</span>
+  </div>
+</div>
+
+<div class="stats-strip" id="overview">
+  <div class="stat-cell"><span class="stat-big">10</span><span class="stat-desc">Core Disciplines</span></div>
+  <div class="stat-cell"><span class="stat-big">60+</span><span class="stat-desc">Tools Across the Stack</span></div>
+  <div class="stat-cell"><span class="stat-big">80+</span><span class="stat-desc">Real Bottlenecks</span></div>
+  <div class="stat-cell"><span class="stat-big">40+</span><span class="stat-desc">Big Questions to Answer</span></div>
+</div>
+
+<div class="section" id="categories">
+  <div class="section-header fade-up">
+    <div><div class="section-num">01 — All Disciplines</div><h2 class="section-title">The Full Framework</h2></div>
+    <div class="section-meta">Click any card<br>to expand details</div>
+  </div>
+
+  <div class="categories-grid">
+
+    <!-- 1. CI/CD -->
+    <div class="cat-card fade-up" style="--cat-color:#e8380d">
+      <div class="cat-header"><span class="cat-num">01 /</span><span class="cat-tag">CI/CD</span></div>
+      <h3 class="cat-title">Continuous Integration<br>& Delivery</h3>
+      <p class="cat-objective">Get code from commit to production safely, repeatably, and fast. The pipeline is the product — treat it like one. Speed without reliability is just recklessness.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Deployments are boring — automated, tested, and reversible</div>
+        <div class="goal-item">Developers get pipeline feedback in under 10 minutes</div>
+        <div class="goal-item">Rollbacks are a one-step operation, not a postmortem</div>
+        <div class="goal-item">Feature flags decouple deploy from release</div>
+        <div class="goal-item">Secrets are never hardcoded — ever</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">GitHub Actions</span><span class="tool-tag">GitLab CI/CD</span><span class="tool-tag">CircleCI</span><span class="tool-tag">Jenkins</span><span class="tool-tag">Argo CD</span><span class="tool-tag">Flux</span><span class="tool-tag">Harness</span><span class="tool-tag">Spinnaker</span><span class="tool-tag">Argo Rollouts</span><span class="tool-tag">LaunchDarkly</span><span class="tool-tag">Vault</span><span class="tool-tag">Docker</span><span class="tool-tag">Kaniko</span><span class="tool-tag">Artifactory</span><span class="tool-tag">Cypress</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Flaky tests that no one fixes.</span> <span class="bn-why">They erode trust in the pipeline until engineers start skipping CI entirely.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Fear of the deploy button.</span> <span class="bn-why">When deployments are risky, teams batch changes. Batching makes deployments more risky. A vicious cycle.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Manual approval gates that are rubber stamps.</span> <span class="bn-why">They create delay without adding safety. Replace with automated quality gates.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Pipelines owned by no one.</span> <span class="bn-why">Shared pipeline infrastructure that "everyone" is responsible for means no one fixes it.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Hardcoded secrets in repositories.</span> <span class="bn-why">Even "old" secrets in git history are exploitable. Rotation alone doesn't solve leakage.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Environments that don't match production.</span> <span class="bn-why">"Works on staging" is not a deployment guarantee. Config parity is non-negotiable.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">How long does it take from a merged PR to production? Is that acceptable?</div>
+          <div class="question-item">When was the last time you tested a rollback under real conditions?</div>
+          <div class="question-item">Do developers trust the pipeline enough to merge on a Friday?</div>
+          <div class="question-item">If a secret was accidentally committed, how would you find out?</div>
+        </div>
+        <div class="reality-note">Most CI/CD problems aren't tool problems — they're ownership and discipline problems. The best pipeline is one your team actually trusts.</div>
+      </div>
+    </div>
+
+    <!-- 2. IaC -->
+    <div class="cat-card fade-up" style="--cat-color:#1a5cff">
+      <div class="cat-header"><span class="cat-num">02 /</span><span class="cat-tag">IaC</span></div>
+      <h3 class="cat-title">Infrastructure<br>as Code</h3>
+      <p class="cat-objective">Infrastructure should be reproducible, reviewable, and version-controlled — the same discipline applied to application code. "Just click around in the console" is not a runbook.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Every infrastructure change goes through a PR — including hotfixes</div>
+        <div class="goal-item">Environments are spun up and torn down in minutes, not days</div>
+        <div class="goal-item">Drift between declared and real state is detected automatically</div>
+        <div class="goal-item">IaC modules are reusable, documented, and owned by someone</div>
+        <div class="goal-item">Policy-as-code blocks non-compliant resources before they're created</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Terraform</span><span class="tool-tag">Terragrunt</span><span class="tool-tag">Pulumi</span><span class="tool-tag">AWS CDK</span><span class="tool-tag">AWS CloudFormation</span><span class="tool-tag">Helm</span><span class="tool-tag">Kustomize</span><span class="tool-tag">Atlantis</span><span class="tool-tag">tfsec</span><span class="tool-tag">checkov</span><span class="tool-tag">TFLint</span><span class="tool-tag">Infracost</span><span class="tool-tag">SOPS</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">State file as a single point of failure.</span> <span class="bn-why">Corrupted or locked Terraform state can freeze an entire team. Remote state with locking is not optional.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Nobody owns the modules.</span> <span class="bn-why">Shared module libraries that were built once and never maintained become a liability nobody wants to touch.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Drift between code and reality.</span> <span class="bn-why">Manual changes made "just this once" accumulate. Without drift detection, you eventually lose trust in what the code says.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">IaC used for deployments instead of just provisioning.</span> <span class="bn-why">Terraform is not a deployment tool. Blending provisioning and app deployment in one plan is a recipe for slow, risky applies.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Abstraction that outpaces the team.</span> <span class="bn-why">Overly complex module hierarchies slow onboarding and make debugging infuriating. Clarity beats cleverness.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">If someone ran `terraform apply` right now, do you know exactly what would change?</div>
+          <div class="question-item">How much of your infrastructure exists outside of code?</div>
+          <div class="question-item">Who reviews IaC changes, and do they understand what they're approving?</div>
+          <div class="question-item">Can a new engineer spin up a full environment without tribal knowledge?</div>
+        </div>
+        <div class="reality-note">IaC is mature — the hard part is governance, not syntax. Who can approve a change, what does a plan review actually catch, and how does state get protected?</div>
+      </div>
+    </div>
+
+    <!-- 3. Config & Dependency -->
+    <div class="cat-card fade-up" style="--cat-color:#00943a">
+      <div class="cat-header"><span class="cat-num">03 /</span><span class="cat-tag">Config</span></div>
+      <h3 class="cat-title">Configuration &<br>Dependency Management</h3>
+      <p class="cat-objective">Apps should behave consistently regardless of where they run. Configuration drift and supply chain vulnerabilities are silent killers — they surface in production at the worst time.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Config is environment-specific but template-driven — no copy-paste between envs</div>
+        <div class="goal-item">Secrets are injected at runtime, never baked into images or committed to git</div>
+        <div class="goal-item">Dependency updates are automated, reviewed, and tested — not manual</div>
+        <div class="goal-item">Third-party dependencies are scanned for vulnerabilities on every build</div>
+        <div class="goal-item">Any config change is auditable — who changed what, when, and why</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Helm</span><span class="tool-tag">Kustomize</span><span class="tool-tag">ConfigMaps / Secrets</span><span class="tool-tag">HashiCorp Vault</span><span class="tool-tag">SOPS</span><span class="tool-tag">Doppler</span><span class="tool-tag">Sealed Secrets</span><span class="tool-tag">Renovate</span><span class="tool-tag">Dependabot</span><span class="tool-tag">Snyk</span><span class="tool-tag">Trivy</span><span class="tool-tag">npm / pip / Maven</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Configs duplicated across environments by hand.</span> <span class="bn-why">One typo in a prod config that staging doesn't have is how Saturday nights become incidents.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Secrets sprawl.</span> <span class="bn-why">Secrets end up in .env files, Slack messages, wikis, and one person's laptop. The blast radius of a single leak is unknown.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Dependency updates treated as optional maintenance.</span> <span class="bn-why">Skipping updates for months turns a routine patch into a breaking migration. Automation makes this a non-event.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Supply chain blind spots.</span> <span class="bn-why">Transitive dependencies — the packages your packages depend on — are the attack surface most teams never look at.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Undocumented overrides.</span> <span class="bn-why">That extra env var set manually in staging 18 months ago that nobody knows about — it's there in every environment.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">If you had to rotate every secret today, how long would it take?</div>
+          <div class="question-item">How many places do your app's configs live? Can you enumerate them?</div>
+          <div class="question-item">When was the last time a vulnerable dependency was shipped to production undetected?</div>
+        </div>
+        <div class="reality-note">Secrets management is where compliance meets engineering. It's not glamorous, but a secrets leak will generate more urgency than any feature outage.</div>
+      </div>
+    </div>
+
+    <!-- 4. Observability -->
+    <div class="cat-card fade-up" style="--cat-color:#9b2fd4">
+      <div class="cat-header"><span class="cat-num">04 /</span><span class="cat-tag">Observability</span></div>
+      <h3 class="cat-title">Observability &<br>Alerting</h3>
+      <p class="cat-objective">You can't fix what you can't see. Observability — metrics, logs, and traces working together — lets you understand <em>why</em> a system is misbehaving, not just <em>that</em> it is.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">SLOs defined per service — not just "it's up" but "it's performing acceptably"</div>
+        <div class="goal-item">Alerts fire on user-impacting symptoms, not just CPU spikes</div>
+        <div class="goal-item">A trace ID connects a user complaint to the exact failing service call</div>
+        <div class="goal-item">On-call engineers can diagnose an incident without waking a specialist</div>
+        <div class="goal-item">Dashboards are maintained and reflect current architecture</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Prometheus</span><span class="tool-tag">Grafana</span><span class="tool-tag">Datadog</span><span class="tool-tag">New Relic</span><span class="tool-tag">OpenTelemetry</span><span class="tool-tag">Jaeger</span><span class="tool-tag">Tempo</span><span class="tool-tag">Loki</span><span class="tool-tag">Elasticsearch</span><span class="tool-tag">Alertmanager</span><span class="tool-tag">PagerDuty</span><span class="tool-tag">Opsgenie</span><span class="tool-tag">Honeycomb</span><span class="tool-tag">FireHydrant</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Alert fatigue from noisy, low-signal alerts.</span> <span class="bn-why">When on-call gets paged 30 times a week for non-actionable alerts, real incidents get ignored. Every alert should demand action.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">No SLOs — so no baseline for "is this bad?"</span> <span class="bn-why">Without agreed SLOs, every incident becomes a political debate about severity. Define error budgets before you need them.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Metrics, logs, and traces as separate silos.</span> <span class="bn-why">If you can't correlate a spike in a Grafana dashboard to a log line in Loki to a trace in Jaeger, you're doing archaeology, not debugging.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Dashboards that describe the past, not the present.</span> <span class="bn-why">Dashboards built for one version of the architecture and never updated become wallpaper. Treat them like code.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Tribal knowledge as the primary debugging tool.</span> <span class="bn-why">When only one engineer knows how to read a certain metric, that engineer is the bottleneck for every incident.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">How many alerts fired last week? How many required action?</div>
+          <div class="question-item">Can any on-call engineer — not just the expert — diagnose a production incident?</div>
+          <div class="question-item">Do you have SLOs? When did you last review them with the business?</div>
+          <div class="question-item">How long does it take to go from "something's wrong" to "here's the root cause"?</div>
+        </div>
+        <div class="reality-note">Observability is not a dashboard. It's the ability to ask arbitrary questions about your system's behavior without deploying new code to answer them.</div>
+      </div>
+    </div>
+
+    <!-- 5. Automation & Platform Engineering -->
+    <div class="cat-card fade-up" style="--cat-color:#e8380d">
+      <div class="cat-header"><span class="cat-num">05 /</span><span class="cat-tag">Platform Eng</span></div>
+      <h3 class="cat-title">Automation &<br>Platform Engineering</h3>
+      <p class="cat-objective">The goal is to eliminate toil — not just automate it. Platform engineering builds the paved roads developers want to use. If your internal platform requires a ticket to use, it's not a platform.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Developers can provision environments, run deployments, and create services without filing tickets</div>
+        <div class="goal-item">Golden paths exist — opinionated, well-lit routes that are faster than doing it yourself</div>
+        <div class="goal-item">Internal tools are treated as products: they have owners, docs, and SLAs</div>
+        <div class="goal-item">Automation is idempotent — running it twice is safe</div>
+        <div class="goal-item">The platform team measures adoption and developer satisfaction, not just uptime</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Backstage</span><span class="tool-tag">Port</span><span class="tool-tag">Cortex</span><span class="tool-tag">Argo CD</span><span class="tool-tag">Atlantis</span><span class="tool-tag">Temporal</span><span class="tool-tag">Airflow</span><span class="tool-tag">Prefect</span><span class="tool-tag">Ansible</span><span class="tool-tag">Bash / Python</span><span class="tool-tag">LaunchDarkly</span><span class="tool-tag">Flagsmith</span><span class="tool-tag">Taskfile</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Automation that requires a human to babysit it.</span> <span class="bn-why">Scripts that silently fail or require manual intervention aren't automation — they're documentation with a run button.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">The "bus factor" problem.</span> <span class="bn-why">Internal tooling understood only by the engineer who built it becomes a critical dependency. Document it or lose it.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Internal platforms nobody uses.</span> <span class="bn-why">Building a developer portal that teams route around is the most demoralizing outcome in platform engineering. Build with teams, not for them.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Ticket-ops replacing self-service.</span> <span class="bn-why">If getting a new environment still requires a JIRA ticket to the platform team, you haven't solved the problem — you've renamed it.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Overengineered tooling for a 10-person team.</span> <span class="bn-why">Backstage is powerful — and also overkill for many orgs. Match platform complexity to actual developer pain, not aspirational architecture.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">What's the most common thing developers file tickets to the platform team for? Can that be self-served?</div>
+          <div class="question-item">If your best platform engineer left tomorrow, what would break?</div>
+          <div class="question-item">Do developers actually use the internal platform, or do they route around it?</div>
+          <div class="question-item">Are you measuring developer experience, or just platform availability?</div>
+        </div>
+        <div class="reality-note">The best platform teams think like product teams. They have a roadmap, they talk to users, and they deprecate things that nobody uses. Toil that teams don't notice you've eliminated is the highest compliment.</div>
+      </div>
+    </div>
+
+    <!-- 6. Security -->
+    <div class="cat-card fade-up" style="--cat-color:#c4000f">
+      <div class="cat-header"><span class="cat-num">06 /</span><span class="cat-tag">DevSecOps</span></div>
+      <h3 class="cat-title">Security &<br>Compliance</h3>
+      <p class="cat-objective">Security that lives entirely in a separate team is security theater. Real DevSecOps means developers catch vulnerabilities before they ship — not after a pentest finds them.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Security scans run in CI — containers, dependencies, and IaC are all checked</div>
+        <div class="goal-item">Secrets are centrally managed, rotated, and audited — not distributed by email</div>
+        <div class="goal-item">RBAC enforced at every layer — least privilege is the default, not the aspiration</div>
+        <div class="goal-item">CVEs have an SLA — critical findings get patched within a defined timeframe</div>
+        <div class="goal-item">Compliance evidence is generated automatically, not assembled manually at audit time</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Snyk</span><span class="tool-tag">Trivy</span><span class="tool-tag">Grype</span><span class="tool-tag">Checkov</span><span class="tool-tag">tfsec</span><span class="tool-tag">SonarQube</span><span class="tool-tag">Semgrep</span><span class="tool-tag">OWASP ZAP</span><span class="tool-tag">HashiCorp Vault</span><span class="tool-tag">OPA / Kyverno</span><span class="tool-tag">Falco</span><span class="tool-tag">AWS IAM</span><span class="tool-tag">Okta</span><span class="tool-tag">Wiz</span><span class="tool-tag">Drata</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Security as a gate, not a guardrail.</span> <span class="bn-why">When security only shows up at the end of a release cycle, they're forced to choose between blocking the release or waving it through. Neither is good.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">CVE backlogs that grow faster than they're cleared.</span> <span class="bn-why">Without a priority framework and SLA, vulnerability queues become noise that teams learn to ignore.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Secrets that "only exist in one place."</span> <span class="bn-why">They don't. Slack, email, a doc, someone's .bashrc. Audit your actual secrets surface area — it's always larger than you think.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">RBAC in theory, admin access in practice.</span> <span class="bn-why">Emergency access escalations that never get revoked accumulate into permanent over-permissioning.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Developers who view security as someone else's job.</span> <span class="bn-why">Security training that's a 30-minute annual video doesn't change behavior. Integration into daily workflows does.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">If a critical CVE dropped today, how long before every affected service is patched?</div>
+          <div class="question-item">Who has production access? When did you last audit that list?</div>
+          <div class="question-item">Can you pass a SOC2 or ISO 27001 audit without a month of frantic prep?</div>
+          <div class="question-item">How does a developer find out they've introduced a vulnerability before it ships?</div>
+        </div>
+        <div class="reality-note">The companies that do DevSecOps well make security frictionless for developers. Scan results in the PR. One-click secret rotation. RBAC that doesn't require a ticket. Remove the friction and compliance follows.</div>
+      </div>
+    </div>
+
+    <!-- 7. FinOps -->
+    <div class="cat-card fade-up" style="--cat-color:#00943a">
+      <div class="cat-header"><span class="cat-num">07 /</span><span class="cat-tag">FinOps</span></div>
+      <h3 class="cat-title">Cost & Resource<br>Optimization</h3>
+      <p class="cat-objective">Cloud cost isn't a finance problem — it's an engineering problem. The teams who understand what they're spending and why ship better systems, not just cheaper ones.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Every team can see their own cloud spend — not just platform or finance</div>
+        <div class="goal-item">Dev and test environments are ephemeral — not running 24/7</div>
+        <div class="goal-item">Cost impact of infrastructure changes is visible before `apply`</div>
+        <div class="goal-item">Reserved instances and savings plans are used deliberately, not forgotten</div>
+        <div class="goal-item">Orphaned resources have an owner and an expiry — not just a tag</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Kubecost</span><span class="tool-tag">OpenCost</span><span class="tool-tag">AWS Cost Explorer</span><span class="tool-tag">Infracost</span><span class="tool-tag">CloudHealth</span><span class="tool-tag">Spot.io</span><span class="tool-tag">CAST AI</span><span class="tool-tag">KEDA</span><span class="tool-tag">Cluster Autoscaler</span><span class="tool-tag">AWS Budgets</span><span class="tool-tag">Harness CCM</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Cloud costs hidden from the teams creating them.</span> <span class="bn-why">If engineers never see a bill, there's no feedback loop. Cost awareness starts with visibility, not governance.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Dev/test environments running permanently.</span> <span class="bn-why">A dev cluster left running over a long weekend can cost as much as a week of production. Scheduled shutdown policies are free.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Over-provisioning as the path of least resistance.</span> <span class="bn-why">Engineers size for peak + margin + worry. Rightsizing is uncomfortable but consistently delivers 20-40% savings.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">No ownership of orphaned resources.</span> <span class="bn-why">That 2TB snapshot from a deleted cluster from 18 months ago is still on the bill. Tagging policies and expiry automation help, but enforcement is the hard part.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">FinOps treated as a platform team responsibility.</span> <span class="bn-why">Cost optimization only works at scale when product teams own their spend. Platform can provide tooling; accountability must live with the teams.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">Which team is your largest cloud spender? Do they know it?</div>
+          <div class="question-item">What's your cost per customer, per service, per environment? Can you answer that?</div>
+          <div class="question-item">When did you last review reserved instance coverage vs actual utilization?</div>
+        </div>
+        <div class="reality-note">FinOps is 20% tooling and 80% culture. The hardest part isn't finding waste — it's creating the incentive for engineering teams to care about eliminating it.</div>
+      </div>
+    </div>
+
+    <!-- 8. Reliability -->
+    <div class="cat-card fade-up" style="--cat-color:#1a5cff">
+      <div class="cat-header"><span class="cat-num">08 /</span><span class="cat-tag">SRE</span></div>
+      <h3 class="cat-title">Reliability &<br>Resilience Engineering</h3>
+      <p class="cat-objective">Reliability is a feature. Systems that fail gracefully, recover quickly, and degrade predictably are engineered that way — not lucky. The goal is surviving failure, not preventing it.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">SLOs are agreed with the business — not set unilaterally by engineering</div>
+        <div class="goal-item">Failure modes are documented, and failover is tested before it's needed</div>
+        <div class="goal-item">Runbooks are accessible, current, and usable by any on-call engineer</div>
+        <div class="goal-item">Chaos engineering happens on a schedule, not after a production incident</div>
+        <div class="goal-item">On-call rotation is sustainable — no one is burning out to keep the lights on</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Chaos Mesh</span><span class="tool-tag">LitmusChaos</span><span class="tool-tag">Gremlin</span><span class="tool-tag">Kubernetes HPA/VPA</span><span class="tool-tag">KEDA</span><span class="tool-tag">Velero</span><span class="tool-tag">Istio</span><span class="tool-tag">Envoy</span><span class="tool-tag">Resilience4j</span><span class="tool-tag">PagerDuty</span><span class="tool-tag">StatusPage</span><span class="tool-tag">incident.io</span><span class="tool-tag">Rootly</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">DR plans that have never been tested.</span> <span class="bn-why">A disaster recovery plan that's only been read — never executed — is a hypothesis. Test it before an actual disaster does.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">On-call burnout eroding the team quietly.</span> <span class="bn-why">Chronic paging at 3am is an attrition risk, not just a morale issue. On-call health is a reliability metric.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Runbook rot.</span> <span class="bn-why">Runbooks written during the last incident and never updated are worse than no runbooks — they give false confidence and wrong steps.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Tight coupling making failures non-local.</span> <span class="bn-why">A database timeout that crashes the frontend because there's no circuit breaker is a design problem masquerading as an ops problem.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">SLOs set too high to be meaningful.</span> <span class="bn-why">A 99.99% SLO on an internal CRUD service nobody depends on wastes engineering effort. Error budgets should reflect user impact, not engineering pride.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">When did you last test your disaster recovery procedure end-to-end?</div>
+          <div class="question-item">How many pages did on-call receive last month? How many were actionable?</div>
+          <div class="question-item">If your primary database went down right now, what happens to each service?</div>
+          <div class="question-item">Are your SLOs based on actual user expectations, or internal engineering targets?</div>
+        </div>
+        <div class="reality-note">The SRE mindset shift: stop trying to prevent failure and start designing for recovery. Mean time to recovery (MTTR) often matters more to users than mean time between failures (MTBF).</div>
+      </div>
+    </div>
+
+    <!-- 9. Continuous Improvement -->
+    <div class="cat-card fade-up" style="--cat-color:#f97316">
+      <div class="cat-header"><span class="cat-num">09 /</span><span class="cat-tag">Improvement</span></div>
+      <h3 class="cat-title">Continuous<br>Improvement</h3>
+      <p class="cat-objective">The hardest discipline in DevOps because it has no obvious fire to put out. Most teams skip it entirely. The ones that don't are the ones that compound improvements over time rather than repeatedly solving the same problems.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Blameless postmortems happen after every significant incident — and actions get completed</div>
+        <div class="goal-item">DORA metrics are tracked: deployment frequency, lead time, MTTR, change failure rate</div>
+        <div class="goal-item">Developer experience is measured periodically — not just inferred</div>
+        <div class="goal-item">Time is budgeted explicitly for improvement work, not taken from on-call slack</div>
+        <div class="goal-item">Retrospective actions have owners, due dates, and are reviewed</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">DORA Metrics</span><span class="tool-tag">Sleuth</span><span class="tool-tag">LinearB</span><span class="tool-tag">Haystack</span><span class="tool-tag">GitHub Insights</span><span class="tool-tag">Parabol</span><span class="tool-tag">EasyRetro</span><span class="tool-tag">Miro</span><span class="tool-tag">LaunchDarkly</span><span class="tool-tag">Notion / Confluence</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Retrospectives without follow-through.</span> <span class="bn-why">Writing action items in a doc nobody looks at is not improvement — it's ritual. Actions need owners and deadlines or they disappear.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Improvement work deprioritized by product roadmap.</span> <span class="bn-why">When every sprint is feature delivery, technical debt and process debt compound invisibly until the team hits a wall.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Measuring outputs instead of outcomes.</span> <span class="bn-why">Tracking story points and tickets closed doesn't tell you if the team is improving. DORA metrics give you actual signal about delivery health.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Blame culture disguised as postmortems.</span> <span class="bn-why">A "blameless" postmortem that ends with an action item for one specific engineer to "be more careful" is not blameless. It's just deniable.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Innovation disconnected from user impact.</span> <span class="bn-why">Experimenting with new tools is fun. Experiments that don't connect to measurable engineering or user outcomes are hobbies, not improvements.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">What are your DORA metrics right now? Have they improved in the last quarter?</div>
+          <div class="question-item">Look at last quarter's retro action items. How many were completed?</div>
+          <div class="question-item">Is there explicit time budgeted for improvement work, or does it happen in between fires?</div>
+          <div class="question-item">What's the single biggest recurring problem your team keeps solving? Why hasn't it been fixed?</div>
+        </div>
+        <div class="reality-note">High-performing DevOps teams aren't better because they have better tools. They're better because they systematically learn from what's not working and protect time to fix it.</div>
+      </div>
+    </div>
+
+    <!-- 10. Culture -->
+    <div class="cat-card fade-up" style="--cat-color:#9b2fd4">
+      <div class="cat-header"><span class="cat-num">10 /</span><span class="cat-tag">Culture</span></div>
+      <h3 class="cat-title">Culture &<br>Collaboration</h3>
+      <p class="cat-objective">DevOps is a culture before it's a toolchain. No amount of automation fixes a team where dev blames ops, ops blames security, and security blames everyone. Shared ownership is the foundation everything else rests on.</p>
+      <div class="goals-list">
+        <div class="goals-label">What Good Looks Like</div>
+        <div class="goal-item">Developers feel responsible for what they ship — in production, not just in review</div>
+        <div class="goal-item">Postmortems focus on systems and processes, never on individuals</div>
+        <div class="goal-item">Security and ops are consulted during design — not handed the result at the end</div>
+        <div class="goal-item">Oncall rotation includes developers, not just ops — they feel the pain they create</div>
+        <div class="goal-item">Psychological safety exists: engineers raise problems before they become incidents</div>
+      </div>
+      <div class="tools-section">
+        <div class="tools-label">Common Tools</div>
+        <div class="tools-tags">
+          <span class="tool-tag">Slack / Teams</span><span class="tool-tag">Confluence / Notion</span><span class="tool-tag">Jira / Linear</span><span class="tool-tag">GitHub / GitLab</span><span class="tool-tag">Backstage</span><span class="tool-tag">Rootly</span><span class="tool-tag">FireHydrant</span><span class="tool-tag">Lattice</span><span class="tool-tag">CultureAmp</span><span class="tool-tag">Retrium</span>
+        </div>
+      </div>
+      <button class="cat-toggle"><span>Show Bottlenecks & Questions</span><span class="cat-toggle-arrow">↓</span></button>
+      <div class="cat-expandable">
+        <div style="margin-top:20px">
+          <div class="bn-label">Real Bottlenecks</div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Dev and ops as adversarial teams.</span> <span class="bn-why">Dev wants to ship fast. Ops wants stability. Without shared goals and shared on-call, this tension never resolves — it just finds new forms.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Knowledge hoarding as job security.</span> <span class="bn-why">Engineers who are the only ones who understand a system have incentive to keep it that way. This is cultural, not technical.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Incident blame culture.</span> <span class="bn-why">When mistakes lead to consequences, engineers stop raising concerns early. Small problems become big ones because nobody wanted to be the person who flagged it.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">Velocity celebrated over quality.</span> <span class="bn-why">Teams that are rewarded only for shipping features have a rational incentive to skip the things that don't show up in a sprint review: tests, docs, runbooks, tech debt.</span></div></div>
+          <div class="bn-item"><span class="bn-icon">⚠</span><div><span class="bn-title">DevOps as a team name, not a practice.</span> <span class="bn-why">Renaming your ops team "DevOps" doesn't change how software is built and delivered. DevOps describes how teams work, not what a team is called.</span></div></div>
+        </div>
+        <div class="questions-panel">
+          <div class="questions-label">Questions Worth Asking</div>
+          <div class="question-item">Would an engineer on your team feel safe raising a concern about a decision they disagreed with?</div>
+          <div class="question-item">Do developers participate in on-call? If not, why not?</div>
+          <div class="question-item">After your last incident, did the postmortem lead to systemic change, or just an action item?</div>
+          <div class="question-item">Are speed and stability treated as trade-offs, or as complementary goals?</div>
+        </div>
+        <div class="reality-note">Culture is the multiplier on everything else. Great tooling in a blame culture produces great-looking dashboards during incidents nobody admits to. Invest in culture as deliberately as you invest in tooling.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="fw-divider"></div>
+
+<footer>
+  <div class="footer-logo">DevOps R&R</div>
+  <div class="footer-note">Source: DevOps Roles & Responsibilities<br>Editorially refined for real-world DevOps practice</div>
+</footer>
+
+<script>
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('button, a, .cat-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+  });
+
+  // Toggle cards — event delegation avoids inline-handler sandbox issues
+  document.querySelectorAll('.cat-toggle').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.classList.toggle('open');
+      this.nextElementSibling.classList.toggle('open');
+      this.querySelector('span:first-child').textContent =
+        this.classList.contains('open') ? 'Hide Details' : 'Show Bottlenecks & Questions';
+    });
+  });
+
+  // Nav smooth scroll — works inside iframes too
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</article>
+</body>
+</html>

@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:title"       content="The Science of Listening: A Complete Guide to Tafsīr" />
+  <meta property="og:description" content="The Science of Listening: A Complete Guide to Tafsīr" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/faith/Islamic-Studies/tafseer.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="The Science of Listening: A Complete Guide to Tafsīr" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/faith/Islamic-Studies/tafseer.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+  <title>The Science of Listening: A Complete Guide to Tafsīr | Yasir Bilgin</title>
+
+  <!-- ① Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- ② Favicon -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- ③ Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --ink:        #1a1410;
+      --ink-soft:   #3d3530;
+      --ink-muted:  #7a6e68;
+      --paper:      #faf7f2;
+      --paper-warm: #f3ede3;
+      --paper-deep: #e8dfd2;
+      --accent:     #7a3b2e;
+      --accent-2:   #4a6741;
+      --gold:       #c89b5a;
+      --gold-light: #e8d5a3;
+      --rule:       rgba(120,100,80,0.18);
+      --rule-heavy: rgba(120,100,80,0.35);
+      --serif:      'Cormorant Garamond', 'Georgia', serif;
+      --body:       'Source Serif 4', 'Georgia', serif;
+      --mono:       'JetBrains Mono', monospace;
+      --nav-h:      62px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 19px;
+      line-height: 1.78;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Progress bar ── */
+    #progressBar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 2px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(20,15,10,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(3px);
+    }
+    .toc-panel {
+      background: var(--paper);
+      width: min(380px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.5rem 2rem 4rem;
+      border-left: 1px solid var(--rule-heavy);
+      box-shadow: -8px 0 40px rgba(0,0,0,0.15);
+    }
+    .toc-panel h3 {
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.8rem;
+    }
+    .toc-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--ink-muted);
+      padding: 0.4rem;
+    }
+    .toc-close:hover { color: var(--ink); }
+    .toc-list { list-style: none; }
+    .toc-list li { border-top: 1px solid var(--rule); }
+    .toc-list li:first-child { border-top: none; }
+    .toc-list a {
+      display: block;
+      padding: 0.65rem 0;
+      font-family: var(--body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--ink-soft);
+      text-decoration: none;
+      line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-list a.toc-main {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .toc-list a.toc-main:hover { color: var(--accent); }
+    .toc-list a.toc-sub {
+      padding-left: 1rem;
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    /* ── Article sub-header ── */
+    .article-header {
+      top: var(--nav-h);
+      z-index: 50;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 48px;
+    
+      position: sticky;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 48px;
+    }
+    .article-header .discipline-tag {
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .read-time {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      font-family: var(--body);
+      font-weight: 400;
+    }
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--rule-heavy);
+      padding: 0.3rem 0.9rem;
+      font-family: var(--serif);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.15s;
+      min-height: 30px;
+    }
+    .toc-btn:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3.5rem;
+    }
+    .hero-kicker {
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+      display: block;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      font-weight: 700;
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-family: var(--body);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 2.2rem;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar {
+      width: 40px; height: 40px;
+      background: var(--accent);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 0.85rem; font-weight: 700;
+      border-radius: 50%; flex-shrink: 0;
+    }
+    .byline-text { display: flex; flex-direction: column; gap: 0.1rem; }
+    .byline-name { font-family: var(--serif); font-size: 0.92rem; font-weight: 600; color: var(--ink); }
+    .byline-meta { font-size: 0.78rem; color: var(--ink-muted); }
+    .hero-rule { max-width: 860px; margin: 0 auto; border: none; border-top: 1px solid var(--rule-heavy); }
+
+    /* ── Article body ── */
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+    section[id] { scroll-margin-top: 120px; }
+    .major-section { margin-bottom: 5rem; }
+
+    .section-label {
+      display: block;
+      font-family: var(--serif);
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      font-weight: 700; line-height: 1.15;
+      color: var(--ink); margin-bottom: 1.6rem;
+      letter-spacing: -0.01em;
+    }
+    h2 em { font-style: italic; color: var(--accent); }
+
+    h3.sub-heading {
+      font-family: var(--serif);
+      font-size: 1.5rem; font-weight: 600;
+      color: var(--ink);
+      margin: 2.5rem 0 0.9rem;
+      display: flex; align-items: baseline; gap: 0.7rem;
+    }
+    .sh-num {
+      font-family: var(--mono);
+      font-size: 0.68rem; color: var(--accent);
+      font-weight: 500; letter-spacing: 0.05em;
+      padding-top: 0.1em;
+    }
+
+    h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--ink); margin: 2rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1.4rem; color: var(--ink-soft); }
+    p strong { font-weight: 500; color: var(--ink); }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--ink); }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2.5rem;
+      padding: 1.5rem 2rem;
+      border-left: 3px solid var(--accent);
+      background: var(--paper-warm);
+    }
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: 1.25rem; font-style: italic;
+      color: var(--ink); margin: 0; line-height: 1.55;
+    }
+    .pull-quote cite {
+      display: block; font-family: var(--body);
+      font-size: 0.8rem; color: var(--ink-muted);
+      font-style: normal; margin-top: 0.7rem;
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule-heavy);
+      border-radius: 3px;
+      padding: 1.4rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .callout-label {
+      font-family: var(--serif);
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent-2); margin-bottom: 0.6rem;
+      display: block;
+    }
+    .callout p { margin-bottom: 0; font-size: 0.92rem; }
+    .callout p + p { margin-top: 0.6rem; }
+
+    /* ── Verse display ── */
+    .quranic-verse {
+      background: linear-gradient(135deg, #f5efe4, #ede5d8);
+      border: 1px solid var(--rule-heavy);
+      border-radius: 3px;
+      padding: 1.6rem 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .verse-arabic {
+      font-size: 1.6rem;
+      line-height: 2;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+      font-family: 'Times New Roman', serif;
+      direction: rtl;
+    }
+    .verse-trans {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin-bottom: 0.4rem;
+    }
+    .verse-ref {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── School / approach grid ── */
+    .school-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1rem; margin: 2rem 0;
+    }
+    .school-card {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--accent);
+      padding: 1.2rem 1.3rem;
+      border-radius: 2px;
+    }
+    .school-card.b { border-top-color: var(--accent-2); }
+    .school-card.c { border-top-color: var(--gold); }
+    .school-card.d { border-top-color: #6b7bb0; }
+    .school-card.e { border-top-color: #a05a8a; }
+    .school-card h5 { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
+    .school-card p { font-size: 0.82rem; line-height: 1.55; margin: 0; }
+
+    /* ── Timeline ── */
+    .timeline { position: relative; padding-left: 2rem; margin: 2rem 0; }
+    .timeline::before {
+      content: ''; position: absolute;
+      left: 0; top: 6px; bottom: 6px;
+      width: 1px; background: var(--rule-heavy);
+    }
+    .timeline-item { position: relative; margin-bottom: 2rem; }
+    .timeline-item::before {
+      content: ''; position: absolute;
+      left: -2.35rem; top: 0.5rem;
+      width: 8px; height: 8px;
+      border-radius: 50%; background: var(--accent);
+      border: 2px solid var(--paper);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+    .timeline-date { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .timeline-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; }
+    .timeline-body { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6; }
+
+    /* ── Definition list ── */
+    .def-list { margin: 1.5rem 0; }
+    .def-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 0.5rem 1.5rem;
+      padding: 0.9rem 0;
+      border-top: 1px solid var(--rule);
+      align-items: baseline;
+    }
+    .def-item:last-child { border-bottom: 1px solid var(--rule); }
+    .def-term { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--ink); }
+    .def-term em { font-style: italic; font-size: 0.85rem; color: var(--ink-muted); }
+    .def-body { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6; }
+
+    /* ── Debate comparison ── */
+    .debate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .debate-col { padding: 1.2rem 1.4rem; border-radius: 2px; }
+    .debate-col.col-a { background: #f0ece4; border-left: 3px solid var(--accent); }
+    .debate-col.col-b { background: #eaf0e8; border-left: 3px solid var(--accent-2); }
+    .debate-col.col-c { background: #eaeaf5; border-left: 3px solid #6b7bb0; }
+    .debate-col h6 { font-family: var(--serif); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 0.6rem; }
+    .debate-col p { font-size: 0.86rem; margin: 0; }
+
+    /* ── Three-col grid ── */
+    .trio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+
+    /* ── Figures table ── */
+    .table-wrap { overflow-x: auto; margin: 2rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+    thead tr { border-bottom: 2px solid var(--rule-heavy); }
+    thead th { font-family: var(--serif); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); padding: 0.7rem 0.9rem; text-align: left; }
+    tbody tr { border-bottom: 1px solid var(--rule); }
+    tbody tr:hover { background: var(--paper-warm); }
+    tbody td { padding: 0.75rem 0.9rem; vertical-align: top; color: var(--ink-soft); line-height: 1.5; }
+    tbody td:first-child { font-weight: 500; color: var(--ink); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      color: var(--paper-deep);
+      padding: 3rem 2.5rem;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .footer-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--gold-light); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .hero { padding: 3.5rem 1.4rem 2.5rem; }
+      .article-header { padding: 0 1.2rem;  padding: 0 1.2rem; }
+    }
+    @media (max-width: 640px) {
+      .pull-quote { margin-left: 0; }
+      .debate-row { grid-template-columns: 1fr; }
+      .trio-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .school-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .def-item { grid-template-columns: 1fr; }
+      .read-time { display: none; }
+    }
+  </style>
+  <meta name="description" content="The Qurʾān has been recited in the same words for fourteen centuries. But what those words mean — and who has the right to say — has been the central…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Science of Listening: A Complete Guide to Tafsīr",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-05-01",
+  "url": "https://yasirbilgin.com/faith/Islamic-Studies/tafseer.html",
+  "description": "The Qurʾān has been recited in the same words for fourteen centuries. But what those words mean — and who has the right to say — has been the central…"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/faith/" style="color:#2d5a4a;text-decoration:none;">Faith</a> <span style="opacity:0.5">›</span> <span>Islamic Studies</span> <span style="opacity:0.5">›</span> <span>The Science of Listening: A Complete Guide to Tafsīr</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Faith",
+      "item": "https://yasirbilgin.com/faith/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Science of Listening: A Complete Guide to Tafsīr",
+      "item": "https://yasirbilgin.com/faith/Islamic-Studies/tafseer.html"
+    }
+  ]
+}
+</script>
+
+
+<div id="progressBar"></div>
+
+<!-- TOC overlay -->
+<div class="toc-overlay" id="tocOverlay"
+     onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+    <h3>Table of Contents</h3>
+    <ul class="toc-list">
+      <li><a href="#s1" class="toc-main">I. Defining the Discipline</a></li>
+      <li><a href="#s2" class="toc-main">II. The Big Questions</a></li>
+      <li><a href="#s2-1" class="toc-sub">2.1 What Does It Mean to Interpret?</a></li>
+      <li><a href="#s2-2" class="toc-sub">2.2 The Role of the Companion Reports</a></li>
+      <li><a href="#s2-3" class="toc-sub">2.3 Reason and the Limits of Tafsīr</a></li>
+      <li><a href="#s2-4" class="toc-sub">2.4 Anthropomorphic Verses</a></li>
+      <li><a href="#s2-5" class="toc-sub">2.5 The Muḥkam and the Mutashābih</a></li>
+      <li><a href="#s2-6" class="toc-sub">2.6 Can the Qurʾān Be Fully Understood?</a></li>
+      <li><a href="#s2-7" class="toc-sub">2.7 Modern Questions</a></li>
+      <li><a href="#s3" class="toc-main">III. Timeline of Development</a></li>
+      <li><a href="#s4" class="toc-main">IV. Theoretical Frameworks & Schools</a></li>
+      <li><a href="#s5" class="toc-main">V. Methodology & Tools</a></li>
+      <li><a href="#s6" class="toc-main">VI. Key Figures</a></li>
+      <li><a href="#s7" class="toc-main">VII. Canonical Texts</a></li>
+      <li><a href="#s8" class="toc-main">VIII. Glossary of Concepts</a></li>
+      <li><a href="#s9" class="toc-main">IX. Internal Debates</a></li>
+      <li><a href="#s10" class="toc-main">X. Interdisciplinary Links</a></li>
+      <li><a href="#s11" class="toc-main">XI. Modern Challenges</a></li>
+      <li><a href="#s12" class="toc-main">XII. Comparative Perspectives</a></li>
+      <li><a href="#s13" class="toc-main">XIII. Key Case Studies</a></li>
+      <li><a href="#s14" class="toc-main">XIV. Applications to Life</a></li>
+      <li><a href="#s15" class="toc-main">XV. Future Directions</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Article sub-header -->
+
+
+<!-- Hero -->
+<section class="hero">
+  <span class="hero-kicker">Tafsīr · Qurʾānic Exegesis</span>
+  <h1>The Science of <em>Listening</em>: A Complete Guide to Tafsīr</h1>
+  <p class="hero-sub">The Qurʾān has been recited in the same words for fourteen centuries. But what those words <em>mean</em> — and who has the right to say — has been the central intellectual project of Islamic civilization. Tafsīr is the discipline that makes that question answerable, and the ongoing practice of answering it.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Yasir Bilgin · Fikir Defteri Editorial · May 2026</span>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+<header class="article-header">
+  <a class="discipline-tag" href="/islamic-studies/">Islamic Sciences</a>
+  
+    <span class="read-time">75 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+</header>
+
+
+<!-- Article body -->
+<article class="article-body">
+
+  <!-- ── SECTION I ── -->
+  <section id="s1" class="major-section">
+    <span class="section-label">Section I</span>
+    <h2>Defining the <em>Discipline</em></h2>
+
+    <p>Open any edition of the Qurʾān and you will find, printed at the bottom of most pages, a column of notes explaining words, cross-referencing verses, and situating passages in their historical context. Those notes are the visible residue of Tafsīr — the science of Qurʾānic exegesis. But the discipline is immeasurably deeper than any footnote can suggest.</p>
+
+    <p>The word <em>tafsīr</em> derives from the Arabic root <em>f-s-r</em>, meaning to uncover, clarify, or explain. Its Qurʾānic cognate appears in Q. 25:33 — <em>wa-lā yaʾtūnaka bi-mathalin illā jiʾnāka bi-l-ḥaqqi wa-aḥsana tafsīran</em> — "they do not bring you a parable except that We bring you the truth and better <em>tafsīr</em>." The discipline that bears this name is the systematic effort to explain the Qurʾān's meaning: its vocabulary, its grammar, its occasions of revelation, its internal coherence, its legal implications, its theological claims, and its spiritual depths.</p>
+
+    <div class="callout">
+      <span class="callout-label">Classical Definition</span>
+      <p>Al-Zarkashī (d. 794/1392) defined Tafsīr in his <em>al-Burhān fī ʿUlūm al-Qurʾān</em> as "the science by which the Book of God — which was revealed to His Prophet Muḥammad ﷺ — is understood, its meanings explained, and its rulings and wisdoms extracted." Al-Suyūṭī (d. 911/1505) added that its subject matter is "the words of God Most High, in respect of what they indicate regarding His intended meaning, insofar as human capacity allows."</p>
+      <p>That last phrase — <em>insofar as human capacity allows</em> — is not a throwaway qualifier. It encodes a foundational conviction: the Qurʾān's meaning is inexhaustible; the mufassir (exegete) approaches it with tools and humility, never with the confidence of having arrived.</p>
+    </div>
+
+    <p>Why was Tafsīr developed? The immediate answer is linguistic: the Arabic of the Qurʾān, revealed in the seventh century, was already becoming opaque to later generations unfamiliar with its vocabulary, idiomatic expressions, and historical context. A verse instructing believers to "prepare against them whatever force and tethered horses you can" (Q. 8:60) made intuitive sense to a Companion in 7th-century Arabia; it requires explanation for a Muslim in 21st-century Jakarta. The longer answer is theological: the Qurʾān is the primary source of Islamic law, doctrine, ethics, and spirituality. Getting its meaning right is not a scholarly luxury; it is a religious obligation with practical consequences for every dimension of Muslim life.</p>
+
+    <p>Tafsīr's position in the Islamic intellectual tradition is singular. It is both the most fundamental discipline — every other science ultimately refers back to Qurʾānic evidence — and the most dependent one, drawing on Hadith, linguistics, law, theology, history, and mysticism to do its work. The great exegetes were rarely specialists in Tafsīr alone: al-Ṭabarī (d. 310/923) was simultaneously a historian, jurist, and linguist; al-Rāzī (d. 606/1210) was first a theologian; Ibn Kathīr (d. 774/1373) was a specialist in Hadith; al-Qurṭubī (d. 671/1273) was a Mālikī jurist. Tafsīr did not exist as a sealed silo — it was the place where all the other Islamic sciences converged on the text that gave them their authority.</p>
+
+    <div class="pull-quote">
+      <p>"Whoever explains the Qurʾān by his own opinion alone, let him take his seat in the Fire."</p>
+      <cite>— Attributed to the Prophet ﷺ (Tirmidhī, graded ḥasan by al-Albānī; debated, but its import shaped the entire discipline)</cite>
+    </div>
+
+    <p>This hadith — whatever its precise grading — crystallized a principle that shaped the entire history of Tafsīr: the interpreter is not sovereign. The meaning of the Qurʾān is not whatever the reader feels it to mean. It is constrained by the language in which it was revealed, the context in which it was received, the Prophet who first explained it, and the tradition of scholars who elaborated that explanation. Tafsīr, at its best, is the discipline that maintains this accountability — keeping the text's meaning anchored to its sources while remaining responsive to new questions every generation brings.</p>
+  </section>
+
+  <!-- ── SECTION II ── -->
+  <section id="s2" class="major-section">
+    <span class="section-label">Section II</span>
+    <h2>The <em>Big Questions</em> in Tafsīr</h2>
+
+    <p>The discipline of Tafsīr organizes itself around a set of foundational questions that every serious exegete must answer — explicitly or implicitly — before putting pen to paper.</p>
+
+    <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>What Does It Mean to Interpret?</h3>
+
+    <p>Is interpretation an act of discovery — uncovering a meaning already fully present in the text — or is it an act of construction, in which the reader's knowledge, context, and methods inevitably shape what the text "says"? Classical Tafsīr leaned heavily toward the discovery model: the Qurʾān has an intended divine meaning, and the mufassir's task is to recover it as faithfully as possible. Modern hermeneutics — whether Islamic or secular — has complicated this, noting that no reader stands outside their own historical and cultural horizon. The debate between these orientations defines much of contemporary Tafsīr scholarship.</p>
+
+    <h3 id="s2-2" class="sub-heading"><span class="sh-num">2.2</span>The Role of Companion and Successor Reports</h3>
+
+    <p>The Companions of the Prophet witnessed the revelation's context, heard his explanations, and participated in the world the Qurʾān addressed. Their interpretations (<em>tafsīr bi-l-maʾthūr</em>, transmitted exegesis) carry enormous weight. But how much weight, exactly? If a Companion gives an explanation of a verse, is that binding? What if two Companions disagree? And what about the Successors (<em>tābiʿūn</em>) — those who learned from Companions but never met the Prophet? Their opinions are authoritative in classical Tafsīr, but to what degree? These questions generate ongoing methodological debates.</p>
+
+    <h3 id="s2-3" class="sub-heading"><span class="sh-num">2.3</span>Reason and the Limits of Tafsīr</h3>
+
+    <p>Can reason alone, without transmitted evidence, determine what a Qurʾānic verse means? The classical tradition drew a sharp distinction between <em>tafsīr bi-l-maʾthūr</em> (exegesis based on transmitted reports — from the Prophet, Companions, and Successors) and <em>tafsīr bi-l-raʾy</em> (exegesis based on personal opinion or rational analysis). The second category was viewed with suspicion bordering on prohibition by traditionalist scholars. But the distinction was always more contested than it appeared: every act of interpretation, even one citing transmitted reports, involves choices about which reports to trust, which to prefer, and how to apply them. "Pure" transmitted exegesis is an ideal; the practice always involves reason.</p>
+
+    <div class="callout">
+      <span class="callout-label">A Concrete Example</span>
+      <p>Q. 2:282 contains the instruction: "And call two witnesses from among your men; and if two men are not available, then one man and two women." A purely transmitted approach cites the Companion reports explaining this was a concession due to women's lesser familiarity with financial transactions in 7th-century Arabia. A rationalist approach argues that the <em>reason</em> (<em>ʿillah</em>) behind the ruling — ensuring reliable testimony — might yield different applications when women are equally or more qualified in specific contexts. The difference between these approaches is not just hermeneutical; it produces different legal rulings and social implications.</p>
+    </div>
+
+    <h3 id="s2-4" class="sub-heading"><span class="sh-num">2.4</span>Anthropomorphic Verses (<em>Mutashābihāt</em>)</h3>
+
+    <p>The Qurʾān describes God as having a "face" (Q. 55:27), "hands" (Q. 38:75), "eyes" (Q. 54:14), and "settling" over the Throne (Q. 20:5). Taken literally, these expressions could imply that God has a body with physical features — a position rejected by all classical schools of theology. Taken metaphorically, they risk dissolving into vague claims that drain revelation of concrete content. This tension — between anthropomorphism (<em>tashbīh</em>) and negation (<em>taʿṭīl</em>) — is one of the most consequential interpretive problems in Tafsīr, and it is inseparable from the debates of Kalām. Every exegete's theology shows in how they handle these verses.</p>
+
+    <h3 id="s2-5" class="sub-heading"><span class="sh-num">2.5</span>The <em>Muḥkam</em> and the <em>Mutashābih</em></h3>
+
+    <p>Q. 3:7 divides the Qurʾān into <em>muḥkam</em> verses — "the foundation of the Book," clear and unambiguous — and <em>mutashābih</em> verses — "ambiguous," whose full meaning "none knows except God." But the verse itself is ambiguous: does "none knows except God" end the sentence there, or does it continue "and those firmly grounded in knowledge"? The classical manuscripts had no punctuation to settle the question. The interpretation adopted determines whether scholars may claim knowledge of ambiguous verses at all — with enormous consequences for theology, law, and spirituality.</p>
+
+    <h3 id="s2-6" class="sub-heading"><span class="sh-num">2.6</span>Can the Qurʾān Be Fully Understood?</h3>
+
+    <p>Several classical scholars, including Ibn ʿAbbās (d. 68/687), the foremost Companion exegete, expressed humility about certain verses — affirming their meaning as God knows it, while acknowledging human limits. The concept of <em>tafwīḍ</em> (entrusting the meaning to God) was applied both to specific difficult passages and, by some, as a general posture. Against this, the discipline as a whole is predicated on the conviction that the Qurʾān was sent as guidance — and guidance that cannot be understood is no guidance at all. The tension between these poles is never fully resolved; it is a productive tension that has driven fourteen centuries of interpretive effort.</p>
+
+    <h3 id="s2-7" class="sub-heading"><span class="sh-num">2.7</span>Modern Questions</h3>
+
+    <p>Contemporary Tafsīr faces questions the classical scholars could not have anticipated in their specific forms. How should exegetes respond to scientific claims that appear to conflict with Qurʾānic cosmology? Does the Qurʾān's description of human origins speak to evolutionary biology, or is it a theological narrative deliberately indifferent to natural history? How should verses on slavery, warfare, gender relations, and criminal penalties be read in a world that has arrived at different moral conclusions? Is the "meaning" of a verse fixed by its 7th-century context, or is it dynamically extended as the community of readers changes? These questions are not yet settled. They define the live frontier of the discipline.</p>
+  </section>
+
+  <!-- ── SECTION III ── -->
+  <section id="s3" class="major-section">
+    <span class="section-label">Section III</span>
+    <h2>Timeline of <em>Development</em></h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Prophetic Period / 1st Century AH (7th CE)</div>
+        <div class="timeline-title">The First Mufassir: The Prophet ﷺ Himself</div>
+        <div class="timeline-body">The Prophet Muḥammad ﷺ was the Qurʾān's first and authoritative interpreter. He explained obscure words (explaining <em>quwwah</em> in Q. 8:60 as archery), elaborated on general commands (specifying the five daily prayers from Q. 17:78), and applied rulings to concrete situations. His explanations were transmitted through Hadith and constitute the first and most authoritative layer of Tafsīr. After his death, the Companions — especially ʿAlī ibn Abī Ṭālib, ʿĀʾishah, ʿUmar ibn al-Khaṭṭāb, and above all ʿAbdullāh ibn ʿAbbās (d. 68/687), called <em>tarjumān al-Qurʾān</em> (the interpreter of the Qurʾān) — continued the explanatory work, often recalling the occasions of revelation (<em>asbāb al-nuzūl</em>) that gave verses their context.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2nd–3rd Century AH / 8th–9th CE</div>
+        <div class="timeline-title">Emergence of Systematic Exegesis</div>
+        <div class="timeline-body">The Successors (<em>tābiʿūn</em>) formed distinct regional schools of Tafsīr centred in Mecca (students of Ibn ʿAbbās, including Mujāhid ibn Jabr, d. 104/722, and ʿIkrimah, d. 105/723), Medina (students of Ubayy ibn Kaʿb), and Kūfah (students of ʿAbdullāh ibn Masʿūd). These schools were distinguished by their relative emphasis on transmitted reports vs. linguistic and contextual reasoning. Gradually, written compilations began to appear — initially as collections of Companion and Successor opinions arranged by verse, without the continuous prose commentary that would characterize mature Tafsīr.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Late 3rd–4th Century AH / 9th–10th CE</div>
+        <div class="timeline-title">The Classical Synthesis: Al-Ṭabarī</div>
+        <div class="timeline-body">Muḥammad ibn Jarīr al-Ṭabarī (d. 310/923) produced the first comprehensive, canonical Tafsīr: <em>Jāmiʿ al-Bayān ʿan Taʾwīl Āy al-Qurʾān</em>. Running to thirty volumes in its printed editions, it assembled the full corpus of transmitted reports on each verse, evaluated their chains with Hadith-critical rigour, and adjudicated between conflicting interpretations with philological and legal arguments. Al-Ṭabarī set the template for the discipline: the mufassir as scholar-synthesizer, not original thinker, drawing on transmitted authorities while exercising methodical judgment between them. His work has never been superseded as a reference for transmitted exegesis.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">5th–6th Century AH / 11th–12th CE</div>
+        <div class="timeline-title">Specialization: Legal, Theological, and Sufi Tafsīr</div>
+        <div class="timeline-body">As Islamic jurisprudence, theology, and mysticism matured, each produced its distinctive approach to the Qurʾān. Al-Qurṭubī (d. 671/1273, but working within a tradition shaped by this era) would produce the standard legal Tafsīr, <em>al-Jāmiʿ li-Aḥkām al-Qurʾān</em>. Al-Zamakhsharī (d. 538/1144), a Muʿtazilī linguist, produced <em>al-Kashshāf</em> — the finest work of grammatical and rhetorical analysis, but saturated with Muʿtazilī theology that later exegetes had to carefully excise or refute. Sufi commentaries, beginning with Sahl al-Tustarī (d. 283/896) and culminating in Ibn ʿArabī's vast theosophical readings, explored the Qurʾān's inner (<em>bāṭin</em>) meanings alongside its outer (<em>ẓāhir</em>) ones.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">7th–8th Century AH / 13th–14th CE</div>
+        <div class="timeline-title">The Classical Peak: Rāzī, Ibn Kathīr, al-Qurṭubī</div>
+        <div class="timeline-body">Fakhr al-Dīn al-Rāzī's <em>Mafātīḥ al-Ghayb</em> (d. 606/1210) applied full Ashʿarī theological apparatus to Qurʾānic interpretation — encyclopedic, philosophically sophisticated, and theologically committed. Ibn Kathīr (d. 774/1373) deliberately reacted against theological speculation, producing a <em>tafsīr bi-l-maʾthūr</em> that prioritised Hadith evidence above all else. Al-Qurṭubī (d. 671/1273) compiled the most comprehensive legal Tafsīr from a Mālikī perspective. These three works — rationalist-theological, Hadith-based, and legal — defined the classical peak and remain standard references in Islamic education today.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">11th–13th Century AH / 17th–19th CE</div>
+        <div class="timeline-title">Consolidation and the Madrasa Tradition</div>
+        <div class="timeline-body">Tafsīr became institutionalized in madrasas across the Ottoman, Mughal, and Safavid worlds, with abridged and accessible works like al-Jalālayn (the collaborative Tafsīr of al-Maḥallī and al-Suyūṭī, d. 911/1505) becoming standard teaching texts. Al-Suyūṭī also produced <em>al-Itqān fī ʿUlūm al-Qurʾān</em> — the definitive encyclopaedia of Qurʾānic sciences (ʿulūm al-Qurʾān) — which systematized everything the tradition had developed about the Qurʾān's structure, transmission, recitation, and interpretation.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">19th–21st Century CE</div>
+        <div class="timeline-title">Reform, Critique, and New Directions</div>
+        <div class="timeline-body">Colonial encounter and the prestige of Western rational inquiry forced a reckoning with classical Tafsīr. Muḥammad ʿAbduh (d. 1905) and Rashīd Riḍā (d. 1935) produced <em>Tafsīr al-Manār</em>, arguing that classical exegesis had become scholastically inert and should be reoriented toward the Qurʾān's social and ethical guidance for modern life. Sayyid Quṭb's <em>Fī Ẓilāl al-Qurʾān</em> (1954–1965) offered a literary-thematic approach that shaped an entire generation of Muslim political consciousness. Meanwhile, Western academic Qurʾānic studies — from Nöldeke to Neuwirth — developed independent historical-critical methods that Muslim scholars have increasingly engaged, whether to critique or incorporate.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION IV ── -->
+  <section id="s4" class="major-section">
+    <span class="section-label">Section IV</span>
+    <h2>Theoretical <em>Frameworks</em> &amp; Schools</h2>
+
+    <p>Tafsīr is not a single method but a family of approaches, each privileging different kinds of evidence and different analytical tools. Understanding the schools means understanding what each one takes to be the most reliable access point to the Qurʾān's meaning.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">4.1</span>Tafsīr bi-l-Maʾthūr (Transmitted Exegesis)</h3>
+
+    <p>The "received" method: interpretation grounded in transmitted reports from the Prophet, Companions, and Successors. The chain of authority is everything — an explanation carries weight not because it is clever or logically compelling, but because it comes from someone who was close to the revelation's origin. This method guards against arbitrary innovation but can struggle when transmitted reports are silent, contradictory, or plainly inapplicable to new questions. Its greatest monument is al-Ṭabarī's <em>Jāmiʿ al-Bayān</em>; its modern heir is Ibn Kathīr's <em>Tafsīr al-Qurʾān al-ʿAẓīm</em>.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">4.2</span>Tafsīr bi-l-Raʾy (Rational Exegesis)</h3>
+
+    <p>The "opinion-based" method: using reason, linguistic analysis, and the interpreter's own judgment to extract meaning. The classical tradition regarded this with deep suspicion — the hadith warning against explaining the Qurʾān "by opinion" loomed large. But the tradition also distinguished between blameworthy <em>raʾy</em> (arbitrary opinion without qualification) and praiseworthy <em>raʾy</em> (qualified reasoning by a scholar who knows the transmitted material). Al-Zamakhsharī's linguistic precision, al-Rāzī's philosophical argumentation, and ʿAbduh's social-ethical reasoning are all, in different ways, expressions of the rationalist tradition within classical constraints.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">4.3</span>Tafsīr Fiqhī (Legal Exegesis)</h3>
+
+    <p>The legal method focuses on the Qurʾān's ~500 verses of legal import (<em>āyāt al-aḥkām</em>), extracting rulings for the various schools of jurisprudence. Al-Jaṣṣāṣ (d. 370/981) produced the standard Ḥanafī legal Tafsīr (<em>Aḥkām al-Qurʾān</em>); Ibn al-ʿArabī al-Mālikī (d. 543/1148) and al-Qurṭubī produced the Mālikī equivalents. Legal exegesis tends toward precise delimitation — exactly which acts a verse commands, prohibits, or permits — and is deeply shaped by the interpreter's jurisprudential commitments. The same verse on divorce or inheritance can yield different rulings in the hands of a Ḥanafī and a Shāfiʿī mufassir.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">4.4</span>Tafsīr Kalāmī (Theological Exegesis)</h3>
+
+    <p>Theological exegesis reads the Qurʾān through the lens of systematic doctrine — most often Ashʿarī or Muʿtazilī theology. This is most visible in the treatment of verses on divine attributes, divine justice, free will, and the nature of the Qurʾān itself. Al-Rāzī's <em>Mafātīḥ al-Ghayb</em> is the supreme example: a verse about God "settling over the Throne" generates thirty pages of theological argumentation in which the exegetical question is inseparable from the Kalām question. Critics of this approach — especially Atharī scholars like Ibn Taymiyyah — argued that theological presuppositions distort interpretation, forcing the text to yield conclusions predetermined by the school.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">4.5</span>Tafsīr Ṣūfī (Mystical Exegesis)</h3>
+
+    <p>Sufi exegesis distinguishes between the Qurʾān's <em>ẓāhir</em> (outer, literal meaning) and its <em>bāṭin</em> (inner, spiritual meaning). The outer meaning is available to all readers; the inner meaning is disclosed to those who have purified their hearts through spiritual discipline. Sahl al-Tustarī's commentary, Ibn ʿArabī's <em>Tafsīr al-Qurʾān al-Karīm</em>, and later works in the Akbarī tradition offer readings of Qurʾānic narratives as cosmological and spiritual allegories. The mainstream tradition accepted limited <em>bāṭin</em> readings but drew a firm line: inner meanings cannot contradict or override the outer; no esoteric interpretation may abrogate a legal ruling.</p>
+
+    <div class="school-grid">
+      <div class="school-card">
+        <h5>Tafsīr bi-l-Maʾthūr</h5>
+        <p>Transmitted reports from Prophet, Companions, Successors. Standard: al-Ṭabarī, Ibn Kathīr. Authority = proximity to revelation.</p>
+      </div>
+      <div class="school-card b">
+        <h5>Tafsīr bi-l-Raʾy</h5>
+        <p>Qualified rational analysis, linguistic precision. Standard: al-Zamakhsharī, al-Rāzī. Authority = scholarly competence and method.</p>
+      </div>
+      <div class="school-card c">
+        <h5>Tafsīr Fiqhī</h5>
+        <p>Legal verses prioritized; rulings extracted. Standard: al-Qurṭubī, al-Jaṣṣāṣ. Authority = school of law.</p>
+      </div>
+      <div class="school-card d">
+        <h5>Tafsīr Kalāmī</h5>
+        <p>Systematic theology applied to interpretation. Standard: al-Rāzī, al-Zamakhsharī. Authority = theological school.</p>
+      </div>
+      <div class="school-card e">
+        <h5>Tafsīr Ṣūfī</h5>
+        <p>Inner (<em>bāṭin</em>) dimensions alongside outer (<em>ẓāhir</em>). Standard: al-Tustarī, Ibn ʿArabī. Authority = spiritual insight constrained by outer meaning.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><span class="sh-num">4.6</span>Modern Approaches</h3>
+
+    <p><strong>Thematic Tafsīr (<em>al-Tafsīr al-Mawḍūʿī</em>)</strong> — rather than commenting verse-by-verse, this approach gathers all Qurʾānic verses on a single theme (justice, family, the prophets) and constructs a synthetic Qurʾānic teaching on that topic. Bint al-Shāṭiʾ (ʿĀʾishah ʿAbd al-Raḥmān, d. 1998) and Muḥammad al-Ghazālī (d. 1996) are associated with this approach, which has become a dominant form of contemporary Qurʾānic scholarship.</p>
+
+    <p><strong>Scientific Tafsīr (<em>al-Tafsīr al-ʿIlmī</em>)</strong> — the attempt to read modern scientific discoveries into Qurʾānic verses: the Big Bang in Q. 21:30, embryological development in Q. 23:13-14, relativity in various passages. This approach was popularized by writers like Maurice Bucaille and Zakir Naik but has been vigorously criticized by classical-leaning scholars who argue it forces the text to mean what its original audience could not have understood, and that scientific theories change while the Qurʾān's words remain fixed.</p>
+  </section>
+
+  <!-- ── SECTION V ── -->
+  <section id="s5" class="major-section">
+    <span class="section-label">Section V</span>
+    <h2>Methodology <em>&amp; Tools</em></h2>
+
+    <p>The mufassir's toolkit is the most interdisciplinary in classical Islamic scholarship. It spans linguistics, history, law, theology, and hermeneutics — and the competent exegete must command all of them.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.1</span>The Arabic Language Sciences</h3>
+
+    <p>The Qurʾān was revealed in "a clear Arabic tongue" (Q. 26:195), and every interpretive judgment ultimately rests on a reading of the Arabic. The linguistic sciences required of the mufassir are extensive: lexicography (<em>lugha</em>), grammar (<em>naḥw</em>), morphology (<em>ṣarf</em>), rhetoric (<em>balāghah</em>) — which encompasses the study of eloquence (<em>faṣāḥah</em>), figurative language (<em>bayān</em>), and stylistic patterns (<em>badīʿ</em>). Classical exegetes regularly settled interpretive disputes by appeal to pre-Islamic Arabic poetry, which served as evidence for the linguistic usage of the Prophet's time. Ibn ʿAbbās himself reportedly said: "If you are confused about anything in the Qurʾān, seek it in the poetry of the Arabs, for poetry is the register of the Arabs."</p>
+
+    <div class="callout">
+      <span class="callout-label">Example: The Word <em>Qurūʾ</em></span>
+      <p>Q. 2:228 instructs divorced women to wait three <em>qurūʾ</em> before remarrying. The word <em>qurūʾ</em> is a classical Arabic homonym: it can mean either menstrual periods or the intervals between them (the pure days). Ḥanafī jurists read it as menstrual periods; Shāfiʿī and Mālikī jurists read it as purity intervals — leading to different calculations of the waiting period. This is not a dispute about theology or transmitted reports; it is a dispute about classical Arabic lexicography, and it has direct legal consequences for millions of women.</p>
+    </div>
+
+    <h3 class="sub-heading"><span class="sh-num">5.2</span>Asbāb al-Nuzūl (Occasions of Revelation)</h3>
+
+    <p>Many Qurʾānic verses were revealed in response to specific events: a question put to the Prophet, a dispute in the community, a crisis in a battle, a personal situation. Knowing the occasion (<em>sabab al-nuzūl</em>) of a verse often determines its scope: does it address only the specific situation that triggered it, or does it establish a general ruling applicable beyond that context? The classical principle — "the lesson is in the generality of the wording, not the specificity of the occasion" (<em>al-ʿibrah bi-ʿumūm al-lafẓ lā bi-khuṣūṣ al-sabab</em>) — was widely accepted but endlessly contested in application.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.3</span>Naskh (Abrogation)</h3>
+
+    <p>Some Qurʾānic verses were later superseded by other verses or by Prophetic practice. The theory of abrogation (<em>naskh</em>) holds that earlier rulings may be replaced by later ones, with the divine wisdom being a gradual accommodation to the community's capacity for change. The early tradition identified dozens of abrogated verses; later scholars dramatically contracted this number, and some modern scholars argue abrogation was over-identified by classical jurists seeking to resolve textual tensions. The verse permitting wine (Q. 16:67) was understood to be abrogated by the later prohibition (Q. 5:90); the verse prescribing perpetual fasting as expiation was understood to be abrogated by options of feeding the poor or freeing slaves.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.4</span>Qurʾān Explaining Qurʾān (<em>Tafsīr al-Qurʾān bi-l-Qurʾān</em>)</h3>
+
+    <p>The highest-ranked interpretive method in classical Tafsīr: using one Qurʾānic verse to illuminate another. Q. 1:7 refers to those who have received God's grace — but who are they? Q. 4:69 identifies them: "the prophets, the truthful, the martyrs, and the righteous." Q. 2:238 commands "guard your prayers and the middle prayer" — but which is the middle prayer? Q. 2:238 does not say; classical exegetes debated it, and the majority settled on the afternoon prayer (ʿaṣr) based on Hadith. This method presupposes the Qurʾān's coherence and internal consistency — itself a theological commitment rather than a neutral hermeneutical assumption.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">5.5</span>The Sciences of the Qurʾān (<em>ʿUlūm al-Qurʾān</em>)</h3>
+
+    <p>Supporting the work of interpretation is a broader body of knowledge about the Qurʾān itself: the science of the Meccan and Medinan revelations (their distinctive themes and concerns), the seven canonical readings (<em>al-qirāʾāt al-sabʿ</em>), the collection and codification of the muṣḥaf under ʿUthmān, the miraculous inimitability of the Qurʾān (<em>iʿjāz al-Qurʾān</em>), the arrangement and naming of the surahs, and the letters of unknown meaning at the beginning of 29 surahs (<em>al-ḥurūf al-muqaṭṭaʿah</em>, e.g., Alif Lam Mim). Al-Suyūṭī's <em>al-Itqān</em> remains the comprehensive reference for this body of knowledge.</p>
+  </section>
+
+  <!-- ── SECTION VI ── -->
+  <section id="s6" class="major-section">
+    <span class="section-label">Section VI</span>
+    <h2>Key <em>Figures</em> &amp; Thinkers</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Scholar</th>
+            <th>Dates</th>
+            <th>Approach</th>
+            <th>Contribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ʿAbdullāh ibn ʿAbbās</td>
+            <td>d. 68/687</td>
+            <td>Transmitted / Prophetic</td>
+            <td>The Prophet's cousin; first systematic Companion exegete. Called <em>tarjumān al-Qurʾān</em> (interpreter of the Qurʾān). His opinions form the bedrock of transmitted exegesis.</td>
+          </tr>
+          <tr>
+            <td>Mujāhid ibn Jabr</td>
+            <td>d. 104/722</td>
+            <td>Transmitted / Linguistic</td>
+            <td>Student of Ibn ʿAbbās; reportedly read the Qurʾān to him 30 times, pausing at each verse to ask its meaning. One of the most cited Successor exegetes in later works.</td>
+          </tr>
+          <tr>
+            <td>Muḥammad ibn Jarīr al-Ṭabarī</td>
+            <td>d. 310/923</td>
+            <td>Transmitted / Comprehensive</td>
+            <td>Author of <em>Jāmiʿ al-Bayān</em> — the first and still foundational comprehensive Tafsīr. Assembled, evaluated, and adjudicated between all available transmitted reports.</td>
+          </tr>
+          <tr>
+            <td>Abū al-Qāsim al-Zamakhsharī</td>
+            <td>d. 538/1144</td>
+            <td>Linguistic / Muʿtazilī</td>
+            <td>Author of <em>al-Kashshāf</em> — unsurpassed for rhetorical and grammatical analysis; his Muʿtazilī theology was later "corrected" by commentators who preserved his linguistics.</td>
+          </tr>
+          <tr>
+            <td>Fakhr al-Dīn al-Rāzī</td>
+            <td>d. 606/1210</td>
+            <td>Theological / Ashʿarī</td>
+            <td>Author of <em>Mafātīḥ al-Ghayb</em> — the supreme work of theological Tafsīr, encyclopedic in scope and Ashʿarī in doctrine. Critically engaged with Muʿtazilī and philosophical positions.</td>
+          </tr>
+          <tr>
+            <td>Muḥammad ibn Aḥmad al-Qurṭubī</td>
+            <td>d. 671/1273</td>
+            <td>Legal / Mālikī</td>
+            <td>Author of <em>al-Jāmiʿ li-Aḥkām al-Qurʾān</em> — the most comprehensive legal Tafsīr, fair in presenting all jurisprudential positions on each verse's legal implications.</td>
+          </tr>
+          <tr>
+            <td>Ismāʿīl ibn ʿUmar Ibn Kathīr</td>
+            <td>d. 774/1373</td>
+            <td>Transmitted / Hadith-based</td>
+            <td>Author of <em>Tafsīr al-Qurʾān al-ʿAẓīm</em> — the most widely used Hadith-based Tafsīr today; deliberately minimized theological speculation in favour of authenticated prophetic and Companion reports.</td>
+          </tr>
+          <tr>
+            <td>Jalāl al-Dīn al-Suyūṭī</td>
+            <td>d. 911/1505</td>
+            <td>Encyclopaedic</td>
+            <td>Author of <em>al-Durr al-Manthūr</em> (transmitted Tafsīr) and <em>al-Itqān fī ʿUlūm al-Qurʾān</em> — the definitive encyclopaedia of Qurʾānic sciences. Co-authored the pedagogically essential <em>Tafsīr al-Jalālayn</em>.</td>
+          </tr>
+          <tr>
+            <td>Muḥammad ʿAbduh</td>
+            <td>d. 1905</td>
+            <td>Reform / Rationalist</td>
+            <td>Began <em>Tafsīr al-Manār</em> (completed by Riḍā), arguing the Qurʾān should address modern social and ethical problems directly; resisted superstitious elements in classical Tafsīr.</td>
+          </tr>
+          <tr>
+            <td>Sayyid Quṭb</td>
+            <td>d. 1966</td>
+            <td>Literary / Political</td>
+            <td>Author of <em>Fī Ẓilāl al-Qurʾān</em> ("In the Shade of the Qurʾān") — literary, emotionally powerful, politically charged; profoundly influential in modern Islamist movements and also widely read for its literary quality.</td>
+          </tr>
+          <tr>
+            <td>Bint al-Shāṭiʾ (ʿĀʾishah ʿAbd al-Raḥmān)</td>
+            <td>d. 1998</td>
+            <td>Literary / Thematic</td>
+            <td>Pioneered a literary-thematic approach to the Qurʾān that took its aesthetic coherence seriously; among the first women to achieve recognition as a major mufassirah in the modern period.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── SECTION VII ── -->
+  <section id="s7" class="major-section">
+    <span class="section-label">Section VII</span>
+    <h2>Canonical <em>Texts</em></h2>
+
+    <div class="def-list">
+      <div class="def-item">
+        <div class="def-term">Jāmiʿ al-Bayān ʿan Taʾwīl Āy al-Qurʾān <em>al-Ṭabarī (d. 310/923)</em></div>
+        <div class="def-body">The foundational comprehensive Tafsīr of the classical tradition. Thirty volumes assembling and evaluating every available transmitted report on every verse, with al-Ṭabarī's own philological and legal judgments. No subsequent Tafsīr dispenses with it.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">al-Kashshāf <em>al-Zamakhsharī (d. 538/1144)</em></div>
+        <div class="def-body">The supreme work of grammatical and rhetorical Tafsīr; indispensable for understanding the Qurʾān's literary structure and argumentative strategies. Its Muʿtazilī theology was subjected to sustained critique in the commentaries of al-Taftāzānī and others, but its linguistic analysis remains unmatched.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Mafātīḥ al-Ghayb <em>Fakhr al-Dīn al-Rāzī (d. 606/1210)</em></div>
+        <div class="def-body">"Keys to the Unseen." The premier work of theological Tafsīr; so encyclopedic that critics joked it contained "everything except Tafsīr." Its theological depth and philosophical sophistication made it the standard reference for Ashʿarī exegesis.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">al-Jāmiʿ li-Aḥkām al-Qurʾān <em>al-Qurṭubī (d. 671/1273)</em></div>
+        <div class="def-body">Twenty volumes of legal exegesis; remarkably fair in presenting opinions across schools. The most comprehensive work of <em>tafsīr fiqhī</em> and still the standard reference for Qurʾānic legal verses.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Tafsīr al-Qurʾān al-ʿAẓīm <em>Ibn Kathīr (d. 774/1373)</em></div>
+        <div class="def-body">The most widely read Tafsīr in the contemporary Muslim world. Prioritizes Hadith over theological speculation; explains the Qurʾān primarily through the Qurʾān itself, then Prophetic Sunnah, then Companion and Successor reports.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">al-Itqān fī ʿUlūm al-Qurʾān <em>al-Suyūṭī (d. 911/1505)</em></div>
+        <div class="def-body">Not a Tafsīr but the encyclopaedia of Qurʾānic sciences — covering eighty topics from the Meccan/Medinan distinction to abrogation, the mysterious letters, unusual vocabulary, recitation variants, and the principles of interpretation. The indispensable reference for the theoretical framework of Tafsīr.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Tafsīr al-Jalālayn <em>al-Maḥallī (d. 864/1459) and al-Suyūṭī (d. 911/1505)</em></div>
+        <div class="def-body">The most used single-volume Tafsīr in madrasas globally. Concise to the point of terseness — a single sentence often stands for a verse's explanation — but a model of precision and a standard first commentary for students.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Fī Ẓilāl al-Qurʾān <em>Sayyid Quṭb (d. 1966)</em></div>
+        <div class="def-body">"In the Shade of the Qurʾān." Written partly in prison; literary, passionate, politically engaged. The most widely read modern Tafsīr in Arabic and a major influence on Islamic thought — and Islamic political movements — in the 20th and 21st centuries.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">al-Mīzān fī Tafsīr al-Qurʾān <em>Muḥammad Ḥusayn al-Ṭabāṭabāʾī (d. 1981)</em></div>
+        <div class="def-body">The most comprehensive Shīʿī Tafsīr of the modern period; twenty volumes combining philosophical, theological, and social analysis from a Twelver Shīʿī perspective. Demonstrates that Tafsīr traditions developed in parallel across Islamic schools.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION VIII ── -->
+  <section id="s8" class="major-section">
+    <span class="section-label">Section VIII</span>
+    <h2>Glossary of <em>Concepts</em></h2>
+
+    <h4>The Qurʾān and Its Sciences</h4>
+    <div class="def-list">
+      <div class="def-item">
+        <div class="def-term">Tafsīr <em>(<span lang="ar" dir="rtl">تفسير</span>)</em></div>
+        <div class="def-body">Exegesis; the discipline of explaining the Qurʾān's meaning through linguistic, historical, theological, and juridical analysis. Etymologically: to uncover or clarify.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Taʾwīl <em>(<span lang="ar" dir="rtl">تأويل</span>)</em></div>
+        <div class="def-body">Figurative or deeper interpretation; etymologically, "returning something to its origin." Sometimes used as a synonym for Tafsīr, sometimes as its subtler counterpart: Tafsīr explains the apparent meaning; taʾwīl recovers the intended meaning when they diverge.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">ʿUlūm al-Qurʾān <em>(<span lang="ar" dir="rtl">علوم القرآن</span>)</em></div>
+        <div class="def-body">The Qurʾānic sciences — the body of knowledge about the Qurʾān's revelation, collection, transmission, recitation variants, structure, and interpretive principles. The supporting scaffolding without which Tafsīr cannot be done rigorously.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Asbāb al-Nuzūl <em>(<span lang="ar" dir="rtl">أسباب النزول</span>)</em></div>
+        <div class="def-body">Occasions of revelation; the specific historical events that triggered the revelation of particular verses. Essential for contextual interpretation and for determining a verse's scope.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Makkī / Madanī <em>(<span lang="ar" dir="rtl">مكي</span> / <span lang="ar" dir="rtl">مدني</span>)</em></div>
+        <div class="def-body">Meccan / Medinan. Verses revealed before the migration to Medina (622 CE) vs. after. Meccan verses tend toward faith, cosmology, and eschatology; Medinan verses toward law, community organization, and ethics. This distinction shapes how verses are interpreted and applied.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Muḥkam / Mutashābih <em>(<span lang="ar" dir="rtl">محكم</span> / <span lang="ar" dir="rtl">متشابه</span>)</em></div>
+        <div class="def-body">Clear / ambiguous. The Qurʾān's own classification (Q. 3:7) of its verses: muḥkam verses have clear, unambiguous meaning and serve as the interpretive foundation; mutashābih verses are ambiguous, requiring either suspension of judgment or carefully constrained interpretation.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Naskh <em>(<span lang="ar" dir="rtl">نسخ</span>)</em></div>
+        <div class="def-body">Abrogation; the superseding of an earlier ruling by a later revelation. One of the most debated concepts in both Tafsīr and jurisprudence; its extent was dramatically reduced by later scholars compared to early estimates.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Iʿjāz <em>(<span lang="ar" dir="rtl">إعجاز</span>)</em></div>
+        <div class="def-body">Inimitability; the doctrine that the Qurʾān's literary, rhetorical, and spiritual qualities are beyond human replication — the foundational argument for its divine origin. First systematically theorized by al-Bāqillānī (d. 403/1013) in <em>Iʿjāz al-Qurʾān</em>.</div>
+      </div>
+    </div>
+
+    <h4>Methods and Approaches</h4>
+    <div class="def-list">
+      <div class="def-item">
+        <div class="def-term">Tafsīr bi-l-Maʾthūr <em>(<span lang="ar" dir="rtl">بالمأثور</span>)</em></div>
+        <div class="def-body">Transmitted exegesis; interpretation based on reports from the Prophet, Companions, and Successors. The highest-ranked method in classical Tafsīr methodology.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Tafsīr bi-l-Raʾy <em>(<span lang="ar" dir="rtl">بالرأي</span>)</em></div>
+        <div class="def-body">Opinion-based exegesis; interpretation using reason, linguistics, and scholarly judgment. Blameworthy when done without qualification; praiseworthy when grounded in the transmitted corpus.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Ẓāhir / Bāṭin <em>(<span lang="ar" dir="rtl">ظاهر</span> / <span lang="ar" dir="rtl">باطن</span>)</em></div>
+        <div class="def-body">Outer / inner meaning. The Sufi distinction between the Qurʾān's literal, apparent meaning (accessible to all) and its deeper, spiritual meaning (disclosed through purification). Mainstream tradition: bāṭin is valid but cannot contradict ẓāhir.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Tafsīr Mawḍūʿī <em>(<span lang="ar" dir="rtl">موضوعي</span>)</em></div>
+        <div class="def-body">Thematic exegesis; gathering all Qurʾānic verses on a single topic to construct a synthetic teaching. The dominant modern form of Tafsīr, particularly suited to addressing contemporary questions.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Mufassir <em>(<span lang="ar" dir="rtl">مفسر</span>)</em></div>
+        <div class="def-body">The exegete; the scholar who practices Tafsīr. Classical scholarship required the mufassir to have mastered Arabic linguistics, Hadith sciences, jurisprudence, theology, and the Qurʾānic sciences before interpreting.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION IX ── -->
+  <section id="s9" class="major-section">
+    <span class="section-label">Section IX</span>
+    <h2>Internal <em>Debates</em></h2>
+
+    <p>The internal disputes of Tafsīr are not academic puzzles; they determine how Muslims understand their scripture, derive their law, and form their theology. Each debate has real-world consequences.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">9.1</span>Transmitted vs. Rational Exegesis</h3>
+
+    <div class="debate-row">
+      <div class="debate-col col-a">
+        <h6>Traditionalist Position</h6>
+        <p>Only transmitted reports from the Prophet and Companions can authoritatively determine a verse's meaning. A later scholar's rational analysis, however elegant, cannot override evidence from those closest to the revelation. Relying on one's own opinion is precisely what the condemning hadith targets.</p>
+      </div>
+      <div class="debate-col col-b">
+        <h6>Rationalist Response</h6>
+        <p>The "pure transmitted" ideal is impossible: selecting which reports to cite, resolving their conflicts, and applying them to new contexts all require rational judgment. The question is not whether reason plays a role but whether it does so with the appropriate controls — mastery of the transmitted corpus, linguistic competence, and doctrinal discipline.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><span class="sh-num">9.2</span>Scope of Abrogation</h3>
+
+    <p>Early scholars identified up to 500 abrogated verses; Ibn al-ʿArabī al-Mālikī (d. 543/1148) reduced this to 20; Jalāl al-Dīn al-Suyūṭī further reduced it; and some modern scholars argue there are effectively zero Qurʾānic verses properly abrogated by other Qurʾānic verses, only by Prophetic clarification. The stakes are significant: the more abrogation is accepted, the more the early Meccan verses of mercy, tolerance, and coexistence are displaced by later Medinan verses of legal specificity. Critics of abrogation argue that both Meccan and Medinan revelations remain simultaneously operative, with the latter specifying the former's application rather than cancelling it.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">9.3</span>Scientific Tafsīr: Discovery or Imposition?</h3>
+
+    <div class="debate-row">
+      <div class="debate-col col-a">
+        <h6>Proponents</h6>
+        <p>The Qurʾān contains allusions to natural phenomena that could not have been known in the 7th century except through divine revelation. Q. 21:30 ("We made from water every living thing") anticipates the biochemical role of water. Q. 23:13-14 describes embryological stages that correspond to modern understanding. These correspondences confirm the Qurʾān's divine origin.</p>
+      </div>
+      <div class="debate-col col-b">
+        <h6>Critics</h6>
+        <p>Scientific theories change; the Qurʾān is eternal. Tying its meaning to a current scientific model risks having to retract when the model is revised. More fundamentally, the original audience could not have understood these verses scientifically — and the principle that the Qurʾān was addressed to its first recipients means interpretations they could not have grasped cannot be the intended meaning. At worst, this is eisegesis: reading modern science <em>into</em> the text rather than drawing meaning <em>out</em> of it.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><span class="sh-num">9.4</span>Can Women Be Mufassirāt?</h3>
+
+    <p>The classical Tafsīr tradition was almost exclusively male — not because women were excluded in principle, but because the institutional structures of madrasa education and scholarly authorization (<em>ijāzah</em>) limited women's access to the full chain of transmission. Yet women were major participants in Hadith scholarship (ʿĀʾishah was among the most authoritative of all Hadith transmitters, and her reported explanations of Qurʾānic verses are extensively cited). The 20th century saw major women scholars enter Tafsīr formally — Bint al-Shāṭiʾ in Arabic, and increasingly many in other languages. The question of women's authority in Tafsīr is now actively contested and cannot be resolved by appeal to classical precedent alone, since that precedent is mixed.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">9.5</span>Esotericism: Legitimate Depth or Dangerous Deviation?</h3>
+
+    <p>The Sufi tradition claimed access to inner meanings of the Qurʾān inaccessible to conventional scholars. This was resisted, sometimes violently, by traditionalist scholars who saw it as a licence to project arbitrary meanings onto scripture. The mainstream position — inner meanings are valid only if they do not contradict outer meanings — was coherent in principle but difficult to enforce in practice, as the esoteric tradition repeatedly produced readings that the mainstream could not accept.</p>
+  </section>
+
+  <!-- ── SECTION X ── -->
+  <section id="s10" class="major-section">
+    <span class="section-label">Section X</span>
+    <h2>Interdisciplinary <em>Links</em></h2>
+
+    <h4>Tafsīr ↔ Hadith</h4>
+    <p>Tafsīr depends on Hadith at every level: the Prophet's explanations of verses, the Companion reports on occasions of revelation, the Prophetic Sunnah that specifies the Qurʾān's general commands (how many prayers, how much zakāh, how to perform the Hajj). Conversely, Hadith scholarship developed its own criteria for evaluating the transmitted exegetical reports, applying <em>jarḥ wa taʿdīl</em> (narrator criticism) to Companion and Successor opinions just as to legal reports. Ibn Kathīr's Tafsīr is the pre-eminent example of this integration — using Hadith methodology to evaluate the transmitted corpus and selecting interpretations accordingly.</p>
+
+    <h4>Tafsīr ↔ Kalām (Theology)</h4>
+    <p>The relationship is mutual and unavoidable. Every exegete's theology shows in how they handle the anthropomorphic verses, the descriptions of God's knowledge and will, and the verses on divine justice and human accountability. Al-Zamakhsharī reads the Qurʾān as a Muʿtazilī; al-Rāzī reads it as an Ashʿarī; Ibn Kathīr reads it as an Atharī. These are not incidental differences in tone — they produce genuinely different readings of the same verse. The disciplines cannot be cleanly separated because the questions they address are inseparable: what the Qurʾān means about God is simultaneously a question of Tafsīr and of theology.</p>
+
+    <h4>Tafsīr ↔ Fiqh (Law)</h4>
+    <p>The Qurʾān contains approximately 500 verses with direct legal import. The jurisprudential schools developed distinctive approaches to these verses that reflect their broader methodological commitments. Ḥanafī exegetes tend to prioritize rational extension through analogy; Mālikī exegetes weight Medinan practice; Shāfiʿī exegetes insist on explicit Prophetic specification; Ḥanbalī exegetes resist speculative extension. The legal Tafsīr tradition is, in effect, a running display of the jurisprudential debates of Islamic law, anchored in the text that authorizes law's existence.</p>
+
+    <h4>Tafsīr ↔ Tasawwuf (Sufism)</h4>
+    <p>Sufi practice draws on the Qurʾān as the source of spiritual aspiration, devotional vocabulary, and cosmic symbolism. The Sufi reading of Qurʾānic narratives — reading Joseph's story as an allegory of the soul's journey, or Moses's encounter with God as a model of mystical annihilation — enriched Islamic spiritual life enormously. The tension between Sufi and conventional Tafsīr was productive rather than merely conflictual: the best Sufi commentators (al-Tustarī, Ibn ʿArabī, later Rūmī in Persian) knew the outer tradition well and positioned their inner readings against it, not in ignorance of it.</p>
+
+    <h4>Tafsīr ↔ Philosophy and Literary Theory</h4>
+    <p>In the modern period, Tafsīr has increasingly engaged with Western literary theory — hermeneutics (Gadamer, Ricoeur), structuralism, post-structuralism, and reader-response theory. Scholars like Nasr Ḥāmid Abū Zayd (d. 2010) applied discourse analysis and literary criticism to the Qurʾān with results that the Egyptian courts ruled constituted apostasy — a case study in the political stakes of hermeneutical method. The engagement continues, with careful scholars distinguishing between methodological tools (which can be borrowed) and philosophical presuppositions (which require critical evaluation).</p>
+  </section>
+
+  <!-- ── SECTION XI ── -->
+  <section id="s11" class="major-section">
+    <span class="section-label">Section XI</span>
+    <h2>Modern <em>Challenges</em></h2>
+
+    <h3 class="sub-heading"><span class="sh-num">11.1</span>Historical-Critical Qurʾānic Studies</h3>
+    <p>Western scholarship has approached the Qurʾān with the same historical-critical tools applied to the Bible: dating manuscripts, tracing textual variants, identifying possible earlier sources, and analyzing the development of the text's final form. The Sana'a manuscripts (discovered in Yemen in 1972, containing Qurʾānic fragments with textual variants) and scholars like Christoph Luxenberg (who proposed that certain Qurʾānic words are better understood as Syriac rather than Arabic) have generated both academic debate and Muslim responses that range from engagement to dismissal. The challenge is not merely academic: claims that the Qurʾān's text was not perfectly preserved directly attack the doctrine of textual integrity (<em>tawātur</em>) that underwrites Islamic legal and theological authority.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">11.2</span>Verses on Gender, Slavery, and Violence</h3>
+    <p>Several Qurʾānic verses address social institutions — slavery, polygamy, the beating of recalcitrant wives (Q. 4:34), warfare against polytheists (Q. 9:5) — in ways that modern ethical sensibilities find deeply problematic. Classical Tafsīr read these verses in their historical context and extracted rulings that shaped medieval Islamic societies. Contemporary Muslims must decide whether these verses articulate timeless norms, historical accommodations to contexts that no longer exist, or principles whose humane spirit is best expressed differently in different conditions. The answers are contested, and the stakes are high: they determine not only academic readings but the lived experience of Muslim women, minorities, and communities in pluralistic societies.</p>
+
+    <div class="callout">
+      <span class="callout-label">Example: Q. 4:34 and the Debate on <em>Ḍaraba</em></span>
+      <p>Q. 4:34 uses the verb <em>ḍaraba</em> in a passage on marital discord. The word's most common meaning is "to strike," and the classical tradition generally read it as permitting a (highly restricted and symbolic) form of physical discipline. Modern scholars have proposed alternative translations: "to separate from," "to go away from," or "to mark" — readings that avoid the domestic violence implication. The debate is not merely philological: it involves competing theories of how Arabic semantics should be determined, the role of Prophetic hadith that explicitly prohibited harming one's wife, and the question of whether the Qurʾān's normative direction is better served by the classical or modern reading.</p>
+    </div>
+
+    <h3 class="sub-heading"><span class="sh-num">11.3</span>Democratization of Interpretation</h3>
+    <p>The internet has made every major Tafsīr available to every Muslim with a smartphone and broken the institutional gatekeeping of madrasa education. Self-taught interpreters with YouTube channels reach larger audiences than university professors or madrasa-trained scholars. The classical tradition's insistence on qualification — the mufassir must master Arabic, Hadith, jurisprudence, and theology before interpreting — has no enforcement mechanism in the digital age. The result is an explosion of creative but often methodologically uninformed Tafsīr, alongside genuine democratization of access to the tradition.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">11.4</span>Translation and Translatability</h3>
+    <p>The Qurʾān's classical doctrine of inimitability (<em>iʿjāz</em>) holds that its Arabic is unreproducible in translation. Technically, translations are not "the Qurʾān" but "interpretations of the meanings of the Qurʾān" — and every translation is itself an act of Tafsīr, encoding thousands of interpretive decisions invisible to the non-Arabic reader. The global Muslim community, the majority of whom do not read classical Arabic, interacts with the Qurʾān predominantly through translations — making the translator's theological and hermeneutical choices more consequential than most translation-readers realize.</p>
+  </section>
+
+  <!-- ── SECTION XII ── -->
+  <section id="s12" class="major-section">
+    <span class="section-label">Section XII</span>
+    <h2>Comparative <em>Perspectives</em></h2>
+
+    <h4>Tafsīr and Biblical Exegesis</h4>
+    <p>Both traditions developed elaborate sciences of scriptural interpretation; both faced the challenge of applying ancient texts to new contexts; both generated rationalist and traditionalist wings in perpetual tension. The differences are instructive. Christian and Jewish biblical criticism developed a strong tradition of source criticism — identifying multiple authors and editorial layers within a single text (the Documentary Hypothesis for the Pentateuch; the Synoptic Problem for the Gospels). Classical Islamic Tafsīr generally resisted analogous source-critical approaches, because the doctrine of the Qurʾān's divine preservation (<em>ḥifẓ</em>) meant that questions of human authorship or editorial history were theologically excluded from the outset. This is not ignorance of such questions; it is a principled commitment that shapes the entire hermeneutical enterprise.</p>
+
+    <h4>Tafsīr and Midrash</h4>
+    <p>Jewish Midrash — the rabbinic tradition of creative, narrative-filling elaboration on scriptural stories — bears striking similarities to <em>Isrāʾīliyyāt</em>, the tradition within classical Tafsīr of incorporating Jewish and Christian narrative materials to fill in Qurʾānic stories' silences. The Qurʾān's account of Joseph is vivid but selective (Joseph's story covers one surah entirely, Sūrah Yūsuf); classical Tafsīr elaborated it vastly, drawing on Jewish midrashic traditions about Potiphar's wife, Jacob's grief, and the brothers' reunion. Al-Ṭabarī and Ibn Kathīr both engaged these materials — the former more permissively, the latter more critically.</p>
+
+    <h4>Tafsīr and Hermeneutical Theory</h4>
+    <p>Western hermeneutics — from Schleiermacher's "grammatical" and "psychological" interpretation through Dilthey's historical understanding to Gadamer's "fusion of horizons" and Ricoeur's theory of the text — provides a rich vocabulary for analyzing what classical Tafsīr was doing. Gadamer's insight that no interpreter stands outside their own tradition, and that interpretation is always a "conversation" between text and interpreter across historical horizons, resonates with the classical Tafsīr tradition's insistence that later scholars interpret through — not despite — the transmitted legacy of the Companions and Successors. The difference is that classical Tafsīr anchors this conversation in a specific chain of authoritative transmitters rather than in an abstract "effective history" (<em>Wirkungsgeschichte</em>).</p>
+  </section>
+
+  <!-- ── SECTION XIII ── -->
+  <section id="s13" class="major-section">
+    <span class="section-label">Section XIII</span>
+    <h2>Key <em>Case Studies</em></h2>
+
+    <h3 class="sub-heading"><span class="sh-num">13.1</span>The Mysterious Letters (<em>al-Ḥurūf al-Muqaṭṭaʿah</em>)</h3>
+
+    <p>Twenty-nine surahs of the Qurʾān begin with isolated letters — <em>Alif Lām Mīm</em>, <em>Yā Sīn</em>, <em>Ṭā Hā</em>, <em>Ḥā Mīm</em> and others — whose meaning the classical tradition never definitively resolved. Al-Ṭabarī surveyed the transmitted opinions (abbreviations for divine names, oaths, indications of the surah's content, or divine mysteries) and declined to adjudicate, concluding that God alone knows their meaning. Al-Zamakhsharī used them rhetorically to argue for the Qurʾān's inimitability — the Arabs were confronted with letters from their own alphabet, combined in ways they could not match or explain. Modern scholars have proposed phonological analyses (each set of letters includes a different type of Arabic consonant), acrostic theories, and liturgical-marker hypotheses. The mystery remains — and its persistence is itself theologically significant: it is a daily reminder that not everything in the Qurʾān is transparent to human analysis.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">13.2</span>Al-Zamakhsharī's <em>al-Kashshāf</em> and Its Theological Reception</h3>
+
+    <p>When al-Zamakhsharī (d. 538/1144) completed <em>al-Kashshāf</em>, he produced the finest grammatical and rhetorical Tafsīr in the tradition — and simultaneously the most dangerous, because every page was theologically shaped by his Muʿtazilī convictions. His reading of the "Hand of God" passages was consistently rationalist; his treatment of the beatific vision, the divine decree, and the nature of faith reflected Muʿtazilī positions that Sunni orthodoxy had rejected. The subsequent history of the <em>Kashshāf</em> is a case study in scholarly negotiation: Ibn Munīr al-Iskandarī (d. 683/1284) wrote a commentary specifically identifying and refuting the Muʿtazilī elements; al-Taftāzānī (d. 793/1389) produced a gloss separating the linguistic from the theological. The result was that al-Zamakhsharī's linguistics became available to the Sunni tradition while his theology was systematically excised — a form of reception that has no real parallel in Western academic tradition.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">13.3</span>Nasr Ḥāmid Abū Zayd and the Limits of Modern Hermeneutics</h3>
+
+    <p>Nasr Ḥāmid Abū Zayd (d. 2010), an Egyptian professor of Arabic studies, applied modern discourse analysis to the Qurʾān in the 1990s. He argued that the Qurʾān, as a text, must be analyzed as a historical cultural product — shaped by the 7th-century Arabian context — rather than as a timeless literal word from God. In 1995, an Egyptian court ruled that his views constituted apostasy and ordered his marriage annulled (on the basis that a Muslim woman cannot be married to an apostate). Abū Zayd went into exile in the Netherlands, where he continued his scholarship until his death. The case illustrates — with uncommon starkness — that Tafsīr methodology is not purely academic: it is entangled with political authority, social structures, and the lived consequences of what "the Qurʾān means."</p>
+
+    <h3 class="sub-heading"><span class="sh-num">13.4</span>The Sana'a Manuscripts</h3>
+
+    <p>In 1972, during restoration work on the Great Mosque of Sana'a in Yemen, a cache of ancient Qurʾānic manuscripts was discovered — some dating to the 1st century AH, making them among the oldest surviving Qurʾānic material. German scholar Gerd-R. Puin, who studied them in the 1980s, reported textual variants that differed from the standard ʿUthmānic text. Muslim scholars responded in several ways: some argued the variants fell within the known range of the seven canonical readings (<em>qirāʾāt</em>) and were not novel; others argued that Puin's claims were overstated; others engaged the manuscripts directly as evidence for the early text's transmission history. Full publication of the manuscripts has been restricted, limiting independent scholarly evaluation. The case illustrates how material history of the Qurʾān's text intersects with — and is deeply shaped by — the theological stakes of the doctrine of textual preservation.</p>
+  </section>
+
+  <!-- ── SECTION XIV ── -->
+  <section id="s14" class="major-section">
+    <span class="section-label">Section XIV</span>
+    <h2>Applications to <em>Life &amp; Reasoning</em></h2>
+
+    <h3 class="sub-heading"><span class="sh-num">14.1</span>Reading with Context</h3>
+    <p>The most fundamental lesson Tafsīr teaches is that words do not carry meaning in isolation. A verse's meaning depends on what precedes and follows it, the occasion that triggered it, the broader Qurʾānic context, and the historical world in which it was revealed. This is not relativism — it is the opposite of relativism: it means the text has a specific, determinable meaning that requires work to recover. In daily life, this teaches us to read carefully before reacting, to ask about context before drawing conclusions, and to resist the temptation to cite fragments in isolation from the whole that gives them meaning.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">14.2</span>Humility Before the Text</h3>
+    <p>The classical mufassir approached the Qurʾān with overwhelming humility: the text's meaning exceeds any individual's capacity to exhaust it; transmitted authorities must be respected; and the formula "God knows best" (<em>Allāhu aʿlam</em>) was not a sign of intellectual weakness but of principled acknowledgment of limits. This humility is a model for how to engage any text, any argument, any claim to knowledge: confident enough to reason, humble enough to know that reasoning is not the last word.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">14.3</span>The Discipline of Qualification</h3>
+    <p>The classical tradition's insistence that Tafsīr requires extensive preparation — Arabic, Hadith, jurisprudence, theology, and the Qurʾānic sciences — is not elitism but an acknowledgment that complex questions require complex tools. This applies beyond Tafsīr: before offering authoritative opinions on matters of law, ethics, medicine, or politics, one should ask whether one has the relevant competence. The tendency to treat confidence as a substitute for knowledge is not a modern phenomenon — the classical scholars warned against it repeatedly — but the digital age has given it unprecedented reach.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">14.4</span>Living with Ambiguity</h3>
+    <p>The Qurʾān divides itself into clear and ambiguous verses and instructs believers to anchor their understanding in the clear ones. This is a model for intellectual and spiritual maturity: not every question has a clear answer; not every ambiguity must be resolved; the appropriate response to genuine uncertainty is neither false confidence nor paralysis. The scholars who said "I do not know" — and they were among the greatest — were practicing something important: the discipline of not pretending to certainty one does not have.</p>
+
+    <h3 class="sub-heading"><span class="sh-num">14.5</span>Scripture as Living Conversation</h3>
+    <p>Fourteen centuries of Tafsīr represent not a closed archive but an ongoing conversation — each generation bringing its questions to the text and receiving answers that send it back to reconsider both the questions and itself. This is how the Qurʾān has functioned in Islamic civilization: not as a fixed code to be mechanically applied, but as a living interlocutor whose engagement with each new generation produces something neither the tradition alone nor the new context alone could have generated. The invitation to join this conversation is, ultimately, what Tafsīr is for.</p>
+  </section>
+
+  <!-- ── SECTION XV ── -->
+  <section id="s15" class="major-section">
+    <span class="section-label">Section XV</span>
+    <h2>Future <em>Directions</em></h2>
+
+    <h4>Digital and Computational Tafsīr</h4>
+    <p>Digital corpora of classical Tafsīr, fully searchable and interlinked, are transforming the access scholars and students have to the tradition. Projects like the Quranic Arabic Corpus, the OpenITI initiative for digitizing Islamic texts, and dedicated Tafsīr databases allow comparative analysis across texts and centuries that was impossible in the age of manuscripts. Computational stylometry can help date texts and identify interpolations; semantic network analysis can map how key Qurʾānic concepts are understood differently across schools and periods. This is not replacement of traditional scholarship — it is an amplification of its reach and precision.</p>
+
+    <h4>Manuscript Studies and the Early Qurʾān</h4>
+    <p>The Sana'a manuscripts, the Birmingham Qurʾān (carbon-dated to within years of the Prophet's death), and collections in Istanbul, Cairo, and Tashkent represent a material history of the text that classical Tafsīr took for granted but never systematically analyzed. A rigorous codicological study of early Qurʾānic manuscripts — their script evolution, textual variants, marginal annotations — would enrich both Tafsīr and Islamic history. This work requires cooperation between Muslim and non-Muslim scholars, and between traditional institutions and universities.</p>
+
+    <h4>Gender and Tafsīr</h4>
+    <p>The emergence of Muslim women scholars trained in classical methods and producing major Tafsīr work — Amina Wadud, Asma Barlas, Jerusha Lamptey, and others — represents a structural change in who participates in the interpretive tradition. Their work engages directly with the classical corpus rather than dismissing it, while asking whether readings that naturalized male authority were the only readings the text supported. This is not simply "feminist Tafsīr" in a Western academic sense; it is a recovery of interpretive possibilities the tradition has underutilized.</p>
+
+    <h4>Interfaith and Comparative Scriptural Study</h4>
+    <p>The practice of Scriptural Reasoning — developed at Cambridge and practiced globally — brings Muslim, Jewish, and Christian scholars together to read their respective scriptures in dialogue, each illuminating the other's text while remaining committed to their own tradition. This is not syncretism; it is comparative hermeneutics. The Qurʾān contains extensive engagement with biblical figures and narratives, and reading it alongside the texts it responds to enriches both. The tradition of <em>Isrāʾīliyyāt</em> (Jewish and Christian materials in classical Tafsīr) represents a classical precedent for this kind of intertextual engagement.</p>
+
+    <h4>Applied Tafsīr for Contemporary Questions</h4>
+    <p>Bioethics, environmental theology, economic justice, penal law, and political authority all require Qurʾānic grounding from exegetes who understand both the classical tradition and the contemporary context. The most important contribution the next generation of mufassirūn can make is not novel theory but careful application: bringing the full resources of the classical tradition — its methods, its accumulated wisdom, its recognized limits — to bear on questions the tradition's founders never anticipated. This requires both mastery of what came before and genuine engagement with what is present. The conversation between the eternal text and the historical moment has never been, and will never be, finished.</p>
+
+    <div class="callout">
+      <span class="callout-label">A Closing Thought</span>
+      <p>Al-Ṭabarī reportedly spent forty years preparing to write his Tafsīr — first mastering every subsidiary science it required. When he finally wrote, he asked his students whether they had the energy for a work ten times the length of what he eventually produced. They demurred; the thirty-volume version we have was the shorter option. This story, whether precisely accurate or not, captures something true: the Qurʾān's depths are inexhaustible, and every serious engagement with them reveals how much more remains. The right posture for a student of Tafsīr is not "I understand this" but "I am beginning to understand how much there is to understand." That posture — disciplined, humble, perpetually renewed — is itself the best preparation for a life lived with the Qurʾān.</p>
+    </div>
+  </section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin · Fikir Defteri Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+  }
+
+  // TOC anchor scroll — accounts for global nav (62px) + article header (~48px)
+  document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      document.getElementById('tocOverlay').classList.remove('open');
+      const offset = 62 + 48 + 12;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</body>
+</html>

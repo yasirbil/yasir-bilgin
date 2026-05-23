@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta property="og:title"       content="The Mechanics of Cooking" />
+  <meta property="og:description" content="The Mechanics of Cooking" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/arts/Food/mechanics-of-cooking.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="The Mechanics of Cooking" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/arts/Food/mechanics-of-cooking.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  <meta property="og:type" content="article" />
+<title>The Mechanics of Cooking | Yasir Bilgin</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --warm-white: #faf8f4;
+    --ink: #1a1510;
+    --brown: #6b4226;
+    --amber: #c8812a;
+    --rust: #b5451b;
+    --sage: #5a7a5c;
+    --muted: #8a7968;
+    --light-rule: #ddd5c4;
+    --nav-h: 62px;
+    --article-nav-h: 48px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: 16px;
+    /* nav.js auto-adds padding-top; don't override it */
+  }
+
+  /* ── HEADER ── */
+  /* NO overflow:hidden — it creates a stacking context that clips nav.js dropdown */
+  header {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 64px 40px 56px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Diagonal texture on a pseudo that does NOT clip anything */
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.02) 40px,
+      rgba(255,255,255,0.02) 41px
+    );
+  }
+
+  .header-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 20px;
+    position: relative; /* above ::before */
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  header h1 em { font-style: italic; color: var(--amber); }
+
+  .header-sub {
+    font-size: 15px;
+    color: rgba(245,240,232,0.6);
+    max-width: 480px;
+    margin: 0 auto;
+    font-style: italic;
+    position: relative;
+  }
+
+  /* ── ARTICLE-INTERNAL NAV ──
+     Use a div, not <nav>, to avoid conflicting with nav.js's own <nav> element.
+     Sticky at top:62px so it sits flush below the global nav.js bar.
+  ── */
+  .article-nav {
+    position: sticky;
+    top: var(--nav-h);   /* 62px — flush under global nav.js bar */
+    z-index: 50;         /* well below nav.js z-index */
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* NO backdrop-filter here — only add on an .open state if ever needed */
+  }
+  .article-nav::-webkit-scrollbar { display: none; }
+
+  .article-nav a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    text-decoration: none;
+    padding: 16px 20px;
+    transition: color 0.2s;
+    white-space: nowrap;
+    cursor: pointer;
+    display: block;
+    min-height: 44px; /* touch target */
+    display: flex;
+    align-items: center;
+  }
+  .article-nav a:hover,
+  .article-nav a.active { color: var(--amber); }
+
+  /* ── SECTIONS ──
+     scroll-margin-top = global nav (62px) + article nav (~48px) + gap (8px)
+  ── */
+  .section {
+    margin: 72px 0;
+    padding-top: 24px;
+    border-top: 2px solid var(--ink);
+    scroll-margin-top: 124px;
+  }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+  }
+
+  /* ── PRINCIPLE BOX ── */
+  .principle-box {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 32px 36px;
+    margin: 56px 0;
+    position: relative;
+  }
+  .principle-box::before {
+    content: '//';
+    position: absolute;
+    top: -16px;
+    left: 36px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 24px;
+    color: var(--amber);
+    background: var(--ink);
+    padding: 0 8px;
+  }
+  .principle-box p {
+    font-size: 17px;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.1em;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .section-tagline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+  }
+  .section p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #2a2218;
+  }
+
+  /* ── MECHANIC GRID ── */
+  .mechanic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin: 32px 0;
+    background: var(--light-rule);
+  }
+  @media (max-width: 600px) { .mechanic-grid { grid-template-columns: 1fr; } }
+
+  .mechanic-card { background: var(--warm-white); padding: 24px 28px; }
+  .mechanic-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--brown);
+  }
+  .mechanic-card .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .mechanic-card p { font-size: 14px; line-height: 1.65; color: #3a3228; margin: 0; }
+
+  /* ── RULE CARD ── */
+  .rule-card {
+    border-left: 3px solid var(--amber);
+    padding: 20px 24px;
+    margin: 24px 0;
+    background: rgba(200,129,42,0.06);
+  }
+  .rule-card h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 8px;
+  }
+  .rule-card p { font-size: 15px; margin: 0 !important; }
+
+  /* ── PATTERN TABLE ── */
+  .pattern-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 14px; }
+  .pattern-table thead tr { background: var(--ink); color: var(--cream); }
+  .pattern-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 500;
+  }
+  .pattern-table td { padding: 12px 16px; border-bottom: 1px solid var(--light-rule); vertical-align: top; line-height: 1.55; }
+  .pattern-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.5); }
+  .pattern-table tbody tr:hover { background: rgba(200,129,42,0.07); }
+  .pattern-table td:first-child {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--brown);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* ── CALLOUT ── */
+  .callout { background: var(--rust); color: white; padding: 28px 32px; margin: 36px 0; }
+  .callout strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .callout p { font-size: 15px; opacity: 0.92; margin: 0; }
+
+  /* ── SAGE CALLOUT ── */
+  .sage-callout { background: var(--sage); color: white; padding: 24px 28px; margin: 28px 0; }
+  .sage-callout strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+  .sage-callout p { font-size: 15px; margin: 0; }
+
+  /* ── LIST ── */
+  .cook-list { list-style: none; margin: 16px 0 24px; }
+  .cook-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-rule);
+    font-size: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }
+  .cook-list li::before { content: '→'; color: var(--amber); font-family: 'IBM Plex Mono', monospace; flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: var(--muted);
+    text-align: center;
+    padding: 40px 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  footer span { color: var(--amber); }
+
+  h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin: 32px 0 12px; color: var(--brown); }
+  strong { font-weight: 400; color: var(--brown); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 720px) {
+    header { padding: 50px 24px 40px; }
+    .article-nav a { padding: 12px 12px; font-size: 9px; }
+    main { padding: 40px 16px 60px; }
+  }
+</style>
+  <meta name="description" content="// the primary variable in nearly every" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Mechanics of Cooking",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+  "url": "https://yasirbilgin.com/arts/Food/mechanics-of-cooking.html",
+  "description": "// the primary variable in nearly every"
+}
+  </script>
+
+</head>
+<body>
+  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/arts/" style="color:#8a3a5a;text-decoration:none;">Arts</a> <span style="opacity:0.5">›</span> <span>Culinary Arts</span> <span style="opacity:0.5">›</span> <span>The Mechanics of Cooking</span></nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Arts",
+      "item": "https://yasirbilgin.com/arts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Mechanics of Cooking",
+      "item": "https://yasirbilgin.com/arts/Food/mechanics-of-cooking.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<!-- HERO HEADER — no overflow:hidden so nav.js dropdown renders freely -->
+<header>
+  <div class="header-eyebrow">A field manual for the kitchen</div>
+  <h1>The <em>Mechanics</em><br>of Cooking</h1>
+  <p class="header-sub">What you're actually doing — and why — every time you apply heat, salt, fat, or acid to food.</p>
+</header>
+
+<!-- ARTICLE-INTERNAL NAV — div, not <nav>, to avoid conflict with nav.js's own <nav>.
+     Sticky at top:62px, z-index:50, no backdrop-filter. -->
+<div class="article-nav" id="article-nav">
+  <a href="#heat">Heat</a>
+  <a href="#moisture">Moisture</a>
+  <a href="#salt">Salt</a>
+  <a href="#fat">Fat</a>
+  <a href="#acid">Acid</a>
+  <a href="#spice">Spice</a>
+  <a href="#time">Time</a>
+  <a href="#patterns">Patterns</a>
+</div>
+
+<main>
+
+  <div class="principle-box">
+    <p>Cooking is applied physics and chemistry. Every technique — searing, salting, braising, resting — has a mechanical rationale. Once you understand <em>why</em> something works, you stop following recipes blindly and start cooking by intuition.</p>
+  </div>
+
+  <!-- HEAT -->
+  <div class="section" id="heat">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Heat</h2>
+    </div>
+    <p class="section-tagline">// the primary variable in nearly every technique</p>
+    <p>Heat does one thing: it agitates molecules. But depending on how fast, from what direction, and in what medium, the results are completely different. Understanding heat modes is the single highest-leverage skill in cooking.</p>
+    <h3>The Three Transfer Modes</h3>
+    <div class="mechanic-grid">
+      <div class="mechanic-card"><h4>Conduction</h4><span class="tag">Direct contact</span><p>Heat moves through direct physical contact — pan to steak, water to carrot. Metal conducts fastest, air slowest. A cast iron pan at 400°F transfers heat far faster than a 400°F oven.</p></div>
+      <div class="mechanic-card"><h4>Convection</h4><span class="tag">Moving fluid</span><p>Heat carried by moving liquid or gas. Boiling, frying, and convection ovens all use this. A convection oven cooks faster because moving air pulls heat to the food more efficiently.</p></div>
+      <div class="mechanic-card"><h4>Radiation</h4><span class="tag">Infrared energy</span><p>Energy transferred as electromagnetic waves — broiling, grilling over coals, holding your hand over a burner. Penetrates the surface directly without requiring contact.</p></div>
+      <div class="mechanic-card"><h4>Evaporation</h4><span class="tag">Cooling effect</span><p>Moisture leaving food takes heat with it. This is why a wet steak won't sear — it's too busy evaporating. It's also why resting meat after cooking matters.</p></div>
+    </div>
+    <h3>What Heat Does to Food</h3>
+    <ul class="cook-list">
+      <li><strong>Protein denaturation (140–165°F):</strong> Proteins unfold, then bond to each other. Meat firms up, eggs set. Overcook and proteins over-contract, squeezing out moisture — rubbery eggs, dry chicken.</li>
+      <li><strong>Maillard reaction (280°F+ surface):</strong> Amino acids + sugars → hundreds of flavor compounds. Responsible for browned meat, toasted bread, dark beer. Requires a dry surface — moisture blocks it.</li>
+      <li><strong>Caramelization (320–375°F):</strong> Pure sugars decompose into complex nutty-bitter compounds. Distinct from Maillard. This is why onions get sweet when cooked long and low.</li>
+      <li><strong>Starch gelatinization (140–212°F):</strong> Starch granules absorb water and swell, thickening sauces and cooking grains. This is what makes a roux work, what cooks pasta, what sets a custard.</li>
+      <li><strong>Collagen → gelatin (160–200°F, sustained):</strong> Tough connective tissue dissolves into gelatin over time. This is why cheap, tough cuts become silky when braised slowly but dry out when roasted fast.</li>
+    </ul>
+    <div class="rule-card">
+      <h4>The Sear Paradox</h4>
+      <p>High heat searing does not "seal in juices" — this is a myth. It creates flavor via Maillard. Meat seared then rested loses roughly the same moisture as unseared meat. Sear for flavor, not moisture retention.</p>
+    </div>
+    <h3>Temperature as a Control Variable</h3>
+    <table class="pattern-table">
+      <thead><tr><th>Temp Range</th><th>What's happening</th><th>Technique</th></tr></thead>
+      <tbody>
+        <tr><td>140–160°F</td><td>Proteins begin setting; collagen starts dissolving</td><td>Sous vide, poaching</td></tr>
+        <tr><td>160–180°F</td><td>Collagen → gelatin in earnest; connective tissue softens</td><td>Low braising, slow roasting</td></tr>
+        <tr><td>212°F</td><td>Water boils; evaporation accelerates; no higher in water</td><td>Boiling, steaming</td></tr>
+        <tr><td>280–320°F</td><td>Maillard begins; surface must be dry</td><td>Pan searing, roasting</td></tr>
+        <tr><td>320–375°F</td><td>Caramelization; sugars break down</td><td>Caramel, deep browning</td></tr>
+        <tr><td>375°F+</td><td>Burning / carbonization begins</td><td>Char, smoke</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MOISTURE -->
+  <div class="section" id="moisture">
+    <div class="section-header"><span class="section-num">02</span><h2>Moisture</h2></div>
+    <p class="section-tagline">// the variable that determines texture above all else</p>
+    <p>Water is both the medium of cooking and the enemy of browning. Managing moisture — adding it, removing it, trapping it — is what separates techniques from each other.</p>
+    <h3>Wet vs. Dry Heat</h3>
+    <div class="mechanic-grid">
+      <div class="mechanic-card"><h4>Dry Heat</h4><span class="tag">Roasting · Searing · Grilling · Baking</span><p>No added moisture. Temperatures can exceed 212°F, enabling browning reactions. Surface dehydrates and crisps. Best for tender cuts, pastry, and anything you want a crust on.</p></div>
+      <div class="mechanic-card"><h4>Moist Heat</h4><span class="tag">Boiling · Steaming · Braising · Poaching</span><p>Water or steam present. Temperature caps at 212°F (at sea level). Browning impossible. Ideal for dissolving collagen, cooking starches evenly, and preventing over-drying of lean proteins.</p></div>
+    </div>
+    <h3>Deglazing &amp; Fond</h3>
+    <p>When you sear meat, browned proteins and sugars bond to the pan — this is called <strong>fond</strong>. Adding liquid (wine, stock, water) to a hot pan dissolves that fond, incorporating all that flavor into your sauce. This is not optional flavor — it's concentrated Maillard compounds that took minutes to build.</p>
+    <div class="rule-card">
+      <h4>Reducing</h4>
+      <p>Simmering liquid evaporates water, concentrating flavor compounds and thickening through evaporation. A 2:1 reduction doubles flavor intensity. This is why stock-based sauces taste so much more complex than the stock they started from.</p>
+    </div>
+    <h3>Steaming vs. Boiling</h3>
+    <p>Both top out at 212°F but behave differently. Boiling leaches water-soluble nutrients and flavors into the cooking water (use it for pasta, where you want the starch). Steaming keeps flavor in the food and cooks more gently, with less agitation. For vegetables, steaming preserves color and bite. For grains and pasta, boiling is intentional — the cooking water becomes functional.</p>
+  </div>
+
+  <!-- SALT -->
+  <div class="section" id="salt">
+    <div class="section-header"><span class="section-num">03</span><h2>Salt</h2></div>
+    <p class="section-tagline">// the most important ingredient in the kitchen</p>
+    <p>Salt does not just "add saltiness." It suppresses bitterness, enhances sweetness, and amplifies every other flavor compound in the food. It also fundamentally changes texture through osmosis and protein chemistry.</p>
+    <h3>What Salt Does</h3>
+    <ul class="cook-list">
+      <li><strong>Suppresses bitterness:</strong> Sodium ions bind to bitter receptors, muting them. This is why salted caramel tastes sweeter, why salt in coffee is real, why salting eggplant works.</li>
+      <li><strong>Draws out moisture (osmosis):</strong> Initially, salt pulls water out of cells. This softens vegetables, concentrates flavor, and — given time — is reabsorbed, seasoning the interior.</li>
+      <li><strong>Denatures proteins:</strong> Salt disrupts protein bonds. This is how curing works, how salt-brining firms and seasons meat all the way through before cooking.</li>
+      <li><strong>Strengthens gluten:</strong> In dough, salt tightens gluten structure, improving texture and elasticity. Bread without salt is flat and weak.</li>
+      <li><strong>Raises boiling point slightly:</strong> Practically negligible (about 1°F). You salt pasta water for flavor, not to boil faster.</li>
+    </ul>
+    <div class="callout">
+      <strong>Timing is Everything</strong>
+      <p>Salt meat 45+ minutes before cooking (or the night before). Early salting allows the drawn-out moisture to be reabsorbed, seasoning deeply. Salting right before cooking means surface moisture stays on the surface — it'll steam instead of sear. Salting after cooking only seasons the exterior.</p>
+    </div>
+    <h3>Types of Salt</h3>
+    <p>Kosher salt and sea salt are preferred over table salt because their larger crystals are easier to pinch and control, and they lack iodine (which can affect flavor). Diamond Crystal kosher salt is about half as salty by volume as Morton's — recipes assuming one may be under- or over-salted if you use the other. Always taste.</p>
+  </div>
+
+  <!-- FAT -->
+  <div class="section" id="fat">
+    <div class="section-header"><span class="section-num">04</span><h2>Fat</h2></div>
+    <p class="section-tagline">// the medium of flavor, texture, and heat transfer</p>
+    <p>Fat is a flavor solvent, a heat transfer medium, a texture builder, and a structural component. It does completely different things depending on when and how you use it.</p>
+    <div class="mechanic-grid">
+      <div class="mechanic-card"><h4>Flavor Carrier</h4><span class="tag">Fat-soluble compounds</span><p>Many flavor compounds are fat-soluble, not water-soluble. Blooming spices in fat releases these aromatics. Finishing a sauce with butter adds richness and carries flavor to your palate differently than water-based sauces.</p></div>
+      <div class="mechanic-card"><h4>Heat Medium</h4><span class="tag">Frying, sautéing</span><p>Oil can reach 400–450°F — far above water's limit. This is why frying produces such dramatic browning and crispness. The fat transfers heat rapidly and evenly across the food's surface.</p></div>
+      <div class="mechanic-card"><h4>Emulsification</h4><span class="tag">Sauces, dressings</span><p>Fat and water don't mix — but with an emulsifier (lecithin in egg yolk, mustard) and mechanical agitation, they form stable emulsions. Mayo, hollandaise, and vinaigrette are all emulsions.</p></div>
+      <div class="mechanic-card"><h4>Structure &amp; Texture</h4><span class="tag">Pastry, confit</span><p>Solid fats (butter, lard) coat flour particles in pastry, blocking gluten formation — this is how flaky pie crust works. Confit preserves food submerged in fat, cooking gently while excluding oxygen.</p></div>
+    </div>
+    <div class="rule-card">
+      <h4>Smoke Point</h4>
+      <p>Every fat has a temperature at which it begins to smoke and break down, producing bitter, acrid compounds. Butter smokes at ~350°F; refined avocado oil at ~520°F. Match your fat to your cooking temperature — or use clarified butter (ghee) to raise the smoke point by removing the solids that burn.</p>
+    </div>
+  </div>
+
+  <!-- ACID -->
+  <div class="section" id="acid">
+    <div class="section-header"><span class="section-num">05</span><h2>Acid</h2></div>
+    <p class="section-tagline">// brightness, balance, and structure</p>
+    <p>Acid is the most underused tool in home cooking. A splash of lemon juice or vinegar at the end of cooking can rescue a flat, one-dimensional dish by brightening and balancing all the other flavors.</p>
+    <ul class="cook-list">
+      <li><strong>Balances fat and sweetness:</strong> Acid cuts through richness and rounds out sweetness. A squeeze of lemon on fried fish makes it taste lighter, not sour.</li>
+      <li><strong>"Cooks" proteins:</strong> Citric/acetic acid denatures proteins without heat. Ceviche, aguachile, gravlax — all use acid to firm and "cook" raw fish or meat.</li>
+      <li><strong>Prevents browning:</strong> Oxidation turns cut fruit and vegetables brown. Acid (lemon juice) slows the oxidative enzyme reaction — keeps guacamole green, apples fresh.</li>
+      <li><strong>Tenderizes meat:</strong> Acidic marinades break down surface proteins and connective tissue — but over-marinating in strong acid makes meat mushy, not tender. 30 min to 4 hours is the window.</li>
+      <li><strong>Sets pectin:</strong> Jam requires acid + pectin + sugar to gel properly. Without adequate acid, pectin won't set no matter how much you cook it.</li>
+      <li><strong>Finishing brightness:</strong> A few drops of vinegar or citrus added at the end — not during — of cooking lifts a sauce that's tasted "complete but flat." Add early and it cooks off; add late and it sings.</li>
+    </ul>
+    <div class="sage-callout">
+      <strong>The Rule of Balance</strong>
+      <p>Taste a dish that's missing something but you can't identify what. Try: more salt first. If still off — add acid. Fat, acid, salt, and heat are the four levers. Most "missing something" dishes need one of these adjusted, not more herbs or spice.</p>
+    </div>
+  </div>
+
+  <!-- SPICE -->
+  <div class="section" id="spice">
+    <div class="section-header"><span class="section-num">06</span><h2>Spice &amp; Aromatics</h2></div>
+    <p class="section-tagline">// volatile compounds and when to release them</p>
+    <p>Spices contain volatile aromatic compounds that are released by heat and dissolved by fat or water. When and how you add spice dramatically changes its effect.</p>
+    <h3>Blooming in Fat</h3>
+    <p>Adding whole or ground spices to hot oil or butter before other ingredients — called <strong>blooming</strong> or <strong>tempering</strong> — dissolves fat-soluble aroma compounds and drives off harsh volatile top notes, leaving the deep, rounded flavors behind. Cumin bloomed in oil tastes nothing like cumin dumped into a dish at the end. This is foundational to Indian, Mexican, and Middle Eastern cooking.</p>
+    <h3>Toasting Whole Spices</h3>
+    <p>Dry-toasting spices in a hot pan drives off moisture and triggers Maillard-like reactions in the spice itself, deepening flavor. Grind after toasting for maximum potency — pre-ground spices are already degraded. Most whole spices last 2–3 years; ground spices degrade meaningfully in 6–12 months.</p>
+    <h3>Aromatics: The Base</h3>
+    <p>Onion, garlic, celery, carrot — the aromatic base of almost every cuisine — are cooked first in fat to build a flavor foundation. Raw aromatics taste sharp and pungent. Cooked slowly in fat, they soften, sweeten, and release complex compounds that season everything cooked in or with them. This is <em>soffritto</em>, <em>mirepoix</em>, <em>holy trinity</em> — different names, same principle.</p>
+    <div class="rule-card">
+      <h4>Garlic Burns Fast</h4>
+      <p>Garlic goes from golden and fragrant to acrid and bitter in 30 seconds at high heat. Add it after the onion has softened and turn down the heat, or add it later in the process where the liquid will protect it. Burnt garlic is unrecoverable — you must start over.</p>
+    </div>
+    <h3>Fresh vs. Dried Herbs</h3>
+    <p>Dried herbs are more concentrated but lack the volatile top notes of fresh. Add dried herbs <em>early</em> — they need time and heat to rehydrate and release flavor. Add fresh herbs <em>late</em> or at the end — heat destroys their delicate aromatics. Basil added to a sauce early will taste like nothing by the time you serve it.</p>
+  </div>
+
+  <!-- TIME -->
+  <div class="section" id="time">
+    <div class="section-header"><span class="section-num">07</span><h2>Time</h2></div>
+    <p class="section-tagline">// the ingredient you can't see</p>
+    <p>Time is an active ingredient. It changes food chemically and physically in ways that nothing else can replicate — for better and worse.</p>
+    <div class="mechanic-grid">
+      <div class="mechanic-card"><h4>Resting Meat</h4><span class="tag">5–15 min after cooking</span><p>During cooking, proteins contract and push moisture to the center. Resting lets them relax and redistribute moisture evenly. A steak cut immediately loses 40% more juice than one rested 10 minutes.</p></div>
+      <div class="mechanic-card"><h4>Marinating</h4><span class="tag">30 min – overnight</span><p>Flavor penetration is slower than you think. Most marinades flavor only the outer 1–2mm even after hours. Salt + time is the exception — brine genuinely seasons throughout. A dry brine overnight is more effective than a wet marinade of the same duration.</p></div>
+      <div class="mechanic-card"><h4>Slow Cooking</h4><span class="tag">Hours at low temp</span><p>Sustained low heat converts collagen to gelatin and breaks down tough muscle fiber. Short ribs braised for 3 hours become silky; the same cut roasted fast at high heat is shoe leather.</p></div>
+      <div class="mechanic-card"><h4>Carry-Over Cooking</h4><span class="tag">Remove before done</span><p>Food continues cooking after removed from heat. A thick steak removed at 125°F internal will reach 130–135°F (medium-rare) while resting. Remove large proteins 5–10°F before your target temp.</p></div>
+    </div>
+    <div class="callout">
+      <strong>The Maillard Window</strong>
+      <p>Browning requires a dry surface. Wet food evaporates instead of browns. Pat food dry before searing. If your pan isn't hot enough or your food too crowded, moisture accumulates and the food steams in its own liquid — you'll get grey and soft instead of brown and crisp.</p>
+    </div>
+  </div>
+
+  <!-- PATTERNS -->
+  <div class="section" id="patterns">
+    <div class="section-header"><span class="section-num">08</span><h2>Universal Patterns</h2></div>
+    <p class="section-tagline">// the grammar beneath every technique</p>
+    <p>Once you see these patterns, you'll recognize them in almost every recipe you encounter — across cuisines and techniques.</p>
+    <table class="pattern-table">
+      <thead><tr><th>Pattern</th><th>What it means</th><th>Why it works</th></tr></thead>
+      <tbody>
+        <tr><td>Build a base first</td><td>Cook aromatics in fat before adding other ingredients</td><td>Fat-soluble aromatics season the entire dish from the start; raw aromatics tasted at the end are sharp and unintegrated</td></tr>
+        <tr><td>High heat → low heat</td><td>Sear/brown first, then finish low and slow</td><td>Maillard requires high dry heat; further cooking requires lower sustained heat. Braised short ribs, oven-finished steaks, pan roasts all use this</td></tr>
+        <tr><td>Season in layers</td><td>Salt at every stage — aromatics, proteins, finishing</td><td>Seasoning at the end only coats the surface. Building salt through each layer means flavor is integrated throughout</td></tr>
+        <tr><td>Deglaze the pan</td><td>Add liquid after browning to dissolve fond</td><td>Fond is concentrated flavor. Deglazing captures it into a sauce rather than letting it stick and burn</td></tr>
+        <tr><td>Fat then acid to finish</td><td>Add butter and/or acid at the very end of a sauce</td><td>Butter emulsifies and enriches; acid brightens. Both are volatile — add them early and their effect diminishes</td></tr>
+        <tr><td>Dry before high heat</td><td>Pat food dry, use a dry pan, don't crowd</td><td>Moisture blocks browning reactions. Any steaming in the pan means grey and soft instead of browned and crisp</td></tr>
+        <tr><td>Use residual heat</td><td>Remove from heat before fully cooked</td><td>Carry-over cooking is real. Eggs scrambled to perfection on the stove will be overcooked in the pan by the time they're plated</td></tr>
+        <tr><td>Taste constantly</td><td>Season, taste, adjust throughout</td><td>The only feedback loop in cooking. A recipe is an approximation; your palate in the moment is the truth</td></tr>
+      </tbody>
+    </table>
+    <div class="sage-callout">
+      <strong>The Master Framework</strong>
+      <p>Almost every cooked dish follows this arc: <strong>build aromatic base in fat → add protein or main ingredient → add liquid and flavor builders → reduce and concentrate → season and finish with fat and acid.</strong> Stir-fry, braise, pasta sauce, risotto, curry — they all follow this skeleton. Learn the skeleton; adapt the ingredients.</p>
+    </div>
+    <h3>Troubleshooting by Flavor</h3>
+    <ul class="cook-list">
+      <li><strong>Tastes flat / missing something:</strong> Try salt first. Then acid. Then a small amount of fat or umami (parmesan rind, soy sauce, fish sauce).</li>
+      <li><strong>Too salty:</strong> Dilute with more food or unsalted liquid. Acid can help. You cannot remove salt — prevention is the only cure. Potatoes absorb some, but it's folklore not science.</li>
+      <li><strong>Too bitter:</strong> Add a pinch of salt. Add sweetness. Fat coats bitter compounds. Bitter often means burnt or over-extracted — taste earlier next time.</li>
+      <li><strong>Too rich / heavy:</strong> Acid. A squeeze of lemon. Brightness cuts fat and resets the palate.</li>
+      <li><strong>Texturally wrong (rubbery, tough):</strong> Overcooked protein — can't be reversed. For next time: lower temperature, shorter time, or use a different cut.</li>
+      <li><strong>Won't brown / steaming instead:</strong> Food is wet or pan is overcrowded. Dry the food, use a larger pan, work in batches, get the pan hotter.</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <span>The Mechanics of Cooking</span> — a reference guide — understand the why, not just the what
+</footer>
+
+<script>
+  // Smooth scroll accounting for global nav (62px) + article nav (~48px) + gap
+  document.querySelectorAll('.article-nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById(this.getAttribute('href').slice(1));
+      if (!target) return;
+      const articleNavH = document.getElementById('article-nav').offsetHeight;
+      const offset = 62 + articleNavH + 8;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // Active tab highlight on scroll
+  const sections = document.querySelectorAll('.section[id]');
+  const navLinks = document.querySelectorAll('.article-nav a');
+  function updateActive() {
+    const articleNavH = document.getElementById('article-nav').offsetHeight;
+    const offset = 62 + articleNavH + 20;
+    let current = '';
+    sections.forEach(s => { if (s.offsetTop <= window.scrollY + offset) current = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+</script>
+
+</article>
+</body>
+</html>

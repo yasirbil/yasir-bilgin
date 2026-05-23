@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yasir Bilgin | Knowledge, Faith &amp; Civilization</title>
+<meta name="description" content="Writings, reflections, and community resources on faith, civilization, spirituality, learning, and technology." />
+<meta property="og:title"       content="Yasir Bilgin | Knowledge, Faith &amp; Civilization" />
+<meta property="og:description" content="Writings, reflections, and community resources on faith, civilization, spirituality, learning, and technology." />
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="https://yasirbilgin.com/" />
+<meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Yasir Bilgin | Knowledge, Faith &amp; Civilization" />
+<meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+<link rel="canonical"           href="https://yasirbilgin.com/" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Yasir Bilgin",
+  "url": "https://yasirbilgin.com/",
+  "description": "Essays and resources on spirituality, Islamic thought, philosophy, culture, learning, and technology.",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com/"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://yasirbilgin.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script src="https://yasirbilgin.com/nav.js"></script>
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f3ee;
+  --surface: #ffffff;
+  --border: rgba(0,0,0,0.14);
+  --border-strong: rgba(0,0,0,0.24);
+  --text: #1a1a18;
+  --text-muted: #7a7872;
+  --text-faint: #b0ada5;
+  --accent: #2d4a3e;
+  --accent-light: #e8f0ec;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131310;
+    --surface: #1e1e1a;
+    --border: rgba(255,255,255,0.14);
+    --border-strong: rgba(255,255,255,0.26);
+    --text: #f0ede5;
+    --text-muted: #a8a4a0;
+    --text-faint: #6b6864;
+    --accent: #7fbf9e;
+    --accent-light: rgba(127,191,158,0.10);
+  }
+}
+
+html { scroll-behavior: smooth; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  padding-top: 62px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 1.5rem 2rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* SEARCH */
+.search-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  animation: fadeUp 0.5s 0.05s ease both;
+}
+
+.search-box-container {
+  background: var(--surface);
+  border: 0.5px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  height: 44px;
+  padding: 0 1rem;
+  background: var(--bg);
+  border: 0.5px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14.5px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-input::placeholder { color: var(--text-faint); }
+.search-input:focus { border-color: var(--accent); }
+.search-input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.search-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.card:focus-visible,
+.recent-card:focus-visible,
+.ref-btn:focus-visible,
+.search-result-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.search-btn {
+  height: 44px;
+  padding: 0 1.25rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-btn:hover { opacity: 0.88; }
+
+.search-btn svg {
+  width: 15px;
+  height: 15px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* SEARCH DROPDOWN */
+.search-results {
+  margin-top: 0.75rem;
+  border-top: 0.5px solid var(--border);
+  padding-top: 0.75rem;
+  max-height: 340px;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 2px;
+  display: none;
+}
+
+.search-results.visible {
+  display: flex;
+}
+
+.search-result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+
+.search-result-item:hover {
+  background: var(--accent-light);
+}
+
+.result-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.result-title mark {
+  background: transparent;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.result-path {
+  font-size: 11.5px;
+  color: var(--text-faint);
+}
+
+.search-status {
+  font-size: 12px;
+  color: var(--text-faint);
+  padding: 0.4rem 0.75rem;
+  text-align: center;
+}
+
+/* SECTION */
+.section-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem 4rem;
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.4rem;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* CARD */
+.card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.15s, transform 0.12s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent-light);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card:hover::before { opacity: 1; }
+
+.card-icon { font-size: 26px; margin-bottom: 4px; position: relative; }
+
+.card-name {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+  position: relative;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  position: relative;
+  flex: 1;
+}
+
+.card-url {
+  font-size: 12.5px;
+  color: var(--text-faint);
+  margin-top: 4px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RECENTLY PUBLISHED */
+.recent-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+.recent-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-left: 2.5px solid var(--accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s, transform 0.12s;
+}
+.recent-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+.recent-section-tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.recent-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+.recent-skel {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-left: 2.5px solid var(--border);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 0.85rem 1rem;
+  animation: fadeUp 1.4s ease-in-out infinite alternate;
+}
+.recent-skel-line { background: var(--border); border-radius: 2px; margin-bottom: 6px; }
+.recent-skel-line.s { height: 9px; width: 40%; }
+.recent-skel-line.l { height: 12px; width: 85%; }
+
+/* REFERENCES */
+.ref-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ref-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.45rem 1rem;
+  background: var(--surface);
+  border: 0.5px solid var(--border-strong);
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.ref-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--accent-light);
+}
+
+.ref-btn-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 0.5px solid var(--border);
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* REDUCED MOTION — respect OS-level accessibility setting */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto !important; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .search-wrap, .section-wrap { padding-left: 1.2rem; padding-right: 1.2rem; }
+}
+
+@media (max-width: 500px) {
+  .grid { grid-template-columns: 1fr; }
+  .section-wrap { padding: 0 1.2rem 3rem; }
+  .search-row { flex-wrap: wrap; }
+  .search-btn { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <p class="hero-eyebrow">Knowledge · Reflection · Community</p>
+  <h1 style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(2rem,5vw,3.2rem); font-weight:600; letter-spacing:-0.02em; color:var(--text); margin:0.4rem 0 0.8rem; line-height:1.15;">Yasir Bilgin</h1>
+  <p class="hero-sub">Writings, reflections, and community resources in one place.</p>
+</section>
+
+<main id="main-content">
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <div class="search-box-container">
+    <div class="search-row">
+      <label for="searchInput" class="sr-only">Search all articles on yasirbilgin.com</label>
+      <input
+        class="search-input"
+        id="searchInput"
+        type="text"
+        placeholder="Search all content on yasirbilgin.com…"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button class="search-btn" id="searchBtn">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </button>
+    </div>
+    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div>
+  </div>
+</div>
+
+<!-- RECENTLY PUBLISHED -->
+<div class="section-wrap" style="padding-top: 1.5rem; padding-bottom: 0;">
+  <div class="section-header">
+    <span class="section-label">Recently Published</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="recent-strip" id="recentStrip">
+    <div class="recent-skel"><div class="recent-skel-line s"></div><div class="recent-skel-line l"></div></div>
+    <div class="recent-skel"><div class="recent-skel-line s"></div><div class="recent-skel-line l"></div></div>
+    <div class="recent-skel"><div class="recent-skel-line s"></div><div class="recent-skel-line l"></div></div>
+    <div class="recent-skel"><div class="recent-skel-line s"></div><div class="recent-skel-line l"></div></div>
+  </div>
+</div>
+
+<!-- BROWSE SECTIONS -->
+<div class="section-wrap" style="padding-top: 1.5rem;">
+  <div class="section-header">
+    <span class="section-label">Browse all sections</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="grid" id="cardGrid"></div>
+</div>
+
+<!-- REFERENCES & TOOLS -->
+<div class="section-wrap" style="padding-bottom: 4rem;">
+  <div class="section-header">
+    <span class="section-label">References &amp; Tools</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="ref-grid" id="refGrid"></div>
+</div>
+
+</main>
+
+<footer class="footer">
+  © Yasir Bilgin · yasirbilgin.com
+</footer>
+
+<script>
+const BASE = 'https://yasirbilgin.com';
+
+const SECTIONS = [
+  {
+    icon: '🎨',
+    name: 'Arts',
+    desc: 'Calligraphy, music, culinary arts, and design',
+    url: BASE + '/arts/',
+    display: 'yasirbilgin.com/arts'
+  },
+  {
+    icon: '🌐',
+    name: 'Atlas',
+    desc: 'Universal knowledge, big questions, science and reality',
+    url: BASE + '/atlas/',
+    display: 'yasirbilgin.com/atlas'
+  },
+  {
+    icon: '🏛️',
+    name: 'Civilization',
+    desc: 'Cultures, geopolitics, travels, and the lifecycle of societies',
+    url: BASE + '/civilization/',
+    display: 'yasirbilgin.com/civilization'
+  },
+  {
+    icon: '🕌',
+    name: 'Faith',
+    desc: 'Islamic disciplines, Qur\'an, comparative religion, and intellectual history',
+    url: BASE + '/faith/',
+    display: 'yasirbilgin.com/faith'
+  },
+  {
+    icon: '🤝',
+    name: 'Hizmet',
+    desc: 'Vision, resources, and toolbox for the Hizmet movement',
+    url: BASE + '/hizmet/',
+    display: 'yasirbilgin.com/hizmet'
+  },
+  {
+    icon: '📖',
+    name: 'Learning',
+    desc: 'Languages — Arabic, Japanese, and world language studies',
+    url: BASE + '/learning/',
+    display: 'yasirbilgin.com/learning'
+  },
+  {
+    icon: '🧠',
+    name: 'Life',
+    desc: 'Personality, wellbeing, MBTI, and Ramadan guides',
+    url: BASE + '/life/',
+    display: 'yasirbilgin.com/life'
+  },
+  {
+    icon: '🤲',
+    name: 'Spirit',
+    desc: 'Spirituality, Sufism, virtue, and inner transformation',
+    url: BASE + '/spirit/',
+    display: 'yasirbilgin.com/spirit'
+  },
+  {
+    icon: '🖥️',
+    name: 'Tech',
+    desc: 'DevOps, AI & LLMs, SRE, and platform engineering',
+    url: BASE + '/tech/',
+    display: 'yasirbilgin.com/tech'
+  },
+];
+
+const REFERENCES = [
+  { icon: '📰', name: 'Medium Articles',           url: 'https://medium.com/@yasirbil',                                                           external: true  },
+  { icon: '🌍', name: 'Global History',            url: BASE + '/atlas/Global-History/global-history.html',                    external: false },
+  { icon: '💡', name: 'Universal Principles',      url: BASE + '/atlas/Universal-Principles/universal-principles.html',              external: false },
+  { icon: '📚', name: 'Essential Books',           url: BASE + '/atlas/Reference-Guides/essential-books.html',                   external: false },
+  { icon: '🕌', name: 'Essential Books — Islam',   url: BASE + '/faith/islamic-studies/essential-books--islam.html',                              external: false },
+  { icon: '🎓', name: 'Madrasa Books',             url: BASE + '/faith/islamic-studies/madrasa-books.html',                                       external: false },
+  { icon: '🔢', name: '500 Facts',                 url: BASE + '/atlas/Reference-Guides/500-facts.html',                         external: false },
+  { icon: '📄', name: 'CRISD Papers',              url: 'https://mailchi.mp/939b3b8716af/ktphane',                                                external: true  },
+  { icon: '🔗', name: 'Usul.ai',                   url: 'https://usul.ai/',                                                                       external: true  },
+  { icon: '🔗', name: 'OpenAlex Works',            url: 'https://openalex.org/works',                                                             external: true  },
+];
+
+// Render section cards
+const grid = document.getElementById('cardGrid');
+SECTIONS.forEach(s => {
+  const a = document.createElement('a');
+  a.className = 'card';
+  a.href = s.url;
+  a.innerHTML = `
+    <div class="card-icon">${s.icon}</div>
+    <div class="card-name">${s.name}</div>
+    <div class="card-desc">${s.desc}</div>
+    <div class="card-url">${s.display}</div>
+  `;
+  grid.appendChild(a);
+});
+
+// Render reference pills
+const refGrid = document.getElementById('refGrid');
+REFERENCES.forEach(r => {
+  const a = document.createElement('a');
+  a.className = 'ref-btn';
+  a.href = r.url;
+  if (r.external) a.target = '_blank';
+  a.innerHTML = `<span class="ref-btn-dot"></span>${r.icon} ${r.name}${r.external ? ' ↗' : ''}`;
+  refGrid.appendChild(a);
+});
+
+// ── Sitemap-powered live search ──────────────────────────────────────────────
+
+const searchInput   = document.getElementById('searchInput');
+const searchBtn     = document.getElementById('searchBtn');
+const searchResults = document.getElementById('searchResults');
+
+let sitemapPages = [];
+let sitemapLoaded = false;
+
+function pathToTitle(url) {
+  try {
+    const path = new URL(url).pathname;
+    const file = path.split('/').pop().replace('.html', '');
+    return file
+      .replace(/[-_]/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase())
+      .trim() || path;
+  } catch {
+    return url;
+  }
+}
+
+function pathToBreadcrumb(url) {
+  try {
+    const parts = new URL(url).pathname.split('/').filter(Boolean);
+    parts.pop();
+    return parts.join(' › ') || 'home';
+  } catch {
+    return '';
+  }
+}
+
+async function loadSitemap() {
+  if (sitemapLoaded) return;
+  searchResults.classList.add('visible');
+  searchResults.innerHTML = '<span class="search-status">Loading pages…</span>';
+  try {
+    // Try rich search index first (full-text), fall back to sitemap
+    const idxRes = await fetch('/assets/search-index.json');
+    if (idxRes.ok) {
+      const idx = await idxRes.json();
+      sitemapPages = idx.map(a => ({
+        url:        a.url,
+        title:      a.title,
+        breadcrumb: [a.section, a.subsec].filter(Boolean).join(' › '),
+        body:       (a.desc + ' ' + a.headings + ' ' + a.body).toLowerCase(),
+      }));
+    } else {
+      // Fallback: sitemap
+      const res  = await fetch('https://yasirbilgin.com/sitemap.xml');
+      const text = await res.text();
+      const parser = new DOMParser();
+      const xml    = parser.parseFromString(text, 'application/xml');
+      sitemapPages = Array.from(xml.querySelectorAll('url > loc')).map(el => {
+        const url = el.textContent.trim();
+        return { url, title: pathToTitle(url), breadcrumb: pathToBreadcrumb(url), body: '' };
+      });
+    }
+    sitemapLoaded = true;
+  } catch (e) {
+    searchResults.innerHTML = '<span class="search-status">Could not load pages — check your connection.</span>';
+    return;
+  }
+  runSearch(searchInput.value.trim());
+}
+
+function highlight(text, query) {
+  if (!query) return text;
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+}
+
+function runSearch(q) {
+  if (!q) {
+    searchResults.classList.remove('visible');
+    searchResults.innerHTML = '';
+    return;
+  }
+
+  if (!sitemapLoaded) {
+    loadSitemap();
+    return;
+  }
+
+  const lower = q.toLowerCase();
+  // Word-boundary regex for body — prevents "ego" matching "category", "negotiation" etc.
+  const bodyRe = new RegExp('\\b' + lower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b');
+
+  // Score every page: title match = 10, breadcrumb/url = 3, body only = 1
+  const scored = sitemapPages.reduce((acc, p) => {
+    const inTitle      = p.title.toLowerCase().includes(lower);
+    const inBreadcrumb = p.breadcrumb.toLowerCase().includes(lower);
+    const inUrl        = p.url.toLowerCase().includes(lower);
+    const inBody       = p.body ? bodyRe.test(p.body) : false;
+    if (!inTitle && !inBreadcrumb && !inUrl && !inBody) return acc;
+    const score = (inTitle ? 10 : 0) + (inBreadcrumb || inUrl ? 3 : 0) + (inBody ? 1 : 0);
+    acc.push({ ...p, score });
+    return acc;
+  }, []);
+
+  // Title matches first, then body-only matches
+  scored.sort((a, b) => b.score - a.score);
+  const matches = scored.slice(0, 12);
+
+  searchResults.classList.add('visible');
+
+  if (!matches.length) {
+    searchResults.innerHTML = '<span class="search-status">No pages found.</span>';
+    return;
+  }
+
+  const countMsg = matches.length === 1 ? '1 result found.' : `${matches.length} results found.`;
+  searchResults.innerHTML =
+    `<span class="sr-only">${countMsg}</span>` +
+    matches.map(p => `
+    <a class="search-result-item" href="${p.url}">
+      <span class="result-title">${highlight(p.title, q)}</span>
+      <span class="result-path">${highlight(p.breadcrumb, q)}</span>
+    </a>
+  `).join('');
+}
+
+let debounceTimer;
+searchInput.addEventListener('input', function() {
+  clearTimeout(debounceTimer);
+  const q = this.value.trim();
+  if (!q) { searchResults.classList.remove('visible'); searchResults.innerHTML = ''; return; }
+  debounceTimer = setTimeout(() => runSearch(q), 180);
+});
+
+searchBtn.addEventListener('click', () => runSearch(searchInput.value.trim()));
+searchInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') runSearch(this.value.trim());
+  if (e.key === 'Escape') { searchResults.classList.remove('visible'); searchResults.innerHTML = ''; }
+});
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.search-box-container')) {
+    searchResults.classList.remove('visible');
+  }
+});
+
+setTimeout(loadSitemap, 1000);
+
+// ── Recently Published ───────────────────────────────────────────────────────
+// Source of truth: /assets/recently-published.json
+// Update that file whenever a new article is published.
+(async function loadRecent() {
+  const strip = document.getElementById('recentStrip');
+  try {
+    const res = await fetch('/assets/recently-published.json');
+    if (!res.ok) throw new Error('no recently-published.json');
+    const articles = await res.json();
+    strip.innerHTML = '';
+    if (!articles.length) {
+      strip.innerHTML = '<span style="font-size:13px;color:var(--text-faint);">No articles yet.</span>';
+      return;
+    }
+    articles.slice(0, 4).forEach(item => {
+      const a = document.createElement('a');
+      a.className = 'recent-card';
+      a.href = item.url;
+      a.innerHTML = `<div class="recent-section-tag">${item.section}</div><div class="recent-title">${item.title}</div>`;
+      strip.appendChild(a);
+    });
+  } catch(e) {
+    document.getElementById('recentStrip').innerHTML = '';
+  }
+})();
+</script>
+
+</body>
+</html>
