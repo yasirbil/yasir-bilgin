@@ -452,26 +452,25 @@
       searchResults.classList.add('visible');
       searchResults.innerHTML = '<span class="search-status">Loading pages…</span>';
 
-      // Try full-text search index first; fall back to sitemap.xml
+      // Load title index
       try {
         const res  = await fetch('https://yasirbilgin.com/assets/search-index.json');
         const data = await res.json();
         sitemapPages = data.map(a => ({
-          url:       a.url,
-          title:     a.title || pathToTitle(a.url),
+          url:        a.url,
+          title:      a.title || pathToTitle(a.url),
           breadcrumb: [a.section, a.subsec].filter(Boolean).join(' › ') || pathToBreadcrumb(a.url),
-          body:      (a.desc + ' ' + (a.headings || '') + ' ' + (a.body || '')).toLowerCase(),
         }));
         sitemapLoaded = true;
       } catch {
-        // Fallback: sitemap.xml (titles only, no body)
+        // Fallback: sitemap.xml
         try {
           const res  = await fetch('https://yasirbilgin.com/sitemap.xml');
           const text = await res.text();
           const xml  = new DOMParser().parseFromString(text, 'application/xml');
           sitemapPages = Array.from(xml.querySelectorAll('url > loc')).map(el => {
             const url = el.textContent.trim();
-            return { url, title: pathToTitle(url), breadcrumb: pathToBreadcrumb(url), body: '' };
+            return { url, title: pathToTitle(url), breadcrumb: pathToBreadcrumb(url) };
           });
           sitemapLoaded = true;
         } catch {
@@ -494,20 +493,9 @@
       if (!sitemapLoaded) { loadSitemap(); return; }
 
       const lower = q.toLowerCase();
-      // Word-boundary regex for body — prevents "ego" matching "category", "negotiation" etc.
-      const bodyRe = new RegExp('\\b' + lower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b');
-      const scored = sitemapPages.reduce((acc, p) => {
-        const inTitle      = p.title.toLowerCase().includes(lower);
-        const inBreadcrumb = p.breadcrumb.toLowerCase().includes(lower);
-        const inUrl        = p.url.toLowerCase().includes(lower);
-        const inBody       = p.body ? bodyRe.test(p.body) : false;
-        if (!inTitle && !inBreadcrumb && !inUrl && !inBody) return acc;
-        const score = (inTitle ? 10 : 0) + (inBreadcrumb || inUrl ? 3 : 0) + (inBody ? 1 : 0);
-        acc.push({ ...p, score });
-        return acc;
-      }, []);
-      scored.sort((a, b) => b.score - a.score);
-      const matches = scored.slice(0, 12);
+      const matches = sitemapPages
+        .filter(p => p.title.toLowerCase().includes(lower))
+        .slice(0, 12);
 
       searchResults.classList.add('visible');
 

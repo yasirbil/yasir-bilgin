@@ -695,7 +695,7 @@ async function loadSitemap() {
   searchResults.classList.add('visible');
   searchResults.innerHTML = '<span class="search-status">Loading pages…</span>';
   try {
-    // Try rich search index first (full-text), fall back to sitemap
+    // Load title index
     const idxRes = await fetch('/assets/search-index.json');
     if (idxRes.ok) {
       const idx = await idxRes.json();
@@ -703,7 +703,6 @@ async function loadSitemap() {
         url:        a.url,
         title:      a.title,
         breadcrumb: [a.section, a.subsec].filter(Boolean).join(' › '),
-        body:       (a.desc + ' ' + a.headings + ' ' + a.body).toLowerCase(),
       }));
     } else {
       // Fallback: sitemap
@@ -713,7 +712,7 @@ async function loadSitemap() {
       const xml    = parser.parseFromString(text, 'application/xml');
       sitemapPages = Array.from(xml.querySelectorAll('url > loc')).map(el => {
         const url = el.textContent.trim();
-        return { url, title: pathToTitle(url), breadcrumb: pathToBreadcrumb(url), body: '' };
+        return { url, title: pathToTitle(url), breadcrumb: pathToBreadcrumb(url) };
       });
     }
     sitemapLoaded = true;
@@ -743,24 +742,9 @@ function runSearch(q) {
   }
 
   const lower = q.toLowerCase();
-  // Word-boundary regex for body — prevents "ego" matching "category", "negotiation" etc.
-  const bodyRe = new RegExp('\\b' + lower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b');
-
-  // Score every page: title match = 10, breadcrumb/url = 3, body only = 1
-  const scored = sitemapPages.reduce((acc, p) => {
-    const inTitle      = p.title.toLowerCase().includes(lower);
-    const inBreadcrumb = p.breadcrumb.toLowerCase().includes(lower);
-    const inUrl        = p.url.toLowerCase().includes(lower);
-    const inBody       = p.body ? bodyRe.test(p.body) : false;
-    if (!inTitle && !inBreadcrumb && !inUrl && !inBody) return acc;
-    const score = (inTitle ? 10 : 0) + (inBreadcrumb || inUrl ? 3 : 0) + (inBody ? 1 : 0);
-    acc.push({ ...p, score });
-    return acc;
-  }, []);
-
-  // Title matches first, then body-only matches
-  scored.sort((a, b) => b.score - a.score);
-  const matches = scored.slice(0, 12);
+  const matches = sitemapPages
+    .filter(p => p.title.toLowerCase().includes(lower))
+    .slice(0, 12);
 
   searchResults.classList.add('visible');
 
@@ -817,20 +801,24 @@ document.addEventListener('click', function(e) {
 setTimeout(loadSitemap, 1000);
 
 // ── Recently Published ───────────────────────────────────────────────────────
-// Source of truth: /assets/recently-published.json
-// Update that file whenever a new article is published.
+// Derived automatically from /assets/search-index.json sorted by datePublished.
+// To surface a new article here, set its JSON-LD "datePublished" to the publish date.
 (async function loadRecent() {
   const strip = document.getElementById('recentStrip');
   try {
-    const res = await fetch('/assets/recently-published.json');
-    if (!res.ok) throw new Error('no recently-published.json');
-    const articles = await res.json();
+    const res = await fetch('/assets/search-index.json');
+    if (!res.ok) throw new Error('no search-index.json');
+    const all = await res.json();
+    const recent = all
+      .filter(e => e.date)
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .slice(0, 4);
     strip.innerHTML = '';
-    if (!articles.length) {
+    if (!recent.length) {
       strip.innerHTML = '<span style="font-size:13px;color:var(--text-faint);">No articles yet.</span>';
       return;
     }
-    articles.slice(0, 4).forEach(item => {
+    recent.forEach(item => {
       const a = document.createElement('a');
       a.className = 'recent-card';
       a.href = item.url;
