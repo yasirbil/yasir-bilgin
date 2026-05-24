@@ -36,6 +36,11 @@
 </script>
 
 <script src="https://yasirbilgin.com/nav.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  }
+</script>
 <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
 <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">

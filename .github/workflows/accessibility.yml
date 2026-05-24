@@ -1,0 +1,32 @@
+name: Accessibility (axe-core)
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  axe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install axe-core CLI
+        run: npm install -g @axe-core/cli
+
+      - name: Wait for GitHub Pages deployment
+        run: sleep 30
+
+      - name: Run axe on homepage
+        run: axe https://yasirbilgin.com --exit
+
+      - name: Run axe on a sample article
+        run: axe https://yasirbilgin.com/spirit/Moral-Psychology/worship-ego-nearness.html --exit
+
+      - name: Run axe on 404 page
+        run: axe https://yasirbilgin.com/404.html --exit

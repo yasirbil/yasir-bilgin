@@ -1,0 +1,26 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for GitHub Pages deployment
+        run: sleep 30
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://yasirbilgin.com
+            https://yasirbilgin.com/spirit/Moral-Psychology/worship-ego-nearness.html
+          budgetPath: .github/lighthouse-budget.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
