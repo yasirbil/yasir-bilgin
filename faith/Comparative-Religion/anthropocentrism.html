@@ -209,7 +209,30 @@
     .axis-row { flex-wrap: wrap; gap: 0.4rem; }
     .axis-arrow { display: none; }
   }
-</style>
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint, #6e5f4e);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint, #5a5750);
+      }
+    }
+  </style>
   <meta name="description" content="Anthropocentrism in Islamic and Western thought — and what happens when the boundary between God and human" />
   <script type="application/ld+json">
 {
@@ -234,7 +257,6 @@
 
 </head>
 <body>
-  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/faith/" style="color:#2d5a4a;text-decoration:none;">Faith</a> <span style="opacity:0.5">›</span> <span>Comparative Religion</span> <span style="opacity:0.5">›</span> <span>Two Centres, Two Skies — Anthropocentrism in Islamic and Western Thought</span></nav>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -265,10 +287,10 @@
 <article style="display:contents">
 
 <header class="hero">
+  <div class="hero-circle">
+      <div class="eyebrow">Faith · Comparative Religion</div></div>
   <div class="hero-circle"></div>
   <div class="hero-circle"></div>
-  <div class="hero-circle"></div>
-  <p class="hero-eyebrow">A Philosophical Essay</p>
   <h1 class="hero-title">Two Centres, <em>Two Skies</em></h1>
   <p class="hero-subtitle">Anthropocentrism in Islamic and Western thought — and what happens when the boundary between God and human dissolves</p>
   <div class="hero-divider"></div>

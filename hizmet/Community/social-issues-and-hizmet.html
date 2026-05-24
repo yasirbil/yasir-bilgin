@@ -252,7 +252,30 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);min-h
 }
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .fade-in{animation:fadeIn 0.3s ease forwards;}
-</style>
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint, #6e5f4e);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint, #5a5750);
+      }
+    }
+  </style>
   <meta name="description" content="The Hizmet movement is a global civic initiative inspired by Turkish-Islamic scholar Fethullah Gülen. Hizmet means &quot;service&quot; — describing both its name…" />
   <script type="application/ld+json">
 {
@@ -277,7 +300,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);min-h
 
 </head>
 <body>
-  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/hizmet/" style="color:#1a4a6b;text-decoration:none;">Hizmet</a> <span style="opacity:0.5">›</span> <span>Society & Renewal</span> <span style="opacity:0.5">›</span> <span>Hizmet × Western Social Issues — Country Explorer</span></nav>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -307,7 +329,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);min-h
 
 <article style="display:contents">
 <div class="hero">
- <div class="hero-tag">Hizmet Community Research</div>
+ <div class="eyebrow">Hizmet · Community</div>
  <h1>Social Issues &amp; <span class="accent">Hizmet</span><span class="line2">Top 10 Issues per Country — 30 Western Nations</span></h1>
  <p class="hero-desc">Each country faces a unique constellation of social challenges. Explore per-country issues, cultural values, partnership opportunities, and how Hizmet can contribute strategically.</p>
  <div class="hero-stats">

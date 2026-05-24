@@ -131,7 +131,30 @@
     table { display: block; overflow-x: auto; max-width: 100%; }
   }
 
-</style>
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint, #6e5f4e);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint, #5a5750);
+      }
+    }
+  </style>
   <meta name="description" content="April 11 – 19 · Kyoto · Nara · Arashiyama · Tokyo ·" />
   <script type="application/ld+json">
 {
@@ -156,7 +179,6 @@
 
 </head>
 <body>
-  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/civilization/" style="color:#7a3b2e;text-decoration:none;">Civilization</a> <span style="opacity:0.5">›</span> <span>World Cultures</span> <span style="opacity:0.5">›</span> <span>Japan Family Trip — Apr 11–19</span></nav>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,11 +209,11 @@
 <article style="display:contents">
 
 <div class="hero">
+  <div class="eyebrow">Civilization · World Cultures</div>
   <div class="hero-flag">🇯🇵</div>
   <h1>Japan Family Trip</h1>
   <p class="hero-sub">April 11 – 19 &nbsp;·&nbsp; Kyoto · Nara · Arashiyama · Tokyo · Nikko</p>
   <div class="hero-tags">
-    <span class="hero-tag">Family of 5</span>
     <span class="hero-tag">Ages 11, 12, 17</span>
     <span class="hero-tag">Calm pace</span>
     <span class="hero-tag">Halal-friendly</span>

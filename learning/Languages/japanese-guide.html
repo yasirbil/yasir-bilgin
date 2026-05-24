@@ -516,7 +516,30 @@
     .writing-grid, .tips-grid, .phrases-grid { grid-template-columns: 1fr; }
     .resources-table { font-size: 0.8rem; }
   }
-</style>
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint, #6e5f4e);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint, #5a5750);
+      }
+    }
+  </style>
   <meta name="description" content="From zero to conversation — a structured guide covering writing systems, grammar, vocabulary, and the mindset to stay" />
   <script type="application/ld+json">
 {
@@ -541,7 +564,6 @@
 
 </head>
 <body>
-  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/learning/" style="color:#7a4f1a;text-decoration:none;">Learning</a> <span style="opacity:0.5">›</span> <span>Languages</span> <span style="opacity:0.5">›</span> <span>Learn Japanese — A Complete Guide</span></nav>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -573,9 +595,9 @@
 
 <!-- HERO -->
 <section class="hero">
+      <div class="eyebrow">Learning · Languages</div>
   <div class="hero-kanji">日</div>
   <div class="hero-content">
-    <p class="hero-eyebrow">A complete beginner's guide</p>
     <h1>Learn <em>Japanese</em></h1>
     <p class="hero-jp">日本語を学ぼう</p>
     <p class="hero-desc">From zero to conversation — a structured guide covering writing systems, grammar, vocabulary, and the mindset to stay motivated.</p>

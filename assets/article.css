@@ -13,8 +13,7 @@
        :root { --accent: #2d5a4a; --accent-rgb: 45, 90, 74; }
      </style>
 
-   The nav breadcrumb is injected automatically by the site
-   builder process. Articles should have an id="main-content"
+   Articles should have an id="main-content"
    on their main article element for the skip-to-content link.
    ============================================================ */
 

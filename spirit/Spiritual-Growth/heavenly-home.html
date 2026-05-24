@@ -274,7 +274,30 @@
     [class*="grid"] { grid-template-columns: 1fr !important; }
   }
 
-</style>
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint, #6e5f4e);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint, #5a5750);
+      }
+    }
+  </style>
   <meta name="description" content="Ten principles from the Risale-i Nur for building a sacred life within ordinary" />
   <script type="application/ld+json">
 {
@@ -299,7 +322,6 @@
 
 </head>
 <body>
-  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/spirit/" style="color:#5c3d6e;text-decoration:none;">Spirit</a> <span style="opacity:0.5">›</span> <span>Spiritual Growth & Inner Transformation</span> <span style="opacity:0.5">›</span> <span>How to Turn Your Home Into a Corner from Heaven</span></nav>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -330,7 +352,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-tag">Spirituality · Home · Risale-i Nur</div>
+    <div class="eyebrow">Spirit · Spiritual Growth</div>
     <h1>How to Turn Your Home Into a <em>Corner from Heaven</em></h1>
     <p class="hero-sub">Ten principles from the Risale-i Nur for building a sacred life within ordinary walls</p>
     <div class="hero-divider"></div>

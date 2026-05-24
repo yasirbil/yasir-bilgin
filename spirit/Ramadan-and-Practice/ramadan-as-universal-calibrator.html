@@ -485,7 +485,30 @@
     .grid-header span:last-child, .grid-row .mechanism { display: none; }
     .night-section { margin: 72px -24px; }
   }
-</style>
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint, #6e5f4e);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint, #5a5750);
+      }
+    }
+  </style>
   <meta name="description" content="What if fasting was not a ritual of deprivation, but a precision instrument for resetting everything that" />
   <script type="application/ld+json">
 {
@@ -510,7 +533,6 @@
 
 </head>
 <body>
-  <nav class="ynb-breadcrumb" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:0.55rem 2rem;font-size:0.78rem;color:#9a9088;font-family:'Source Serif 4',Georgia,serif;line-height:1;"><a href="/spirit/" style="color:#5c3d6e;text-decoration:none;">Spirit</a> <span style="opacity:0.5">›</span> <span>Ramadan & Spiritual Practice</span> <span style="opacity:0.5">›</span> <span>Ramadan as a Universal Calibrator</span></nav>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -543,7 +565,7 @@
 <header class="hero">
   <div class="stars"></div>
   <div class="crescent">☽</div>
-  <div class="hero-tag">Essay · Spirituality · Systems Thinking</div>
+  <div class="eyebrow">Spirit · Ramadan & Practice</div>
   <h1>Ramadan as a <em>Universal Calibrator</em></h1>
   <p class="hero-sub">What if fasting was not a ritual of deprivation, but a precision instrument for resetting everything that drifts?</p>
   <div class="hero-meta">
