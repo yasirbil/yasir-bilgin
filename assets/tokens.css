@@ -1,0 +1,78 @@
+/* ============================================================
+   tokens.css — Design token system for yasirbilgin.com
+   Single source of truth. Import before all other stylesheets.
+
+   Usage:
+     <link rel="stylesheet" href="/assets/tokens.css">
+
+   These tokens are used by section.css and article.css.
+   ============================================================ */
+
+:root {
+  /* ── Typography scale (1.125× augmented fourth) ─────────── */
+  --fs-sm:  0.778rem;   /* ~12.5px — labels, meta, captions   */
+  --fs-md:  0.889rem;   /* ~14px   — UI body, nav              */
+  --fs-base: 1rem;      /* 16px    — default body              */
+  --fs-lg:  1.125rem;   /* ~18px   — lead text                 */
+  --fs-xl:  1.266rem;   /* ~20px   — h3                        */
+  --fs-2xl: 1.424rem;   /* ~23px   — h2 small                  */
+  --fs-3xl: 1.602rem;   /* ~26px   — h2 large                  */
+  --fs-4xl: 1.802rem;   /* ~29px   — h1 small                  */
+
+  /* ── Line heights ────────────────────────────────────────── */
+  --lh-tight:  1.2;     /* display headings                    */
+  --lh-snug:   1.4;     /* subheadings                         */
+  --lh-normal: 1.5;     /* UI labels, nav                      */
+  --lh-relaxed: 1.65;   /* subtitles, lead paragraphs          */
+  --lh-body:   1.8;     /* article body copy                   */
+
+  /* ── Letter spacing ─────────────────────────────────────── */
+  --ls-tight:  -0.02em; /* display headings                    */
+  --ls-normal:  0;      /* body text                           */
+  --ls-label:   0.10em; /* small caps, nav items               */
+  --ls-wide:    0.14em; /* section eyebrows, caps labels       */
+  --ls-wider:   0.18em; /* article eyebrows                    */
+
+  /* ── Spacing scale ───────────────────────────────────────── */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* ── Border radius ───────────────────────────────────────── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────────────── */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg:  0 8px 24px rgba(0,0,0,0.12);
+
+  /* ── Z-index scale ───────────────────────────────────────── */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-dropdown: 100;
+  --z-sticky:  200;
+  --z-overlay: 300;
+  --z-nav:     900;
+  --z-toast:   1000;
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --ease-out:  cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-in:   cubic-bezier(0.4, 0.0, 1.0, 1);
+  --ease:      cubic-bezier(0.4, 0.0, 0.2, 1);
+  --duration-fast:   0.12s;
+  --duration-normal: 0.2s;
+  --duration-slow:   0.4s;
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --content-w:    820px;
+  --content-w-lg: 1100px;
+  --nav-h:        62px;
+}

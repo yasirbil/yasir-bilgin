@@ -445,7 +445,7 @@ function render() {
   const cardsEl = document.getElementById('cards');
 
   if (!slice.length) {
-    cardsEl.innerHTML = `<div class="empty"><div class="empty-icon">📚</div><h3>No papers found</h3><p>Try adjusting your search or filters.</p></div>`;
+    cardsEl.innerHTML = `<div class="empty"><div class="empty-icon">📚</div><h2>No papers found</h2><p>Try adjusting your search or filters.</p></div>`;
   } else {
     cardsEl.innerHTML = slice.map((r,i) => {
       // Use index-safe data attributes for card-level click handlers

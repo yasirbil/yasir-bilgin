@@ -349,7 +349,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);min-h
  <!-- GLOSSARY -->
  <div class="glossary-section" id="glossarySection">
   <div class="panel-header" onclick="togglePanel('glossarySection')">
-   <h3>📖 Hizmet — Primer &amp; Key Concepts</h3>
+   <h2>📖 Hizmet — Primer &amp; Key Concepts</h2>
    <span class="panel-tag">Foundations</span>
    <span class="panel-toggle">▾</span>
   </div>
@@ -378,7 +378,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);min-h
    </div>
    <div class="gtab-panel" id="gtab-history">
     <div class="timeline-list">
-     <div class="tl-item"><span class="tl-year">1941</span><div class="tl-content"><h4>Fethullah Gülen Born</h4><p>Born in Korucuk village, Erzurum, Turkey. A devout family shaped his synthesis of Islamic spirituality and civic engagement.</p></div></div>
+     <div class="tl-item"><span class="tl-year">1941</span><div class="tl-content"><h3>Fethullah Gülen Born</h3><p>Born in Korucuk village, Erzurum, Turkey. A devout family shaped his synthesis of Islamic spirituality and civic engagement.</p></div></div>
      <div class="tl-item"><span class="tl-year">1960s</span><div class="tl-content"><h4>Preaching &amp; Early Community</h4><p>Gülen preaches across Turkey, attracting students drawn to education, interfaith tolerance, and civic responsibility.</p></div></div>
      <div class="tl-item"><span class="tl-year">1970s</span><div class="tl-content"><h4>First Institutions</h4><p>Student houses and tutoring centers (dershanes) emerge — quality education for students from all backgrounds.</p></div></div>
      <div class="tl-item"><span class="tl-year">1980s</span><div class="tl-content"><h4>School Networks Grow</h4><p>Hizmet schools spread across Turkey: rigorous academics + character formation + community service.</p></div></div>
@@ -997,7 +997,7 @@ function renderContent(c) {
   const pp = PARTNERSHIPS[issue.cat] || PARTNERSHIPS['social'];
   const partnerHtml = `
    <div class="partners-panel">
-    <h5>🤝 Partnership Opportunities</h5>
+    <h4>🤝 Partnership Opportunities</h4>
     <div class="partners-grid">
      <div class="partner-group">
       <div class="partner-group-label"><span>🌍</span> NGOs & INGOs</div>
@@ -1033,7 +1033,7 @@ function renderContent(c) {
    <div class="issue-row-body">
     <p class="issue-full-desc">${issue.desc}</p>
     <div class="info-block">
-     <h5>Root Causes</h5>
+     <h4>Root Causes</h4>
      <div class="causes-tags">${causesHtml}</div>
     </div>
     <div class="hizmet-panel">
@@ -1068,7 +1068,7 @@ function renderContent(c) {
    <div class="values-body">
     <div class="values-summary"><p>${vals.summary}</p></div>
     <div class="values-grid">${valCardsHtml}</div>
-    ${tensionsHtml ? `<div class="values-tensions"><h5>⚡ Core Cultural Tensions</h5><div class="tensions-grid">${tensionsHtml}</div></div>` : ''}
+    ${tensionsHtml ? `<div class="values-tensions"><h4>⚡ Core Cultural Tensions</h4><div class="tensions-grid">${tensionsHtml}</div></div>` : ''}
     <div class="values-hizmet"><h5>⬡ How Hizmet Engages These Values</h5><p>${vals.hizmet}</p></div>
    </div>
   </div>`;

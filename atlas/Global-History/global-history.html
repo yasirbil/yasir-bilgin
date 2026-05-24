@@ -714,7 +714,7 @@ function render() {
   const grid = document.getElementById("timeline-grid");
   grid.innerHTML = "";
   if (items.length === 0) {
-    grid.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><h3>No events found</h3><p>Try adjusting your filters or search.</p></div>`;
+    grid.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><h2>No events found</h2><p>Try adjusting your filters or search.</p></div>`;
     return;
   }
   const frag = document.createDocumentFragment();

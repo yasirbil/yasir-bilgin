@@ -56,7 +56,7 @@
   --border-strong: rgba(0,0,0,0.24);
   --text: #1a1a18;
   --text-muted: #7a7872;
-  --text-faint: #b0ada5;
+  --text-faint: #746f66;
   --accent: #2d4a3e;
   --accent-light: #e8f0ec;
   --radius-md: 10px;
@@ -279,6 +279,10 @@ body {
   text-transform: uppercase;
   color: var(--text-faint);
   white-space: nowrap;
+  /* Reset h2 defaults so it still looks like a label */
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  line-height: inherit;
 }
 
 .section-line {
@@ -506,7 +510,7 @@ body {
 <!-- RECENTLY PUBLISHED -->
 <div class="section-wrap" style="padding-top: 1.5rem; padding-bottom: 0;">
   <div class="section-header">
-    <span class="section-label">Recently Published</span>
+    <h2 class="section-label">Recently Published</h2>
     <div class="section-line"></div>
   </div>
   <div class="recent-strip" id="recentStrip">
@@ -520,7 +524,7 @@ body {
 <!-- BROWSE SECTIONS -->
 <div class="section-wrap" style="padding-top: 1.5rem;">
   <div class="section-header">
-    <span class="section-label">Browse all sections</span>
+    <h2 class="section-label">Browse all sections</h2>
     <div class="section-line"></div>
   </div>
   <div class="grid" id="cardGrid"></div>
@@ -529,7 +533,7 @@ body {
 <!-- REFERENCES & TOOLS -->
 <div class="section-wrap" style="padding-bottom: 4rem;">
   <div class="section-header">
-    <span class="section-label">References &amp; Tools</span>
+    <h2 class="section-label">References &amp; Tools</h2>
     <div class="section-line"></div>
   </div>
   <div class="ref-grid" id="refGrid"></div>
@@ -781,8 +785,22 @@ searchInput.addEventListener('input', function() {
 
 searchBtn.addEventListener('click', () => runSearch(searchInput.value.trim()));
 searchInput.addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') runSearch(this.value.trim());
+  if (e.key === 'Enter')  runSearch(this.value.trim());
   if (e.key === 'Escape') { searchResults.classList.remove('visible'); searchResults.innerHTML = ''; }
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    const first = searchResults.querySelector('.search-result-item');
+    if (first) first.focus();
+  }
+});
+
+// Arrow-key navigation within results
+searchResults.addEventListener('keydown', function(e) {
+  const items = Array.from(this.querySelectorAll('.search-result-item'));
+  const idx   = items.indexOf(document.activeElement);
+  if (e.key === 'ArrowDown')  { e.preventDefault(); items[Math.min(idx + 1, items.length - 1)]?.focus(); }
+  if (e.key === 'ArrowUp')    { e.preventDefault(); idx > 0 ? items[idx - 1].focus() : searchInput.focus(); }
+  if (e.key === 'Escape')     { searchResults.classList.remove('visible'); searchResults.innerHTML = ''; searchInput.focus(); }
 });
 
 document.addEventListener('click', function(e) {

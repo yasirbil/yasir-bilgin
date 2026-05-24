@@ -28,7 +28,7 @@
   --surface:    #ffffff;
   --ink:        #1a1410;
   --mid:        #6b5d4f;
-  --faint:      #a89880;
+  --faint:      #6e5f4e;   /* 5.57:1 on --bg — WCAG AA ✓ */
   --rule:       rgba(107,93,79,0.15);
 
   /* Section accent — override per section */

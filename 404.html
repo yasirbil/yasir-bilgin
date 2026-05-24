@@ -38,7 +38,7 @@
       --border-strong: rgba(0,0,0,0.24);
       --text: #1a1a18;
       --text-muted: #7a7872;
-      --text-faint: #b0ada5;
+      --text-faint: #746f66;
       --accent: #2d4a3e;
       --accent-light: #e8f0ec;
       --radius-md: 10px;
@@ -538,6 +538,20 @@
     searchInput.addEventListener('keydown', function (e) {
       if (e.key === 'Enter')  runSearch(this.value.trim());
       if (e.key === 'Escape') { searchResults.classList.remove('visible'); searchResults.innerHTML = ''; }
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const first = searchResults.querySelector('.search-result-item');
+        if (first) first.focus();
+      }
+    });
+
+    // Arrow-key navigation within results
+    searchResults.addEventListener('keydown', function (e) {
+      const items = Array.from(this.querySelectorAll('.search-result-item'));
+      const idx   = items.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown')  { e.preventDefault(); items[Math.min(idx + 1, items.length - 1)]?.focus(); }
+      if (e.key === 'ArrowUp')    { e.preventDefault(); idx > 0 ? items[idx - 1].focus() : searchInput.focus(); }
+      if (e.key === 'Escape')     { searchResults.classList.remove('visible'); searchResults.innerHTML = ''; searchInput.focus(); }
     });
 
     document.addEventListener('click', function (e) {
