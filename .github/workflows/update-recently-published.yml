@@ -1,12 +1,12 @@
 name: Update Recently Published
 
-# Runs whenever an article HTML file is pushed to main.
+# Runs whenever an article HTML file is pushed to master.
 # Regenerates assets/recently-published.json from git history
 # (the 4 most recently *added* articles, newest first).
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - 'arts/**/*.html'
       - 'atlas/**/*.html'
@@ -42,5 +42,5 @@ jobs:
             echo "recently-published.json is already up to date — nothing to commit."
           else
             git commit -m "chore: update recently-published.json [skip ci]"
-            git push origin main
+            git push origin master
           fi
