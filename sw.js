@@ -4,7 +4,7 @@
    visits and works offline for previously visited pages.
    ============================================================ */
 
-const CACHE = 'ynb-v1';
+const CACHE = 'ynb-v2';
 const SHELL = [
   '/',
   '/index.html',
@@ -14,7 +14,6 @@ const SHELL = [
   '/assets/tokens.css',
   '/assets/section.css',
   '/assets/article.css',
-  '/assets/recently-published.json',
   '/assets/search-index.json',
 ];
 
