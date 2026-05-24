@@ -20,7 +20,15 @@ jobs:
         with:
           urls: |
             https://yasirbilgin.com
-            https://yasirbilgin.com/spirit/Moral-Psychology/worship-ego-nearness.html
+            https://yasirbilgin.com/arts/Aesthetics/home-design-philosophies.html
+            https://yasirbilgin.com/atlas/Big-Questions/nursi-big-questions.html
+            https://yasirbilgin.com/civilization/Civilizations/atlas-of-melody-Muslim-World.html
+            https://yasirbilgin.com/faith/Comparative-Religion/anthropocentrism.html
+            https://yasirbilgin.com/hizmet/Community/social-issues-and-hizmet.html
+            https://yasirbilgin.com/learning/Languages/arabic-balaghah.html
+            https://yasirbilgin.com/life/Family/family-therapy.html
+            https://yasirbilgin.com/spirit/Ahlak-and-Virtue/moral-distortion-framework.html
+            https://yasirbilgin.com/tech/AI-and-MLOps/ai-field-guide.html
           budgetPath: .github/lighthouse-budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
