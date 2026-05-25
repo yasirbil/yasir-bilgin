@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qurʾānic Vocabulary Explorer | Yasir Bilgin</title>
+  <title>Gharīb al-Qurʾān — Rare Vocabulary Explorer | Yasir Bilgin</title>
 
-  <meta name="description" content="Explore frequent Qurʾānic vocabulary by Arabic word, root, meaning, verse usage, and related semantic families across the Qurʾān.">
+  <meta name="description" content="Explore 200 rare and difficult Qurʾānic words (gharīb al-Qurʾān) — corpus-derived hapax legomena with verse context, Arabic surface form, and related words.">
   <link rel="canonical" href="https://yasirbilgin.com/faith/Quran-and-Hadith/quranic-vocabulary-explorer.html">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Qurʾānic Vocabulary Explorer">
-  <meta property="og:description" content="Explore frequent Qurʾānic vocabulary by Arabic word, root, meaning, verse usage, and related semantic families across the Qurʾān.">
+  <meta property="og:title" content="Gharīb al-Qurʾān — Rare Vocabulary Explorer">
+  <meta property="og:description" content="Explore 200 rare and difficult Qurʾānic words (gharīb al-Qurʾān) — corpus-derived hapax legomena with verse context, Arabic surface form, and related words.">
   <meta property="og:url" content="https://yasirbilgin.com/faith/Quran-and-Hadith/quranic-vocabulary-explorer.html">
   <meta property="og:image" content="https://yasirbilgin.com/assets/images/social-preview.jpg">
-  <meta property="og:image:alt" content="Qurʾānic Vocabulary Explorer">
+  <meta property="og:image:alt" content="Gharīb al-Qurʾān Vocabulary Explorer">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Qurʾānic Vocabulary Explorer">
-  <meta name="twitter:description" content="Explore frequent Qurʾānic vocabulary by Arabic word, root, meaning, verse usage, and related semantic families across the Qurʾān.">
+  <meta name="twitter:title" content="Gharīb al-Qurʾān — Rare Vocabulary Explorer">
+  <meta name="twitter:description" content="Explore 200 rare and difficult Qurʾānic words (gharīb al-Qurʾān) — corpus-derived hapax legomena with verse context, Arabic surface form, and related words.">
   <meta name="twitter:image" content="https://yasirbilgin.com/assets/images/social-preview.jpg">
 
   <script src="https://yasirbilgin.com/nav.js"></script>
@@ -661,7 +661,7 @@
         </div>
         <ul class="toc-list">
           <li><a href="#explorer" class="toc-main">I. Vocabulary Explorer</a></li>
-          <li><a href="#data-model" class="toc-main">II. Data Model for 500 Words</a></li>
+          <li><a href="#data-model" class="toc-main">II. Data Model for 200 Words</a></li>
           <li><a href="#workflow" class="toc-main">III. How to Maintain the Dataset</a></li>
         </ul>
       </div>
@@ -669,8 +669,8 @@
 
     <section class="hero">
       <div class="eyebrow">Faith · Qurʾān &amp; Hadith</div>
-      <h1>Qurʾānic <em>Vocabulary</em> Explorer</h1>
-      <p class="hero-sub">A searchable page for the most frequent Qurʾānic vocabulary: choose a word, see where it appears, then compare related meanings across other verses.</p>
+      <h1>Gharīb al-Qurʾān — <em>Rare Vocabulary</em> Explorer</h1>
+      <p class="hero-sub">A searchable reference for 200 rare and difficult Qurʾānic words — corpus-derived hapax legomena, each shown with its verse context, Arabic form, and related surface forms awaiting classical lexicon review.</p>
       <div class="hero-actions">
         <a class="primary-btn" href="#explorer">Open explorer →</a>
         <a class="soft-btn" href="#data-model">View data format</a>
@@ -686,22 +686,21 @@
     <article class="article-body">
       <section id="explorer" class="major-section">
         <span class="section-label">Section I</span>
-        <h2>Search the <em>Core Vocabulary</em></h2>
-        <p class="lead">This version loads a separate corpus-derived dataset from <code>/assets/data/quran-vocabulary-500.json</code>. The initial export contains 500 high-frequency Arabic surface forms with real verse references and representative usages.</p>
+        <h2>Search the <em>Gharīb Vocabulary</em></h2>
+        <p class="lead">Loads <code>/assets/data/quran-gharib-vocabulary-200.json</code> — 200 corpus-derived hapax legomena from the Qurʾān. Meanings are working glosses; verify against classical sources such as al-Rāghib al-Iṣfahānī's <em>al-Mufradāt</em> before treating as authoritative.</p>
 
-        <div class="explorer-shell" aria-label="Qurʾānic vocabulary search explorer">
+        <div class="explorer-shell" aria-label="Gharīb al-Qurʾān vocabulary search explorer">
           <aside class="panel search-panel">
             <div class="search-controls">
-              <label class="small-muted" for="wordSearch">Search Arabic, root, transliteration, or meaning</label>
-              <input id="wordSearch" class="search-input" type="search" placeholder="Search: mercy, rahmah, رحم..." autocomplete="off">
+              <label class="small-muted" for="wordSearch">Search Arabic word or English gloss</label>
+              <input id="wordSearch" class="search-input" type="search" placeholder="Search: Arabic word or meaning..." autocomplete="off">
               <div class="filter-row">
-                <select id="themeFilter" class="filter-select" aria-label="Filter by semantic theme">
+                <select id="themeFilter" class="filter-select" aria-label="Filter by semantic theme" style="display:none">
                   <option value="all">All themes</option>
                 </select>
-                <select id="sortSelect" class="filter-select" aria-label="Sort vocabulary list">
-                  <option value="rank">Sort by frequency rank</option>
-                  <option value="count">Sort by occurrence count</option>
-                  <option value="alpha">Sort by English meaning</option>
+                <select id="sortSelect" class="filter-select" aria-label="Sort vocabulary list" style="grid-column:1/-1">
+                  <option value="rank">Sort by corpus rank</option>
+                  <option value="alpha">Sort by Arabic word</option>
                 </select>
               </div>
             </div>
@@ -716,8 +715,8 @@
 
       <section id="data-model" class="major-section">
         <span class="section-label">Section II</span>
-        <h2>Data Model for the <em>500-Word</em> List</h2>
-        <p class="lead">The page is designed so the visual interface stays stable while the vocabulary grows. Each word should have its rank, Arabic form, root, meanings, selected verse usages, and semantic relatives.</p>
+        <h2>Data Model for the <em>200-Word</em> Gharīb List</h2>
+        <p class="lead">Each entry is a corpus-derived hapax legomenon — a surface form appearing only once in the parsed Qurʾān text. Meanings are working glosses that need review against classical gharīb lexica before being treated as authoritative.</p>
 
         <div class="table-wrap">
           <table class="schema-table">
@@ -725,15 +724,17 @@
               <tr><th>Field</th><th>Purpose</th><th>Example</th></tr>
             </thead>
             <tbody>
-              <tr><td><code>rank</code></td><td>Frequency rank from 1 to 500.</td><td><code>1</code></td></tr>
-              <tr><td><code>arabic</code></td><td>Main Arabic lemma or vocabulary form.</td><td><code>اللَّه</code></td></tr>
-              <tr><td><code>root</code></td><td>Arabic root where applicable.</td><td><code>ر ح م</code></td></tr>
-              <tr><td><code>transliteration</code></td><td>Readable Latin transliteration.</td><td><code>raḥmah</code></td></tr>
-              <tr><td><code>meaning</code></td><td>Concise English meaning.</td><td><code>mercy, compassion</code></td></tr>
-              <tr><td><code>theme</code></td><td>Semantic family for filtering.</td><td><code>Divine Attributes</code></td></tr>
-              <tr><td><code>occurrences</code></td><td>Approximate or verified count from your corpus.</td><td><code>339</code></td></tr>
-              <tr><td><code>usages</code></td><td>Representative verse examples with Arabic phrase and translation.</td><td><code>2:37, 7:156, 21:107</code></td></tr>
-              <tr><td><code>similar</code></td><td>Words with related meanings and cross-references.</td><td><code>رأفة, غفران, لطف</code></td></tr>
+              <tr><td><code>rank</code></td><td>Corpus rank among rare forms (1 = first encountered).</td><td><code>1</code></td></tr>
+              <tr><td><code>arabic</code></td><td>Arabic surface form as it appears in the corpus.</td><td><code>نستعين</code></td></tr>
+              <tr><td><code>root</code></td><td>Arabic root — not yet populated; add from a reviewed lexicon.</td><td><code>ع و ن</code></td></tr>
+              <tr><td><code>transliteration</code></td><td>Latin transliteration — not yet populated.</td><td><code>nastaʿīn</code></td></tr>
+              <tr><td><code>meaning</code></td><td>Working English gloss — requires scholarly lexicon review.</td><td><code>we seek help</code></td></tr>
+              <tr><td><code>rarity</code></td><td>Frequency characterisation from corpus analysis.</td><td><code>hapax legomenon / appears once</code></td></tr>
+              <tr><td><code>garib_reason</code></td><td>Explanation of why the form was selected as a gharīb candidate.</td><td><code>Normalized surface form is hapax in parsed corpus…</code></td></tr>
+              <tr><td><code>occurrences</code></td><td>Corpus occurrence count (1 for all current entries).</td><td><code>1</code></td></tr>
+              <tr><td><code>usages</code></td><td>Verse context — <code>ref</code>, <code>surah</code>, <code>phrase</code> (Arabic), <code>translation</code>, <code>match</code>.</td><td><code>1:5</code></td></tr>
+              <tr><td><code>similar</code></td><td>Surface-form neighbors — semantic similarity unverified.</td><td><code>نستحوذ</code></td></tr>
+              <tr><td><code>notes</code></td><td>Free-text notes for enrichment reminders or observations.</td><td>Optional string</td></tr>
             </tbody>
           </table>
         </div>
@@ -743,8 +744,8 @@
         <span class="section-label">Section III</span>
         <h2>Suggested <em>Maintenance</em> Workflow</h2>
         <div class="note-card">
-          <p><strong>Current data flow:</strong> the explorer fetches <code>/assets/data/quran-vocabulary-500.json</code> on page load. Edit that file to add or correct entries — no rebuild needed, just refresh the page.</p>
-          <p class="small-muted">Recommended fields per entry: rank, arabic, root, transliteration, meaning, theme, occurrences, usages (array of verse objects), similar (array of related word objects), and an optional notes string.</p>
+          <p><strong>Current data flow:</strong> the explorer fetches <code>/assets/data/quran-gharib-vocabulary-200.json</code> on page load. Edit that file to enrich entries — no rebuild needed, just refresh the page.</p>
+          <p class="small-muted">Priority enrichment: add verified <code>root</code>, <code>transliteration</code>, and <code>meaning</code> for each entry using al-Rāghib al-Iṣfahānī's <em>al-Mufradāt</em>, Ibn Qutaybah's <em>Tafsīr Gharīb al-Qurʾān</em>, or the Quranic Arabic Corpus. The <code>data_quality</code> object in each entry records what still needs review.</p>
         </div>
       </section>
     </article>
@@ -768,7 +769,7 @@
     // ── Data loading ──────────────────────────────────────────────────────────
     async function loadVocabulary() {
       try {
-        const res = await fetch('/assets/data/quran-vocabulary-500.json');
+        const res = await fetch('/assets/data/quran-gharib-vocabulary-200.json');
         if (!res.ok) throw new Error('Dataset not found');
         const data = await res.json();
         // Support both flat array and { metadata, items } envelope
@@ -800,12 +801,11 @@
       const q     = normalized(searchInput.value.trim());
       const theme = themeFilter.value;
       let results = vocabulary.filter(item => {
-        const s = normalized([item.arabic, item.root, item.transliteration, item.meaning, item.theme, item.notes].join(' '));
-        return (!q || s.includes(q)) && (theme === 'all' || item.theme === theme);
+        const s = normalized([item.arabic, item.meaning, item.notes].join(' '));
+        return !q || s.includes(q);
       });
       const sort = sortSelect.value;
-      if      (sort === 'count') results.sort((a, b) => b.occurrences - a.occurrences);
-      else if (sort === 'alpha') results.sort((a, b) => a.meaning.localeCompare(b.meaning));
+      if      (sort === 'alpha') results.sort((a, b) => a.arabic.localeCompare(b.arabic, 'ar'));
       else                       results.sort((a, b) => a.rank - b.rank);
       return results;
     }
@@ -824,7 +824,7 @@
           <span class="rank">${item.rank}</span>
           <span>
             <span class="arabic-word" lang="ar" dir="rtl">${item.arabic}</span>
-            <span class="word-meta">${item.transliteration} · ${item.meaning}</span>
+            <span class="word-meta">${item.meaning || 'Gloss pending review'}</span>
           </span>
           <span class="count-pill">${item.occurrences ?? '—'}</span>
         </button>
@@ -851,20 +851,24 @@
         `<span class="tag" lang="ar">${s.arabic ?? s}</span>`
       ).join('');
 
+      const rarityBadge = word.rarity
+        ? `<span class="tag" style="font-size:0.72rem;opacity:0.8">${word.rarity}</span>`
+        : '';
       detailView.innerHTML = `
         <div class="detail-hero">
           <div class="detail-grid">
             <div>
               <p class="chosen-arabic" lang="ar" dir="rtl">${word.arabic}</p>
               <p class="chosen-meaning">${word.meaning}</p>
+              ${word.garib_reason ? `<p class="small-muted" style="margin-top:0.4rem;font-size:0.8rem">${word.garib_reason}</p>` : ''}
             </div>
+            ${word.root || word.transliteration ? `
             <div class="root-box">
-              <span class="root-label">Root</span>
-              <span class="root-value" lang="ar" dir="rtl">${word.root || '—'}</span>
-              <span class="root-label" style="margin-top:0.5rem">${word.transliteration || ''}</span>
-            </div>
+              ${word.root ? `<span class="root-label">Root</span><span class="root-value" lang="ar" dir="rtl">${word.root}</span>` : ''}
+              ${word.transliteration ? `<span class="root-label" style="margin-top:0.5rem">${word.transliteration}</span>` : ''}
+            </div>` : ''}
           </div>
-          ${tags ? `<div class="semantic-tags">${tags}</div>` : ''}
+          ${rarityBadge || tags ? `<div class="semantic-tags">${rarityBadge}${tags}</div>` : ''}
         </div>
         <div class="tabs">
           <button class="tab-btn ${state.tab==='usage'   ? 'active' : ''}" data-tab="usage">Verse Usage</button>
@@ -892,7 +896,7 @@
               <span class="ref">${u.ref ?? ''}</span>
               <span class="surah">${u.surah ?? ''}</span>
             </div>
-            <p class="arabic-line" lang="ar" dir="rtl">${u.arabic ?? ''}</p>
+            <p class="arabic-line" lang="ar" dir="rtl">${u.phrase ?? u.arabic ?? ''}</p>
             <p class="translation">${u.translation ?? ''}</p>
           </div>`).join('') + '</div>';
       }
