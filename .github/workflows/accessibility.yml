@@ -24,8 +24,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install axe-core CLI
-        run: npm install -g @axe-core/cli
+      - name: Install axe-core CLI and matching ChromeDriver
+        run: |
+          npm install -g @axe-core/cli
+          npx browser-driver-manager install chrome
 
       - name: Wait for GitHub Pages deployment
         run: sleep 30
