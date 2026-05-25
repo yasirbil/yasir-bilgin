@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qurʾānic Vocabulary Explorer | Yasir Bilgin</title>
+
+  <meta name="description" content="Explore frequent Qurʾānic vocabulary by Arabic word, root, meaning, verse usage, and related semantic families across the Qurʾān.">
+  <link rel="canonical" href="https://yasirbilgin.com/faith/Quran-and-Hadith/quranic-vocabulary-explorer.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Qurʾānic Vocabulary Explorer">
+  <meta property="og:description" content="Explore frequent Qurʾānic vocabulary by Arabic word, root, meaning, verse usage, and related semantic families across the Qurʾān.">
+  <meta property="og:url" content="https://yasirbilgin.com/faith/Quran-and-Hadith/quranic-vocabulary-explorer.html">
+  <meta property="og:image" content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt" content="Qurʾānic Vocabulary Explorer">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qurʾānic Vocabulary Explorer">
+  <meta name="twitter:description" content="Explore frequent Qurʾānic vocabulary by Arabic word, root, meaning, verse usage, and related semantic families across the Qurʾān.">
+  <meta name="twitter:image" content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Qurʾānic Vocabulary Explorer",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-05-24",
+    "dateModified": "2026-05-24",
+    "description": "Explore frequent Qurʾānic vocabulary by Arabic word, root, meaning, verse usage, and related semantic families across the Qurʾān.",
+    "url": "https://yasirbilgin.com/faith/Quran-and-Hadith/quranic-vocabulary-explorer.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Faith", "item": "https://yasirbilgin.com/faith/" },
+      { "@type": "ListItem", "position": 3, "name": "Qurʾānic Vocabulary Explorer", "item": "https://yasirbilgin.com/faith/Quran-and-Hadith/quranic-vocabulary-explorer.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --paper: #fffaf2;
+      --ink: #2f2a23;
+      --muted: #6e5f4e;
+      --faint: #6e5f4e;
+      --line: rgba(91, 72, 52, 0.16);
+      --accent: #8a5a2b;
+      --accent-2: #2f6b59;
+      --gold: #b8872e;
+      --soft: rgba(138, 90, 43, 0.08);
+      --shadow: 0 24px 80px rgba(47, 42, 35, 0.10);
+      --content-w: 1180px;
+      --nav-h: 62px;
+      color-scheme: light dark;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #131310;
+        --paper: #1e1b17;
+        --ink: #ece3d5;
+        --muted: #a8a098;
+        --faint: #a8a098;
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #d3a160;
+        --accent-2: #75b9a0;
+        --gold: #e0b957;
+        --soft: rgba(211, 161, 96, 0.10);
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(184,135,46,0.12), transparent 36rem),
+        radial-gradient(circle at bottom right, rgba(47,107,89,0.10), transparent 40rem),
+        var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    a, button, input, select { font: inherit; }
+    a { color: inherit; }
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      width: 0%;
+      z-index: 100;
+    }
+
+    .hero {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 6.5rem 2.5rem 3rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      max-width: 940px;
+      margin: 0;
+      font-size: clamp(2.45rem, 7vw, 5.6rem);
+    }
+
+    h1 em, h2 em { color: var(--accent); font-style: italic; }
+
+    .hero-sub {
+      max-width: 780px;
+      margin: 1.35rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+
+    .hero-rule {
+      max-width: calc(var(--content-w) - 5rem);
+      margin: 0 auto;
+      border: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 0.75rem 2.5rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .toc-btn,
+    .primary-btn,
+    .soft-btn {
+      min-height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      padding: 0.65rem 1rem;
+      cursor: pointer;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .primary-btn {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: transparent;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .soft-btn, .toc-btn {
+      background: rgba(255,255,255,0.35);
+      color: var(--ink);
+    }
+
+    .toc-btn:hover,
+    .primary-btn:hover,
+    .soft-btn:hover { transform: translateY(-1px); }
+
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+
+    .toc-panel {
+      width: min(420px, calc(100vw - 2rem));
+      max-height: calc(100vh - 2rem);
+      overflow: auto;
+      margin: 1rem;
+      padding: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .toc-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .toc-panel h3 { margin: 0; font-size: 1.25rem; }
+    .toc-close { border: 1px solid var(--line); background: transparent; border-radius: 999px; min-width: 44px; min-height: 44px; cursor: pointer; }
+    .toc-list { list-style: none; padding: 0; margin: 0; }
+    .toc-list a {
+      display: block;
+      min-height: 44px;
+      padding: 0.7rem 0.4rem;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-main { color: var(--ink) !important; font-weight: 700; }
+
+    .article-body {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 3rem 2.5rem 7rem;
+    }
+
+    section[id] { scroll-margin-top: 90px; }
+
+    .major-section {
+      margin-top: 4rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    .lead {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .explorer-shell {
+      display: grid;
+      grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,250,242,0.72);
+      box-shadow: 0 16px 48px rgba(47,42,35,0.07);
+      overflow: hidden;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .panel { background: rgba(30,27,23,0.74); }
+      .soft-btn, .toc-btn { background: rgba(255,255,255,0.05); color: var(--ink); }
+      .primary-btn { background: #ece3d5; color: #1e1b17; }
+    }
+
+    .search-panel {
+      position: sticky;
+      top: 82px;
+      align-self: start;
+      max-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .search-controls {
+      padding: 1rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-input,
+    .filter-select {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 0.7rem 0.85rem;
+    }
+
+    .filter-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-top: 0.7rem;
+    }
+
+    .word-list {
+      overflow: auto;
+      padding: 0.4rem;
+    }
+
+    .word-card {
+      width: 100%;
+      border: 0;
+      border-radius: 18px;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      padding: 0.85rem;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .word-card:hover,
+    .word-card.active { background: var(--soft); }
+
+    .rank {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .arabic-word {
+      display: block;
+      font-family: 'Source Serif 4', 'Amiri', Georgia, serif;
+      font-size: 1.55rem;
+      line-height: 1.1;
+      direction: rtl;
+    }
+
+    .word-meta {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
+    .count-pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.25rem 0.5rem;
+      color: var(--muted);
+      font-size: 0.76rem;
+      white-space: nowrap;
+    }
+
+    .detail-panel { min-height: 620px; }
+
+    .detail-hero {
+      padding: 1.4rem;
+      background:
+        linear-gradient(135deg, rgba(138,90,43,0.12), transparent),
+        linear-gradient(45deg, rgba(47,107,89,0.10), transparent);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1rem;
+      align-items: end;
+    }
+
+    .chosen-arabic {
+      margin: 0;
+      font-family: 'Source Serif 4', 'Amiri', Georgia, serif;
+      font-size: clamp(3rem, 8vw, 6.2rem);
+      direction: rtl;
+      line-height: 1;
+    }
+
+    .chosen-meaning {
+      margin: 0.6rem 0 0;
+      font-size: 1.25rem;
+      color: var(--ink);
+    }
+
+    .root-box {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      background: rgba(255,255,255,0.36);
+    }
+
+    .root-label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .root-value {
+      display: block;
+      margin-top: 0.3rem;
+      font-family: 'Source Serif 4', 'Amiri', Georgia, serif;
+      font-size: 2rem;
+      direction: rtl;
+    }
+
+    .semantic-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.28rem 0.65rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+      background: rgba(255,255,255,0.28);
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 1rem 1rem 0;
+    }
+
+    .tab-btn {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      padding: 0.55rem 0.85rem;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: transparent;
+    }
+
+    .tab-content { padding: 1rem 1.2rem 1.4rem; }
+
+    .usage-list, .similar-list { display: grid; gap: 0.85rem; }
+
+    .verse-card, .similar-card, .note-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      background: rgba(255,255,255,0.24);
+    }
+
+    .verse-top, .similar-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.7rem;
+      align-items: baseline;
+      margin-bottom: 0.65rem;
+    }
+
+    .ref {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .surah {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .arabic-line {
+      margin: 0.3rem 0;
+      font-family: 'Source Serif 4', 'Amiri', Georgia, serif;
+      font-size: 1.55rem;
+      line-height: 1.9;
+      direction: rtl;
+      text-align: right;
+    }
+
+    mark {
+      border-radius: 0.35rem;
+      padding: 0 0.18rem;
+      background: rgba(184,135,46,0.25);
+      color: inherit;
+    }
+
+    .translation {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .small-muted { color: var(--muted); font-size: 0.86rem; }
+
+    .empty-state {
+      padding: 2rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .schema-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.8rem;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85em;
+      background: var(--soft);
+      border-radius: 6px;
+      padding: 0.1rem 0.25rem;
+    }
+
+    footer {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.86rem;
+    }
+
+    .footer-logo {
+      font-family: 'Source Serif 4', Georgia, serif;
+      color: var(--ink);
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 900px) {
+      .explorer-shell { grid-template-columns: 1fr; }
+      .search-panel { position: static; max-height: none; }
+      .word-list { max-height: 460px; }
+      .detail-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 4.5rem 1.4rem 2.4rem; }
+      .article-body { padding: 2rem 1.1rem 5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .filter-row { grid-template-columns: 1fr; }
+      .hero-rule { max-width: calc(100% - 2.8rem); }
+      .detail-hero, .tab-content { padding: 1rem; }
+      .arabic-line { font-size: 1.32rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <div class="progress-bar" id="progressBar"></div>
+
+    <div class="toc-overlay" id="tocOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+      <div class="toc-panel">
+        <div class="toc-panel-header">
+          <h3>Table of Contents</h3>
+          <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')" aria-label="Close contents">✕</button>
+        </div>
+        <ul class="toc-list">
+          <li><a href="#explorer" class="toc-main">I. Vocabulary Explorer</a></li>
+          <li><a href="#data-model" class="toc-main">II. Data Model for 500 Words</a></li>
+          <li><a href="#workflow" class="toc-main">III. How to Maintain the Dataset</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="eyebrow">Faith · Qurʾān &amp; Hadith</div>
+      <h1>Qurʾānic <em>Vocabulary</em> Explorer</h1>
+      <p class="hero-sub">A searchable page for the most frequent Qurʾānic vocabulary: choose a word, see where it appears, then compare related meanings across other verses.</p>
+      <div class="hero-actions">
+        <a class="primary-btn" href="#explorer">Open explorer →</a>
+        <a class="soft-btn" href="#data-model">View data format</a>
+      </div>
+    </section>
+    <hr class="hero-rule">
+
+    <header class="article-header">
+      <span class="read-time">Interactive reference</span>
+      <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+    </header>
+
+    <article class="article-body">
+      <section id="explorer" class="major-section">
+        <span class="section-label">Section I</span>
+        <h2>Search the <em>Core Vocabulary</em></h2>
+        <p class="lead">This version loads a separate corpus-derived dataset from <code>/assets/data/quran-vocabulary-500.json</code>. The initial export contains 500 high-frequency Arabic surface forms with real verse references and representative usages.</p>
+
+        <div class="explorer-shell" aria-label="Qurʾānic vocabulary search explorer">
+          <aside class="panel search-panel">
+            <div class="search-controls">
+              <label class="small-muted" for="wordSearch">Search Arabic, root, transliteration, or meaning</label>
+              <input id="wordSearch" class="search-input" type="search" placeholder="Search: mercy, rahmah, رحم..." autocomplete="off">
+              <div class="filter-row">
+                <select id="themeFilter" class="filter-select" aria-label="Filter by semantic theme">
+                  <option value="all">All themes</option>
+                </select>
+                <select id="sortSelect" class="filter-select" aria-label="Sort vocabulary list">
+                  <option value="rank">Sort by frequency rank</option>
+                  <option value="count">Sort by occurrence count</option>
+                  <option value="alpha">Sort by English meaning</option>
+                </select>
+              </div>
+            </div>
+            <div id="wordList" class="word-list" role="listbox" aria-label="Vocabulary results"></div>
+          </aside>
+
+          <section class="panel detail-panel" aria-live="polite">
+            <div id="detailView"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="data-model" class="major-section">
+        <span class="section-label">Section II</span>
+        <h2>Data Model for the <em>500-Word</em> List</h2>
+        <p class="lead">The page is designed so the visual interface stays stable while the vocabulary grows. Each word should have its rank, Arabic form, root, meanings, selected verse usages, and semantic relatives.</p>
+
+        <div class="table-wrap">
+          <table class="schema-table">
+            <thead>
+              <tr><th>Field</th><th>Purpose</th><th>Example</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>rank</code></td><td>Frequency rank from 1 to 500.</td><td><code>1</code></td></tr>
+              <tr><td><code>arabic</code></td><td>Main Arabic lemma or vocabulary form.</td><td><code>اللَّه</code></td></tr>
+              <tr><td><code>root</code></td><td>Arabic root where applicable.</td><td><code>ر ح م</code></td></tr>
+              <tr><td><code>transliteration</code></td><td>Readable Latin transliteration.</td><td><code>raḥmah</code></td></tr>
+              <tr><td><code>meaning</code></td><td>Concise English meaning.</td><td><code>mercy, compassion</code></td></tr>
+              <tr><td><code>theme</code></td><td>Semantic family for filtering.</td><td><code>Divine Attributes</code></td></tr>
+              <tr><td><code>occurrences</code></td><td>Approximate or verified count from your corpus.</td><td><code>339</code></td></tr>
+              <tr><td><code>usages</code></td><td>Representative verse examples with Arabic phrase and translation.</td><td><code>2:37, 7:156, 21:107</code></td></tr>
+              <tr><td><code>similar</code></td><td>Words with related meanings and cross-references.</td><td><code>رأفة, غفران, لطف</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="workflow" class="major-section">
+        <span class="section-label">Section III</span>
+        <h2>Suggested <em>Maintenance</em> Workflow</h2>
+        <div class="note-card">
+          <p><strong>Current data flow:</strong> the explorer fetches <code>/assets/data/quran-vocabulary-500.json</code> on page load. Edit that file to add or correct entries — no rebuild needed, just refresh the page.</p>
+          <p class="small-muted">Recommended fields per entry: rank, arabic, root, transliteration, meaning, theme, occurrences, usages (array of verse objects), similar (array of related word objects), and an optional notes string.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  </footer>
+
+  <script>
+    let vocabulary = [];
+    const state = { selectedRank: null, tab: 'usage' };
+
+    const wordList    = document.getElementById('wordList');
+    const detailView  = document.getElementById('detailView');
+    const searchInput = document.getElementById('wordSearch');
+    const themeFilter = document.getElementById('themeFilter');
+    const sortSelect  = document.getElementById('sortSelect');
+
+    // ── Data loading ──────────────────────────────────────────────────────────
+    async function loadVocabulary() {
+      try {
+        const res = await fetch('/assets/data/quran-vocabulary-500.json');
+        if (!res.ok) throw new Error('Dataset not found');
+        const data = await res.json();
+        // Support both flat array and { metadata, items } envelope
+        vocabulary = Array.isArray(data) ? data : (data.items ?? []);
+        state.selectedRank = vocabulary[0]?.rank ?? 1;
+        setupThemes();
+        renderWordList();
+        renderDetail();
+      } catch (err) {
+        console.error(err);
+        wordList.innerHTML = '<div class="empty-state">Failed to load vocabulary dataset.<br><small>Ensure /assets/data/quran-vocabulary-500.json exists.</small></div>';
+      }
+    }
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+    function normalized(v) {
+      return String(v || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function setupThemes() {
+      [...new Set(vocabulary.map(w => w.theme))].sort().forEach(theme => {
+        const opt = document.createElement('option');
+        opt.value = opt.textContent = theme;
+        themeFilter.appendChild(opt);
+      });
+    }
+
+    function getFilteredWords() {
+      const q     = normalized(searchInput.value.trim());
+      const theme = themeFilter.value;
+      let results = vocabulary.filter(item => {
+        const s = normalized([item.arabic, item.root, item.transliteration, item.meaning, item.theme, item.notes].join(' '));
+        return (!q || s.includes(q)) && (theme === 'all' || item.theme === theme);
+      });
+      const sort = sortSelect.value;
+      if      (sort === 'count') results.sort((a, b) => b.occurrences - a.occurrences);
+      else if (sort === 'alpha') results.sort((a, b) => a.meaning.localeCompare(b.meaning));
+      else                       results.sort((a, b) => a.rank - b.rank);
+      return results;
+    }
+
+    // ── Word list ─────────────────────────────────────────────────────────────
+    function renderWordList() {
+      const words = getFilteredWords();
+      if (!words.length) {
+        wordList.innerHTML = '<div class="empty-state">No matching vocabulary found.</div>';
+        return;
+      }
+      wordList.innerHTML = words.map(item => `
+        <button class="word-card ${item.rank === state.selectedRank ? 'active' : ''}"
+                role="option" aria-selected="${item.rank === state.selectedRank}"
+                data-rank="${item.rank}">
+          <span class="rank">${item.rank}</span>
+          <span>
+            <span class="arabic-word" lang="ar" dir="rtl">${item.arabic}</span>
+            <span class="word-meta">${item.transliteration} · ${item.meaning}</span>
+          </span>
+          <span class="count-pill">${item.occurrences ?? '—'}</span>
+        </button>
+      `).join('');
+
+      wordList.querySelectorAll('.word-card').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.selectedRank = Number(btn.dataset.rank);
+          renderWordList();
+          renderDetail();
+        });
+      });
+    }
+
+    // ── Detail panel ──────────────────────────────────────────────────────────
+    function renderDetail() {
+      const word = vocabulary.find(w => w.rank === state.selectedRank);
+      if (!word) {
+        detailView.innerHTML = '<div class="empty-state">Select a word to explore it.</div>';
+        return;
+      }
+
+      const tags = (word.similar || []).map(s =>
+        `<span class="tag" lang="ar">${s.arabic ?? s}</span>`
+      ).join('');
+
+      detailView.innerHTML = `
+        <div class="detail-hero">
+          <div class="detail-grid">
+            <div>
+              <p class="chosen-arabic" lang="ar" dir="rtl">${word.arabic}</p>
+              <p class="chosen-meaning">${word.meaning}</p>
+            </div>
+            <div class="root-box">
+              <span class="root-label">Root</span>
+              <span class="root-value" lang="ar" dir="rtl">${word.root || '—'}</span>
+              <span class="root-label" style="margin-top:0.5rem">${word.transliteration || ''}</span>
+            </div>
+          </div>
+          ${tags ? `<div class="semantic-tags">${tags}</div>` : ''}
+        </div>
+        <div class="tabs">
+          <button class="tab-btn ${state.tab==='usage'   ? 'active' : ''}" data-tab="usage">Verse Usage</button>
+          <button class="tab-btn ${state.tab==='similar' ? 'active' : ''}" data-tab="similar">Related Words</button>
+          ${word.notes ? `<button class="tab-btn ${state.tab==='notes' ? 'active' : ''}" data-tab="notes">Notes</button>` : ''}
+        </div>
+        <div class="tab-content">${renderTabContent(word)}</div>
+      `;
+
+      detailView.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.tab = btn.dataset.tab;
+          renderDetail();
+        });
+      });
+    }
+
+    function renderTabContent(word) {
+      if (state.tab === 'usage') {
+        const usages = word.usages || [];
+        if (!usages.length) return '<p class="small-muted">No verse usages recorded yet.</p>';
+        return '<div class="usage-list">' + usages.map(u => `
+          <div class="verse-card">
+            <div class="verse-top">
+              <span class="ref">${u.ref ?? ''}</span>
+              <span class="surah">${u.surah ?? ''}</span>
+            </div>
+            <p class="arabic-line" lang="ar" dir="rtl">${u.arabic ?? ''}</p>
+            <p class="translation">${u.translation ?? ''}</p>
+          </div>`).join('') + '</div>';
+      }
+      if (state.tab === 'similar') {
+        const similar = word.similar || [];
+        if (!similar.length) return '<p class="small-muted">No related words recorded yet.</p>';
+        return '<div class="similar-list">' + similar.map(s => `
+          <div class="similar-card">
+            <div class="similar-top">
+              <span class="arabic-line" lang="ar" dir="rtl" style="font-size:1.3rem">${s.arabic ?? s}</span>
+            </div>
+            <p class="small-muted">${s.meaning ?? ''}</p>
+          </div>`).join('') + '</div>';
+      }
+      if (state.tab === 'notes') {
+        return `<div class="note-card"><p>${word.notes ?? ''}</p></div>`;
+      }
+      return '';
+    }
+
+    // ── Event listeners ───────────────────────────────────────────────────────
+    searchInput.addEventListener('input',  () => renderWordList());
+    themeFilter.addEventListener('change', () => renderWordList());
+    sortSelect.addEventListener('change',  () => renderWordList());
+
+    window.addEventListener('scroll', () => {
+      const el = document.getElementById('progressBar');
+      if (!el) return;
+      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+      el.style.width = Math.min(pct, 100) + '%';
+    });
+
+    loadVocabulary();
+  </script>
+</body>
+</html>
