@@ -3,8 +3,16 @@ name: Accessibility (axe-core)
 on:
   push:
     branches: [master]
+    paths:
+      - '**/*.html'
+      - 'assets/*.css'
+      - 'nav.js'
   pull_request:
     branches: [master]
+    paths:
+      - '**/*.html'
+      - 'assets/*.css'
+      - 'nav.js'
 
 jobs:
   axe:
