@@ -1,8 +1,6 @@
 # Internal docs — not published to GitHub Pages
 _docs/
 
-# Automation scripts (workflows stay, scripts are private)
-.github/scripts/
 
 # macOS
 .DS_Store
