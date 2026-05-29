@@ -389,28 +389,25 @@
 
     /* ── Decision flow ── */
     .decision-flow {
-      counter-reset: flow;
       list-style: none;
       margin: 1.5rem 0;
     }
     .decision-flow li {
-      counter-increment: flow;
-      display: grid;
-      grid-template-columns: 2.2rem 1fr;
-      gap: 0.8rem;
-      align-items: start;
-      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
       font-size: 0.96rem;
       line-height: 1.65;
       color: var(--text-dim);
     }
-    .decision-flow li::before {
-      content: counter(flow);
+    .decision-flow li .flow-num {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 2rem;
       height: 2rem;
+      min-width: 2rem;
       border-radius: 50%;
       background: var(--accent);
       color: #fff;
@@ -418,7 +415,103 @@
       font-weight: 700;
       font-size: 0.82rem;
       flex-shrink: 0;
-      margin-top: 0.1rem;
+      margin-top: 0.15rem;
+    }
+    .decision-flow li .flow-text { flex: 1; min-width: 0; }
+
+    /* ── Search / filter bar ── */
+    .search-bar-wrap {
+      position: sticky;
+      top: var(--nav-h, 62px);
+      z-index: 50;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .search-input-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 180px;
+    }
+    .search-input-wrap svg {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--faint);
+      pointer-events: none;
+    }
+    #symptomSearch {
+      width: 100%;
+      padding: 0.55rem 1rem 0.55rem 2.4rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card-bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      min-height: 44px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    #symptomSearch:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(176,90,47,0.15); }
+    #symptomSearch::placeholder { color: var(--faint); }
+    .filter-chips {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .chip {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      min-height: 34px;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+    .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    #searchResultsCount {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+      white-space: nowrap;
+    }
+    /* Highlight matched text */
+    mark.hl {
+      background: rgba(176,90,47,0.2);
+      color: var(--text);
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+    /* Hidden rows */
+    .health-table tbody tr.hidden-row { display: none; }
+    /* No-results message */
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--faint);
+      font-size: 0.93rem;
+    }
+    .no-results.visible { display: block; }
+    /* Hidden sections during search */
+    .major-section.section-hidden { display: none; }
+    @media (max-width: 720px) {
+      .search-bar-wrap { padding: 0.75rem 1.4rem; }
+      .filter-chips { gap: 0.35rem; }
     }
 
     /* ── Cabinet grid ── */
@@ -634,6 +727,25 @@
     </div>
   </section>
   <hr class="hero-rule">
+
+  <!-- Search + filter bar — sticky below global nav -->
+  <div class="search-bar-wrap" id="searchBarWrap">
+    <div class="search-input-wrap">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="symptomSearch" placeholder="Search symptoms, e.g. headache, nausea, rash…" aria-label="Search symptoms">
+    </div>
+    <div class="filter-chips" role="group" aria-label="Filter by body system">
+      <button class="chip active" data-section="all">All</button>
+      <button class="chip" data-section="head">Head &amp; Cold</button>
+      <button class="chip" data-section="digest">Digestive</button>
+      <button class="chip" data-section="muscle">Muscle &amp; Joint</button>
+      <button class="chip" data-section="skin">Skin &amp; Wounds</button>
+      <button class="chip" data-section="mouth">Mouth &amp; Dental</button>
+      <button class="chip" data-section="sleep">Sleep &amp; Fatigue</button>
+      <button class="chip" data-section="gender">Men's / Women's</button>
+    </div>
+    <span id="searchResultsCount" aria-live="polite"></span>
+  </div>
 
   <!-- Meta-bar: static, placed AFTER hr -->
   <header class="article-header">
@@ -1260,11 +1372,26 @@
       <p>When a symptom appears, work through these steps in order and stop at the first one that fits:</p>
 
       <ol class="decision-flow">
-        <li><strong>Is this dangerous?</strong> Chest pain, breathing difficulty, severe pain, neurologic symptoms, severe dehydration, major injury, rapidly worsening symptoms — these are emergency situations. Stop here and seek urgent care.</li>
-        <li><strong>Is it mild and familiar?</strong> Try rest, increased fluids, gentle movement, dietary adjustment, or appropriate OTC support for 24–48 hours.</li>
-        <li><strong>Is it not improving, or recurring frequently?</strong> Don't just suppress it again — ask a pharmacist or clinician what the underlying cause might be.</li>
-        <li><strong>Are you using OTC medicine repeatedly for more than a few days?</strong> That pattern is a signal to investigate the root cause rather than mask it.</li>
-        <li><strong>Do you take prescription medicines or have a chronic condition?</strong> Consult a pharmacist before using NSAIDs, decongestants, sedating antihistamines, laxatives, supplements, or herbal products — interactions and contraindications are common and often overlooked.</li>
+        <li>
+          <span class="flow-num">1</span>
+          <span class="flow-text"><strong>Is this dangerous?</strong> Chest pain, breathing difficulty, severe pain, neurologic symptoms, severe dehydration, major injury, rapidly worsening symptoms — these are emergency situations. Stop here and seek urgent care.</span>
+        </li>
+        <li>
+          <span class="flow-num">2</span>
+          <span class="flow-text"><strong>Is it mild and familiar?</strong> Try rest, increased fluids, gentle movement, dietary adjustment, or appropriate OTC support for 24–48 hours.</span>
+        </li>
+        <li>
+          <span class="flow-num">3</span>
+          <span class="flow-text"><strong>Is it not improving, or recurring frequently?</strong> Don't just suppress it again — ask a pharmacist or clinician what the underlying cause might be.</span>
+        </li>
+        <li>
+          <span class="flow-num">4</span>
+          <span class="flow-text"><strong>Are you using OTC medicine repeatedly for more than a few days?</strong> That pattern is a signal to investigate the root cause rather than mask it.</span>
+        </li>
+        <li>
+          <span class="flow-num">5</span>
+          <span class="flow-text"><strong>Do you take prescription medicines or have a chronic condition?</strong> Consult a pharmacist before using NSAIDs, decongestants, sedating antihistamines, laxatives, supplements, or herbal products — interactions and contraindications are common and often overlooked.</span>
+        </li>
       </ol>
 
       <div class="info-box" style="margin-top: 2rem;">
@@ -1282,29 +1409,176 @@
 </footer>
 
 <script>
-  // Progress bar
+  /* ── Progress bar ── */
   const bar = document.getElementById('progressBar');
   if (bar) {
     window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
       const docH = document.documentElement.scrollHeight - window.innerHeight;
-      if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+      if (docH > 0) bar.style.width = (window.scrollY / docH * 100) + '%';
     }, { passive: true });
   }
 
-  // Smooth scroll with offset for TOC links (accounts for fixed nav)
+  /* ── TOC smooth scroll ── */
   document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      const id = this.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
+      const target = document.getElementById(this.getAttribute('href').slice(1));
       if (!target) return;
-      const offset = 80; // 62px nav + 18px breathing room
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      const offset = 130; // nav (62) + search bar (~60) + gap
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
       document.getElementById('tocOverlay').classList.remove('open');
     });
   });
+
+  /* ── Search + filter ── */
+  (function() {
+    const searchInput   = document.getElementById('symptomSearch');
+    const chips         = document.querySelectorAll('.chip[data-section]');
+    const countEl       = document.getElementById('searchResultsCount');
+
+    // Map section ids to chip data-section values
+    const sectionMap = {
+      head: 'head', digest: 'digest', muscle: 'muscle',
+      skin: 'skin', mouth: 'mouth', sleep: 'sleep', gender: 'gender',
+      enviro: null, nutrition: null, cabinet: null, flow: null, safety: null
+    };
+
+    // Sections with searchable tables
+    const tableSections = ['head','digest','muscle','skin','mouth','sleep','gender','enviro'];
+
+    let activeChip = 'all';
+    let activeQuery = '';
+
+    /* Strip HTML for plain-text comparison */
+    function getText(el) {
+      return el ? el.textContent.toLowerCase() : '';
+    }
+
+    /* Highlight matched text in a cell */
+    function highlightCell(td, query) {
+      // Reset
+      td.innerHTML = td.dataset.orig || td.innerHTML;
+      if (!query) return;
+      if (!td.dataset.orig) td.dataset.orig = td.innerHTML;
+      const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
+      td.innerHTML = td.dataset.orig.replace(re, '<mark class="hl">$1</mark>');
+    }
+
+    /* Reset all highlights */
+    function clearHighlights() {
+      document.querySelectorAll('td[data-orig]').forEach(td => {
+        td.innerHTML = td.dataset.orig;
+        delete td.dataset.orig;
+      });
+    }
+
+    function applyFilter() {
+      const q = activeQuery.trim().toLowerCase();
+      let totalVisible = 0;
+
+      // Handle non-table sections (nutrition, cabinet, safety, flow, enviro)
+      // For section chips: show/hide whole sections
+      document.querySelectorAll('.major-section').forEach(sec => {
+        const id = sec.id;
+        const chipTarget = Object.keys(sectionMap).find(k => k === id);
+        const inChipGroup = tableSections.includes(id);
+
+        if (activeChip !== 'all' && inChipGroup && id !== activeChip) {
+          sec.classList.add('section-hidden');
+          return;
+        }
+        // Non-table sections: hide during chip filter (keep visible on 'all')
+        if (activeChip !== 'all' && !inChipGroup) {
+          sec.classList.add('section-hidden');
+          return;
+        }
+        sec.classList.remove('section-hidden');
+      });
+
+      // Clear old highlights
+      clearHighlights();
+
+      if (!q) {
+        // Just chip filter — show/hide rows by section, count section headings
+        tableSections.forEach(secId => {
+          if (activeChip !== 'all' && secId !== activeChip) return;
+          const sec = document.getElementById(secId);
+          if (!sec) return;
+          const rows = sec.querySelectorAll('tbody tr');
+          rows.forEach(r => { r.classList.remove('hidden-row'); });
+          totalVisible += rows.length;
+        });
+        countEl.textContent = '';
+        document.querySelectorAll('.no-results').forEach(el => el.classList.remove('visible'));
+        return;
+      }
+
+      // Query filter — search across relevant sections
+      tableSections.forEach(secId => {
+        if (activeChip !== 'all' && secId !== activeChip) return;
+        const sec = document.getElementById(secId);
+        if (!sec) return;
+
+        let sectionHits = 0;
+        const rows = sec.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+          const cells = row.querySelectorAll('td');
+          const rowText = Array.from(cells).map(c => getText(c)).join(' ');
+          if (rowText.includes(q)) {
+            row.classList.remove('hidden-row');
+            cells.forEach(td => highlightCell(td, q));
+            sectionHits++;
+            totalVisible++;
+          } else {
+            row.classList.add('hidden-row');
+          }
+        });
+
+        // Show/hide no-results per section
+        let noRes = sec.querySelector('.no-results');
+        if (!noRes) {
+          noRes = document.createElement('p');
+          noRes.className = 'no-results';
+          noRes.textContent = 'No matching symptoms in this section.';
+          sec.querySelector('.table-wrap')?.after(noRes);
+        }
+        noRes.classList.toggle('visible', sectionHits === 0);
+      });
+
+      countEl.textContent = totalVisible > 0
+        ? `${totalVisible} result${totalVisible !== 1 ? 's' : ''}`
+        : 'No results';
+    }
+
+    /* Chip click */
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeChip = chip.dataset.section;
+        applyFilter();
+      });
+    });
+
+    /* Search input */
+    searchInput.addEventListener('input', () => {
+      activeQuery = searchInput.value;
+      applyFilter();
+    });
+
+    /* Clear search on ESC */
+    searchInput.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        activeQuery = '';
+        applyFilter();
+        searchInput.blur();
+      }
+    });
+
+    // Init
+    applyFilter();
+  })();
 </script>
 </body>
 </html>
