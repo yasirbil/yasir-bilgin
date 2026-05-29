@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minor Health Botherings: A Practical Reference Guide | Yasir Bilgin</title>
+
+  <!-- ① Unique meta description -->
+  <meta name="description" content="A practical day-to-day reference for mild, temporary symptoms — from headaches and heartburn to muscle soreness and skin irritation — with self-care, OTC guidance, and clear red flags.">
+
+  <!-- ② Canonical URL -->
+  <link rel="canonical" href="https://yasirbilgin.com/life/Wellbeing/minor-health-botherings.html">
+
+  <!-- ③ Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Minor Health Botherings: A Practical Reference Guide">
+  <meta property="og:description" content="A practical day-to-day reference for mild, temporary symptoms — from headaches and heartburn to muscle soreness and skin irritation — with self-care, OTC guidance, and clear red flags.">
+  <meta property="og:url"         content="https://yasirbilgin.com/life/Wellbeing/minor-health-botherings.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="Minor Health Botherings: A Practical Reference Guide">
+
+  <!-- ④ Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Minor Health Botherings: A Practical Reference Guide">
+  <meta name="twitter:description" content="A practical day-to-day reference for mild, temporary symptoms — from headaches and heartburn to muscle soreness and skin irritation — with self-care, OTC guidance, and clear red flags.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <!-- ⑤ Global nav — always first script -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- ⑥ Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- ⑦ Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Minor Health Botherings: A Practical Reference Guide",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-05-29",
+    "dateModified": "2026-05-29",
+    "description": "A practical day-to-day reference for mild, temporary symptoms — from headaches and heartburn to muscle soreness and skin irritation — with self-care, OTC guidance, and clear red flags.",
+    "url": "https://yasirbilgin.com/life/Wellbeing/minor-health-botherings.html"
+  }
+  </script>
+
+  <!-- ⑧ BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Life",     "item": "https://yasirbilgin.com/life/" },
+      { "@type": "ListItem", "position": 3, "name": "Minor Health Botherings: A Practical Reference Guide", "item": "https://yasirbilgin.com/life/Wellbeing/minor-health-botherings.html" }
+    ]
+  }
+  </script>
+
+  <!-- ⑨ Fonts via shared stylesheet -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Design tokens fallback (in case tokens.css doesn't load) ── */
+    :root {
+      --bg:         #f7f3ec;
+      --text:       #1e1b17;
+      --text-dim:   #5c5248;
+      --faint:      #6e5f4e;
+      --accent:     #b05a2f;
+      --accent-lt:  #f0e6d8;
+      --border:     rgba(107,93,79,0.18);
+      --card-bg:    #fdf9f3;
+      --radius-md:  8px;
+      --radius-lg:  12px;
+      --content-w:  820px;
+      --nav-h:      62px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:       #0f0d0a;
+        --text:     #e8e0d4;
+        --text-dim: #9a8e7c;
+        --faint:    #5a5750;
+        --accent:   #d4784a;
+        --accent-lt:#1e180f;
+        --border:   rgba(255,255,255,0.1);
+        --card-bg:  #161410;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* ── Progress bar ── */
+    .progress-bar {
+      position: fixed;
+      top: var(--nav-h, 62px);
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay — backdrop-filter ONLY on .open ── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--bg);
+      width: min(340px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem 3rem;
+      box-shadow: -8px 0 32px rgba(0,0,0,0.18);
+    }
+    .toc-panel h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 1.2rem;
+    }
+    .toc-close {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1.5rem;
+    }
+    .toc-close button {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--text-dim);
+      line-height: 1;
+    }
+    .toc-close button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list a {
+      display: block;
+      padding: 0.65rem 0.4rem;
+      text-decoration: none;
+      color: var(--text-dim);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover, .toc-list a:focus-visible { color: var(--accent); }
+    .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-list a.toc-main { font-weight: 600; color: var(--text); }
+    .toc-list a.toc-main:hover { color: var(--accent); }
+
+    /* ── Eyebrow pill ── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint, #6e5f4e);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint, #5a5750);
+      }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 4rem 2.5rem 3rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-dim);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .byline-text { display: flex; flex-direction: column; }
+    .byline-name {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .byline-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+    }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── Article meta-bar (static, NOT sticky) ── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 0.75rem 2.5rem;
+      max-width: var(--content-w);
+      margin: 0 auto;
+    }
+    .read-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+      letter-spacing: 0.04em;
+    }
+    .toc-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      color: var(--text-dim);
+      cursor: pointer;
+      min-height: 44px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toc-btn:hover { background: var(--accent-lt); color: var(--accent); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Article body ── */
+    .article-body {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    /* ── Safety callout ── */
+    .safety-box {
+      background: #fff3e0;
+      border-left: 4px solid #e65100;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 2.5rem;
+      color: #4e2800;
+    }
+    @media (prefers-color-scheme: dark) {
+      .safety-box {
+        background: #2a1500;
+        color: #f0c080;
+        border-left-color: #e65100;
+      }
+    }
+    .safety-box strong { display: block; font-family: 'DM Sans', sans-serif; margin-bottom: 0.4rem; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .safety-box p { font-size: 0.93rem; line-height: 1.7; margin-bottom: 0.5rem; }
+    .safety-box p:last-child { margin-bottom: 0; }
+
+    /* ── Info callout ── */
+    .info-box {
+      background: var(--accent-lt);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .info-box p { font-size: 0.93rem; line-height: 1.7; color: var(--text-dim); margin-bottom: 0.5rem; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    /* ── Section headings ── */
+    .major-section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 80px;
+    }
+    .section-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    h2 em { font-style: italic; color: var(--accent); }
+
+    h3.sub-heading {
+      font-size: 1.05rem;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      margin: 2.2rem 0 0.7rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .sh-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      background: var(--accent-lt);
+      border-radius: 4px;
+      padding: 0.1rem 0.4rem;
+      flex-shrink: 0;
+    }
+
+    /* ── Decision flow ── */
+    .decision-flow {
+      counter-reset: flow;
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .decision-flow li {
+      counter-increment: flow;
+      display: grid;
+      grid-template-columns: 2.2rem 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: var(--text-dim);
+    }
+    .decision-flow li::before {
+      content: counter(flow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* ── Cabinet grid ── */
+    .cabinet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .cabinet-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.2rem 1.3rem;
+    }
+    .cabinet-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .cabinet-card ul {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+    }
+    .cabinet-card ul li::before { content: "· "; color: var(--accent); }
+
+    /* ── Supplement table ── */
+    .supp-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .supp-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .supp-name {
+      background: var(--accent-lt);
+      padding: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+    }
+    .supp-body {
+      padding: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--text-dim);
+    }
+    @media (max-width: 480px) {
+      .supp-row { grid-template-columns: 1fr; }
+      .supp-name { padding: 0.75rem 1rem; }
+    }
+
+    /* ── Health table ── */
+    .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    .health-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .health-table thead tr {
+      background: var(--accent);
+      color: #fff;
+    }
+    .health-table thead th {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 0.75rem 1rem;
+    }
+    .health-table thead th:nth-child(1) { width: 18%; }
+    .health-table thead th:nth-child(2) { width: 30%; }
+    .health-table thead th:nth-child(3) { width: 30%; }
+    .health-table thead th:nth-child(4) { width: 22%; }
+    .health-table tbody tr { border-bottom: 1px solid var(--border); }
+    .health-table tbody tr:nth-child(even) { background: var(--card-bg); }
+    .health-table tbody td {
+      padding: 0.9rem 1rem;
+      vertical-align: top;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+    .health-table tbody td:first-child {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+    .health-table tbody td.urgent {
+      color: #c0392b;
+      font-size: 0.84rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      .health-table tbody td.urgent { color: #e87061; }
+    }
+
+    /* ── Lead paragraph ── */
+    .lead { font-size: 1.1rem; color: var(--text-dim); line-height: 1.75; margin-bottom: 2rem; }
+
+    /* ── Plain prose ── */
+    p { margin-bottom: 1.2rem; color: var(--text-dim); }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--text); }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .footer-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 3rem 1.4rem 2rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      footer { padding: 1.5rem 1.4rem; }
+    }
+    @media (max-width: 560px) {
+      .cabinet-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main-content">
+
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <div class="toc-close">
+        <button onclick="document.getElementById('tocOverlay').classList.remove('open')" aria-label="Close table of contents">✕</button>
+      </div>
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#safety" class="toc-main">Universal Safety Rules</a></li>
+        <li><a href="#head" class="toc-main">A. Head, Fever &amp; Respiratory</a></li>
+        <li><a href="#digest" class="toc-main">B. Digestive &amp; Abdominal</a></li>
+        <li><a href="#muscle" class="toc-main">C. Muscle, Joint &amp; Movement</a></li>
+        <li><a href="#skin" class="toc-main">D. Skin, Bites &amp; Minor Wounds</a></li>
+        <li><a href="#mouth" class="toc-main">E. Mouth, Dental &amp; Throat</a></li>
+        <li><a href="#sleep" class="toc-main">F. Sleep, Fatigue &amp; Stress</a></li>
+        <li><a href="#gender" class="toc-main">G. Men's / Women's Issues</a></li>
+        <li><a href="#enviro" class="toc-main">H. Eyes, Ears, Nose &amp; Environment</a></li>
+        <li><a href="#nutrition" class="toc-main">I. Nutrition &amp; Supplements</a></li>
+        <li><a href="#cabinet" class="toc-main">Home Medicine Cabinet</a></li>
+        <li><a href="#flow" class="toc-main">Decision Flow</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Life · Wellbeing</div>
+    <h1>Minor Health <em>Botherings</em></h1>
+    <p class="hero-sub">A practical day-to-day reference for temporary, mild symptoms — with self-care options, OTC guidance, and clear red flags that signal when to seek professional help.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">May 29, 2026 · Reference Guide</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar: static, placed AFTER hr -->
+  <header class="article-header">
+    <span class="read-time">~20 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+  </header>
+
+  <!-- Article body -->
+  <article class="article-body">
+
+    <p class="lead">This guide covers <strong>temporary, mild symptoms</strong> that are commonly managed with rest, fluids, over-the-counter (OTC) medicines, gentle movement, or basic first aid. It is a reference tool — not a diagnostic guide and not a substitute for a clinician or pharmacist.</p>
+
+    <div class="info-box">
+      <p><strong>A note on pharmacists.</strong> Pharmacists are specifically trained to advise on common minor illnesses and OTC choices. If you take prescription medicines, have chronic conditions (liver or kidney disease, ulcers, blood-thinners, high blood pressure, heart disease), are pregnant, or are treating a child, consult a pharmacist before using any OTC product.</p>
+    </div>
+
+    <!-- Safety -->
+    <section id="safety" class="major-section">
+      <span class="section-label">Before everything else</span>
+      <h2>Universal <em>Safety Rules</em></h2>
+
+      <div class="safety-box">
+        <strong>🚨 Seek urgent care immediately for:</strong>
+        <p>Chest pain or pressure; shortness of breath; fainting or sudden confusion; stroke-like symptoms (facial droop, arm weakness, slurred speech); severe allergic reaction; stiff neck with fever and headache; severe abdominal pain especially with chest pressure or trauma; uncontrolled bleeding; major injury; or any symptom that is rapidly and significantly worsening.</p>
+        <p>The Mayo Clinic specifically flags <em>new or unusual chest discomfort with breathing difficulty</em> as needing emergency care, and abdominal pain with chest pressure or trauma as urgent.</p>
+      </div>
+
+      <h3 id="safety-otc" class="sub-heading"><span class="sh-num">↳</span> Pain &amp; Fever Basics</h3>
+      <p><strong>Acetaminophen (paracetamol / Tylenol)</strong> reduces pain and fever effectively, but too much — or combining it with other cold/flu products that also contain it — can cause severe liver injury. Always check ingredient labels. The FDA warns against overuse and doubling up.</p>
+      <p><strong>NSAIDs</strong> (ibuprofen, naproxen, aspirin) reduce pain, fever, and inflammation but can irritate the stomach lining, worsen ulcer or bleeding risk, affect kidney function, and may be risky in some heart conditions. The FDA specifically advises that NSAIDs should generally be avoided at 20 weeks or later in pregnancy unless directed by a clinician.</p>
+
+      <h3 id="safety-clock" class="sub-heading"><span class="sh-num">↳</span> The "Watch Clock" Rule</h3>
+      <p>If a symptom lasts longer than expected, keeps recurring without a clear trigger, or is unusual for your body, treat that as a signal to speak with a pharmacist or clinician — rather than repeatedly suppressing the symptom with OTC medicine.</p>
+    </section>
+
+    <!-- A: Head -->
+    <section id="head" class="major-section">
+      <span class="section-label">Section A</span>
+      <h2>Head, Fever &amp; <em>Respiratory Symptoms</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Non-drug &amp; nutrition</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mild headache</td>
+              <td>Water, rest, reduced screen exposure; acetaminophen or NSAID if safe for you.</td>
+              <td>Neck/shoulder relaxation, gentle walk, sleep, regular meals. Magnesium may help migraine-prone individuals but shouldn't be assumed a cure for every headache.</td>
+              <td class="urgent">Sudden "worst headache of life"; neurologic symptoms; fever with stiff neck; onset after head injury; new headache after age 50; persistent or worsening pattern.</td>
+            </tr>
+            <tr>
+              <td>Tension headache / tight scalp</td>
+              <td>OTC pain reliever if needed.</td>
+              <td>Heat on neck and shoulders; posture reset; jaw relaxation; gentle neck stretches; hydration.</td>
+              <td class="urgent">Weakness, vision loss, confusion, severe sudden onset, or frequent recurring pattern.</td>
+            </tr>
+            <tr>
+              <td>Mild fever / body aches</td>
+              <td>Acetaminophen or ibuprofen if appropriate. Never combine products with the same active ingredient.</td>
+              <td>Fluids, rest, light foods, cool room.</td>
+              <td class="urgent">Very high or persistent fever; dehydration; rash; stiff neck; breathing trouble; chest pain; immunocompromised.</td>
+            </tr>
+            <tr>
+              <td>Common cold / runny nose</td>
+              <td>Saline spray or rinse; decongestant if safe; antihistamine if allergy-like; pain reliever for aches. <strong>Antibiotics do not help viral colds.</strong></td>
+              <td>Fluids, sleep, humidifier, honey (for adults and children over 1 year). Zinc lozenges started very early <em>may</em> shorten duration — evidence is mixed and it does not clearly reduce severity.</td>
+              <td class="urgent">Symptoms worsen after initially improving; fever persists; shortness of breath; severe sinus or ear pain; symptoms lasting more than 10–14 days.</td>
+            </tr>
+            <tr>
+              <td>Sore throat</td>
+              <td>Warm salt-water gargle; throat lozenges; acetaminophen or NSAID if safe.</td>
+              <td>Warm tea with honey, humidifier, voice rest.</td>
+              <td class="urgent">Difficulty breathing or swallowing → emergency. See a doctor if sore throat lasts more than 1 week, or if accompanied by high fever, visible pus, blood in saliva, rash, or signs of dehydration.</td>
+            </tr>
+            <tr>
+              <td>Cough</td>
+              <td>Honey and warm fluids; humidifier; cough suppressant for dry cough or expectorant for mucus cough.</td>
+              <td>Avoid smoke, elevate head at night, warm broths.</td>
+              <td class="urgent">Cough lasting more than 1 week with other concerning symptoms; breathing difficulty; painful swallowing; bloody sputum; wheezing; high or persistent fever; thick green/yellow mucus.</td>
+            </tr>
+            <tr>
+              <td>Nasal congestion</td>
+              <td>Saline rinse or spray; short-term decongestant if safe. Avoid overusing medicated nasal sprays (rebound congestion).</td>
+              <td>Steam inhalation, humidifier, warm shower, hydration.</td>
+              <td class="urgent">Facial swelling; severe sinus pain; high fever; symptoms persisting more than 10 days; recurrent sinus infections.</td>
+            </tr>
+            <tr>
+              <td>Seasonal allergies</td>
+              <td>Non-drowsy antihistamine; steroid nasal spray; antihistamine eye drops; saline rinse.</td>
+              <td>Shower after pollen exposure; keep windows closed on high-pollen days; air purifier.</td>
+              <td class="urgent">Wheezing; shortness of breath; symptoms uncontrolled despite OTC measures; eye pain or vision changes.</td>
+            </tr>
+            <tr>
+              <td>Dry or irritated eyes</td>
+              <td>Preservative-free artificial tears. Avoid redness-remover drops for routine daily use — they cause rebound redness.</td>
+              <td>Frequent screen breaks (20-20-20 rule); humidifier; reduced contact lens wear time.</td>
+              <td class="urgent">Eye pain; vision change; light sensitivity; injury; pus; severe or one-sided redness.</td>
+            </tr>
+            <tr>
+              <td>Mild ear pressure after cold or allergy</td>
+              <td>Treat underlying nasal congestion or allergy; pain reliever if safe.</td>
+              <td>Chewing, swallowing, or gentle pressure-equalizing maneuvers. Avoid forceful nose blowing.</td>
+              <td class="urgent">Severe ear pain; any discharge from ear; fever; hearing loss; dizziness; symptoms in a young child.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- B: Digestive -->
+    <section id="digest" class="major-section">
+      <span class="section-label">Section B</span>
+      <h2>Digestive &amp; <em>Abdominal Discomfort</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Non-drug &amp; nutrition</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Heartburn / acid reflux</td>
+              <td>Antacid for quick relief; H2 blocker or OTC proton pump inhibitor for short courses if appropriate.</td>
+              <td>Smaller, slower meals; avoid eating within 2–3 hours of lying down; elevate the head of your bed; reduce trigger foods: spicy, fatty, caffeine, chocolate, peppermint, alcohol.</td>
+              <td class="urgent">Chest pain or pressure; trouble swallowing; vomiting blood; black or tarry stools; unexplained weight loss; symptoms requiring repeated or escalating medication.</td>
+            </tr>
+            <tr>
+              <td>Indigestion / bloating / gas</td>
+              <td>Simethicone for gas bubbles; antacid if acid-related.</td>
+              <td>Eat slowly; avoid carbonated drinks; short walk after meals; identify triggers such as dairy, beans, onions, cruciferous vegetables, or wheat.</td>
+              <td class="urgent">Severe or persistent abdominal pain; vomiting; unexplained weight loss; blood in stool.</td>
+            </tr>
+            <tr>
+              <td>Nausea / mild stomach upset</td>
+              <td>Oral rehydration, ginger (tea, chews, or capsules), bland foods. Some OTC anti-nausea options depending on cause.</td>
+              <td>Small, frequent sips of fluid; crackers, toast, rice, or bananas; avoid greasy food until settled.</td>
+              <td class="urgent">Persistent vomiting; signs of dehydration; severe abdominal pain; pregnancy concerns; blood; severe headache or stiff neck alongside nausea.</td>
+            </tr>
+            <tr>
+              <td>Diarrhea</td>
+              <td>Fluids plus oral rehydration salts. Loperamide only if there is no fever, no blood, and bacterial infection is not suspected. Bismuth subsalicylate (Pepto-Bismol) if safe for you.</td>
+              <td>BRAT approach — rice, bananas, toast, broth; avoid alcohol and greasy foods; reintroduce normal foods gradually as symptoms ease.</td>
+              <td class="urgent">Diarrhea in adults lasting more than 2 days without improvement; severe dehydration; severe abdominal or rectal pain; black or bloody stool; fever above 39°C / 102°F.</td>
+            </tr>
+            <tr>
+              <td>Constipation</td>
+              <td>Fiber supplement (psyllium husk); stool softener (docusate); osmotic laxative (polyethylene glycol, MiraLAX) if needed. Avoid frequent use of stimulant laxatives unless advised by a clinician.</td>
+              <td>Increase water intake; prunes, kiwi, beans, oats; regular walking; establish a consistent toilet routine; never ignore the urge.</td>
+              <td class="urgent">Severe pain; vomiting; blood in stool; unexplained weight loss; new persistent constipation; no bowel movement and no passing of gas accompanied by abdominal swelling.</td>
+            </tr>
+            <tr>
+              <td>Hemorrhoid discomfort</td>
+              <td>Witch hazel pads; short-term hemorrhoid cream; warm sitz baths (10–15 min, 2–3×/day); stool softener and fiber to avoid straining.</td>
+              <td>Don't strain; increase fiber and fluid; avoid prolonged sitting on the toilet.</td>
+              <td class="urgent">Heavy rectal bleeding; black or tarry stool; severe pain; lump that is not improving; recurrent bleeding requires evaluation.</td>
+            </tr>
+            <tr>
+              <td>Mild food poisoning-type upset</td>
+              <td>Hydration and rest; bland foods; avoid anti-diarrheal if there is fever or blood (as these can prolong illness from some pathogens).</td>
+              <td>Oral rehydration solution; small, frequent sips.</td>
+              <td class="urgent">Bloody diarrhea; high fever; signs of severe dehydration; severe abdominal pain; illness after shellfish, unpasteurized products, or other high-risk foods; elderly, young, or immunocompromised.</td>
+            </tr>
+            <tr>
+              <td>Motion sickness</td>
+              <td>OTC meclizine or dimenhydrinate if safe; ginger supplements may help some people.</td>
+              <td>Sit in front or middle of vehicle; focus on the horizon rather than close objects; avoid reading; fresh air; eat light before travel.</td>
+              <td class="urgent">Severe dizziness; neurologic symptoms; persistent vomiting.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- C: Muscle -->
+    <section id="muscle" class="major-section">
+      <span class="section-label">Section C</span>
+      <h2>Muscle, Joint &amp; <em>Movement-Related Problems</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Movement &amp; nutrition</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Muscle soreness after exercise (DOMS)</td>
+              <td>Rest; NSAID or acetaminophen if needed and safe; topical menthol (IcyHot, Biofreeze) or topical diclofenac gel for localized pain.</td>
+              <td>Gentle movement the following day; stretching after warming up; adequate protein at each meal; hydration; sleep — most recovery happens overnight.</td>
+              <td class="urgent">Severe swelling; dark brown or cola-colored urine (rhabdomyolysis); severe weakness; pain far out of proportion to the exercise; any injury mechanism.</td>
+            </tr>
+            <tr>
+              <td>Minor sprain or strain</td>
+              <td>RICE: Rest, Ice (wrapped in cloth — never directly on skin), Compression (snug but not tight), Elevation above heart level. OTC pain reliever if safe. MedlinePlus recommends these four steps as the standard initial approach.</td>
+              <td>Gentle, pain-free range-of-motion movements once acute pain starts to ease. Do not force a painful joint.</td>
+              <td class="urgent">Unable to bear weight; visible deformity; numbness or tingling; severe swelling; pain not improving after 48–72 hours; suspected fracture.</td>
+            </tr>
+            <tr>
+              <td>Low back tightness</td>
+              <td>Heat for muscle tightness; ice if acute strain; OTC pain reliever if safe. Most evidence supports staying active over bed rest.</td>
+              <td>Walking is one of the best interventions; hip flexor and hamstring stretches; basic core activation exercises; avoid prolonged sitting or lying in one position.</td>
+              <td class="urgent">Pain radiating down the leg with weakness or numbness; any bowel or bladder changes; fever; trauma; history of cancer; unexplained weight loss.</td>
+            </tr>
+            <tr>
+              <td>Neck stiffness from posture</td>
+              <td>Heat pack; topical pain reliever; acetaminophen or NSAID if safe.</td>
+              <td>Chin tucks; shoulder blade squeezes; raise monitor to eye level; take movement breaks every 30–45 minutes.</td>
+              <td class="urgent">Fever plus stiff neck; severe headache; neurologic symptoms; trauma; pain radiating down arm with weakness.</td>
+            </tr>
+            <tr>
+              <td>Leg cramps</td>
+              <td>Actively stretch the cramped muscle during the episode; massage; hydrate.</td>
+              <td>Calf stretching before bed; electrolyte-rich fluids after heavy sweating. Note: magnesium supplements are frequently marketed for cramps, but systematic reviews find they are <em>unlikely to help</em> ordinary idiopathic muscle cramps; prioritize food sources — nuts, seeds, legumes, leafy greens — if intake is low.</td>
+              <td class="urgent">Swelling, warmth, or redness in the calf (possible DVT); one-sided calf pain with shortness of breath; frequent or severe cramps that disrupt sleep.</td>
+            </tr>
+            <tr>
+              <td>Plantar foot soreness</td>
+              <td>Ice massage after activity; OTC pain reliever if safe; supportive footwear with adequate arch support.</td>
+              <td>Morning calf and plantar fascia stretches before your first step; reduce barefoot walking on hard floors.</td>
+              <td class="urgent">Inability to walk; injury; numbness; diabetic foot; persistent pain.</td>
+            </tr>
+            <tr>
+              <td>Wrist / hand overuse</td>
+              <td>Rest from provoking activity; short-term wrist brace; topical NSAID gel if safe.</td>
+              <td>Ergonomic keyboard and mouse positioning; tendon gliding exercises; regular breaks from repetitive tasks.</td>
+              <td class="urgent">Numbness or weakness (especially at night — possible carpal tunnel); swelling; trauma; persistent symptoms beyond 2 weeks.</td>
+            </tr>
+            <tr>
+              <td>Mild knee ache</td>
+              <td>Ice after activity; NSAID or topical NSAID if safe; compression sleeve for support.</td>
+              <td>Quadriceps and hip strengthening; choose low-impact activity (swimming, cycling) temporarily; weight management reduces load on the joint.</td>
+              <td class="urgent">Locking or giving way; significant swelling; injury mechanism; fever, redness, or warmth over the joint.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- D: Skin -->
+    <section id="skin" class="major-section">
+      <span class="section-label">Section D</span>
+      <h2>Skin, Bites &amp; <em>Minor Wounds</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Non-drug help</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dry skin / generalized itching</td>
+              <td>Fragrance-free moisturizer applied right after bathing (within 3 minutes, while skin is still damp); hydrocortisone 1% cream short-term for itchy inflamed patches; oral antihistamine for severe itch if safe.</td>
+              <td>Lukewarm (not hot) showers; gentle, fragrance-free soap; humidifier in dry months; moisturize twice daily.</td>
+              <td class="urgent">Spreading rash; signs of infection; severe or widespread hives; swelling of face or lips; breathing trouble.</td>
+            </tr>
+            <tr>
+              <td>Minor rash / contact irritation</td>
+              <td>Remove the suspected trigger; wash the area thoroughly; apply hydrocortisone 1%; oral antihistamine if itchy.</td>
+              <td>Cool compress; loose, breathable clothing.</td>
+              <td class="urgent">Rash with fever; pain; blistering; rapidly spreading; near eyes or genitals; onset shortly after a new medicine.</td>
+            </tr>
+            <tr>
+              <td>Insect bite itch</td>
+              <td>Hydrocortisone 1%; calamine lotion; oral antihistamine if safe.</td>
+              <td>Cold compress; avoid scratching to prevent secondary infection.</td>
+              <td class="urgent">Expanding redness, warmth, or pus around the bite (cellulitis); fever; a tick bite with a bull's-eye rash; any signs of severe allergic reaction.</td>
+            </tr>
+            <tr>
+              <td>Mild sunburn</td>
+              <td>Cool (not cold) bath or shower; aloe vera or soy-based moisturizer; extra fluids — sunburn can dehydrate; ibuprofen or aspirin to reduce inflammation if safe. Per the American Academy of Dermatology: cool baths, aloe/soy moisturizer, and increased water intake are the core steps.</td>
+              <td>Stay out of further sun; wear loose, covering clothing over burned areas.</td>
+              <td class="urgent">Blistering over a large area; fever or chills; confusion; severe pain; signs of dehydration; any signs of infection.</td>
+            </tr>
+            <tr>
+              <td>Minor first-degree burn</td>
+              <td>Cool running water for 10–20 minutes; apply nonstick dressing; pain reliever if safe. <strong>Do not use ice directly on burns</strong> — it can cause frostbite to already-damaged skin.</td>
+              <td>Keep area clean; avoid popping any small blisters that form.</td>
+              <td class="urgent">Deep or large burns; burns on face, hands, feet, or genitals; chemical or electrical burns; any sign of infection.</td>
+            </tr>
+            <tr>
+              <td>Minor cut or scrape</td>
+              <td>Wash thoroughly with clean water; apply thin layer of petroleum jelly or antibiotic ointment; cover with a bandage. Change dressing daily.</td>
+              <td>Keep moist and covered for faster healing — a moist wound heals more quickly than a dry one.</td>
+              <td class="urgent">Deep or gaping wound needing closure; animal or human bite; dirty puncture; red streaking away from wound (lymphangitis); pus; fever; tetanus concern.</td>
+            </tr>
+            <tr>
+              <td>Acne flare</td>
+              <td>Benzoyl peroxide (2.5–5%) for bacteria; salicylic acid for pore clearing; gentle cleanser. Introduce one new product at a time. Benzoyl peroxide can bleach fabrics.</td>
+              <td>Avoid picking or squeezing; use non-comedogenic moisturizer and sunscreen; change pillowcases regularly.</td>
+              <td class="urgent">Painful cysts that may scar; sudden severe acne; no meaningful improvement after 8–12 weeks of OTC treatment.</td>
+            </tr>
+            <tr>
+              <td>Athlete's foot / mild fungal rash</td>
+              <td>OTC antifungal cream, spray, or powder (clotrimazole, terbinafine) for 2–4 weeks. Treat the full course even if symptoms resolve.</td>
+              <td>Keep feet dry; change socks daily (or after sweating); choose breathable footwear.</td>
+              <td class="urgent">Diabetes or immunocompromised; spreading beyond the foot; open sores; no improvement after full OTC course.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- E: Mouth -->
+    <section id="mouth" class="major-section">
+      <span class="section-label">Section E</span>
+      <h2>Mouth, Dental &amp; <em>Throat-Adjacent Botherings</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Non-drug help</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Canker sore (aphthous ulcer)</td>
+              <td>Protective oral gel (Orabase); topical anesthetic (benzocaine gel); pain reliever if needed for eating discomfort.</td>
+              <td>Avoid acidic, spicy, or hard foods; soft-bristle toothbrush; try identifying a dietary trigger (citrus, chocolate, walnuts).</td>
+              <td class="urgent">Unusually large sore; extreme pain; fever; frequent recurrence; sore that has not healed after 2 weeks (rule out other causes).</td>
+            </tr>
+            <tr>
+              <td>Toothache</td>
+              <td>OTC pain reliever if safe; temporary dental cement for a lost filling (available at pharmacies). <strong>These are bridges to a dental appointment — not cures.</strong></td>
+              <td>Warm salt-water rinse; avoid chewing on the affected side; keep temperature of food and drinks moderate.</td>
+              <td class="urgent">Facial or jaw swelling; fever; severe pain unresponsive to OTC medicines; trouble swallowing or breathing. Dental issues almost always require a dentist.</td>
+            </tr>
+            <tr>
+              <td>Bad breath (halitosis)</td>
+              <td>Consistent oral hygiene: brush twice daily, floss daily, clean tongue with a tongue scraper; alcohol-free mouthwash.</td>
+              <td>Drink more water (dry mouth feeds odor-causing bacteria); reduce tobacco; treat dry mouth; sugarless gum after meals.</td>
+              <td class="urgent">Persistent bad breath despite good hygiene; bleeding gums; toothache; reflux symptoms; sinus or post-nasal drip.</td>
+            </tr>
+            <tr>
+              <td>Dry mouth (xerostomia)</td>
+              <td>Sugar-free lozenges or gum to stimulate saliva; OTC saliva substitute sprays; biotene products.</td>
+              <td>Sip water regularly throughout the day; limit caffeine and alcohol; use a humidifier at night.</td>
+              <td class="urgent">Persistent dry mouth that may be a medication side effect; accelerating dental decay; difficulty swallowing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- F: Sleep -->
+    <section id="sleep" class="major-section">
+      <span class="section-label">Section F</span>
+      <h2>Sleep, Fatigue &amp; <em>Stress-Body Symptoms</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Movement &amp; lifestyle</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Occasional insomnia</td>
+              <td>Low-dose melatonin (0.5–1 mg) taken 30–60 minutes before your target sleep time may help with sleep timing for some people. Avoid routine use of sedating antihistamines (diphenhydramine) — they cause next-day grogginess and lose efficacy quickly.</td>
+              <td>Consistent wake time is the single most powerful lever; morning natural light within an hour of waking; no caffeine after 1 pm; cool, dark, quiet room; wind-down routine 30–60 minutes before bed.</td>
+              <td class="urgent">Chronic insomnia (more than 3 nights/week for more than 3 months); depression or anxiety; loud snoring with gasping (sleep apnea); significant daytime impairment.</td>
+            </tr>
+            <tr>
+              <td>Mild fatigue after poor sleep or stress</td>
+              <td>Usually no medicine is needed or helpful.</td>
+              <td>Hydration; protein-rich breakfast; morning sunlight; gentle walk; reduce or eliminate alcohol (disrupts sleep quality); prioritize one early night over successive late ones.</td>
+              <td class="urgent">Persistent fatigue despite adequate rest; unexplained weight loss; night sweats; fever; chest pain or shortness of breath; depression; clinical concern for anemia or thyroid dysfunction.</td>
+            </tr>
+            <tr>
+              <td>Stress tension / anxious body</td>
+              <td>No OTC product addresses stress reliably. Avoid using alcohol or sedatives as a coping tool.</td>
+              <td>Slow, extended exhale breathing (4 in, 6–8 out) activates the parasympathetic system; walking; journaling; stretching; prayer or meditation; social connection with trusted people.</td>
+              <td class="urgent">Panic with chest pain; suicidal thoughts; inability to function; physical symptoms that are persistent or escalating.</td>
+            </tr>
+            <tr>
+              <td>Mild dehydration</td>
+              <td>Oral rehydration solution is more effective than plain water for rehydrating after significant fluid loss; water plus salty foods if the cause is sweating.</td>
+              <td>Rest in a cool location; sip steadily rather than gulping large amounts.</td>
+              <td class="urgent">Confusion or disorientation; fainting; little or no urination; severe weakness; dehydration signs that accompany persistent vomiting or diarrhea.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- G: Gender -->
+    <section id="gender" class="major-section">
+      <span class="section-label">Section G</span>
+      <h2>Men's &amp; Women's <em>Common Temporary Issues</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Non-drug help</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Menstrual cramps (dysmenorrhea)</td>
+              <td>NSAIDs (ibuprofen, naproxen) are the most effective OTC option if safe — most effective when started 1–2 days before expected onset or at first sign of cramping. Heat pad to lower abdomen.</td>
+              <td>Gentle movement or yoga; stretching; adequate hydration; reducing inflammatory foods in the days prior.</td>
+              <td class="urgent">Severe new or changed pain; unusually heavy bleeding; possible pregnancy; fever; pain occurring outside of the menstrual period.</td>
+            </tr>
+            <tr>
+              <td>Premenstrual bloating</td>
+              <td>NSAID if needed for associated discomfort; avoid excess dietary sodium in the days before menstruation.</td>
+              <td>Walking; consistent hydration; regular sleep; balanced meals with reduced processed food and alcohol.</td>
+              <td class="urgent">Severe mood symptoms; significant swelling in limbs; irregular or unusually heavy bleeding.</td>
+            </tr>
+            <tr>
+              <td>Mild urinary burning (suspected UTI)</td>
+              <td>Increased hydration may reduce irritation but does not treat infection. OTC urinary pain relievers (phenazopyridine) only mask the burning — they do not clear an infection. <strong>Do not delay seeking diagnosis if a UTI is likely.</strong></td>
+              <td>Avoid bladder irritants: caffeine, alcohol, citrus, carbonated drinks.</td>
+              <td class="urgent">Fever or back/flank pain (kidney involvement); pregnancy; any male urinary symptoms; blood in urine; recurrent UTIs; symptoms persisting beyond 24–48 hours.</td>
+            </tr>
+            <tr>
+              <td>Vaginal yeast-like symptoms</td>
+              <td>OTC antifungal (miconazole or clotrimazole) is reasonable if you have previously been diagnosed and clearly recognize the same symptoms.</td>
+              <td>Avoid douching and scented products; wear breathable cotton underwear.</td>
+              <td class="urgent">First-ever episode; pregnancy; pelvic pain; fever; unusual odor; any STI concern; recurrent episodes (more than 3–4/year).</td>
+            </tr>
+            <tr>
+              <td>Jock itch (tinea cruris)</td>
+              <td>OTC antifungal cream or powder. Treat for the full recommended course — usually 2–4 weeks.</td>
+              <td>Keep the area dry; wear loose, breathable underwear; change immediately after sweating or exercise.</td>
+              <td class="urgent">No improvement; spreading; open sores; diabetes or immunocompromised.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- H: Environment -->
+    <section id="enviro" class="major-section">
+      <span class="section-label">Section H</span>
+      <h2>Eyes, Ears, Nose &amp; <em>Environmental</em></h2>
+
+      <div class="table-wrap">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Self-care / OTC</th>
+              <th>Non-drug help</th>
+              <th>Get medical help if…</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mild nosebleed</td>
+              <td>Sit upright, lean slightly forward (not back — prevents swallowing blood), pinch the soft part of the nose continuously for 10–15 minutes without checking.</td>
+              <td>Humidifier in dry seasons; saline nasal gel for dry mucosa; avoid picking or forceful blowing.</td>
+              <td class="urgent">Heavy or uncontrolled bleeding; nosebleed after a head injury; use of blood thinners; repeated nosebleeds without clear cause; bleeding lasting more than 20 minutes.</td>
+            </tr>
+            <tr>
+              <td>Mild dizziness from standing too fast (orthostatic)</td>
+              <td>Hydration; sit or lie down until it passes.</td>
+              <td>Rise slowly in stages; eat regular meals; avoid prolonged standing in heat.</td>
+              <td class="urgent">Fainting; chest pain; shortness of breath; neurologic symptoms; persistent or worsening vertigo.</td>
+            </tr>
+            <tr>
+              <td>Mild swimmer's ear irritation</td>
+              <td>Keep ear dry; OTC drying drops (alcohol-acetic acid) <em>only</em> if you know the eardrum is intact and there are no ear tubes.</td>
+              <td>Tilt head to drain water after swimming; use a hair dryer on the lowest setting held at arm's length. Avoid cotton swabs — they can pack debris deeper or scratch the ear canal.</td>
+              <td class="urgent">Pain; any discharge from the ear; fever; hearing loss; diabetes or immunocompromised.</td>
+            </tr>
+            <tr>
+              <td>Eye allergy itch</td>
+              <td>OTC antihistamine eye drops (ketotifen); preservative-free artificial tears to flush allergens.</td>
+              <td>Cold compress over closed eyes; avoid rubbing — it releases more histamine and can scratch the cornea.</td>
+              <td class="urgent">Pain; any vision change; light sensitivity; injury; severe or one-sided redness.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- I: Nutrition -->
+    <section id="nutrition" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>Nutrition &amp; Supplements: <em>What the Evidence Actually Shows</em></h2>
+
+      <p>A few supplements are widely marketed for minor ailments. Here is what well-reviewed evidence actually shows — keeping in mind that "mixed evidence" is not the same as "proven effective."</p>
+
+      <div class="supp-grid">
+        <div class="supp-row">
+          <div class="supp-name">Vitamin C</div>
+          <div class="supp-body">Regular daily intake before illness <em>may</em> slightly shorten cold duration. Taking vitamin C only after symptoms start — as a treatment — does not appear clearly beneficial. Food sources are safer as a default: citrus, strawberries, red bell peppers, broccoli.</div>
+        </div>
+        <div class="supp-row">
+          <div class="supp-name">Zinc</div>
+          <div class="supp-body">Zinc lozenges or syrup started within the <em>first 24 hours</em> of cold symptoms may reduce duration, but evidence is mixed across trials, effects are modest, and zinc can cause nausea or interact with other minerals. Avoid intranasal zinc products — they have been associated with lasting loss of smell.</div>
+        </div>
+        <div class="supp-row">
+          <div class="supp-name">Vitamin D</div>
+          <div class="supp-body">Important for immune function and overall health, especially in populations with limited sun exposure. Genuine deficiency is worth addressing through a clinician. It is not a quick cold cure, and megadoses can cause toxicity. Consider testing levels, especially through Chicago winters.</div>
+        </div>
+        <div class="supp-row">
+          <div class="supp-name">Magnesium</div>
+          <div class="supp-body">Important for muscle, nerve, and cardiovascular function, and many people consume less than optimal amounts. However, systematic reviews find magnesium supplementation is <em>unlikely to help</em> ordinary idiopathic leg cramps. Prioritize food sources: pumpkin seeds, almonds, black beans, dark chocolate, leafy greens.</div>
+        </div>
+        <div class="supp-row">
+          <div class="supp-name">Electrolytes</div>
+          <div class="supp-body">Genuinely useful after heavy exercise, significant sweating, vomiting, diarrhea, or fasting. For routine daily activity with regular meals and water, electrolyte supplementation is generally unnecessary — and many sports drinks carry significant sugar loads.</div>
+        </div>
+        <div class="supp-row">
+          <div class="supp-name">Probiotics</div>
+          <div class="supp-body">May help reduce antibiotic-associated diarrhea and assist with gut regularity in some people — effects are highly strain-specific. Food options (plain yogurt, kefir, fermented foods) are a reasonable first step if tolerated.</div>
+        </div>
+        <div class="supp-row">
+          <div class="supp-name">Use Caution</div>
+          <div class="supp-body">Iron, B12, high-dose vitamin D, iodine, and herbal supplements should not be used casually for vague fatigue or "wellness." They can be inappropriate, harmful in excess, or interact with conditions and prescription medicines. Deficiency or specific need should be established before use.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cabinet -->
+    <section id="cabinet" class="major-section">
+      <span class="section-label">Reference</span>
+      <h2>A Balanced <em>Home Medicine Cabinet</em></h2>
+
+      <p>A well-stocked household kit covers the most common categories without excess. Keep a separate note — in a visible location — with medication allergies, chronic conditions, current prescriptions, and pediatric dosing instructions by weight (weight matters for children's fever medicine; aspirin should never be given to children unless a clinician specifically directs it).</p>
+
+      <div class="cabinet-grid">
+        <div class="cabinet-card">
+          <h4>Pain &amp; Fever</h4>
+          <ul>
+            <li>Acetaminophen (Tylenol)</li>
+            <li>Ibuprofen or naproxen (if safe for you)</li>
+            <li>Thermometer</li>
+          </ul>
+        </div>
+        <div class="cabinet-card">
+          <h4>Cold, Allergy &amp; Throat</h4>
+          <ul>
+            <li>Saline nasal spray or rinse kit</li>
+            <li>Non-drowsy antihistamine</li>
+            <li>Throat lozenges</li>
+            <li>Honey (adults &amp; children over 1)</li>
+          </ul>
+        </div>
+        <div class="cabinet-card">
+          <h4>Digestive</h4>
+          <ul>
+            <li>Oral rehydration packets (e.g. Pedialyte)</li>
+            <li>Antacid (calcium carbonate)</li>
+            <li>Fiber supplement (psyllium)</li>
+            <li>Gentle laxative (polyethylene glycol)</li>
+            <li>Loperamide (used cautiously)</li>
+          </ul>
+        </div>
+        <div class="cabinet-card">
+          <h4>Skin &amp; First Aid</h4>
+          <ul>
+            <li>Assorted bandages and gauze</li>
+            <li>Antiseptic wash</li>
+            <li>Petroleum jelly</li>
+            <li>Hydrocortisone 1% cream</li>
+            <li>Antifungal cream</li>
+            <li>Calamine lotion</li>
+            <li>Tweezers and cold pack</li>
+          </ul>
+        </div>
+        <div class="cabinet-card">
+          <h4>Movement &amp; Injury</h4>
+          <ul>
+            <li>Elastic compression wrap</li>
+            <li>Heat pad (reusable)</li>
+            <li>Topical pain reliever (menthol gel)</li>
+          </ul>
+        </div>
+        <div class="cabinet-card">
+          <h4>Eyes, Ears &amp; Mouth</h4>
+          <ul>
+            <li>Preservative-free artificial tears</li>
+            <li>Antihistamine eye drops</li>
+            <li>Throat anesthetic spray</li>
+            <li>Temporary dental cement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decision Flow -->
+    <section id="flow" class="major-section">
+      <span class="section-label">Quick reference</span>
+      <h2>A Practical <em>Decision Flow</em></h2>
+
+      <p>When a symptom appears, work through these steps in order and stop at the first one that fits:</p>
+
+      <ol class="decision-flow">
+        <li><strong>Is this dangerous?</strong> Chest pain, breathing difficulty, severe pain, neurologic symptoms, severe dehydration, major injury, rapidly worsening symptoms — these are emergency situations. Stop here and seek urgent care.</li>
+        <li><strong>Is it mild and familiar?</strong> Try rest, increased fluids, gentle movement, dietary adjustment, or appropriate OTC support for 24–48 hours.</li>
+        <li><strong>Is it not improving, or recurring frequently?</strong> Don't just suppress it again — ask a pharmacist or clinician what the underlying cause might be.</li>
+        <li><strong>Are you using OTC medicine repeatedly for more than a few days?</strong> That pattern is a signal to investigate the root cause rather than mask it.</li>
+        <li><strong>Do you take prescription medicines or have a chronic condition?</strong> Consult a pharmacist before using NSAIDs, decongestants, sedating antihistamines, laxatives, supplements, or herbal products — interactions and contraindications are common and often overlooked.</li>
+      </ol>
+
+      <div class="info-box" style="margin-top: 2rem;">
+        <p><strong>Remember:</strong> pharmacists are an underused resource. They are trained specifically to advise on minor illnesses, OTC product selection, and drug interactions. Many pharmacies offer free one-on-one consultations — no appointment needed.</p>
+      </div>
+    </section>
+
+  </article>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+  }
+
+  // Smooth scroll with offset for TOC links (accounts for fixed nav)
+  document.querySelectorAll('.toc-list a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      const offset = 80; // 62px nav + 18px breathing room
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      document.getElementById('tocOverlay').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
