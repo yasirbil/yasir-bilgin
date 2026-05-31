@@ -63,3 +63,13 @@ for section_dir in sorted(root.iterdir()):
 out = root / 'assets' / 'search-index.json'
 out.write_text(json.dumps(entries, ensure_ascii=False, indent=2))
 print(f'search-index.json: {len(entries)} entries ({out.stat().st_size // 1024} KB)')
+
+# Bump service worker cache version so browsers discard the old cached search-index.json
+sw = root / 'sw.js'
+sw_text = sw.read_text()
+m = re.search(r"const CACHE = 'ynb-v(\d+)'", sw_text)
+if m:
+    old_v = int(m.group(1))
+    new_v = old_v + 1
+    sw.write_text(sw_text.replace(f"ynb-v{old_v}", f"ynb-v{new_v}"))
+    print(f'sw.js: cache bumped ynb-v{old_v} → ynb-v{new_v}')
