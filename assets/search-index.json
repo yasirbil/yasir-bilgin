@@ -5,7 +5,12 @@
     "subsec": "Aesthetics",
     "title": "Global Home Design Philosophies",
     "desc": "Fifteen Traditions Every enduring home design philosophy is an answer to a specific question — about climate, community, spirituality, or the land. These…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "home design",
+      "aesthetics",
+      "interior philosophy"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/arts/Craft/the-five-arts.html",
@@ -13,7 +18,12 @@
     "subsec": "Craft",
     "title": "The Four Arts — A Mastery Guide",
     "desc": "&quot;You don",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "mastery",
+      "craft",
+      "arts education"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/arts/Food/mechanics-of-cooking.html",
@@ -21,7 +31,12 @@
     "subsec": "Food",
     "title": "The Mechanics of Cooking",
     "desc": "// the primary variable in nearly every",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "cooking",
+      "food science",
+      "culinary"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/arts/Islamic-Arts/calligraphy-generator.html",
@@ -29,7 +44,12 @@
     "subsec": "Islamic Arts",
     "title": "Arabic Calligraphy Generator",
     "desc": "Arabic Calligraphy Generator",
-    "date": ""
+    "date": "",
+    "tags": [
+      "calligraphy",
+      "Islamic art",
+      "Arabic script"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/arts/Music/bendir-usuller.html",
@@ -37,7 +57,12 @@
     "subsec": "Music",
     "title": "Usüller Bendir",
     "desc": "An interactive reference guide to usül rhythmic patterns for the bendir — the frame drum at the heart of Turkish Sufi music and devotional practice.",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "bendir",
+      "Turkish music",
+      "rhythm"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/arts/Music/suno-structure-extractor.html",
@@ -45,7 +70,12 @@
     "subsec": "Music",
     "title": "Suno Structure Extractor",
     "desc": "Suno Structure Extractor",
-    "date": ""
+    "date": "",
+    "tags": [
+      "music AI",
+      "song structure",
+      "audio tools"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Big-Questions/nursi-big-questions.html",
@@ -53,7 +83,12 @@
     "subsec": "Big Questions",
     "title": "The Big Questions — Perspectives from Said Nursi",
     "desc": "Plato, Thomas Hobbes, Gilbert Ryle, Albert Camus, Jean-Paul Sartre, Georg W.F.",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Said Nursi",
+      "philosophy",
+      "theology"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Big-Questions/philosophy-big-questions.html",
@@ -61,7 +96,12 @@
     "subsec": "Big Questions",
     "title": "The Big Questions of Philosophy",
     "desc": "A detailed guide to the twenty deepest questions of philosophy — reality, knowledge, consciousness, ethics, God, meaning, and wisdom — across traditions East and West.",
-    "date": "2026-05-28"
+    "date": "2026-05-28",
+    "tags": [
+      "philosophy",
+      "metaphysics",
+      "big questions"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Global-History/global-history.html",
@@ -69,7 +109,12 @@
     "subsec": "Global History",
     "title": "Atlas of Ideas — Global Historical Chronology",
     "desc": "A global historical chronology mapping the major events, turning points, and civilizational shifts from antiquity to the present day.",
-    "date": "1968-05-01"
+    "date": "1968-05-01",
+    "tags": [
+      "world history",
+      "chronology",
+      "civilizations"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Global-History/historical-pattern-atlas.html",
@@ -77,7 +122,12 @@
     "subsec": "Global History",
     "title": "Historical Pattern Atlas",
     "desc": "Explore forty historical triggers as a pattern atlas of pressure dynamics, pathway families, warning signs, risk labels, and stabilizing alternatives.",
-    "date": "2026-05-23"
+    "date": "2026-05-23",
+    "tags": [
+      "history",
+      "patterns",
+      "civilizational cycles"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Mental-Models/from-problem-to-value.html",
@@ -85,7 +135,12 @@
     "subsec": "Mental Models",
     "title": "From Problem to Value",
     "desc": "A practical framework for solution design — mapping the eight types of problems people face, the human needs beneath them, and how great solutions close…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "decision making",
+      "mental models",
+      "problem solving"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Mental-Models/why-humans-make-bad-decisions.html",
@@ -93,7 +148,12 @@
     "subsec": "Mental Models",
     "title": "Why Humans Make Bad Decisions",
     "desc": "A comprehensive taxonomy of decision errors — spanning knowledge gaps, cognitive biases, psychological forces, social pressures, and the systems we…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "cognitive bias",
+      "decision making",
+      "psychology"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Reference-Guides/500-facts.html",
@@ -101,7 +161,12 @@
     "subsec": "Reference Guides",
     "title": "500 Facts for the Curious Mind",
     "desc": "Foundational knowledge across physics, biology, history, economics, mathematics, philosophy, psychology, linguistics, technology, and geopolitics —…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "facts",
+      "reference",
+      "trivia"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Reference-Guides/essential-books.html",
@@ -109,7 +174,12 @@
     "subsec": "Reference Guides",
     "title": "Essential Books",
     "desc": "187 essential works spanning anthropology, history, philosophy, politics, economics, and",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "books",
+      "reading list",
+      "bibliography"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Reference-Guides/reading-spring.html",
@@ -117,7 +187,12 @@
     "subsec": "Reference Guides",
     "title": "Reading Spring: A Field Guide to Seasonal Signs",
     "desc": "A phenology field guide for reading spring: what early blooms, mast years, mosquito surges, phenological mismatches, and ENSO patterns actually mean.",
-    "date": "2026-05-25"
+    "date": "2026-05-25",
+    "tags": [
+      "nature",
+      "seasons",
+      "ecology"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Science-and-Mathematics/consciousness-first-physics.html",
@@ -125,7 +200,12 @@
     "subsec": "Science & Mathematics",
     "title": "Consciousness-First Physics: A Paradigm Map",
     "desc": "Can physics be reinterpreted so that consciousness — not matter — is ontologically fundamental? A structured guide to the question, its major answers, and…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "consciousness",
+      "physics",
+      "philosophy of mind"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Science-and-Mathematics/math-as-a-language.html",
@@ -133,7 +213,12 @@
     "subsec": "Science & Mathematics",
     "title": "Mathematics as a Language",
     "desc": "Most people think math is about numbers. It isn",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "mathematics",
+      "language",
+      "abstraction"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Science-and-Mathematics/thermodynamics.html",
@@ -141,7 +226,12 @@
     "subsec": "Science & Mathematics",
     "title": "Thermodynamics Reference",
     "desc": "A comprehensive interactive reference covering the laws, concepts, processes, cycles, and formulas of",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "thermodynamics",
+      "physics",
+      "reference"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/atlas/Universal-Principles/universal-principles.html",
@@ -149,7 +239,12 @@
     "subsec": "Universal Principles",
     "title": "100 Universal Principles",
     "desc": "One hundred principles distilled from over 1,620 book summaries spanning cognitive science, philosophy, neuroscience, leadership, economics, ethics, and…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "universal principles",
+      "frameworks",
+      "knowledge"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/Civilizations/atlas-of-melody-Muslim-World.html",
@@ -157,7 +252,12 @@
     "subsec": "Civilizations",
     "title": "Atlas of Melody in the Muslim World",
     "desc": "How local cultures across fourteen centuries and five continents shaped, inflected, and transformed Islamic devotional sound — from Ottoman makam to South…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "music",
+      "Muslim world",
+      "cultural atlas"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/Civilizations/typologies-of-societies.html",
@@ -165,7 +265,12 @@
     "subsec": "Civilizations",
     "title": "Typologies of Societies",
     "desc": "A society",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "sociology",
+      "civilizations",
+      "social theory"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/Geopolitics/cultural-and-religious-conflict-zones.html",
@@ -173,7 +278,12 @@
     "subsec": "Geopolitics",
     "title": "Cultural & Religious Conflict Zones",
     "desc": "Throughout history, conflict has rarely emerged randomly. It tends to arise at predictable pressure points — moments when identities, power structures,…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "conflict zones",
+      "geopolitics",
+      "religion"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/Geopolitics/frontier-nations.html",
@@ -181,7 +291,12 @@
     "subsec": "Geopolitics",
     "title": "Zone X: Frontier Nations — Boundary Zones & Frontier Regions",
     "desc": "A structured profile of nations and regions located where major civilizations, empires, religions, languages, and geopolitical blocs physically meet —…",
-    "date": "2021-08-01"
+    "date": "2021-08-01",
+    "tags": [
+      "frontier zones",
+      "geopolitics",
+      "boundary regions"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/Geopolitics/how-global-power-shifts.html",
@@ -189,7 +304,12 @@
     "subsec": "Geopolitics",
     "title": "How Global Power Shifts",
     "desc": "A structured framework for reading global power transitions — ten stages, ten patterns, five forms — illustrated by the Dutch, British, American, and other historical cases, with an interactive filter.",
-    "date": "2026-05-30"
+    "date": "2026-05-30",
+    "tags": [
+      "power transition",
+      "geopolitics",
+      "world order"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/Geopolitics/international-governance.html",
@@ -197,7 +317,12 @@
     "subsec": "Geopolitics",
     "title": "International Governance — A Systems Guide",
     "desc": "The world without a world government — how order is created through power, institutions, law, markets, norms, resources, and",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "international relations",
+      "governance",
+      "global systems"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/Social-Movements/lifecycle-of-movements.html",
@@ -205,7 +330,12 @@
     "subsec": "Social Movements",
     "title": "Lifecycle of Social & Religious Movements",
     "desc": "A synthesized framework — drawing on Weber, Ibn Khaldun, Troeltsch, Toynbee, and Berger — for understanding how movements are born, institutionalize,…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "social movements",
+      "religion",
+      "community organizing"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/World-Cultures/influential-cultures.html",
@@ -213,7 +343,12 @@
     "subsec": "World Cultures",
     "title": "World Influence Spheres — Master Guide",
     "desc": "Colonial roots · Lingua Franca · Cultural Values · MBTI Type · Religious Core · Time · Authority · Individual vs Collective · Outsider Stance · Failure…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "cultural influence",
+      "world cultures",
+      "civilizational zones"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/World-Cultures/japan/japan-cultural-guide.html",
@@ -221,7 +356,12 @@
     "subsec": "World Cultures",
     "title": "Japan — A Cultural Guide",
     "desc": "Arts · Food · Seasons · Brands — a structured map to explore Japanese",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Japan",
+      "culture",
+      "travel guide"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/World-Cultures/japan/japan-factsheet.html",
@@ -229,7 +369,12 @@
     "subsec": "World Cultures",
     "title": "Japan — Fact Sheet",
     "desc": "Japan is an island nation in East Asia, situated in the Pacific Ocean to the east of the Korean Peninsula and China. An archipelago of over 14,000…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Japan",
+      "facts",
+      "reference"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/World-Cultures/japan/japan-itinerary.html",
@@ -237,7 +382,12 @@
     "subsec": "World Cultures",
     "title": "Japan Family Trip — Apr 11–19",
     "desc": "April 11 – 19 · Kyoto · Nara · Arashiyama · Tokyo ·",
-    "date": "2025-04-01"
+    "date": "2025-04-01",
+    "tags": [
+      "Japan",
+      "travel",
+      "family"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/World-Cultures/japan/japan-japanese-mind.html",
@@ -245,7 +395,12 @@
     "subsec": "World Cultures",
     "title": "The Japanese Mind — A Global Map of Concepts",
     "desc": "A deep map of Japanese concepts that shaped global culture — from philosophy and aesthetics to business, food, and daily",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Japanese philosophy",
+      "concepts",
+      "culture"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/World-Cultures/japan/japan-philosophy-of-making.html",
@@ -253,7 +408,12 @@
     "subsec": "World Cultures",
     "title": "The Japanese Design Mindset — A Guide",
     "desc": "Japanese product design is widely recognised for its exceptional attention to detail, quiet efficiency, and long-term durability. This guide explores the…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Japanese design",
+      "aesthetics",
+      "wabi-sabi"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/civilization/World-Cultures/japan/japan-spiritual-japan.html",
@@ -261,7 +421,12 @@
     "subsec": "World Cultures",
     "title": "Spiritual Japan — A Study Guide",
     "desc": "A Field Study Guide to Shinto · Buddhism ·",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Japan",
+      "spirituality",
+      "Shinto Buddhism"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Comparative-Religion/anthropocentrism.html",
@@ -269,7 +434,12 @@
     "subsec": "Comparative Religion",
     "title": "Two Centres, Two Skies — Anthropocentrism in Islamic and Western Thought",
     "desc": "Anthropocentrism in Islamic and Western thought — and what happens when the boundary between God and human",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "anthropocentrism",
+      "Islamic thought",
+      "Western philosophy"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Comparative-Religion/bridging-the-sects.html",
@@ -277,7 +447,12 @@
     "subsec": "Comparative Religion",
     "title": "Bridging the Sects — Yasir Bilgin",
     "desc": "Islam",
-    "date": "2026-02-01"
+    "date": "2026-02-01",
+    "tags": [
+      "Islamic unity",
+      "sectarianism",
+      "reconciliation"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Comparative-Religion/chaplaincy.html",
@@ -285,7 +460,12 @@
     "subsec": "Comparative Religion",
     "title": "The Chaplaincy Guide",
     "desc": "A professional reference for chaplains across all contexts, with dedicated attention to Islamic",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "chaplaincy",
+      "pastoral care",
+      "interfaith"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Comparative-Religion/holiness-across-traditions.html",
@@ -293,7 +473,12 @@
     "subsec": "Comparative Religion",
     "title": "The Sacred — Holiness Across Traditions",
     "desc": "From the Hebrew qadosh to the Sanskrit pavitra — humanity",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "holiness",
+      "comparative religion",
+      "the sacred"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Comparative-Religion/religions-timeline.html",
@@ -301,7 +486,12 @@
     "subsec": "Comparative Religion",
     "title": "World Religions — Historical Timeline",
     "desc": "World Religions — Historical Timeline",
-    "date": ""
+    "date": "",
+    "tags": [
+      "world religions",
+      "history",
+      "timeline"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Comparative-Religion/shared-themes-of-religions.html",
@@ -309,7 +499,12 @@
     "subsec": "Comparative Religion",
     "title": "Faiths of the World — Shared Themes, Roles & Rituals Across Religions",
     "desc": "Shared themes, roles & rituals woven through the world",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "comparative religion",
+      "shared values",
+      "interfaith"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Comparative-Religion/truth-and-power.html",
@@ -317,7 +512,12 @@
     "subsec": "Comparative Religion",
     "title": "The Tension Between Theology and Governance",
     "desc": "Theology asks what is right. Governance asks what is possible. These are not the same question — and that tension is exactly where the work",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "theology",
+      "politics",
+      "governance"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Intellectual-History/ibn-arabi.html",
@@ -325,7 +525,12 @@
     "subsec": "Islamic Intellectual History",
     "title": "Ibn ʿArabī: A Detailed Guide",
     "desc": "A Detailed Guide to His Life, Thought, Key Concepts, Major Works, and How to Study the Greatest Master of Islamic Mystical",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "Ibn Arabi",
+      "Sufism",
+      "Islamic philosophy"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Intellectual-History/mujtahid's-path.html",
@@ -333,7 +538,12 @@
     "subsec": "Islamic Intellectual History",
     "title": "The Mujtahid's Path — A Comprehensive Formation Guide",
     "desc": "A Comprehensive Formation Guide for Sacred Reasoning, Ethical Judgment & Spiritual",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ijtihad",
+      "Islamic scholarship",
+      "jurisprudence"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Intellectual-History/the-hidden-wires-of-ibn-khaldun.html",
@@ -341,7 +551,12 @@
     "subsec": "Islamic Intellectual History",
     "title": "The Hidden Wires of Ibn Khaldun",
     "desc": "Ibn Khaldun wrote the first theory of how civilizations rise and fall — not in an ivory tower, but in the wreckage of a world being destroyed by plague,…",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "Ibn Khaldun",
+      "social theory",
+      "Islamic history"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/essential-books--islam.html",
@@ -349,7 +564,12 @@
     "subsec": "Islamic Studies",
     "title": "Essential Books of the Islamic Tradition",
     "desc": "200 foundational works spanning theology, jurisprudence, philosophy, science, history, literature, and social thought — the intellectual heritage that…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Islamic books",
+      "reading list",
+      "scholarship"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/islam-in-china.html",
@@ -357,7 +577,12 @@
     "subsec": "Islamic Studies",
     "title": "Islam in China: Civilization, Synthesis, and Mutual Influence",
     "desc": "From Silk Road merchants to Han Kitāb philosophers, from Sīnī calligraphy to Uyghur muqam — how two great civilizations have shaped each other across…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Islam",
+      "China",
+      "cultural history"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/madrasa-books.html",
@@ -365,7 +590,12 @@
     "subsec": "Islamic Studies",
     "title": "Medrese Kitapları",
     "desc": "A structured guide to the classical madrasa curriculum — the foundational texts in Arabic grammar, logic, theology, jurisprudence, and Islamic sciences.",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "madrasa",
+      "Islamic education",
+      "Turkish"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/science-of-the-heart.html",
@@ -373,7 +603,12 @@
     "subsec": "Islamic Studies",
     "title": "The Science of the Heart: A Complete Methodology of Sufism | Religious Sciences",
     "desc": "Taṣawwuf is Islam",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "tasawwuf",
+      "Sufism",
+      "spiritual psychology"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/tafseer.html",
@@ -381,7 +616,12 @@
     "subsec": "Islamic Studies",
     "title": "The Science of Listening: A Complete Guide to Tafsīr",
     "desc": "The Qurʾān has been recited in the same words for fourteen centuries. But what those words mean — and who has the right to say — has been the central…",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "tafsir",
+      "Quran commentary",
+      "Islamic sciences"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/the-grammar-of-belief-kalam.html",
@@ -389,7 +629,12 @@
     "subsec": "Islamic Studies",
     "title": "The Grammar of Belief: A Complete Guide to Kalām",
     "desc": "Before a Muslim can say what God does , she must ask what God is . Kalām is the discipline that makes that question answerable — the rational theology…",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "kalam",
+      "Islamic theology",
+      "aqeedah"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/usul-fiqh.html",
@@ -397,7 +642,12 @@
     "subsec": "Islamic Studies",
     "title": "The Architecture of the Law: A Complete Methodology of Uṣūl al-Fiqh | Fikir Defteri",
     "desc": "Before a jurist can rule, she must ask: by what right, from what source, through what reasoning? Uṣūl al-Fiqh is the discipline that answers those prior…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "usul al-fiqh",
+      "Islamic law",
+      "jurisprudence"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Islamic-Studies/usul-hadith.html",
@@ -405,7 +655,12 @@
     "subsec": "Islamic Studies",
     "title": "The Custodians of the Word: A Complete Methodology of ʿUlūm al-Ḥadīth | Religious Sciences",
     "desc": "Before a prophetic tradition can guide a life or ground a legal ruling, it must be verified. ʿUlūm al-Ḥadīth is the Islamic science that makes…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "hadith sciences",
+      "Islamic tradition",
+      "sunnah"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/faith/Quran-and-Hadith/resources.html",
@@ -413,7 +668,12 @@
     "subsec": "Quran & Hadith",
     "title": "Pages — Study Qur'an",
     "desc": "A curated collection of Qur",
-    "date": "2011-05-13"
+    "date": "2011-05-13",
+    "tags": [
+      "Quran",
+      "study",
+      "Islamic sciences"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/hizmet/Community/social-issues-and-hizmet.html",
@@ -421,7 +681,12 @@
     "subsec": "Community",
     "title": "Hizmet × Western Social Issues — Country Explorer",
     "desc": "The Hizmet movement is a global civic initiative inspired by Turkish-Islamic scholar Fethullah Gülen. Hizmet means &quot;service&quot; — describing both its name…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Hizmet",
+      "social issues",
+      "interfaith"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/hizmet/Community/turkish-identity-guide.html",
@@ -429,7 +694,12 @@
     "subsec": "Community",
     "title": "Turkish Muslim Identity Through Historical Figures",
     "desc": "A curriculum guide for Turkish American Hizmet youth exploring the figures who shaped Turkish Muslim identity across faith, spirituality, law, statecraft, art, and modernity.",
-    "date": "2026-05-29"
+    "date": "2026-05-29",
+    "tags": [
+      "Turkish identity",
+      "Muslim",
+      "history"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/hizmet/Hizmet-Vision-and-Resources/gulen-study-circle.html",
@@ -437,7 +707,12 @@
     "subsec": "Hizmet Vision & Resources",
     "title": "Gülen Ders Halkası — Okuttuğu Kitaplar",
     "desc": "Dr. Ergün Çapan",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Gülen",
+      "study circle",
+      "Turkish"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/hizmet/Hizmet-Vision-and-Resources/research-library.html",
@@ -445,7 +720,12 @@
     "subsec": "Hizmet Vision & Resources",
     "title": "Hizmet Movement Research Library",
     "desc": "A curated research library on the Hizmet movement: academic papers, reports, and scholarly resources on education, civil society, and interfaith dialogue.",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Hizmet",
+      "research",
+      "library"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/hizmet/Hizmet-Vision-and-Resources/resources-and-toolbox.html",
@@ -453,7 +733,12 @@
     "subsec": "Hizmet Vision & Resources",
     "title": "Hizmet Community — Resources & Toolbox Guide",
     "desc": "A grassroots volunteer platform developing tools and resources with a critical eye for the Hizmet community — organized by 15 life domains, open to…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Hizmet",
+      "community resources",
+      "toolbox"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/learning/Languages/arabic-balaghah.html",
@@ -461,7 +746,12 @@
     "subsec": "Languages",
     "title": "Arabic Balāghah: A Complete Guide",
     "desc": "The science of eloquence — how Arabic achieves precision, beauty, and contextual power across three interlocking disciplines: Maʿānī, Bayān, and",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Arabic rhetoric",
+      "balaghah",
+      "language"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/learning/Languages/japanese-guide.html",
@@ -469,7 +759,12 @@
     "subsec": "Languages",
     "title": "Learn Japanese — A Complete Guide",
     "desc": "From zero to conversation — a structured guide covering writing systems, grammar, vocabulary, and the mindset to stay",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Japanese",
+      "language learning",
+      "guide"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/learning/Languages/survival-japanese.html",
@@ -477,7 +772,12 @@
     "subsec": "Languages",
     "title": "Japanese Survival Language",
     "desc": "Essential phrases for travellers",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Japanese",
+      "phrases",
+      "travel language"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/learning/Languages/world-languages.html",
@@ -485,7 +785,12 @@
     "subsec": "Languages",
     "title": "World Languages — A Multidimensional Guide",
     "desc": "Language Families Languages descend from common ancestors, forming family trees that stretch back thousands of years. A family is a group of languages…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "world languages",
+      "linguistics",
+      "language families"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/life/Family/family-therapy.html",
@@ -493,7 +798,12 @@
     "subsec": "Family",
     "title": "Family Therapy — Complete Clinical Guide",
     "desc": "Family therapy begins with a shift in vision. Instead of seeing human problems only as internal defects within individuals, family therapy asks how…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "family therapy",
+      "counseling",
+      "mental health"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/life/Family/family-workshops-trainer-guide.html",
@@ -501,7 +811,12 @@
     "subsec": "Family",
     "title": "Family Workshops — Trainer Guide",
     "desc": "A complete trainer guide for Hizmet family workshops covering nine sessions: ground rules, family life cycle, MBTI, expectations, family of origin, communication, and spiritual foundations.",
-    "date": "2026-05-30"
+    "date": "2026-05-30",
+    "tags": [
+      "family workshops",
+      "facilitation",
+      "Hizmet"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/life/Wellbeing/how-body-repairs-itself.html",
@@ -509,7 +824,12 @@
     "subsec": "Wellbeing",
     "title": "How the Body Repairs Itself",
     "desc": "A systems-level guide to accelerating recovery—covering cellular cleanup, sleep, nutrition, movement, inflammation, and damage",
-    "date": "2026-04-01"
+    "date": "2026-04-01",
+    "tags": [
+      "health",
+      "body",
+      "recovery"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/life/Wellbeing/minor-health-botherings.html",
@@ -517,7 +837,12 @@
     "subsec": "Wellbeing",
     "title": "Minor Health Botherings: A Practical Reference Guide",
     "desc": "A practical day-to-day reference for mild, temporary symptoms — from headaches and heartburn to muscle soreness and skin irritation — with self-care, OTC guidance, and clear red flags.",
-    "date": "2026-05-29"
+    "date": "2026-05-29",
+    "tags": [
+      "health",
+      "symptoms",
+      "practical guide"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/life/Wellbeing/to-tame-or-to-tend.html",
@@ -525,7 +850,12 @@
     "subsec": "Wellbeing",
     "title": "To Tame or to Tend",
     "desc": "Should we shape nature — including human nature — or protect it from our own corrupting",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "wellbeing",
+      "self-care",
+      "psychology"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ahlak-and-Virtue/moral-distortion-framework.html",
@@ -533,7 +863,12 @@
     "subsec": "Ahlak & Virtue",
     "title": "The Moral Distortion Framework",
     "desc": "How scarcity and abundance both corrupt the soul — and what healthy civilizations do",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "moral psychology",
+      "virtue",
+      "nafs"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ahlak-and-Virtue/noble-character.html",
@@ -541,7 +876,12 @@
     "subsec": "Ahlak & Virtue",
     "title": "Noble Character — A Field Guide",
     "desc": "Record observations of akhlaq-hasanah in daily life. The trained eye begins to see moral beauty",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "character",
+      "virtue ethics",
+      "ahlak"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ahlak-and-Virtue/signs-of-spiritual-health.html",
@@ -549,7 +889,12 @@
     "subsec": "Ahlak & Virtue",
     "title": "Signs of Spiritual Health Across Traditions",
     "desc": "What does spiritual progress actually look like? Fifteen indicators — drawn from Islam, Christianity, Buddhism, Hinduism, Judaism, Daoism, Confucianism,…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "spiritual health",
+      "virtue",
+      "traditions"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Moral-Psychology/spiritual-digestion-divine-presence.html",
@@ -557,7 +902,12 @@
     "subsec": "Moral Psychology",
     "title": "Spiritual Digestion",
     "desc": "An article exploring spiritual digestion: how inner imbalance can prevent the soul from absorbing divine presence, peace, meaning, mercy, and guidance.",
-    "date": "2026-05-24"
+    "date": "2026-05-24",
+    "tags": [
+      "spiritual growth",
+      "dhikr",
+      "presence"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Moral-Psychology/veils-that-block-divine-guidance.html",
@@ -565,7 +915,12 @@
     "subsec": "Moral Psychology",
     "title": "Veils That Block Divine Guidance",
     "desc": "A searchable spiritual psychology map of cognitive, emotional, egoic, bodily, social, and nafs-based veils that can block guidance.",
-    "date": "2026-05-25"
+    "date": "2026-05-25",
+    "tags": [
+      "divine guidance",
+      "spiritual blindness",
+      "heart"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Moral-Psychology/worship-ego-nearness.html",
@@ -573,7 +928,12 @@
     "subsec": "Moral Psychology",
     "title": "Worship, Ego, and Spiritual Nearness",
     "desc": "How ego and shame-centered cultures transform worship from divine nearness into a performance of flawless piety — and what a more authentic spirituality looks like.",
-    "date": "2026-05-23"
+    "date": "2026-05-23",
+    "tags": [
+      "ego",
+      "worship",
+      "spiritual nearness"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/fasting-the-mind.html",
@@ -581,7 +941,12 @@
     "subsec": "Ramadan & Practice",
     "title": "Ramadan for the Mind — A Cognitive Fasting Guide",
     "desc": "How Ramadan purifies more than the body — a guide to physical, spiritual, and cognitive fasting for all sixteen personality",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Ramadan",
+      "cognitive fasting",
+      "mindfulness"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/enfj-ramadan-guide.html",
@@ -589,7 +954,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENFJ Ramadan Guide",
     "desc": "A Ramadan guide for the ENFJ — on fasting from the need to be needed, the performance of goodness, and the gentle but persistent steering of others toward…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ENFJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/enfp-ramadan-guide.html",
@@ -597,7 +967,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENFP Ramadan Guide — Fasting the Inspirer's Mind",
     "desc": "A Ramadan guide for the ENFP — on fasting from the endless generation of possibility, the overextension of self, and the fear that commitment means…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ENFP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/entj-ramadan-guide.html",
@@ -605,7 +980,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENTJ Ramadan Guide — Fasting the Commander's Will",
     "desc": "A Ramadan guide for the ENTJ — on fasting from the need to control outcomes, dominate environments, and measure every person by what they",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ENTJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/entp-ramadan-guide.html",
@@ -613,7 +993,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENTP Ramadan Guide",
     "desc": "A Ramadan guide for the ENTP — on fasting from the thrill of argument, the restlessness that passes for curiosity, and the particular brilliance of always…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ENTP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/esfj-ramadan-guide.html",
@@ -621,7 +1006,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESFJ Ramadan Guide",
     "desc": "A Ramadan guide for the ESFJ — on fasting from the need for approval, the gossip that bonds the group, and the particular discipline of speaking something…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ESFJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/esfp-ramadan-guide.html",
@@ -629,7 +1019,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESFP Ramadan Guide — Fasting the Performer's Heart",
     "desc": "A Ramadan guide for the ESFP — on fasting from stimulation, emotional reactivity, and the beautiful, exhausting work of filling every silence before it…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ESFP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/estj-ramadan-guide.html",
@@ -637,7 +1032,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESTJ Ramadan Guide",
     "desc": "A Ramadan guide for the ESTJ — on fasting from the measure of productivity, the management of others toward correct outcomes, and the quiet belief that…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ESTJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/estp-ramadan-guide.html",
@@ -645,7 +1045,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESTP Ramadan Guide — Fasting the Dynamo's Mind",
     "desc": "A Ramadan guide for the ESTP — on fasting from thrill-seeking, cutting critique, and the particular difficulty of letting a moment be quiet without…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ESTP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/infj-ramadan-guide.html",
@@ -653,7 +1058,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The INFJ Ramadan Guide",
     "desc": "A Ramadan guide for the INFJ — on fasting from the certainty of insight, the weight of others",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "INFJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/infp-ramadan-guide.html",
@@ -661,7 +1071,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The INFP Ramadan Guide — Fasting the Idealist's Heart",
     "desc": "A Ramadan guide for the INFP — on fasting from feeling as truth, fantasy loops, and the beautiful but costly habit of living more fully inside the inner…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "INFP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/intj-ramadan-guide.html",
@@ -669,7 +1084,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The INTJ Ramadan Guide — Fasting the Strategist's Mind",
     "desc": "A Ramadan guide for the INTJ — on fasting from certainty, efficiency, and the quiet pride of always seeing further than",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "INTJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/intp-ramadan-guide.html",
@@ -677,7 +1097,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The INTP Ramadan Guide",
     "desc": "A Ramadan guide for the INTP — on fasting from the clean refuge of logic, the infinite deferral of commitment, and the quiet belief that precision is the…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "INTP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/isfj-ramadan-guide.html",
@@ -685,7 +1110,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISFJ Ramadan Guide",
     "desc": "A Ramadan guide for the ISFJ — on fasting from self-erasure, the quiet loans of care that were never acknowledged as loans, and the particular discipline…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ISFJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/isfp-ramadan-guide.html",
@@ -693,7 +1123,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISFP Ramadan Guide — Fasting the Artist's Heart",
     "desc": "A Ramadan guide for the ISFP — on fasting from emotional withdrawal, impulse reaction, and the habit of retreating into inner silence when the world asks…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ISFP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/istj-ramadan-guide.html",
@@ -701,7 +1136,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISTJ Ramadan Guide",
     "desc": "A Ramadan guide for the ISTJ — on fasting from the certainty that familiarity proves correctness, the silent accumulation of grievance, and the particular…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ISTJ",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-and-personality/istp-ramadan-guide.html",
@@ -709,7 +1149,12 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISTP Ramadan Guide — Fasting the Craftsman's Mind",
     "desc": "A Ramadan guide for the ISTP — on fasting from emotional withdrawal, stimulation-driven risk, and the habit of disappearing precisely when presence is…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "ISTP",
+      "Ramadan",
+      "personality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Ramadan-and-Practice/ramadan-as-universal-calibrator.html",
@@ -717,7 +1162,12 @@
     "subsec": "Ramadan & Practice",
     "title": "Ramadan as a Universal Calibrator",
     "desc": "What if fasting was not a ritual of deprivation, but a precision instrument for resetting everything that",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Ramadan",
+      "universal",
+      "spiritual reset"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/foci-of-transformation.html",
@@ -725,7 +1175,12 @@
     "subsec": "Spiritual Growth",
     "title": "Foci of Transformation",
     "desc": "Instead of comparing religions by doctrine, ask a different question: what does each tradition tell you to focus on in order to awaken? Seven answers —…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "transformation",
+      "spiritual growth",
+      "focus"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/from-survival-to-baqa.html",
@@ -733,7 +1188,12 @@
     "subsec": "Spiritual Growth",
     "title": "From Survival to Baqāʾ",
     "desc": "What the Islamic concept of lasting subsistence reveals about existence, rationality, and what it truly means to",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "baqa",
+      "spiritual stages",
+      "fana"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/harmony-with-reality.html",
@@ -741,7 +1201,12 @@
     "subsec": "Spiritual Growth",
     "title": "Harmony with Reality: Spiritual Alignment Across Traditions",
     "desc": "Is spiritual life ultimately about aligning oneself with the deepest structure of the Real? A comparative exploration across seven",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "spiritual alignment",
+      "harmony",
+      "traditions"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/heavenly-home.html",
@@ -749,7 +1214,12 @@
     "subsec": "Spiritual Growth",
     "title": "How to Turn Your Home Into a Corner from Heaven",
     "desc": "Ten principles from the Risale-i Nur for building a sacred life within ordinary",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "home",
+      "spiritual environment",
+      "barakah"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/meaning-patterns.html",
@@ -757,7 +1227,12 @@
     "subsec": "Spiritual Growth",
     "title": "Who Chooses What — Patterns in Meaning",
     "desc": "The philosophy you live by is not purely a rational choice. Personality traits, life stage, crisis, economics, and climate all tilt you toward certain…",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "meaning",
+      "choice",
+      "psychology"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/meaning-we-choose.html",
@@ -765,7 +1240,12 @@
     "subsec": "Spiritual Growth",
     "title": "The Meaning We Choose",
     "desc": "How the philosophy you live by shapes your daily practices, deepest motivations, and the life you build — a guide to 25 traditions and what each demands…",
-    "date": "2026-05-01"
+    "date": "2026-05-01",
+    "tags": [
+      "meaning making",
+      "existential",
+      "spirituality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/preparing-the-vessel.html",
@@ -773,7 +1253,12 @@
     "subsec": "Spiritual Growth",
     "title": "Preparing the Vessel",
     "desc": "How to ready the body, heart, mind, and will before entering a sacred space — so that what wants to arrive can actually find",
-    "date": "2026-03-01"
+    "date": "2026-03-01",
+    "tags": [
+      "spiritual preparation",
+      "purification",
+      "vessel"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/sovereignty-of-absent.html",
@@ -781,7 +1266,12 @@
     "subsec": "Spiritual Growth",
     "title": "The Sovereignty of the Absent",
     "desc": "Why gossip fragments the self — and what we lose when we speak about others who cannot speak",
-    "date": "2025-02-01"
+    "date": "2025-02-01",
+    "tags": [
+      "ghayb",
+      "divine sovereignty",
+      "spiritual reality"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Growth/stages-of-spiritual-journey.html",
@@ -789,7 +1279,12 @@
     "subsec": "Spiritual Growth",
     "title": "Stages of the Spiritual Journey",
     "desc": "How mystics across seven traditions have mapped the path from ordinary consciousness to liberation, union, or enlightenment — and where these maps",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "maqamat",
+      "spiritual stages",
+      "Sufi path"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Spiritual-Therapy/spiritual-guidance.html",
@@ -797,7 +1292,12 @@
     "subsec": "Spiritual Therapy",
     "title": "Spiritual Therapy &mdash; Complete Guide",
     "desc": "This part establishes the foundation of Spiritual Therapy as a disciplined guide for spiritual development. It defines the field, distinguishes it from…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "spiritual therapy",
+      "healing",
+      "psychology"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Sufism/insan-kamil.html",
@@ -805,7 +1305,12 @@
     "subsec": "Sufism",
     "title": "Insan-ı Kâmil — The Complete Human",
     "desc": "Not a personality type — but a path of integration. Eight cognitive functions. Eight stations of the",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "insan-i kamil",
+      "Sufism",
+      "perfect human"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/spirit/Sufism/sufi-path-to-spirituality.html",
@@ -813,7 +1318,12 @@
     "subsec": "Sufism",
     "title": "Maqāmāt — Stages of the Sufi Path",
     "desc": "How the great Sufi masters — from Khorasan to Andalusia — mapped the inner journey from repentance to annihilation, and where their maps converge and…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "maqamat",
+      "Sufism",
+      "spiritual stations"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/AI-and-MLOps/ai-field-guide.html",
@@ -821,7 +1331,12 @@
     "subsec": "AI & MLOps",
     "title": "The AI Practitioner's Field Guide",
     "desc": "A comprehensive reference for understanding, building with, and deploying modern AI systems — from prompt fundamentals to autonomous agentic",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "AI",
+      "machine learning",
+      "practitioner guide"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/AI-and-MLOps/llm-rag-agent-and-agentic-AI.html",
@@ -829,7 +1344,12 @@
     "subsec": "AI & MLOps",
     "title": "LLM vs RAG vs AI Agent vs Agentic AI — Practitioner's Build Guide",
     "desc": "A hands-on build guide for practitioners learn what each paradigm actually is, when to use it, and how to construct a working example from scratch using…",
-    "date": "2026-05-02"
+    "date": "2026-05-02",
+    "tags": [
+      "LLM",
+      "RAG",
+      "AI agents"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/DevOps/ansible.html",
@@ -837,7 +1357,12 @@
     "subsec": "DevOps",
     "title": "Ansible Cheat Sheet",
     "desc": "A concise Ansible cheat sheet covering playbooks, roles, inventory, modules, and automation patterns for infrastructure configuration and deployment.",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Ansible",
+      "DevOps",
+      "automation"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/DevOps/datacenter.html",
@@ -845,7 +1370,12 @@
     "subsec": "DevOps",
     "title": "Datacenter Cage Engineering Guide",
     "desc": "A datacenter cage is a locked, dedicated enclosure within a larger multi-tenant colocation facility. Colocation (colo) providers sell space, power, and…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "datacenter",
+      "colocation",
+      "infrastructure"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/DevOps/devops-reference.html",
@@ -853,7 +1383,12 @@
     "subsec": "DevOps",
     "title": "DevOps Reference",
     "desc": "A practical DevOps reference covering CI/CD pipelines, containerisation, infrastructure as code, and platform engineering best practices.",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "DevOps",
+      "reference",
+      "engineering"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/DevOps/ocient.html",
@@ -861,7 +1396,12 @@
     "subsec": "DevOps",
     "title": "Ocient Hyperscale Data Warehouse — Complete Guide",
     "desc": "A comprehensive guide to Ocient",
-    "date": "2024-01-01"
+    "date": "2024-01-01",
+    "tags": [
+      "Ocient",
+      "data warehouse",
+      "SQL"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/DevOps/responsibilities.html",
@@ -869,7 +1409,12 @@
     "subsec": "DevOps",
     "title": "DevOps Roles & Responsibilities",
     "desc": "Ten disciplines that define modern DevOps — each with a clear objective, what good looks like, the tools teams actually use, and the bottlenecks that…",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "DevOps",
+      "team roles",
+      "engineering"
+    ]
   },
   {
     "url": "https://yasirbilgin.com/tech/Observability/datadog.html",
@@ -877,6 +1422,11 @@
     "subsec": "Observability",
     "title": "Datadog — Complete Reference Guide",
     "desc": "A comprehensive guide to Datadog",
-    "date": "2026-01-01"
+    "date": "2026-01-01",
+    "tags": [
+      "Datadog",
+      "observability",
+      "monitoring"
+    ]
   }
 ]

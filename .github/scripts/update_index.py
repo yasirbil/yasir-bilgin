@@ -31,7 +31,12 @@ def extract_meta(html):
     date_m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', html)
     date = date_m.group(1) if date_m else ''
 
-    return title, desc, date
+    kw_m = re.search(r'<meta[^>]+name=["\']keywords["\'][^>]+content=["\']([^"\']+)', html, re.I)
+    if not kw_m:
+        kw_m = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']keywords["\']', html, re.I)
+    tags = [t.strip() for t in kw_m.group(1).split(',')] if kw_m else []
+
+    return title, desc, date, tags
 
 root = Path(__file__).resolve().parent.parent.parent  # repo root
 entries = []
@@ -50,7 +55,7 @@ for section_dir in sorted(root.iterdir()):
             rel = html_file.relative_to(root)
             url = 'https://yasirbilgin.com/' + str(rel).replace('\\', '/')
             html = html_file.read_text(errors='ignore')
-            title, desc, date = extract_meta(html)
+            title, desc, date, tags = extract_meta(html)
             if not title:
                 continue
             entries.append({
@@ -58,6 +63,7 @@ for section_dir in sorted(root.iterdir()):
                 'section': section_name, 'subsec': subsec_name,
                 'title': title, 'desc': desc,
                 'date': date,
+                'tags': tags,
             })
 
 out = root / 'assets' / 'search-index.json'
