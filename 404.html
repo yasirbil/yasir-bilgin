@@ -228,6 +228,30 @@
       color: var(--text-faint);
     }
 
+    .result-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .result-tag {
+      font-size: 10.5px;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-light);
+      border-radius: 999px;
+      padding: 1px 8px;
+      line-height: 1.8;
+      white-space: nowrap;
+    }
+
+    .result-tag mark {
+      background: transparent;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
     .search-status {
       font-size: 12px;
       color: var(--text-faint);
@@ -469,6 +493,7 @@
           url:        a.url,
           title:      a.title || pathToTitle(a.url),
           breadcrumb: [a.section, a.subsec].filter(Boolean).join(' › ') || pathToBreadcrumb(a.url),
+          tags:       a.tags || [],
         }));
         sitemapLoaded = true;
       } catch {
@@ -503,7 +528,10 @@
 
       const lower = q.toLowerCase();
       const matches = sitemapPages
-        .filter(p => p.title.toLowerCase().includes(lower))
+        .filter(p =>
+          p.title.toLowerCase().includes(lower) ||
+          p.tags.some(t => t.toLowerCase().includes(lower))
+        )
         .slice(0, 12);
 
       searchResults.classList.add('visible');
@@ -514,12 +542,17 @@
       }
 
       const countText = `<span class="sr-only">${matches.length} result${matches.length !== 1 ? 's' : ''} found.</span>`;
-      searchResults.innerHTML = countText + matches.map(p => `
+      searchResults.innerHTML = countText + matches.map(p => {
+        const tagPills = p.tags.length
+          ? `<span class="result-tags">${p.tags.map(t => `<span class="result-tag">${highlight(t, q)}</span>`).join('')}</span>`
+          : '';
+        return `
         <a class="search-result-item" href="${p.url}">
           <span class="result-title">${highlight(p.title, q)}</span>
           <span class="result-path">${highlight(p.breadcrumb, q)}</span>
-        </a>
-      `).join('');
+          ${tagPills}
+        </a>`;
+      }).join('');
     }
 
     let debounceTimer;
