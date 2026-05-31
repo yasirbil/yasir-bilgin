@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Global Power Shifts | Yasir Bilgin</title>
+
+  <meta name="description" content="A structured framework for reading global power transitions — ten stages, ten patterns, five forms — illustrated by the Dutch, British, American, and other historical cases, with an interactive filter.">
+
+  <link rel="canonical" href="https://yasirbilgin.com/civilization/Geopolitics/how-global-power-shifts.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="How Global Power Shifts">
+  <meta property="og:description" content="A structured framework for reading global power transitions — ten stages, ten patterns, five forms — illustrated by the Dutch, British, American, and other historical cases.">
+  <meta property="og:url"         content="https://yasirbilgin.com/civilization/Geopolitics/how-global-power-shifts.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="How Global Power Shifts">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="How Global Power Shifts">
+  <meta name="twitter:description" content="A structured framework for reading global power transitions — ten stages, ten patterns, five forms.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Global Power Shifts",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-05-30",
+    "dateModified": "2026-05-30",
+    "description": "A structured framework for reading global power transitions — ten stages, ten patterns, five forms — illustrated by historical cases from Athens to today.",
+    "url": "https://yasirbilgin.com/civilization/Geopolitics/how-global-power-shifts.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Civilization", "item": "https://yasirbilgin.com/civilization/" },
+      { "@type": "ListItem", "position": 3, "name": "How Global Power Shifts", "item": "https://yasirbilgin.com/civilization/Geopolitics/how-global-power-shifts.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --bg:         #f7f4ef;
+      --surface:    #ffffff;
+      --surface2:   #f2ede6;
+      --text:       #1c1814;
+      --text-dim:   #4a4038;
+      --faint:      #6e5f4e;
+      --border:     rgba(107,93,79,0.18);
+      --accent:     #8b3a2a;
+      --accent-lt:  rgba(139,58,42,0.07);
+      --accent-mid: rgba(139,58,42,0.15);
+      --gold:       #b5892a;
+      --gold-lt:    rgba(181,137,42,0.09);
+      --radius:     8px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #0f0d0a;
+        --surface:    #1a1714;
+        --surface2:   #231f1a;
+        --text:       #e8e0d4;
+        --text-dim:   #c4b89e;
+        --faint:      #9a8e7c;
+        --border:     rgba(255,255,255,0.1);
+        --accent:     #c0583e;
+        --accent-lt:  rgba(192,88,62,0.09);
+        --accent-mid: rgba(192,88,62,0.18);
+        --gold:       #d4a83a;
+        --gold-lt:    rgba(212,168,58,0.09);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.78;
+    }
+
+    /* ── Progress bar ── */
+    .progress-bar {
+      position: fixed; top: 62px; left: 0;
+      height: 3px; background: var(--accent);
+      width: 0%; z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ── */
+    .toc-overlay {
+      display: none; position: fixed; inset: 0;
+      z-index: 9000; background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex; align-items: flex-start; justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--surface); width: min(380px, 92vw); height: 100vh;
+      overflow-y: auto; padding: 2rem 1.8rem;
+      border-left: 1px solid var(--border);
+      animation: slideIn 0.2s ease;
+    }
+    @keyframes slideIn { from { transform: translateX(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+    .toc-close {
+      float: right; background: none; border: 1px solid var(--border);
+      border-radius: 4px; color: var(--faint); cursor: pointer;
+      font-size: 1rem; padding: 0.3rem 0.7rem; margin-bottom: 1rem;
+    }
+    .toc-close:hover { background: var(--accent-lt); color: var(--accent); }
+    .toc-panel h3 {
+      font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 1.4rem; clear: both;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-top: 1px solid var(--border); }
+    .toc-list a {
+      display: block; padding: 0.6rem 0;
+      color: var(--text-dim); text-decoration: none;
+      font-size: 0.87rem; line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-list a.toc-main { font-weight: 600; color: var(--text); }
+    .toc-list a.toc-sub  { padding-left: 1rem; font-size: 0.81rem; }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      display: inline-flex; align-items: center;
+      margin-bottom: 1.5rem; padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22); border-radius: 999px;
+      color: var(--faint); font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow { border-color: rgba(255,255,255,0.14); background: rgba(30,27,23,0.7); }
+    }
+
+    /* ── Hero ── */
+    .hero { max-width: 820px; margin: 0 auto; padding: 5rem 2.5rem 3rem; }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+      font-weight: 700; line-height: 1.15;
+      letter-spacing: -0.02em; margin-bottom: 1.2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.2vw, 1.18rem);
+      color: var(--text-dim); line-height: 1.65;
+      max-width: 620px; margin-bottom: 2rem;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      display: grid; place-items: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 600; flex-shrink: 0;
+    }
+    .byline-name { display: block; font-weight: 600; font-size: 0.92rem; }
+    .byline-meta { display: block; font-size: 0.8rem; color: var(--faint); }
+    .hero-rule { border: none; border-top: 1px solid var(--border); max-width: 820px; margin: 0 auto; }
+
+    /* ── Article header — static, after hr ── */
+    .article-header {
+      display: flex; align-items: center;
+      justify-content: flex-end; gap: 1rem;
+      padding: 0.75rem 2.5rem;
+      max-width: 820px; margin: 0 auto;
+    }
+    .read-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem; color: var(--faint); letter-spacing: 0.04em;
+    }
+    .toc-btn {
+      background: none; border: 1px solid var(--border); border-radius: 6px;
+      color: var(--text-dim); cursor: pointer;
+      font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
+      min-height: 44px; padding: 0.4rem 1rem;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toc-btn:hover { background: var(--accent-lt); color: var(--accent); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Article body ── */
+    .article-body { max-width: 820px; margin: 0 auto; padding: 4rem 2.5rem 8rem; }
+    .major-section { margin-bottom: 5rem; scroll-margin-top: 80px; }
+    .section-label {
+      display: inline-block; font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    }
+    h2 {
+      font-size: clamp(1.55rem, 3.5vw, 2.4rem); font-weight: 700;
+      line-height: 1.2; letter-spacing: -0.015em; margin-bottom: 1.4rem;
+    }
+    h2 em { font-style: italic; color: var(--accent); }
+    h3 {
+      font-size: clamp(1.1rem, 2.2vw, 1.42rem); font-weight: 650;
+      line-height: 1.3; margin: 2.8rem 0 0.9rem; color: var(--text);
+    }
+    .sh-num {
+      font-family: 'DM Sans', sans-serif; font-size: 0.73rem;
+      font-weight: 700; color: var(--accent);
+      letter-spacing: 0.07em; margin-right: 0.5rem;
+    }
+    p { margin-bottom: 1.3rem; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 650; }
+
+    /* ── Callout ── */
+    .callout {
+      background: var(--accent-lt); border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.2rem 1.6rem; margin: 2rem 0;
+      font-size: 1.03rem; line-height: 1.65; color: var(--text);
+    }
+    .callout em { font-style: italic; }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2rem; padding-left: 2rem;
+      border-left: 3px solid var(--gold);
+      font-size: 1.16rem; font-style: italic;
+      line-height: 1.55; color: var(--text);
+    }
+    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 1.8rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    thead tr { background: var(--accent-lt); border-bottom: 2px solid var(--border); }
+    th {
+      text-align: left; padding: 0.65rem 0.9rem;
+      font-family: 'DM Sans', sans-serif; font-weight: 600;
+      font-size: 0.75rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--faint);
+    }
+    td {
+      padding: 0.6rem 0.9rem; color: var(--text-dim);
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5; vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: var(--accent-lt); }
+    td strong { color: var(--text); }
+
+    /* ── Filter bar ── */
+    .filter-bar {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin: 2rem 0 1.6rem; align-items: center;
+    }
+    .filter-label {
+      font-family: 'DM Sans', sans-serif; font-size: 0.75rem;
+      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--faint); margin-right: 0.4rem;
+    }
+    .filter-btn {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 999px; color: var(--text-dim);
+      cursor: pointer; font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem; min-height: 34px; padding: 0.25rem 0.85rem;
+      transition: all 0.15s; white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-btn.active {
+      background: var(--accent); border-color: var(--accent);
+      color: #fff; font-weight: 600;
+    }
+    .filter-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Pattern cards ── */
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem; margin: 1.6rem 0;
+    }
+    .pattern-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.4rem;
+      transition: border-color 0.15s, opacity 0.2s, transform 0.2s;
+    }
+    .pattern-card:hover { border-color: var(--accent); }
+    .pattern-card.hidden {
+      display: none;
+    }
+    .card-label {
+      font-family: 'DM Sans', sans-serif; font-size: 0.67rem;
+      font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
+    }
+    .card-tag {
+      display: inline-block; font-family: 'DM Sans', sans-serif;
+      font-size: 0.64rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; background: var(--accent-lt);
+      color: var(--accent); border-radius: 4px;
+      padding: 0.15rem 0.5rem; margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .pattern-card h4 { font-size: 1rem; font-weight: 650; margin-bottom: 0.6rem; line-height: 1.3; }
+    .pattern-card p  { font-size: 0.87rem; line-height: 1.58; margin-bottom: 0; }
+    .pattern-card .example-note {
+      margin-top: 0.8rem; padding-top: 0.7rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem; color: var(--faint); font-style: italic;
+    }
+
+    /* ── Lifecycle box ── */
+    .lifecycle-box {
+      background: var(--gold-lt); border: 1px solid rgba(181,137,42,0.2);
+      border-radius: var(--radius); padding: 2rem 2.2rem; margin: 2rem 0;
+    }
+    .lifecycle-box > h4 {
+      font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.4rem;
+    }
+    .lc-row {
+      display: grid; grid-template-columns: 8.5rem 1fr 1fr;
+      gap: 0 1rem; padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(181,137,42,0.12);
+      font-size: 0.86rem; align-items: start;
+    }
+    .lc-row:last-child { border-bottom: none; }
+    .lc-stage { font-weight: 600; color: var(--text); }
+    .lc-what  { color: var(--text-dim); }
+    .lc-q     { color: var(--faint); font-style: italic; font-size: 0.81rem; }
+    @media (max-width: 600px) {
+      .lc-row { grid-template-columns: 1fr; gap: 0.2rem; }
+      .lc-q   { display: none; }
+    }
+
+    /* ── Indicator grid ── */
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.1rem; margin: 1.8rem 0;
+    }
+    .indicator-col {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.2rem 1.4rem;
+    }
+    .indicator-col h4 {
+      font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+      font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.9rem; padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .indicator-col ul { list-style: none; }
+    .indicator-col li {
+      font-size: 0.85rem; line-height: 1.45; padding: 0.4rem 0;
+      color: var(--text-dim); border-bottom: 1px solid var(--border);
+      display: flex; gap: 0.5rem; align-items: flex-start;
+    }
+    .indicator-col li:last-child { border-bottom: none; }
+    .indicator-col li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+
+    /* ── Today grid ── */
+    .today-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1rem; margin: 1.8rem 0;
+    }
+    .today-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.1rem 1.3rem;
+      font-size: 0.88rem; color: var(--text-dim); line-height: 1.55;
+    }
+    .today-card strong { display: block; margin-bottom: 0.3rem; color: var(--text); }
+
+    /* ── Stage numbered list ── */
+    .stage-list { list-style: none; margin: 1.5rem 0 2rem; }
+    .stage-list li {
+      display: grid; grid-template-columns: 2.8rem 1fr;
+      gap: 0 1.1rem; align-items: start;
+      padding: 0.9rem 0; border-bottom: 1px solid var(--border);
+    }
+    .stage-list li:first-child { border-top: 1px solid var(--border); }
+    .stage-num {
+      font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+      font-weight: 700; color: var(--accent); letter-spacing: 0.08em; padding-top: 0.2rem;
+    }
+    .stage-content strong { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .stage-content p { font-size: 0.9rem; margin-bottom: 0; line-height: 1.55; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border); padding: 2.5rem;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .footer-logo { font-weight: 700; font-size: 1rem; color: var(--text); font-family: 'DM Sans', sans-serif; }
+    .footer-copy { font-size: 0.78rem; color: var(--faint); }
+
+    /* ── Mobile ── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .hero { padding: 3rem 1.4rem 2rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      h1 { font-size: clamp(2rem, 6vw, 4.4rem); }
+      h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+<main id="main-content">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s0"  class="toc-main">Introduction</a></li>
+        <li><a href="#s1"  class="toc-main">I. The Ten Stages</a></li>
+        <li><a href="#s1-1" class="toc-sub">1. Hegemonic Order</a></li>
+        <li><a href="#s1-2" class="toc-sub">2. Internal Saturation</a></li>
+        <li><a href="#s1-3" class="toc-sub">3. Challenger Rises</a></li>
+        <li><a href="#s1-4" class="toc-sub">4. Economic Gravity Shifts</a></li>
+        <li><a href="#s1-5" class="toc-sub">5. Institutional Challenge</a></li>
+        <li><a href="#s1-6" class="toc-sub">6. Legitimacy Crisis</a></li>
+        <li><a href="#s1-7" class="toc-sub">7. Alliance Hedging</a></li>
+        <li><a href="#s1-8" class="toc-sub">8. Flashpoint Competition</a></li>
+        <li><a href="#s1-9" class="toc-sub">9. Systemic Shock</a></li>
+        <li><a href="#s1-10" class="toc-sub">10. New Order Formation</a></li>
+        <li><a href="#s2"  class="toc-main">II. Ten Repeating Patterns</a></li>
+        <li><a href="#s3"  class="toc-main">III. Five Forms of Transition</a></li>
+        <li><a href="#s4"  class="toc-main">IV. Indicators to Watch</a></li>
+        <li><a href="#s5"  class="toc-main">V. The Lifecycle at a Glance</a></li>
+        <li><a href="#s6"  class="toc-main">VI. Reading Today's Shift</a></li>
+        <li><a href="#s7"  class="toc-main">VII. The Deepest Pattern</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Civilization · Geopolitics</div>
+    <h1>How Global <em>Power Shifts</em></h1>
+    <p class="hero-sub">Power transitions rarely happen in one dramatic moment. They accumulate through production, technology, finance, legitimacy, and alliance — over decades. A framework for reading how it actually works, illustrated by the transitions history has already run.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">May 30, 2026 · Geopolitics</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <header class="article-header">
+    <span class="read-time">38 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+  </header>
+
+  <article class="article-body">
+
+    <!-- ── Intro ─────────────────────────────────────────── -->
+    <section id="s0" class="major-section">
+
+      <div class="callout">
+        <strong>Working definition:</strong> A power shift occurs when a rising center gains more ability to shape world outcomes while the old center loses the ability, will, or legitimacy to maintain the existing order.
+      </div>
+
+      <p>Global power shifts usually do <strong>not</strong> happen in one dramatic moment. They happen through a long accumulation of changes in production, technology, finance, military reach, legitimacy, institutions, culture, demographics, and alliances. War sometimes accelerates the shift, but power can also move through economic exhaustion, technological displacement, institutional redesign, and internal decay.</p>
+
+      <p>The historical record is rich with transitions: the Dutch commercial republic handing financial primacy to Britain in the 18th century; Britain handing the mantle to the United States after two world wars; the Athens–Sparta contest that Thucydides used to define the genre. Each case is unique in its particulars and remarkably consistent in its structure.</p>
+
+      <p>What follows is a structured framework: ten stages, ten patterns, and five forms. Where the original source text made empirical claims, those have been checked against the historical record and corrected or deepened where necessary.</p>
+
+    </section>
+
+    <!-- ── Section I: Ten Stages ──────────────────────────── -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>The Ten Stages of <em>Power Transition</em></h2>
+
+      <p>No transition follows these stages in rigid sequence. Think of them as overlapping tendencies, not a clockwork mechanism.</p>
+
+      <!-- 1 -->
+      <h3 id="s1-1"><span class="sh-num">STAGE 1</span> Existing Hegemonic Order</h3>
+      <p>One power or region sets the rules of the system. It controls or strongly influences trade routes, reserve currency, security architecture, financial institutions, diplomatic norms, technology standards, and the story of legitimacy that makes others accept the arrangement as normal.</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Era</th><th>Dominant Center</th><th>Core Instruments</th></tr></thead>
+        <tbody>
+          <tr><td>17th century</td><td><strong>Dutch Republic</strong></td><td>Fluyt shipping, VOC trade network, Amsterdam capital markets, cartography</td></tr>
+          <tr><td>18th–19th century</td><td><strong>British Empire</strong></td><td>Royal Navy, industrial production, sterling, global free-trade norms, India</td></tr>
+          <tr><td>Post-1945</td><td><strong>United States</strong></td><td>Dollar system, NATO, UN/IMF/World Bank/WTO, nuclear umbrella, cultural exports</td></tr>
+        </tbody>
+      </table></div>
+
+      <p><em>Hegemonic stability theory</em>, developed by economists Charles Kindleberger and Robert Gilpin among others, argues that international systems tend to be more stable when a single dominant power provides public goods — open trade, security guarantees, currency stability, and institutional leadership. When that leadership weakens, the system does not automatically self-correct. Other actors compete to fill partial vacuums while avoiding the full costs of hegemony, producing instability. The theory has critics — it tends to overlook how hegemony also serves the hegemon's own interests — but it describes a real structural dynamic.</p>
+
+      <!-- 2 -->
+      <h3 id="s1-2"><span class="sh-num">STAGE 2</span> Internal Saturation of the Old Power</h3>
+      <p>The dominant power begins to face diminishing returns. Its earlier advantages become expensive to maintain. This does not mean immediate collapse — often the old power remains very strong for decades, even a century. But the <strong>cost of maintaining dominance rises faster than the benefits</strong>.</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Domain</th><th>Typical Pattern</th><th>Historical Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Economy</strong></td><td>Debt accumulation, deindustrialization, financialization</td><td>Britain shifted from industrial to financial dominance by the 1870s–80s as the US and Germany industrialized faster</td></tr>
+          <tr><td><strong>Military</strong></td><td>Overextension, costly bases, reliance on proxies</td><td>Britain maintained 450 naval stations globally by 1900 — an enormous fiscal burden that two world wars made unsustainable</td></tr>
+          <tr><td><strong>Politics</strong></td><td>Elite fragmentation, short-termism, legitimacy crisis</td><td>Dutch Republic's regent oligarchy became internally paralyzed by factional conflict in the mid-18th century</td></tr>
+          <tr><td><strong>Innovation</strong></td><td>Incumbents defend status quo rather than enable disruption</td><td>British textile and steel industries lobbied against labor-saving machinery through the 19th century</td></tr>
+          <tr><td><strong>Alliances</strong></td><td>Allies free-ride or quietly hedge</td><td>European NATO members consistently underinvested in defense throughout the Cold War, depending on US commitment</td></tr>
+        </tbody>
+      </table></div>
+
+      <!-- 3 -->
+      <h3 id="s1-3"><span class="sh-num">STAGE 3</span> Peripheral or Rival Region Compounds Advantages</h3>
+      <p>A rising power usually starts by mastering something the old center underestimates — often a marginal capability that becomes central because the commercial or technological environment has shifted around it.</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Rising Power</th><th>Original Underestimated Advantage</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Dutch Republic</strong> (17th c.)</td><td>The <em>fluyt</em> — a shallow, wide cargo ship that cut shipping costs by ~40% compared to rivals, enabling volume trade that made the Dutch the world's freight carriers. Combined with the VOC (1602), the first publicly traded joint-stock company, and the Amsterdam Exchange Bank (1609), the world's first central bank effectively.</td></tr>
+          <tr><td><strong>Britain</strong> (18th c.)</td><td>Coal-powered steam engines (Newcomen 1712, Watt 1769) that escaped the organic energy ceiling limiting all previous economies. Combined with parliamentary institutions that enabled reliable long-term public debt, funding naval expansion and war without bankruptcy.</td></tr>
+          <tr><td><strong>United States</strong> (19th–20th c.)</td><td>Continental-scale land abundance, then the assembly line (Ford's Model T, 1913), then petroleum logistics and aviation, then the dollar's reserve currency status after Bretton Woods (1944).</td></tr>
+          <tr><td><strong>China today</strong></td><td>Manufacturing scale that compressed decades of industrialization into 30 years, combined with state-directed industrial policy (Made in China 2025), infrastructure diplomacy (Belt and Road Initiative), and emerging clean-tech dominance in solar, batteries, and EVs.</td></tr>
+        </tbody>
+      </table></div>
+
+      <p><em>Power transition theory</em>, developed by A.F.K. Organski in the 1950s and extended by others, argues that the most dangerous period in a power shift is not when the challenger has overtaken the dominant power, but when it is close to parity and growing fastest. The ruling power is still strong enough to resist; the challenger is strong enough to press. That combination — not the arrival of the challenger at dominance — is statistically the most conflict-prone moment.</p>
+
+      <!-- 4 -->
+      <h3 id="s1-4"><span class="sh-num">STAGE 4</span> Economic Center of Gravity Shifts</h3>
+      <p>Before military dominance changes, the <strong>economic base</strong> usually shifts first. And power is not simply about GDP size — it is about control over systems that others depend on and cannot easily replace or route around.</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Signal</th><th>What It Reveals</th></tr></thead>
+        <tbody>
+          <tr><td>Manufacturing share</td><td>Who produces the world's physical goods; the base of military-industrial capacity</td></tr>
+          <tr><td>Trade dependency</td><td>Who others cannot afford to avoid trading with — they take the political costs of the relationship</td></tr>
+          <tr><td>Infrastructure finance</td><td>Who builds ports, rail, telecoms, and energy systems in third countries — and the long-term leverage that creates</td></tr>
+          <tr><td>Currency settlement</td><td>Who can sanction whom; who can conduct trade outside the dominant payment system</td></tr>
+          <tr><td>Supply-chain centrality</td><td>Who controls chokepoints in critical goods — semiconductors, rare earths, pharmaceuticals</td></tr>
+          <tr><td>Technology standards</td><td>Who writes the rules for platforms, protocols, chips, AI, and telecoms — invisible rule-making with enormous economic consequences</td></tr>
+        </tbody>
+      </table></div>
+
+      <!-- 5 -->
+      <h3 id="s1-5"><span class="sh-num">STAGE 5</span> Institutional Challenge Begins</h3>
+      <p>The rising power first participates in the old system to gain legitimacy and access, then gradually builds parallel structures. The sequence is typically: <strong>join → complain → build alternatives → offer to others → claim rule-making authority</strong>.</p>
+
+      <p>Examples: the United States joined the European-designed gold standard and British-led free trade system in the 19th century, complained about British financial dominance, created the Federal Reserve in 1913 and the Bretton Woods institutions in 1944 as American-designed alternatives, offered dollar liquidity and Marshall Plan aid to rebuild Europe and Japan on American terms, and eventually became the center around which the postwar order was organized.</p>
+
+      <p>World-systems theory, associated with Immanuel Wallerstein, describes these changes as shifts in the <em>core</em> of the world economy — dominant centers rise, accumulate, mature, financialize (moving from production to managing money), and are eventually challenged by new productive centers. The move to finance is often a late-cycle signal rather than a sign of enduring strength.</p>
+
+      <!-- 6 -->
+      <h3 id="s1-6"><span class="sh-num">STAGE 6</span> Legitimacy Crisis of the Old Order</h3>
+      <p>A hegemon does not only rule by force. It rules by <strong>story</strong> — the story that the current order is fair, beneficial, and the best available arrangement. When that story stops being widely believed, material decline accelerates, because the side-payments and coercions required to maintain compliance become far more expensive.</p>
+
+      <div class="pull-quote">When many actors begin saying "this system no longer serves us," the old order has lost something no army can easily recover.</div>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Type of Critique</th><th>Pattern</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Moral / hypocrisy</strong></td><td>Claiming to stand for universal values while practicing double standards — colonial extraction, torture, targeted assassination — erodes the moral authority that reduces compliance costs</td></tr>
+          <tr><td><strong>Economic unfairness</strong></td><td>IMF conditionality, dollar "exorbitant privilege," sanctions abuse, trade rules perceived as serving incumbents over latecomers</td></tr>
+          <tr><td><strong>Security critique</strong></td><td>Alliances perceived as containing rather than protecting some partners; forward basing seen as occupation</td></tr>
+          <tr><td><strong>Cultural imposition</strong></td><td>Rejection of hegemon's cultural products, legal norms, or values as alien rather than universal</td></tr>
+          <tr><td><strong>Institutional critique</strong></td><td>UN Security Council veto structure frozen at 1945 power distributions; voting shares in IMF and World Bank not reflecting economic reality</td></tr>
+        </tbody>
+      </table></div>
+
+      <!-- 7 -->
+      <h3 id="s1-7"><span class="sh-num">STAGE 7</span> Alliance Hedging and Middle-Power Autonomy</h3>
+      <p>Power shifts become structurally visible when middle powers stop automatically obeying one bloc. This is the behavioral leading indicator of multipolarity — it appears in the data before formal institutional changes reflect it.</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Hedging Behavior</th><th>Strategic Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Buying weapons from multiple sources</td><td>Security diversification — refusing to make a permanent bet</td></tr>
+          <tr><td>Trading with rivals despite pressure</td><td>Economic hedging; asserting sovereignty over commercial relationships</td></tr>
+          <tr><td>Joining multiple competing institutions</td><td>Multi-alignment as deliberate posture, extracting benefits from both sides</td></tr>
+          <tr><td>Refusing sanctions compliance</td><td>Rejection of bloc discipline; signals that loyalty has limits</td></tr>
+          <tr><td>Building domestic defense industries</td><td>Long-term autonomy-seeking; reducing dependency on patron's equipment and intelligence</td></tr>
+          <tr><td>Local currency trade agreements</td><td>Dollar-risk reduction and political signal of non-alignment</td></tr>
+        </tbody>
+      </table></div>
+
+      <p>Middle powers that are doing this most visibly today include India, Turkey, Saudi Arabia, Indonesia, Brazil, Vietnam, South Africa, and the Gulf states. Each can extract benefits from both Washington and Beijing precisely because neither can afford to lose them entirely.</p>
+
+      <!-- 8 -->
+      <h3 id="s1-8"><span class="sh-num">STAGE 8</span> Flashpoint Competition</h3>
+      <p>Power transitions produce dangerous flashpoints where status, security, prestige, and domestic politics all concentrate. The key insight from Thucydides — and it is his most durable contribution — is that <strong>fear</strong>, not aggression, tends to drive the dominant power into conflict. Sparta did not attack Athens because Athens was threatening Sparta directly; Sparta attacked because it feared what a still-stronger Athens would eventually be able to do.</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Transition</th><th>Flashpoints</th><th>Driver</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Athens–Sparta</strong> (431 BCE)</td><td>Corinthian alliances, Athenian walls, Megarian decree</td><td>Spartan fear of Athenian power, not Athenian aggression — Thucydides' explicit claim</td></tr>
+          <tr><td><strong>Britain–Germany</strong> (1890–1914)</td><td>Naval arms race, Moroccan crises (1905, 1911), Balkan alliance chains</td><td>German industrial rise threatening British naval supremacy; each side's deterrence moves raised the other's alarm</td></tr>
+          <tr><td><strong>US–USSR</strong> (1947–1991)</td><td>Berlin blockade, Korea, Cuba, Vietnam, Afghanistan</td><td>Ideological and strategic competition managed through proxy conflicts and deterrence, not direct war</td></tr>
+          <tr><td><strong>US–China today</strong></td><td>Taiwan Strait, South China Sea, semiconductor controls, AI competition, Pacific base posture</td><td>US concern about losing Pacific primacy; Chinese concern about being encircled and technologically contained</td></tr>
+        </tbody>
+      </table></div>
+
+      <p>Graham Allison's "Thucydides Trap" argument, based on a Harvard Belfer Center study, identified 16 cases over the past 500 years where a rising power threatened to displace a ruling one — and found that war resulted in 12 of those 16 cases (75%). This is a genuinely sobering statistic. However, several important caveats apply: the case selection has been criticized for Western and European bias; the definition of "ruling" and "rising" power was set retrospectively; and critics (including scholars at the Air University and elsewhere) have noted selection bias — cases were chosen in part because they involve rivalries, which already presupposes a degree of conflict orientation. The 4 peaceful cases (including the Britain–US transition) are as instructive as the 12 violent ones, and they tend to share features: cultural similarity, shared external threats, and a rising power willing to accept initial junior-partner status.</p>
+
+      <!-- 9 -->
+      <h3 id="s1-9"><span class="sh-num">STAGE 9</span> Systemic Shock or Catalytic Crisis</h3>
+      <p>A global power shift often needs a shock to <em>reveal</em> what has already changed structurally. The crisis does not create the shift — it accelerates and exposes it.</p>
+
+      <div class="callout">WWI did not create American power. American industrial output had already surpassed Britain's by the 1880s, and the US became a net creditor nation around 1915. The war revealed that Britain could no longer fund a global order without American loans. WWII confirmed what WWI had already implied.</div>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Type of Shock</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Major war</strong></td><td>Destroys old balances, creates space to redesign institutions at the peace conference — Westphalia, Vienna, Versailles, Bretton Woods all followed major wars</td></tr>
+          <tr><td><strong>Financial crisis</strong></td><td>Exposes debt and institutional fragility; shifts credibility from debtor to creditor — 2008 accelerated the perception of US institutional weakness</td></tr>
+          <tr><td><strong>Pandemic</strong></td><td>Reveals state capacity, supply-chain dependencies, and the gap between institutional prestige and actual performance</td></tr>
+          <tr><td><strong>Energy crisis</strong></td><td>Shifts leverage to producers and transit states; accelerates structural energy transitions — 1973 oil shock permanently elevated Gulf state leverage</td></tr>
+          <tr><td><strong>Technology revolution</strong></td><td>Restructures military and economic hierarchy around whoever masters it first — steam, electricity, nuclear, semiconductors, now AI</td></tr>
+          <tr><td><strong>Domestic collapse</strong></td><td>Forces strategic retrenchment — Soviet collapse (1991) restructured the entire post-Cold War order in a single year</td></tr>
+        </tbody>
+      </table></div>
+
+      <!-- 10 -->
+      <h3 id="s1-10"><span class="sh-num">STAGE 10</span> New Order Formation</h3>
+      <p>Eventually, the system stabilizes around a new configuration — or fails to stabilize, entering a prolonged interregnum. The historical cases suggest the outcome is rarely as clean as "one power replaces another."</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Outcome Type</th><th>Description</th><th>Historical Case</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Peaceful accommodation</strong></td><td>Old and rising powers negotiate new rules</td><td>Congress of Vienna (1815) — major powers redesigned the European order after Napoleon without destroying each other</td></tr>
+          <tr><td><strong>Cold war rivalry</strong></td><td>Blocs form; direct war avoided by deterrence</td><td>US–USSR, 1947–1991 — competition across every domain except direct military engagement</td></tr>
+          <tr><td><strong>Hegemonic replacement</strong></td><td>One new power clearly sets the rules</td><td>US postwar order (1945–1991 at minimum) — Bretton Woods, Marshall Plan, NATO, UN framing</td></tr>
+          <tr><td><strong>Fragmented multipolarity</strong></td><td>Several centers compete regionally; no single hegemon</td><td>Europe 1648–1815; the current trajectory may resemble this</td></tr>
+          <tr><td><strong>Systemic war</strong></td><td>Conflict resets the order by force</td><td>WWI, WWII — the order was redesigned by whoever was left standing</td></tr>
+          <tr><td><strong>Institutional pluralism</strong></td><td>Old and new institutions coexist in negotiated tension</td><td>Possibly emerging now — US-led and China-led institutions operating in parallel</td></tr>
+        </tbody>
+      </table></div>
+
+      <p>The National Defense University notes that modern great-power competition operates across political, diplomatic, ideological, informational, military, and economic categories simultaneously — not only on the battlefield. This makes "victory" harder to define and the transition period longer and more ambiguous than historical precedents suggest.</p>
+
+    </section>
+
+    <!-- ── Section II: Patterns ───────────────────────────── -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>Ten <em>Repeating Patterns</em></h2>
+
+      <p>Across the cases, certain structural patterns recur reliably. Use the filter to view patterns by their primary domain.</p>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar" role="group" aria-label="Filter patterns by domain">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="all">All patterns</button>
+        <button class="filter-btn" data-filter="economy">Economy</button>
+        <button class="filter-btn" data-filter="politics">Politics</button>
+        <button class="filter-btn" data-filter="technology">Technology</button>
+        <button class="filter-btn" data-filter="military">Military</button>
+        <button class="filter-btn" data-filter="culture">Culture &amp; Legitimacy</button>
+      </div>
+
+      <div class="pattern-grid" id="patternGrid">
+
+        <div class="pattern-card" data-tags="economy politics">
+          <div class="card-label">Pattern A <span class="card-tag">Economy</span><span class="card-tag">Politics</span></div>
+          <h4>Production Moves Before Prestige Moves</h4>
+          <p>A region becomes economically central before the old elites admit it is central. The symbolic order lags the material order by decades. Prestige is sticky — it outlasts the power that originally earned it.</p>
+          <p class="example-note">The US surpassed Britain in industrial output in the 1880s. British financial and cultural prestige — sterling as reserve currency, the Royal Navy as global policeman, Oxford and Cambridge as elite formation — persisted until at least WWII, and English as a global language persists to this day. The Dutch similarly retained financial prestige for a generation after British industry outpaced them.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="economy">
+          <div class="card-label">Pattern B <span class="card-tag">Economy</span></div>
+          <h4>Old Power Financializes; New Power Industrializes</h4>
+          <p>Late-stage hegemons tend to shift from production to finance, debt management, and asset inflation. Rising powers build factories, infrastructure, logistics, ports, and energy systems. Finance can be extremely powerful — but when it detaches from productive capacity, it signals late-cycle dominance.</p>
+          <p class="example-note">The Dutch moved from trade and production (17th c.) to financial intermediation and lending (18th c.) as British and French industry overtook them. Britain moved similarly in the late 19th century — the City of London became the world's leading creditor while German and American factories surpassed British ones in steel, chemicals, and electrical engineering. Today, the US financial sector accounts for roughly 8% of GDP while manufacturing has fallen below 11%.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="politics economy">
+          <div class="card-label">Pattern C <span class="card-tag">Politics</span><span class="card-tag">Economy</span></div>
+          <h4>The Old Power Defends Rules It Once Broke</h4>
+          <p>Rising powers use flexible, protectionist, state-directed strategies while growing. Once dominant, they promote "open rules" that preserve their advantage. The next rising power is then accused of violating those rules. This is not hypocrisy unique to any nation — it is a structural feature of the system.</p>
+          <p class="example-note">Britain industrialized behind high tariffs and Navigation Acts restricting foreign shipping. Once it had the world's most competitive industry (roughly 1840s onward), it promoted free trade as a universal principle — through Cobden's 1846 Corn Law repeal and successive trade treaties. The US industrialized behind the Morrill Tariff (1861) and continued protecting industry until it was globally dominant, then promoted GATT and WTO free trade norms. Japan and South Korea followed the same sequence. China is doing the same — and is accused by incumbents of the same violations incumbents committed during their own rise.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="technology military">
+          <div class="card-label">Pattern D <span class="card-tag">Technology</span><span class="card-tag">Military</span></div>
+          <h4>Technology Rewrites the Map of Power</h4>
+          <p>Major technological waves redistribute power by changing which resources, skills, and geographies matter. Whoever controls the next "general-purpose technology" — one that improves productivity across many sectors — gains disproportionate and durable influence.</p>
+          <p class="example-note"><strong>Oceanic navigation</strong> (15th–16th c.) shifted power from Mediterranean land-route empires to Atlantic seafarers — Portugal, Spain, then the Netherlands and Britain. <strong>Coal and steam</strong> (18th–19th c.) enabled mass production and rapid transport, giving Britain a commanding lead. <strong>Railways and steel</strong> enabled continental powers — the US and Germany — to overcome Britain's maritime advantage by integrating huge internal markets. <strong>Oil and aviation</strong> gave the US strategic reach no previous power had possessed. <strong>Semiconductors</strong> built the US–East Asia tech order. <strong>AI, quantum computing, and precision drones</strong> are the current contested frontier.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="military economy">
+          <div class="card-label">Pattern E <span class="card-tag">Military</span><span class="card-tag">Economy</span></div>
+          <h4>Military Power Follows Economic Ecosystems</h4>
+          <p>Military strength is not primarily about weapons in the present — it is about the industrial, fiscal, logistical, and social foundations that can sustain conflict over time. A country can have an impressive military while its power base is eroding.</p>
+          <p class="example-note">Britain's Royal Navy was the world's dominant force through WWI — but Britain's capacity to fund a global war required borrowing from the US at enormous cost, ultimately making it financially dependent on its former colony. Germany's defeat in WWII was partly a logistics story: US industrial production outpaced German and Japanese combined within 18 months of entering the war. The Soviet collapse (1991) happened partly because military spending consumed resources the civilian economy needed to remain competitive.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="military politics">
+          <div class="card-label">Pattern F <span class="card-tag">Military</span><span class="card-tag">Politics</span></div>
+          <h4>Maritime vs. Continental Power Tension</h4>
+          <p>Many global contests involve sea-based trading powers versus land-based continental powers. Sea powers favor trade routes, navies, alliances, and open commercial systems. Continental powers favor land depth, buffer states, state-directed development, and territorial security. The tension between these two logics is a recurring structural feature of power competition.</p>
+          <p class="example-note"><strong>Athens vs. Sparta</strong> — Athens built its power on the Delian League's naval tribute and Aegean trade; Sparta built on land power and the Peloponnesian alliance. <strong>Britain vs. Napoleonic France</strong> — Britain used naval blockade and subsidies to continental allies; France used continental domination to deny Britain's trade. <strong>Britain vs. Germany</strong> — the naval arms race (1898–1914) was Germany's bid to become a maritime as well as continental power. <strong>US vs. USSR</strong> — the US depended on ocean access and global naval reach; the Soviet Union built on continental depth and buffer states. The US–China contest has this same shape.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="culture politics">
+          <div class="card-label">Pattern G <span class="card-tag">Culture</span><span class="card-tag">Politics</span></div>
+          <h4>Rising Powers Imitate, Then Innovate, Then Universalize</h4>
+          <p>Rising powers go through a predictable sequence: copy the techniques of the existing dominant power, adapt them to local conditions, generate original innovations, export those innovations as a model, and finally claim that their model is better for the world. This is how a regional power becomes a civilizational or global pole.</p>
+          <p class="example-note">The Dutch modeled their joint-stock companies partly on earlier Venetian and Hanseatic institutions, then innovated the <em>fluyt</em> and the Amsterdam Bourse, then exported both as standard global instruments. The US modeled its initial industrial development on British textile machinery (often through industrial espionage), then innovated the assembly line and mass consumer capitalism, then universalized those as the American model after WWII. Japan systematically imitated Western industrial and military models in the Meiji era (1868–1912), then innovated lean manufacturing and consumer electronics, then exported the Toyota Production System globally.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="politics">
+          <div class="card-label">Pattern H <span class="card-tag">Politics</span></div>
+          <h4>Domestic Renewal Precedes External Influence</h4>
+          <p>Great powers rise when they solve internal coordination problems — between state and private sector, between regions, between ethnic or religious groups, between elites and masses. They decline when internal dysfunction consumes resources and attention that would otherwise support external strategy.</p>
+          <p class="example-note">Britain's rise was enabled by the Glorious Revolution (1688), which created parliamentary sovereignty and reliable public finance — foreign investors trusted British bonds in a way they did not trust French royal debt. The US rise was enabled by the Constitutional settlement (1787–1789), which solved the coordination failure of the Articles of Confederation and enabled continental-scale economic integration. Dutch decline accelerated when internal factional conflict between Orangist and Regent factions paralyzed decision-making through the 18th century.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="politics military">
+          <div class="card-label">Pattern I <span class="card-tag">Politics</span><span class="card-tag">Military</span></div>
+          <h4>Peripheral States Become Kingmakers</h4>
+          <p>During transitions, middle powers gain leverage because both sides court them. They can extract benefits — security guarantees, aid, trade concessions, technology transfers — by refusing total alignment. The transition period is often the most profitable time to be a middle power.</p>
+          <p class="example-note">During the US–Soviet competition, countries like Egypt, India, and Yugoslavia extracted enormous economic and military aid from both sides simultaneously by positioning themselves as leaders of the Non-Aligned Movement. Today, India, Turkey, Saudi Arabia, Indonesia, Brazil, Vietnam, South Africa, and the Gulf states are in analogous positions. Turkey, for instance, remains in NATO while purchasing Russian S-400 air defense systems — extracting leverage from the friction between the two blocs.</p>
+        </div>
+
+        <div class="pattern-card" data-tags="culture">
+          <div class="card-label">Pattern J <span class="card-tag">Culture</span></div>
+          <h4>The Symbolic Order Changes Last</h4>
+          <p>Even after material power shifts, culture, language, universities, media, legal systems, and financial habits can remain tied to the old hegemon for a generation or more. The old power retains soft-power influence long after hard-power primacy has eroded.</p>
+          <p class="example-note">Britain lost industrial supremacy to the US and Germany by the 1880s–90s, and lost financial primacy after WWI — yet the English language, British legal norms (common law, which governs most international commercial contracts), British university prestige, and the pound sterling as partial reserve currency persisted for decades after. The US today still hosts the world's most influential universities (7 of the top 10 by most rankings), produces the world's most widely consumed cultural exports, and maintains the dollar's role in ~88% of global currency transactions — even as its manufacturing share has declined sharply. These symbolic assets are real power; they just are not permanent.</p>
+        </div>
+
+      </div><!-- /pattern-grid -->
+    </section>
+
+    <!-- ── Section III: Forms ─────────────────────────────── -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>Five <em>Forms</em> of Power Transition</h2>
+
+      <p>Not all transitions take the same shape. History suggests at least five distinct forms, each with different risk profiles.</p>
+
+      <h3><span class="sh-num">FORM 1</span> Violent Hegemonic War</h3>
+      <p>The old and rising powers clash directly, or their alliance systems pull them into conflict over seemingly peripheral issues. The war destroys old balances, enabling institutional redesign at the peace settlement.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Case</th><th>Key Dynamic</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Athens–Sparta (431–404 BCE)</strong></td><td>Thucydides explicitly argued Spartan <em>fear</em> — not Athenian aggression — was the true cause. Sparta attacked before Athens became so strong the attack would be impossible. Athens lost, but both exhausted each other, enabling Macedonian rise a generation later.</td></tr>
+          <tr><td><strong>WWI (1914–18)</strong></td><td>German industrial and naval rise threatening British naval supremacy, combined with Austria-Hungary's Balkan crisis and a chain of alliance obligations, converted a regional incident (Sarajevo) into a systemic war. Germany's GDP exceeded Britain's by 1913; its navy was the second largest in the world.</td></tr>
+          <tr><td><strong>WWII (1939–45)</strong></td><td>Revisionist powers (Germany, Japan, Italy) directly challenged the Versailles order through expansion. The war confirmed American dominance and permanently ended European colonial primacy.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3><span class="sh-num">FORM 2</span> Cold War Transition</h3>
+      <p>Direct war is avoided because the potential cost — in the US–Soviet case, nuclear annihilation — is too high. Competition moves into proxy wars, technology races, ideological competition, and economic rivalry. This is historically unusual: great-power competition at this intensity had almost always produced direct war before the nuclear era.</p>
+      <p>The US–Soviet Cold War lasted 44 years. It involved dozens of proxy conflicts — Korea, Vietnam, Angola, Mozambique, Nicaragua, Afghanistan — and multiple near-misses of direct escalation (Berlin 1948, Korea 1950, Cuba 1962, Able Archer 83). The stabilizing mechanism was mutual assured destruction: both sides maintained enough survivable nuclear weapons to guarantee that any direct conflict would produce unacceptable losses for the attacker. Whether US–China competition will follow this model depends on whether both sides maintain that same mutual vulnerability logic — which semiconductor controls and missile defense investments now complicate.</p>
+
+      <h3><span class="sh-num">FORM 3</span> Peaceful Succession</h3>
+      <p>The old hegemon accommodates the rising power. This is historically rare and appears to require specific enabling conditions: deep cultural or institutional similarity, shared external threats, and a rising power willing to initially accept junior-partner status rather than demanding immediate equality.</p>
+      <p>The British–American transition is the clearest case. Britain and America shared language, legal system, and Protestant culture. Both faced German and Japanese threats. The US entered WWII as Britain's junior partner in the European theater and gradually became the dominant one, with Britain knowingly accepting the terms (Lend-Lease, 1941; Bretton Woods, 1944; NATO, 1949) that institutionalized American primacy. British elites from Churchill onward managed a graceful retreat from empire — painful, but without a war between the two former hegemons.</p>
+
+      <h3><span class="sh-num">FORM 4</span> Fragmented Multipolar Transition</h3>
+      <p>No single power fully replaces the old hegemon. Different dimensions of power are held by different actors: one dominates finance, another manufacturing, another energy, another demographics, another military reach, another technological specialization.</p>
+      <p>This may be the most plausible current pattern: not "China replaces America," but a more complex world in which the US remains powerful in finance, military alliances, and technology standards; China dominates manufacturing and infrastructure finance; India rises as a demographic and strategic pole; Gulf states hold energy leverage; and middle powers operate with growing autonomy. Each actor is strong in its domain, constrained outside it.</p>
+
+      <h3><span class="sh-num">FORM 5</span> Civilizational-Regional Bloc Formation</h3>
+      <p>Instead of one global hegemon, the world organizes into several semi-autonomous regional systems, each with its own institutions, norms, currency preferences, and security architectures. Trade and investment continue across blocs, but on more managed, politically mediated terms.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Potential Bloc</th><th>Core Actors &amp; Logic</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Atlantic</strong></td><td>US, Canada, Europe — shared democratic norms, NATO security, dollar finance</td></tr>
+          <tr><td><strong>Sinic / East Asian</strong></td><td>China-centered supply chains, RCEP, Belt and Road — productive integration around Chinese manufacturing</td></tr>
+          <tr><td><strong>Indian Ocean</strong></td><td>India, Gulf states, East Africa, Southeast Asia — maritime trade, demographic growth, strategic autonomy</td></tr>
+          <tr><td><strong>Eurasian</strong></td><td>Russia-China-Central Asia corridors, SCO — land connectivity, energy, counterbalancing the West</td></tr>
+          <tr><td><strong>Islamic middle-power belt</strong></td><td>Turkey, Gulf, Indonesia, Pakistan, Malaysia — non-aligned but networked, large combined Muslim population</td></tr>
+          <tr><td><strong>African demographic bloc</strong></td><td>Nigeria, Ethiopia, Egypt, South Africa, Kenya — the continent projected to hold 40% of world population by 2100</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <!-- ── Section IV: Indicators ─────────────────────────── -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>Indicators <em>to Watch</em></h2>
+      <p>If you want to track a transition in real time, these are the signals that matter most.</p>
+
+      <div class="indicator-grid">
+        <div class="indicator-col">
+          <h4>Hard Power</h4>
+          <ul>
+            <li>Defense industrial capacity — ability to sustain conflict, not just initiate it</li>
+            <li>Shipbuilding tonnage — the deepest metric of maritime power</li>
+            <li>Missile, drone, and satellite production</li>
+            <li>Nuclear posture and second-strike credibility</li>
+            <li>Overseas basing and logistics reach</li>
+            <li>Rare earths and chip supply — military-tech dependence</li>
+          </ul>
+        </div>
+        <div class="indicator-col">
+          <h4>Economic Power</h4>
+          <ul>
+            <li>Share of global manufacturing output</li>
+            <li>Energy import dependence — key vulnerability signal</li>
+            <li>Debt-to-GDP ratio and fiscal flexibility</li>
+            <li>Reserve currency share in global settlements</li>
+            <li>Alternative payment systems (CIPS, mBridge)</li>
+            <li>Infrastructure lending — influence over developing states</li>
+          </ul>
+        </div>
+        <div class="indicator-col">
+          <h4>Technology</h4>
+          <ul>
+            <li>Semiconductor design and fabrication independence</li>
+            <li>AI compute capacity and frontier model development</li>
+            <li>Patents per field — innovation depth, not just volume</li>
+            <li>Quantum, biotech, and robotics pipeline</li>
+            <li>STEM graduate production and cross-border retention</li>
+            <li>Standards-setting in key international bodies (ITU, IEEE)</li>
+          </ul>
+        </div>
+        <div class="indicator-col">
+          <h4>Legitimacy</h4>
+          <ul>
+            <li>Global trust surveys (Pew, Gallup annual data)</li>
+            <li>International student enrollment — elite formation pipeline</li>
+            <li>Immigration preference — where does talent want to go?</li>
+            <li>Media and cultural reach — who sets the narrative</li>
+            <li>Perceived fairness of international institutions</li>
+          </ul>
+        </div>
+        <div class="indicator-col">
+          <h4>Alliance Health</h4>
+          <ul>
+            <li>Allies increasing vs. decreasing defense spending</li>
+            <li>Allies hedging with rivals despite formal commitments</li>
+            <li>New regional security organizations excluding old hegemon</li>
+            <li>Arms purchase origin — is the customer diversifying suppliers?</li>
+            <li>Sanctions compliance rate — the real loyalty test</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Section V: Lifecycle ───────────────────────────── -->
+
+    <!-- ── Section V: Lifecycle ───────────────────────────── -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>The <em>Lifecycle</em> at a Glance</h2>
+      <p>A mental model for rapid diagnosis — each stage, what is happening, and the diagnostic question it raises.</p>
+
+      <div class="lifecycle-box">
+        <h4>Power Shift Lifecycle</h4>
+        <div class="lc-row"><span class="lc-stage">1. Order</span><span class="lc-what">One power sets the rules and provides public goods</span><span class="lc-q">Who defines "normal"?</span></div>
+        <div class="lc-row"><span class="lc-stage">2. Saturation</span><span class="lc-what">Dominance becomes expensive; returns diminish</span><span class="lc-q">Is hegemony still profitable?</span></div>
+        <div class="lc-row"><span class="lc-stage">3. Rise</span><span class="lc-what">Challenger builds compounding advantages</span><span class="lc-q">Who is growing faster in which dimensions?</span></div>
+        <div class="lc-row"><span class="lc-stage">4. Diffusion</span><span class="lc-what">Technology and production spread; old moats erode</span><span class="lc-q">Who controls the next key systems?</span></div>
+        <div class="lc-row"><span class="lc-stage">5. Friction</span><span class="lc-what">Rules are contested; challenger seeks revision</span><span class="lc-q">Who benefits from the existing rules?</span></div>
+        <div class="lc-row"><span class="lc-stage">6. Hedging</span><span class="lc-what">Middle powers diversify alignment</span><span class="lc-q">Who can now afford to say no?</span></div>
+        <div class="lc-row"><span class="lc-stage">7. Flashpoints</span><span class="lc-what">Crises test resolve; misperception risk rises</span><span class="lc-q">Where can miscalculation happen?</span></div>
+        <div class="lc-row"><span class="lc-stage">8. Shock</span><span class="lc-what">War, crisis, or disruption reveals what changed</span><span class="lc-q">Who adapts faster?</span></div>
+        <div class="lc-row"><span class="lc-stage">9. Settlement</span><span class="lc-what">New rules negotiated or imposed</span><span class="lc-q">Who writes the next order?</span></div>
+        <div class="lc-row"><span class="lc-stage">10. Normalization</span><span class="lc-what">New hierarchy becomes the assumed background</span><span class="lc-q">Who educates the next generation of global elites?</span></div>
+      </div>
+    </section>
+
+    <!-- ── Section VI: Today ──────────────────────────────── -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>Reading <em>Today's</em> Shift</h2>
+
+      <p>Today's world does not look like a clean hegemonic replacement. It looks more like American primacy weakening, Chinese power rising but constrained, and middle powers becoming more autonomous — with the global system fragmenting rather than reorganizing cleanly around a new hegemon.</p>
+
+      <div class="today-grid">
+        <div class="today-card"><strong>United States</strong>Still dominant in finance, military alliances, universities, tech platforms, dollar settlement (~88% of global FX transactions), and cultural exports. The structural advantages are real and deep. But manufacturing share has fallen, debt has accumulated, and domestic political cohesion has declined.</div>
+        <div class="today-card"><strong>China</strong>Dominant in manufacturing (~28% of global output), infrastructure lending, shipbuilding, and many clean-tech sectors. Strong in applied AI and patents. Constrained by demographic aging (peak working-age population ~2015), financial fragility in the property sector, and limited alliance depth — China has no network comparable to NATO.</div>
+        <div class="today-card"><strong>India</strong>Rising demographically, strategically, and diplomatically. Largest population, fast-growing economy, and explicitly non-aligned foreign policy. The clearest candidate for a third pole — large enough to matter independently, independent enough to hedge both sides.</div>
+        <div class="today-card"><strong>Gulf States</strong>Using energy wealth to fund sovereign investment in AI, logistics, finance, and culture. Not militarily independent, but economically and diplomatically far more autonomous than two decades ago. Abu Dhabi and Riyadh have become genuine nodes in global finance.</div>
+        <div class="today-card"><strong>Hedging Middle Powers</strong>Turkey, Brazil, Indonesia, Saudi Arabia, Vietnam, South Africa — each extracting benefits from both Washington and Beijing precisely by refusing total commitment to either. Bloc discipline has visibly weakened since 2022.</div>
+        <div class="today-card"><strong>Russia</strong>A spoiler and disruption power rather than a constructive alternative-order builder. Significant nuclear deterrence and energy leverage; severe long-term constraints from demographic decline, economic isolation, and the costs of the Ukraine war.</div>
+        <div class="today-card"><strong>Europe</strong>The world's largest single market with deep institutional and regulatory capacity — but strategically dependent on American security and internally fragmented on foreign policy. Wealthy but geopolitically constrained. The Ukraine war has partially reversed strategic passivity.</div>
+        <div class="today-card"><strong>AI, Chips, Energy Transition</strong>Technology may decide the next phase more than any single geopolitical decision. Whoever builds sovereign capability in advanced semiconductors, frontier AI, and clean energy at scale will have the most durable structural advantage going forward.</div>
+      </div>
+
+      <div class="callout">
+        The better question is not "Will China replace America?" but: <em>Which parts of global power will remain American? Which will become Chinese? Which will regionalize? And which will become genuinely multipolar — where no single actor can set the rules?</em>
+      </div>
+    </section>
+
+    <!-- ── Section VII: Deepest Pattern ──────────────────── -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Section VII</span>
+      <h2>The <em>Deepest</em> Pattern</h2>
+
+      <p>Beneath all the stages and patterns, global power shifts when four things move together:</p>
+
+      <ul class="stage-list">
+        <li>
+          <span class="stage-num">01</span>
+          <div class="stage-content">
+            <strong>Material Capacity</strong>
+            <p>Who produces, builds, finances, feeds, arms, and innovates? This is the foundation. The British industrial revolution created a productive surplus that funded naval supremacy, colonial administration, and financial dominance simultaneously. When that productive base began to be matched by Germany and the US, everything downstream from it eventually followed.</p>
+          </div>
+        </li>
+        <li>
+          <span class="stage-num">02</span>
+          <div class="stage-content">
+            <strong>Organizational Capacity</strong>
+            <p>Who can coordinate society, state, market, science, and military effectively over sustained periods? The Dutch VOC was the world's most sophisticated organizational innovation in the 17th century. The US federal system mobilized a continental economy behind war production with extraordinary speed — producing more aircraft, ships, and vehicles in four years than all other belligerents combined in WWII.</p>
+          </div>
+        </li>
+        <li>
+          <span class="stage-num">03</span>
+          <div class="stage-content">
+            <strong>Narrative Legitimacy</strong>
+            <p>Whose vision of order sounds attractive, fair, or inevitable to enough people — especially to elites in third countries deciding which bloc to align with? Britain built legitimacy on free trade and rule of law. The US built it on liberal democracy, open markets, and the Wilsonian language of self-determination. Each narrative had genuine appeal. Each also had documented hypocrisy that eventually eroded it.</p>
+          </div>
+        </li>
+        <li>
+          <span class="stage-num">04</span>
+          <div class="stage-content">
+            <strong>Crisis Performance</strong>
+            <p>Who handles shocks faster and better? The US response to Pearl Harbor — mobilizing the entire economy within 18 months — was one of the most impressive state performances in modern history. The Soviet Union's failure to adapt to the 1980s technology revolution was a core cause of its collapse. The 2008 financial crisis and the COVID-19 pandemic raised similar questions about the gap between institutional prestige and actual state performance across all major powers.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="pull-quote">A power rises when it can credibly claim: "We can solve the problems of this age better than the old order." It declines when others begin to believe: "They no longer understand the age they are trying to govern."</div>
+
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const d = document.documentElement;
+      bar.style.width = (window.scrollY / (d.scrollHeight - window.innerHeight) * 100) + '%';
+    }, { passive: true });
+  }
+
+  // Pattern filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards      = document.querySelectorAll('.pattern-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      cards.forEach(card => {
+        if (filter === 'all') {
+          card.classList.remove('hidden');
+        } else {
+          const tags = card.dataset.tags || '';
+          tags.includes(filter)
+            ? card.classList.remove('hidden')
+            : card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
