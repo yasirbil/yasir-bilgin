@@ -79,9 +79,11 @@ sitemap_lines = [
     '  <url><loc>https://yasirbilgin.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>',
 ]
 for e in entries:
-    lastmod = e.get('date') or today
+    d = e.get('date') or ''
+    # Only include lastmod if date looks valid (2020 or later)
+    lastmod_tag = f'<lastmod>{d}</lastmod>' if d >= '2020' else ''
     sitemap_lines.append(
-        f'  <url><loc>{e["url"]}</loc><lastmod>{lastmod}</lastmod>'
+        f'  <url><loc>{e["url"]}</loc>{lastmod_tag}'
         f'<changefreq>monthly</changefreq><priority>0.8</priority></url>'
     )
 sitemap_lines.append('</urlset>')
