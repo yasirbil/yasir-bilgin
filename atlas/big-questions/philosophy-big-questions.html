@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="philosophy, metaphysics, big questions">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Big Questions of Philosophy | Yasir Bilgin</title>
+
+  <!-- Unique meta description -->
+  <meta name="description" content="A detailed guide to the twenty deepest questions of philosophy — reality, knowledge, consciousness, ethics, God, meaning, and wisdom — across traditions East and West.">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/big-questions/philosophy-big-questions.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="The Big Questions of Philosophy">
+  <meta property="og:description" content="A detailed guide to the twenty deepest questions of philosophy — reality, knowledge, consciousness, ethics, God, meaning, and wisdom — across traditions East and West.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/big-questions/philosophy-big-questions.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="The Big Questions of Philosophy">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="The Big Questions of Philosophy">
+  <meta name="twitter:description" content="A detailed guide to the twenty deepest questions of philosophy — reality, knowledge, consciousness, ethics, God, meaning, and wisdom — across traditions East and West.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <!-- Global nav — always first script -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Big Questions of Philosophy",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "description": "A detailed guide to the twenty deepest questions of philosophy — reality, knowledge, consciousness, ethics, God, meaning, and wisdom — across traditions East and West.",
+    "url": "https://yasirbilgin.com/atlas/big-questions/philosophy-big-questions.html"
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas",          "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "The Big Questions of Philosophy", "item": "https://yasirbilgin.com/atlas/big-questions/philosophy-big-questions.html" }
+    ]
+  }
+  </script>
+
+  <!-- Fonts via site stylesheet -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Design tokens (fallbacks if tokens.css not loaded) ─── */
+    :root {
+      --bg:         #f7f3ec;
+      --bg-alt:     #f0ebe0;
+      --text:       #1c1814;
+      --text-dim:   #4a4035;
+      --faint:      #6e5f4e;
+      --border:     rgba(107,93,79,0.18);
+      --accent:     #7a4f2d;
+      --accent-lt:  #c47a3a;
+      --nav-h:      62px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:       #0f0d0a;
+        --bg-alt:   #181410;
+        --text:     #e8e0d4;
+        --text-dim: #9a8e7c;
+        --faint:    #5a5750;
+        --border:   rgba(255,255,255,0.10);
+        --accent:   #c47a3a;
+        --accent-lt:#e09a5a;
+      }
+    }
+
+    /* ── Base ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', 'Georgia', serif;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* ── Progress bar ──────────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ───────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--bg);
+      width: min(380px, 90vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem 3rem;
+      box-shadow: -4px 0 32px rgba(0,0,0,0.22);
+    }
+    .toc-close {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 1.4rem;
+    }
+    .toc-close button {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: background 0.15s;
+      min-height: 44px;
+      min-width: 44px;
+    }
+    .toc-close button:hover { background: var(--bg-alt); }
+    .toc-close button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-panel h3 {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+      margin-bottom: 1.2rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list a {
+      display: block;
+      padding: 0.75rem 0;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      transition: color 0.15s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-list a.toc-main {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+    .toc-list a.toc-main:hover { color: var(--accent); }
+    .toc-list li.toc-sub a {
+      padding-left: 1rem;
+      font-size: 0.82rem;
+    }
+
+    /* ── Eyebrow pill ──────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint);
+      }
+    }
+
+    /* ── Hero ──────────────────────────────────────────────── */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+    h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text-dim);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: 0.02em;
+    }
+    .byline-name {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .byline-meta {
+      font-size: 0.8rem;
+      color: var(--faint);
+    }
+
+    /* ── Hero rule ─────────────────────────────────────────── */
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── Article meta-bar (static, after hr) ───────────────── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 0.75rem 2.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      /* NO position: sticky, NO top:, NO z-index: */
+    }
+    .read-time {
+      font-size: 0.78rem;
+      color: var(--faint);
+      letter-spacing: 0.05em;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 1rem;
+      font-size: 0.82rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      min-height: 44px;
+    }
+    .toc-btn:hover { background: var(--bg-alt); color: var(--accent); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Article body ──────────────────────────────────────── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    /* ── Overview table ────────────────────────────────────── */
+    .overview-wrap { overflow-x: auto; margin: 2rem 0 3rem; }
+    .overview-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .overview-table th {
+      text-align: left;
+      padding: 0.65rem 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+      border-bottom: 2px solid var(--border);
+      background: var(--bg-alt);
+    }
+    .overview-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5;
+      vertical-align: top;
+    }
+    .overview-table tr:last-child td { border-bottom: none; }
+    .overview-table td:first-child {
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .overview-table td:last-child { color: var(--text-dim); }
+
+    /* ── Major section ─────────────────────────────────────── */
+    .major-section {
+      margin-bottom: 5rem;
+      scroll-margin-top: 80px;
+    }
+    .section-label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    h2 em { font-style: italic; color: var(--accent); }
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── School cards ──────────────────────────────────────── */
+    .schools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.4rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .school-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+    }
+    .school-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .school-card .school-idea {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .school-card .school-thinkers {
+      font-size: 0.78rem;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .school-card .school-thinkers strong {
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    /* ── Big questions box ─────────────────────────────────── */
+    .key-questions {
+      background: rgba(122,79,45,0.07);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .key-questions h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-family: 'DM Sans', sans-serif;
+      margin-bottom: 0.8rem;
+    }
+    .key-questions ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.3rem 1.5rem;
+    }
+    .key-questions li {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      padding: 0.2rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .key-questions li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent-lt);
+      font-size: 0.75rem;
+    }
+
+    /* ── Arguments box ─────────────────────────────────────── */
+    .arguments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .arg-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+    }
+    .arg-card h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    .arg-card p {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      line-height: 1.55;
+    }
+    .arg-card .arg-names {
+      font-size: 0.75rem;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+      margin-top: 0.5rem;
+    }
+
+    /* ── Islamic concepts highlight box ───────────────────── */
+    .islamic-box {
+      background: rgba(122,79,45,0.05);
+      border: 1px solid rgba(122,79,45,0.2);
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.5rem 0;
+    }
+    .islamic-box h4 {
+      font-size: 0.82rem;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+    }
+    .concept-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem 1.5rem;
+    }
+    .concept-list li {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    .concept-list li strong {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    /* ── Cross-map table ───────────────────────────────────── */
+    .crossmap-wrap { overflow-x: auto; margin: 2rem 0; }
+    .crossmap-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .crossmap-table th {
+      text-align: left;
+      padding: 0.6rem 0.9rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+      border-bottom: 2px solid var(--border);
+      background: var(--bg-alt);
+    }
+    .crossmap-table td {
+      padding: 0.6rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .crossmap-table td:first-child { font-weight: 600; color: var(--text); }
+    .crossmap-table td:nth-child(2) {
+      color: var(--accent);
+      font-style: italic;
+      white-space: nowrap;
+    }
+    .crossmap-table td:last-child { color: var(--text-dim); }
+
+    /* ── Glossary ──────────────────────────────────────────── */
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+    .gloss-item {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    .gloss-term {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.3rem;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.02em;
+    }
+    .gloss-def {
+      font-size: 0.87rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+    .gloss-note {
+      font-size: 0.78rem;
+      color: var(--faint);
+      font-style: italic;
+      margin-top: 0.2rem;
+    }
+
+    /* ── Reading path ──────────────────────────────────────── */
+    .reading-list {
+      list-style: none;
+      counter-reset: reading;
+    }
+    .reading-list li {
+      counter-increment: reading;
+      padding: 0.9rem 0 0.9rem 3rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    .reading-list li::before {
+      content: counter(reading);
+      position: absolute;
+      left: 0;
+      top: 0.9rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .reading-list li strong { color: var(--text); }
+
+    /* ── Summary banner ────────────────────────────────────── */
+    .summary-banner {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 12px;
+      padding: 2rem 2.2rem;
+      margin: 3rem 0 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .summary-banner strong { font-style: normal; font-weight: 700; }
+
+    /* ── Sub-heading ───────────────────────────────────────── */
+    .sub-heading {
+      font-size: 1.2rem;
+      color: var(--text);
+      margin: 2.2rem 0 0.8rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+    .sh-num {
+      font-size: 0.72rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--faint);
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 2.5rem;
+      border-top: 1px solid var(--border);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+      letter-spacing: 0.04em;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 3.5rem 1.4rem 2.5rem; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .hero-rule { margin: 0 1.4rem; }
+      footer { padding: 2rem 1.4rem; }
+    }
+    @media (max-width: 560px) {
+      .schools-grid { grid-template-columns: 1fr; }
+      .arguments-grid { grid-template-columns: 1fr; }
+      .concept-list { grid-template-columns: 1fr; }
+      .glossary-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .key-questions ul { grid-template-columns: 1fr; }
+    }
+
+    /* ── Reduced motion ────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main-content">
+
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <div class="toc-close">
+        <button onclick="document.getElementById('tocOverlay').classList.remove('open')"
+                aria-label="Close table of contents">✕</button>
+      </div>
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#overview" class="toc-main">Overview Map</a></li>
+        <li><a href="#s1" class="toc-main">1. What Is Reality?</a></li>
+        <li><a href="#s2" class="toc-main">2. What Is Being?</a></li>
+        <li><a href="#s3" class="toc-main">3. How Do We Know?</a></li>
+        <li><a href="#s4" class="toc-main">4. What Is Truth?</a></li>
+        <li><a href="#s5" class="toc-main">5. What Is the Human Person?</a></li>
+        <li><a href="#s6" class="toc-main">6. What Is Consciousness?</a></li>
+        <li><a href="#s7" class="toc-main">7. Do We Have Free Will?</a></li>
+        <li><a href="#s8" class="toc-main">8. What Is Good?</a></li>
+        <li><a href="#s9" class="toc-main">9. What Is Justice?</a></li>
+        <li><a href="#s10" class="toc-main">10. Does God Exist?</a></li>
+        <li class="toc-sub"><a href="#s10-args">Arguments for God</a></li>
+        <li><a href="#s11" class="toc-main">11. What Is Evil?</a></li>
+        <li><a href="#s12" class="toc-main">12. What Is Meaning?</a></li>
+        <li><a href="#s13" class="toc-main">13. What Is Beauty?</a></li>
+        <li><a href="#s14" class="toc-main">14. What Is Science?</a></li>
+        <li><a href="#s15" class="toc-main">15. What Is Language?</a></li>
+        <li><a href="#s16" class="toc-main">16. What Is History?</a></li>
+        <li><a href="#s17" class="toc-main">17. What Is Society?</a></li>
+        <li><a href="#s18" class="toc-main">18. What Is Death?</a></li>
+        <li><a href="#s19" class="toc-main">19. What Is Wisdom?</a></li>
+        <li><a href="#s20" class="toc-main">20. The Ultimate Goal of Life</a></li>
+        <li><a href="#crossmap" class="toc-main">Cross-Disciplinary Map</a></li>
+        <li><a href="#glossary" class="toc-main">Glossary</a></li>
+        <li><a href="#reading" class="toc-main">Suggested Reading Path</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Atlas · Big Questions</div>
+    <h1>The Big <em>Questions</em> of Philosophy</h1>
+    <p class="hero-sub">A detailed guide to twenty of the deepest questions humanity has ever asked — on reality, knowledge, consciousness, ethics, God, meaning, and wisdom — surveying the major traditions of East and West.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">May 28, 2026 · Atlas</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar -->
+  <header class="article-header">
+    <span class="read-time">~45 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+  </header>
+
+  <article class="article-body">
+
+    <!-- Overview table -->
+    <section id="overview" class="major-section">
+      <span class="section-label">Overview</span>
+      <h2>What Philosophy <em>Asks</em></h2>
+      <p class="section-intro">Philosophy can be understood as humanity's disciplined attempt to ask the deepest questions about reality, knowledge, meaning, value, selfhood, society, and ultimate truth. The table below maps each domain to its central concern.</p>
+
+      <div class="overview-wrap">
+        <table class="overview-table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Core Question</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Metaphysics</td><td>What is real?</td></tr>
+            <tr><td>Epistemology</td><td>How do we know?</td></tr>
+            <tr><td>Philosophy of Mind</td><td>What is consciousness?</td></tr>
+            <tr><td>Ethics</td><td>How should we live?</td></tr>
+            <tr><td>Political Philosophy</td><td>How should society be organized?</td></tr>
+            <tr><td>Aesthetics</td><td>What is beauty and art?</td></tr>
+            <tr><td>Philosophy of Religion</td><td>Does God exist? What is ultimate reality?</td></tr>
+            <tr><td>Philosophy of Science</td><td>What makes science reliable?</td></tr>
+            <tr><td>Logic and Language</td><td>How do meaning and reasoning work?</td></tr>
+            <tr><td>Existential Philosophy</td><td>What gives life meaning?</td></tr>
+            <tr><td>Social Philosophy</td><td>How do power, identity, and culture shape reality?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 1. Reality -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Question I</span>
+      <h2>What Is <em>Reality?</em></h2>
+      <p class="section-intro">What truly exists? Is reality material, spiritual, mental, relational, mathematical, or something beyond all categories? This is the central question of <strong>metaphysics</strong> — the branch of philosophy concerned with the ultimate nature of existence.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Materialism / Physicalism</h3>
+          <p class="school-idea">Reality is fundamentally physical. Everything that exists is either matter, energy, or physical processes. Mind, life, and culture ultimately arise from physical reality.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Democritus, Epicurus, Hobbes, Marx, Dennett, Armstrong</p>
+        </div>
+        <div class="school-card">
+          <h3>Idealism</h3>
+          <p class="school-idea">Reality is fundamentally mental, spiritual, or consciousness-based. The material world is not independent in the way we usually assume — reality is deeply shaped by mind or spirit.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Berkeley, Kant, Hegel, F. H. Bradley, Josiah Royce</p>
+        </div>
+        <div class="school-card">
+          <h3>Dualism</h3>
+          <p class="school-idea">Reality has two fundamentally different kinds of substance — usually mind and matter. Human beings are not merely bodies; the mind or soul has a different nature from physical matter.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Descartes, Ibn Sina, Al-Ghazali (in some interpretations), Richard Swinburne</p>
+        </div>
+        <div class="school-card">
+          <h3>Monism</h3>
+          <p class="school-idea">Reality is ultimately one kind of thing. Apparent diversity hides a deeper unity. Associated with Neoplatonism, Spinoza's single infinite substance, and Advaita Vedanta's non-duality.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Parmenides, Spinoza, Plotinus, Advaita Vedanta thinkers, some Sufi metaphysicians</p>
+        </div>
+        <div class="school-card">
+          <h3>Pluralism</h3>
+          <p class="school-idea">Reality contains many irreducibly different kinds of things, values, or perspectives. It cannot be collapsed into one substance, one value, or one explanation.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> William James, Leibniz, Isaiah Berlin, Alfred North Whitehead</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Is the universe fundamentally physical?</li>
+          <li>Is consciousness more basic than matter?</li>
+          <li>Is reality one or many?</li>
+          <li>Are numbers, values, and meanings real?</li>
+          <li>Is there a spiritual dimension to existence?</li>
+          <li>Does reality exist independently of perception?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. Being -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Question II</span>
+      <h2>What Is <em>Being?</em></h2>
+      <p class="section-intro">What does it mean "to be"? Why is there something rather than nothing? This is the question of <strong>ontology</strong> — a sub-discipline of metaphysics focused on the study of existence itself.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Essentialism</h3>
+          <p class="school-idea">Things have real essences that define what they are — an inner nature beyond mere bundles of properties. Classic in Aristotle and Islamic philosophy.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Aristotle, Aquinas, Ibn Sina, Edith Stein</p>
+        </div>
+        <div class="school-card">
+          <h3>Existentialism</h3>
+          <p class="school-idea">"Existence precedes essence." Human beings are not born with a fixed nature; we become who we are through choices, anxiety, and responsibility.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Kierkegaard, Nietzsche, Heidegger, Sartre, Simone de Beauvoir, Camus</p>
+        </div>
+        <div class="school-card">
+          <h3>Process Philosophy</h3>
+          <p class="school-idea">Reality is not made primarily of static things but of events, becoming, and processes. The world is more like a flowing river than a collection of fixed objects.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Heraclitus, Whitehead, Bergson, Deleuze, Hartshorne</p>
+        </div>
+        <div class="school-card">
+          <h3>Phenomenology</h3>
+          <p class="school-idea">Being should be studied as it appears to consciousness. We do not encounter reality as detached observers; we experience it from within life — always "being-in-the-world."</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Husserl, Heidegger, Merleau-Ponty, Sartre, Levinas</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>What does it mean for something to exist?</li>
+          <li>Do things have essences?</li>
+          <li>Is reality stable or constantly changing?</li>
+          <li>Is human existence different from the existence of objects?</li>
+          <li>Why is there something rather than nothing?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Knowledge -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Question III</span>
+      <h2>How Do <em>We Know?</em></h2>
+      <p class="section-intro">What is knowledge? How can we distinguish truth from opinion, illusion, error, or belief? This is the field of <strong>epistemology</strong> — one of the oldest and most contested areas in philosophy.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Rationalism</h3>
+          <p class="school-idea">Reason is the primary source of knowledge. Some truths — mathematics, logical necessity — can be known through reason alone, independently of sense experience (<em>a priori</em>).</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Descartes, Spinoza, Leibniz</p>
+        </div>
+        <div class="school-card">
+          <h3>Empiricism</h3>
+          <p class="school-idea">Knowledge comes primarily from sense experience. The mind begins like a blank slate (<em>tabula rasa</em>), and knowledge grows from observation and induction.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Aristotle, Locke, Berkeley, Hume, J. S. Mill</p>
+        </div>
+        <div class="school-card">
+          <h3>Skepticism</h3>
+          <p class="school-idea">We should question whether genuine knowledge is possible. Human beings often mistake belief for knowledge. Epistemic humility requires suspending judgment.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Pyrrho, Sextus Empiricus, Hume, Montaigne, Peter Unger</p>
+        </div>
+        <div class="school-card">
+          <h3>Pragmatism</h3>
+          <p class="school-idea">Truth is connected to practical consequences, usefulness, and lived inquiry. Ideas should be tested by how they work in experience and problem-solving.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> C. S. Peirce, William James, Dewey, Rorty</p>
+        </div>
+        <div class="school-card">
+          <h3>Constructivism</h3>
+          <p class="school-idea">Knowledge is partly constructed by minds, cultures, languages, and social frameworks. We do not simply receive reality; we organize and interpret it.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Kant, Piaget, Thomas Kuhn, Foucault, Nelson Goodman</p>
+        </div>
+      </div>
+
+      <div class="islamic-box">
+        <h4>Islamic Epistemological Traditions</h4>
+        <p style="font-size:0.9rem;color:var(--text-dim);margin-bottom:0.9rem;">Classical Islamic thought recognized multiple, complementary sources of knowledge — not reducing truth to either pure reason or pure experience alone.</p>
+        <ul class="concept-list">
+          <li><strong>Reason</strong> — 'aql, rational proof</li>
+          <li><strong>Revelation</strong> — wahy, divine disclosure</li>
+          <li><strong>Sense perception</strong> — hiss, empirical observation</li>
+          <li><strong>Intuition</strong> — kashf, spiritual unveiling</li>
+          <li><strong>Inner purification</strong> — tazkiyah, cleansing the heart</li>
+          <li><strong>Reliable testimony</strong> — khabar, hadith chains</li>
+        </ul>
+        <p style="font-size:0.8rem;color:var(--faint);margin-top:0.8rem;font-family:'DM Sans',sans-serif;">Key figures: Al-Farabi, Ibn Sina, Al-Ghazali, Ibn Rushd, Fakhr al-Din al-Razi, Mulla Sadra</p>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Can we know truth with certainty?</li>
+          <li>What is the difference between knowledge and belief?</li>
+          <li>Is reason more reliable than experience?</li>
+          <li>Can revelation be a source of knowledge?</li>
+          <li>How do culture and language shape what we know?</li>
+          <li>Can science give us the whole truth?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. Truth -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Question IV</span>
+      <h2>What Is <em>Truth?</em></h2>
+      <p class="section-intro">What makes a statement true? Is truth discovered or constructed? There are several competing theories, each with different implications for science, religion, and everyday reasoning.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Correspondence Theory</h3>
+          <p class="school-idea">A statement is true if it corresponds to reality. "Snow is white" is true if snow really is white. This is the most intuitive and widely-held view.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Aristotle, Aquinas, Bertrand Russell, G. E. Moore</p>
+        </div>
+        <div class="school-card">
+          <h3>Coherence Theory</h3>
+          <p class="school-idea">A belief is true if it coheres with a larger system of beliefs. A claim is justified when it fits consistently into a complete and unified worldview.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Hegel, F. H. Bradley, Brand Blanshard</p>
+        </div>
+        <div class="school-card">
+          <h3>Pragmatic Theory</h3>
+          <p class="school-idea">Truth is what proves itself useful, reliable, or fruitful in practice. A theory is true insofar as it successfully guides inquiry and action.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> William James, Dewey, C. S. Peirce</p>
+        </div>
+        <div class="school-card">
+          <h3>Deflationary Theory</h3>
+          <p class="school-idea">Truth is not a deep metaphysical property. Saying "It is true that snow is white" adds nothing to "snow is white." Truth is a logical device, not a substance.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Gottlob Frege, F. P. Ramsey, Paul Horwich</p>
+        </div>
+        <div class="school-card">
+          <h3>Revealed Truth</h3>
+          <p class="school-idea">Truth can be disclosed by divine revelation — through scripture, prophethood, or sacred knowledge. Revelation complements and sometimes corrects purely rational inquiry.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Judaism, Christianity, Islam, Hindu revelation traditions, mystical schools</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Is truth discovered or constructed?</li>
+          <li>Can different traditions have partial truths?</li>
+          <li>Is all truth scientific?</li>
+          <li>Can truth be beautiful?</li>
+          <li>Can truth transform the person who knows it?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. Human Person -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Question V</span>
+      <h2>What Is the <em>Human Person?</em></h2>
+      <p class="section-intro">What are we? Bodies, souls, minds, organisms, social beings, moral agents, or divine reflections? This question — philosophical anthropology — shapes every other question in ethics, politics, and spirituality.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Materialist Anthropology</h3>
+          <p class="school-idea">The human being is a biological organism shaped by evolution, brain processes, and social conditioning. Mind is a function of brain; character is shaped by environment.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Darwin, Marx, Freud, Skinner, Dennett, Churchland</p>
+        </div>
+        <div class="school-card">
+          <h3>Dualist Anthropology</h3>
+          <p class="school-idea">The human being consists of body and soul or mind. The immaterial dimension — intellect, spirit, conscience — cannot be fully reduced to biology.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Descartes, Ibn Sina, Aquinas, Al-Ghazali</p>
+        </div>
+        <div class="school-card">
+          <h3>Existential Anthropology</h3>
+          <p class="school-idea">The human being is a free, anxious, meaning-making creature. We are not born with a fixed essence but define ourselves through choices and responsibility.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Kierkegaard, Nietzsche, Heidegger, Sartre, Camus</p>
+        </div>
+        <div class="school-card">
+          <h3>Relational Anthropology</h3>
+          <p class="school-idea">The self is formed through relationships with others. Identity is not solitary but emerges through encounter, recognition, and responsibility toward the other.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Martin Buber, Levinas, Charles Taylor, Ubuntu philosophers, Confucian thinkers</p>
+        </div>
+      </div>
+
+      <div class="islamic-box">
+        <h4>Islamic View of the Human Person</h4>
+        <p style="font-size:0.9rem;color:var(--text-dim);margin-bottom:0.9rem;">The human person is not merely a rational animal but a morally accountable being capable of knowing, loving, worshiping, and reflecting divine signs — <em>khalifah</em> on earth, bearing the <em>amanah</em>.</p>
+        <ul class="concept-list">
+          <li><strong>Nafs</strong> — lower self / ego / soul in its developmental states</li>
+          <li><strong>Qalb</strong> — heart as spiritual center of knowledge and will</li>
+          <li><strong>Ruh</strong> — spirit breathed by God into the human</li>
+          <li><strong>'Aql</strong> — intellect, reason, discernment</li>
+          <li><strong>Fitrah</strong> — original human disposition toward truth and God</li>
+          <li><strong>Khalifah</strong> — stewardship, vicegerency on earth</li>
+          <li><strong>Amanah</strong> — the entrusted moral responsibility</li>
+        </ul>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Are we bodies with minds, or souls with bodies?</li>
+          <li>Is the self fixed or changing?</li>
+          <li>Are we free?</li>
+          <li>Are we naturally good, bad, or mixed?</li>
+          <li>What is the relationship between ego and soul?</li>
+          <li>What makes human beings dignified?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. Consciousness -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Question VI</span>
+      <h2>What Is <em>Consciousness?</em></h2>
+      <p class="section-intro">How can physical processes produce subjective experience? What is it like to be aware? David Chalmers called this the <em>hard problem of consciousness</em> — arguably the deepest unsolved question in all of philosophy and science.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Physicalism</h3>
+          <p class="school-idea">Consciousness is produced by brain activity. Subjective experience will eventually be fully explained by neuroscience, even if that explanation is complex.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Dennett, Patricia Churchland, David Papineau</p>
+        </div>
+        <div class="school-card">
+          <h3>Dualism</h3>
+          <p class="school-idea">Consciousness is not reducible to matter. There is an explanatory gap between neural processes and the felt quality (<em>qualia</em>) of experience — the "what it is like" of seeing red or feeling pain.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Descartes, Chalmers, Swinburne</p>
+        </div>
+        <div class="school-card">
+          <h3>Panpsychism</h3>
+          <p class="school-idea">Consciousness or proto-consciousness is a basic feature of reality, not something that "emerges" from non-conscious matter. Even simple physical entities have some form of inner experience.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Whitehead, Galen Strawson, Philip Goff, Chalmers (sympathetically)</p>
+        </div>
+        <div class="school-card">
+          <h3>Idealism</h3>
+          <p class="school-idea">Consciousness is fundamental, and matter is dependent on mind. This view is gaining renewed interest from both analytic philosophers and those influenced by Vedantic traditions.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Berkeley, Hegel, Bernardo Kastrup, Vedantic and mystical traditions</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Why is there subjective experience at all?</li>
+          <li>Can consciousness be fully explained by neuroscience?</li>
+          <li>What are qualia?</li>
+          <li>Is consciousness fundamental to reality?</li>
+          <li>Could machines become genuinely conscious?</li>
+          <li>Is mystical experience a mode of consciousness?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 7. Free Will -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Question VII</span>
+      <h2>Do We Have <em>Free Will?</em></h2>
+      <p class="section-intro">Are human beings genuinely free, or are all actions determined by prior causes — brain chemistry, social conditioning, divine decree — beyond our control? This question sits at the intersection of metaphysics, ethics, and theology.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Libertarian Free Will</h3>
+          <p class="school-idea">Humans possess genuine freedom not reducible to determinism. Moral accountability and praise/blame require real choice — not merely the illusion of choice.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Augustine, Thomas Reid, Robert Kane, some existentialists</p>
+        </div>
+        <div class="school-card">
+          <h3>Hard Determinism</h3>
+          <p class="school-idea">Every event, including human action, is caused by prior events governed by natural law. Free will, in the strong sense, is an illusion — though a pervasive and practically useful one.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Spinoza, Laplace, Skinner, Sam Harris</p>
+        </div>
+        <div class="school-card">
+          <h3>Compatibilism</h3>
+          <p class="school-idea">Free will and determinism can coexist. Freedom means acting from one's own desires and reasons without external coercion — not randomness or escape from causality.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Hume, Hobbes, Harry Frankfurt, Dennett</p>
+        </div>
+        <div class="school-card">
+          <h3>Theological Compatibilism</h3>
+          <p class="school-idea">Divine foreknowledge or decree and human moral responsibility are compatible. Different theological traditions have defended this compatibility in different ways.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Ash'arism (<em>kasb</em>), Maturidism (<em>ikhtiyar</em>), Thomism, Calvinism</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>If God knows everything, are we still free?</li>
+          <li>If the brain causes our choices, are we responsible?</li>
+          <li>Can freedom exist without randomness?</li>
+          <li>Is moral responsibility possible under determinism?</li>
+          <li>What does it mean to choose authentically?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. Ethics -->
+    <section id="s8" class="major-section">
+      <span class="section-label">Question VIII</span>
+      <h2>What Is <em>Good?</em></h2>
+      <p class="section-intro">What makes an action right or wrong? What makes a life good? This is the central question of <strong>ethics</strong> — a field that addresses character, duty, consequences, divine command, and care.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Virtue Ethics</h3>
+          <p class="school-idea">Ethics is about becoming a good person with excellent character. The key question is not "what should I do?" but "what kind of person should I become?" Virtues are cultivated through habit and practice.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Aristotle, Confucius, Al-Farabi, Ibn Miskawayh, Al-Ghazali, MacIntyre, Nussbaum</p>
+        </div>
+        <div class="school-card">
+          <h3>Deontology</h3>
+          <p class="school-idea">Ethics is about duty, principles, and moral rules that hold regardless of consequences. Kant's categorical imperative: act only on rules you could will to be universal law.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Kant, W. D. Ross, Christine Korsgaard</p>
+        </div>
+        <div class="school-card">
+          <h3>Consequentialism</h3>
+          <p class="school-idea">The morality of an action depends entirely on its outcomes. The right action is the one that produces the greatest good for the greatest number.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Bentham, J. S. Mill, Peter Singer</p>
+        </div>
+        <div class="school-card">
+          <h3>Divine Command Theory</h3>
+          <p class="school-idea">Goodness is grounded in the command, will, or nature of God. What God commands is good because God commands it — or because God's nature is the ground of goodness.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Al-Ghazali, William of Ockham, Robert Adams, some Ash'ari theologians</p>
+        </div>
+        <div class="school-card">
+          <h3>Natural Law Ethics</h3>
+          <p class="school-idea">Moral norms are rooted in human nature and the purposes built into creation. Right action fulfills natural purposes; wrong action frustrates them.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Aristotle, Aquinas, Ibn Rushd, Islamic legal theorists (<em>maqasid al-shariah</em>)</p>
+        </div>
+        <div class="school-card">
+          <h3>Care Ethics</h3>
+          <p class="school-idea">Ethics begins with relationships, dependency, vulnerability, and the practice of care. Abstract principles must be grounded in the concrete realities of caring for particular people.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Carol Gilligan, Nel Noddings, Joan Tronto</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Is morality objective or subjective?</li>
+          <li>Is goodness based on God, reason, nature, or consequences?</li>
+          <li>Is character more important than rules?</li>
+          <li>Can there be universal ethics?</li>
+          <li>What is the good life?</li>
+          <li>What is justice?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. Justice -->
+    <section id="s9" class="major-section">
+      <span class="section-label">Question IX</span>
+      <h2>What Is <em>Justice?</em></h2>
+      <p class="section-intro">What does a fair society look like? How should power, resources, rights, and duties be distributed? This is the central question of <strong>political philosophy</strong> — one of the most practically contested in all of intellectual history.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Classical Political Philosophy</h3>
+          <p class="school-idea">Politics should aim at virtue, order, and the common good. The just city cultivates good citizens; the just ruler governs for the welfare of all, not private gain.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Aristotle, Al-Farabi, Confucius, Ibn Khaldun</p>
+        </div>
+        <div class="school-card">
+          <h3>Liberalism</h3>
+          <p class="school-idea">Society should protect individual freedom, rights, and equality before the law. John Rawls argued that justice requires choosing principles from behind a "veil of ignorance" — not knowing one's place in society.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Locke, Kant, J. S. Mill, Rawls, Dworkin</p>
+        </div>
+        <div class="school-card">
+          <h3>Conservatism</h3>
+          <p class="school-idea">Society depends on tradition, inherited wisdom, moral order, and stable institutions. Reform must be cautious and gradual; what has endured has likely done so for good reasons.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Burke, Oakeshott, Roger Scruton, MacIntyre (partly)</p>
+        </div>
+        <div class="school-card">
+          <h3>Socialism</h3>
+          <p class="school-idea">Justice requires reducing exploitation and ensuring fair distribution of resources. The capitalist system systematically advantages owners over workers.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Marx, Engels, Rosa Luxemburg, G. A. Cohen</p>
+        </div>
+        <div class="school-card">
+          <h3>Libertarianism</h3>
+          <p class="school-idea">Justice requires maximum individual liberty and minimal state interference. Self-ownership is the fundamental moral principle; taxation for redistribution is coercion.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Nozick, Hayek, Milton Friedman, Rothbard</p>
+        </div>
+        <div class="school-card">
+          <h3>Communitarianism</h3>
+          <p class="school-idea">Individuals are shaped by communities, traditions, and shared moral worlds. The liberal "unencumbered self" is a fiction — justice must account for the communities that make us who we are.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Charles Taylor, Michael Sandel, MacIntyre, Etzioni</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>What do people deserve?</li>
+          <li>Should society prioritize liberty, equality, virtue, or welfare?</li>
+          <li>What makes authority legitimate?</li>
+          <li>What is the role of the state?</li>
+          <li>How should wealth be distributed?</li>
+          <li>What is oppression?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10. God -->
+    <section id="s10" class="major-section">
+      <span class="section-label">Question X</span>
+      <h2>Does <em>God</em> Exist?</h2>
+      <p class="section-intro">Is there a divine reality? If so, what kind? This is the central question of <strong>philosophy of religion</strong> — debated across every civilization and every era of human history.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Theism</h3>
+          <p class="school-idea">God exists as a personal, intelligent, powerful, and purposeful creator — who knows, wills, and cares about creation. The classical tradition of Islam, Christianity, and Judaism.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Al-Kindi, Al-Farabi, Ibn Sina, Al-Ghazali, Aquinas, Plantinga, Swinburne</p>
+        </div>
+        <div class="school-card">
+          <h3>Deism</h3>
+          <p class="school-idea">God created the universe but does not intervene through miracles or special revelation. God is the watchmaker who sets the clock in motion and steps back.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Voltaire, Thomas Paine, many Enlightenment figures</p>
+        </div>
+        <div class="school-card">
+          <h3>Pantheism</h3>
+          <p class="school-idea">God and the universe are identical. There is no creator separate from creation; God is the totality of existence itself. Spinoza's "Deus sive Natura" — God or Nature.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Spinoza, some Stoics, some mystical traditions</p>
+        </div>
+        <div class="school-card">
+          <h3>Panentheism</h3>
+          <p class="school-idea">The universe exists within God, but God is more than the universe. God transcends creation while being immanent within it — a view found in some Sufi metaphysics and process theology.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plotinus, Hartshorne, process theologians, some Sufi metaphysicians</p>
+        </div>
+        <div class="school-card">
+          <h3>Atheism</h3>
+          <p class="school-idea">God does not exist. The concept of God is either incoherent, unverifiable, or the product of human psychological projection. The problem of evil is its strongest challenge to theism.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Lucretius, Feuerbach, Marx, Nietzsche, Russell, J. L. Mackie</p>
+        </div>
+        <div class="school-card">
+          <h3>Agnosticism</h3>
+          <p class="school-idea">The existence of God is unknown or unknowable. T. H. Huxley, who coined the term, held that neither theism nor atheism can be established with sufficient evidence.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> T. H. Huxley, Russell (in some contexts), many modern philosophers</p>
+        </div>
+      </div>
+
+      <h3 id="s10-args" class="sub-heading"><span class="sh-num">10.1</span>Major Arguments for God's Existence</h3>
+
+      <div class="arguments-grid">
+        <div class="arg-card">
+          <h4>Cosmological Argument</h4>
+          <p>The universe requires a cause, explanation, or necessary being. Everything contingent depends on something else; there must be a being whose existence is non-contingent.</p>
+          <p class="arg-names">Aristotle · Ibn Sina · Al-Ghazali · Aquinas · Leibniz</p>
+        </div>
+        <div class="arg-card">
+          <h4>Teleological Argument</h4>
+          <p>Order, design, fine-tuning of physical constants, and intelligibility point toward intelligence. The universe is "just right" for life in ways that demand explanation.</p>
+          <p class="arg-names">Plato · Aquinas · Paley · Swinburne · fine-tuning philosophers</p>
+        </div>
+        <div class="arg-card">
+          <h4>Ontological Argument</h4>
+          <p>The very concept of God as "that than which nothing greater can be conceived" implies God's existence — a non-existing God would be less than the greatest conceivable being.</p>
+          <p class="arg-names">Anselm · Descartes · Leibniz · Plantinga</p>
+        </div>
+        <div class="arg-card">
+          <h4>Moral Argument</h4>
+          <p>Objective moral values and obligations — which most people accept — require a ground. That ground is most plausibly a personal, moral being: God.</p>
+          <p class="arg-names">Kant · C. S. Lewis · Robert Adams</p>
+        </div>
+        <div class="arg-card">
+          <h4>Religious Experience</h4>
+          <p>Direct spiritual, mystical, or religious experience — widespread across all cultures and history — can provide evidence of divine reality when other explanations are inadequate.</p>
+          <p class="arg-names">William James · Al-Ghazali · Rudolf Otto · Swinburne</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Does the universe need a cause?</li>
+          <li>Can morality exist without God?</li>
+          <li>Why is there evil and suffering?</li>
+          <li>Is revelation possible?</li>
+          <li>Are religious experiences reliable evidence?</li>
+          <li>Is God personal, impersonal, or beyond categories?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 11. Evil -->
+    <section id="s11" class="major-section">
+      <span class="section-label">Question XI</span>
+      <h2>What Is <em>Evil?</em></h2>
+      <p class="section-intro">If reality is created or governed by a good God, why is there suffering, injustice, and evil? The problem of evil is the most powerful challenge to classical theism — and the most humanly urgent question in philosophy.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Free Will Defense</h3>
+          <p class="school-idea">Moral evil exists because free creatures can misuse their freedom. God could eliminate evil only by eliminating freedom — but a world with free creatures who can love is greater than a world of puppets.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Augustine, Plantinga, Swinburne</p>
+        </div>
+        <div class="school-card">
+          <h3>Soul-Making Theodicy</h3>
+          <p class="school-idea">Suffering can develop virtue, maturity, compassion, and spiritual depth. A world without hardship would produce no courage, patience, or genuine moral growth.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Irenaeus, John Hick, some Islamic spiritual thinkers</p>
+        </div>
+        <div class="school-card">
+          <h3>Privation Theory</h3>
+          <p class="school-idea">Evil is not a substance or a thing but a privation — a lack, corruption, or absence of good. Darkness is the absence of light; evil is the absence of goodness, not a separate force.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plotinus, Augustine, Aquinas</p>
+        </div>
+        <div class="school-card">
+          <h3>Skeptical Theism</h3>
+          <p class="school-idea">Human cognitive limitations mean we may simply be unable to understand God's reasons for permitting particular evils. Our inability to see a reason is not strong evidence there is none.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> William Alston, Stephen Wykstra</p>
+        </div>
+        <div class="school-card">
+          <h3>Protest Theodicy</h3>
+          <p class="school-idea">Rather than justifying evil, philosophy should protest against it. The suffering of innocents — especially children — may be impossible to "justify," and the attempt to do so is morally suspect.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Dostoevsky, Levinas, Moltmann, liberation theologians</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Why do innocent people suffer?</li>
+          <li>Is evil a thing or a lack of good?</li>
+          <li>Can suffering have meaning?</li>
+          <li>Does free will justify moral evil?</li>
+          <li>What about natural disasters?</li>
+          <li>Should evil be explained, resisted, or both?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 12. Meaning -->
+    <section id="s12" class="major-section">
+      <span class="section-label">Question XII</span>
+      <h2>What Is <em>Meaning?</em></h2>
+      <p class="section-intro">What makes life meaningful? Is meaning discovered, created, given, or irrelevant? Viktor Frankl, who survived Auschwitz, argued that the search for meaning is the primary human motivation — not pleasure, not power.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Religious Meaning</h3>
+          <p class="school-idea">Life has meaning through relationship with God, moral responsibility, worship, and ultimate destiny. Human beings are made for a purpose that transcends temporal life.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Augustine, Al-Ghazali, Kierkegaard, Viktor Frankl, Mulla Sadra</p>
+        </div>
+        <div class="school-card">
+          <h3>Existentialism</h3>
+          <p class="school-idea">There is no inherent meaning — but that is not despair but freedom. Meaning is created through authentic choice in the face of an uncertain world.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Kierkegaard, Nietzsche, Sartre, Camus, Simone de Beauvoir</p>
+        </div>
+        <div class="school-card">
+          <h3>Humanism</h3>
+          <p class="school-idea">Meaning comes from human flourishing, relationships, creativity, knowledge, and service. A meaningful life is possible without reference to the supernatural.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Erasmus, J. S. Mill, Russell, Martha Nussbaum, Carl Rogers</p>
+        </div>
+        <div class="school-card">
+          <h3>Absurdism</h3>
+          <p class="school-idea">Human beings seek meaning in a universe that does not clearly provide it — this is the Absurd. Camus's answer: revolt, not despair. We must imagine Sisyphus happy.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Albert Camus</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Is meaning discovered or created?</li>
+          <li>Can life be meaningful without God?</li>
+          <li>Is suffering necessary for depth?</li>
+          <li>Is happiness the goal of life?</li>
+          <li>What is worth living for?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 13. Beauty -->
+    <section id="s13" class="major-section">
+      <span class="section-label">Question XIII</span>
+      <h2>What Is <em>Beauty?</em></h2>
+      <p class="section-intro">What is beauty? Is it objective, subjective, spiritual, biological, cultural, or relational? This is the field of <strong>aesthetics</strong> — concerned with beauty, art, taste, and the relationship between the beautiful and the good.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Objective Beauty</h3>
+          <p class="school-idea">Beauty is a real feature of things, related to harmony, proportion, order, and perfection. Plato held that beauty is a Form — as real and mind-independent as mathematical truth.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Aristotle, Plotinus, Aquinas, Islamic philosophers of beauty</p>
+        </div>
+        <div class="school-card">
+          <h3>Subjective Beauty</h3>
+          <p class="school-idea">Beauty depends on the observer's feeling, taste, or perception. Hume: "Beauty is no quality in things themselves; it exists merely in the mind that contemplates them."</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Hume, Kant, George Santayana</p>
+        </div>
+        <div class="school-card">
+          <h3>Expression Theory</h3>
+          <p class="school-idea">Art expresses emotion, inner experience, or human depth. A great work of art succeeds not by representing the external world but by conveying authentic inner life.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Tolstoy, R. G. Collingwood, Benedetto Croce</p>
+        </div>
+      </div>
+
+      <div class="islamic-box">
+        <h4>Islamic Aesthetics</h4>
+        <p style="font-size:0.9rem;color:var(--text-dim);margin-bottom:0.9rem;">In Islamic thought, beauty is not merely sensory pleasure — it is connected to divine signs (<em>ayat</em>), harmony, spiritual remembrance, and the reflection of God's names in creation.</p>
+        <ul class="concept-list">
+          <li><strong>Ihsan</strong> — excellence, beauty in action and craft</li>
+          <li><strong>Jamal</strong> — beauty as one of God's attributes</li>
+          <li><strong>Tajalli</strong> — manifestation of divine beauty in creation</li>
+          <li><strong>Adab</strong> — refined comportment, cultivated grace</li>
+          <li><strong>Dhikr</strong> — remembrance as the aesthetic act par excellence</li>
+        </ul>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Is beauty real or subjective?</li>
+          <li>Why does beauty move us?</li>
+          <li>Can art reveal truth?</li>
+          <li>Is beauty connected to goodness?</li>
+          <li>Does beauty point beyond itself?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 14. Science -->
+    <section id="s14" class="major-section">
+      <span class="section-label">Question XIV</span>
+      <h2>What Is <em>Science?</em></h2>
+      <p class="section-intro">What makes scientific knowledge reliable? What separates science from pseudoscience? Is science the only path to truth, or does it have limits? This is the field of <strong>philosophy of science</strong>.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Falsificationism</h3>
+          <p class="school-idea">Science advances by making claims that can be tested and potentially falsified, not merely confirmed. A theory that cannot be refuted in principle is not scientific.</p>
+          <p class="school-thinkers"><strong>Key thinker:</strong> Karl Popper</p>
+        </div>
+        <div class="school-card">
+          <h3>Paradigm Theory</h3>
+          <p class="school-idea">Science does not progress smoothly. It develops through dominant paradigms (e.g. Newtonian physics), then periodic revolutions (e.g. Einstein) that overturn basic assumptions.</p>
+          <p class="school-thinkers"><strong>Key thinker:</strong> Thomas Kuhn — <em>The Structure of Scientific Revolutions</em> (1962)</p>
+        </div>
+        <div class="school-card">
+          <h3>Scientific Realism</h3>
+          <p class="school-idea">Successful scientific theories are approximately true descriptions of real structures in the world — including unobservable entities like electrons and quarks.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Hilary Putnam, Richard Boyd, Stathis Psillos</p>
+        </div>
+        <div class="school-card">
+          <h3>Instrumentalism</h3>
+          <p class="school-idea">Scientific theories are useful tools for prediction, not necessarily descriptions of ultimate reality. What matters is empirical adequacy, not ontological truth.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Pierre Duhem, Bas van Fraassen</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>What separates science from pseudoscience?</li>
+          <li>Are scientific theories true or merely useful?</li>
+          <li>Is science value-free?</li>
+          <li>Can science explain consciousness, morality, and meaning?</li>
+          <li>How do paradigms shape what scientists see?</li>
+          <li>Is metaphysics necessary for science?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 15. Language -->
+    <section id="s15" class="major-section">
+      <span class="section-label">Question XV</span>
+      <h2>What Is <em>Language?</em></h2>
+      <p class="section-intro">How do words mean things? Does language describe reality, construct reality, or both? The "linguistic turn" of the twentieth century made this question central to almost every other area of philosophy.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Referential Theory</h3>
+          <p class="school-idea">Words mean by referring to objects, properties, or states of affairs. The word "cat" means what it does because it refers to cats in the world.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Aristotle, Russell, early Wittgenstein (<em>Tractatus</em>)</p>
+        </div>
+        <div class="school-card">
+          <h3>Use Theory of Meaning</h3>
+          <p class="school-idea">"The meaning of a word is its use in the language." Words do not have fixed referents — they acquire meaning through practice within forms of life (<em>Sprachspiele</em>).</p>
+          <p class="school-thinkers"><strong>Key thinker:</strong> Later Wittgenstein — <em>Philosophical Investigations</em></p>
+        </div>
+        <div class="school-card">
+          <h3>Hermeneutics</h3>
+          <p class="school-idea">Meaning requires interpretation. All understanding is circular (the hermeneutic circle): we understand parts in light of the whole, and the whole in light of the parts.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Schleiermacher, Dilthey, Heidegger, Gadamer, Ricoeur</p>
+        </div>
+        <div class="school-card">
+          <h3>Speech Act Theory</h3>
+          <p class="school-idea">Language does not merely describe — it performs actions. When we promise, command, warn, or declare, we are <em>doing</em> something with words, not just saying things about the world.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> J. L. Austin, John Searle</p>
+        </div>
+      </div>
+
+      <div class="key-questions">
+        <h4>Key Questions</h4>
+        <ul>
+          <li>Do words mirror reality?</li>
+          <li>Can language limit thought?</li>
+          <li>How do metaphors shape understanding?</li>
+          <li>Can sacred language carry special meaning?</li>
+          <li>Is translation ever complete?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 16–17 combined brief -->
+    <section id="s16" class="major-section">
+      <span class="section-label">Question XVI</span>
+      <h2>What Is <em>History?</em></h2>
+      <p class="section-intro">Does history have direction, meaning, pattern, or purpose? Or is it contingent — a series of events with no overarching narrative?</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Cyclical View</h3>
+          <p class="school-idea">Civilizations rise, flourish, decline, and fall in recurring patterns. Ibn Khaldun's <em>asabiyyah</em> — social cohesion — is the engine of civilizational rise and the key to understanding its decay.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Ibn Khaldun, Polybius, Spengler, Toynbee</p>
+        </div>
+        <div class="school-card">
+          <h3>Linear Progress View</h3>
+          <p class="school-idea">History moves toward progress, freedom, reason, or human improvement. Hegel saw history as the progressive self-realization of Spirit; Marx saw it as class struggle moving toward liberation.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Kant, Hegel, Marx, Fukuyama</p>
+        </div>
+        <div class="school-card">
+          <h3>Providential View</h3>
+          <p class="school-idea">History unfolds under divine wisdom, judgment, or guidance — not blindly but toward purposes that human beings cannot always discern from within history's flow.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Judaism, Christianity, Islam, some Hindu and Buddhist cosmologies</p>
+        </div>
+        <div class="school-card">
+          <h3>Genealogical View</h3>
+          <p class="school-idea">History should uncover the hidden power relations behind moral, social, and intellectual systems. What we call "progress" is often the victory of one power configuration over another.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Nietzsche, Foucault</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="s17" class="major-section">
+      <span class="section-label">Question XVII</span>
+      <h2>What Is <em>Society?</em></h2>
+      <p class="section-intro">Is the individual prior to society, or is the self formed by society? What is the relationship between identity, community, power, and freedom?</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Individualism</h3>
+          <p class="school-idea">Society is built from individuals and their free choices. Rights and liberties belong to persons first; the state and community are derivative constructions.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Locke, Mill, Nozick, Hayek</p>
+        </div>
+        <div class="school-card">
+          <h3>Communitarianism</h3>
+          <p class="school-idea">Human beings become themselves through communities and traditions. The liberal "unencumbered self" is an abstraction; real selves are always already embedded in languages, stories, and practices.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Charles Taylor, Michael Sandel, MacIntyre</p>
+        </div>
+        <div class="school-card">
+          <h3>Critical Social Theory</h3>
+          <p class="school-idea">Society contains hidden structures of power — class, race, gender — that must be diagnosed and transformed. Apparent neutrality often masks domination.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Marx, Frankfurt School, Foucault, Habermas, bell hooks, Nancy Fraser</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18. Death -->
+    <section id="s18" class="major-section">
+      <span class="section-label">Question XVIII</span>
+      <h2>What Is <em>Death?</em></h2>
+      <p class="section-intro">What does death mean for human existence? Is it annihilation, transition, transformation, or return? How should awareness of death shape the way we live?</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Materialist View</h3>
+          <p class="school-idea">Death is the end of personal consciousness. Epicurus: "Death is nothing to us — for when death is, we are not; and when we are, death is not."</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Epicurus, Lucretius, Russell, contemporary naturalists</p>
+        </div>
+        <div class="school-card">
+          <h3>Immortality of the Soul</h3>
+          <p class="school-idea">The soul survives bodily death. Plato's <em>Phaedo</em> contains four arguments for immortality. Ibn Sina argued for the soul's independence from the body through the "Floating Man" thought experiment.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Plato, Ibn Sina, Descartes, many religious philosophers</p>
+        </div>
+        <div class="school-card">
+          <h3>Resurrection View</h3>
+          <p class="school-idea">The person is restored or re-created by God after death — not as a disembodied spirit but as an embodied self. The dominant view in Islam, Christianity, and much of Judaism.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Islam, Christianity, Judaism</p>
+        </div>
+        <div class="school-card">
+          <h3>Existential View</h3>
+          <p class="school-idea">Death gives urgency, seriousness, and individuality to life. Heidegger: being toward death is what makes authentic existence possible — confronting finitude is the path to genuine living.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Heidegger, Kierkegaard, Tolstoy, Camus</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 19. Wisdom -->
+    <section id="s19" class="major-section">
+      <span class="section-label">Question XIX</span>
+      <h2>What Is <em>Wisdom?</em></h2>
+      <p class="section-intro">What is the difference between information, knowledge, understanding, and wisdom? All traditions distinguish knowing facts from genuinely wise living — yet wisdom resists simple definition.</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Socratic Wisdom</h3>
+          <p class="school-idea">Wisdom begins with knowing one's ignorance. Socrates claimed to be wiser than others not because he knew more, but because he knew that he did not know — and they did not.</p>
+          <p class="school-thinkers"><strong>Key thinker:</strong> Socrates — "I know that I do not know."</p>
+        </div>
+        <div class="school-card">
+          <h3>Aristotelian Practical Wisdom</h3>
+          <p class="school-idea"><em>Phronesis</em> — practical wisdom — is the master virtue: good judgment in concrete situations, knowing what the moment requires and how to act well under real conditions.</p>
+          <p class="school-thinkers"><strong>Key thinker:</strong> Aristotle — <em>Nicomachean Ethics</em></p>
+        </div>
+        <div class="school-card">
+          <h3>Spiritual Wisdom</h3>
+          <p class="school-idea">Wisdom is the purification of the self and seeing reality rightly — not merely knowing more facts but being transformed so that one perceives with the heart, not only the intellect.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Sufism, Christian mysticism, Buddhism, Vedanta, Jewish wisdom</p>
+        </div>
+        <div class="school-card">
+          <h3>Confucian Wisdom</h3>
+          <p class="school-idea">Wisdom is moral cultivation within relationships and social harmony. The <em>junzi</em> — noble person — is not a saint in isolation but one who embodies <em>ren</em> (humaneness) in all social relations.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Confucius, Mencius, Xunzi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 20. Ultimate Goal -->
+    <section id="s20" class="major-section">
+      <span class="section-label">Question XX</span>
+      <h2>What Is the <em>Ultimate Goal</em> of Life?</h2>
+      <p class="section-intro">What is the final purpose toward which human life should be directed? Every culture and tradition has an answer. Here are the major ones:</p>
+
+      <div class="schools-grid">
+        <div class="school-card">
+          <h3>Eudaimonia (Flourishing)</h3>
+          <p class="school-idea">Human flourishing through virtue, reason, friendship, and excellence. Not merely feeling good, but living well — a whole life of activity in accordance with virtue.</p>
+          <p class="school-thinkers"><strong>Key thinker:</strong> Aristotle — <em>Nicomachean Ethics</em> I.7</p>
+        </div>
+        <div class="school-card">
+          <h3>Salvation / Divine Nearness</h3>
+          <p class="school-idea">Union, nearness, obedience, or reconciliation with God. Life is a journey toward the divine — through faith, action, purification, and love.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Islam, Christianity, Judaism, Hindu Bhakti</p>
+        </div>
+        <div class="school-card">
+          <h3>Liberation</h3>
+          <p class="school-idea">Freedom from ignorance, attachment, suffering, or illusion — <em>moksha</em>, <em>nirvana</em>, <em>mukti</em>. Liberation from the cycle of rebirth and from the root causes of suffering.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Buddhism, Hinduism, Jainism, some mystical philosophies</p>
+        </div>
+        <div class="school-card">
+          <h3>Authenticity</h3>
+          <p class="school-idea">Living honestly according to one's freedom and responsibility, without self-deception, bad faith, or living a life prescribed by others. The existentialist ideal.</p>
+          <p class="school-thinkers"><strong>Key thinkers:</strong> Kierkegaard, Nietzsche, Heidegger, Sartre</p>
+        </div>
+        <div class="school-card">
+          <h3>Service</h3>
+          <p class="school-idea">Life's meaning is found in contributing to others and the common good. The person who lives for others lives most fully — found in Confucian, Islamic, Christian, and humanist ethics alike.</p>
+          <p class="school-thinkers"><strong>Traditions:</strong> Confucianism, Islamic ethics, Christian ethics, Humanism, Ubuntu philosophy</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-map -->
+    <section id="crossmap" class="major-section">
+      <span class="section-label">Reference</span>
+      <h2>Cross-Disciplinary <em>Map</em></h2>
+      <p class="section-intro">A quick reference guide connecting each big question to its philosophical field and the range of answers philosophers have proposed.</p>
+
+      <div class="crossmap-wrap">
+        <table class="crossmap-table">
+          <thead>
+            <tr>
+              <th>Big Question</th>
+              <th>Field</th>
+              <th>Typical Answers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>What is real?</td><td>Metaphysics</td><td>Matter, mind, God, process, relation</td></tr>
+            <tr><td>What is being?</td><td>Ontology</td><td>Essence, existence, becoming</td></tr>
+            <tr><td>How do we know?</td><td>Epistemology</td><td>Reason, experience, revelation, intuition</td></tr>
+            <tr><td>What is truth?</td><td>Logic / Epistemology</td><td>Correspondence, coherence, pragmatism, revelation</td></tr>
+            <tr><td>What are we?</td><td>Philosophical Anthropology</td><td>Body, soul, self, social being, divine image</td></tr>
+            <tr><td>What is consciousness?</td><td>Philosophy of Mind</td><td>Brain process, soul, fundamental awareness</td></tr>
+            <tr><td>Are we free?</td><td>Action Theory</td><td>Free will, determinism, compatibilism</td></tr>
+            <tr><td>What is good?</td><td>Ethics</td><td>Virtue, duty, consequences, divine command</td></tr>
+            <tr><td>What is justice?</td><td>Political Philosophy</td><td>Liberty, equality, order, common good</td></tr>
+            <tr><td>Does God exist?</td><td>Philosophy of Religion</td><td>Theism, atheism, agnosticism, panentheism</td></tr>
+            <tr><td>Why evil?</td><td>Theodicy</td><td>Free will, soul-making, privation, protest</td></tr>
+            <tr><td>What is meaning?</td><td>Existential Philosophy</td><td>Created, discovered, divine, absurd</td></tr>
+            <tr><td>What is beauty?</td><td>Aesthetics</td><td>Harmony, taste, expression, divine revelation</td></tr>
+            <tr><td>What is science?</td><td>Philosophy of Science</td><td>Realism, instrumentalism, falsification</td></tr>
+            <tr><td>What is language?</td><td>Philosophy of Language</td><td>Reference, use, structure, interpretation</td></tr>
+            <tr><td>Does history have direction?</td><td>Philosophy of History</td><td>Cyclical, progressive, providential, genealogical</td></tr>
+            <tr><td>What is death?</td><td>Metaphysics / Religion</td><td>End, transition, resurrection, transformation</td></tr>
+            <tr><td>What is wisdom?</td><td>Ethics / Spirituality</td><td>Humility, judgment, purification, insight</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Glossary -->
+    <section id="glossary" class="major-section">
+      <span class="section-label">Glossary</span>
+      <h2>Key <em>Terms</em></h2>
+      <p class="section-intro">A reference guide to philosophical terms used throughout this article, with concise definitions and contextual notes.</p>
+
+      <div class="glossary-grid">
+        <div class="gloss-item">
+          <span class="gloss-term">A Priori</span>
+          <p class="gloss-def">Knowledge independent of experience. Example: "All bachelors are unmarried" — true by definition, known through reason alone.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">A Posteriori</span>
+          <p class="gloss-def">Knowledge based on experience and observation. Example: "Water boils at 100°C at sea level" — requires empirical investigation.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Asabiyyah</span>
+          <p class="gloss-def">Ibn Khaldun's concept of social cohesion, group solidarity, and collective strength. The key variable in the rise and fall of dynasties and civilizations.</p>
+          <p class="gloss-note">From Ibn Khaldun's Muqaddimah (1377)</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Being-in-the-world</span>
+          <p class="gloss-def">Heidegger's concept that humans are always already embedded in a meaningful world — not detached spectators but always engaged, caring, and situated.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Categorical Imperative</span>
+          <p class="gloss-def">Kant's supreme moral principle: act only according to a maxim you could will to become universal law. A test for whether a moral rule is genuinely universalizable.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Compatibilism</span>
+          <p class="gloss-def">The view that free will and determinism are compatible. Freedom means acting from one's own desires without coercion — not requiring the absence of causal determination.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Eudaimonia</span>
+          <p class="gloss-def">Aristotle's term for human flourishing — not mere pleasure, but a complete life of virtuous activity. Often translated "happiness" but more accurately "living and doing well."</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Falsifiability</span>
+          <p class="gloss-def">Popper's criterion that a scientific claim must be testable and potentially falsifiable. A claim that cannot possibly be refuted is not scientific but metaphysical.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Fitrah</span>
+          <p class="gloss-def">In Islamic thought, the original human disposition toward truth, goodness, and recognition of God. It is not destroyed by sin but can be obscured by habit and environment.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Hard Problem of Consciousness</span>
+          <p class="gloss-def">David Chalmers's term for the difficulty of explaining why physical brain processes give rise to subjective experience — why there is "something it is like" to be conscious.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Hermeneutics</span>
+          <p class="gloss-def">The theory and practice of interpretation — especially of texts, traditions, and meaning. The hermeneutic circle: understanding parts requires the whole, and the whole requires the parts.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Kasb</span>
+          <p class="gloss-def">In Ash'ari theology, the concept that humans "acquire" acts created by God — a technical solution to preserving human moral responsibility while affirming divine omnipotence.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Language Game</span>
+          <p class="gloss-def">Wittgenstein's idea that words get their meaning from practical use within specific forms of life. "What is time?" has different answers for a physicist, a musician, and a historian.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Ontology</span>
+          <p class="gloss-def">The study of being and what exists. A sub-discipline of metaphysics. Key ontological questions: Are numbers real? Do abstract objects exist? What is the nature of possible worlds?</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Panentheism</span>
+          <p class="gloss-def">The view that the universe exists within God, but God is more than the universe — combining divine transcendence and immanence. Distinct from pantheism (God = universe).</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Panpsychism</span>
+          <p class="gloss-def">The view that consciousness or proto-consciousness is a fundamental feature of reality, not something that emerges only at high levels of neural complexity.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Phronesis</span>
+          <p class="gloss-def">Aristotle's term for practical wisdom — the ability to discern the right course of action in particular circumstances. Not a rule-following capacity but a cultivated perceptual skill.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Qualia</span>
+          <p class="gloss-def">The subjective "what-it-is-like" quality of experience — the redness of red, the painfulness of pain. Qualia are at the heart of the hard problem of consciousness.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Teleology</span>
+          <p class="gloss-def">Explanation in terms of purpose, goal, or end (Greek: <em>telos</em>). Aristotle explained natural things by their final causes — what they are for, not merely what caused them.</p>
+        </div>
+        <div class="gloss-item">
+          <span class="gloss-term">Theodicy</span>
+          <p class="gloss-def">An attempt to justify the ways of God in permitting evil and suffering. From Greek <em>theos</em> (God) + <em>dike</em> (justice). Leibniz coined the term in 1710.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reading path -->
+    <section id="reading" class="major-section">
+      <span class="section-label">Study Guide</span>
+      <h2>Suggested <em>Reading Path</em></h2>
+      <p class="section-intro">For a balanced journey through the big questions, approach them in this sequence — building conceptual foundations before tackling the harder problems.</p>
+
+      <ol class="reading-list">
+        <li><strong>What is reality?</strong> — Plato's <em>Republic</em> and <em>Timaeus</em>; Aristotle's <em>Metaphysics</em>; Ibn Sina's <em>Kitab al-Shifa</em> (Book of Healing); Descartes's <em>Meditations</em>; Spinoza's <em>Ethics</em>; Kant's <em>Critique of Pure Reason</em></li>
+        <li><strong>How do we know?</strong> — Plato's <em>Meno</em> and <em>Theaetetus</em>; Descartes's <em>Meditations</em>; Locke's <em>Essay Concerning Human Understanding</em>; Hume's <em>Enquiry</em>; Al-Ghazali's <em>Deliverance from Error</em></li>
+        <li><strong>What is the human being?</strong> — Aristotle's <em>De Anima</em>; Ibn Sina's Floating Man argument; Descartes's <em>Meditations</em> II–VI; Heidegger's <em>Being and Time</em></li>
+        <li><strong>What is good?</strong> — Aristotle's <em>Nicomachean Ethics</em>; Kant's <em>Groundwork for the Metaphysics of Morals</em>; Mill's <em>Utilitarianism</em>; Al-Ghazali's <em>Ihya Ulum al-Din</em>; MacIntyre's <em>After Virtue</em></li>
+        <li><strong>What is society?</strong> — Plato's <em>Republic</em>; Ibn Khaldun's <em>Muqaddimah</em>; Locke's <em>Two Treatises</em>; Rousseau's <em>Social Contract</em>; Marx's <em>Communist Manifesto</em>; Rawls's <em>A Theory of Justice</em></li>
+        <li><strong>Does God exist?</strong> — Ibn Sina's cosmological arguments; Al-Ghazali's <em>Incoherence of the Philosophers</em>; Aquinas's <em>Summa Theologiae</em> (Five Ways); Hume's <em>Dialogues Concerning Natural Religion</em>; Plantinga's <em>God, Freedom and Evil</em></li>
+        <li><strong>What is meaning?</strong> — Kierkegaard's <em>Either/Or</em>; Nietzsche's <em>Thus Spoke Zarathustra</em>; Sartre's <em>Existentialism is a Humanism</em>; Camus's <em>The Myth of Sisyphus</em>; Frankl's <em>Man's Search for Meaning</em></li>
+        <li><strong>What is wisdom?</strong> — Socrates in Plato's <em>Apology</em>; Aristotle's <em>Nicomachean Ethics</em> (on phronesis); Confucius's <em>Analects</em>; Rumi's <em>Masnavi</em>; Al-Ghazali's <em>Minhaj al-Abidin</em></li>
+      </ol>
+    </section>
+
+    <!-- Summary -->
+    <div class="summary-banner">
+      <strong>In one sentence:</strong> Philosophy asks — what is real, how do we know it, who are we, how should we live, how should society be ordered, what is beautiful, whether God exists, why suffering exists, and what makes life meaningful.
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+  }
+</script>
+</body>
+</html>

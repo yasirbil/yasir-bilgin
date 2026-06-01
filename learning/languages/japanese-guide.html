@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="Japanese, language learning, guide">
+  <meta property="og:title"       content="Learn Japanese — A Complete Guide" />
+  <meta property="og:description" content="Learn Japanese — A Complete Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/learning/languages/japanese-guide.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Learn Japanese — A Complete Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Learn Japanese — A Complete Guide">
+  <meta name="twitter:description" content="Learn Japanese — A Complete Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/learning/languages/japanese-guide.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>Learn Japanese — A Complete Guide</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+  :root {
+    --ink: #1a1008;
+    --paper: #f5f0e8;
+    --red: #c0392b;
+    --gold: #b8860b;
+    --muted: #6b5d4f;
+    --light-line: #ddd4c0;
+    --section-bg: #ede8de;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  }
+
+  .hero-kanji {
+    position: absolute;
+    font-family: 'Noto Serif JP', serif;
+    color: rgba(192,57,43,0.06);
+    font-size: clamp(180px, 35vw, 420px);
+    font-weight: 700;
+    line-height: 1;
+    user-select: none;
+    animation: drift 20s ease-in-out infinite alternate;
+    letter-spacing: -0.02em;
+  }
+
+  @keyframes drift {
+    from { transform: translateY(-20px) rotate(-3deg); }
+    to   { transform: translateY(20px)  rotate(3deg); }
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--red);
+  }
+
+  .hero-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    color: var(--muted);
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+
+  .scroll-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.8s 1.2s forwards;
+  }
+
+  .scroll-hint::before, .scroll-hint::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--light-line);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---- NAV ---- */
+  .toc {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  .toc-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .toc-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.5rem;
+    list-style: none;
+  }
+
+  .toc-links a {
+    color: rgba(245,240,232,0.7);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+
+  .toc-links a:hover { color: var(--gold); }
+
+  /* ---- SECTIONS ---- */
+  .section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    border-bottom: 1px solid var(--light-line);
+  }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  .section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    line-height: 1.1;
+  }
+
+  .section-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 1.8rem;
+  }
+
+  .section p {
+    color: #3a2e24;
+    margin-bottom: 1rem;
+    font-size: 1.02rem;
+  }
+
+  /* ---- WRITING SYSTEMS ---- */
+  .writing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin: 2rem 0;
+  }
+
+  .writing-card {
+    background: var(--section-bg);
+    border: 1px solid var(--light-line);
+    border-radius: 4px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .writing-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(26,16,8,0.1);
+  }
+
+  .writing-card-bg {
+    position: absolute;
+    top: -10px; right: -10px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 5rem;
+    color: rgba(192,57,43,0.07);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .writing-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    position: relative;
+  }
+
+  .writing-card .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    background: var(--red);
+    color: white;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+  }
+
+  .writing-card p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+
+  .char-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+  }
+
+  .char {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.4rem;
+    background: white;
+    border: 1px solid var(--light-line);
+    border-radius: 3px;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: grid;
+    place-items: center;
+    transition: background 0.15s;
+  }
+
+  .char:hover { background: var(--red); color: white; }
+
+  /* ---- ROADMAP ---- */
+  .roadmap {
+    position: relative;
+    padding-left: 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .roadmap::before {
+    content: '';
+    position: absolute;
+    left: 0.45rem;
+    top: 0.5rem;
+    bottom: 0;
+    width: 1px;
+    background: var(--light-line);
+  }
+
+  .roadmap-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+  }
+
+  .roadmap-item::before {
+    content: '';
+    position: absolute;
+    left: -1.62rem;
+    top: 0.45rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--red);
+  }
+
+  .roadmap-item.done::before { background: var(--red); }
+
+  .roadmap-item h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .roadmap-item p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+
+  .duration {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    background: rgba(184,134,11,0.1);
+    padding: 0.1rem 0.45rem;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+  }
+
+  /* ---- TIPS GRID ---- */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .tip-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.5rem;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .tip-card:hover { transform: translateY(-3px); }
+
+  .tip-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(245,240,232,0.07);
+    position: absolute;
+    right: 0.5rem;
+    bottom: -0.5rem;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .tip-card h4 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--gold); }
+  .tip-card p { font-size: 0.88rem; color: rgba(245,240,232,0.75); margin: 0; }
+
+  /* ---- RESOURCES ---- */
+  .resources-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.93rem;
+  }
+
+  .resources-table th {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 2px solid var(--ink);
+    padding: 0.5rem 0.8rem;
+    text-align: left;
+  }
+
+  .resources-table td {
+    padding: 0.75rem 0.8rem;
+    border-bottom: 1px solid var(--light-line);
+    vertical-align: top;
+  }
+
+  .resources-table tr:hover td { background: var(--section-bg); }
+
+  .badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.4rem;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .badge-free { background: rgba(0,120,60,0.12); color: #1a6b3a; }
+  .badge-paid { background: rgba(192,57,43,0.1); color: var(--red); }
+  .badge-app  { background: rgba(184,134,11,0.15); color: var(--gold); }
+
+  /* ---- PHRASES ---- */
+  .phrases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+    margin: 2rem 0;
+  }
+
+  .phrase-card {
+    border: 1px solid var(--light-line);
+    border-radius: 4px;
+    padding: 1rem 1.2rem;
+    background: white;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .phrase-card:hover { border-color: var(--red); transform: scale(1.02); }
+
+  .phrase-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.35rem;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .phrase-roma {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    display: block;
+  }
+
+  .phrase-en {
+    font-size: 0.88rem;
+    color: var(--ink);
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--ink);
+    color: rgba(245,240,232,0.5);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.85rem;
+  }
+
+  footer .footer-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 2.5rem;
+    color: rgba(245,240,232,0.15);
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+
+  /* ---- BLOCKQUOTE ---- */
+  blockquote {
+    border-left: 3px solid var(--red);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--section-bg);
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    color: var(--red);
+  }
+
+  @media (max-width: 600px) {
+    .section { padding: 3rem 1.2rem; }
+    .writing-grid, .tips-grid, .phrases-grid { grid-template-columns: 1fr; }
+    .resources-table { font-size: 0.8rem; }
+  }
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="From zero to conversation — a structured guide covering writing systems, grammar, vocabulary, and the mindset to stay" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Learn Japanese — A Complete Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/learning/languages/japanese-guide.html",
+  "description": "From zero to conversation — a structured guide covering writing systems, grammar, vocabulary, and the mindset to stay"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learning",
+      "item": "https://yasirbilgin.com/learning/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Learn Japanese — A Complete Guide",
+      "item": "https://yasirbilgin.com/learning/languages/japanese-guide.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<!-- HERO -->
+<section class="hero">
+      <div class="eyebrow">Learning · Languages</div>
+  <div class="hero-kanji">日</div>
+  <div class="hero-content">
+    <h1>Learn <em>Japanese</em></h1>
+    <p class="hero-jp">日本語を学ぼう</p>
+    <p class="hero-desc">From zero to conversation — a structured guide covering writing systems, grammar, vocabulary, and the mindset to stay motivated.</p>
+    <p class="scroll-hint">Scroll to explore</p>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<nav class="toc">
+  <p class="toc-label">Contents</p>
+  <ul class="toc-links">
+    <li><a data-target="writing">Writing Systems</a></li>
+    <li><a data-target="roadmap">Learning Roadmap</a></li>
+    <li><a data-target="grammar">Grammar Basics</a></li>
+    <li><a data-target="phrases">Essential Phrases</a></li>
+    <li><a data-target="resources">Resources</a></li>
+    <li><a data-target="tips">Study Tips</a></li>
+  </ul>
+</nav>
+
+<!-- WRITING SYSTEMS -->
+<section class="section" id="writing">
+  <p class="section-num">01 — Writing</p>
+  <h2>Three Writing Systems</h2>
+  <p class="section-jp">三つの文字体系</p>
+  <p>Japanese uses three distinct scripts, often mixed together in a single sentence. Mastering all three is essential — and more achievable than it looks.</p>
+
+  <div class="writing-grid">
+    <div class="writing-card">
+      <div class="writing-card-bg">あ</div>
+      <div class="tag">Step 1</div>
+      <h3>Hiragana</h3>
+      <p>46 phonetic characters for native Japanese words and grammar particles. Learn this first — it takes about a week.</p>
+      <div class="char-row">
+        <div class="char">あ</div><div class="char">い</div><div class="char">う</div>
+        <div class="char">え</div><div class="char">お</div><div class="char">か</div>
+        <div class="char">き</div><div class="char">く</div>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <div class="writing-card-bg">ア</div>
+      <div class="tag">Step 2</div>
+      <h3>Katakana</h3>
+      <p>46 characters mirroring Hiragana, used for foreign loanwords, emphasis, and scientific terms.</p>
+      <div class="char-row">
+        <div class="char">ア</div><div class="char">イ</div><div class="char">ウ</div>
+        <div class="char">エ</div><div class="char">オ</div><div class="char">カ</div>
+        <div class="char">キ</div><div class="char">ク</div>
+      </div>
+    </div>
+
+    <div class="writing-card">
+      <div class="writing-card-bg">漢</div>
+      <div class="tag">Long-term</div>
+      <h3>Kanji</h3>
+      <p>Adopted Chinese characters. ~2,136 are considered "common use." Learn gradually — start with the most frequent 100.</p>
+      <div class="char-row">
+        <div class="char">日</div><div class="char">本</div><div class="char">語</div>
+        <div class="char">人</div><div class="char">山</div><div class="char">水</div>
+        <div class="char">火</div><div class="char">木</div>
+      </div>
+    </div>
+  </div>
+
+  <blockquote>
+    Hiragana and Katakana together are called <strong>Kana</strong>. Nail both in your first month — everything else builds on them.
+    <cite>— Standard learning advice</cite>
+  </blockquote>
+</section>
+
+<!-- ROADMAP -->
+<section class="section" id="roadmap">
+  <p class="section-num">02 — Plan</p>
+  <h2>Learning Roadmap</h2>
+  <p class="section-jp">学習ロードマップ</p>
+  <p>Japanese rewards consistency over intensity. Here is a realistic path from zero to conversational fluency.</p>
+
+  <div class="roadmap">
+    <div class="roadmap-item done">
+      <div class="duration">Month 1–2</div>
+      <h3>Kana Mastery + Foundations</h3>
+      <p>Learn all Hiragana and Katakana. Study pronunciation. Begin basic vocabulary (numbers, greetings, colors). Use a spaced-repetition system (Anki).</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="duration">Month 3–6</div>
+      <h3>Core Grammar + Beginner Kanji</h3>
+      <p>Work through a structured textbook (Genki I). Learn the top 100 Kanji. Build sentences using は, が, を, に, and で particles. Start listening to simple native content.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="duration">Month 7–12</div>
+      <h3>Intermediate Grammar + JLPT N5/N4</h3>
+      <p>Finish Genki II. Learn ~300 Kanji. Understand past/present/negative/potential verb forms. Start watching anime with Japanese subtitles.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="duration">Year 2</div>
+      <h3>Reading + Conversation Practice</h3>
+      <p>Read simple manga and graded readers. Find a language exchange partner (HelloTalk, Tandem). Prepare for JLPT N3. Aim for ~1,000 Kanji.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="duration">Year 3+</div>
+      <h3>Advanced: Immersion & Fluency</h3>
+      <p>Consume native media without subtitles. Read novels. Aim for JLPT N2 or N1. Build domain-specific vocabulary for work or interests.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GRAMMAR -->
+<section class="section" id="grammar">
+  <p class="section-num">03 — Grammar</p>
+  <h2>Grammar Essentials</h2>
+  <p class="section-jp">文法の基礎</p>
+  <p>Japanese grammar is very different from English — but also highly logical and consistent once the core rules click.</p>
+
+  <div class="writing-grid">
+    <div class="writing-card">
+      <div class="writing-card-bg">語</div>
+      <h3>SOV Word Order</h3>
+      <p>Japanese is Subject–Object–Verb. The verb always comes last. <em>"I sushi eat"</em> instead of "I eat sushi."</p>
+    </div>
+    <div class="writing-card">
+      <div class="writing-card-bg">は</div>
+      <h3>Particles</h3>
+      <p>Small words after nouns that mark their role. は (topic), が (subject), を (object), に (direction/time), で (location/means).</p>
+    </div>
+    <div class="writing-card">
+      <div class="writing-card-bg">丁</div>
+      <h3>Politeness Levels</h3>
+      <p>Japanese has formal (丁寧語), humble (謙譲語), and respectful (尊敬語) speech. Beginners should master polite -ます/-です forms first.</p>
+    </div>
+    <div class="writing-card">
+      <div class="writing-card-bg">動</div>
+      <h3>Verb Conjugation</h3>
+      <p>Verbs conjugate for tense, politeness, negative, and potential. Two main groups (U-verbs and RU-verbs) plus irregular する and くる.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHRASES -->
+<section class="section" id="phrases">
+  <p class="section-num">04 — Phrases</p>
+  <h2>Essential Phrases</h2>
+  <p class="section-jp">基本フレーズ</p>
+  <p>These core expressions will carry you through your first conversations. Memorize them early.</p>
+
+  <div class="phrases-grid">
+    <div class="phrase-card">
+      <span class="phrase-jp">こんにちは</span>
+      <span class="phrase-roma">Konnichiwa</span>
+      <span class="phrase-en">Hello / Good afternoon</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">ありがとう</span>
+      <span class="phrase-roma">Arigatou</span>
+      <span class="phrase-en">Thank you</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">すみません</span>
+      <span class="phrase-roma">Sumimasen</span>
+      <span class="phrase-en">Excuse me / Sorry</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">わかりません</span>
+      <span class="phrase-roma">Wakarimasen</span>
+      <span class="phrase-en">I don't understand</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">もう一度</span>
+      <span class="phrase-roma">Mou ichido</span>
+      <span class="phrase-en">Once more / Again</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">おはよう</span>
+      <span class="phrase-roma">Ohayou</span>
+      <span class="phrase-en">Good morning</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">いくらですか</span>
+      <span class="phrase-roma">Ikura desu ka</span>
+      <span class="phrase-en">How much is it?</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">どこですか</span>
+      <span class="phrase-roma">Doko desu ka</span>
+      <span class="phrase-en">Where is it?</span>
+    </div>
+    <div class="phrase-card">
+      <span class="phrase-jp">よろしく</span>
+      <span class="phrase-roma">Yoroshiku</span>
+      <span class="phrase-en">Pleased to meet you</span>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section" id="resources">
+  <p class="section-num">05 — Resources</p>
+  <h2>Best Resources</h2>
+  <p class="section-jp">学習リソース</p>
+  <p>A curated selection of tools used by thousands of successful learners.</p>
+
+  <table class="resources-table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Type</th>
+        <th>Best For</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Genki I & II</strong></td>
+        <td>Textbook</td>
+        <td>Structured grammar foundation</td>
+        <td><span class="badge badge-paid">Paid</span></td>
+      </tr>
+      <tr>
+        <td><strong>Anki</strong></td>
+        <td>Flashcard app</td>
+        <td>Vocabulary & Kanji (spaced repetition)</td>
+        <td><span class="badge badge-free">Free</span></td>
+      </tr>
+      <tr>
+        <td><strong>WaniKani</strong></td>
+        <td>Web app</td>
+        <td>Kanji learning with mnemonics</td>
+        <td><span class="badge badge-paid">Paid</span></td>
+      </tr>
+      <tr>
+        <td><strong>Duolingo</strong></td>
+        <td>App</td>
+        <td>Daily habit / review</td>
+        <td><span class="badge badge-app">Freemium</span></td>
+      </tr>
+      <tr>
+        <td><strong>JapanesePod101</strong></td>
+        <td>Audio / Video</td>
+        <td>Listening & conversation practice</td>
+        <td><span class="badge badge-app">Freemium</span></td>
+      </tr>
+      <tr>
+        <td><strong>HelloTalk</strong></td>
+        <td>App</td>
+        <td>Conversation with native speakers</td>
+        <td><span class="badge badge-free">Free</span></td>
+      </tr>
+      <tr>
+        <td><strong>NHK Web Easy</strong></td>
+        <td>Website</td>
+        <td>Reading simple Japanese news</td>
+        <td><span class="badge badge-free">Free</span></td>
+      </tr>
+      <tr>
+        <td><strong>Jisho.org</strong></td>
+        <td>Dictionary</td>
+        <td>Word lookup, example sentences</td>
+        <td><span class="badge badge-free">Free</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- TIPS -->
+<section class="section" id="tips">
+  <p class="section-num">06 — Mindset</p>
+  <h2>Study Tips That Work</h2>
+  <p class="section-jp">効果的な学習法</p>
+  <p>Technique matters as much as time. These principles separate learners who make it to fluency from those who plateau.</p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <h3>Daily Consistency Wins</h3>
+      <p>30 minutes every day beats 3-hour weekend sessions. Japanese requires daily exposure to build lasting memory.</p>
+      <div class="tip-num">01</div>
+    </div>
+    <div class="tip-card">
+      <h3>Immerse Early</h3>
+      <p>Start consuming native content (music, anime, podcasts) from month two — even if you understand nothing at first.</p>
+      <div class="tip-num">02</div>
+    </div>
+    <div class="tip-card">
+      <h3>Use Spaced Repetition</h3>
+      <p>Anki with pre-made decks (Core 2000/6000) is the most efficient way to build and retain vocabulary long-term.</p>
+      <div class="tip-num">03</div>
+    </div>
+    <div class="tip-card">
+      <h3>Speak from Day One</h3>
+      <p>Don't wait until you feel "ready." Record yourself, find a tutor on iTalki, or use language exchange apps early.</p>
+      <div class="tip-num">04</div>
+    </div>
+    <div class="tip-card">
+      <h3>Embrace the Kanji</h3>
+      <p>Don't avoid Kanji — integrate it from the start. Kanji actually make reading faster once you know them.</p>
+      <div class="tip-num">05</div>
+    </div>
+    <div class="tip-card">
+      <h3>Find Your "Why"</h3>
+      <p>Anime, travel, business, literature — whatever your reason, connect your daily study to it. Motivation beats discipline.</p>
+      <div class="tip-num">06</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-kanji">頑張れ</span>
+  <p><em>Ganbarre</em> — Do your best.</p>
+  <p style="margin-top:0.5rem; font-size:0.8rem;">Japanese Language Learning Guide &nbsp;·&nbsp; Start today, not tomorrow.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.toc-links a[data-target]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.getElementById(this.getAttribute('data-target'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</article>
+</main>
+</body>
+</html>

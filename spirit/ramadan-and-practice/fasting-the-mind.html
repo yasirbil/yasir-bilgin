@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="Ramadan, cognitive fasting, mindfulness">
+  <meta property="og:title"       content="Ramadan for the Mind — A Cognitive Fasting Guide" />
+  <meta property="og:description" content="Ramadan for the Mind — A Cognitive Fasting Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/spirit/ramadan-and-practice/fasting-the-mind.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Ramadan for the Mind — A Cognitive Fasting Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Ramadan for the Mind — A Cognitive Fasting Guide">
+  <meta name="twitter:description" content="Ramadan for the Mind — A Cognitive Fasting Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/spirit/ramadan-and-practice/fasting-the-mind.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>Ramadan for the Mind — A Cognitive Fasting Guide</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+
+<style>
+  :root {
+    --ink: #1a1208;
+    --parchment: #faf6ef;
+    --gold: #b8922a;
+    --gold-light: #d4aa4a;
+    --gold-pale: #f0e4c2;
+    --teal: #2a6b72;
+    --teal-light: #4a9ba3;
+    --teal-pale: #d8eff1;
+    --rose: #8b3a3a;
+    --rose-pale: #f5e8e8;
+    --night: #0e0c08;
+    --mist: #f4efe6;
+    --border: rgba(184, 146, 42, 0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Taviraj', Georgia, serif;
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.85;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--night);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(184,146,42,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(42,107,114,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 20%, rgba(139,58,58,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Stars */
+  .stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.4); }
+  }
+
+  .hero-crescent {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+    animation: fadeDown 1.2s ease both;
+    filter: drop-shadow(0 0 20px rgba(184,146,42,0.4));
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    animation: fadeDown 1.4s 0.2s ease both;
+    opacity: 0;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 300;
+    color: #f8f2e4;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+    animation: fadeDown 1.4s 0.3s ease both;
+    opacity: 0;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-family: 'Taviraj', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: rgba(250,246,239,0.65);
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    animation: fadeDown 1.4s 0.5s ease both;
+    opacity: 0;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    animation: fadeDown 1.4s 0.7s ease both;
+    opacity: 0;
+  }
+
+  .hero-divider-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+
+  .hero-divider-line:last-child {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .hero-divider-diamond {
+    color: var(--gold);
+    font-size: 0.6rem;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── ARTICLE WRAPPER ── */
+  .article {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+
+  /* ── LEAD QUOTE ── */
+  .lead-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--teal);
+    border-left: 3px solid var(--gold);
+    padding: 1.2rem 2rem;
+    margin: 3rem 0 4rem;
+    line-height: 1.6;
+    background: linear-gradient(to right, rgba(42,107,114,0.04), transparent);
+  }
+
+  /* ── PROSE ── */
+  p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: #2a2215;
+  }
+
+  /* ── PART HEADERS ── */
+  .part-header {
+    margin: 6rem 0 3rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .part-header::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin-bottom: 2.5rem;
+  }
+
+  .part-number {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  .part-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .part-header h2 em {
+    font-style: italic;
+    color: var(--teal);
+  }
+
+  /* ── SECTION HEADINGS ── */
+  h3.section-head {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 3.5rem 0 1.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── FUNCTION CARDS (8 cognitive functions) ── */
+  .function-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 2px;
+    padding: 2.2rem 2.4rem;
+    margin: 3rem 0;
+    position: relative;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.05);
+  }
+
+  .function-card::before {
+    content: attr(data-symbol);
+    position: absolute;
+    top: -1px;
+    right: 2rem;
+    font-size: 1.5rem;
+    line-height: 0;
+    padding: 0 0.5rem;
+    background: white;
+    color: var(--gold);
+  }
+
+  .function-card.teal { border-left-color: var(--teal); }
+  .function-card.teal::before { color: var(--teal); }
+  .function-card.rose { border-left-color: var(--rose); }
+  .function-card.rose::before { color: var(--rose); }
+
+  .function-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .function-card.teal .function-name { color: var(--teal); }
+  .function-card.rose .function-name { color: var(--rose); }
+
+  .function-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+
+  .function-tagline {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 1.2rem;
+  }
+
+  .function-card p {
+    font-size: 0.975rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+
+  /* ── TYPE CARDS ── */
+  .type-section {
+    margin: 4.5rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .type-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .type-badge {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  .type-badge span {
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    margin-top: 0.4rem;
+    opacity: 0.7;
+  }
+
+  .badge-gold { background: var(--ink); color: var(--gold-light); }
+  .badge-teal { background: var(--teal); color: #e8f5f6; }
+  .badge-rose { background: var(--rose); color: #fce8e8; }
+  .badge-mist { background: #3a3228; color: #d4c9b5; }
+
+  .type-title-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+
+  .type-stack {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .type-appetite {
+    background: var(--mist);
+    border-left: 3px solid var(--gold);
+    padding: 0.8rem 1.3rem;
+    margin: 1.2rem 0;
+    font-style: italic;
+    font-size: 0.96rem;
+    color: #4a3e2a;
+  }
+
+  .type-appetite strong {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .type-section p { font-size: 0.975rem; }
+
+  .practice-box {
+    background: var(--night);
+    color: var(--gold-pale);
+    padding: 1.1rem 1.5rem;
+    margin-top: 1.3rem;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .practice-box strong {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* ── HADITH PULLQUOTE ── */
+  .hadith {
+    text-align: center;
+    padding: 3.5rem 2rem;
+    margin: 4rem 0;
+    background: linear-gradient(135deg, var(--night), #1c1708);
+    color: var(--gold-pale);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hadith::before {
+    content: '❝';
+    position: absolute;
+    top: -1rem;
+    left: 2rem;
+    font-size: 8rem;
+    color: rgba(184,146,42,0.08);
+    font-family: Georgia;
+    line-height: 1;
+  }
+
+  .hadith-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .hadith-source {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.85;
+  }
+
+  /* ── DAILY FRAMEWORK ── */
+  .framework {
+    background: var(--mist);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .framework h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.8rem;
+  }
+
+  .framework-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 1rem 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .framework-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .framework-time {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    text-transform: uppercase;
+    padding-top: 0.25rem;
+  }
+
+  .framework-item p { font-size: 0.95rem; margin-bottom: 0; }
+
+  /* ── REFERENCE TABLE ── */
+  .ref-table-wrap {
+    margin: 3rem 0;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  thead {
+    background: var(--ink);
+    color: var(--gold-pale);
+  }
+
+  thead th {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  tbody tr:nth-child(even) { background: rgba(240,228,194,0.18); }
+  tbody tr:hover { background: rgba(42,107,114,0.07); }
+
+  tbody td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  tbody td:first-child {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    color: var(--teal);
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  /* ── CLOSING ── */
+  .closing {
+    background: var(--night);
+    color: var(--gold-pale);
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+  .closing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: #f8f2e4;
+  }
+
+  .closing p {
+    max-width: 580px;
+    margin: 0 auto 1.3rem;
+    font-weight: 300;
+    color: rgba(250,246,239,0.75);
+  }
+
+  .closing .finale {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-style: italic;
+    color: var(--gold-light);
+    margin-top: 3rem;
+  }
+
+  .closing .mubarak {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+
+  /* ── ORNAMENT ── */
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.1rem;
+    letter-spacing: 0.5rem;
+    margin: 3rem 0;
+    opacity: 0.5;
+  }
+
+  /* ── THREE LEVELS ── */
+  .levels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .levels-grid { grid-template-columns: 1fr; }
+    .type-header { flex-direction: column; gap: 1rem; }
+    .framework-item { grid-template-columns: 1fr; gap: 0.3rem; }
+    .framework-time { padding-top: 0; }
+  }
+
+  .level-card {
+    padding: 1.8rem 1.5rem;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+
+  .level-card:nth-child(1) { background: linear-gradient(135deg, var(--rose-pale), white); border-top: 3px solid var(--rose); }
+  .level-card:nth-child(2) { background: linear-gradient(135deg, var(--teal-pale), white); border-top: 3px solid var(--teal); }
+  .level-card:nth-child(3) { background: linear-gradient(135deg, var(--gold-pale), white); border-top: 3px solid var(--gold); }
+
+  .level-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .level-card:nth-child(1) .level-num { color: var(--rose); }
+  .level-card:nth-child(2) .level-num { color: var(--teal); }
+  .level-card:nth-child(3) .level-num { color: var(--gold); }
+
+  .level-arabic {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: var(--ink);
+  }
+
+  .level-eng {
+    font-size: 0.82rem;
+    color: #666;
+    font-style: italic;
+  }
+
+  .level-card p {
+    font-size: 0.88rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  /* ── FOOTNOTE ── */
+  .footnote {
+    font-size: 0.82rem;
+    color: #888;
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="How Ramadan purifies more than the body — a guide to physical, spiritual, and cognitive fasting for all sixteen personality" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ramadan for the Mind — A Cognitive Fasting Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/spirit/ramadan-and-practice/fasting-the-mind.html",
+  "description": "How Ramadan purifies more than the body — a guide to physical, spiritual, and cognitive fasting for all sixteen personality"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Spirit",
+      "item": "https://yasirbilgin.com/spirit/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ramadan for the Mind — A Cognitive Fasting Guide",
+      "item": "https://yasirbilgin.com/spirit/ramadan-and-practice/fasting-the-mind.html"
+    }
+  ]
+}
+</script>
+
+
+<!-- HERO -->
+<section class="hero">
+      <div class="eyebrow">Spirit · Ramadan & Practice</div>
+  <div class="stars" id="stars"></div>
+  <div class="hero-crescent">☽</div>
+  <h1>Fasting the <em>Mind</em></h1>
+  <p class="hero-subtitle">How Ramadan purifies more than the body — a guide to physical, spiritual, and cognitive fasting for all sixteen personality types</p>
+  <div class="hero-divider">
+    <div class="hero-divider-line"></div>
+    <div class="hero-divider-diamond">◆</div>
+    <div class="hero-divider-line"></div>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <div class="lead-quote reveal">
+    When the fast begins at Fajr, something shifts. Not just in the stomach — in the whole architecture of the self.
+  </div>
+
+  <p class="reveal">We know what physical fasting demands: no food, no drink, no intimacy from dawn to sunset. We know its rhythms — the pre-dawn suhoor, the patience of the long afternoon, the sweetness of iftar. We know the body's complaints and the discipline it takes to answer them with stillness.</p>
+
+  <p class="reveal">But Ramadan has always been understood by scholars, mystics, and practitioners as something far greater than physical restraint.</p>
+
+  <div class="hadith reveal">
+    <div class="hadith-text">"Many a fasting person has nothing from their fast except hunger and thirst."</div>
+    <div class="hadith-source">— The Prophet Muhammad ﷺ</div>
+  </div>
+
+  <p class="reveal">This is not a rebuke of bodily fasting — it is an invitation. An invitation to fast more completely. To fast with the eyes, the tongue, the hands, the heart, and — perhaps most profoundly — with the mind.</p>
+
+  <p class="reveal">This guide brings together the classical Islamic understanding of inner fasting with the contemporary language of cognitive psychology. Not to reduce the sacred to the psychological, but to illuminate one with the other. When we understand <em>how our minds generate distortion</em>, we understand more precisely what we are being called to purify.</p>
+
+  <!-- PART ONE -->
+  <div class="part-header reveal">
+    <div class="part-number">Part One</div>
+    <h2>What Fasting Is <em>Actually</em> For</h2>
+  </div>
+
+  <h3 class="section-head reveal">The Three Levels</h3>
+
+  <p class="reveal">Imam Al-Ghazali, in his <em>Ihya Ulum al-Din</em>, describes three levels of fasting. Most people reach the first reliably. Many reach the second. The third is where the real work lives.</p>
+
+  <div class="levels-grid reveal">
+    <div class="level-card">
+      <div class="level-num">Level One</div>
+      <div class="level-arabic">Sawm al-Jism</div>
+      <div class="level-eng">Fasting of the Body</div>
+      <p>Abstaining from food, drink, and physical desire between dawn and sunset. Obligatory. And, by itself, incomplete.</p>
+    </div>
+    <div class="level-card">
+      <div class="level-num">Level Two</div>
+      <div class="level-arabic">Sawm al-Jawarih</div>
+      <div class="level-eng">Fasting of the Senses</div>
+      <p>Restraining the eyes, tongue, ears, and hands from what corrupts. Fasting that reaches into behavior and daily interaction.</p>
+    </div>
+    <div class="level-card">
+      <div class="level-num">Level Three</div>
+      <div class="level-arabic">Sawm al-Qalb</div>
+      <div class="level-eng">Fasting of the Heart</div>
+      <p>Emptying the inner life of pride, resentment, envy, certainty, and control. Where Ramadan becomes genuinely transformative.</p>
+    </div>
+  </div>
+
+  <h3 class="section-head reveal">The Nafs and Its Appetites</h3>
+
+  <p class="reveal">Islamic psychology speaks of the <em>nafs</em> — the self or soul — as having multiple states. The <em>nafs al-ammara</em> is driven by appetite and impulse. The <em>nafs al-lawwama</em> knows its own failures. The <em>nafs al-mutma'inna</em> has found peace through surrender and discipline.</p>
+
+  <p class="reveal">Ramadan's deepest purpose is movement from the first state toward the last. Not by suppressing the self, but by purifying it. The question this guide asks is simple: <em>What, specifically, does your nafs hunger for?</em> And how can the discipline of this month refine that hunger?</p>
+
+  <p class="reveal">The answer, it turns out, depends enormously on who you are.</p>
+
+  <!-- PART TWO -->
+  <div class="part-header reveal">
+    <div class="part-number">Part Two</div>
+    <h2>The Eight <em>Cognitive</em> Appetites</h2>
+  </div>
+
+  <p class="reveal">We do not all struggle with the same things. Our psychological architecture — the characteristic ways we perceive, judge, and relate — generates characteristic distortions. These are our <em>cognitive appetites</em>: the ways that genuine strengths, when left undisciplined, become forms of ego.</p>
+
+  <h3 class="section-head reveal">The Perceiving Functions</h3>
+  <p class="reveal" style="font-style:italic; color:#666; font-size:0.95rem;">How consciousness takes in reality</p>
+
+  <div class="function-card reveal" data-symbol="🧭">
+    <div class="function-name">Introverted Intuition · Ni</div>
+    <h4>The Hunger for Meaning</h4>
+    <div class="function-tagline">Dominant in: INTJ, INFJ</div>
+    <p>Ni seeks the hidden pattern beneath events. At its best, it generates profound insight and foresight. At its most distorted, it becomes quiet arrogance: a settled conviction that one's interpretation is not just a perspective, but <em>the</em> truth. "I already see how this ends."</p>
+    <p>Fasting for Ni means learning to tolerate unfinished patterns. To sit with ambiguity. To move from <em>"I see what this means"</em> to <em>"meaning is still unfolding."</em> This is the fast of <strong>tawadu</strong> — humility — not in social manner, but in the inner chamber of interpretation.</p>
+  </div>
+
+  <div class="function-card teal reveal" data-symbol="🌊">
+    <div class="function-name">Extraverted Intuition · Ne</div>
+    <h4>The Hunger for Possibility</h4>
+    <div class="function-tagline">Dominant in: ENTP, ENFP</div>
+    <p>Ne is endlessly generative — it sees alternatives, reimagines frames, finds what could be. Its shadow is restlessness. The Ne-dominant person can become addicted to the novelty of ideas not because they are useful, but because entertaining them <em>feels</em> like living. Mental activity becomes a substitute for action.</p>
+    <p>Fasting for Ne means choosing depth over breadth — asking not <em>"what else could this be?"</em> but <em>"which possibility deserves devotion?"</em> Ramadan itself is a form of constraint. And constraint, properly entered, is not the enemy of creativity but its teacher.</p>
+  </div>
+
+  <div class="function-card rose reveal" data-symbol="🧱">
+    <div class="function-name">Introverted Sensing · Si</div>
+    <h4>The Hunger for Familiarity</h4>
+    <div class="function-tagline">Dominant in: ISTJ, ISFJ</div>
+    <p>Si draws strength from continuity — the guardian of memory, tradition, and accumulated wisdom. At its most distorted, Si becomes rigidity dressed as virtue. "This is how we've always done it" becomes a moral argument. Nostalgia becomes superiority.</p>
+    <p>Fasting for Si means loosening the grip of precedent. Holding tradition as a foundation rather than a prison. Asking whether a familiar thing is being kept because it is genuinely good, or simply because it is familiar.</p>
+  </div>
+
+  <div class="function-card reveal" data-symbol="🌍">
+    <div class="function-name">Extraverted Sensing · Se</div>
+    <h4>The Hunger for Stimulation</h4>
+    <div class="function-tagline">Dominant in: ESTP, ESFP</div>
+    <p>Se is fully present — noticing everything: texture, movement, sensation, aliveness. Its shadow is compulsion. The Se-dominant person can find stillness almost intolerable, filling every moment with activity. Discomfort triggers action before reflection is possible.</p>
+    <p>Ramadan's physical fast speaks most directly to Se — because hunger and thirst are precisely the discomfort that Se instinctively resolves through action. The discipline of sitting with that discomfort, inhabiting an uncomfortable moment without fleeing, is where Se is most powerfully refined.</p>
+  </div>
+
+  <div class="ornament reveal">✦ ✦ ✦</div>
+
+  <h3 class="section-head reveal">The Judging Functions</h3>
+  <p class="reveal" style="font-style:italic; color:#666; font-size:0.95rem;">How consciousness evaluates and decides</p>
+
+  <div class="function-card teal reveal" data-symbol="🧠">
+    <div class="function-name">Introverted Thinking · Ti</div>
+    <h4>The Hunger for Logical Purity</h4>
+    <div class="function-tagline">Dominant in: INTP, ISTP</div>
+    <p>Ti seeks coherence — building internal systems free of contradiction. At its most distorted, it becomes a weapon. The person who corrects reflexively, who prioritizes being right over being present, who withdraws behind logic when connection is called for. They do not mean to be cold — they are simply <em>focused</em>.</p>
+    <p>Fasting for Ti means learning compassion in reasoning: not just <em>"is this correct?"</em> but <em>"how can truth be communicated without harm?"</em></p>
+  </div>
+
+  <div class="function-card rose reveal" data-symbol="🏛️">
+    <div class="function-name">Extraverted Thinking · Te</div>
+    <h4>The Hunger for Efficiency</h4>
+    <div class="function-tagline">Dominant in: ENTJ, ESTJ</div>
+    <p>Te is the function of getting things done. At its most distorted, it evaluates people as systems — measuring worth by output, value by performance. Impatience with inefficiency becomes harshness with human limitation.</p>
+    <p>Fasting for Te means submitting the will to organize and optimize. Asking not <em>"how can this be made more efficient?"</em> but <em>"how can this serve human flourishing?"</em> The month's rhythms are not efficient. Accepting that, for strong Te, is itself a form of worship.</p>
+  </div>
+
+  <div class="function-card reveal" data-symbol="❤️">
+    <div class="function-name">Introverted Feeling · Fi</div>
+    <h4>The Hunger for Authenticity</h4>
+    <div class="function-tagline">Dominant in: INFP, ISFP</div>
+    <p>Fi holds an inner standard of value that is personal, genuine, and often hard to explain. Its shadow is absolutism — treating one's own felt sense of rightness as universal truth. Silent moral comparison, ranking who is more sincere, becomes a form of spiritual pride that is harder to detect because it <em>feels</em> so genuine.</p>
+    <p>Fasting for Fi means expanding conscience beyond the self — moving from inner purity toward relational compassion.</p>
+  </div>
+
+  <div class="function-card teal reveal" data-symbol="🤝">
+    <div class="function-name">Extraverted Feeling · Fe</div>
+    <h4>The Hunger for Harmony</h4>
+    <div class="function-tagline">Dominant in: ENFJ, ESFJ</div>
+    <p>Fe reads emotional atmospheres and moves naturally toward warmth and connection. Its shadow is performance. Approval-seeking can dress itself as empathy. The desire to be seen as good replaces the desire to actually be good. Gossip masquerades as care.</p>
+    <p>Fasting for Fe means stilling the need for relational validation — asking whether a kind gesture is offered because it is genuinely good, or because of how it will be received.</p>
+  </div>
+
+  <!-- PART THREE -->
+  <div class="part-header reveal">
+    <div class="part-number">Part Three</div>
+    <h2>The Sixteen Types — <em>A Ramadan Manual</em></h2>
+  </div>
+
+  <p class="reveal">What follows is a psychological fasting guide for each of the sixteen personality types. You need not know your type with certainty — read the type you think you might be, and the types adjacent to it. Notice what resonates. The recognition of a distortion is itself the beginning of its purification.</p>
+
+  <!-- INTJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-gold">INTJ<span>Ni · Te · Fi · Se</span></div>
+      <div class="type-title-block">
+        <h3>The Strategist's Fast</h3>
+        <div class="type-stack">Ni – Te – Fi – Se</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Premature certainty — a quiet, settled conviction of already understanding the person, the situation, the outcome.</div>
+    <p>The INTJ moves through life with powerful certainty. They see patterns before others do, build systems with precision, and hold themselves and everyone else to rigorous standards. Their distortion is not loud arrogance — it is a deep, settled inner knowing. "I see how this ends."</p>
+    <p>This Ramadan, the INTJ is invited to pause before concluding. To refrain from ranking people by competence or depth. To stay in situations that feel inefficient without trying to optimize them. The inferior Se means that hunger, disrupted routine, and sensory irregularity can trigger irritability — a direct confrontation the month offers.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Before drawing a conclusion about someone, pause. Say inwardly: "I may not have the whole picture." Then wait.</div>
+  </div>
+
+  <!-- ENTJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-rose">ENTJ<span>Te · Ni · Se · Fi</span></div>
+      <div class="type-title-block">
+        <h3>The Commander's Fast</h3>
+        <div class="type-stack">Te – Ni – Se – Fi</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Dominance over outcomes — equating leadership with control, and viewing human beings as variables to be optimized.</div>
+    <p>The ENTJ leads decisively and strategically. Their distortion is the need to control not just direction but execution, pace, and the behavior of everyone involved. Unexpressed feeling doesn't disappear in the ENTJ — it builds until it erupts.</p>
+    <p>The month's communal rhythms — which are not efficient, which cannot be hurried — are a direct invitation to practice voluntary surrender of control.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Let someone else make a decision you could have made better. Say nothing.</div>
+  </div>
+
+  <!-- INFJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-teal">INFJ<span>Ni · Fe · Ti · Se</span></div>
+      <div class="type-title-block">
+        <h3>The Visionary's Fast</h3>
+        <div class="type-stack">Ni – Fe – Ti – Se</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Interpretation certainty + emotional over-responsibility — quietly convinced of understanding someone's inner world completely.</div>
+    <p>The INFJ combines depth of insight with genuine care for people. Their distortion is an unusually sophisticated projection — and the tendency to absorb others' emotional states so thoroughly that they lose track of where they end and others begin.</p>
+    <p>This Ramadan, the INFJ is invited to release both burdens. You do not have to carry everyone's feelings. The fast from interpretation is as important as the fast from food.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>When certain you understand someone's motives, say to yourself: "I may not see the whole story." Then release the interpretation.</div>
+  </div>
+
+  <!-- ENFJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-teal">ENFJ<span>Fe · Ni · Se · Ti</span></div>
+      <div class="type-title-block">
+        <h3>The Guide's Fast</h3>
+        <div class="type-stack">Fe – Ni – Se – Ti</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Validation through impact — needing their care to be visible, shaping others toward the ENFJ's vision of who they should become.</div>
+    <p>The ENFJ is a natural leader of people — warm, perceptive, genuinely invested in others' growth. Their distortion is subtle: helping can become performing, guiding can become steering, harmony-building can shade into image management.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Do one kind act today with no witness and no expectation of response.</div>
+  </div>
+
+  <!-- INTP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-gold">INTP<span>Ti · Ne · Si · Fe</span></div>
+      <div class="type-title-block">
+        <h3>The Analyst's Fast</h3>
+        <div class="type-stack">Ti – Ne – Si – Fe</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Logical superiority — quiet disdain for imprecision, dismissing emotional complexity as irrational noise.</div>
+    <p>The INTP is a precision instrument for understanding. Their distortion is withdrawing from connection into the cleaner world of ideas, treating emotional intelligence as a lesser discipline unworthy of their attention.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>In one conversation today, validate someone's emotion before you explain why they might be wrong.</div>
+  </div>
+
+  <!-- ENTP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-mist">ENTP<span>Ne · Ti · Fe · Si</span></div>
+      <div class="type-title-block">
+        <h3>The Debater's Fast</h3>
+        <div class="type-stack">Ne – Ti – Fe – Si</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Intellectual stimulation — turning conversations into arenas, where cleverness becomes a substitute for depth.</div>
+    <p>The ENTP sees possibilities everywhere, enjoys the collision of ideas, and is at their best when intellectual energy is high. Their distortion is that intellectual performance replaces genuine inquiry. Debate becomes a sport, and every perspective an invitation to reframe.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>In one conversation, let someone else have the final word. Deliberately.</div>
+  </div>
+
+  <!-- ISTJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-gold">ISTJ<span>Si · Te · Fi · Ne</span></div>
+      <div class="type-title-block">
+        <h3>The Guardian's Fast</h3>
+        <div class="type-stack">Si – Te – Fi – Ne</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Certainty through precedent — "this is how it's always been done" carries the weight of moral proof.</div>
+    <p>The ISTJ is the backbone of every institution they inhabit — reliable, thorough, deeply committed to doing things correctly. Their distortion is that familiarity becomes a form of faith, and tradition is defended not because it is genuinely good but because it is known.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Try one thing differently from how you usually do it. Notice your resistance, and stay with it.</div>
+  </div>
+
+  <!-- ESTJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-rose">ESTJ<span>Te · Si · Ne · Fi</span></div>
+      <div class="type-title-block">
+        <h3>The Executive's Fast</h3>
+        <div class="type-stack">Te – Si – Ne – Fi</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Productivity as worth — evaluating people and self primarily through the lens of output and measurable result.</div>
+    <p>The ESTJ brings structure, order, and practical efficiency to every environment. Their distortion is that the inner emotional life — their own as much as others' — gets ignored because it does not show up on any measurable scale.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Acknowledge someone's effort today, explicitly, regardless of the result they produced.</div>
+  </div>
+
+  <!-- ISFJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-teal">ISFJ<span>Si · Fe · Ti · Ne</span></div>
+      <div class="type-title-block">
+        <h3>The Caregiver's Fast</h3>
+        <div class="type-stack">Si – Fe – Ti – Ne</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Stability through self-erasure — accommodating everyone else while quietly ignoring one's own needs.</div>
+    <p>The ISFJ gives quietly and consistently. Their distortion is self-neglect that eventually produces quiet resentment: all those unasked-for sacrifices that were secretly loans, now coming due.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Identify one thing you need today. Ask for it.</div>
+  </div>
+
+  <!-- ESFJ -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-teal">ESFJ<span>Fe · Si · Ne · Ti</span></div>
+      <div class="type-title-block">
+        <h3>The Connector's Fast</h3>
+        <div class="type-stack">Fe – Si – Ne – Ti</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Approval and belonging — reshaping the self to match the social environment, using harmony-maintenance to seek acceptance.</div>
+    <p>The ESFJ is the social heart of any community. Their distortions — the gossip that bonds the group, the agreement that preserves harmony, the carefully managed self-presentation — are particularly insidious because they are dressed in the language of care.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Have one conversation today without mentioning or analyzing a third party.</div>
+  </div>
+
+  <!-- ISTP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-mist">ISTP<span>Ti · Se · Ni · Fe</span></div>
+      <div class="type-title-block">
+        <h3>The Craftsman's Fast</h3>
+        <div class="type-stack">Ti – Se – Ni – Fe</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Emotional independence — when things become complex, the natural move is to leave, physically or psychologically.</div>
+    <p>The ISTP is precise, practical, and quietly competent. Their distortion is that withdrawal, which feels like self-management, leaves people feeling abandoned precisely when connection matters most.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>When you feel like withdrawing from a difficult conversation, stay for five more minutes.</div>
+  </div>
+
+  <!-- ESTP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-rose">ESTP<span>Se · Ti · Fe · Ni</span></div>
+      <div class="type-title-block">
+        <h3>The Dynamo's Fast</h3>
+        <div class="type-stack">Se – Ti – Fe – Ni</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Immediate stimulation — avoiding depth through activity, using the next exciting thing to stay permanently in motion.</div>
+    <p>The ESTP is quick, decisive, physically present, and socially magnetic. Ramadan, with its enforced pauses and call to reflection, is a direct confrontation with this appetite. The long wait before iftar, the night prayers, the slowing down — all require staying present in the stillness rather than escaping it.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>When you feel the impulse to act immediately, wait ten minutes. Notice what arises in the waiting.</div>
+  </div>
+
+  <!-- INFP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-gold">INFP<span>Fi · Ne · Si · Te</span></div>
+      <div class="type-title-block">
+        <h3>The Idealist's Fast</h3>
+        <div class="type-stack">Fi – Ne – Si – Te</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Feeling as truth — treating the inner sense of rightness as an accurate map of external reality.</div>
+    <p>The INFP lives in a rich inner world of meaning and value. Their distortion is fantasy loops, living inside old emotional narratives, and resisting practical structure — retreats from the difficulty of actually inhabiting the world.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Complete one practical task today without waiting for inspiration.</div>
+  </div>
+
+  <!-- ENFP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-teal">ENFP<span>Ne · Fi · Te · Si</span></div>
+      <div class="type-title-block">
+        <h3>The Inspirer's Fast</h3>
+        <div class="type-stack">Ne – Fi – Te – Si</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Possibility over commitment — endless exciting beginnings that never quite arrive at demanding middles.</div>
+    <p>The ENFP brings genuine light — enthusiasm, care, and the capacity to see possibility in people and situations. Their distortion is that this very aliveness is sometimes sophisticated avoidance. Devotion — real, sustained, unglamorous devotion — produces a depth of satisfaction that novelty alone cannot.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Identify one thing you have started and not finished. Work on only that today.</div>
+  </div>
+
+  <!-- ISFP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-mist">ISFP<span>Fi · Se · Ni · Te</span></div>
+      <div class="type-title-block">
+        <h3>The Artist's Fast</h3>
+        <div class="type-stack">Fi – Se – Ni – Te</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Emotional self-protection — retreating into inner space rather than attempting the vulnerable act of saying what is felt.</div>
+    <p>The ISFP is deeply present, aesthetically alive, and often kinder than they appear. Their distortion is that this protects not just the self but also cuts off the possibility of genuine intimacy. Their inner world is rich and real and worth sharing.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Tell someone one thing you genuinely feel that you would normally keep to yourself.</div>
+  </div>
+
+  <!-- ESFP -->
+  <div class="type-section reveal">
+    <div class="type-header">
+      <div class="type-badge badge-rose">ESFP<span>Se · Fi · Te · Ni</span></div>
+      <div class="type-title-block">
+        <h3>The Performer's Fast</h3>
+        <div class="type-stack">Se – Fi – Te – Ni</div>
+      </div>
+    </div>
+    <div class="type-appetite"><strong>Core Appetite</strong>Avoidance of stillness — constant engagement as a way of staying permanently on the surface.</div>
+    <p>The ESFP brings warmth, energy, and joy into every room. Their distortion is a subtle terror of the quiet moment — where the activity stops and something else might arise. Ramadan invites them to discover what lives in the space that activity has been filling.</p>
+    <div class="practice-box"><strong>Daily Practice</strong>Before iftar, sit in silence for five minutes — no phone, no conversation, no distraction.</div>
+  </div>
+
+  <!-- PART FOUR -->
+  <div class="part-header reveal">
+    <div class="part-number">Part Four</div>
+    <h2>The Integration — <em>What All of This Is For</em></h2>
+  </div>
+
+  <h3 class="section-head reveal">Fasting Is Not Subtraction. It Is Clarification.</h3>
+
+  <p class="reveal">When Ni stops rushing toward premature certainty, what remains is genuine insight — the real thing, uncontaminated by the ego's need to be right. When Ne stops generating endless alternatives as a form of avoidance, what remains is genuine creativity. When Fe stops managing impressions, what remains is genuine love — offered freely, without needing anything in return.</p>
+
+  <p class="reveal">This is what the mystics meant by purification. Not the destruction of the self's capacities, but the removal of the ego's distorting grip on them. The gift was always there. The fasting clears the way for it to be recognized.</p>
+
+  <div class="hadith reveal">
+    <div class="hadith-text">The heart can be alive or dead, polished or rusted, open or sealed. What causes the rust? The accumulation of habitual distortion — repeated cognitive appetites left unchecked.</div>
+    <div class="hadith-source">— On the Qalb, Islamic Tradition</div>
+  </div>
+
+  <h3 class="section-head reveal">A Daily Framework for Inner Fasting</h3>
+
+  <div class="framework reveal">
+    <h4>The Rhythm of Cognitive Purification</h4>
+    <div class="framework-item">
+      <div class="framework-time">At Suhoor</div>
+      <p>Before the fast begins, set your cognitive intention. Based on your type's characteristic distortion, identify one specific thing to fast from. Be specific — "I will fast from premature conclusions" is more actionable than "I will be humble."</p>
+    </div>
+    <div class="framework-item">
+      <div class="framework-time">During the Fast</div>
+      <p>When you notice hunger or thirst, let it serve as a reminder. Use the physical sensation as a cue to check in with the inner fast. What is your mind reaching for? The certainty it always wants? The approval it always monitors?</p>
+    </div>
+    <div class="framework-item">
+      <div class="framework-time">At Asr</div>
+      <p>Take five minutes for honest self-examination — <em>muhasaba</em>. Not self-flagellation, but examination. Did you keep the inner fast as well as the physical one? Not to condemn yourself, but to see clearly.</p>
+    </div>
+    <div class="framework-item">
+      <div class="framework-time">At Iftar</div>
+      <p>Before eating, sit for one moment in the gratitude of having tried. The physical fast breaks. The inner fast continues through the night.</p>
+    </div>
+    <div class="framework-item">
+      <div class="framework-time">At Tarawih</div>
+      <p>The night prayers are where the heart becomes most available. Use this time not just for recitation but for quiet acknowledgment: "Here are my appetites. Here is what I am trying to purify. Help me."</p>
+    </div>
+  </div>
+
+  <h3 class="section-head reveal">Reference: All Sixteen Types at a Glance</h3>
+
+  <div class="ref-table-wrap reveal">
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Core Appetite</th>
+          <th>Cognitive Fast</th>
+          <th>Daily Practice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>INTJ</td><td>Premature certainty</td><td>Fast from final conclusions</td><td>Pause before concluding</td></tr>
+        <tr><td>ENTJ</td><td>Outcome dominance</td><td>Fast from controlling pace</td><td>Let someone else decide</td></tr>
+        <tr><td>INFJ</td><td>Interpretation certainty</td><td>Fast from projection</td><td>Release interpretations</td></tr>
+        <tr><td>ENFJ</td><td>Validation through impact</td><td>Fast from performing goodness</td><td>Help without recognition</td></tr>
+        <tr><td>INTP</td><td>Logical superiority</td><td>Fast from intellectual detachment</td><td>Validate before analyzing</td></tr>
+        <tr><td>ENTP</td><td>Intellectual stimulation</td><td>Fast from debating for sport</td><td>Let others finish thoughts</td></tr>
+        <tr><td>ISTJ</td><td>Certainty through precedent</td><td>Fast from "how it's always been"</td><td>Try one small change</td></tr>
+        <tr><td>ESTJ</td><td>Productivity = worth</td><td>Fast from efficiency as value</td><td>Praise effort, not results</td></tr>
+        <tr><td>ISFJ</td><td>Stability through service</td><td>Fast from self-neglect</td><td>Ask for one thing you need</td></tr>
+        <tr><td>ESFJ</td><td>Approval and belonging</td><td>Fast from approval-seeking</td><td>Speak truth kindly</td></tr>
+        <tr><td>ISTP</td><td>Emotional independence</td><td>Fast from withdrawal</td><td>Stay in hard conversations</td></tr>
+        <tr><td>ESTP</td><td>Immediate stimulation</td><td>Fast from thrill-seeking</td><td>Delay one impulse 10 min</td></tr>
+        <tr><td>INFP</td><td>Feeling as truth</td><td>Fast from mood-based decisions</td><td>Complete one practical task</td></tr>
+        <tr><td>ENFP</td><td>Possibility over commitment</td><td>Fast from starting without finishing</td><td>Finish before beginning</td></tr>
+        <tr><td>ISFP</td><td>Emotional self-protection</td><td>Fast from withdrawal into silence</td><td>Speak one vulnerable truth</td></tr>
+        <tr><td>ESFP</td><td>Avoidance of stillness</td><td>Fast from constant engagement</td><td>Five minutes silence daily</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="footnote reveal">This article draws on classical Islamic scholarship on the inner dimensions of fasting, particularly the work of Imam Al-Ghazali, as well as Jungian cognitive function theory. It is intended as a complementary framework for personal reflection during Ramadan — not as a substitute for religious guidance.</p>
+
+</article>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="hero-divider" style="justify-content:center; margin-bottom:2.5rem;">
+    <div class="hero-divider-line"></div>
+    <div class="hero-divider-diamond">☽</div>
+    <div class="hero-divider-line"></div>
+  </div>
+  <h2>The Longer Fast</h2>
+  <p>Ramadan ends. The physical fast concludes with Eid's celebration and release. The table is set, the family gathers, the fast breaks.</p>
+  <p>But the cognitive fast, if practiced with honesty, does not have to end with the month. The INTJ who has practiced tolerating uncertainty for thirty days has built a capacity that does not expire. The ESFP who has sat in five minutes of silence each night now knows, from embodied experience, that stillness is survivable — and more than survivable.</p>
+  <p>Fasting, rightly practiced, is not just a seasonal discipline but a school. And every school, if you are paying attention, teaches you something you carry when you leave.</p>
+  <p>May your fast — physical and psychological, bodily and cognitive, outward and hidden — be accepted.</p>
+  <div class="finale">Ramadan Mubarak.</div>
+  <div class="mubarak">May your fast be complete</div>
+</section>
+
+<script>
+  // Generate stars
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 4 + 's';
+    star.style.animationDuration = (2 + Math.random() * 3) + 's';
+    const size = Math.random() > 0.8 ? '3px' : Math.random() > 0.5 ? '2px' : '1px';
+    star.style.width = size;
+    star.style.height = size;
+    star.style.opacity = (0.2 + Math.random() * 0.6).toString();
+    starsEl.appendChild(star);
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</main>
+</body>
+</html>

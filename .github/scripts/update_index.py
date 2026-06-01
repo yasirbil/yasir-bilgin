@@ -16,7 +16,7 @@ SECTION_NAMES = {
 }
 
 def folder_to_name(folder):
-    return folder.replace('-and-', ' & ').replace('-', ' ')
+    return folder.lower().replace('-and-', ' & ').replace('-', ' ').title()
 
 def extract_meta(html):
     title_m = re.search(r'<title[^>]*>([^<]+)</title>', html, re.I)
@@ -53,7 +53,7 @@ for section_dir in sorted(root.iterdir()):
             if html_file.name == 'index.html':
                 continue
             rel = html_file.relative_to(root)
-            url = 'https://yasirbilgin.com/' + str(rel).replace('\\', '/')
+            url = 'https://yasirbilgin.com/' + str(rel).replace('\\', '/').lower()
             html = html_file.read_text(errors='ignore')
             title, desc, date, tags = extract_meta(html)
             if not title:

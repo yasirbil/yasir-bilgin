@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="ego, worship, spiritual nearness">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worship, Ego, and Spiritual Nearness | Yasir Bilgin</title>
+
+  <!-- Unique meta description -->
+  <meta name="description" content="How ego and shame-centered cultures transform worship from divine nearness into a performance of flawless piety — and what a more authentic spirituality looks like.">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yasirbilgin.com/spirit/moral-psychology/worship-ego-nearness.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Worship, Ego, and Spiritual Nearness">
+  <meta property="og:description" content="How ego and shame-centered cultures transform worship from divine nearness into a performance of flawless piety — and what a more authentic spirituality looks like.">
+  <meta property="og:url"         content="https://yasirbilgin.com/spirit/moral-psychology/worship-ego-nearness.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt" content="Worship, Ego, and Spiritual Nearness" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Worship, Ego, and Spiritual Nearness">
+  <meta name="twitter:description" content="How ego and shame-centered cultures transform worship from divine nearness into a performance of flawless piety — and what a more authentic spirituality looks like.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <!-- Global nav — always first script -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Worship, Ego, and Spiritual Nearness in Shame-Centered Societies",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-05-23",
+    "dateModified": "2026-05-23",
+    "description": "How ego and shame-centered cultures transform worship from divine nearness into a performance of flawless piety — and what a more authentic spirituality looks like.",
+    "url": "https://yasirbilgin.com/spirit/moral-psychology/worship-ego-nearness.html"
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",   "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Spirit", "item": "https://yasirbilgin.com/spirit/" },
+      { "@type": "ListItem", "position": 3, "name": "Worship, Ego, and Spiritual Nearness", "item": "https://yasirbilgin.com/spirit/moral-psychology/worship-ego-nearness.html" }
+    ]
+  }
+  </script>
+
+  <!-- Fonts — shared stylesheet only -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ─── Design tokens ─── */
+    :root {
+      --bg:          #0f0d0a;
+      --bg-mid:      #161310;
+      --surface:     #1e1a14;
+      --surface-2:   #251f17;
+      --border:      rgba(200,175,130,0.12);
+      --text:        #e8dfc8;
+      --text-mid:    #b5a88a;
+      --text-dim:    #9a8e7c;
+      --accent:      #c8975a;
+      --accent-glow: rgba(200,151,90,0.18);
+      --gold-line:   rgba(200,151,90,0.45);
+      --serif:       'Georgia', 'Times New Roman', serif;
+    }
+
+    /* ─── Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Progress bar — below nav at 62px ─── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), #e8c07a);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── TOC overlay ─── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(10,8,5,0.7);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(6px);
+    }
+
+    .toc-panel {
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      width: min(380px, 90vw);
+      height: 100vh;
+      padding: 2.5rem 2rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .toc-close {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-mid);
+      font-size: 1rem;
+      cursor: pointer;
+      align-self: flex-end;
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .toc-close:hover { border-color: var(--accent); color: var(--accent); }
+
+    .toc-panel h3 {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-weight: normal;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .toc-list li a {
+      display: block;
+      padding: 0.6rem 0.75rem;
+      color: var(--text-mid);
+      text-decoration: none;
+      font-size: 0.92rem;
+      border-left: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      min-height: 44px;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+    }
+    .toc-list li a.toc-main {
+      color: var(--text);
+      font-size: 0.97rem;
+    }
+    .toc-list li a:hover {
+      color: var(--accent);
+      border-left-color: var(--accent);
+    }
+    .toc-list li a.toc-sub {
+      padding-left: 1.4rem;
+      font-size: 0.86rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3.5rem;
+    }
+
+    .hero-category {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.6rem;
+      font-family: var(--serif);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3.8rem);
+      font-weight: normal;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 2.4rem;
+      max-width: 620px;
+    }
+
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .byline-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .byline-name {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .byline-meta {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── Hero rule ─── */
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ─── Article header — STATIC (not sticky), after hr ─── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 0.75rem 2.5rem;
+      max-width: 780px;
+      margin: 0 auto;
+      /* NO position: sticky, NO top:, NO z-index: */
+    }
+
+    .read-time {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+    }
+
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-mid);
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      padding: 0.45rem 1.1rem;
+      cursor: pointer;
+      border-radius: 3px;
+      min-height: 44px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ─── Article body ─── */
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    /* ─── Opening reflection block ─── */
+    .reflection-block {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 2rem 2.5rem;
+      margin: 0 0 3.5rem;
+    }
+
+    .reflection-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .reflection-block p {
+      color: var(--text-mid);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .reflection-block p:last-child { margin-bottom: 0; }
+
+    /* ─── Major section ─── */
+    .major-section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 80px;
+    }
+
+    .section-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: normal;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 1.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    h2 em { font-style: italic; color: var(--accent); }
+
+    h3.sub-heading {
+      font-size: 1.15rem;
+      font-weight: normal;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .sh-num {
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+      color: var(--text-mid);
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ─── Divider between sections ─── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3.5rem 0;
+    }
+
+    /* ─── Two-mode comparison cards ─── */
+    .mode-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .mode-grid { grid-template-columns: 1fr; }
+    }
+
+    .mode-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.8rem 1.6rem;
+    }
+
+    .mode-card-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .mode-card h4 {
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .mode-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .mode-card ul li {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .mode-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+      top: 0.12em;
+    }
+
+    /* ─── Inner voice quotes ─── */
+    .inner-voice {
+      margin: 2rem 0;
+      padding: 1.6rem 2rem;
+      background: var(--surface-2);
+      border-radius: 6px;
+      font-style: italic;
+      color: var(--text-mid);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      position: relative;
+    }
+
+    .inner-voice::before {
+      content: '"';
+      position: absolute;
+      top: -0.4rem;
+      left: 1.2rem;
+      font-size: 3.5rem;
+      color: var(--accent);
+      opacity: 0.3;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    /* ─── Pull quote / key insight ─── */
+    .pull-quote {
+      border-left: 3px solid var(--gold-line);
+      padding: 1.2rem 0 1.2rem 2rem;
+      margin: 2.5rem 0 2.5rem -1rem;
+      font-size: 1.12rem;
+      color: var(--text);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    @media (max-width: 640px) {
+      .pull-quote { margin-left: 0; }
+    }
+
+    /* ─── Danger highlight ─── */
+    .danger-note {
+      background: rgba(200, 151, 90, 0.07);
+      border: 1px solid rgba(200, 151, 90, 0.2);
+      border-radius: 6px;
+      padding: 1.4rem 1.6rem;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+
+    .danger-note strong {
+      color: var(--accent);
+      font-weight: normal;
+    }
+
+    /* ─── Transition list ─── */
+    .transition-list {
+      list-style: none;
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .transition-list li {
+      padding-left: 1.6rem;
+      position: relative;
+      color: var(--text-mid);
+      font-size: 0.97rem;
+      line-height: 1.6;
+    }
+
+    .transition-list li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.45rem;
+      top: 0.55em;
+    }
+
+    /* ─── Conclusion block ─── */
+    .conclusion-block {
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 2.5rem 2.5rem;
+      margin-top: 1rem;
+      border-top: 2px solid var(--accent);
+    }
+
+    .conclusion-block p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 780px;
+      margin: 0 auto;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── Mobile ─── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 4rem 1.4rem 2.5rem; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .reflection-block { padding: 1.4rem 1.4rem; }
+    }
+  
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+<main id="main-content">
+
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')" aria-label="Close table of contents">✕</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s-question" class="toc-main">I. The Opening Question</a></li>
+        <li><a href="#s-two-centers" class="toc-main">II. Two Centers of Worship</a></li>
+        <li><a href="#s-nearness" class="toc-sub">2.1 — Nearness and Renewal</a></li>
+        <li><a href="#s-ego" class="toc-sub">2.2 — Ego and Perfection</a></li>
+        <li><a href="#s-shame" class="toc-main">III. The Shame-Centered Society</a></li>
+        <li><a href="#s-hijack" class="toc-main">IV. When Religion Becomes a Tool of the Ego</a></li>
+        <li><a href="#s-traditions" class="toc-sub">4.1 — What the Traditions Observed</a></li>
+        <li><a href="#s-transition" class="toc-main">V. The Transition Toward Maturity</a></li>
+        <li><a href="#s-conclusion" class="toc-main">VI. Conclusion</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero — nav.js injects the breadcrumb trail above this automatically -->
+  <section class="hero">
+      <div class="eyebrow">Spirit · Moral Psychology</div>
+    <h1>Worship, <em>Ego,</em> and Spiritual Nearness</h1>
+    <p class="hero-sub">How shame-centered cultures quietly transform acts of devotion from spaces of divine intimacy into stages for performing flawless piety — and what a more authentic spirituality looks like.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">May 23, 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar: read-time + Contents — AFTER the hr, NOT before the hero -->
+  <header class="article-header">
+    <span class="read-time">9 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+  </header>
+
+  <!-- Article body -->
+  <article class="article-body">
+
+    <!-- ══ Section I ══ -->
+    <section id="s-question" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>The Opening <em>Question</em></h2>
+
+      <div class="reflection-block">
+        <span class="reflection-label">A Question for Inner Reflection</span>
+        <p>When there is a disruption in an act of worship or responsibility, do we grieve the loss of a moment of peace and nearness — or do we become preoccupied with repairing and concealing the weakness exposed in the flawless self-image we try to present?</p>
+        <p>Is our anxiety rooted in the exposure of our weakness and the fracture of our idealized self-image — or in the loss of spiritual closeness, tranquility, and renewal?</p>
+      </div>
+
+      <p>This is not merely a question about individual psychology. It reveals a much deeper human tension — one where religion, morality, social perception, and ego become tightly intertwined in ways that are difficult to disentangle.</p>
+
+      <p>Especially in shame-centered societies, religious life often becomes trapped between two competing poles: a sincere relationship with God on one side, and the attempt to preserve an image of flawless religiosity before oneself and others on the other. Gradually, without the person ever consciously choosing it, worship can cease to be a space of spiritual intimacy and become instead a stage upon which one proves one's worth, discipline, or moral adequacy.</p>
+
+      <p>Understanding this dynamic — how it emerges, what it looks like from the inside, and how it differs from a more authentic spirituality — is the work of this article.</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ══ Section II ══ -->
+    <section id="s-two-centers" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>Two Centers <em>of Worship</em></h2>
+
+      <p>Human beings can approach worship from two fundamentally different interior centers. The distinction between them is not always visible from the outside — the same prayer, the same fast, the same act of remembrance can be performed from either place. What differs is not the external form but the underlying orientation: what the person is ultimately reaching toward, and what they feel they lose when the act is disrupted.</p>
+
+      <div class="mode-grid">
+        <div class="mode-card">
+          <span class="mode-card-label">Center One</span>
+          <h3>Worship as Nearness and Renewal</h3>
+          <ul>
+            <li>Reconnecting with God</li>
+            <li>Renewing inner peace</li>
+            <li>Reorienting the heart</li>
+            <li>Cleansing accumulated distraction</li>
+            <li>Preserving spiritual vitality</li>
+          </ul>
+        </div>
+        <div class="mode-card">
+          <span class="mode-card-label">Center Two</span>
+          <h4>Worship as Ego and Performance</h4>
+          <ul>
+            <li>Proving spiritual adequacy</li>
+            <li>Maintaining a disciplined image</li>
+            <li>Signaling consistency to others</li>
+            <li>Preserving identity as a "strong believer"</li>
+            <li>Avoiding the exposure of weakness</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 id="s-nearness" class="sub-heading"><span class="sh-num">2.1</span> Worship as Nearness and Renewal</h3>
+
+      <p>In the first mode, the person comes to worship because they genuinely need something from it. Prayer is a return — to stillness, to orientation, to the source of their inner life. The fast is a clearing. The act of remembrance is a re-anchoring of attention that has scattered across the noise of the day. The Sufi tradition captures this in the notion of <em>tawba</em> — not merely repentance as a legal transaction, but a continuous turning back, a homecoming of the heart.</p>
+
+      <p>When a disruption occurs in this mode — when prayer is missed, when concentration dissolves, when the rhythm of devotion breaks — what the person feels is something close to longing. They have missed an appointment with something that genuinely nourishes them. The sadness is soft and contains within it an impulse to return.</p>
+
+      <div class="inner-voice">
+        "I missed an opportunity for peace."
+        <br><br>
+        "I delayed a meeting that renews something in me."
+        <br><br>
+        "The connection has weakened — but I can find my way back."
+      </div>
+
+      <p>There is no sense that religion itself has been threatened. The person does not feel diminished as a person. They simply feel the absence of something they value — the way one feels the loss of a conversation that didn't happen, or a morning walk that had to be skipped.</p>
+
+      <h3 id="s-ego" class="sub-heading"><span class="sh-num">2.2</span> Worship as Ego and Performance</h3>
+
+      <p>In the second mode, worship has gradually fused with self-image. The person may not be aware that this has happened. It is rarely a conscious choice. Over time, through the slow accumulation of social conditioning, internal reinforcement, and the psychological need for a stable identity, worship has become one of the pillars upon which the person's sense of self rests.</p>
+
+      <p>The person has come to feel — often without being able to articulate this directly — something like: <em>I am someone who prays consistently. I am spiritually disciplined. I am not the kind of person who fails at this.</em> Their religious practice has become, in part, a form of self-narration. They are not merely worshipping God; they are also confirming, to themselves and to their social world, who they are.</p>
+
+      <p>Now when worship is disrupted, the experience is qualitatively different.</p>
+
+      <div class="inner-voice">
+        "My weakness has been exposed."
+        <br><br>
+        "The image I have of myself — and that others have of me — has been fractured."
+        <br><br>
+        "I am not who I thought I was."
+      </div>
+
+      <p>The pain is no longer about the absence of nearness. It is about the threat to an identity structure. The disruption has done something far more disturbing than interrupting a spiritual practice: it has introduced a crack in the architecture of the self.</p>
+
+      <div class="pull-quote">
+        The same broken prayer can produce longing in one person and panic in another — the difference lies entirely in what the person believes they have lost.
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ══ Section III ══ -->
+    <section id="s-shame" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>The <em>Shame-Centered</em> Society</h2>
+
+      <p>This tension becomes especially pronounced in societies shaped heavily by shame and social evaluation. Anthropologists have long distinguished between guilt-centered and shame-centered cultures — though in reality most societies contain both dynamics in varying proportions.</p>
+
+      <p>In a guilt-centered framework, the primary regulator is one's own internalized moral conscience: <em>I did something wrong, and I feel the wrongness of it internally.</em> In a shame-centered framework, the primary regulator is social visibility: <em>I may have done something wrong — but the crucial question is whether anyone saw, and what they now think of me.</em></p>
+
+      <p>This distinction shapes how disruptions in worship are experienced. In a shame-saturated environment, people often fear not merely making mistakes, but being seen as <em>the kind of person who makes mistakes</em>. The problem is not weakness itself — weakness can be managed privately. The problem is the visibility of weakness, which triggers an entirely different order of anxiety.</p>
+
+      <p>As a result, religious life in such environments easily becomes entangled with:</p>
+
+      <ul class="transition-list">
+        <li>Social image and public respectability</li>
+        <li>Moral performance as a form of social currency</li>
+        <li>External evaluation as the primary feedback mechanism</li>
+        <li>Shame management as a covert driver of religious behavior</li>
+        <li>The community's gaze as a kind of surrogate for divine witness</li>
+      </ul>
+
+      <p>A person in this environment may panic not because they feel distant from God — they may not even be attuned to that question — but because they fear appearing spiritually unreliable, inconsistent, or morally inadequate. The disruption in worship threatens their standing in the social-moral economy, not primarily their relationship with the divine.</p>
+
+      <p>This is why disruptions in worship can trigger reactions that seem disproportionate: intense self-condemnation, defensiveness, irritability, or a frenetic effort to quickly "repair" the appearance of consistency. These responses are not spiritually irrational — they make complete sense as responses to social threat. They are simply responses to the wrong thing.</p>
+
+      <div class="danger-note">
+        <strong>A clarification:</strong> This analysis is not an indictment of any particular culture. Every cultural environment shapes religious psychology in some way. The question is not whether a society influences its members' inner life — all do — but whether those influences are recognized and worked through, or left unexamined.
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ══ Section IV ══ -->
+    <section id="s-hijack" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>When Religion Becomes a <em>Tool of the Ego</em></h2>
+
+      <p>Perhaps the most subtle and important observation in this domain is that the ego does not usually resist religion. It co-opts it.</p>
+
+      <p>This is one of the most consistent warnings across the major spiritual traditions of the world — a warning that is easy to read abstractly but genuinely difficult to perceive in oneself. The ego does not typically announce itself as an obstacle to God. It dresses itself in the clothing of religiosity and offers the person something they cannot easily refuse: a stable, respectable, even admirable identity.</p>
+
+      <p>Without realizing it, a person can transform what began as genuine acts of devotion — prayer, discipline, consistency, piety — into pillars of self-worth. The original motivation was nearness to God. But over time, a second function has been quietly added: these practices now also produce and sustain a particular self-image. And once that image is established, the practices become load-bearing. To fail at them is to threaten not just one's relationship with God, but one's sense of who one is.</p>
+
+      <h3 id="s-traditions" class="sub-heading"><span class="sh-num">4.1</span> What the Traditions Observed</h3>
+
+      <p>Across very different spiritual traditions, teachers have named this phenomenon with remarkable consistency.</p>
+
+      <p>In the Islamic tradition, the concept of <em>riyā'</em> (ostentation or spiritual showing-off) captures the most visible form of this corruption — performing acts of worship for the eyes of others rather than for God alone. But the deeper teachers of the tradition, particularly those working in the science of the heart (<em>'ilm al-qalb</em>), pointed to subtler forms: the pride that accumulates from one's own awareness of one's consistency; the <em>'ujb</em> (self-admiration) that takes root even when no one else is watching; the attachment to one's own image of righteousness that can become indistinguishable from righteousness itself.</p>
+
+      <p>The Christian contemplative tradition, particularly in its desert and mystical strands, spoke of <em>vainglory</em> — a more refined category than simple pride — as the spiritual ailment of those who had already disciplined themselves and were now subtly feeding on the awareness of that discipline. John Climacus, writing in seventh-century Sinai, described vainglory as a "thief that steals the fruits of one's labors."</p>
+
+      <p>In Buddhist psychology, the concept of <em>māna</em> (conceit) includes the conceit of the accomplished practitioner who, having genuinely achieved something on the path, begins to use that achievement to establish a comparative self — I am further along than I was; I am further along than others.</p>
+
+      <p>What all of these observations share is a recognition that genuine spiritual progress creates its own specific spiritual risk: the accumulated fruits of practice can become raw material for ego-construction rather than vehicles of liberation or nearness.</p>
+
+      <div class="pull-quote">
+        Disruptions and failures, seen rightly, can be gifts. They reveal what was actually being carried — not just worship, but the weight of an image that was resting on it.
+      </div>
+
+      <p>This is why many teachers — paradoxically — treated their students' failures as diagnostic opportunities, even as invitations. The panic, the over-reaction, the need to quickly repair appearances: these responses reveal the invisible architecture. They show where the ego had quietly set up residence inside the forms of religion.</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ══ Section V ══ -->
+    <section id="s-transition" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>The Transition Toward <em>Maturity</em></h2>
+
+      <p>Mature spirituality — in the traditions that have thought most carefully about these dynamics — describes not a state of achieved perfection but a gradual reorientation of one's center. The question moves from <em>how do I appear?</em> to <em>how does my heart find its way back?</em></p>
+
+      <p>This reorientation has several interconnected dimensions:</p>
+
+      <ul class="transition-list">
+        <li><strong>Decoupling worth from consistency.</strong> The person begins to recognize that their value before God is not contingent on an unblemished record of practice. Theologically, this is not a controversial claim — most traditions affirm it explicitly. But to actually feel it, to have it inform one's immediate emotional response to failure rather than remaining a theoretical position, is a different kind of knowing.</li>
+        <li><strong>Relocating the gaze.</strong> The primary witness gradually shifts from the social field — the community, the family, the imagined evaluators — to something more interior. This does not mean becoming indifferent to others. It means that the deepest source of accountability becomes the relationship with God rather than the management of reputation.</li>
+        <li><strong>Learning to return.</strong> Perhaps the most practically important shift is the development of what might be called a <em>returning reflex</em> — a capacity to move back toward God without first having to resolve the shame, rebuild the image, or prove that the failure was an anomaly. The return is not conditional on preparation. It is available immediately, even in the middle of weakness.</li>
+        <li><strong>Tolerating imperfection in plain sight.</strong> This is perhaps the most counter-cultural of the dimensions, particularly in shame-centered environments. It involves developing enough interior stability to allow others to see one's inconsistency without treating that visibility as catastrophic.</li>
+      </ul>
+
+      <p>None of this happens quickly or cleanly. The dynamics described in this article are deep, and they are often reinforced by the very religious communities that are supposedly dedicated to transcending them. A community that equates visible religiosity with spiritual depth, that treats disruptions in practice as evidence of moral failure, that cannot distinguish between performance and sincerity — such a community will tend to reproduce the very patterns it ostensibly exists to heal.</p>
+
+      <p>The work, ultimately, is interior. It involves learning to ask a different question when worship stumbles — not <em>how do I manage this?</em> but <em>what was I actually reaching for? And can I reach for it again, now, even here?</em></p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ══ Section VI — Conclusion ══ -->
+    <section id="s-conclusion" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2><em>Conclusion</em></h2>
+
+      <div class="conclusion-block">
+        <p>Worship can remain a space of sincere nearness between the human being and God — or it can quietly become a mechanism for preserving an idealized self-image. The two are not always easy to distinguish from the outside. From the inside, the clearest diagnostic is the quality of one's response when practice breaks down.</p>
+
+        <p>When the primary anxiety is about exposure — about being seen as inconsistent, undisciplined, or spiritually inadequate — the ego has likely been doing double duty inside the forms of religion. When the primary feeling is something closer to longing — a sense of having missed a renewal that was available and real — the center is still closer to where it belongs.</p>
+
+        <p>The traditions that have thought longest about these dynamics do not propose the elimination of imperfection as the goal. They propose something more human and more available: the continuous cultivation of a returning. Not the absence of stumbling, but the capacity to find one's way back — without first needing to have been flawless, and without waiting for the shame to fully clear before turning again toward the light.</p>
+      </div>
+    </section>
+
+  </article>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progressBar');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+      }, { passive: true });
+    }
+    // No breadcrumb script needed — nav.js injects .ynb-breadcrumb automatically
+  </script>
+</main>
+</body>
+</html>

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="Japan, culture, travel guide">
+  <meta property="og:title"       content="Japan — A Cultural Guide" />
+  <meta property="og:description" content="Japan — A Cultural Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/civilization/world-cultures/japan/japan-cultural-guide.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Japan — A Cultural Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Japan — A Cultural Guide">
+  <meta name="twitter:description" content="Japan — A Cultural Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/civilization/world-cultures/japan/japan-cultural-guide.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>Japan — A Cultural Guide</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+  :root {
+    --ink: #1a1714;
+    --paper: #f5f0e8;
+    --red: #c0392b;
+    --red-light: #e8d5d3;
+    --gold: #b8860b;
+    --muted: #7a6f63;
+    --divider: #d6cfc4;
+    --white: #fdfaf5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: var(--ink);
+    color: var(--white);
+    padding: 80px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '日本';
+    position: absolute;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 260px;
+    color: rgba(255,255,255,0.04);
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: -0.05em;
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  /* ── Nav ── */
+  .toc {
+    background: var(--white);
+    border-bottom: 1px solid var(--divider);
+    padding: 0 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .toc::-webkit-scrollbar { display: none; }
+  .toc-inner {
+    display: inline-flex;
+    gap: 0;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .toc button {
+    display: inline-block;
+    padding: 16px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .toc button:hover { color: var(--ink); border-color: var(--red); }
+  .toc button.active { color: var(--ink); border-color: var(--red); }
+
+  /* ── Layout ── */
+  .page { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ── Chapter ── */
+  .chapter {
+    padding-top: 64px;
+    border-top: 1px solid var(--divider);
+    margin-top: 64px;
+    animation: fadeUp 0.5s ease both;
+  }
+  .chapter:first-child { border-top: none; margin-top: 48px; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .chapter-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .chapter-icon {
+    font-size: 22px;
+    line-height: 1;
+  }
+  .chapter-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .chapter-kanji {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Featured cards (top 3 arts) ── */
+  .featured-card {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 6px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .featured-card::before {
+    content: attr(data-kanji);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 80px;
+    color: rgba(0,0,0,0.04);
+    pointer-events: none;
+    line-height: 1;
+  }
+  .featured-card h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .featured-card .subtitle {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .featured-card p { color: #3d3630; font-size: 14px; margin-bottom: 12px; }
+
+  .facts {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .facts li {
+    display: flex;
+    gap: 10px;
+    font-size: 13.5px;
+  }
+  .facts li .fact-key {
+    font-weight: 500;
+    color: var(--muted);
+    min-width: 80px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .insight {
+    margin-top: 20px;
+    padding: 14px 18px;
+    background: var(--red-light);
+    border-left: 3px solid var(--red);
+    border-radius: 0 4px 4px 0;
+    font-size: 13.5px;
+    color: #5a1f1a;
+    font-style: italic;
+  }
+
+  /* Haiku block */
+  .haiku-block {
+    background: var(--ink);
+    color: var(--white);
+    padding: 24px 28px;
+    border-radius: 4px;
+    margin: 16px 0;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    line-height: 2;
+    letter-spacing: 0.02em;
+  }
+  .haiku-credit {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 8px;
+  }
+
+  /* ── Grid lists ── */
+  .grid-section { margin-bottom: 40px; }
+  .grid-section h4 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .grid-section h4 .icon { font-size: 18px; }
+
+  .pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pill {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .pill .en { font-weight: 500; }
+  .pill .jp { color: var(--muted); font-size: 12px; margin-left: 4px; }
+  .pill .desc { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  /* ── Insight box ── */
+  .big-insight {
+    background: var(--ink);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 36px 40px;
+    margin-top: 48px;
+  }
+  .big-insight h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  .insight-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .insight-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .insight-item .label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 4px;
+  }
+  .insight-item .value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+  }
+
+  /* ── Seasons ── */
+  .season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .season-card {
+    border-radius: 6px;
+    padding: 24px;
+    border: 1px solid var(--divider);
+  }
+  .season-card.spring  { background: #fdf7f7; border-color: #e8c4c4; }
+  .season-card.summer  { background: #f6faf3; border-color: #b8d9ae; }
+  .season-card.autumn  { background: #fdf8f2; border-color: #e8c89a; }
+  .season-card.winter  { background: #f3f6fb; border-color: #a8bcd8; }
+  .season-card .season-icon { font-size: 28px; margin-bottom: 10px; }
+  .season-card h4 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  .season-card .season-sub {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .season-card ul { list-style: none; }
+  .season-card ul li {
+    font-size: 13px;
+    color: #4a3f38;
+    padding: 3px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .season-card ul li:last-child { border-bottom: none; }
+
+  /* ── Brands ── */
+  .brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .brand-item {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+  .brand-item .brand-name { font-weight: 500; }
+  .brand-item .brand-desc { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  /* ── Food table ── */
+  .food-section { margin-bottom: 32px; }
+  .food-section h4 {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--divider);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .food-list { list-style: none; }
+  .food-list li {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--divider);
+    font-size: 14px;
+  }
+  .food-list li:last-child { border-bottom: none; }
+  .food-list .food-jp {
+    font-size: 12px;
+    color: var(--muted);
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  .food-list .food-en { font-weight: 500; }
+  .food-list .food-desc { color: #5a4f47; font-size: 13px; }
+
+  /* ── Philosophy pills ── */
+  .philosophy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .philo-pill {
+    flex: 1;
+    min-width: 160px;
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 6px;
+    padding: 18px 20px;
+  }
+  .philo-pill .jp-term {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .philo-pill .en-term { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0.05em; }
+  .philo-pill .meaning { font-size: 13px; color: #4a3f38; margin-top: 6px; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 32px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  footer strong { color: rgba(255,255,255,0.7); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 60px 20px 40px; }
+    .featured-card { padding: 22px 20px; }
+    .big-insight { padding: 24px 20px; }
+    .season-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="Arts · Food · Seasons · Brands — a structured map to explore Japanese" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Japan — A Cultural Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/civilization/world-cultures/japan/japan-cultural-guide.html",
+  "description": "Arts · Food · Seasons · Brands — a structured map to explore Japanese"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Civilization",
+      "item": "https://yasirbilgin.com/civilization/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Japan — A Cultural Guide",
+      "item": "https://yasirbilgin.com/civilization/world-cultures/japan/japan-cultural-guide.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="eyebrow">Civilization · World Cultures</div>
+  <h1>Japan</h1>
+  <p>Arts · Food · Seasons · Brands — a structured map to explore Japanese culture</p>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav class="toc">
+  <div class="toc-inner">
+    <button data-target="arts">Arts</button>
+    <button data-target="food">Food</button>
+    <button data-target="seasons">Seasons</button>
+    <button data-target="brands">Brands</button>
+  </div>
+</nav>
+
+<div class="page">
+
+<!-- ═══════════════════════════════════════
+     CHAPTER 1 — ARTS
+════════════════════════════════════════ -->
+<section class="chapter" id="arts">
+  <div class="chapter-label">
+    <span class="chapter-icon">🎭</span>
+    <div>
+      <div class="chapter-title">The Arts</div>
+      <div class="chapter-kanji">Japanese aesthetic traditions</div>
+    </div>
+  </div>
+
+  <!-- Kabuki -->
+  <div class="featured-card" data-kanji="歌舞伎">
+    <div class="subtitle">Performing Art</div>
+    <h2>Kabuki 歌舞伎</h2>
+    <p>Traditional theater combining drama, dance, and music — where every movement is symbolic and intentional.</p>
+    <ul class="facts">
+      <li><span class="fact-key">Origins</span><span>Early 1600s, Edo period</span></li>
+      <li><span class="fact-key">Style</span><span>Dramatic poses (mie), exaggerated gestures, symbolic movements</span></li>
+      <li><span class="fact-key">Makeup</span><span>Bold face paint (kumadori) — red = hero, blue = villain</span></li>
+      <li><span class="fact-key">Casting</span><span>All roles, including female ones, played by men (onnagata)</span></li>
+    </ul>
+    <div class="insight">Think of Kabuki as a living art performance — visual storytelling through rhythm and emotion.</div>
+  </div>
+
+  <!-- Haiku -->
+  <div class="featured-card" data-kanji="俳句">
+    <div class="subtitle">Literary Art</div>
+    <h3>Haiku 俳句</h3>
+    <p>A minimalist form of poetry that captures a fleeting moment — often in nature, always in the present.</p>
+    <ul class="facts">
+      <li><span class="fact-key">Structure</span><span>3 lines — 5·7·5 syllable pattern</span></li>
+      <li><span class="fact-key">Theme</span><span>Nature, seasons, a passing moment</span></li>
+      <li><span class="fact-key">Philosophy</span><span>Simplicity and presence, influenced by Zen Buddhism</span></li>
+      <li><span class="fact-key">Poet</span><span>Matsuo Bashō</span></li>
+    </ul>
+    <div class="haiku-block">
+      An old silent pond<br>
+      A frog jumps into the pond—<br>
+      Splash! Silence again.
+      <div class="haiku-credit">— Matsuo Bashō</div>
+    </div>
+    <div class="insight">Haiku is like a snapshot of awareness — a deep feeling captured in very few words.</div>
+  </div>
+
+  <!-- Ukiyo-e -->
+  <div class="featured-card" data-kanji="浮世絵">
+    <div class="subtitle">Visual Art</div>
+    <h3>Ukiyo-e 浮世絵</h3>
+    <p>"Pictures of the floating world" — woodblock prints depicting geishas, samurai, landscapes, and daily life.</p>
+    <ul class="facts">
+      <li><span class="fact-key">Technique</span><span>Carved wood blocks, inked and pressed layer by layer for color</span></li>
+      <li><span class="fact-key">Famous work</span><span>The Great Wave off Kanagawa — Katsushika Hokusai</span></li>
+      <li><span class="fact-key">Key artist</span><span>Utagawa Hiroshige</span></li>
+    </ul>
+    <div class="insight">Ukiyo-e was the "mass media" of old Japan — widely distributed art that later influenced Van Gogh and European Impressionism.</div>
+  </div>
+
+  <!-- Arts map -->
+  <h4 style="font-family:'Shippori Mincho',serif;font-size:18px;margin:40px 0 20px;">Full Arts Landscape</h4>
+
+  <div class="grid-section">
+    <h4><span class="icon">🎭</span> Performing Arts</h4>
+    <div class="pill-grid">
+      <div class="pill"><span class="en">Kabuki</span><span class="jp">歌舞伎</span><span class="desc">Dramatic stylized theater</span></div>
+      <div class="pill"><span class="en">Noh</span><span class="jp">能</span><span class="desc">Minimalist spiritual theater with masks</span></div>
+      <div class="pill"><span class="en">Kyogen</span><span class="jp">狂言</span><span class="desc">Comic interludes with Noh</span></div>
+      <div class="pill"><span class="en">Bunraku</span><span class="jp">文楽</span><span class="desc">Sophisticated puppet theater</span></div>
+      <div class="pill"><span class="en">Nihon Buyō</span><span class="jp">日本舞踊</span><span class="desc">Classical Japanese dance</span></div>
+    </div>
+  </div>
+
+  <div class="grid-section">
+    <h4><span class="icon">✍️</span> Literary Arts</h4>
+    <div class="pill-grid">
+      <div class="pill"><span class="en">Haiku</span><span class="jp">俳句</span><span class="desc">5-7-5 syllable poetry</span></div>
+      <div class="pill"><span class="en">Tanka</span><span class="jp">短歌</span><span class="desc">5-line classical poetry</span></div>
+      <div class="pill"><span class="en">Monogatari</span><span class="jp">物語</span><span class="desc">Narrative tales (e.g. The Tale of Genji)</span></div>
+      <div class="pill"><span class="en">Zuihitsu</span><span class="jp">随筆</span><span class="desc">Reflective, free-flowing essays</span></div>
+    </div>
+  </div>
+
+  <div class="grid-section">
+    <h4><span class="icon">🖼️</span> Visual Arts</h4>
+    <div class="pill-grid">
+      <div class="pill"><span class="en">Ukiyo-e</span><span class="jp">浮世絵</span><span class="desc">Woodblock prints</span></div>
+      <div class="pill"><span class="en">Sumi-e</span><span class="jp">墨絵</span><span class="desc">Zen ink wash painting</span></div>
+      <div class="pill"><span class="en">Yamato-e</span><span class="jp">大和絵</span><span class="desc">Classical Japanese painting</span></div>
+      <div class="pill"><span class="en">Byōbu</span><span class="jp">屏風</span><span class="desc">Painted folding screens</span></div>
+    </div>
+  </div>
+
+  <div class="grid-section">
+    <h4><span class="icon">🏺</span> Traditional Crafts</h4>
+    <div class="pill-grid">
+      <div class="pill"><span class="en">Ceramics</span><span class="jp">陶芸</span><span class="desc">Raku, Arita ware</span></div>
+      <div class="pill"><span class="en">Lacquerware</span><span class="jp">漆芸</span><span class="desc">Polished layered resin art</span></div>
+      <div class="pill"><span class="en">Textiles</span><span class="jp">染織</span><span class="desc">Kimono weaving & dyeing</span></div>
+      <div class="pill"><span class="en">Sword-making</span><span class="jp">刀剣</span><span class="desc">Highly refined craftsmanship</span></div>
+    </div>
+  </div>
+
+  <div class="grid-section">
+    <h4><span class="icon">🌸</span> Aesthetic & Ritual Arts</h4>
+    <div class="pill-grid">
+      <div class="pill"><span class="en">Tea Ceremony</span><span class="jp">茶道</span><span class="desc">Ritualized matcha preparation</span></div>
+      <div class="pill"><span class="en">Ikebana</span><span class="jp">生け花</span><span class="desc">Flower arrangement with meaning</span></div>
+      <div class="pill"><span class="en">Bonsai</span><span class="jp">盆栽</span><span class="desc">Miniature trees shaped over time</span></div>
+      <div class="pill"><span class="en">Gardens</span><span class="jp">庭園</span><span class="desc">Landscapes expressing harmony</span></div>
+    </div>
+  </div>
+
+  <div class="grid-section">
+    <h4><span class="icon">✒️</span> Calligraphy & Paper Arts</h4>
+    <div class="pill-grid">
+      <div class="pill"><span class="en">Shodō</span><span class="jp">書道</span><span class="desc">Artistic brush writing</span></div>
+      <div class="pill"><span class="en">Origami</span><span class="jp">折り紙</span><span class="desc">Paper folding</span></div>
+      <div class="pill"><span class="en">Kirigami</span><span class="jp">切り紙</span><span class="desc">Paper cutting</span></div>
+      <div class="pill"><span class="en">Washi</span><span class="jp">和紙</span><span class="desc">Traditional handmade paper</span></div>
+    </div>
+  </div>
+
+  <div class="grid-section">
+    <h4><span class="icon">⚔️</span> Martial Arts</h4>
+    <div class="pill-grid">
+      <div class="pill"><span class="en">Kendō</span><span class="jp">剣道</span><span class="desc">Swordsmanship discipline</span></div>
+      <div class="pill"><span class="en">Judō</span><span class="jp">柔道</span><span class="desc">Grappling martial art</span></div>
+      <div class="pill"><span class="en">Aikidō</span><span class="jp">合気道</span><span class="desc">Harmony-based defense</span></div>
+      <div class="pill"><span class="en">Kyūdō</span><span class="jp">弓道</span><span class="desc">Spiritual archery</span></div>
+    </div>
+  </div>
+
+  <div class="big-insight">
+    <h3>What connects it all</h3>
+    <div class="insight-row">
+      <div class="insight-item"><div class="label">Kabuki</div><div class="value">Movement & drama</div></div>
+      <div class="insight-item"><div class="label">Haiku</div><div class="value">Minimal words, deep meaning</div></div>
+      <div class="insight-item"><div class="label">Ukiyo-e</div><div class="value">Visual storytelling & everyday beauty</div></div>
+    </div>
+    <p style="margin-top:20px;font-size:13.5px;color:rgba(255,255,255,0.6);line-height:1.8;">Together they show how Japanese culture turns ordinary moments into refined art — through performance, language, and imagery.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CHAPTER 2 — FOOD
+════════════════════════════════════════ -->
+<section class="chapter" id="food">
+  <div class="chapter-label">
+    <span class="chapter-icon">🍣</span>
+    <div>
+      <div class="chapter-title">Food Culture</div>
+      <div class="chapter-kanji">Seasonality, balance, and presentation</div>
+    </div>
+  </div>
+
+  <div class="food-section">
+    <h4>🍣 Iconic Main Dishes</h4>
+    <ul class="food-list">
+      <li><span class="food-jp">寿司</span><span class="food-en">Sushi</span><span class="food-desc">— Vinegared rice with fish or vegetables</span></li>
+      <li><span class="food-jp">ラーメン</span><span class="food-en">Ramen</span><span class="food-desc">— Noodle soup with many regional styles</span></li>
+      <li><span class="food-jp">天ぷら</span><span class="food-en">Tempura</span><span class="food-desc">— Lightly battered fried seafood and vegetables</span></li>
+      <li><span class="food-jp">とんかつ</span><span class="food-en">Tonkatsu</span><span class="food-desc">— Breaded pork cutlet</span></li>
+      <li><span class="food-jp">うどん</span><span class="food-en">Udon</span><span class="food-desc">— Thick wheat noodles</span></li>
+      <li><span class="food-jp">そば</span><span class="food-en">Soba</span><span class="food-desc">— Thin buckwheat noodles</span></li>
+    </ul>
+  </div>
+
+  <div class="food-section">
+    <h4>🍱 Rice-Based Dishes</h4>
+    <ul class="food-list">
+      <li><span class="food-jp">丼</span><span class="food-en">Donburi</span><span class="food-desc">— Rice bowls with toppings (gyudon, oyakodon)</span></li>
+      <li><span class="food-jp">おにぎり</span><span class="food-en">Onigiri</span><span class="food-desc">— Rice balls, often with fillings</span></li>
+      <li><span class="food-jp">カレーライス</span><span class="food-en">Japanese Curry</span><span class="food-desc">— Thick, mild curry with rice</span></li>
+      <li><span class="food-jp">オムライス</span><span class="food-en">Omurice</span><span class="food-desc">— Omelet wrapped around rice</span></li>
+    </ul>
+  </div>
+
+  <div class="food-section">
+    <h4>🍢 Street & Casual Foods</h4>
+    <ul class="food-list">
+      <li><span class="food-jp">たこ焼き</span><span class="food-en">Takoyaki</span><span class="food-desc">— Octopus balls</span></li>
+      <li><span class="food-jp">お好み焼き</span><span class="food-en">Okonomiyaki</span><span class="food-desc">— Savory cabbage pancake</span></li>
+      <li><span class="food-jp">焼き鳥</span><span class="food-en">Yakitori</span><span class="food-desc">— Grilled skewered chicken</span></li>
+      <li><span class="food-jp">たい焼き</span><span class="food-en">Taiyaki</span><span class="food-desc">— Fish-shaped sweet pastry</span></li>
+    </ul>
+  </div>
+
+  <div class="food-section">
+    <h4>🍲 Traditional & Refined</h4>
+    <ul class="food-list">
+      <li><span class="food-jp">懐石</span><span class="food-en">Kaiseki</span><span class="food-desc">— Seasonal multi-course haute cuisine</span></li>
+      <li><span class="food-jp">すき焼き</span><span class="food-en">Sukiyaki</span><span class="food-desc">— Sweet soy-based hot pot</span></li>
+      <li><span class="food-jp">しゃぶしゃぶ</span><span class="food-en">Shabu-shabu</span><span class="food-desc">— Light hot pot with dipping sauces</span></li>
+      <li><span class="food-jp">味噌汁</span><span class="food-en">Miso Soup</span><span class="food-desc">— Soybean paste soup, a daily staple</span></li>
+    </ul>
+  </div>
+
+  <div class="food-section">
+    <h4>🍡 Sweets & Drinks</h4>
+    <ul class="food-list">
+      <li><span class="food-jp">餅</span><span class="food-en">Mochi</span><span class="food-desc">— Chewy rice cakes</span></li>
+      <li><span class="food-jp">団子</span><span class="food-en">Dango</span><span class="food-desc">— Skewered rice dumplings</span></li>
+      <li><span class="food-jp">抹茶</span><span class="food-en">Matcha</span><span class="food-desc">— Powdered ceremonial green tea</span></li>
+      <li><span class="food-jp">ラムネ</span><span class="food-en">Ramune</span><span class="food-desc">— Marble soda</span></li>
+      <li><span class="food-jp">酒</span><span class="food-en">Sake</span><span class="food-desc">— Rice wine</span></li>
+    </ul>
+  </div>
+
+  <div class="big-insight">
+    <h3>Core principles of Japanese food culture</h3>
+    <div class="insight-row">
+      <div class="insight-item"><div class="label">旬 Shun</div><div class="value">Seasonality</div></div>
+      <div class="insight-item"><div class="label">Balance</div><div class="value">Taste · Color · Texture</div></div>
+      <div class="insight-item"><div class="label">Presentation</div><div class="value">Food as visual art</div></div>
+      <div class="insight-item"><div class="label">Simplicity</div><div class="value">Let ingredients speak</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CHAPTER 3 — SEASONS
+════════════════════════════════════════ -->
+<section class="chapter" id="seasons">
+  <div class="chapter-label">
+    <span class="chapter-icon">🌸</span>
+    <div>
+      <div class="chapter-title">Seasons</div>
+      <div class="chapter-kanji">季節感 — Kisetsukan, the awareness of seasonal change</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:28px;color:#5a4f47;font-size:14px;">Japan doesn't just have seasons — it organizes life around them. This sensitivity shapes food, art, rituals, and even language.</p>
+
+  <div class="season-grid">
+    <div class="season-card spring">
+      <div class="season-icon">🌸</div>
+      <h4>Spring — 春</h4>
+      <div class="season-sub">Haru · Renewal</div>
+      <ul>
+        <li>Hanami flower viewing</li>
+        <li>School & business year start</li>
+        <li>Sakura-flavored sweets</li>
+        <li>Bamboo shoot cuisine</li>
+      </ul>
+    </div>
+    <div class="season-card summer">
+      <div class="season-icon">☀️</div>
+      <h4>Summer — 夏</h4>
+      <div class="season-sub">Natsu · Endurance</div>
+      <ul>
+        <li>Matsuri festivals & fireworks</li>
+        <li>Yukata and Bon Odori dances</li>
+        <li>Furin wind chimes</li>
+        <li>Kakigori shaved ice</li>
+      </ul>
+    </div>
+    <div class="season-card autumn">
+      <div class="season-icon">🍁</div>
+      <h4>Autumn — 秋</h4>
+      <div class="season-sub">Aki · Reflection</div>
+      <ul>
+        <li>Momijigari maple leaf viewing</li>
+        <li>Tsukimi moon-viewing festivals</li>
+        <li>Chestnuts, mushrooms, sweet potato</li>
+        <li>Most "poetic" season</li>
+      </ul>
+    </div>
+    <div class="season-card winter">
+      <div class="season-icon">❄️</div>
+      <h4>Winter — 冬</h4>
+      <div class="season-sub">Fuyu · Introspection</div>
+      <ul>
+        <li>Onsen hot spring bathing</li>
+        <li>Kotatsu heated tables</li>
+        <li>New Year Oshōgatsu rituals</li>
+        <li>Nabe hot pot</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4 style="font-family:'Shippori Mincho',serif;font-size:17px;margin:40px 0 16px;">Seasonal Principles</h4>
+  <div class="philosophy">
+    <div class="philo-pill">
+      <span class="jp-term">旬</span>
+      <span class="en-term">Shun</span>
+      <p class="meaning">Every ingredient has a perfect time. Menus rotate with the seasons; freshness = quality.</p>
+    </div>
+    <div class="philo-pill">
+      <span class="jp-term">物の哀れ</span>
+      <span class="en-term">Mono no Aware</span>
+      <p class="meaning">Awareness of impermanence — beauty exists because it doesn't last.</p>
+    </div>
+    <div class="philo-pill">
+      <span class="jp-term">季語</span>
+      <span class="en-term">Kigo</span>
+      <p class="meaning">Every haiku includes a season word — emotions expressed through seasonal reference.</p>
+    </div>
+  </div>
+
+  <div class="big-insight" style="margin-top:36px;">
+    <h3>The seasonal cycle as a life system</h3>
+    <div class="insight-row">
+      <div class="insight-item"><div class="label">Spring</div><div class="value">Becoming</div></div>
+      <div class="insight-item"><div class="label">Summer</div><div class="value">Living</div></div>
+      <div class="insight-item"><div class="label">Autumn</div><div class="value">Reflecting</div></div>
+      <div class="insight-item"><div class="label">Winter</div><div class="value">Resetting</div></div>
+    </div>
+    <p style="margin-top:20px;font-size:13.5px;color:rgba(255,255,255,0.6);line-height:1.8;">Japan turns this natural cycle into a lifestyle system — rooted in Zen Buddhism and Shinto's nature-centered spirituality.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CHAPTER 4 — BRANDS
+════════════════════════════════════════ -->
+<section class="chapter" id="brands">
+  <div class="chapter-label">
+    <span class="chapter-icon">🏷️</span>
+    <div>
+      <div class="chapter-title">Major Brands</div>
+      <div class="chapter-kanji">ものづくり — Monozukuri, the art of making things</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:28px;color:#5a4f47;font-size:14px;">A curated map of major Japanese brands — from automotive giants to everyday lifestyle names you'll see across Tokyo.</p>
+
+  <h4 style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">🚗 Automotive</h4>
+  <div class="brand-grid" style="margin-bottom:28px;">
+    <div class="brand-item"><div class="brand-name">Toyota</div><div class="brand-desc">World's largest automaker, reliability focus</div></div>
+    <div class="brand-item"><div class="brand-name">Honda</div><div class="brand-desc">Cars, motorcycles, engineering innovation</div></div>
+    <div class="brand-item"><div class="brand-name">Nissan</div><div class="brand-desc">EV pioneer (Leaf)</div></div>
+    <div class="brand-item"><div class="brand-name">Mazda</div><div class="brand-desc">Design and driving experience</div></div>
+    <div class="brand-item"><div class="brand-name">Subaru</div><div class="brand-desc">AWD systems, outdoors focus</div></div>
+  </div>
+
+  <h4 style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">📱 Electronics & Technology</h4>
+  <div class="brand-grid" style="margin-bottom:28px;">
+    <div class="brand-item"><div class="brand-name">Sony</div><div class="brand-desc">Cameras, PlayStation, entertainment</div></div>
+    <div class="brand-item"><div class="brand-name">Panasonic</div><div class="brand-desc">Home appliances, batteries</div></div>
+    <div class="brand-item"><div class="brand-name">Canon</div><div class="brand-desc">Cameras, printers</div></div>
+    <div class="brand-item"><div class="brand-name">Nintendo</div><div class="brand-desc">Switch, Mario, Zelda</div></div>
+    <div class="brand-item"><div class="brand-name">Toshiba</div><div class="brand-desc">Infrastructure, electronics</div></div>
+  </div>
+
+  <h4 style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">👕 Fashion & Lifestyle</h4>
+  <div class="brand-grid" style="margin-bottom:28px;">
+    <div class="brand-item"><div class="brand-name">Uniqlo</div><div class="brand-desc">Simple, functional everyday wear</div></div>
+    <div class="brand-item"><div class="brand-name">Muji</div><div class="brand-desc">Minimalist lifestyle goods</div></div>
+    <div class="brand-item"><div class="brand-name">Comme des Garçons</div><div class="brand-desc">Avant-garde fashion</div></div>
+    <div class="brand-item"><div class="brand-name">Issey Miyake</div><div class="brand-desc">Innovative textiles and design</div></div>
+  </div>
+
+  <h4 style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">🍣 Food & Beverage</h4>
+  <div class="brand-grid" style="margin-bottom:28px;">
+    <div class="brand-item"><div class="brand-name">Kikkoman</div><div class="brand-desc">Global soy sauce leader</div></div>
+    <div class="brand-item"><div class="brand-name">Nissin Foods</div><div class="brand-desc">Instant noodles pioneer</div></div>
+    <div class="brand-item"><div class="brand-name">Asahi Breweries</div><div class="brand-desc">Beer (Super Dry)</div></div>
+    <div class="brand-item"><div class="brand-name">Suntory</div><div class="brand-desc">Tea, whiskey, soft drinks</div></div>
+  </div>
+
+  <h4 style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">🏪 Retail & Everyday</h4>
+  <div class="brand-grid" style="margin-bottom:28px;">
+    <div class="brand-item"><div class="brand-name">7-Eleven Japan</div><div class="brand-desc">Highly optimized convenience stores</div></div>
+    <div class="brand-item"><div class="brand-name">Don Quijote</div><div class="brand-desc">Chaotic, fun discount mega-stores</div></div>
+    <div class="brand-item"><div class="brand-name">Daiso</div><div class="brand-desc">100-yen shops — curated and surprisingly good</div></div>
+  </div>
+
+  <h4 style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">🧴 Beauty & Personal Care</h4>
+  <div class="brand-grid" style="margin-bottom:28px;">
+    <div class="brand-item"><div class="brand-name">Shiseido</div><div class="brand-desc">Premium skincare</div></div>
+    <div class="brand-item"><div class="brand-name">SK-II</div><div class="brand-desc">High-end skincare (Pitera essence)</div></div>
+    <div class="brand-item"><div class="brand-name">Kao</div><div class="brand-desc">Biore, hygiene products</div></div>
+    <div class="brand-item"><div class="brand-name">Unicharm</div><div class="brand-desc">Baby care and hygiene</div></div>
+  </div>
+
+  <div class="big-insight">
+    <h3>What Japanese brands share</h3>
+    <div class="insight-row">
+      <div class="insight-item"><div class="label">ものづくり</div><div class="value">Monozukuri — pride in craftsmanship</div></div>
+      <div class="insight-item"><div class="label">改善</div><div class="value">Kaizen — continuous improvement</div></div>
+      <div class="insight-item"><div class="label">Design</div><div class="value">User-centered — small details matter</div></div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('button[data-target]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var id = btn.getAttribute('data-target');
+      var el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});
+</script>
+<footer>
+  <strong>Japan Cultural Guide</strong> &nbsp;·&nbsp; Arts · Food · Seasons · Brands
+</footer>
+
+</article>
+</main>
+</body>
+</html>

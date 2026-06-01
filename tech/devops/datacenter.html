@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="datacenter, colocation, infrastructure">
+  <meta property="og:title"       content="Datacenter Cage Engineering Guide" />
+  <meta property="og:description" content="Datacenter Cage Engineering Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/tech/devops/datacenter.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Datacenter Cage Engineering Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Datacenter Cage Engineering Guide">
+  <meta name="twitter:description" content="Datacenter Cage Engineering Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/tech/devops/datacenter.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  
+  <title>Datacenter Cage Engineering Guide | Yasir Bilgin</title>
+
+  <!-- ① Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ─── CSS Variables ─── */
+    :root {
+      --bg:          #0a0c10;
+      --bg2:         #0f1318;
+      --bg3:         #141920;
+      --border:      #1e2530;
+      --border2:     #2a3445;
+      --text:        #c8d4e0;
+      --text-dim:    #6a7d92;
+      --text-bright: #e8f0f8;
+      --accent:      #00c2ff;
+      --accent2:     #0077bb;
+      --accent-glow: rgba(0,194,255,0.15);
+      --green:       #00e5a0;
+      --amber:       #ffb400;
+      --red:         #ff4d5e;
+      --purple:      #a78bfa;
+      --mono:        'IBM Plex Mono', monospace;
+      --sans:        'IBM Plex Sans', sans-serif;
+      --nav-h:       62px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── Progress Bar ─── */
+    #progressBar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--green));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    /* ─── TOC Overlay ─── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(5,8,12,0.75);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(6px);
+    }
+    .toc-panel {
+      background: var(--bg2);
+      border-left: 1px solid var(--border2);
+      width: min(360px, 90vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      animation: slideIn 0.25s ease;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(40px); opacity: 0; }
+      to   { transform: translateX(0);    opacity: 1; }
+    }
+    .toc-close {
+      background: none;
+      border: 1px solid var(--border2);
+      color: var(--text-dim);
+      width: 32px; height: 32px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s;
+    }
+    .toc-close:hover { border-color: var(--accent); color: var(--accent); }
+    .toc-title {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list a {
+      display: block;
+      padding: 0.6rem 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: all 0.15s;
+    }
+    .toc-list a:hover { color: var(--accent); padding-left: 1rem; }
+    .toc-list a.toc-sub { padding-left: 1.2rem; font-size: 0.8rem; color: var(--text-dim); }
+    .toc-list a.toc-sub:hover { color: var(--accent); padding-left: 1.8rem; }
+
+    /* ─── Search Bar ─── */
+    .search-bar-wrap {
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 200;
+      background: rgba(10,12,16,0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .search-icon {
+      color: var(--text-dim);
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    #searchInput {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      color: var(--text-bright);
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      caret-color: var(--accent);
+    }
+    #searchInput::placeholder { color: var(--text-dim); }
+    #searchCount {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      min-width: 60px;
+      text-align: right;
+    }
+    .search-clear {
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0 0.25rem;
+      flex-shrink: 0;
+    }
+    .search-clear:hover { color: var(--red); }
+    mark.search-hit {
+      background: rgba(0,194,255,0.25);
+      color: var(--accent);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+    .search-no-match { display: none; }
+    .search-hide { display: none !important; }
+
+    /* ─── Internal Article Nav ─── */
+    .article-nav {
+      position: sticky;
+      top: calc(var(--nav-h) + 45px); /* below global nav + search bar */
+      z-index: 50;
+      background: var(--bg3);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    .article-nav ul {
+      display: flex;
+      flex-wrap: nowrap;
+      list-style: none;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      gap: 0;
+    }
+    .article-nav ul li a {
+      display: block;
+      padding: 0.75rem 0.9rem;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .article-nav ul li a:hover,
+    .article-nav ul li a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ─── Article Sub-Header ─── */
+    .article-header {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-meta {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--border2);
+      color: var(--text-dim);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.4rem 0.9rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ─── Hero ─── */
+    .hero {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      max-width: 600px; width: 100%; height: 300px;
+      background: radial-gradient(ellipse at 80% 0%, rgba(0,194,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero-eyebrow::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.4;
+    }
+    h1 {
+      font-family: var(--mono);
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+    h1 .dim { color: var(--text-dim); font-weight: 400; }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.7rem;
+      border-radius: 2px;
+      border: 1px solid;
+    }
+    .tag-blue  { color: var(--accent);  border-color: rgba(0,194,255,0.3);  background: rgba(0,194,255,0.07); }
+    .tag-green { color: var(--green);   border-color: rgba(0,229,160,0.3);  background: rgba(0,229,160,0.07); }
+    .tag-amber { color: var(--amber);   border-color: rgba(255,180,0,0.3);  background: rgba(255,180,0,0.07); }
+    .tag-red   { color: var(--red);     border-color: rgba(255,77,94,0.3);  background: rgba(255,77,94,0.07); }
+
+    /* ─── Main Layout ─── */
+    .page-wrap {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* ─── Sidebar ─── */
+    .sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 45px + 48px + 2rem);
+      padding: 1.5rem 0;
+    }
+    .sidebar-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+      padding-left: 0.5rem;
+    }
+    .sidebar-nav { list-style: none; }
+    .sidebar-nav li a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      border-radius: 3px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .sidebar-nav li a:hover,
+    .sidebar-nav li a.active {
+      color: var(--accent);
+      background: rgba(0,194,255,0.05);
+      border-left-color: var(--accent);
+    }
+    .sidebar-nav li a .num {
+      font-size: 0.6rem;
+      color: var(--text-dim);
+      min-width: 20px;
+      opacity: 0.6;
+    }
+
+    /* ─── Article Body ─── */
+    .article-body {
+      padding: 2.5rem 0 6rem;
+      min-width: 0;
+    }
+
+    section[id] {
+      scroll-margin-top: 180px;
+    }
+
+    .major-section {
+      margin-bottom: 5rem;
+      padding-top: 1rem;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: var(--mono);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    h2 .icon {
+      font-size: 1.1rem;
+      opacity: 0.7;
+    }
+
+    h3 {
+      font-family: var(--mono);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin: 2rem 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h3::before {
+      content: '▸';
+      color: var(--accent);
+      font-size: 0.7rem;
+    }
+
+    h4 {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0 1rem 1.5rem;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+    li { margin-bottom: 0.35rem; }
+
+    strong { color: var(--text-bright); font-weight: 600; }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.82em;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.1em 0.4em;
+      color: var(--accent);
+    }
+
+    /* ─── Callout / Rule boxes ─── */
+    .rule-box {
+      border-left: 3px solid var(--accent);
+      background: rgba(0,194,255,0.05);
+      padding: 1rem 1.25rem;
+      border-radius: 0 4px 4px 0;
+      margin: 1.5rem 0;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--text-bright);
+    }
+    .rule-box .rule-label {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+    .warning-box {
+      border-left-color: var(--amber);
+      background: rgba(255,180,0,0.05);
+    }
+    .warning-box .rule-label { color: var(--amber); }
+    .danger-box {
+      border-left-color: var(--red);
+      background: rgba(255,77,94,0.05);
+    }
+    .danger-box .rule-label { color: var(--red); }
+    .success-box {
+      border-left-color: var(--green);
+      background: rgba(0,229,160,0.05);
+    }
+    .success-box .rule-label { color: var(--green); }
+
+    /* ─── Tables ─── */
+    .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    th {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.9rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    td {
+      border: 1px solid var(--border);
+      padding: 0.65rem 0.9rem;
+      color: var(--text);
+      vertical-align: top;
+    }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    td:first-child { font-family: var(--mono); font-size: 0.82rem; color: var(--text-bright); }
+
+    /* ─── Spec cards ─── */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .spec-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.1rem;
+      transition: border-color 0.2s;
+    }
+    .spec-card:hover { border-color: var(--border2); }
+    .spec-card .spec-key {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      margin-bottom: 0.35rem;
+    }
+    .spec-card .spec-val {
+      font-family: var(--mono);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-bright);
+    }
+    .spec-card .spec-note {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-top: 0.25rem;
+    }
+
+    /* ─── Layer diagram ─── */
+    .layer-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin: 1.5rem 0;
+    }
+    .layer-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg2);
+      cursor: default;
+      transition: all 0.2s;
+    }
+    .layer-item:hover { border-color: var(--border2); background: var(--bg3); }
+    .layer-num {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      min-width: 20px;
+      text-align: center;
+    }
+    .layer-icon { font-size: 1.1rem; min-width: 24px; text-align: center; }
+    .layer-name {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      min-width: 140px;
+    }
+    .layer-desc { font-size: 0.82rem; color: var(--text-dim); }
+    .layer-item.l1 { border-left: 3px solid var(--accent); }
+    .layer-item.l2 { border-left: 3px solid var(--purple); }
+    .layer-item.l3 { border-left: 3px solid var(--green); }
+    .layer-item.l4 { border-left: 3px solid var(--amber); }
+    .layer-item.l5 { border-left: 3px solid var(--red); }
+
+    /* ─── Checklist ─── */
+    .checklist { list-style: none; margin-left: 0; }
+    .checklist li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .check-box {
+      width: 16px; height: 16px;
+      border: 1px solid var(--border2);
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem;
+    }
+    .check-box.checked {
+      background: var(--green);
+      border-color: var(--green);
+      color: #000;
+    }
+
+    /* ─── Pipeline diagram ─── */
+    .pipeline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: center;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .pipe-step {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .pipe-box {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      padding: 0.4rem 0.75rem;
+      white-space: nowrap;
+    }
+    .pipe-arrow {
+      font-family: var(--mono);
+      color: var(--text-dim);
+      padding: 0 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: var(--mono);
+      font-weight: 700;
+      color: var(--text-bright);
+      font-size: 0.85rem;
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .page-wrap {
+        grid-template-columns: 1fr;
+      }
+      .sidebar { display: none; }
+    }
+    @media (max-width: 720px) {
+      .article-body { padding: 1.5rem 0 4rem; }
+      .page-wrap { padding: 0 1.2rem; }
+      .hero { padding: 2.5rem 1.2rem 2rem; }
+      .article-header { padding: 0.5rem 1.2rem; }
+      footer { padding: 1.5rem 1.2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .spec-grid { grid-template-columns: 1fr 1fr; }
+      h1 { font-size: 1.9rem; }
+    }
+  
+
+  @media (max-width: 720px) {
+    /* grid collapse for mobile */
+     { grid-template-columns: 1fr !important; }
+  }
+
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="A datacenter cage is a locked, dedicated enclosure within a larger multi-tenant colocation facility. Colocation (colo) providers sell space, power, and…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Datacenter Cage Engineering Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/tech/devops/datacenter.html",
+  "description": "A datacenter cage is a locked, dedicated enclosure within a larger multi-tenant colocation facility. Colocation (colo) providers sell space, power, and…"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech",
+      "item": "https://yasirbilgin.com/tech/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Datacenter Cage Engineering Guide",
+      "item": "https://yasirbilgin.com/tech/devops/datacenter.html"
+    }
+  ]
+}
+</script>
+
+
+<div id="progressBar"></div>
+
+<!-- TOC Overlay -->
+<div class="toc-overlay" id="tocOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+    <p class="toc-title">Table of Contents</p>
+    <ul class="toc-list">
+      <li><a href="#s1" class="toc-main">01 · Mental Model</a></li>
+      <li><a href="#s2" class="toc-main">02 · Cage Design &amp; Layout</a></li>
+      <li><a href="#s3" class="toc-main">03 · Rack Engineering</a></li>
+      <li><a href="#s4" class="toc-main">04 · Power Systems</a></li>
+      <li><a href="#s4-1" class="toc-sub">4.1 Redundancy Model</a></li>
+      <li><a href="#s4-2" class="toc-sub">4.2 Power Concepts</a></li>
+      <li><a href="#s5" class="toc-main">05 · Cooling &amp; Airflow</a></li>
+      <li><a href="#s5-1" class="toc-sub">5.1 Cooling Models</a></li>
+      <li><a href="#s6" class="toc-main">06 · Cabling &amp; Connectivity</a></li>
+      <li><a href="#s7" class="toc-main">07 · Server Components</a></li>
+      <li><a href="#s8" class="toc-main">08 · Networking Architecture</a></li>
+      <li><a href="#s8-1" class="toc-sub">8.1 Leaf-Spine</a></li>
+      <li><a href="#s9" class="toc-main">09 · Physical &amp; Logical Security</a></li>
+      <li><a href="#s10" class="toc-main">10 · Monitoring &amp; Observability</a></li>
+      <li><a href="#s11" class="toc-main">11 · Automation &amp; Source of Truth</a></li>
+      <li><a href="#s12" class="toc-main">12 · Failure Domains &amp; Risk</a></li>
+      <li><a href="#s13" class="toc-main">13 · Operational Checklists</a></li>
+      <li><a href="#s14" class="toc-main">14 · Advanced Concepts</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Search Bar -->
+<div class="search-bar-wrap">
+  <span class="search-icon">/</span>
+  <input type="search" id="searchInput" placeholder="Search the guide…" autocomplete="off" />
+  <span id="searchCount"></span>
+  <button class="search-clear" id="searchClear" style="display:none" title="Clear search">✕</button>
+</div>
+
+<!-- Article Sub-Header -->
+<div class="article-header">
+  <div class="header-meta">
+    <span>~35 min read</span>
+    <span style="color:var(--border2)">|</span>
+    <span>Updated 2026</span>
+  </div>
+  <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents ≡</button>
+</div>
+
+<!-- Internal Nav -->
+<nav class="article-nav" id="articleNav">
+  <ul>
+    <li><a href="#s1">Model</a></li>
+    <li><a href="#s2">Cage</a></li>
+    <li><a href="#s3">Racks</a></li>
+    <li><a href="#s4">Power</a></li>
+    <li><a href="#s5">Cooling</a></li>
+    <li><a href="#s6">Cabling</a></li>
+    <li><a href="#s7">Servers</a></li>
+    <li><a href="#s8">Network</a></li>
+    <li><a href="#s9">Security</a></li>
+    <li><a href="#s10">Monitoring</a></li>
+    <li><a href="#s11">Automation</a></li>
+    <li><a href="#s12">Failures</a></li>
+    <li><a href="#s13">Checklists</a></li>
+    <li><a href="#s14">Advanced</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+      <div class="eyebrow">Tech · DevOps</div>
+  <h1>Datacenter Cage <span class="dim">// Engineering Guide</span></h1>
+  <p class="hero-desc">A practical, system-oriented reference for understanding, building, and operating a datacenter cage — covering all five layers from facility power to automation and observability.</p>
+  <div class="hero-tags">
+    <span class="tag tag-blue">Infrastructure</span>
+    <span class="tag tag-green">SRE</span>
+    <span class="tag tag-amber">Operations</span>
+    <span class="tag tag-blue">Networking</span>
+    <span class="tag tag-green">Automation</span>
+    <span class="tag tag-amber">Power Systems</span>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="page-wrap">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <p class="sidebar-label">Sections</p>
+    <ul class="sidebar-nav">
+      <li><a href="#s1"><span class="num">01</span>Mental Model</a></li>
+      <li><a href="#s2"><span class="num">02</span>Cage Design</a></li>
+      <li><a href="#s3"><span class="num">03</span>Rack Engineering</a></li>
+      <li><a href="#s4"><span class="num">04</span>Power Systems</a></li>
+      <li><a href="#s5"><span class="num">05</span>Cooling &amp; Airflow</a></li>
+      <li><a href="#s6"><span class="num">06</span>Cabling</a></li>
+      <li><a href="#s7"><span class="num">07</span>Server Components</a></li>
+      <li><a href="#s8"><span class="num">08</span>Networking</a></li>
+      <li><a href="#s9"><span class="num">09</span>Security</a></li>
+      <li><a href="#s10"><span class="num">10</span>Monitoring</a></li>
+      <li><a href="#s11"><span class="num">11</span>Automation</a></li>
+      <li><a href="#s12"><span class="num">12</span>Failure Domains</a></li>
+      <li><a href="#s13"><span class="num">13</span>Checklists</a></li>
+      <li><a href="#s14"><span class="num">14</span>Advanced</a></li>
+    </ul>
+  </aside>
+
+  <!-- Article Body -->
+  <article class="article-body" id="articleContent">
+
+    <!-- S1 -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section 01</span>
+      <h2><span class="icon">🧠</span>Mental Model: What You're Managing</h2>
+
+      <p>A <strong>datacenter cage</strong> is a locked, dedicated enclosure within a larger multi-tenant colocation facility. Colocation (colo) providers sell space, power, and connectivity — you own the hardware. The cage is your controlled micro-environment inside their building.</p>
+
+      <p>Think of it as a system with five distinct but interdependent layers. Failures in lower layers cascade upward; over-provisioning in one layer cannot compensate for a bottleneck in another.</p>
+
+      <div class="layer-stack">
+        <div class="layer-item l1">
+          <span class="layer-num">L5</span>
+          <span class="layer-icon">🤖</span>
+          <span class="layer-name">Control Layer</span>
+          <span class="layer-desc">Monitoring, automation, access control, runbooks</span>
+        </div>
+        <div class="layer-item l2">
+          <span class="layer-num">L4</span>
+          <span class="layer-icon">🖥️</span>
+          <span class="layer-name">System Layer</span>
+          <span class="layer-desc">Servers, storage, networking hardware</span>
+        </div>
+        <div class="layer-item l3">
+          <span class="layer-num">L3</span>
+          <span class="layer-icon">🗄️</span>
+          <span class="layer-name">Rack Layer</span>
+          <span class="layer-desc">Physical organization, U-space, cable management</span>
+        </div>
+        <div class="layer-item l4">
+          <span class="layer-num">L2</span>
+          <span class="layer-icon">🔒</span>
+          <span class="layer-name">Cage Layer</span>
+          <span class="layer-desc">Physical security boundary, access logging</span>
+        </div>
+        <div class="layer-item l5">
+          <span class="layer-num">L1</span>
+          <span class="layer-icon">⚡</span>
+          <span class="layer-name">Facility Layer</span>
+          <span class="layer-desc">Utility power, UPS, generators, CRAC/CRAH cooling, fire suppression</span>
+        </div>
+      </div>
+
+      <div class="rule-box">
+        <p class="rule-label">Core Mandate</p>
+        Ensure <strong>availability, safety, performance, and traceability</strong> across all five layers. Your job is to ensure no bottleneck, no failure, no silent degradation.
+      </div>
+
+      <h3>SRE Mapping</h3>
+      <p>If you think in pipelines, the datacenter maps cleanly:</p>
+      <div class="pipeline">
+        <div class="pipe-step"><div class="pipe-box">⚡ Power</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">🌬️ Cooling</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">🌐 Network</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">🖥️ Compute</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">📊 Observability</div></div>
+      </div>
+      <p style="font-size:0.85rem;color:var(--text-dim)">Each "pipeline" has an input, a capacity, a failure mode, and a monitoring signal. Treat them accordingly.</p>
+    </section>
+
+    <!-- S2 -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section 02</span>
+      <h2><span class="icon">🧱</span>Cage Design &amp; Layout</h2>
+
+      <p>A cage is typically a welded or bolted mesh enclosure (floor-to-ceiling or raised) within a shared colo floor. Solid-wall cages offer more security; mesh cages allow easier visual inspection and air flow monitoring. Most enterprise deployments use mesh with solid-panel overlays for higher-security zones.</p>
+
+      <h3>Core Design Concepts</h3>
+      <ul>
+        <li><strong>Cold aisle / hot aisle containment</strong> — servers face the cold aisle (cool intake air), exhaust into the hot aisle. Containment systems prevent mixing of cold and hot air streams, dramatically improving cooling efficiency (PUE impact: ~0.1–0.2).</li>
+        <li><strong>Density planning (kW per rack)</strong> — standard enterprise racks run 5–10 kW; GPU/AI racks can reach 20–80 kW. Know your density before placing hardware. Overcrowding causes thermal runaway.</li>
+        <li><strong>Growth planning</strong> — maintain 30–50% free rack space and 20–30% free power headroom at all times. Running at 90%+ capacity removes your buffer for planned maintenance or emergency rerouting.</li>
+      </ul>
+
+      <h3>Physical Components</h3>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-key">Cage Access</div>
+          <div class="spec-val">Biometric + PIN</div>
+          <div class="spec-note">Badge alone insufficient for Tier III/IV</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Cameras</div>
+          <div class="spec-val">≥4 angles</div>
+          <div class="spec-note">Cover all rack fronts + cage entrance</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Floor Type</div>
+          <div class="spec-val">Raised or Slab</div>
+          <div class="spec-note">Raised allows under-floor cable routing</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Free Capacity</div>
+          <div class="spec-val">30–50%</div>
+          <div class="spec-note">Headroom for growth &amp; maintenance</div>
+        </div>
+      </div>
+
+      <h3>Layout Principles</h3>
+      <ul>
+        <li>Centralize network racks to minimize cable runs and latency</li>
+        <li>Separate compute, storage, and network into distinct rack zones</li>
+        <li>Isolate high-density GPU/AI racks — they require dedicated cooling circuits</li>
+        <li>Keep critical infrastructure (PDUs, OOB switches) accessible without disturbing production racks</li>
+      </ul>
+
+      <div class="rule-box">
+        <p class="rule-label">Layout Rule</p>
+        Minimize cable length, maximize airflow, and isolate failure domains. Every layout decision is a trade-off between these three.
+      </div>
+
+      <h3>Uptime Institute Tier Classification</h3>
+      <p>Colo facilities are rated Tier I–IV. Your cage's reliability ceiling is determined by the facility tier.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tier</th><th>Redundancy</th><th>Uptime SLA</th><th>Annual Downtime</th></tr></thead>
+          <tbody>
+            <tr><td>Tier I</td><td>No redundancy</td><td>99.671%</td><td>≤28.8 hrs</td></tr>
+            <tr><td>Tier II</td><td>Redundant components</td><td>99.741%</td><td>≤22 hrs</td></tr>
+            <tr><td>Tier III</td><td>N+1, concurrently maintainable</td><td>99.982%</td><td>≤1.6 hrs</td></tr>
+            <tr><td>Tier IV</td><td>2N, fault tolerant</td><td>99.995%</td><td>≤26.3 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- S3 -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section 03</span>
+      <h2><span class="icon">🗄️</span>Rack Engineering</h2>
+
+      <h3>Standard Rack Specifications</h3>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-key">Height</div>
+          <div class="spec-val">42U – 52U</div>
+          <div class="spec-note">1U = 1.75 inches (44.45 mm)</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Width</div>
+          <div class="spec-val">19-inch</div>
+          <div class="spec-note">EIA-310 standard; outer width ~600mm</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Depth</div>
+          <div class="spec-val">1000–1200mm</div>
+          <div class="spec-note">Deep racks needed for modern servers (800–900mm depth)</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Max Load</div>
+          <div class="spec-val">900–1360 kg</div>
+          <div class="spec-note">Verify floor load rating before placing full racks</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Typical Density</div>
+          <div class="spec-val">5–15 kW</div>
+          <div class="spec-note">Standard compute; GPU racks up to 80 kW</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Air Direction</div>
+          <div class="spec-val">Front → Back</div>
+          <div class="spec-note">Standardize across all equipment</div>
+        </div>
+      </div>
+
+      <h3>Vertical Rack Layout (Top → Bottom)</h3>
+      <p>This ordering optimizes airflow, cable management, and center of gravity:</p>
+      <div class="layer-stack">
+        <div class="layer-item l1">
+          <span class="layer-num">Top</span>
+          <span class="layer-icon">🔌</span>
+          <span class="layer-name">Patch panels / Fiber trays</span>
+          <span class="layer-desc">Structured cabling termination; keep accessible</span>
+        </div>
+        <div class="layer-item l1">
+          <span class="layer-num"></span>
+          <span class="layer-icon">🌐</span>
+          <span class="layer-name">Top-of-Rack (ToR) switches</span>
+          <span class="layer-desc">1–4U; short runs to all servers below</span>
+        </div>
+        <div class="layer-item l2">
+          <span class="layer-num"></span>
+          <span class="layer-icon">💨</span>
+          <span class="layer-name">Lightweight / 1U servers</span>
+          <span class="layer-desc">Management, edge, or utility nodes</span>
+        </div>
+        <div class="layer-item l3">
+          <span class="layer-num"></span>
+          <span class="layer-icon">🖥️</span>
+          <span class="layer-name">Heavy compute / storage servers</span>
+          <span class="layer-desc">Lower position = lower center of gravity = seismic safety</span>
+        </div>
+        <div class="layer-item l4">
+          <span class="layer-num">Side</span>
+          <span class="layer-icon">⚡</span>
+          <span class="layer-name">PDUs (vertical, side-mounted)</span>
+          <span class="layer-desc">One PDU-A (Feed A), one PDU-B (Feed B) per rack</span>
+        </div>
+      </div>
+
+      <div class="rule-box warning-box">
+        <p class="rule-label">Common Mistake</p>
+        Never fill all U-spaces. Leave at least 1U blanking panel for every unused space — air leakage through empty slots can reduce cooling efficiency by 10–30%. Always fill gaps with blanking panels.
+      </div>
+
+      <h3>U-Space Planning</h3>
+      <p>Track U-space in your DCIM or CMDB (e.g., NetBox). Each device consumes a specific U count. Common examples:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Device Type</th><th>Typical U</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>1U server</td><td>1U</td><td>Dell PowerEdge R650, Supermicro 1029U</td></tr>
+            <tr><td>2U server</td><td>2U</td><td>Dell R750, HPE ProLiant DL380 Gen10</td></tr>
+            <tr><td>4U GPU server</td><td>4U</td><td>NVIDIA DGX A100 (6U), Supermicro SYS-420GP</td></tr>
+            <tr><td>ToR switch</td><td>1U</td><td>Arista 7050X3, Cisco Nexus 93180YC</td></tr>
+            <tr><td>Patch panel (24-port)</td><td>1U</td><td>Leviton, Panduit</td></tr>
+            <tr><td>KVM switch</td><td>1U</td><td>Raritan, Raritan Dominion</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- S4 -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section 04</span>
+      <h2><span class="icon">⚡</span>Power Systems</h2>
+
+      <p>Power is the most critical physical resource in a cage. A power failure cascades instantly to every system; no redundancy elsewhere compensates for lost power. Understand every step in the power chain.</p>
+
+      <h3>Power Chain</h3>
+      <div class="pipeline">
+        <div class="pipe-step"><div class="pipe-box">Utility Grid</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">Transformer</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">ATS/STS</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">UPS</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">PDU</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">Server PSU</div></div>
+      </div>
+      <p style="font-size:0.83rem;color:var(--text-dim);margin-top:0.5rem"><strong>ATS</strong> = Automatic Transfer Switch; <strong>STS</strong> = Static Transfer Switch; <strong>UPS</strong> = Uninterruptible Power Supply; <strong>PDU</strong> = Power Distribution Unit</p>
+
+      <h3 id="s4-1">Redundancy Model</h3>
+      <p>Enterprise standard is <strong>A/B power feeds</strong> — two completely independent paths from separate utility feeds, separate UPS systems, separate PDUs, to dual PSUs in each server.</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-key">Redundancy Level</div>
+          <div class="spec-val">2N (Tier IV)</div>
+          <div class="spec-note">Full duplication — most resilient</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Standard Enterprise</div>
+          <div class="spec-val">N+1</div>
+          <div class="spec-note">One extra UPS/PDU per circuit</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">PSU Config</div>
+          <div class="spec-val">Dual PSU</div>
+          <div class="spec-note">One on Feed A, one on Feed B</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">UPS Runtime</div>
+          <div class="spec-val">10–30 min</div>
+          <div class="spec-note">Bridge until generator starts (&lt;30 sec)</div>
+        </div>
+      </div>
+
+      <div class="rule-box danger-box">
+        <p class="rule-label">Hard Rule</p>
+        Never exceed <strong>80% of any circuit's rated capacity</strong> (NEC 80% rule for continuous loads). A 20A circuit = 16A usable. A 30A circuit = 24A usable. Sustained loads above 80% risk breaker trips and thermal damage.
+      </div>
+
+      <h3 id="s4-2">Power Concepts</h3>
+      <h4>kW vs kVA</h4>
+      <p><strong>kVA</strong> is apparent power (what the PDU is rated for); <strong>kW</strong> is real power (what the server actually consumes). The ratio is the <em>power factor</em> (PF). Modern server PSUs typically have PF ≥ 0.95, so kW ≈ kVA × 0.95. Always plan budgets in kW (actual consumption), but size circuits in kVA (what the PDU/breaker must handle).</p>
+
+      <h4>Phase Balancing</h4>
+      <p>Three-phase power is standard in datacenters. Distribute load evenly across phases (L1, L2, L3) to avoid overloading a single phase. Target imbalance &lt; 10% between phases. Measure at the PDU breaker level.</p>
+
+      <h4>Power Measurement Tools</h4>
+      <ul>
+        <li><strong>Smart PDUs</strong> (e.g., Raritan PX3, APC AP8900 series) — per-outlet monitoring, remote switching</li>
+        <li><strong>DCIM platforms</strong> (e.g., Nlyte, Sunbird) — aggregate power dashboards</li>
+        <li><strong>IPMI/BMC</strong> — per-server power consumption via Redfish or IPMI 2.0</li>
+      </ul>
+
+      <h4>PUE (Power Usage Effectiveness)</h4>
+      <p>PUE = Total Facility Power ÷ IT Equipment Power. A PUE of 1.0 is theoretical perfection; modern facilities target 1.2–1.4. A PUE of 2.0 means as much energy is wasted on overhead (cooling, lighting) as powers IT gear — unacceptable by today's standards.</p>
+    </section>
+
+    <!-- S5 -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section 05</span>
+      <h2><span class="icon">🌬️</span>Cooling &amp; Airflow</h2>
+
+      <p>Thermal management is the second critical physical resource. Servers tolerate brief power interruption via UPS; they tolerate almost no thermal excursion — CPU throttling begins at ~70°C and emergency shutdown typically triggers at 85–95°C.</p>
+
+      <h3 id="s5-1">Cooling Models</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Model</th><th>How It Works</th><th>Best For</th><th>Limitation</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Cold Aisle Containment (CAC)</td>
+              <td>Enclose the cold aisle; servers draw cool air from inside the containment</td>
+              <td>Standard compute, 5–15 kW/rack</td>
+              <td>Hot exhaust enters open data hall</td>
+            </tr>
+            <tr>
+              <td>Hot Aisle Containment (HAC)</td>
+              <td>Enclose the hot aisle; hot air is captured and returned directly to CRACs</td>
+              <td>Higher efficiency than CAC, same density</td>
+              <td>Hot aisle is inaccessible during operation</td>
+            </tr>
+            <tr>
+              <td>In-Row Cooling</td>
+              <td>Cooling units placed between racks; cool air delivered at row level</td>
+              <td>High-density rows, GPU clusters</td>
+              <td>Higher CAPEX per kW cooled</td>
+            </tr>
+            <tr>
+              <td>Rear-Door Heat Exchanger</td>
+              <td>Chilled water coil in rack rear door absorbs server exhaust directly</td>
+              <td>Very high density (15–40 kW/rack)</td>
+              <td>Requires chilled water plumbing per rack</td>
+            </tr>
+            <tr>
+              <td>Direct Liquid Cooling (DLC)</td>
+              <td>Cold plates on CPUs/GPUs with liquid coolant; near-zero air cooling</td>
+              <td>AI/ML racks, 40–100+ kW/rack</td>
+              <td>Complex plumbing, leak risk, higher cost</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>ASHRAE Thermal Guidelines</h3>
+      <p>ASHRAE TC 9.9 defines environmental envelopes for IT equipment:</p>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-key">Class A1 Inlet Temp</div>
+          <div class="spec-val">15–32°C</div>
+          <div class="spec-note">Recommended: 18–27°C</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Class A2 Inlet Temp</div>
+          <div class="spec-val">10–35°C</div>
+          <div class="spec-note">Most modern servers qualify</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Humidity (RH)</div>
+          <div class="spec-val">20–80%</div>
+          <div class="spec-note">Non-condensing; low RH = ESD risk</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Dew Point</div>
+          <div class="spec-val">5.5–15°C</div>
+          <div class="spec-note">Per ASHRAE A2; critical for condensation prevention</div>
+        </div>
+      </div>
+
+      <h3>Best Practices</h3>
+      <ul>
+        <li><strong>Blanking panels</strong> — fill every unused rack U. Without them, cold air short-circuits from cold aisle through the rack to hot aisle without cooling anything</li>
+        <li><strong>Cable cutout seals</strong> — use brush strips or grommets on raised floor cutouts to prevent hot-cold air mixing under-floor</li>
+        <li><strong>Airflow monitoring</strong> — deploy temperature sensors at rack inlet (U1–U3) and outlet (top of rack). Alert on inlet &gt;27°C or delta T &gt;15°C</li>
+        <li><strong>CRAC vs CRAH</strong> — CRAC (Computer Room Air Conditioner) uses DX refrigerant; CRAH (Computer Room Air Handler) uses chilled water. CRAH is more efficient at scale, requires chiller plant</li>
+      </ul>
+
+      <div class="rule-box success-box">
+        <p class="rule-label">Efficiency Tip</p>
+        Every 1°C rise in server inlet temperature allows CRAC setpoint to rise ~1°C, reducing cooling energy ~2–4%. Raising setpoint from 18°C to 27°C can cut cooling energy by 15–40%.
+      </div>
+    </section>
+
+    <!-- S6 -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section 06</span>
+      <h2><span class="icon">🔌</span>Cabling &amp; Connectivity</h2>
+
+      <h3>Network Cable Types</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Max Distance</th><th>Speed</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>Cat6</td><td>55m @ 10G</td><td>Up to 10 GbE</td><td>Short server-to-ToR runs</td></tr>
+            <tr><td>Cat6A</td><td>100m @ 10G</td><td>Up to 10 GbE</td><td>Standard structured cabling</td></tr>
+            <tr><td>DAC (Direct Attach Copper)</td><td>1–7m</td><td>25G / 40G / 100G</td><td>Server-to-ToR, very short high-speed</td></tr>
+            <tr><td>AOC (Active Optical Cable)</td><td>Up to 100m</td><td>25G / 100G / 400G</td><td>Cross-cage, spine interconnects</td></tr>
+            <tr><td>OM3/OM4 Fiber (Multi-mode)</td><td>300m / 400m @ 10G</td><td>Up to 100G</td><td>Within same facility floor</td></tr>
+            <tr><td>OS2 Fiber (Single-mode)</td><td>10+ km</td><td>Up to 400G+</td><td>Cross-facility, long-haul backbone</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Power Cable Standards</h3>
+      <ul>
+        <li><strong>C13/C14</strong> — standard IEC 60320, up to 10A/15A; most 1U–2U servers</li>
+        <li><strong>C19/C20</strong> — heavy-duty IEC 60320, up to 16A/20A; high-power servers, GPUs, storage</li>
+        <li><strong>NEMA L6-20 / L6-30</strong> — locking connectors, used for PDU feeds in North American facilities</li>
+        <li><strong>IEC 60309</strong> — industrial connectors (16A/32A), common in European colo facilities</li>
+      </ul>
+
+      <h3>Cable Management Principles</h3>
+      <ul>
+        <li>Use <strong>horizontal cable managers</strong> (1U arm) at every patch panel and switch level</li>
+        <li><strong>Vertical cable trays</strong> on both sides of the rack for power and data segregation</li>
+        <li><strong>Label both ends</strong> of every cable — source and destination. Use consistent scheme: <code>RACK-RU-PORT</code></li>
+        <li><strong>Velcro ties</strong>, not zip ties — zip ties crush cable jackets and make changes destructive</li>
+        <li><strong>Color coding example:</strong> Blue = data, Red = management/OOB, Yellow = SAN/storage, Black = power</li>
+        <li>Separate <strong>power and data cables</strong> in different trays to minimize EMI</li>
+      </ul>
+
+      <div class="rule-box">
+        <p class="rule-label">Operations Rule</p>
+        If you cannot trace a cable's path and purpose in under 10 seconds, your cable management is failing. Fix it before an incident forces you to do it under pressure.
+      </div>
+
+      <h3>Fiber Optic Handling</h3>
+      <ul>
+        <li>Never exceed the <strong>minimum bend radius</strong> (typically 10× cable diameter for fiber)</li>
+        <li>Use <strong>LC connectors</strong> for most server/switch connections; <strong>MPO/MTP</strong> for high-density breakout</li>
+        <li>Clean fiber end-faces before every insertion — a single dirty connector can degrade link performance or cause intermittent errors</li>
+        <li>Document fiber runs in your DCIM: port-to-port mapping, connector type, length, dB loss measurement</li>
+      </ul>
+    </section>
+
+    <!-- S7 -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Section 07</span>
+      <h2><span class="icon">🖥️</span>Server Components</h2>
+
+      <h3>Key Subsystems</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Subsystem</th><th>Key Spec</th><th>Failure Signal</th><th>Monitoring Method</th></tr></thead>
+          <tbody>
+            <tr><td>CPU</td><td>TDP, core count, frequency</td><td>Thermal throttle, NMI, MCE</td><td>IPMI sensors, OS metrics</td></tr>
+            <tr><td>RAM (DRAM)</td><td>ECC DDR5, speed, capacity</td><td>Correctable/uncorrectable ECC errors</td><td>edac-util, IPMI, vendor BMC</td></tr>
+            <tr><td>NVMe / SSD</td><td>DWPD, capacity, latency</td><td>SMART errors, reallocated sectors</td><td>smartctl, nvme-cli</td></tr>
+            <tr><td>NIC</td><td>Speed (25G/100G), port count</td><td>CRC errors, packet drops, link flap</td><td>ethtool, SNMP, DCIM</td></tr>
+            <tr><td>PSU</td><td>Wattage, efficiency (80 Plus)</td><td>PSU fault LED, IPMI alert</td><td>IPMI, Redfish, smart PDU</td></tr>
+            <tr><td>BMC/IPMI</td><td>Out-of-band management chip</td><td>inaccessible console</td><td>Regular connectivity checks</td></tr>
+            <tr><td>Fans</td><td>RPM, airflow CFM</td><td>Fan fault LED, high inlet temp</td><td>IPMI sensor polling</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Hot-Swap Components</h3>
+      <p>These can be replaced without powering down the server (vendor-dependent — always verify):</p>
+      <ul>
+        <li>PSU (when redundant)</li>
+        <li>Drives in a RAID array (with proper RAID rebuild procedure)</li>
+        <li>Fans (in most enterprise-grade servers)</li>
+        <li>NIC in PCIe hot-swap bays (rare; OCP 3.0 mezzanine cards on some platforms)</li>
+      </ul>
+
+      <h3>IPMI / BMC / Redfish</h3>
+      <p>Every enterprise server has an <strong>out-of-band management interface</strong> separate from the main OS network. Vendor naming varies: iDRAC (Dell), iLO (HPE), IPMI/BMC (Supermicro, Lenovo). The modern standard API is <strong>Redfish</strong> (RESTful HTTPS, replaces legacy IPMI 2.0 LAN commands).</p>
+      <ul>
+        <li>Always put BMC/iDRAC on a dedicated management VLAN (OOB network)</li>
+        <li>Set IPMI access to management network only — never expose to the internet</li>
+        <li>Use Redfish for programmatic provisioning and sensor polling</li>
+      </ul>
+
+      <div class="rule-box">
+        <p class="rule-label">OOB Discipline</p>
+        An unreachable BMC is a server you cannot recover without a physical site visit. Test OOB connectivity for every server at deploy time and include it in your monitoring. Down BMC = P2 incident in your runbook.
+      </div>
+
+      <h3>80 Plus Efficiency Standards</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Certification</th><th>Min Efficiency @ 20%</th><th>Min Efficiency @ 50%</th><th>Min Efficiency @ 100%</th></tr></thead>
+          <tbody>
+            <tr><td>80 Plus Bronze</td><td>82%</td><td>85%</td><td>82%</td></tr>
+            <tr><td>80 Plus Gold</td><td>87%</td><td>90%</td><td>87%</td></tr>
+            <tr><td>80 Plus Platinum</td><td>90%</td><td>92%</td><td>89%</td></tr>
+            <tr><td>80 Plus Titanium</td><td>90%</td><td>94%</td><td>91%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- S8 -->
+    <section id="s8" class="major-section">
+      <span class="section-label">Section 08</span>
+      <h2><span class="icon">🌐</span>Networking Architecture</h2>
+
+      <h3>Three-Tier vs Leaf-Spine</h3>
+      <p><strong>Traditional three-tier</strong> (access → aggregation → core) was designed for client-server traffic patterns with most traffic going north-south (user → server). It is increasingly inadequate for modern east-west traffic-heavy workloads (server-to-server, distributed systems, microservices).</p>
+
+      <h3 id="s8-1">Leaf-Spine Architecture (Modern Standard)</h3>
+      <p>Every <strong>leaf switch</strong> connects to every <strong>spine switch</strong>. No leaf-to-leaf links. This provides predictable, low-latency, and equal-cost paths between any two servers in the fabric.</p>
+
+      <div class="pipeline">
+        <div class="pipe-step"><div class="pipe-box">Server</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">ToR / Leaf</div><div class="pipe-arrow">↕ ECMP</div></div>
+        <div class="pipe-step"><div class="pipe-box">Spine</div><div class="pipe-arrow">↕ ECMP</div></div>
+        <div class="pipe-step"><div class="pipe-box">Border Leaf</div><div class="pipe-arrow">→</div></div>
+        <div class="pipe-step"><div class="pipe-box">External / WAN</div></div>
+      </div>
+
+      <ul>
+        <li><strong>ECMP (Equal-Cost Multi-Path)</strong> — multiple equal-cost paths are load-balanced, increasing effective bandwidth and providing automatic failover</li>
+        <li><strong>BGP as the fabric underlay</strong> — eBGP is increasingly used as the routing protocol within the datacenter fabric (RFC 7938)</li>
+        <li><strong>VXLAN overlay</strong> — tunneling protocol that extends Layer 2 segments over Layer 3 underlay; enables VM/workload mobility across the fabric</li>
+        <li><strong>Typical oversubscription</strong> — leaf ports (server-facing) to spine uplinks: 3:1 to 6:1 for standard compute; 1:1 for latency-sensitive workloads</li>
+      </ul>
+
+      <h3>Key Protocols &amp; Technologies</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Technology</th><th>Layer</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>VLANs (802.1Q)</td><td>L2</td><td>Traffic segmentation within a switch/fabric</td></tr>
+            <tr><td>LACP / MLAG</td><td>L2</td><td>Link aggregation; dual-homing servers to two ToR switches</td></tr>
+            <tr><td>OSPF</td><td>L3</td><td>Interior gateway protocol; often used in smaller fabrics</td></tr>
+            <tr><td>BGP (eBGP)</td><td>L3</td><td>Preferred underlay routing in large leaf-spine fabrics</td></tr>
+            <tr><td>VXLAN (RFC 7348)</td><td>L3 overlay</td><td>Extend L2 domains over L3 routed fabric</td></tr>
+            <tr><td>BFD</td><td>L3</td><td>Sub-second failure detection for BGP/OSPF sessions</td></tr>
+            <tr><td>RDMA / RoCE</td><td>Transport</td><td>Low-latency networking for storage and HPC workloads</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rule-box">
+        <p class="rule-label">Design Principle</p>
+        The network is the nervous system — design for <strong>predictable latency</strong> first, then redundancy, then throughput. A flapping link that comes and goes is worse than a link that is consistently down — the former causes intermittent application errors that are hard to diagnose.
+      </div>
+    </section>
+
+    <!-- S9 -->
+    <section id="s9" class="major-section">
+      <span class="section-label">Section 09</span>
+      <h2><span class="icon">🔐</span>Physical &amp; Logical Security</h2>
+
+      <h3>Physical Security Layers</h3>
+      <ul>
+        <li><strong>Cage locks</strong> — electronic locks with audit logging; dual-factor (badge + PIN or biometric) for critical cages</li>
+        <li><strong>Access logs</strong> — every cage entry/exit must be logged with timestamp and identity; retain for 90+ days minimum, often 12 months for compliance</li>
+        <li><strong>Cameras</strong> — minimum coverage: cage entrance, all rack fronts. Motion-triggered recording; retain 30–90 days of footage</li>
+        <li><strong>Escort policies</strong> — vendor technicians and colo staff must be escorted by your personnel; never allow unescorted access to your cage</li>
+        <li><strong>Tamper-evident labels</strong> — on server panels and drive bays to detect unauthorized component access</li>
+        <li><strong>Asset tagging</strong> — RFID or barcode on every device; reconcile against DCIM inventory quarterly</li>
+      </ul>
+
+      <h3>Logical Security</h3>
+      <ul>
+        <li><strong>Dedicated management network (OOB)</strong> — BMC/iDRAC on a separate VLAN/subnet, isolated from production traffic, accessible only via jump host</li>
+        <li><strong>Jump hosts (bastions)</strong> — all SSH/HTTPS access to servers routed through hardened bastion hosts with MFA and full session logging</li>
+        <li><strong>Network segmentation</strong> — firewall between production, management, storage, and public network zones</li>
+        <li><strong>Firmware / BIOS passwords</strong> — prevent unauthorized boot device changes or BIOS configuration</li>
+        <li><strong>Secure boot</strong> — enabled on all servers to prevent boot-time malware</li>
+        <li><strong>Drive encryption</strong> — full-disk encryption (AES-256) on all drives, especially in shared or multi-tenant environments</li>
+      </ul>
+
+      <h3>Zero Trust Principles</h3>
+      <p>Apply zero-trust concepts even within the physical cage:</p>
+      <ul>
+        <li>No implicit trust based on physical location (being inside the cage does not grant network access)</li>
+        <li>Authenticate every access — network, management plane, and physical</li>
+        <li>Least-privilege access — operators have access to only the racks they manage</li>
+        <li>Audit everything — access logs, CLI session recordings, change tickets</li>
+      </ul>
+
+      <div class="rule-box warning-box">
+        <p class="rule-label">Compliance Note</p>
+        Many frameworks (SOC 2, PCI-DSS, ISO 27001) require documented physical access controls, audit logs, and quarterly access reviews. Build these processes before your first audit, not during it.
+      </div>
+    </section>
+
+    <!-- S10 -->
+    <section id="s10" class="major-section">
+      <span class="section-label">Section 10</span>
+      <h2><span class="icon">📊</span>Monitoring &amp; Observability</h2>
+
+      <h3>Facility-Level Monitoring</h3>
+      <ul>
+        <li><strong>PDU power draw</strong> — per-outlet kW, amps, power factor; alert on &gt;80% circuit utilization</li>
+        <li><strong>Temperature &amp; humidity</strong> — rack-level sensors at U1 (inlet) and top-of-rack (exhaust); alert on inlet &gt;27°C</li>
+        <li><strong>Airflow</strong> — differential pressure sensors on cold aisle containment</li>
+        <li><strong>UPS status</strong> — battery health, bypass status, runtime remaining</li>
+        <li><strong>Generator test status</strong> — last tested, fuel level (facility-provided, but monitor</li>
+      </ul>
+
+      <h3>Hardware-Level Monitoring</h3>
+      <ul>
+        <li><strong>CPU temperature</strong> — via IPMI/Redfish; alert if CPU package temp &gt;70°C sustained</li>
+        <li><strong>Memory ECC errors</strong> — correctable ECC errors are warning; uncorrectable = critical, immediate replacement</li>
+        <li><strong>Disk health</strong> — SMART attributes (reallocated sectors, pending sectors, uncorrectable errors); NVMe wear indicators</li>
+        <li><strong>Fan RPM</strong> — alert on fan failure or RPM significantly below expected</li>
+        <li><strong>PSU status</strong> — fault/OK per PSU via IPMI</li>
+        <li><strong>NIC errors</strong> — CRC errors, input errors, drops; alert on sustained non-zero error rates</li>
+        <li><strong>BMC connectivity</strong> — alert if OOB/IPMI unreachable (cannot manage the server remotely)</li>
+      </ul>
+
+      <h3>Observability Stack (Common)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Layer</th><th>Open Source</th><th>Commercial</th></tr></thead>
+          <tbody>
+            <tr><td>Metrics collection</td><td>Prometheus + node_exporter, IPMI exporter</td><td>Datadog Agent, Telegraf</td></tr>
+            <tr><td>Visualization</td><td>Grafana</td><td>Datadog Dashboards, Splunk</td></tr>
+            <tr><td>Alerting</td><td>Alertmanager, PagerDuty (integration)</td><td>Datadog Alerts, OpsGenie</td></tr>
+            <tr><td>DCIM / Inventory</td><td>NetBox, OpenDCIM</td><td>Nlyte, Sunbird, Device42</td></tr>
+            <tr><td>Log aggregation</td><td>Loki + Promtail, OpenSearch</td><td>Datadog Logs, Splunk</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Per-Rack Dashboard (Recommended)</h3>
+      <p>Build a per-rack view showing: power draw (A + B feeds), inlet temp, outlet temp, live alerts, hardware fault count, and top-consuming servers. This lets an on-call engineer assess rack health at a glance during an incident without needing multiple tool windows.</p>
+    </section>
+
+    <!-- S11 -->
+    <section id="s11" class="major-section">
+      <span class="section-label">Section 11</span>
+      <h2><span class="icon">🤖</span>Automation &amp; Source of Truth</h2>
+
+      <h3>The Automation Stack</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tool</th><th>Role</th><th>What It Manages</th></tr></thead>
+          <tbody>
+            <tr><td>NetBox</td><td>Source of Truth / DCIM</td><td>Inventory, IP addresses, VLANs, rack layouts, cables</td></tr>
+            <tr><td>MAAS</td><td>Bare metal provisioning</td><td>PXE boot, OS install, cloud-init configuration</td></tr>
+            <tr><td>Ansible</td><td>Configuration management</td><td>OS hardening, package state, service config, idempotent enforcement</td></tr>
+            <tr><td>Terraform</td><td>Infrastructure as Code</td><td>Cloud resources, network device config (via providers)</td></tr>
+            <tr><td>Foreman/Satellite</td><td>Lifecycle management</td><td>Provisioning + configuration + patch management (alternative to MAAS+Ansible)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Ideal Provisioning Flow</h3>
+      <div class="layer-stack">
+        <div class="layer-item l1">
+          <span class="layer-num">1</span>
+          <span class="layer-icon">📝</span>
+          <span class="layer-name">NetBox</span>
+          <span class="layer-desc">Define rack, device, IP, VLAN in NetBox as the record of intent</span>
+        </div>
+        <div class="layer-item l2">
+          <span class="layer-num">2</span>
+          <span class="layer-icon">⚡</span>
+          <span class="layer-name">Physical Install</span>
+          <span class="layer-desc">Rack server, connect power (A+B), connect OOB and data NICs, label everything</span>
+        </div>
+        <div class="layer-item l3">
+          <span class="layer-num">3</span>
+          <span class="layer-icon">🔄</span>
+          <span class="layer-name">MAAS / PXE</span>
+          <span class="layer-desc">Server boots via PXE, MAAS commissions it, OS installed via cloud-init</span>
+        </div>
+        <div class="layer-item l4">
+          <span class="layer-num">4</span>
+          <span class="layer-icon">🔧</span>
+          <span class="layer-name">Ansible</span>
+          <span class="layer-desc">Runs playbooks to enforce desired state: packages, users, sysctl, monitoring agents</span>
+        </div>
+        <div class="layer-item l5">
+          <span class="layer-num">5</span>
+          <span class="layer-icon">📊</span>
+          <span class="layer-name">Monitoring</span>
+          <span class="layer-desc">Node auto-registered in Prometheus/Datadog via service discovery; alerts active</span>
+        </div>
+      </div>
+
+      <div class="rule-box success-box">
+        <p class="rule-label">Automation Principle</p>
+        If you do it more than twice manually, automate it. If it takes more than 30 minutes to provision a new server, your automation is incomplete. Target: zero-touch provisioning from power-on to production-ready.
+      </div>
+
+      <h3>NetBox as Source of Truth</h3>
+      <p>NetBox should be the authoritative record for: every rack, every device, every IP address, every VLAN, and every cable. All automation tooling reads from NetBox as its source of truth, not from ad-hoc scripts or spreadsheets. Treat NetBox updates as part of the change process — no physical change without a NetBox update.</p>
+    </section>
+
+    <!-- S12 -->
+    <section id="s12" class="major-section">
+      <span class="section-label">Section 12</span>
+      <h2><span class="icon">🔥</span>Failure Domains &amp; Risk Management</h2>
+
+      <h3>Failure Mode Matrix</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Layer</th><th>Failure Mode</th><th>Impact</th><th>Detection</th><th>Mitigation</th></tr></thead>
+          <tbody>
+            <tr><td>Facility Power</td><td>Utility grid failure</td><td>Total DC outage</td><td>UPS on-battery alert</td><td>Generator, UPS, 2N feeds</td></tr>
+            <tr><td>Rack Power</td><td>PDU circuit trip</td><td>Single rack partial/full loss</td><td>PDU alert, server offline</td><td>Dual PDU, A+B feeds, 80% rule</td></tr>
+            <tr><td>Cooling</td><td>CRAC unit failure</td><td>Rising inlet temps, thermal throttle</td><td>Temperature sensors, alerts</td><td>N+1 CRAC units, hot-aisle containment</td></tr>
+            <tr><td>Cooling</td><td>Airflow blockage</td><td>Hot spots, localized throttle</td><td>Rack inlet sensor spike</td><td>Blanking panels, cable management</td></tr>
+            <tr><td>Network</td><td>ToR switch failure</td><td>Rack network loss</td><td>BGP/OSPF neighbor drop</td><td>MLAG dual-homing to two ToR switches</td></tr>
+            <tr><td>Network</td><td>Spine switch failure</td><td>Fabric partial capacity</td><td>ECMP path count drop</td><td>N+2 spine switches, fast failover</td></tr>
+            <tr><td>Hardware</td><td>Disk failure</td><td>Data degradation (RAID), potential data loss</td><td>SMART alerts, RAID events</td><td>RAID 10/6, prompt replacement, spare pool</td></tr>
+            <tr><td>Hardware</td><td>PSU failure</td><td>Potential server shutdown</td><td>IPMI PSU fault alert</td><td>Dual PSU on A+B feeds</td></tr>
+            <tr><td>Human</td><td>Wrong cable unplugged</td><td>Unexpected outage</td><td>Network/server alert</td><td>Clear labeling, change management, lockout tags</td></tr>
+            <tr><td>Human</td><td>Unauthorized access</td><td>Security breach, data theft</td><td>Access log anomaly, CCTV</td><td>Dual-factor, escort policy, audit logs</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Failure Domain Design</h3>
+      <p>A <strong>failure domain</strong> is the blast radius of a single failure. The goal is to minimize the blast radius by isolating components at appropriate granularity:</p>
+      <ul>
+        <li><strong>Per-server</strong> — dual PSU, redundant NICs</li>
+        <li><strong>Per-rack</strong> — dual PDUs on separate feeds; dual ToR switches via MLAG</li>
+        <li><strong>Per-row</strong> — in-row cooling, separate power circuit</li>
+        <li><strong>Per-cage</strong> — dedicated cage power feeds, separate cooling zone</li>
+        <li><strong>Per-datacenter</strong> — geographic redundancy, site-to-site replication</li>
+      </ul>
+
+      <div class="rule-box warning-box">
+        <p class="rule-label">Common Pitfall</p>
+        A/B power redundancy only works if the A and B feeds are <em>truly independent</em> — separate utility feeds, separate UPS systems, separate PDU breakers. If both feeds share a single UPS or a single upstream breaker, you have the appearance of redundancy without the reality.
+      </div>
+    </section>
+
+    <!-- S13 -->
+    <section id="s13" class="major-section">
+      <span class="section-label">Section 13</span>
+      <h2><span class="icon">🧾</span>Operational Checklists</h2>
+
+      <h3>Daily Checks</h3>
+      <ul class="checklist" id="daily-checks">
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review active alerts (power, temperature, network, hardware) — triage any P2+ alerts</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Verify UPS status — all units on utility, no battery-only conditions</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Check temperature dashboard — no rack inlets above 27°C</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Verify all critical servers are reachable (ping / OOB connectivity)</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review access logs for unexpected cage entry events</li>
+      </ul>
+
+      <h3>Weekly Checks</h3>
+      <ul class="checklist">
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review power capacity — no circuit above 70% average utilization</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review network bandwidth utilization — no sustained link above 70%</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Check disk health dashboard — any drives with elevated SMART errors</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Verify cable integrity — no loose or unlabeled cables observed during any site visit</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review OOB (BMC/IPMI) reachability — all nodes responding</li>
+      </ul>
+
+      <h3>Monthly Checks</h3>
+      <ul class="checklist">
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Audit physical inventory vs NetBox — walk the floor, reconcile discrepancies</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Test failover paths — intentionally fail one PDU feed and verify A/B redundancy</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review and rotate credentials — PDU admin passwords, BMC accounts</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Check spare parts inventory — drives, PSUs, cables, transceivers</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review access list — remove departed personnel</li>
+      </ul>
+
+      <h3>Quarterly Checks</h3>
+      <ul class="checklist">
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Disaster recovery simulation — full tabletop or live failover test</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Firmware updates — server BIOS, BMC/iDRAC, NIC firmware, switch OS</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Capacity planning review — project 6-month power, space, and network growth</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Review and update runbooks — ensure documentation reflects current architecture</li>
+        <li><span class="check-box" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'✓':''"></span>Compliance access review — formal review of all physical and logical access rights</li>
+      </ul>
+    </section>
+
+    <!-- S14 -->
+    <section id="s14" class="major-section">
+      <span class="section-label">Section 14</span>
+      <h2><span class="icon">🧠</span>Advanced Concepts</h2>
+
+      <h3>Capacity Planning</h3>
+      <p>Capacity planning is the practice of ensuring your cage has sufficient headroom — in power, cooling, space, and network — to accommodate planned growth without emergency procurement. Key metrics:</p>
+      <ul>
+        <li><strong>Power budget per rack</strong> — track committed vs available kW per circuit; alert when committed reaches 70% of rated capacity</li>
+        <li><strong>Network oversubscription ratios</strong> — leaf uplink bandwidth ÷ server-facing port bandwidth. Typical: 4:1 (standard compute), 1:1 or 2:1 (latency-sensitive or storage)</li>
+        <li><strong>Space (U) utilization</strong> — per-rack and per-cage tracking; maintain 30% headroom for emergency rack swaps</li>
+        <li><strong>Cooling envelope</strong> — calculate actual heat load vs CRAC/CRAH rated capacity; target &lt;70% utilization of cooling capacity</li>
+      </ul>
+
+      <h3>High-Density / AI Racks</h3>
+      <p>GPU and AI accelerator racks (NVIDIA DGX, AMD Instinct clusters) present fundamentally different engineering challenges than standard compute:</p>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-key">Power Density</div>
+          <div class="spec-val">20–100 kW</div>
+          <div class="spec-note">Per rack; vs 5–15 kW standard</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Cooling Method</div>
+          <div class="spec-val">DLC / Rear-door</div>
+          <div class="spec-note">Air cooling insufficient above ~25 kW/rack</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Network</div>
+          <div class="spec-val">200G–400G HDR/NDR</div>
+          <div class="spec-note">InfiniBand or 400GbE for GPU fabric</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-key">Floor Load</div>
+          <div class="spec-val">1200+ kg/rack</div>
+          <div class="spec-note">Verify structural floor capacity</div>
+        </div>
+      </div>
+
+      <h3>Cost Awareness</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Cost Category</th><th>Type</th><th>Typical Range</th><th>Optimization Lever</th></tr></thead>
+          <tbody>
+            <tr><td>Colo space (per cabinet/mo)</td><td>OPEX</td><td>$800–$3000/cabinet</td><td>Density optimization, right-sizing</td></tr>
+            <tr><td>Power (per kW/mo committed)</td><td>OPEX</td><td>$50–$150/kW</td><td>Improve PUE, decommission idle servers</td></tr>
+            <tr><td>Cross-connect (per port/mo)</td><td>OPEX</td><td>$300–$1000/port</td><td>Consolidate carriers, use transit IX</td></tr>
+            <tr><td>Server hardware</td><td>CAPEX</td><td>$3k–$50k/server</td><td>Bulk procurement, lease vs buy analysis</td></tr>
+            <tr><td>Network hardware</td><td>CAPEX</td><td>$5k–$200k/switch</td><td>Whitebox alternatives, open networking</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Reliability Engineering</h3>
+      <ul>
+        <li><strong>MTBF (Mean Time Between Failures)</strong> — average time between hardware failures. Higher MTBF = more reliable hardware. Use vendor-published MTBF as a planning input, not a guarantee.</li>
+        <li><strong>MTTR (Mean Time To Repair/Restore)</strong> — average time to restore service after failure. This is the metric you control operationally: good runbooks, spare parts on-site, and practiced procedures reduce MTTR.</li>
+        <li><strong>Availability</strong> = MTBF ÷ (MTBF + MTTR). A device with 10,000h MTBF and 2h MTTR has 99.98% availability.</li>
+        <li><strong>SLOs for infrastructure</strong> — define and track SLOs for power availability, network uptime, and provisioning time. Without SLOs, you cannot tell if your infrastructure is improving.</li>
+      </ul>
+
+      <div class="rule-box">
+        <p class="rule-label">Reliability Insight</p>
+        MTTR matters more than MTBF at scale. In a fleet of 1,000 servers, you will have hardware failures every week regardless of MTBF. The question is not <em>if</em> something fails — it is how fast you detect and recover. Invest in detection and automation proportionally to your fleet size.
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // ── Progress Bar ──────────────────────────────────────────────
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrollTop / docH * 100) + '%';
+  }, { passive: true });
+
+  // ── Internal nav scroll offset ─────────────────────────────────
+  document.querySelectorAll('.article-nav a[href^="#"], .sidebar-nav a[href^="#"], .toc-list a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      const navH = 62;
+      const searchBarH = document.querySelector('.search-bar-wrap').offsetHeight;
+      const articleNavH = document.querySelector('.article-nav').offsetHeight;
+      const offset = navH + searchBarH + articleNavH + 12;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      // Close TOC on mobile
+      document.getElementById('tocOverlay').classList.remove('open');
+    });
+  });
+
+  // ── Active section highlight (sidebar + article nav) ──────────
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const allNavLinks = document.querySelectorAll('.sidebar-nav a, .article-nav a');
+  function onScroll() {
+    const scrollY = window.scrollY + 200;
+    let current = sections[0]?.id;
+    for (const s of sections) {
+      if (s.offsetTop <= scrollY) current = s.id;
+    }
+    allNavLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ── Search ─────────────────────────────────────────────────────
+  const searchInput = document.getElementById('searchInput');
+  const searchCount = document.getElementById('searchCount');
+  const searchClear = document.getElementById('searchClear');
+  const articleContent = document.getElementById('articleContent');
+
+  // Store original HTML for reset
+  const originalHTML = articleContent.innerHTML;
+
+  function clearSearch() {
+    searchInput.value = '';
+    articleContent.innerHTML = originalHTML;
+    searchCount.textContent = '';
+    searchClear.style.display = 'none';
+    // Re-attach scroll listeners after DOM reset
+    attachScrollListeners();
+  }
+
+  function attachScrollListeners() {
+    document.querySelectorAll('.article-nav a[href^="#"], .sidebar-nav a[href^="#"], .toc-list a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        const navH = 62;
+        const searchBarH = document.querySelector('.search-bar-wrap').offsetHeight;
+        const articleNavH = document.querySelector('.article-nav').offsetHeight;
+        const offset = navH + searchBarH + articleNavH + 12;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        document.getElementById('tocOverlay').classList.remove('open');
+      });
+    });
+  }
+
+  function highlightText(node, term) {
+    if (node.nodeType === 3) { // text node
+      const idx = node.textContent.toLowerCase().indexOf(term.toLowerCase());
+      if (idx === -1) return null;
+      const span = document.createElement('span');
+      const before = document.createTextNode(node.textContent.slice(0, idx));
+      const mark = document.createElement('mark');
+      mark.className = 'search-hit';
+      mark.textContent = node.textContent.slice(idx, idx + term.length);
+      const after = document.createTextNode(node.textContent.slice(idx + term.length));
+      span.appendChild(before);
+      span.appendChild(mark);
+      span.appendChild(after);
+      return span;
+    }
+    return null;
+  }
+
+  function walkAndHighlight(root, term) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+    const replacements = [];
+    let node;
+    while (node = walker.nextNode()) {
+      if (['SCRIPT', 'STYLE', 'MARK'].includes(node.parentElement.tagName)) continue;
+      if (node.textContent.toLowerCase().includes(term.toLowerCase())) {
+        const replacement = highlightText(node, term);
+        if (replacement) replacements.push([node, replacement]);
+      }
+    }
+    // Apply replacements
+    let count = 0;
+    for (const [oldNode, newNode] of replacements) {
+      oldNode.parentNode?.replaceChild(newNode, oldNode);
+      count++;
+    }
+    return count;
+  }
+
+  let debounceTimer;
+  searchInput.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      const term = searchInput.value.trim();
+      if (!term) { clearSearch(); return; }
+      searchClear.style.display = 'block';
+      // Reset to original first
+      articleContent.innerHTML = originalHTML;
+      attachScrollListeners();
+      // Walk and highlight
+      const hitCount = walkAndHighlight(articleContent, term);
+      if (hitCount > 0) {
+        searchCount.textContent = hitCount + ' match' + (hitCount !== 1 ? 'es' : '');
+        // Scroll to first match
+        const firstMark = articleContent.querySelector('mark.search-hit');
+        if (firstMark) {
+          const navH = 62 + document.querySelector('.search-bar-wrap').offsetHeight + document.querySelector('.article-nav').offsetHeight + 12;
+          const top = firstMark.getBoundingClientRect().top + window.scrollY - navH;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      } else {
+        searchCount.textContent = 'No matches';
+      }
+    }, 200);
+  });
+
+  searchClear.addEventListener('click', clearSearch);
+
+  // Allow keyboard shortcut: / to focus search
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape' && document.activeElement === searchInput) {
+      clearSearch();
+      searchInput.blur();
+    }
+  });
+</script>
+
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</main>
+</body>
+</html>

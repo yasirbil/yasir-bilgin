@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="mastery, craft, arts education">
+  <meta property="og:title"       content="The Four Arts — A Mastery Guide" />
+  <meta property="og:description" content="The Four Arts — A Mastery Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/arts/craft/the-five-arts.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="The Four Arts — A Mastery Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="The Four Arts — A Mastery Guide">
+  <meta name="twitter:description" content="The Four Arts — A Mastery Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/arts/craft/the-five-arts.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>The Four Arts — A Mastery Guide</title>
+
+<!-- ✅ REQUIRED: Global nav -->
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+
+<link rel="stylesheet" href="/assets/fonts.css">
+
+<style>
+  :root {
+    --ink: #1a1208;
+    --parchment: #f5f0e8;
+    --gold: #b8963e;
+    --gold-light: #d4b06a;
+    --rust: #8b3a2a;
+    --sage: #4a5e4a;
+    --stone: #7a7065;
+    --cream: #ede8dc;
+    --deep: #0d0b08;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+
+  /* ✅ REQUIRED: Fix anchor scroll under nav */
+  section[id] {
+    scroll-margin-top: 130px;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 100vh;
+    background: var(--deep);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 40%, rgba(184,150,62,0.12) 0%, transparent 70%),
+      repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(184,150,62,0.04) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(184,150,62,0.04) 40px);
+  }
+
+
+  .cover-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeUp 1.2s ease 0.3s both;
+  }
+
+  .cover-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .cover-title {
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .cover-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .cover-sub {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--stone);
+    max-width: 480px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .cover-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cover-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--parchment);
+    text-decoration: none;
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.7rem 1.4rem;
+    transition: all 0.3s;
+  }
+
+  .cover-nav a:hover {
+    background: var(--gold);
+    color: var(--deep);
+    border-color: var(--gold);
+  }
+
+  /* Ensure section tops are reachable even when children are hidden */
+  .craft, .integration { scroll-margin-top: 0; }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--stone);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    animation: pulse 2s infinite;
+  }
+
+  /* ── CRAFT SECTION ── */
+  .craft {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .craft-header {
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .craft-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .craft-title {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+
+  .craft-tagline {
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--stone);
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    line-height: 1.6;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2.5rem auto;
+  }
+
+  /* ── MINDSET QUOTE ── */
+  .mindset-block {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(184,150,62,0.3);
+    border-bottom: 1px solid rgba(184,150,62,0.3);
+  }
+
+  .mindset-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .mindset-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ── PHASES ── */
+  .phases-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .phases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5px;
+    background: rgba(184,150,62,0.2);
+    border: 1px solid rgba(184,150,62,0.2);
+  }
+
+  .phase {
+    background: var(--parchment);
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .phase:hover { background: var(--cream); }
+
+  .phase-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(184,150,62,0.2);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .phase-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .phase-time {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+
+  .phase-items {
+    list-style: none;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #3a3020;
+  }
+
+  .phase-items li::before {
+    content: '— ';
+    color: var(--gold);
+  }
+
+  /* ── TWO-COL LAYOUT ── */
+  .two-col {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+  .col-block h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(184,150,62,0.3);
+  }
+
+  .col-block ul, .col-block ol {
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: #3a3020;
+  }
+
+  /* ── PROJECT LADDER ── */
+  .project-ladder {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .ladder-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(184,150,62,0.15);
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  .ladder-step:last-child { border-bottom: none; }
+
+  .ladder-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    min-width: 2rem;
+    padding-top: 0.2rem;
+  }
+
+  .ladder-text h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+  .ladder-text p { font-size: 0.9rem; color: var(--stone); line-height: 1.6; font-style: italic; }
+
+  /* ── PRACTICE SYSTEM ── */
+  .practice-block {
+    background: var(--deep);
+    color: var(--parchment);
+    padding: 3rem 2rem;
+    max-width: 100%;
+  }
+
+  .practice-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .practice-card h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .practice-card p, .practice-card li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(245,240,232,0.75);
+  }
+
+  .practice-card ul { padding-left: 1rem; }
+
+  /* ── CALLIGRAPHY ── */
+  #calligraphy { background: var(--parchment); }
+  #calligraphy .craft-title { color: var(--rust); }
+
+  /* ── WOOD ── */
+  #wood { background: #f0ebe0; }
+  #wood .craft-title { color: #5c3a1e; }
+
+  /* ── FOUNTAIN ── */
+  #fountain { background: #eaeef2; }
+  #fountain .craft-title { color: #2a4a5e; }
+
+  /* ── FOOD ── */
+  #food { background: #f5f0e4; }
+  #food .craft-title { color: var(--sage); }
+
+  /* ── INTEGRATION ── */
+  .integration {
+    background: var(--deep);
+    color: var(--parchment);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .integration::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(184,150,62,0.08) 0%, transparent 70%);
+  }
+
+  .integration-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+  .integration h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  .integration h2 em { font-style: italic; color: var(--gold); }
+
+  .integration p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(245,240,232,0.7);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .vision-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 2.5rem 0;
+    text-align: left;
+    background: rgba(184,150,62,0.08);
+    border: 1px solid rgba(184,150,62,0.2);
+    padding: 2rem;
+  }
+
+  .vision-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+  }
+
+  .vision-item::before { content: '◆'; font-size: 0.5rem; color: var(--gold); }
+
+  .final-principle {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--parchment);
+    border-top: 1px solid rgba(184,150,62,0.3);
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+
+  /* ── WEEKLY SCHEDULE ── */
+  .schedule {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 600px) { .schedule-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .day-card {
+    background: var(--cream);
+    border: 1px solid rgba(184,150,62,0.15);
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-size: 0.78rem;
+  }
+
+  .day-card .day-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .day-card .day-act { line-height: 1.5; color: #3a3020; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Sections themselves must never be hidden — only their inner .reveal children animate */
+  section { opacity: 1 !important; transform: none !important; }
+
+  /* ── CRAFT SEPARATOR ── */
+  .craft-sep {
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.4;
+  }
+</style>
+  <meta name="description" content="&quot;You don't write letters — you submit to their" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Four Arts — A Mastery Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/arts/craft/the-five-arts.html",
+  "description": "\"You don't write letters — you submit to their"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Arts",
+      "item": "https://yasirbilgin.com/arts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Four Arts — A Mastery Guide",
+      "item": "https://yasirbilgin.com/arts/craft/the-five-arts.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Mastery Roadmap</div>
+    <h1 class="cover-title">The<br><em>Five</em><br>Arts</h1>
+    <p class="cover-sub">Calligraphy, Wood, Water, Food & Music — a civilizational aesthetic system built over a lifetime.</p>
+    <nav class="cover-nav">
+      <a href="#calligraphy" onclick="document.getElementById('calligraphy').scrollIntoView({behavior:'smooth'}); return false;">Calligraphy</a>
+      <a href="#wood" onclick="document.getElementById('wood').scrollIntoView({behavior:'smooth'}); return false;">Wood</a>
+      <a href="#fountain" onclick="document.getElementById('fountain').scrollIntoView({behavior:'smooth'}); return false;">Fountain</a>
+      <a href="#food" onclick="document.getElementById('food').scrollIntoView({behavior:'smooth'}); return false;">Food</a>
+      <a href="#bendir" onclick="document.getElementById('bendir').scrollIntoView({behavior:'smooth'}); return false;">Bendir</a>
+    </nav>
+  </div>
+  <div class="scroll-hint">Scroll to begin</div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- I. CALLIGRAPHY -->
+<!-- ══════════════════════════════════════════ -->
+<section id="calligraphy" class="craft">
+  <div class="craft-header reveal">
+    <span class="craft-num">Art I of IV</span>
+    <h2 class="craft-title">Arabic<br>Calligraphy</h2>
+    <p class="craft-tagline">"You don't write letters — you submit to their geometry."</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="mindset-block reveal">
+    <div class="mindset-label">Mindset</div>
+    <p class="mindset-quote">This is not drawing. It is discipline, proportion, and <em>spirit</em>.<br>Think like Sheikh Hamdullah. Think like Hafiz Osman.<br>The qalam is not your tool — you are the qalam's servant.</p>
+  </div>
+
+  <div class="phases-section reveal">
+    <div class="section-label">Four Phases of Mastery</div>
+    <div class="phases-grid">
+      <div class="phase">
+        <span class="phase-num">01</span>
+        <div class="phase-title">Foundations</div>
+        <div class="phase-time">Months 1 – 6</div>
+        <ul class="phase-items">
+          <li>Learn qalam cutting (kamış kalem)</li>
+          <li>Ink preparation (is mürekkebi)</li>
+          <li>Practice elif, be, nun repeatedly</li>
+          <li>Study nokta-based proportion geometry</li>
+          <li>Aharli paper technique</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">02</span>
+        <div class="phase-title">Script Specialization</div>
+        <div class="phase-time">Months 6 – 18</div>
+        <ul class="phase-items">
+          <li>Thuluth (Sülüs) — monumental, spiritual</li>
+          <li>Naskh (Nesih) — readable, Qur'anic</li>
+          <li>Daily meşk (copying masterpieces)</li>
+          <li>1–2 hours strict repetition per day</li>
+          <li>Study classical compositions</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">03</span>
+        <div class="phase-title">Composition</div>
+        <div class="phase-time">Years 2 – 4</div>
+        <ul class="phase-items">
+          <li>Layout design (istif)</li>
+          <li>Balance, flow, and symmetry</li>
+          <li>Begin creating your own panels</li>
+          <li>Study Hilye-i Şerif compositions</li>
+          <li>Combine scripts within a single work</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">04</span>
+        <div class="phase-title">Mastery</div>
+        <div class="phase-time">Years 5 – 10+</div>
+        <ul class="phase-items">
+          <li>Develop your own identifiable style</li>
+          <li>Teach others formally</li>
+          <li>Integrate with architecture & wood</li>
+          <li>Seek ijaza (master's certification)</li>
+          <li>Commission and exhibit panels</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div class="col-block">
+      <h3>Essential Tools</h3>
+      <ul>
+        <li>Qalam (reed pen — multiple widths)</li>
+        <li>İs mürekkebi (carbon ink)</li>
+        <li>Aharli paper (sized & treated)</li>
+        <li>Makta (thumb cutting board)</li>
+        <li>Divit (inkwell with sponge)</li>
+        <li>Mürekkep taşı (ink stone)</li>
+      </ul>
+    </div>
+    <div class="col-block">
+      <h3>Weekly Practice System</h3>
+      <ul>
+        <li><strong>5 days:</strong> Letter repetition drills (30–60 min)</li>
+        <li><strong>1 day:</strong> Full composition practice</li>
+        <li><strong>1 day:</strong> Critique — compare with masters</li>
+        <li>Keep a meşk notebook — date every page</li>
+        <li>Photograph progress weekly</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="practice-block reveal">
+    <div class="practice-inner">
+      <div class="practice-card">
+        <h4>Daily Minimum</h4>
+        <p>30 minutes of letter drills. No shortcuts. The Ottoman masters wrote the same letter 10,000 times before moving forward.</p>
+      </div>
+      <div class="practice-card">
+        <h4>Apprenticeship</h4>
+        <p>Find a Turkish calligraphy teacher — in-person or via video. The tradition is oral and gestural; books alone are insufficient.</p>
+      </div>
+      <div class="practice-card">
+        <h4>Integration Goal</h4>
+        <p>In Year 3, carve or engrave a calligraphy panel into your rahle. This is the synthesis — the written word given material form.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="craft-sep"></div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- II. WOOD -->
+<!-- ══════════════════════════════════════════ -->
+<section id="wood" class="craft">
+  <div class="craft-header reveal">
+    <span class="craft-num">Art II of IV</span>
+    <h2 class="craft-title">Wood &<br>Furniture</h2>
+    <p class="craft-tagline">Wood is alive. You are not imposing form — you are revealing what was always inside.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="mindset-block reveal">
+    <div class="mindset-label">Mindset</div>
+    <p class="mindset-quote">Think like a craftsman in an Ottoman atelier.<br>Grain direction is not a detail — it is your first decision.<br>A rahle that cannot fold perfectly is not yet finished.</p>
+  </div>
+
+  <div class="phases-section reveal">
+    <div class="section-label">Four Phases of Mastery</div>
+    <div class="phases-grid">
+      <div class="phase">
+        <span class="phase-num">01</span>
+        <div class="phase-title">Tool & Material Literacy</div>
+        <div class="phase-time">Months 1 – 4</div>
+        <ul class="phase-items">
+          <li>Wood species: walnut, oak, cedar</li>
+          <li>Reading grain direction</li>
+          <li>Chisels, saws, hand planes</li>
+          <li>Sharpening stones (non-negotiable)</li>
+          <li>Workbench & clamp setup</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">02</span>
+        <div class="phase-title">Joinery</div>
+        <div class="phase-time">Months 6 – 18</div>
+        <ul class="phase-items">
+          <li>Mortise & tenon (every variation)</li>
+          <li>Dovetail — hand-cut only</li>
+          <li>Folding mechanisms</li>
+          <li>Wooden pegs & drawboring</li>
+          <li>Fitting wood without glue first</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">03</span>
+        <div class="phase-title">Rahle Specialization</div>
+        <div class="phase-time">Years 1 – 2</div>
+        <ul class="phase-items">
+          <li>Traditional rahle geometry study</li>
+          <li>Folding symmetry and balance</li>
+          <li>Structural load distribution</li>
+          <li>X-joint mechanism precision</li>
+          <li>Finishing: oil, wax, shellac</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">04</span>
+        <div class="phase-title">Ornamentation</div>
+        <div class="phase-time">Years 2 – 5</div>
+        <ul class="phase-items">
+          <li>Carving (oyma) — relief carving</li>
+          <li>Islamic geometric patterns</li>
+          <li>Integrating calligraphy panels</li>
+          <li>Inlay work (sedef / mother-of-pearl)</li>
+          <li>Gilding and surface treatments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-ladder reveal">
+    <div class="section-label">Master Project Ladder</div>
+    <div class="ladder-step" style="animation-delay:0.1s">
+      <span class="ladder-num">01 →</span>
+      <div class="ladder-text">
+        <h3>Simple Stool</h3>
+        <p>Four legs, mortise & tenon joints. No shortcuts. This teaches you tolerances and how wood moves with humidity.</p>
+      </div>
+    </div>
+    <div class="ladder-step" style="animation-delay:0.2s">
+      <span class="ladder-num">02 →</span>
+      <div class="ladder-text">
+        <h4>Small Dovetail Box</h4>
+        <p>Hand-cut dovetails. Lid with fitted hinge. This will take you three attempts — that is expected, not failure.</p>
+      </div>
+    </div>
+    <div class="ladder-step" style="animation-delay:0.3s">
+      <span class="ladder-num">03 →</span>
+      <div class="ladder-text">
+        <h4>Folding Rahle (Basic)</h4>
+        <p>Walnut or oak. Functional X-joint. Clean, undecorated. It must open and close perfectly 500 times before it's done.</p>
+      </div>
+    </div>
+    <div class="ladder-step" style="animation-delay:0.4s">
+      <span class="ladder-num">04 →</span>
+      <div class="ladder-text">
+        <h4>Ornamental Rahle</h4>
+        <p>Hand-carved geometric border. Integrated calligraphy panel. This is your masterwork — begin only after 2 years of practice.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div class="col-block">
+      <h3>Workshop Setup</h3>
+      <ul>
+        <li>Solid workbench with vise</li>
+        <li>Full chisel set (6 sizes minimum)</li>
+        <li>Japanese pull saw + tenon saw</li>
+        <li>Hand plane (#4 & #5)</li>
+        <li>Clamps — you need more than you think</li>
+        <li>Sharpening: water stones 1000/6000 grit</li>
+        <li>Marking gauge & sliding bevel</li>
+      </ul>
+    </div>
+    <div class="col-block">
+      <h3>Wood Species Guide</h3>
+      <ul>
+        <li><strong>Walnut:</strong> Rich, carves beautifully — ideal for rahle</li>
+        <li><strong>Oak:</strong> Strong grain, durable — structural pieces</li>
+        <li><strong>Cedar:</strong> Aromatic, lighter weight</li>
+        <li><strong>Cherry:</strong> Darkens with age — treasure pieces</li>
+        <li>Avoid: pine, MDF, engineered wood</li>
+        <li>Source: air-dried lumber when possible</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="craft-sep"></div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- III. FOUNTAIN -->
+<!-- ══════════════════════════════════════════ -->
+<section id="fountain" class="craft">
+  <div class="craft-header reveal">
+    <span class="craft-num">Art III of IV</span>
+    <h2 class="craft-title" style="color:#2a4a5e;">Water<br>Fountains</h2>
+    <p class="craft-tagline">Water is flow, sound, reflection, and purification. You are designing an experience — not just a structure.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="mindset-block reveal">
+    <div class="mindset-label">Mindset</div>
+    <p class="mindset-quote">The Ottoman çeşme was never merely functional.<br>It was a gift to the city — a place where time slowed.<br>Your fountain should make people stop walking.</p>
+  </div>
+
+  <div class="phases-section reveal">
+    <div class="section-label">Four Phases of Mastery</div>
+    <div class="phases-grid">
+      <div class="phase">
+        <span class="phase-num">01</span>
+        <div class="phase-title">Fundamentals</div>
+        <div class="phase-time">Months 1 – 6</div>
+        <ul class="phase-items">
+          <li>Hydraulics: pressure & flow rate</li>
+          <li>Pump selection & sizing</li>
+          <li>Materials: stone, ceramic, copper</li>
+          <li>Waterproofing methods</li>
+          <li>Tubing and reservoir basics</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">02</span>
+        <div class="phase-title">Design Language</div>
+        <div class="phase-time">Months 6 – 18</div>
+        <ul class="phase-items">
+          <li>Study Ottoman çeşme architecture</li>
+          <li>Andalusian fountain aesthetics</li>
+          <li>Japanese water garden principles</li>
+          <li>Sound design — flow tuning</li>
+          <li>Light and reflection studies</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">03</span>
+        <div class="phase-title">Build Small Systems</div>
+        <div class="phase-time">Year 1 – 2</div>
+        <ul class="phase-items">
+          <li>Tabletop stone fountain</li>
+          <li>Garden wall fountain</li>
+          <li>Sound tuning (the critical art)</li>
+          <li>Basin proportions & overflow</li>
+          <li>Moss, stone, and plant integration</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">04</span>
+        <div class="phase-title">Integrated Design</div>
+        <div class="phase-time">Years 2 – 5</div>
+        <ul class="phase-items">
+          <li>Stone carving for basins & spouts</li>
+          <li>Calligraphy panels above fountain</li>
+          <li>Wood canopy or surround</li>
+          <li>Seasonal maintenance systems</li>
+          <li>Commission work for gardens</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div class="col-block">
+      <h3>Design Principles</h3>
+      <ul>
+        <li><strong>Sound:</strong> Soft, continuous — never splashy or sharp</li>
+        <li><strong>Symmetry:</strong> Ottoman style; or intentional asymmetry (Japanese)</li>
+        <li><strong>Reflection:</strong> Dark basins amplify light & sky</li>
+        <li><strong>Minimal splash,</strong> maximum serenity</li>
+        <li><strong>Flow rate:</strong> Tune with inline valves, not pump power</li>
+        <li>Stone ages beautifully — plastic does not</li>
+      </ul>
+    </div>
+    <div class="col-block">
+      <h3>Study References</h3>
+      <ul>
+        <li>Tophane-i Amire Çeşmesi, Istanbul</li>
+        <li>Alhambra Lion Fountain, Granada</li>
+        <li>Ryoanji stone garden, Kyoto</li>
+        <li>Topkapi Palace inner courtyard</li>
+        <li>Books: "Ottoman Architecture" – Goodwin</li>
+        <li>Visit: photograph every fountain you encounter</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="practice-block reveal">
+    <div class="practice-inner">
+      <div class="practice-card">
+        <h4>Sound Tuning</h4>
+        <p>The most underrated skill. Record your fountain's sound. Listen back. Adjust flow, basin depth, spout angle. The goal: a sound that fades into background but pulls you back when you stop and listen.</p>
+      </div>
+      <div class="practice-card">
+        <h4>First Build</h4>
+        <p>Start with a 30cm stone basin, a simple submersible pump, and a copper spout. Budget $80–150. Simplicity teaches more than complexity at this stage.</p>
+      </div>
+      <div class="practice-card">
+        <h4>Integration Vision</h4>
+        <p>Place your fountain in the same room as your calligraphy desk and rahle. The sound of flowing water is the room's breath — it sets the atmosphere for all creative work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="craft-sep"></div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- IV. FOOD -->
+<!-- ══════════════════════════════════════════ -->
+<section id="food" class="craft">
+  <div class="craft-header reveal">
+    <span class="craft-num">Art IV of V</span>
+    <h2 class="craft-title">Turkish<br>Cuisine</h2>
+    <p class="craft-tagline">Cooking is timing, heat, and intuition. You are not following recipes — you are controlling transformation.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="mindset-block reveal">
+    <div class="mindset-label">Mindset</div>
+    <p class="mindset-quote">The great Turkish cooks do not measure.<br>They taste, they adjust, they feel the heat in the pan.<br>Cook the same dish 20 times. Only then does the recipe disappear.</p>
+  </div>
+
+  <div class="phases-section reveal">
+    <div class="section-label">Four Phases of Mastery</div>
+    <div class="phases-grid">
+      <div class="phase">
+        <span class="phase-num">01</span>
+        <div class="phase-title">Core Techniques</div>
+        <div class="phase-time">Months 1 – 6</div>
+        <ul class="phase-items">
+          <li>Knife skills — julienne, brunoise</li>
+          <li>Heat control: sautée, slow-braise</li>
+          <li>Spice balance — cumin, sumac, pul biber</li>
+          <li>Stock-making (et suyu)</li>
+          <li>Making yufka dough from scratch</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">02</span>
+        <div class="phase-title">Signature Dishes</div>
+        <div class="phase-time">Months 6 – 18</div>
+        <ul class="phase-items">
+          <li>Güveç (clay pot slow-braise)</li>
+          <li>Döner kebab (home version)</li>
+          <li>Baklava — from scratch, 40 layers</li>
+          <li>Mantı (hand-pinched dumplings)</li>
+          <li>İmam bayıldı (stuffed eggplant)</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">03</span>
+        <div class="phase-title">Depth & Variation</div>
+        <div class="phase-time">Years 2 – 4</div>
+        <ul class="phase-items">
+          <li>Regional variations (Gaziantep vs. Istanbul)</li>
+          <li>Sauce mastery: tarator, haydari</li>
+          <li>Fermentation: yoğurt, turşu, boza</li>
+          <li>Pastry: börek, gözleme, katmer</li>
+          <li>Preserving seasonal produce</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">04</span>
+        <div class="phase-title">Signature Style</div>
+        <div class="phase-time">Years 4+</div>
+        <ul class="phase-items">
+          <li>Create your own original dishes</li>
+          <li>Host sofrası gatherings (tableside culture)</li>
+          <li>Teach family — especially children</li>
+          <li>Develop a signature spice blend</li>
+          <li>Document your recipes as heirlooms</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-ladder reveal">
+    <div class="section-label">The Iteration System</div>
+    <div class="ladder-step">
+      <span class="ladder-num">①</span>
+      <div class="ladder-text">
+        <h3>Cook the dish from a master recipe</h3>
+        <p>Source the most respected version — ask a Turkish grandmother if possible. Follow it exactly the first time.</p>
+      </div>
+    </div>
+    <div class="ladder-step">
+      <span class="ladder-num">②</span>
+      <div class="ladder-text">
+        <h4>Cook it again. Change ONE variable</h4>
+        <p>More onion. Less water. Higher heat. Different cut of meat. Only one variable per session — this is the scientific method for cooks.</p>
+      </div>
+    </div>
+    <div class="ladder-step">
+      <span class="ladder-num">③</span>
+      <div class="ladder-text">
+        <h4>Cook it 10–20 times total</h4>
+        <p>Document every session. After 20 repetitions, you will cook this dish without looking at anything — and it will be yours.</p>
+      </div>
+    </div>
+    <div class="ladder-step">
+      <span class="ladder-num">④</span>
+      <div class="ladder-text">
+        <h4>Serve it at a gathering</h4>
+        <p>The sofra (table) is where the dish becomes real. Other palates teach you what self-tasting cannot.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div class="col-block">
+      <h3>Essential Pantry</h3>
+      <ul>
+        <li>Pul biber (Aleppo pepper flakes)</li>
+        <li>Sumac — essential for salads & kebab</li>
+        <li>Isot pepper (Urfa biber)</li>
+        <li>Biber salçası (red pepper paste)</li>
+        <li>Domates salçası (tomato paste — quality matters)</li>
+        <li>Dried mint, cumin, coriander</li>
+        <li>Pomegranate molasses</li>
+      </ul>
+    </div>
+    <div class="col-block">
+      <h3>Priority Dish List</h3>
+      <ol>
+        <li>Mercimek çorbası (lentil soup)</li>
+        <li>İmam bayıldı (stuffed eggplant)</li>
+        <li>Güveç (clay pot stew)</li>
+        <li>Lahmacun (thin flatbread)</li>
+        <li>Mantı (Turkish dumplings)</li>
+        <li>Baklava (patience required)</li>
+        <li>Kadayıf dessert</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="craft-sep"></div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- V. BENDIR -->
+<!-- ══════════════════════════════════════════ -->
+<section id="bendir" class="craft" style="background:#f2ede5;">
+  <div class="craft-header reveal">
+    <span class="craft-num">Art V of V</span>
+    <h2 class="craft-title" style="color:#3d2b1a;">The<br>Bendir</h2>
+    <p class="craft-tagline">The drum does not accompany — it anchors. The rhythm you hold inside will shape everything you make.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="mindset-block reveal">
+    <div class="mindset-label">Mindset</div>
+    <p class="mindset-quote">The bendir is the oldest frame drum of the Islamic world.<br>It does not demand virtuosity — it demands presence.<br>You are not performing. You are keeping time for the universe.</p>
+  </div>
+
+  <div class="phases-section reveal">
+    <div class="section-label">Four Phases of Mastery</div>
+    <div class="phases-grid">
+      <div class="phase">
+        <span class="phase-num">01</span>
+        <div class="phase-title">Instrument & Body</div>
+        <div class="phase-time">Months 1 – 4</div>
+        <ul class="phase-items">
+          <li>Holding position — vertical, resting on thumb</li>
+          <li>The three tones: dum, tek, ka</li>
+          <li>Finger placement and hand relaxation</li>
+          <li>Skin tension and tuning by warmth</li>
+          <li>Breathing in sync with the beat</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">02</span>
+        <div class="phase-title">Core Rhythms</div>
+        <div class="phase-time">Months 4 – 18</div>
+        <ul class="phase-items">
+          <li>Semai (6/8) — the foundational rhythm</li>
+          <li>Düyek (8/8) — Turkish folk base</li>
+          <li>Sofyan (4/4) — meditative, steady</li>
+          <li>Zikr rhythms — Sufi devotional context</li>
+          <li>Playing with a metronome daily</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">03</span>
+        <div class="phase-title">Ensemble & Context</div>
+        <div class="phase-time">Years 2 – 3</div>
+        <ul class="phase-items">
+          <li>Playing alongside ney or ud players</li>
+          <li>Sufi music (tasavvuf) context and etiquette</li>
+          <li>Improvisation within a maqam feel</li>
+          <li>Dynamics — soft presence vs. driving pulse</li>
+          <li>Using bendir in Mevlevi ceremonies</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="phase-num">04</span>
+        <div class="phase-title">Integration & Mastery</div>
+        <div class="phase-time">Years 3 – 7+</div>
+        <ul class="phase-items">
+          <li>Play for family gatherings and sofrası</li>
+          <li>Accompany calligraphy sessions with rhythm</li>
+          <li>Build or restore your own bendir</li>
+          <li>Teach the basic rhythms to children</li>
+          <li>Develop a personal rhythmic voice</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div class="col-block">
+      <h3>The Instrument</h3>
+      <ul>
+        <li><strong>Frame:</strong> Mulberry or walnut wood — 40–55cm diameter</li>
+        <li><strong>Skin:</strong> Goat or fish skin — hand-stretched</li>
+        <li><strong>Snares:</strong> Two gut strings inside — create buzz tone</li>
+        <li><strong>No jingles</strong> — that is the riq; bendir is pure skin</li>
+        <li>Buy from a Turkish or Moroccan luthier</li>
+        <li>Store away from direct heat or cold</li>
+      </ul>
+    </div>
+    <div class="col-block">
+      <h3>Daily Practice System</h3>
+      <ul>
+        <li><strong>15 min:</strong> Single stroke warm-up (dum-dum-tek)</li>
+        <li><strong>15 min:</strong> One rhythm, played at 3 tempos</li>
+        <li><strong>Record yourself</strong> — the ear hears what hands miss</li>
+        <li>Practice in silence first, music second</li>
+        <li>One rhythm mastered deeply beats ten learned shallowly</li>
+        <li>Weekend: play alongside recorded music</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-ladder reveal">
+    <div class="section-label">The Rhythm Ladder</div>
+    <div class="ladder-step">
+      <span class="ladder-num">01 →</span>
+      <div class="ladder-text">
+        <h4>Single-tone pulse</h4>
+        <p>Just the dum. Steady, even, for 10 minutes without speeding up. Most beginners cannot do this. It will humble you correctly.</p>
+      </div>
+    </div>
+    <div class="ladder-step">
+      <span class="ladder-num">02 →</span>
+      <div class="ladder-text">
+        <h4>Sofyan — 4/4 pattern</h4>
+        <p>Dum-tek-dum-dum-tek. The most meditative and forgiving rhythm. Play it until it feels like breathing.</p>
+      </div>
+    </div>
+    <div class="ladder-step">
+      <span class="ladder-num">03 →</span>
+      <div class="ladder-text">
+        <h4>Semai — 6/8 pattern</h4>
+        <p>The rocking rhythm of Turkish classical music. Once internalized, you will hear it in everything — walking, water, wind.</p>
+      </div>
+    </div>
+    <div class="ladder-step">
+      <span class="ladder-num">04 →</span>
+      <div class="ladder-text">
+        <h4>Play for others</h4>
+        <p>At the sofra, at a gathering, or in the room while someone reads. The bendir was never meant to be practiced alone forever.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="practice-block reveal">
+    <div class="practice-inner">
+      <div class="practice-card">
+        <h4>The Sufi Connection</h4>
+        <p>The bendir is inseparable from Sufi devotional practice. Even if you approach it purely as a craft, study the zikr and sema context — it will transform how you hold the instrument.</p>
+      </div>
+      <div class="practice-card">
+        <h4>Build Your Own</h4>
+        <p>In Year 3, combine this craft with woodworking: turn your own frame from walnut, stretch your own skin. A bendir made by the hands that play it carries something different.</p>
+      </div>
+      <div class="practice-card">
+        <h4>Integration Vision</h4>
+        <p>Imagine the room: fountain sound, calligraphy on the wall, rahle in the corner, güveç on the stove — and now rhythm. The bendir is the heartbeat of the space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="craft-sep"></div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- INTEGRATION -->
+<!-- ══════════════════════════════════════════ -->
+<section class="integration">
+  <div class="integration-inner reveal">
+    <div class="mindset-label" style="color:var(--gold-light)">The Synthesis</div>
+    <h2>This is not<br>five skills.<br>This is <em>one life.</em></h2>
+    <p>Imagine the space you will one day inhabit — and what it will feel like to be inside it.</p>
+
+    <div class="vision-items">
+      <div class="vision-item">A hand-carved walnut rahle, folded beside the window</div>
+      <div class="vision-item">Thuluth calligraphy panel above it — written by your own hand</div>
+      <div class="vision-item">A stone fountain in the corner — soft, continuous sound</div>
+      <div class="vision-item">The smell of güveç slow-cooking in the next room</div>
+      <div class="vision-item">A bendir resting against the wall — its rhythm still in the air</div>
+      <div class="vision-item">Guests gathered around your sofra, unable to explain why they feel at ease</div>
+    </div>
+
+    <p>This is a <strong style="color:var(--parchment)">civilizational aesthetic system</strong> — the kind that takes a lifetime to build and becomes a legacy passed to children.</p>
+
+    <div class="final-principle">
+      "Repetition creates form.<br>Intention creates meaning."
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- WEEKLY SCHEDULE -->
+<!-- ══════════════════════════════════════════ -->
+<section style="background:var(--parchment); padding: 4rem 2rem;">
+  <div class="schedule">
+    <div class="section-label reveal">Realistic Weekly Structure</div>
+    <p class="reveal" style="font-style:italic; color:var(--stone); margin-bottom:2rem; max-width:600px;">Designed for someone with a demanding career and family — this is the minimum viable practice system.</p>
+
+    <div class="schedule-grid reveal">
+      <div class="day-card">
+        <div class="day-name">Mon</div>
+        <div class="day-act">30 min calligraphy drills</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Tue</div>
+        <div class="day-act">30 min calligraphy + 15 min bendir</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Wed</div>
+        <div class="day-act">30 min calligraphy + cook one dish</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Thu</div>
+        <div class="day-act">30 min calligraphy + 15 min bendir</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Fri</div>
+        <div class="day-act">Calligraphy composition + bendir free play</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Sat</div>
+        <div class="day-act">2–4 hrs wood project or fountain build</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Sun</div>
+        <div class="day-act">Family cooking session + critique day</div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:3rem;">
+      <div class="col-block reveal">
+        <h3>Key Principles</h3>
+        <ul>
+          <li>Consistency beats intensity — 30 min daily wins over 4 hrs on weekends</li>
+          <li>Document everything: photographs, notes, dates</li>
+          <li>Find at least one teacher per discipline</li>
+          <li>Visible output monthly — finish something</li>
+          <li>The four crafts will naturally cross-pollinate</li>
+        </ul>
+      </div>
+      <div class="col-block reveal">
+        <h3>Year 1 Milestones</h3>
+        <ul>
+          <li>Calligraphy: complete the alef-be-te cycle 100×</li>
+          <li>Wood: finish a functional rahle (plain)</li>
+          <li>Fountain: build one tabletop fountain</li>
+          <li>Food: master 5 dishes from memory</li>
+          <li>Bendir: play Sofyan and Semai at steady tempo</li>
+          <li>Integration: write the name of your city in Thuluth</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--deep); color:var(--stone); text-align:center; padding:2.5rem; font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;">
+  The Five Arts — A Mastery Roadmap &nbsp;·&nbsp; Calligraphy · Wood · Water · Food · Bendir
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Stagger ladder steps
+  document.querySelectorAll('.ladder-step').forEach((el, i) => {
+    el.style.animationDelay = `${i * 0.15}s`;
+  });
+</script>
+
+</article>
+</main>
+</body>
+</html>

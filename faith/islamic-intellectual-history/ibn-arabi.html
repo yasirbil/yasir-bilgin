@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="Ibn Arabi, Sufism, Islamic philosophy">
+  <meta property="og:title"       content="Ibn ʿArabī: A Detailed Guide" />
+  <meta property="og:description" content="Ibn ʿArabī: A Detailed Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/faith/islamic-intellectual-history/ibn-arabi.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Ibn ʿArabī: A Detailed Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Ibn ʿArabī: A Detailed Guide">
+  <meta name="twitter:description" content="Ibn ʿArabī: A Detailed Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/faith/islamic-intellectual-history/ibn-arabi.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  
+  <title>Ibn ʿArabī: A Detailed Guide | Yasir Bilgin</title>
+
+  <!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ─── DESIGN TOKENS ─────────────────────────────────── */
+    :root {
+      --ink:        #1a1410;
+      --ink-soft:   #3d3028;
+      --ink-muted:  #6b5a4e;
+      --parchment:  #faf6ef;
+      --parchment2: #f3ece0;
+      --gold:       #9a7b3f;
+      --gold-light: #c9a857;
+      --gold-pale:  #f0e4c0;
+      --border:     #d9ccb8;
+      --accent:     #6b3a2a;
+      --accent2:    #2a4a3a;
+
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-body:    'EB Garamond', Georgia, serif;
+      --font-arabic:  'Noto Naskh Arabic', serif;
+
+      --max-w: 820px;
+      --body-fs: 19px;
+    }
+
+    /* ─── RESET & BASE ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: var(--body-fs);
+      line-height: 1.78;
+      color: var(--ink);
+      background: var(--parchment);
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(154,123,63,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 100%, rgba(107,58,42,0.05) 0%, transparent 60%);
+    }
+
+    /* ─── PROGRESS BAR ──────────────────────────────────── */
+    #progressBar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── TOC OVERLAY ───────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(26,20,16,0.6);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(3px);
+    }
+
+    .toc-panel {
+      background: var(--parchment);
+      border-left: 1px solid var(--border);
+      width: min(380px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem 3rem;
+      position: relative;
+      animation: slideIn 0.22s ease;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(30px); opacity: 0; }
+      to   { transform: translateX(0);    opacity: 1; }
+    }
+
+    .toc-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--ink-muted);
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.65rem;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .toc-close:hover { background: var(--parchment2); }
+
+    .toc-title {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+      padding-top: 0.2rem;
+    }
+
+    .toc-list { list-style: none; }
+
+    .toc-list li { margin-bottom: 0; }
+
+    .toc-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      line-height: 1.4;
+      padding: 0.32rem 0;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, padding-left 0.15s;
+    }
+    .toc-list a:hover { color: var(--accent); padding-left: 4px; }
+
+    .toc-main {
+      font-weight: 600;
+      color: var(--ink) !important;
+      margin-top: 0.5rem;
+      font-size: 0.82rem !important;
+      letter-spacing: 0.01em;
+    }
+    .toc-sub {
+      padding-left: 1rem !important;
+      color: var(--ink-muted) !important;
+      font-size: 0.8rem !important;
+    }
+    .toc-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0.6rem 0;
+    }
+
+    /* ─── ARTICLE STICKY HEADER ─────────────────────────── */
+    .article-header {
+      background: rgba(250,246,239,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.55rem 2rem;
+      gap: 1rem;
+    }
+
+    .site-name {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+    .site-name:hover { color: var(--gold); }
+
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+
+    .read-time {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+
+    .toc-btn {
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toc-btn:hover { background: var(--gold); color: var(--parchment); }
+
+    /* ─── HERO ──────────────────────────────────────────── */
+    .hero {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-ornament {
+      font-size: 1.4rem;
+      color: var(--gold);
+      letter-spacing: 0.5em;
+      margin-bottom: 2rem;
+      opacity: 0.7;
+      display: block;
+    }
+
+    .hero-category {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-arabic {
+      font-family: var(--font-arabic);
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      color: var(--gold);
+      margin: 0.4rem 0 1.4rem;
+      display: block;
+      direction: rtl;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--ink-muted);
+      font-style: italic;
+      max-width: 580px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.6;
+    }
+
+    .byline-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      color: white;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .byline-text { text-align: left; }
+    .byline-name {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+      display: block;
+    }
+    .byline-meta {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      font-style: italic;
+      display: block;
+    }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    /* ─── ARTICLE BODY ──────────────────────────────────── */
+    .article-body {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+
+    /* ─── SECTIONS ──────────────────────────────────────── */
+    .major-section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 130px;
+    }
+
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .major-section > h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 1.4rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid var(--gold-pale);
+      position: relative;
+    }
+    .major-section > h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 3.5rem;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h3.sub-heading {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      margin: 2rem 0 0.8rem;
+      scroll-margin-top: 130px;
+    }
+
+    .sh-num {
+      color: var(--gold);
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+
+    h4 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 1.6rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1.1rem; }
+
+    a { color: var(--accent); text-decoration: underline; text-decoration-color: transparent; }
+    a:hover { text-decoration-color: var(--accent); }
+
+    strong { font-weight: 600; color: var(--ink); }
+    em { font-style: italic; }
+
+    /* ─── ARABIC INLINE ─────────────────────────────────── */
+    .ar {
+      font-family: var(--font-arabic);
+      font-size: 1.05em;
+      color: var(--accent2);
+      direction: rtl;
+      display: inline-block;
+    }
+
+    /* ─── PULL QUOTE ─────────────────────────────────────── */
+    blockquote {
+      margin: 2rem 0 2rem 2rem;
+      padding: 1.2rem 1.5rem;
+      border-left: 3px solid var(--gold);
+      background: var(--parchment2);
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.82rem;
+      font-style: normal;
+      color: var(--ink-muted);
+      font-family: var(--font-display);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 640px) {
+      blockquote { margin-left: 0; }
+    }
+
+    /* ─── CALLOUT BOXES ──────────────────────────────────── */
+    .callout {
+      background: var(--parchment2);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: 1.4rem 1.6rem;
+      margin: 2rem 0;
+      border-radius: 0 0 4px 4px;
+    }
+    .callout-label {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* ─── INFO CARD GRID ─────────────────────────────────── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .info-card {
+      background: var(--parchment2);
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.2rem;
+      border-radius: 4px;
+    }
+    .info-card-label {
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .info-card-value {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    /* ─── TABLES ─────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin: 1.8rem 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    thead tr {
+      background: var(--ink);
+      color: var(--parchment);
+    }
+    thead th {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+    tbody tr:nth-child(even) { background: var(--parchment2); }
+    tbody td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--ink-soft);
+    }
+    tbody td:first-child {
+      font-weight: 600;
+      color: var(--ink);
+    }
+    tbody td:nth-child(2) {
+      font-family: var(--font-arabic);
+      font-size: 1rem;
+      color: var(--accent2);
+      direction: rtl;
+    }
+
+    /* ─── SYSTEMS MAP ────────────────────────────────────── */
+    .systems-map {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: var(--ink);
+      border-radius: 6px;
+      color: var(--gold-pale);
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .map-node {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border: 1px solid rgba(201,168,87,0.3);
+      border-radius: 2px;
+      margin: 0.2rem;
+      font-style: italic;
+    }
+    .map-node.primary {
+      border-color: var(--gold);
+      color: var(--gold);
+      font-style: normal;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+    .map-arrow {
+      display: block;
+      color: rgba(201,168,87,0.5);
+      font-size: 1.2rem;
+      margin: 0.3rem 0;
+    }
+    .map-label {
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(201,168,87,0.6);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    /* ─── BIBLIOGRAPHY ───────────────────────────────────── */
+    .bib-section { margin-bottom: 2rem; }
+    .bib-section h4 {
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      font-style: normal;
+    }
+    .bib-list { list-style: none; }
+    .bib-list li {
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .bib-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+    .bib-list li strong { color: var(--ink); }
+    .bib-list li em { font-style: italic; }
+
+    /* ─── NUMBERED STATEMENTS ────────────────────────────── */
+    .statements-list {
+      list-style: none;
+      counter-reset: statement;
+    }
+    .statements-list li {
+      counter-increment: statement;
+      display: grid;
+      grid-template-columns: 2.2rem 1fr;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.75;
+    }
+    .statements-list li::before {
+      content: counter(statement, decimal-leading-zero);
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      padding-top: 0.28em;
+      line-height: 1;
+    }
+
+    /* ─── READING PATH ───────────────────────────────────── */
+    .stage-block {
+      border-left: 2px solid var(--gold-pale);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .stage-block::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 0.4rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .stage-num {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .stage-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+    .stage-list {
+      padding-left: 1.2rem;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+    .stage-list li { margin-bottom: 0.35rem; }
+
+    /* ─── GLOSSARY ───────────────────────────────────────── */
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .gloss-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      gap: 0.8rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+      font-size: 0.88rem;
+    }
+    .gloss-ar {
+      font-family: var(--font-arabic);
+      font-size: 1rem;
+      color: var(--accent2);
+      direction: rtl;
+      text-align: right;
+    }
+    .gloss-roman {
+      font-style: italic;
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+    .gloss-def { color: var(--ink-soft); }
+
+    @media (max-width: 560px) {
+      .gloss-item {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+      }
+      .gloss-def { grid-column: 1 / -1; padding-top: 0.2rem; }
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+    .footer-note {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1.5rem 2.5rem 2rem;
+      border-top: 1px solid var(--border);
+      line-height: 1.6;
+    }
+
+    /* ─── MOBILE ─────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 3.5rem 1.4rem 2rem; }
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      .article-header { padding: 0.5rem 1.2rem; }
+      .read-time { display: none; }
+      footer { padding: 1.5rem 1.4rem; }
+    }
+  
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="A Detailed Guide to His Life, Thought, Key Concepts, Major Works, and How to Study the Greatest Master of Islamic Mystical" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ibn ʿArabī: A Detailed Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-05-01",
+    "dateModified": "2026-05-01",
+  "url": "https://yasirbilgin.com/faith/islamic-intellectual-history/ibn-arabi.html",
+  "description": "A Detailed Guide to His Life, Thought, Key Concepts, Major Works, and How to Study the Greatest Master of Islamic Mystical"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Faith",
+      "item": "https://yasirbilgin.com/faith/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ibn ʿArabī: A Detailed Guide",
+      "item": "https://yasirbilgin.com/faith/islamic-intellectual-history/ibn-arabi.html"
+    }
+  ]
+}
+</script>
+
+
+  <!-- Progress bar -->
+  <div id="progressBar"></div>
+
+  <!-- TOC Overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close"
+              onclick="document.getElementById('tocOverlay').classList.remove('open')">
+        Close
+      </button>
+      <p class="toc-title">Table of Contents</p>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-main">I. Who Was Ibn ʿArabī?</a></li>
+        <li><a href="#s2" class="toc-main">II. Historical Context</a></li>
+        <li><a href="#s2-1" class="toc-sub">2.1 Al-Andalus</a></li>
+        <li><a href="#s2-2" class="toc-sub">2.2 Conversion & Early Mystical Life</a></li>
+        <li><a href="#s2-3" class="toc-sub">2.3 Journey to the East</a></li>
+        <li><a href="#s3" class="toc-main">III. Spiritual Formation & Teachers</a></li>
+        <li><a href="#s4" class="toc-main">IV. Major Works</a></li>
+        <li><a href="#s4-1" class="toc-sub">4.1 Al-Futūḥāt al-Makkiyya</a></li>
+        <li><a href="#s4-2" class="toc-sub">4.2 Fuṣūṣ al-Ḥikam</a></li>
+        <li><a href="#s4-3" class="toc-sub">4.3 Tarjumān al-Ashwāq</a></li>
+        <li><a href="#s4-4" class="toc-sub">4.4 Other Works</a></li>
+        <li><a href="#s5" class="toc-main">V. The Central Question</a></li>
+        <li><a href="#s6" class="toc-main">VI. Wujūd: Being & Existence</a></li>
+        <li><a href="#s7" class="toc-main">VII. Waḥdat al-Wujūd</a></li>
+        <li><a href="#s8" class="toc-main">VIII. The Divine Names</a></li>
+        <li><a href="#s9" class="toc-main">IX. Tanzīh & Tashbīh</a></li>
+        <li><a href="#s10" class="toc-main">X. Tajallī: Self-Disclosure</a></li>
+        <li><a href="#s11" class="toc-main">XI. Al-Insān al-Kāmil</a></li>
+        <li><a href="#s12" class="toc-main">XII. The Muhammadan Reality</a></li>
+        <li><a href="#s13" class="toc-main">XIII. Prophets in the Fuṣūṣ</a></li>
+        <li><a href="#s14" class="toc-main">XIV. Modes of Knowledge</a></li>
+        <li><a href="#s15" class="toc-main">XV. Al-Khayāl: The Imaginal Realm</a></li>
+        <li><a href="#s16" class="toc-main">XVI. Barzakh: The Isthmus</a></li>
+        <li><a href="#s17" class="toc-main">XVII. Love & Creation</a></li>
+        <li><a href="#s18" class="toc-main">XVIII. Sainthood: Walāya</a></li>
+        <li><a href="#s19" class="toc-main">XIX. Ibn ʿArabī & Islamic Law</a></li>
+        <li><a href="#s20" class="toc-main">XX. The Controversy</a></li>
+        <li><a href="#s21" class="toc-main">XXI. Religious Diversity</a></li>
+        <li><a href="#s22" class="toc-main">XXII. Qurʾānic Interpretation</a></li>
+        <li><a href="#s23" class="toc-main">XXIII. Legacy & Influence</a></li>
+        <li><a href="#s24" class="toc-main">XXIV. Key Concepts Glossary</a></li>
+        <li><a href="#s25" class="toc-main">XXV. How to Study Ibn ʿArabī</a></li>
+        <li><a href="#s26" class="toc-main">XXVI. Essential Bibliography</a></li>
+        <li><a href="#s27" class="toc-main">XXVII. The System Map</a></li>
+        <li><a href="#s28" class="toc-main">XXVIII. Core in 15 Statements</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Article sticky sub-header -->
+  
+
+  <!-- Hero -->
+  <section class="hero">
+      <div class="eyebrow">Faith · Islamic Intellectual History</div>
+    <span class="hero-ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+    <p class="hero-category">Islamic Thought &nbsp;·&nbsp; Sufi Metaphysics &nbsp;·&nbsp; Intellectual History</p>
+    <h1>Ibn ʿArabī</h1>
+    <span class="hero-arabic"><span lang="ar" dir="rtl">ابن عربي</span></span>
+    <p class="hero-sub">
+      A Detailed Guide to His Life, Thought, Key Concepts, Major Works,
+      and How to Study the Greatest Master of Islamic Mystical Philosophy
+    </p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">May 2026 &nbsp;·&nbsp; Research-based guide</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">~55 min read</span>
+      <button class="toc-btn"
+              onclick="document.getElementById('tocOverlay').classList.add('open')">
+        Contents
+      </button>
+</header>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <article class="article-body">
+
+    <!-- ─── I. WHO WAS IBN ʿARABĪ? ─────────────────────── -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>Who Was Ibn ʿArabī?</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-card-label">Full Name</span>
+          <p class="info-card-value">Abū ʿAbd Allāh Muḥammad ibn ʿAlī al-Ḥātimī al-Ṭāʾī</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-label">Born</span>
+          <p class="info-card-value">17 Ramaḍān 560 AH / 28 July 1165 CE, Murcia, al-Andalus</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-label">Died</span>
+          <p class="info-card-value">22 Rabīʿ al-Thānī 638 AH / 16 November 1240 CE, Damascus</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-label">Honorary Titles</span>
+          <p class="info-card-value">al-Shaykh al-Akbar &middot; Muḥyī al-Dīn</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-label">Works Attributed</span>
+          <p class="info-card-value">~850 attributed; ~700 authentic; ~400 extant (Chittick, citing Osman Yaḥyā)</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-label">Buried</span>
+          <p class="info-card-value">Banū Zakkī cemetery, Ṣāliḥiyya quarter, Qāsiyūn Hill, Damascus</p>
+        </div>
+      </div>
+
+      <p>
+        Ibn ʿArabī was simultaneously a mystic, metaphysician, Qurʾān interpreter, jurist, poet,
+        traveler, and spiritual teacher. His <em>nisba</em> al-Ḥātimī al-Ṭāʾī indicates descent from
+        the noble pre-Islamic Arab tribe of Ṭāʾī — a lineage his full name proudly declares.
+        After the birth of his son, he used the honorific <em>kunya</em> Abū ʿAbd Allāh.
+      </p>
+
+      <p>
+        He is often called <strong>al-Shaykh al-Akbar</strong> — "The Greatest Shaykh" — a title
+        bestowed by the Sufi tradition after his death, giving rise to the term <strong>Akbarism</strong>
+        for the school of thought his legacy generated. His other traditional honorific,
+        <strong>Muḥyī al-Dīn</strong> ("Reviver of Religion"), signals his role as a renewer of
+        Islamic spiritual and intellectual life.
+      </p>
+
+      <div class="callout">
+        <span class="callout-label">Scholarly Note</span>
+        <p>
+          <strong>William Chittick</strong> — one of the foremost modern authorities on Ibn ʿArabī —
+          argues he can be considered "the greatest of all Muslim philosophers" in the broad modern
+          sense. Notably, Ibn ʿArabī himself did not use the label "Sufi": his works range across
+          the entire gamut of Islamic sciences, from hadith and jurisprudence to theology, philosophy,
+          poetry, and mysticism, refusing to be contained by any single discipline.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── II. HISTORICAL CONTEXT ───────────────────────── -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>Historical and Intellectual Context</h2>
+
+      <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>Al-Andalus: The World He Came From</h3>
+      <p>
+        Ibn ʿArabī was born in the Taifa of Murcia and grew up in Seville — one of the great cultural
+        capitals of medieval Islam. His father, ʿAlī ibn Muḥammad, was an official in the army of the
+        ruler of Murcia, Ibn Mardanīsh, and later transferred allegiance to the Almohad ruler Abū
+        Yaʿqūb Yūsuf I, after which the family relocated to Seville.
+      </p>
+      <p>
+        The young Ibn ʿArabī grew up in court circles, received military training, and had early access
+        to the philosophical and religious elite of al-Andalus. The intellectual atmosphere he absorbed
+        included the Mālikī school of law, Ashʿarī theology, Neoplatonic philosophy, Arabic literary
+        culture, and Sufism represented by figures like <strong>Abū Madyan Shuʿayb</strong> (d. 1198),
+        the great North African saint.
+      </p>
+      <p>
+        It was in Córdoba — home of the great Andalusian philosopher — that around 1180, his father
+        arranged for him to meet the aging <strong>Ibn Rushd (Averroes)</strong>. The encounter is
+        famous: Ibn Rushd reportedly said after their meeting, <em>"A glory to God who has made me
+        live to see a man of this kind."</em> The story illustrates the tension between rational
+        philosophy (<em>falsafa</em>) and mystical disclosure (<em>kashf</em>) that Ibn ʿArabī would
+        spend his life navigating.
+      </p>
+
+      <h3 id="s2-2" class="sub-heading"><span class="sh-num">2.2</span>Conversion and Early Mystical Life</h3>
+      <p>
+        A pivotal event in Ibn ʿArabī's youth — likely when he was a teenager in Seville — was a
+        dramatic interior rupture. He describes being interrupted in the middle of a carefree social
+        gathering by a voice calling: <em>"O Muḥammad, it was not for this that you were created."</em>
+        In consternation he withdrew, spending days in seclusion in a graveyard. This marked the
+        beginning of his turn toward spiritual realization.
+      </p>
+      <p>
+        Shortly after, he received his first mystical vision (<em>fanāʾ</em>), which he later described
+        as <em>"the differentiation of the universal reality comprised by that look."</em> He subsequently
+        sought out Sufi masters across Andalusia and North Africa.
+      </p>
+
+      <h3 id="s2-3" class="sub-heading"><span class="sh-num">2.3</span>The Journey East</h3>
+      <p>
+        Ibn ʿArabī left al-Andalus for the last time in 1200 and never returned. His eastward journey
+        was a pilgrimage through the heart of the Islamic world:
+      </p>
+      <ul style="list-style:disc; padding-left:1.8rem; margin-bottom:1.1rem; color:var(--ink-soft); line-height:2;">
+        <li><strong>Mecca (1201–1204)</strong> — where he received what he understood as a divine commandment to write <em>al-Futūḥāt al-Makkiyya</em></li>
+        <li><strong>Egypt (1201)</strong></li>
+        <li><strong>Syria</strong> — Aleppo and Damascus (first visit 1206)</li>
+        <li><strong>Iraq</strong> — including Mosul</li>
+        <li><strong>Anatolia</strong> — Konya and Malatya (~1215), where he met his future stepson Ṣadr al-Dīn al-Qūnawī</li>
+        <li><strong>Damascus (1223)</strong> — final settlement, where he spent 17 years teaching, writing, and training disciples</li>
+      </ul>
+      <p>
+        He was buried in the Banū Zakkī cemetery on the slopes of Qāsiyūn Hill in Damascus's
+        Ṣāliḥiyya quarter — his tomb remains a place of pilgrimage and honor.
+      </p>
+    </section>
+
+    <!-- ─── III. SPIRITUAL FORMATION ─────────────────────── -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>Spiritual Formation and Teachers</h2>
+
+      <p>
+        Ibn ʿArabī documented his teachers in his autobiographical works, especially <em>Rūḥ al-Quds</em>
+        and <em>al-Durra al-Fākhira</em>, translated by R.W.J. Austin as <em>Sufis of Andalusia</em>.
+        His range of teachers — male and female, learned and unlettered, wealthy and destitute —
+        reflects his conviction that sainthood is not determined by gender, social status, or formal
+        credentials.
+      </p>
+
+      <p>
+        His first formal master was <strong>Abū Muḥammad al-ʿUryānī</strong>, an illiterate Sufi farmer
+        near Seville, who referred to Ibn ʿArabī as his spiritual son and pointed him toward the
+        legacy of Abū Madyan as the essential current of formation.
+      </p>
+
+      <blockquote>
+        The most extraordinary figure among his teachers was <strong>Fāṭima bint Ibn al-Muthannā of Córdoba</strong>
+        — a woman over ninety-five years old when they met. Ibn ʿArabī served her for approximately
+        two years, building her a small hut of reeds with his own hands. He called her his "divine mother"
+        — the only teacher in his entire life to whom he gave that designation. She told him:
+        <em>"I am your divine mother, and the light of your earthly mother."</em> He wrote of her:
+        <em>"Although she appeared so beautiful that one would have thought her a girl of fourteen…
+        she lived in constant contact with God."</em>
+        <cite>— Ibn ʿArabī, al-Futūḥāt al-Makkiyya</cite>
+      </blockquote>
+
+      <p>
+        Other key teachers included <strong>Abū ʿAlī al-Shakkāz</strong>, who introduced him to the
+        central texts of classical Sufism, and later — in Mecca — <strong>Niẓām bint Makīn al-Dīn</strong>,
+        the educated Persian girl whose beauty and spiritual depth became the inspiration for his
+        poetry collection <em>Tarjumān al-Ashwāq</em>.
+      </p>
+    </section>
+
+    <!-- ─── IV. MAJOR WORKS ───────────────────────────────── -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>Major Works</h2>
+
+      <h3 id="s4-1" class="sub-heading"><span class="sh-num">4.1</span>Al-Futūḥāt al-Makkiyya — The Meccan Openings</h3>
+      <div class="info-grid" style="margin-bottom:1.2rem;">
+        <div class="info-card"><span class="info-card-label">Begun</span><p class="info-card-value">Mecca, 1202–1203</p></div>
+        <div class="info-card"><span class="info-card-label">Completed</span><p class="info-card-value">Damascus, 1231; revised 1232–1238</p></div>
+        <div class="info-card"><span class="info-card-label">Chapters</span><p class="info-card-value">560</p></div>
+        <div class="info-card"><span class="info-card-label">Length</span><p class="info-card-value">~15,000–17,000 pages (modern edition)</p></div>
+      </div>
+      <p>
+        This is the largest and most comprehensive work in the entire history of Islamic mystical
+        thought. Ibn ʿArabī himself described it as a book <em>"dictated to my heart by the Lord
+        of the Worlds."</em> It covers cosmology, Qurʾānic interpretation, divine names, sainthood,
+        prophecy, ritual worship, metaphysics, ethics, spiritual psychology, and eschatology — and
+        contains extensive autobiographical material including descriptions of visions and encounters.
+      </p>
+      <p>
+        According to Michel Chodkiewicz, the <em>Futūḥāt</em> represents
+        <em>"the ultimate state of Ibn ʿArabī's teaching in its most complete form."</em>
+        Despite this, it was largely neglected by modern scholars in favor of the shorter
+        <em>Fuṣūṣ</em> until Chittick's major study <em>The Sufi Path of Knowledge</em> (1989)
+        began to open it systematically. Eric Winkel is presently engaged in the first complete
+        English translation.
+      </p>
+
+      <div class="callout">
+        <span class="callout-label">Note on Structure</span>
+        <p>
+          Chodkiewicz has shown that the <em>Futūḥāt</em>'s second major section on spiritual conduct
+          is rigorously structured on the classical <em>Risāla Qushayriyya</em> of al-Qushayrī —
+          the foundational text of classical Sufism — but systematically deepened and transformed.
+          This grounds Ibn ʿArabī's metaphysics firmly in the Sufi tradition he inherited.
+        </p>
+      </div>
+
+      <h3 id="s4-2" class="sub-heading"><span class="sh-num">4.2</span>Fuṣūṣ al-Ḥikam — The Bezels of Wisdom</h3>
+      <p>
+        Ibn ʿArabī states that in a vision he saw the Prophet Muḥammad ﷺ presenting him with this
+        book and commanding him to publish it. It was composed in Damascus in <strong>1229</strong>.
+        The title means "the bezels [settings] of wisdoms" — the way a bezel holds a gemstone and
+        brings out its luster.
+      </p>
+      <p>
+        Its <strong>27 chapters</strong> each present the wisdom unique to a specific prophet. Over
+        the six centuries following its composition, it attracted <strong>more than a hundred
+        commentaries</strong> in Arabic, Persian, and Turkish. Major commentators include Ṣadr
+        al-Dīn al-Qūnawī, ʿAbd al-Razzāq al-Qāshānī, Dāwūd al-Qayṣarī (especially influential
+        in Ottoman culture), Mullā Jāmī, and Ismāʿīl Ḥaqqī Bursevī.
+      </p>
+
+      <div class="callout">
+        <span class="callout-label">Critical Warning</span>
+        <p>
+          Scholars including Chittick and Addas have emphasized that the <em>Fuṣūṣ</em> represents
+          only a tiny fragment of Ibn ʿArabī's total teaching. Reading it without the <em>Futūḥāt</em>
+          risks serious distortion. It should never be read without a commentary.
+        </p>
+      </div>
+
+      <h3 id="s4-3" class="sub-heading"><span class="sh-num">4.3</span>Tarjumān al-Ashwāq — The Interpreter of Desires</h3>
+      <p>
+        Written around 1201–1215, this celebrated collection of mystical love poetry was inspired by
+        Ibn ʿArabī's encounter in Mecca with <strong>Niẓām</strong>, the learned daughter of his
+        friend Abū Shujāʿ ibn Rustam — described in the <em>Futūḥāt</em> as possessing both
+        outward beauty and spiritual depth.
+      </p>
+      <p>
+        When readers interpreted the poems as merely erotic, Ibn ʿArabī wrote a detailed commentary
+        (<em>sharḥ</em>) explaining the spiritual meaning behind the symbolic language. The figure
+        of Niẓām has often been compared to Dante's Beatrice — a human being of beauty and wisdom
+        who becomes an occasion for ascent toward divine knowledge.
+      </p>
+
+      <h3 id="s4-4" class="sub-heading"><span class="sh-num">4.4</span>Other Important Works</h3>
+      <ul style="list-style:none; padding:0;">
+        <li style="padding:0.6rem 0; border-bottom:1px solid var(--border);"><strong>Rūḥ al-Quds</strong> — Autobiographical account of saints he encountered in Andalusia and North Africa; trans. by R.W.J. Austin as <em>Sufis of Andalusia</em></li>
+        <li style="padding:0.6rem 0; border-bottom:1px solid var(--border);"><strong>ʿAnqāʾ Mughrib</strong> — Treatise on the Seal of Saints (<em>Khatm al-Awliyāʾ</em>); engages with Ḥakīm al-Tirmidhī's earlier doctrine</li>
+        <li style="padding:0.6rem 0; border-bottom:1px solid var(--border);"><strong>Inshāʾ al-Dawāʾir</strong> — Cosmological treatise using geometric diagrams to illustrate Being, divine names, and levels of existence</li>
+        <li style="padding:0.6rem 0; border-bottom:1px solid var(--border);"><strong>Kitāb al-Isrāʾ</strong> — Visionary account of a spiritual ascent modeled on the <em>miʿrāj</em>; trans. as <em>Journey to the Lord of Power</em></li>
+        <li style="padding:0.6rem 0;"><strong>Mashāhid al-Asrār</strong> — Mystical dialogues between the soul and God; among the most intimate of his shorter works</li>
+      </ul>
+    </section>
+
+    <!-- ─── V. CENTRAL QUESTION ───────────────────────────── -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>The Central Question</h2>
+
+      <blockquote>
+        How can there be only one absolute Reality, while the world appears as many distinct things?
+      </blockquote>
+
+      <p>
+        Islamic theology begins with <span class="ar"><span lang="ar" dir="rtl">لَا إِلَٰهَ إِلَّا ٱللَّٰهُ</span></span> —
+        <em>Lā ilāha illa Allāh</em> — "There is no god but God." For Ibn ʿArabī, this is not only
+        a creedal statement. It is the deepest metaphysical truth: there is only one absolute Being.
+      </p>
+      <p>
+        Yet we experience a world of multiplicity — different people, different events, different
+        qualities, different realms of existence. So the question becomes:
+        <strong>What is the relationship between the One and the many?</strong>
+      </p>
+      <p>
+        His entire metaphysical system is an extended answer to this question. It refuses both
+        simple monism (everything collapses into one undifferentiated mass) and simple dualism
+        (God and creation are two entirely separate realities). The answer lies in a third path:
+        one that takes both divine unity and the reality of multiplicity with full seriousness.
+      </p>
+    </section>
+
+    <!-- ─── VI. WUJŪD ─────────────────────────────────────── -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>Wujūd: Being, Existence, Finding</h2>
+
+      <p>
+        The most important concept in Ibn ʿArabī's thought is <strong>Wujūd</strong>
+        <span class="ar">(<span lang="ar" dir="rtl">وجود</span>)</span>. This Arabic word carries several related meanings
+        simultaneously: <em>existence</em> / <em>being</em> (ontological) and
+        <em>finding</em> / <em>presence</em> (experiential — the root <em>w-j-d</em> means to
+        find, encounter, or be present to something).
+      </p>
+      <p>
+        This double meaning is deliberate. For Ibn ʿArabī, to speak of God's Being is
+        simultaneously to speak of the experience of finding God. Metaphysics and mystical
+        experience are woven together from the very first concept.
+      </p>
+      <p>
+        His central claim: <strong>true and absolute Wujūd belongs only to God.</strong> Created
+        things do not possess independent existence — they exist only because God continuously
+        grants them existence. As he writes in the <em>Futūḥāt</em>, creation is like a shadow:
+        real, visible, and possessing form and character, but entirely dependent on what casts it
+        and the light that illuminates it.
+      </p>
+    </section>
+
+    <!-- ─── VII. WAḤDAT AL-WUJŪD ──────────────────────────── -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Section VII</span>
+      <h2>Waḥdat al-Wujūd: Unity of Being</h2>
+
+      <div class="callout">
+        <span class="callout-label">Crucial Fact</span>
+        <p>
+          Ibn ʿArabī <strong>never used the phrase <em>Waḥdat al-Wujūd</em> as a technical term</strong>
+          in his own writings. According to scholarly consensus, it was first attributed to him
+          polemically by <strong>Ibn Taymiyya</strong> (d. 1328). The term was then taken up
+          by defenders and became the standard label for his school — but it is a label coined
+          by others. William Chittick has analyzed <strong>seven distinct interpretations</strong>
+          of the phrase across Islamic intellectual history.
+        </p>
+      </div>
+
+      <p>
+        The core idea, properly understood, is:
+      </p>
+
+      <blockquote>
+        God alone truly and absolutely <em>is</em>. Everything else exists by receiving existence
+        from God — not by possessing it independently. Creation is real, but its reality is
+        borrowed, relational, and manifestational — not self-subsistent.
+      </blockquote>
+
+      <p>
+        This is <em>not</em> pantheism (the view that everything literally <em>is</em> God, or
+        that God is the sum of all things). It is not crude monism that denies the reality of
+        the world. Ibn ʿArabī uses two key images:
+      </p>
+      <ul style="list-style:disc; padding-left:1.8rem; margin-bottom:1.1rem; color:var(--ink-soft); line-height:2;">
+        <li><strong>Shadows:</strong> real, visible, possessing form — but with no independent existence apart from what casts them</li>
+        <li><strong>Mirrors:</strong> the image reflected is real and has form and color; yet it does not exist independently of the mirror, and the person reflected is neither identical to the image nor limited by it</li>
+      </ul>
+    </section>
+
+    <!-- ─── VIII. DIVINE NAMES ────────────────────────────── -->
+    <section id="s8" class="major-section">
+      <span class="section-label">Section VIII</span>
+      <h2>The Divine Names: Bridge Between God and World</h2>
+
+      <p>
+        One of Ibn ʿArabī's most important and practically consequential contributions is his
+        systematic treatment of the <strong>divine names</strong> (<em>al-Asmāʾ al-Ḥusnā</em>).
+        The Qurʾān affirms that God possesses beautiful names: al-Raḥmān (the Merciful), al-Ḥakīm
+        (the Wise), al-ʿAlīm (the All-Knowing), al-Nūr (the Light), and many others.
+      </p>
+      <p>
+        For Ibn ʿArabī, these names are not mere linguistic labels. They are <strong>real aspects
+        of divine reality that seek manifestation</strong>. Creation is therefore not accidental
+        or arbitrary — it is the <em>necessary self-disclosure</em> of the divine names. The cosmos
+        is the theater in which divine names become visible: mercy appears through merciful acts;
+        wisdom through order; beauty through forms; power through transformation; life through
+        living beings.
+      </p>
+
+      <h3 class="sub-heading" style="scroll-margin-top:130px;"><span class="sh-num">8.1</span>Al-Aʿyān al-Thābita: The Fixed Entities</h3>
+      <p>
+        A crucial related concept is the <strong>Aʿyān al-Thābita</strong> <span class="ar">(<span lang="ar" dir="rtl">الأعيان الثابتة</span>)</span>
+        — the "fixed entities" or "immutable archetypes." These are the <em>possibilities</em>
+        of things as they exist in divine knowledge <em>before</em> manifestation. Every creature
+        that comes into being had a prior "form" in God's knowledge — not as a created thing,
+        but as a possibility, a template.
+      </p>
+      <p>
+        Ibn ʿArabī says the fixed entities <em>"have never smelled a whiff of existence"</em> in
+        the external world — they exist purely within divine knowledge — yet they are the
+        archetypes according to which things come into being. This concept has been compared to
+        Platonic Forms, though for Ibn ʿArabī they reside within divine knowledge, not as
+        independent entities alongside God.
+      </p>
+    </section>
+
+    <!-- ─── IX. TANZĪH & TASHBĪH ──────────────────────────── -->
+    <section id="s9" class="major-section">
+      <span class="section-label">Section IX</span>
+      <h2>Tanzīh and Tashbīh: The Two Faces of Divine Knowledge</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-card-label">Tanzīh <span class="ar" style="font-size:0.9em;"><span lang="ar" dir="rtl">تنزيه</span></span></span>
+          <p class="info-card-value"><strong>Divine Transcendence / Incomparability.</strong> God is utterly beyond all form, limitation, direction, comparison, and category. "There is nothing like unto Him." (Qurʾān 42:11)</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-label">Tashbīh <span class="ar" style="font-size:0.9em;"><span lang="ar" dir="rtl">تشبيه</span></span></span>
+          <p class="info-card-value"><strong>Divine Nearness / Likeness through Names.</strong> God is also near. "We are nearer to him than his jugular vein." (Qurʾān 50:16). The divine names appear and act in the world.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:1.4rem;">
+        Ibn ʿArabī insists that <strong>theological error comes from one-sidedness</strong>:
+        exclusive <em>tanzīh</em> produces a God so remote as to be practically irrelevant —
+        a philosophical abstraction with no genuine relationship to the world; exclusive
+        <em>tashbīh</em> collapses God into creation, losing the absolute distinction between
+        Creator and creature.
+      </p>
+      <p>
+        The mature knower (<em>ʿārif</em>) holds both simultaneously. Ibn ʿArabī calls this
+        the "station of <em>lā, bal</em>" — "No, but": God is not like anything, <em>but</em>
+        He discloses Himself through everything.
+      </p>
+    </section>
+
+    <!-- ─── X. TAJALLĪ ────────────────────────────────────── -->
+    <section id="s10" class="major-section">
+      <span class="section-label">Section X</span>
+      <h2>Tajallī: Divine Self-Disclosure</h2>
+
+      <p>
+        <strong>Tajallī</strong> <span class="ar">(<span lang="ar" dir="rtl">تجلي</span>)</span> — from the root <em>j-l-w</em>,
+        to appear, become manifest, be revealed — is the technical term for the continuous process
+        by which God's names and qualities become visible through created beings and events.
+      </p>
+      <p>
+        This is not a one-time event (the original creation) but an <strong>ongoing,
+        moment-by-moment process</strong>. Ibn ʿArabī cites the Qurʾānic phrase
+        <em>"Every day He is in a new affair"</em> (55:29) to argue that divine self-disclosure
+        is never repeated. No two moments of creation are identical. The cosmos is constantly
+        renewed in a process of perpetual creative disclosure.
+      </p>
+
+      <h3>Levels of Tajallī</h3>
+      <ol style="padding-left:1.8rem; color:var(--ink-soft); line-height:2;">
+        <li>Self-disclosure in the divine names — the names disclose to the divine essence itself</li>
+        <li>Self-disclosure through imagination (<em>tajallī khayālī</em>) — manifestation in the intermediate realm</li>
+        <li>Self-disclosure in creation — the phenomenal world as locus of divine appearance</li>
+        <li>Self-disclosure in the heart of the saint — the most intimate form, when the purified heart becomes a mirror</li>
+      </ol>
+    </section>
+
+    <!-- ─── XI. AL-INSĀN AL-KĀMIL ─────────────────────────── -->
+    <section id="s11" class="major-section">
+      <span class="section-label">Section XI</span>
+      <h2>Al-Insān al-Kāmil: The Perfect Human Being</h2>
+
+      <p>
+        The Qurʾān states that God taught Adam <em>all the names</em> (2:31). For Ibn ʿArabī,
+        this is a metaphysical claim about human nature: the human being is constitutively capable
+        of reflecting <em>all</em> the divine names — unlike angels, animals, or any other creature,
+        which reflect only some. This makes the human being a <strong>microcosm</strong>
+        (<em>ʿālam ṣaghīr</em>): a small world containing the meanings of the entire cosmos.
+      </p>
+      <p>
+        The <strong>Perfect Human</strong> is the one who <em>actually realizes</em> what human
+        nature potentially contains: a complete, balanced, simultaneous reflection of all the
+        divine names. This does not mean becoming God — it means becoming the most complete
+        <em>servant and representative</em> (<em>khalīfa</em>), the being through whom all divine
+        names can shine without distortion or imbalance.
+      </p>
+
+      <blockquote>
+        The highest station for Ibn ʿArabī is <em>not</em> egoic union with God but
+        <strong>complete servanthood before God</strong> — the final realization that one is,
+        at every level, entirely dependent upon and transparent to divine Being.
+      </blockquote>
+
+      <p>
+        For Ibn ʿArabī, the Prophet Muḥammad ﷺ is the supreme historical and metaphysical
+        realization of this perfection — reflecting the divine names in the most complete,
+        balanced, comprehensive, and merciful way. The concept was later developed extensively
+        by <strong>ʿAbd al-Karīm al-Jīlī</strong> (d. c. 1428) in his dedicated treatise
+        <em>Al-Insān al-Kāmil</em>.
+      </p>
+    </section>
+
+    <!-- ─── XII. MUHAMMADAN REALITY ───────────────────────── -->
+    <section id="s12" class="major-section">
+      <span class="section-label">Section XII</span>
+      <h2>Al-Ḥaqīqa al-Muḥammadiyya: The Muhammadan Reality</h2>
+
+      <p>
+        <strong>Al-Ḥaqīqa al-Muḥammadiyya</strong> <span class="ar">(<span lang="ar" dir="rtl">الحقيقة المحمدية</span>)</span>
+        — the "Muhammadan Reality" or "Muhammadan Truth" — refers to the primordial spiritual
+        reality of the Prophet Muḥammad ﷺ, understood not only as a historical person but as the
+        deepest archetype of spiritual perfection: the first thing God created in terms of
+        meaning, the "light" from which creation unfolds.
+      </p>
+      <p>
+        This concept is connected to the famous hadith (whose chain of transmission is debated
+        by hadith scholars, though spiritually significant in Sufi thought):
+        <em>"I was a prophet when Adam was between clay and water"</em> — indicating that
+        prophetic reality precedes historical existence.
+      </p>
+      <p>
+        The Muhammadan Reality is associated with: divine mercy (<em>raḥma</em>) as the Prophet's
+        primary quality; cosmic mediation between God and creation; the integration of all
+        prophetic wisdoms; and the full realization of human potentiality. This concept became
+        enormously influential in later Ottoman, Persian, and Indian Sufi thought, shaping
+        traditions of prophetic devotion (<em>mawlid</em>) and spiritual path.
+      </p>
+    </section>
+
+    <!-- ─── XIII. PROPHETS IN FUṢŪṢ ──────────────────────── -->
+    <section id="s13" class="major-section">
+      <span class="section-label">Section XIII</span>
+      <h2>The Prophets as Forms of Wisdom in the Fuṣūṣ al-Ḥikam</h2>
+
+      <p>
+        The <em>Fuṣūṣ al-Ḥikam</em> presents each prophet as the vehicle of a specific
+        <em>ḥikma</em> (wisdom) — a unique configuration of divine self-disclosure. The following
+        table presents the full structure of the book's 27 chapters:
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Prophet</th>
+              <th>Arabic</th>
+              <th>Wisdom Title</th>
+              <th>Core Theme</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Adam</td><td><span lang="ar" dir="rtl">آدم</span></td><td>Ḥikmat Ilāhiyya — Divine Wisdom</td><td>Comprehensiveness; receiving all the names</td></tr>
+            <tr><td>Shīth (Seth)</td><td><span lang="ar" dir="rtl">شيث</span></td><td>Ḥikmat Nafthiyya — Breath Wisdom</td><td>Gifts of divine bestowing; spiritual donation</td></tr>
+            <tr><td>Nūḥ (Noah)</td><td><span lang="ar" dir="rtl">نوح</span></td><td>Ḥikmat Subḥiyya — Transcendence Wisdom</td><td>The paradox of calling people who flee; divine holiness</td></tr>
+            <tr><td>Idrīs (Enoch)</td><td><span lang="ar" dir="rtl">إدريس</span></td><td>Ḥikmat Quddūsiyya — Holiness Wisdom</td><td>Elevation and sanctification; the station of nearness</td></tr>
+            <tr><td>Ibrāhīm (Abraham)</td><td><span lang="ar" dir="rtl">إبراهيم</span></td><td>Ḥikmat Mūsawiyya — Intimacy Wisdom</td><td>Khalīl Allāh — Friend of God; hospitality</td></tr>
+            <tr><td>Isḥāq (Isaac)</td><td><span lang="ar" dir="rtl">إسحاق</span></td><td>Ḥikmat Ḥaqqiyya — Real Wisdom</td><td>The truth of prophecy; genuine knowing</td></tr>
+            <tr><td>Ismāʿīl (Ishmael)</td><td><span lang="ar" dir="rtl">إسماعيل</span></td><td>Ḥikmat ʿĀliyya — Exalted Wisdom</td><td>Faithfulness to divine command; surrender</td></tr>
+            <tr><td>Yaʿqūb (Jacob)</td><td><span lang="ar" dir="rtl">يعقوب</span></td><td>Ḥikmat Rūḥiyya — Spirit Wisdom</td><td>Visionary seeing; the spirit's knowledge</td></tr>
+            <tr><td>Yūsuf (Joseph)</td><td><span lang="ar" dir="rtl">يوسف</span></td><td>Ḥikmat Nūriyya — Light Wisdom</td><td>Beauty, dream interpretation, appearance and reality</td></tr>
+            <tr><td>Hūd</td><td><span lang="ar" dir="rtl">هود</span></td><td>Ḥikmat Aḥadiyya — Unity Wisdom</td><td>The return of all things to One</td></tr>
+            <tr><td>Ṣāliḥ</td><td><span lang="ar" dir="rtl">صالح</span></td><td>Ḥikmat Fatḥiyya — Opening Wisdom</td><td>Divine sign and its rejection; the camel</td></tr>
+            <tr><td>Lūṭ (Lot)</td><td><span lang="ar" dir="rtl">لوط</span></td><td>Ḥikmat Qalbiyya — Heart Wisdom</td><td>Insight and turning; the knowing heart</td></tr>
+            <tr><td>ʿUzayr (Ezra)</td><td><span lang="ar" dir="rtl">عزير</span></td><td>Ḥikmat Jalāliyya — Majesty Wisdom</td><td>Divine majesty; the resurrection of the dead</td></tr>
+            <tr><td>ʿĪsā (Jesus)</td><td><span lang="ar" dir="rtl">عيسى</span></td><td>Ḥikmat Nabawiyya — Prophetic Wisdom</td><td>Spirit, breath, life-giving power; the Word of God</td></tr>
+            <tr><td>Sulaymān (Solomon)</td><td><span lang="ar" dir="rtl">سليمان</span></td><td>Ḥikmat Raḥmāniyya — Merciful Wisdom</td><td>Divine sovereignty over all realms; governance</td></tr>
+            <tr><td>Dāwūd (David)</td><td><span lang="ar" dir="rtl">داود</span></td><td>Ḥikmat Wujūdiyya — Existential Wisdom</td><td>The vicegerent of God on earth; the khalīfa</td></tr>
+            <tr><td>Yūnus (Jonah)</td><td><span lang="ar" dir="rtl">يونس</span></td><td>Ḥikmat Ghayabiyya — Unseen Wisdom</td><td>Concealment and return; the belly of the whale</td></tr>
+            <tr><td>Ayyūb (Job)</td><td><span lang="ar" dir="rtl">أيوب</span></td><td>Ḥikmat Ghayabiyya — Wisdom of Affliction</td><td>Patience, affliction, and divine nearness</td></tr>
+            <tr><td>Yaḥyā (John)</td><td><span lang="ar" dir="rtl">يحيى</span></td><td>Ḥikmat Malakiyya — Angelic Wisdom</td><td>Virginal purity; life in service of divine command</td></tr>
+            <tr><td>Zakariyyā (Zechariah)</td><td><span lang="ar" dir="rtl">زكريا</span></td><td>Ḥikmat Malakiyya — Angelic Wisdom</td><td>Prayer in the night; asking without words</td></tr>
+            <tr><td>Ilyās (Elias)</td><td><span lang="ar" dir="rtl">إلياس</span></td><td>Ḥikmat Ūnusiyya — Intimacy Wisdom</td><td>Nearness through awe; the intimate companion</td></tr>
+            <tr><td>Luqmān</td><td><span lang="ar" dir="rtl">لقمان</span></td><td>Ḥikmat Iḥsāniyya — Excellence Wisdom</td><td>Practical wisdom and gratitude</td></tr>
+            <tr><td>Hārūn (Aaron)</td><td><span lang="ar" dir="rtl">هارون</span></td><td>Ḥikmat Imāmiyya — Leadership Wisdom</td><td>Spiritual leadership; the supportive role</td></tr>
+            <tr><td>Mūsā (Moses)</td><td><span lang="ar" dir="rtl">موسى</span></td><td>Ḥikmat ʿUlwiyya — Exalted Wisdom</td><td>Direct divine speech, the law, divine encounter</td></tr>
+            <tr><td>Khālid</td><td><span lang="ar" dir="rtl">خالد</span></td><td>Ḥikmat Ghayabiyya — Hidden Wisdom</td><td>Hidden realities; the concealed saint</td></tr>
+            <tr><td>Muḥammad ﷺ</td><td><span lang="ar" dir="rtl">محمد</span></td><td>Ḥikmat Fardiyya — Singular Wisdom</td><td>Totality, uniqueness, comprehensive integration of all wisdoms</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        The chapter on Muḥammad ﷺ is placed last — itself meaningful. He represents the
+        completion and integration of all the wisdoms that preceded him, the bezel that holds
+        all the gems together.
+      </p>
+    </section>
+
+    <!-- ─── XIV. MODES OF KNOWLEDGE ───────────────────────── -->
+    <section id="s14" class="major-section">
+      <span class="section-label">Section XIV</span>
+      <h2>Modes of Knowledge: ʿAql, Naql, and Kashf</h2>
+
+      <h3>ʿAql — Reason</h3>
+      <p>
+        Rational inquiry is valid and valuable. Ibn ʿArabī engages philosophically with Islamic
+        theology (<em>kalām</em>) and Aristotelian philosophy (<em>falsafa</em>). But reason is
+        structurally limited: it operates through concepts, distinctions, and categories — none
+        of which can encompass God's infinite, non-categorical reality.
+      </p>
+
+      <h3>Naql — Transmitted Knowledge</h3>
+      <p>
+        The Qurʾān and Sunna are foundational. The <em>Futūḥāt</em> is saturated with Qurʾānic
+        exegesis. Ibn ʿArabī does not see mystical knowledge as separate from or superior to
+        revelation. Revelation is the primary frame; mystical insight illuminates its depths
+        without contradicting its surface. Any unveiling that contradicts clear revelation cannot
+        be trusted.
+      </p>
+
+      <h3>Kashf and Dhawq — Unveiling and Tasting</h3>
+      <p>
+        <strong>Kashf</strong> (unveiling) is direct disclosure when veils of habitual perception
+        are lifted and deeper realities become visible to the heart.
+        <strong>Dhawq</strong> (tasting) is its direct experiential dimension — you do not
+        merely know <em>about</em> something; you taste it, encounter it immediately.
+      </p>
+
+      <h3>Taḥqīq — Realization</h3>
+      <p>
+        The highest form of knowledge for Ibn ʿArabī is <strong>Taḥqīq</strong> — "realization,"
+        from the root <em>ḥaqq</em> (truth/reality). The <em>muḥaqqiq</em> (realizer) is not
+        merely someone who knows <em>about</em> God intellectually, or who has had occasional
+        mystical experiences, but one who has become stably and genuinely grounded in the Real.
+        The Stanford Encyclopedia of Philosophy identifies this as one of the most distinctive
+        aspects of Ibn ʿArabī's epistemology.
+      </p>
+    </section>
+
+    <!-- ─── XV. AL-KHAYĀL ─────────────────────────────────── -->
+    <section id="s15" class="major-section">
+      <span class="section-label">Section XV</span>
+      <h2>Al-Khayāl: The Imaginal Realm</h2>
+
+      <p>
+        Among Ibn ʿArabī's most original contributions is his systematic theory of the
+        <strong>Imaginal Realm</strong> (<em>ʿĀlam al-Khayāl</em> / <em>ʿĀlam al-Mithāl</em>).
+        In ordinary usage, "imagination" denotes something unreal. For Ibn ʿArabī, imagination
+        is an <strong>ontological category</strong> — a real level of existence intermediate
+        between the purely spiritual and the purely material.
+      </p>
+
+      <div class="info-grid" style="margin:1.5rem 0;">
+        <div class="info-card">
+          <span class="info-card-label">ʿĀlam al-Arwāḥ</span>
+          <p class="info-card-value">World of Spirits — pure intelligences; no form</p>
+        </div>
+        <div class="info-card" style="border-top:2px solid var(--gold);">
+          <span class="info-card-label">ʿĀlam al-Khayāl / al-Mithāl</span>
+          <p class="info-card-value"><strong>The Imaginal World</strong> — meanings take form; forms carry meaning. The real intermediate realm.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-label">ʿĀlam al-Ajsām</span>
+          <p class="info-card-value">World of Bodies — matter; sensory reality</p>
+        </div>
+      </div>
+
+      <p>
+        The Imaginal World is the domain of dreams (which Ibn ʿArabī takes with full seriousness
+        as modes of knowledge), prophetic visions, angelic appearances, religious symbols, and
+        the revelatory imagination. The French scholar <strong>Henry Corbin</strong> (d. 1978)
+        devoted much of his career to this concept, coining the term <em>mundus imaginalis</em>
+        to distinguish it from mere subjective "imagination" — and seeing it as one of Ibn ʿArabī's
+        most significant contributions to world philosophy.
+      </p>
+    </section>
+
+    <!-- ─── XVI. BARZAKH ──────────────────────────────────── -->
+    <section id="s16" class="major-section">
+      <span class="section-label">Section XVI</span>
+      <h2>Barzakh: The Isthmus</h2>
+
+      <p>
+        <strong>Barzakh</strong> <span class="ar">(<span lang="ar" dir="rtl">برزخ</span>)</span> literally means "barrier" or
+        "isthmus" — the narrow land between two seas. In the Qurʾān, it refers to the
+        intermediate state between death and resurrection. For Ibn ʿArabī, <em>barzakh</em>
+        becomes a crucial philosophical principle: it names <strong>any reality that stands
+        between two things, partaking of both without being fully either</strong> — the
+        principle of the mediating middle.
+      </p>
+
+      <p>Examples of <em>barzakh</em> in Ibn ʿArabī's thought:</p>
+      <ul style="list-style:disc; padding-left:1.8rem; margin-bottom:1.1rem; color:var(--ink-soft); line-height:2;">
+        <li>The Imaginal World — between spirit and body</li>
+        <li>The human being — between God and cosmos</li>
+        <li>The Prophet — between God and humanity</li>
+        <li>The heart — between outward body and inward spirit</li>
+        <li>The divine names — between God's essence and created things</li>
+      </ul>
+
+      <p>
+        Scholar Salman Bashier has argued that Ibn ʿArabī's concept of <em>barzakh</em> offers
+        a viable philosophical solution to the problem of defining the indefinable — the challenge
+        that has dogged Western epistemology from Aristotle through modern philosophy.
+      </p>
+    </section>
+
+    <!-- ─── XVII. LOVE ────────────────────────────────────── -->
+    <section id="s17" class="major-section">
+      <span class="section-label">Section XVII</span>
+      <h2>Love and Creation</h2>
+
+      <p>
+        For Ibn ʿArabī, <strong>love</strong> (<em>maḥabba / ʿishq</em>) is not merely an
+        emotion or a metaphor. It is a metaphysical force — the engine of creation itself.
+      </p>
+
+      <blockquote>
+        <em>"I was a hidden treasure and loved to be known, so I created creation."</em>
+        <cite>— Sacred tradition (<em>ḥadīth qudsī</em>) widely cited in Sufi thought.
+        Note: its chain of transmission is debated by hadith scholars; Ibn ʿArabī was
+        aware of this debate but employed it as a spiritual principle.</cite>
+      </blockquote>
+
+      <p>
+        The dynamic Ibn ʿArabī describes: beauty awakens longing; longing motivates search;
+        search produces sustained attention and contemplation; contemplation — when the heart
+        is polished — opens into <em>kashf</em>; unveiling leads to recognition of the divine
+        names in what was previously only seen as a beautiful face or a passing joy.
+      </p>
+      <p>
+        This is why the love poetry of <em>Tarjumān al-Ashwāq</em> is not merely decorative.
+        It is <strong>epistemological</strong> — an account of how love functions as a genuine
+        path to knowledge of God.
+      </p>
+    </section>
+
+    <!-- ─── XVIII. SAINTHOOD ──────────────────────────────── -->
+    <section id="s18" class="major-section">
+      <span class="section-label">Section XVIII</span>
+      <h2>Sainthood: Walāya</h2>
+
+      <p>
+        Ibn ʿArabī wrote more extensively on <strong>sainthood</strong> (<em>walāya</em>) than
+        perhaps any other figure in Islamic history. His <em>ʿAnqāʾ Mughrib</em> and large
+        sections of the <em>Futūḥāt</em> are devoted to it.
+      </p>
+      <p>
+        A <em>walī</em> (saint / friend of God) achieves nearness to God through complete trust,
+        purification of character, realization of divine names, and spiritual inheritance from
+        the prophets. Sainthood is not primarily about miracles (<em>karāmāt</em>), though
+        miracles may accompany it. Its essence is nearness, knowledge, and surrender.
+      </p>
+
+      <h3>The Seal of Saints</h3>
+      <p>
+        Among Ibn ʿArabī's most controversial claims — made in <em>ʿAnqāʾ Mughrib</em> — is
+        his identification of himself as the <strong>Seal of Muḥammadan Saints</strong>
+        (<em>Khātam al-Awliyāʾ al-Muḥammadiyyīn</em>): the one who brings a certain type of
+        sainthood to its consummation, as the Prophet Muḥammad ﷺ sealed prophethood.
+      </p>
+
+      <h3>The Spiritual Hierarchy</h3>
+      <p>Ibn ʿArabī describes an elaborate hierarchy of saints who govern the cosmos spiritually:</p>
+      <ul style="list-style:disc; padding-left:1.8rem; color:var(--ink-soft); line-height:2;">
+        <li><strong>Quṭb</strong> (Pole) — the axis of the spiritual hierarchy at any given time</li>
+        <li><strong>Awtād</strong> (Stakes/Pillars) — four saints oriented to the cardinal directions</li>
+        <li><strong>Abdāl</strong> (Substitutes) — seven saints associated with the seven climes</li>
+        <li><strong>Nuqabāʾ</strong> (Representatives) — twelve saints</li>
+        <li><strong>Nujabāʾ</strong> (Notables) — eight saints</li>
+      </ul>
+      <p>
+        This cosmological-spiritual hierarchy became a standard framework in later Sufi thought
+        across the Ottoman, Persian, and Indian traditions.
+      </p>
+    </section>
+
+    <!-- ─── XIX. IBN ʿARABĪ & LAW ─────────────────────────── -->
+    <section id="s19" class="major-section">
+      <span class="section-label">Section XIX</span>
+      <h2>Ibn ʿArabī and Islamic Law</h2>
+
+      <p>
+        A persistent misunderstanding is that Ibn ʿArabī's mysticism bypasses or transcends
+        Islamic law (<em>Sharīʿa</em>). His own writings contradict this at every turn.
+        He wrote extensive chapters in the <em>Futūḥāt</em> on the inner dimensions of every
+        act of Islamic worship — prayer, fasting, pilgrimage, purity, remembrance.
+      </p>
+      <p>
+        His view: the <em>Sharīʿa</em> is the outer form; the <em>Ḥaqīqa</em> (Reality) is
+        the inner meaning. But the form is not discarded once the meaning is grasped —
+        the <strong>form becomes more meaningful, not irrelevant</strong>. He explicitly
+        criticized those who use mystical "realization" as an excuse to abandon religious
+        obligation.
+      </p>
+
+      <div class="callout">
+        <span class="callout-label">On His Legal School</span>
+        <p>
+          Ibn ʿArabī stated on multiple occasions that he did not rigidly follow any single
+          <em>madhhab</em>. He was known to copy and preserve books of the <strong>Ẓāhirī
+          school</strong> (the literalist approach of Ibn Ḥazm and Dāwūd al-Ẓāhirī).
+          Prominent scholars including Claude Addas and Michel Chodkiewicz argue he was not
+          formally affiliated with any school.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── XX. CONTROVERSY ───────────────────────────────── -->
+    <section id="s20" class="major-section">
+      <span class="section-label">Section XX</span>
+      <h2>The Controversy: Critics and Defenders</h2>
+
+      <h3 class="sub-heading" style="scroll-margin-top:130px;"><span class="sh-num">20.1</span>Major Critics</h3>
+
+      <p>
+        <strong>Ibn Taymiyya (d. 1328)</strong> was the most influential early critic. He coined
+        the term <em>Waḥdat al-Wujūd</em> as a label for what he understood as Ibn ʿArabī's
+        pantheism, subjecting the <em>Fuṣūṣ</em> and parts of the <em>Futūḥāt</em> to detailed
+        criticism. Modern scholars note that Ibn Taymiyya's reading focused on the
+        <em>tashbīh</em> dimension while ignoring the extensive <em>tanzīh</em> framework
+        that balances it.
+      </p>
+      <p>
+        <strong>Aḥmad Sirhindī (d. 1624)</strong>, the great Naqshbandī master, developed his
+        own alternative doctrine of <strong>Waḥdat al-Shuhūd</strong> (Unity of Witnessing)
+        as a response — arguing that the experienced unity in the mystic's vision does not
+        entail an ontological identity between God and creation. Despite his critique, he
+        treated Ibn ʿArabī with notable respect.
+      </p>
+      <p>
+        <strong>Ibn Khaldūn (d. 1406)</strong> was suspicious of the entire Sufi metaphysical
+        tradition in his <em>Muqaddima</em>. <strong>ʿAlāʾ al-Dawla al-Simnānī</strong>
+        (d. 1336), himself a Sufi master, was among the sharpest internal Sufi critics.
+      </p>
+
+      <h3 class="sub-heading" style="scroll-margin-top:130px;"><span class="sh-num">20.2</span>Major Defenders</h3>
+      <p>
+        <strong>Ṣadr al-Dīn al-Qūnawī</strong> (d. 1274) — stepson and primary transmitter,
+        who initiated a famous correspondence with the philosopher Naṣīr al-Dīn al-Ṭūsī.
+        <strong>Jalāl al-Dīn al-Suyūṭī</strong> (d. 1505) wrote formal defenses.
+        <strong>ʿAbd al-Raʾūf al-Munāwī</strong> (d. 1621) called him <em>"the imam of the
+        people of sharīʿa in knowledge and practice."</em> The Ottoman state and intellectual
+        establishment were broadly favorable; Sultan Selim I (r. 1512–1520) is said to have
+        built a shrine over his Damascus tomb.
+      </p>
+
+      <div class="callout">
+        <span class="callout-label">Modern Controversy</span>
+        <p>
+          In <strong>1979</strong>, the Egyptian parliament attempted to ban the republication
+          of <em>Al-Futūḥāt al-Makkiyya</em>. The attempt failed due to public outcry —
+          a measure of how deeply his legacy continues to provoke both devotion and opposition.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── XXI. RELIGIOUS DIVERSITY ─────────────────────── -->
+    <section id="s21" class="major-section">
+      <span class="section-label">Section XXI</span>
+      <h2>Ibn ʿArabī and Religious Diversity</h2>
+
+      <p>
+        Some modern readers — particularly those influenced by perennialist philosophy —
+        present Ibn ʿArabī as a proto-universalist who affirms all religions as equally valid
+        paths. Careful scholarship (Chittick's <em>Imaginal Worlds</em>; Lipton's
+        <em>Rethinking Ibn ʿArabī</em>) shows this to be an anachronistic over-reading.
+      </p>
+      <p>
+        A more accurate account: Ibn ʿArabī remained deeply and explicitly committed to Islam
+        as the most complete <em>dīn</em>; he affirmed that the revelation of Islam abrogated
+        previous revelations; he believed that people in other traditions worship real aspects
+        of divine reality, but through forms that are incomplete or have been superseded.
+      </p>
+      <p>
+        His famous verse — <em>"My heart is a pasture for gazelles, a monastery for monks,
+        a temple for idols, the Kaʿba of the pilgrim…"</em> — is a mystical statement about
+        the universality of the <strong>heart's capacity for divine disclosure</strong>, not
+        a theological claim that all religious practices are equally valid. He is not a
+        secular pluralist; he is a metaphysical Sufi Muslim.
+      </p>
+    </section>
+
+    <!-- ─── XXII. QURʾĀNIC INTERPRETATION ────────────────── -->
+    <section id="s22" class="major-section">
+      <span class="section-label">Section XXII</span>
+      <h2>Ibn ʿArabī's Method of Qurʾānic Interpretation</h2>
+
+      <p>
+        The <em>Futūḥāt</em> is saturated with Qurʾānic interpretation. Ibn ʿArabī explicitly
+        states that all his knowledge comes from the Qurʾān. His interpretive approach operates
+        at multiple levels simultaneously:
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Level</th><th>Arabic</th><th>Nature</th></tr></thead>
+          <tbody>
+            <tr><td>Ẓāhir</td><td class="ar"><span lang="ar" dir="rtl">ظاهر</span></td><td>Outward / literal — the verse means what its Arabic says; never denied</td></tr>
+            <tr><td>Bāṭin</td><td class="ar"><span lang="ar" dir="rtl">باطن</span></td><td>Inward / spiritual — dimensions accessible through purified contemplation</td></tr>
+            <tr><td>Ḥadd</td><td class="ar"><span lang="ar" dir="rtl">حد</span></td><td>Limit — the verse delimits certain actions and understandings</td></tr>
+            <tr><td>Maṭlaʿ</td><td class="ar"><span lang="ar" dir="rtl">مطلع</span></td><td>Rising point — the verse points toward divine address transcending its explicit content</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        His interpretive practice is always constrained by external legal meaning and scholarly
+        tradition. He never uses inner meaning to override outer rulings. He draws on the
+        hadith tradition that the Qurʾān has seven (or more) inner dimensions of meaning —
+        a hermeneutical principle he applies with extraordinary range and consistency.
+      </p>
+    </section>
+
+    <!-- ─── XXIII. LEGACY ─────────────────────────────────── -->
+    <section id="s23" class="major-section">
+      <span class="section-label">Section XXIII</span>
+      <h2>Legacy and Influence</h2>
+
+      <p>
+        Ibn ʿArabī's teachings spread throughout the Islamic world within a century of his death,
+        through his disciples, commentaries on the <em>Fuṣūṣ</em>, and the translation and
+        adaptation of his ideas into Persian, Turkish, and Urdu literature.
+      </p>
+
+      <h3>Key Figures Shaped by His Thought</h3>
+      <ul style="list-style:disc; padding-left:1.8rem; margin-bottom:1.1rem; color:var(--ink-soft); line-height:2;">
+        <li><strong>Ṣadr al-Dīn al-Qūnawī</strong> (d. 1274) — stepson; systematized his teachings; corresponded with Naṣīr al-Dīn al-Ṭūsī</li>
+        <li><strong>Fakhr al-Dīn ʿIrāqī</strong> (d. 1289) — translated Ibn ʿArabī's ideas into glorious Persian verse (<em>Lamaʿāt</em>)</li>
+        <li><strong>Dāwūd al-Qayṣarī</strong> (d. 1350) — major Ottoman commentator on <em>Fuṣūṣ</em>; his introduction became a standard text</li>
+        <li><strong>ʿAbd al-Karīm al-Jīlī</strong> (d. c. 1428) — developed the <em>Insān al-Kāmil</em> concept into a full treatise</li>
+        <li><strong>Nūr al-Dīn Jāmī</strong> (d. 1492) — greatest Persian poet to systematize Akbarian thought</li>
+        <li><strong>Ismāʿīl Ḥaqqī Bursevī</strong> (d. 1725) — major Ottoman interpreter and commentator</li>
+        <li><strong>Mullā Ṣadrā</strong> (d. 1636) — Shīʿī philosopher whose ontology engages significantly with Ibn ʿArabī's Wujūd</li>
+      </ul>
+
+      <h3>The Chinese Han Kitab School</h3>
+      <p>
+        During the 18th and 19th centuries, Chinese Muslims established the
+        <strong>Han Kitab</strong> school — a body of Chinese-language Islamic scholarship
+        that drew from Ibn ʿArabī's legacy and presented Islamic metaphysics in terms drawn
+        from Confucian thought, documented by Sachiko Murata and others.
+      </p>
+
+      <h3>Modern Scholarly Engagement</h3>
+      <p>
+        Western scholarly engagement with Ibn ʿArabī is relatively recent. Key figures:
+      </p>
+      <ul style="list-style:disc; padding-left:1.8rem; margin-bottom:1.1rem; color:var(--ink-soft); line-height:2;">
+        <li><strong>Henry Corbin</strong> (d. 1978) — <em>Creative Imagination in the Sufism of Ibn Arabi</em> (1958/1969): first major Western philosophical engagement</li>
+        <li><strong>Toshihiko Izutsu</strong> (d. 1993) — <em>Sufism and Taoism</em> (1966): landmark comparative study</li>
+        <li><strong>William Chittick</strong> — <em>The Sufi Path of Knowledge</em> (1989) and <em>The Self-Disclosure of God</em> (1998): the most comprehensive modern scholarly account</li>
+        <li><strong>Claude Addas</strong> — <em>Quest for the Red Sulphur</em> (1993): the definitive modern biography</li>
+        <li><strong>Michel Chodkiewicz</strong> — <em>Seal of the Saints</em> (1993): on Ibn ʿArabī's doctrine of sainthood</li>
+      </ul>
+      <p>
+        The <strong>Muhyiddin Ibn ʿArabī Society</strong>, founded in 1977 and publishing its
+        <em>Journal</em> since 1983, has been the primary institutional center for scholarly
+        engagement in the English-speaking world.
+      </p>
+    </section>
+
+    <!-- ─── XXIV. GLOSSARY ────────────────────────────────── -->
+    <section id="s24" class="major-section">
+      <span class="section-label">Section XXIV</span>
+      <h2>Key Concepts Glossary</h2>
+
+      <div class="glossary-grid">
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">وجود</span></span><span class="gloss-roman">Wujūd</span><span class="gloss-def">Being, existence, finding; the most fundamental concept in Ibn ʿArabī's metaphysics</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">وحدة الوجود</span></span><span class="gloss-roman">Waḥdat al-Wujūd</span><span class="gloss-def">Unity of Being; label for his school coined by others, not by him</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">تجلي</span></span><span class="gloss-roman">Tajallī</span><span class="gloss-def">Divine self-disclosure; the continuous manifestation of names in creation</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">تنزيه</span></span><span class="gloss-roman">Tanzīh</span><span class="gloss-def">Declaring God beyond all likeness; divine transcendence and incomparability</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">تشبيه</span></span><span class="gloss-roman">Tashbīh</span><span class="gloss-def">Affirming divine nearness and disclosure through names; divine immanence</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">معرفة</span></span><span class="gloss-roman">Maʿrifa</span><span class="gloss-def">Direct spiritual knowing; gnosis; knowing through transformed awareness</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">كشف</span></span><span class="gloss-roman">Kashf</span><span class="gloss-def">Unveiling; when veils of ordinary perception are lifted from the heart</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">ذوق</span></span><span class="gloss-roman">Dhawq</span><span class="gloss-def">Tasting; direct experiential knowledge; immediate encounter with reality</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">خيال</span></span><span class="gloss-roman">Khayāl</span><span class="gloss-def">Imagination; the real intermediate ontological realm between spirit and body</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">الإنسان الكامل</span></span><span class="gloss-roman">Al-Insān al-Kāmil</span><span class="gloss-def">The Perfect Human; the one who fully and balancedly reflects all divine names</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">ولاية</span></span><span class="gloss-roman">Walāya / Wilāya</span><span class="gloss-def">Sainthood; friendship with God; nearness, knowledge, and surrender</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">الحقيقة المحمدية</span></span><span class="gloss-roman">Al-Ḥaqīqa al-Muḥammadiyya</span><span class="gloss-def">The Muhammadan Reality; the primordial prophetic archetype</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">الأعيان الثابتة</span></span><span class="gloss-roman">Al-Aʿyān al-Thābita</span><span class="gloss-def">Fixed entities; archetypal possibilities existing in divine knowledge before manifestation</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">برزخ</span></span><span class="gloss-roman">Barzakh</span><span class="gloss-def">Isthmus; any mediating intermediate reality partaking of both sides</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">فناء</span></span><span class="gloss-roman">Fanāʾ</span><span class="gloss-def">Passing away of egoic selfhood in God; annihilation of the separate self</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">بقاء</span></span><span class="gloss-roman">Baqāʾ</span><span class="gloss-def">Subsistence in God after fanāʾ; stable abiding in divine reality</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">تحقيق</span></span><span class="gloss-roman">Taḥqīq</span><span class="gloss-def">Realization; active, stable engagement with the Real (Ḥaqq)</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">عبد</span></span><span class="gloss-roman">ʿAbd</span><span class="gloss-def">Servant; for Ibn ʿArabī, the highest human station — complete servanthood before God</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">قطب</span></span><span class="gloss-roman">Quṭb</span><span class="gloss-def">Pole; the highest-ranking saint and spiritual axis at any given time</span></div>
+        <div class="gloss-item"><span class="gloss-ar"><span lang="ar" dir="rtl">عالم المثال</span></span><span class="gloss-roman">ʿĀlam al-Mithāl</span><span class="gloss-def">World of Similitudes; the Imaginal World; Henry Corbin's mundus imaginalis</span></div>
+      </div>
+    </section>
+
+    <!-- ─── XXV. HOW TO STUDY ──────────────────────────────── -->
+    <section id="s25" class="major-section">
+      <span class="section-label">Section XXV</span>
+      <h2>How to Study Ibn ʿArabī: A Structured Path</h2>
+
+      <p>
+        Ibn ʿArabī himself warned that his works require preparation. Approaching them without
+        foundation risks misunderstanding or — worse — misapplication. The following stages
+        reflect the scholarly consensus on responsible engagement.
+      </p>
+
+      <div class="stage-block">
+        <span class="stage-num">Stage 1</span>
+        <p class="stage-title">Build the Foundations</p>
+        <ul class="stage-list">
+          <li>Tawḥīd and Islamic theology — divine names and attributes (Ashʿarī / Māturīdī kalām)</li>
+          <li>Qurʾānic knowledge — tafsīr, structure, Qurʾānic symbolism</li>
+          <li>Prophetology — the Islamic understanding of prophecy and sainthood</li>
+          <li>Classical Sufism — Junayd, al-Ḥallāj, al-Ghazālī; especially the <em>Risāla Qushayriyya</em></li>
+          <li>Basic Islamic cosmology — heavenly spheres, hierarchy of being</li>
+          <li>Spiritual psychology — heart, ego, stations (<em>maqāmāt</em>), and states (<em>aḥwāl</em>)</li>
+        </ul>
+      </div>
+
+      <div class="stage-block">
+        <span class="stage-num">Stage 2</span>
+        <p class="stage-title">Secondary Literature First</p>
+        <ul class="stage-list">
+          <li><strong>Claude Addas</strong>, <em>Quest for the Red Sulphur</em> — the best biography; essential</li>
+          <li><strong>William Chittick</strong>, <em>The Sufi Path of Knowledge</em> — most comprehensive entry into the <em>Futūḥāt</em></li>
+          <li><strong>Stephen Hirtenstein</strong>, <em>The Unlimited Mercifier</em> — accessible, reliable overview</li>
+          <li><strong>Michel Chodkiewicz</strong>, <em>Seal of the Saints</em> — essential for walāya doctrine</li>
+          <li><strong>Henry Corbin</strong>, <em>Creative Imagination in the Sufism of Ibn Arabi</em> — brilliant but read critically</li>
+        </ul>
+      </div>
+
+      <div class="stage-block">
+        <span class="stage-num">Stage 3</span>
+        <p class="stage-title">Selected Primary Texts</p>
+        <ul class="stage-list">
+          <li><em>Rūḥ al-Quds</em> (<em>Sufis of Andalusia</em>, trans. Austin) — accessible; biographical</li>
+          <li><em>Tarjumān al-Ashwāq</em> (trans. Nicholson) — poetry with commentary</li>
+          <li><em>Kitāb al-Isrāʾ</em> (<em>Journey to the Lord of Power</em>, trans. Harris) — short mystical treatise</li>
+          <li>Selected chapters of <em>al-Futūḥāt</em> via Chittick's thematic selections</li>
+        </ul>
+      </div>
+
+      <div class="stage-block">
+        <span class="stage-num">Stage 4</span>
+        <p class="stage-title">Approach the Fuṣūṣ — With Commentary</p>
+        <ul class="stage-list">
+          <li><em>Never read Fuṣūṣ al-Ḥikam without a commentary</em></li>
+          <li>Dāwūd al-Qayṣarī's commentary (partially translated)</li>
+          <li>Chittick's analysis in <em>The Sufi Path of Knowledge</em></li>
+          <li>Izutsu's <em>Sufism and Taoism</em> for the philosophical dimensions</li>
+        </ul>
+      </div>
+
+      <div class="stage-block">
+        <span class="stage-num">Stage 5</span>
+        <p class="stage-title">Advanced and Comparative Study</p>
+        <ul class="stage-list">
+          <li>Full engagement with the <em>Futūḥāt</em> using Chittick's two volumes</li>
+          <li>A.D. Knysh, <em>Ibn Arabi in the Later Islamic Tradition</em> — reception history</li>
+          <li>Comparative study with al-Qūnawī's systematization</li>
+          <li>Akbarian influence in Ottoman and Persian intellectual traditions</li>
+          <li>Comparison with <em>falsafa</em> — especially Mullā Ṣadrā's ontology</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── XXVI. BIBLIOGRAPHY ────────────────────────────── -->
+    <section id="s26" class="major-section">
+      <span class="section-label">Section XXVI</span>
+      <h2>Essential Bibliography</h2>
+
+      <div class="bib-section">
+        <h3>Primary Sources in Translation</h3>
+        <ul class="bib-list">
+          <li><strong>Al-Futūḥāt al-Makkiyya</strong> (selections): trans. Chittick, Chodkiewicz, Morris. <em>The Meccan Revelations</em>. Pir Publications, 2002.</li>
+          <li><strong>Fuṣūṣ al-Ḥikam</strong>: trans. R.W.J. Austin. <em>The Bezels of Wisdom</em>. Paulist Press, 1980.</li>
+          <li><strong>Tarjumān al-Ashwāq</strong>: trans. R.A. Nicholson. Royal Asiatic Society, 1911 (reprinted).</li>
+          <li><strong>Rūḥ al-Quds &amp; Al-Durra al-Fākhira</strong>: trans. R.W.J. Austin. <em>Sufis of Andalusia</em>. Unwin, 1971.</li>
+          <li><strong>Kitāb al-Isrāʾ</strong>: trans. R.T. Harris. <em>Journey to the Lord of Power</em>. Inner Traditions, 1989.</li>
+        </ul>
+      </div>
+
+      <div class="bib-section">
+        <h3>Biographical Studies</h3>
+        <ul class="bib-list">
+          <li><strong>Addas, Claude.</strong> <em>Quest for the Red Sulphur: The Life of Ibn ʿArabī</em>. Trans. Peter Kingsley. Islamic Texts Society, 1993. <em>(The definitive modern biography.)</em></li>
+          <li><strong>Hirtenstein, Stephen.</strong> <em>The Unlimited Mercifier: The Spiritual Life and Thought of Ibn Arabī</em>. Anqa, 1999.</li>
+        </ul>
+      </div>
+
+      <div class="bib-section">
+        <h3>Philosophical and Metaphysical Studies</h3>
+        <ul class="bib-list">
+          <li><strong>Chittick, William C.</strong> <em>The Sufi Path of Knowledge: Ibn al-ʿArabī's Metaphysics of Imagination</em>. SUNY Press, 1989.</li>
+          <li><strong>Chittick, William C.</strong> <em>The Self-Disclosure of God: Principles of Ibn al-ʿArabī's Cosmology</em>. SUNY Press, 1998.</li>
+          <li><strong>Izutsu, Toshihiko.</strong> <em>Sufism and Taoism: A Comparative Study of Key Philosophical Concepts</em>. University of California Press, 1984.</li>
+          <li><strong>Corbin, Henry.</strong> <em>Creative Imagination in the Sufism of Ibn Arabi</em>. Trans. Ralph Manheim. Princeton / Bollingen, 1969.</li>
+          <li><strong>Chodkiewicz, Michel.</strong> <em>Seal of the Saints: Prophethood and Sainthood in the Doctrine of Ibn Arabī</em>. Trans. Liadain Sherrard. Islamic Texts Society, 1993.</li>
+        </ul>
+      </div>
+
+      <div class="bib-section">
+        <h3>Reception and Controversy</h3>
+        <ul class="bib-list">
+          <li><strong>Knysh, Alexander D.</strong> <em>Ibn ʿArabī in the Later Islamic Tradition: The Making of a Polemical Image in Medieval Islam</em>. SUNY Press, 1999.</li>
+          <li><strong>Lipton, Gregory.</strong> <em>Rethinking Ibn ʿArabī</em>. Oxford University Press, 2018.</li>
+        </ul>
+      </div>
+
+      <div class="bib-section">
+        <h3>Reference and Online Resources</h3>
+        <ul class="bib-list">
+          <li><strong>Stanford Encyclopedia of Philosophy</strong>, entry "Ibn ʿArabī" — scholarly overview, regularly updated. <em>plato.stanford.edu</em></li>
+          <li><strong>Muhyiddin Ibn ʿArabī Society</strong> — <em>Journal of the Muhyiddin Ibn ʿArabī Society</em> (since 1983). <em>ibnarabisociety.org</em></li>
+          <li><strong>Yaḥyā, Osman.</strong> <em>Histoire et Classification de l'Oeuvre d'Ibn ʿArabī</em> — the definitive Arabic-language bibliography.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── XXVII. SYSTEM MAP ─────────────────────────────── -->
+    <section id="s27" class="major-section">
+      <span class="section-label">Section XXVII</span>
+      <h2>Ibn ʿArabī's Thought: A System Map</h2>
+
+      <div class="systems-map">
+        <span class="map-label">The Architecture of Reality</span>
+
+        <div><span class="map-node primary">GOD — Absolute Being / Wujūd / The Hidden Treasure</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">Love: desire to be known → divine names seek self-disclosure</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">Fixed Entities (Aʿyān Thābita) — archetypes in divine knowledge</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">Creation — cosmos as theater of continuous Tajallī</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">Three Worlds: Spirits &nbsp;→&nbsp; Imagination (Barzakh) &nbsp;→&nbsp; Bodies</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">The Human Being — the most comprehensive mirror of all names</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">The Perfect Human (Insān al-Kāmil) — all names reflected in balance</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node primary">The Prophet Muḥammad ﷺ — supreme historical realization</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">The Spiritual Path — purification of perception, polishing the heart</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node">Taḥqīq (Realization) — seeing multiplicity without forgetting unity</span></div>
+        <span class="map-arrow">↓</span>
+        <div><span class="map-node primary">Complete Servanthood (ʿUbūdiyya) — the highest human station</span></div>
+      </div>
+    </section>
+
+    <!-- ─── XXVIII. CORE STATEMENTS ──────────────────────── -->
+    <section id="s28" class="major-section">
+      <span class="section-label">Section XXVIII</span>
+      <h2>The Core in 15 Statements</h2>
+
+      <ol class="statements-list">
+        <li>God alone has absolute Being (Wujūd); all else exists by receiving existence from Him.</li>
+        <li>The divine names seek self-disclosure — this is the metaphysical root of creation.</li>
+        <li>Creation is real, but its reality is borrowed, relational, and manifestational — not self-subsistent.</li>
+        <li>The world is a vast mirror in which divine names become visible (tajallī).</li>
+        <li>Every being discloses some divine names; no being fully exhausts any single name.</li>
+        <li>God is absolutely beyond all things (tanzīh) and yet near to all through His names (tashbīh).</li>
+        <li>The human being is the most comprehensive mirror — constitutively capable of reflecting all names.</li>
+        <li>The Perfect Human actually realizes this capacity — fully, balancedly, without distortion.</li>
+        <li>The Prophet Muḥammad ﷺ is the supreme historical realization of this perfection.</li>
+        <li>Revelation — Qurʾān and Sunna — is the primary frame; mystical insight illuminates its depth, never contradicts it.</li>
+        <li>Reason is valid but structurally limited; direct knowing (kashf, dhawq, taḥqīq) reaches further.</li>
+        <li>The Imaginal World (ʿĀlam al-Khayāl) is a real ontological domain — not mere subjective fantasy.</li>
+        <li>The Barzakh principle — the isthmus between opposites — governs all levels of reality.</li>
+        <li>Spiritual development means purifying perception to see existence as continuous divine disclosure.</li>
+        <li>The highest human station is not egoic union with God, but complete servanthood (ʿubūdiyya) before God.</li>
+      </ol>
+
+      <blockquote style="margin-top:2.5rem;">
+        He is not a thinker to be consumed. He is a world to be slowly entered.
+        The best attitude: <strong>reverence without romanticization, caution without dismissal,
+        sustained engagement without haste.</strong>
+      </blockquote>
+    </section>
+
+  </article>
+  <!-- ═══════════════════════════════════════════════════ -->
+
+  <p class="footer-note">
+    <em>This guide draws on: Stanford Encyclopedia of Philosophy (W. Chittick, entry on Ibn ʿArabī);
+    William Chittick, <em>The Sufi Path of Knowledge</em> (SUNY, 1989) and <em>The Self-Disclosure of God</em>
+    (SUNY, 1998); Claude Addas, <em>Quest for the Red Sulphur</em> (ITS, 1993); Michel Chodkiewicz,
+    <em>Seal of the Saints</em> (ITS, 1993); Henry Corbin, <em>Creative Imagination in the Sufism
+    of Ibn Arabi</em> (Princeton, 1969); Toshihiko Izutsu, <em>Sufism and Taoism</em> (California, 1984);
+    A.D. Knysh, <em>Ibn Arabi in the Later Islamic Tradition</em> (SUNY, 1999);
+    Muhyiddin Ibn Arabi Society resources (ibnarabisociety.org); and primary source material from
+    al-Futūḥāt al-Makkiyya and Fuṣūṣ al-Ḥikam.</em>
+  </p>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial</span>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progressBar');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+      }, { passive: true });
+    }
+
+    // Smooth anchor scroll respecting stacked headers
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const id = this.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const offset = 130; // 62px global nav + 50px article header + buffer
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        // Close TOC if open
+        document.getElementById('tocOverlay').classList.remove('open');
+      });
+    });
+  
+  (function () {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const section = parts[0];
+  if (!section) return;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+  const href  = '/' + section + '/';
+  const el = document.querySelector('a.site-name');
+  if (el) { el.textContent = label; el.href = href; }
+})();
+</script>
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</main>
+</body>
+</html>

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="DevOps, reference, engineering">
+  <meta property="og:title"       content="DevOps Reference" />
+  <meta property="og:description" content="DevOps Reference" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/tech/devops/devops-reference.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="DevOps Reference" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="DevOps Reference">
+  <meta name="twitter:description" content="DevOps Reference">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/tech/devops/devops-reference.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>DevOps Reference | Yasir Bilgin</title>
+
+<!-- ① Global nav — always first -->
+<script src="https://yasirbilgin.com/nav.js"></script>
+
+<!-- ② Favicons -->
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<!-- ③ Fonts -->
+<link rel="stylesheet" href="/assets/fonts.css">
+
+<style>
+:root {
+  --bg:#080b10;--bg2:#0c1018;--bg3:#111620;--bg4:#172030;
+  --border:#1e2a3a;--border2:#273547;
+  --text:#c9d5e8;--text2:#6e84a3;--text3:#3d5070;
+  --green:#3fffa2;--cyan:#22e5ee;--yellow:#f5c842;
+  --orange:#ff8c42;--red:#ff5e7a;--blue:#4f9eff;
+  --purple:#b78bff;--pink:#ff7eb6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.6;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.07) 2px,rgba(0,0,0,.07) 4px);pointer-events:none;z-index:9999}
+
+/* ─── PAGE HEADER (sits below nav.js bar which is 62px tall) ─── */
+/* z-index kept well below nav.js (2147483646) */
+#header{
+  position:sticky;
+  top:62px;          /* flush below the global nav bar */
+  z-index:50;        /* never above nav.js */
+  background:rgba(8,11,16,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.hdr-top{display:flex;align-items:center;gap:14px;padding:10px 20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.logo-b{background:linear-gradient(135deg,var(--green),var(--cyan));color:#080b10;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;letter-spacing:.5px}
+.srch-wrap{position:relative;flex:1;max-width:500px}
+#si{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:7px;padding:7px 12px 7px 34px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;outline:none;transition:border-color .2s;caret-color:var(--green)}
+#si:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(63,255,162,.07)}
+#si::placeholder{color:var(--text3)}
+.s-ic{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:13px;pointer-events:none}
+#ac{display:none;position:absolute;top:calc(100% + 5px);left:0;right:0;background:var(--bg4);border:1px solid var(--border2);border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.6);z-index:300;max-height:320px;overflow-y:auto}
+#ac.show{display:block}
+.ac-r{padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);font-size:11px;font-family:'IBM Plex Mono',monospace;transition:background .1s}
+.ac-r:last-child{border-bottom:none}
+.ac-r:hover,.ac-r.hi{background:var(--bg3)}
+.ac-c{color:#fff;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ac-c mark{background:rgba(63,255,162,.22);color:var(--green);border-radius:2px;font-style:normal}
+.ac-s{font-size:9px;color:var(--text3);white-space:nowrap}
+
+/* TOOL PILLS */
+.tool-row{display:flex;gap:4px;padding:7px 20px;overflow-x:auto;scrollbar-width:none;align-items:center}
+.tool-row::-webkit-scrollbar{display:none}
+.pill{padding:3px 11px;border-radius:20px;border:1px solid var(--border2);cursor:pointer;font-size:10px;font-weight:600;white-space:nowrap;background:transparent;color:var(--text2);font-family:'IBM Plex Mono',monospace;letter-spacing:.3px;transition:all .15s}
+.pill:hover{color:#fff;border-color:var(--text2)}
+.pill.on{color:#000;border-color:transparent}
+
+/* LAYOUT */
+/* top offset = 62px (nav.js) + ~82px (page header) ≈ 144px */
+#app{display:flex;min-height:calc(100vh - 144px)}
+#sb{width:195px;flex-shrink:0;border-right:1px solid var(--border);background:var(--bg2);padding:10px 0;position:sticky;top:144px;height:calc(100vh - 144px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border2) transparent}
+.sb-hd{font-size:9px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--text3);padding:4px 14px 8px}
+.sbi{padding:5px 14px;cursor:pointer;font-size:11px;color:var(--text2);display:flex;align-items:center;gap:7px;border-left:2px solid transparent;transition:all .1s;font-family:'IBM Plex Mono',monospace}
+.sbi:hover{color:var(--text);background:var(--bg3)}
+.sbi.on{border-left-color:var(--green);color:var(--green);background:rgba(63,255,162,.05)}
+.sbi-dot{width:4px;height:4px;border-radius:50%;background:var(--border2);flex-shrink:0}
+.sbi.on .sbi-dot{background:var(--green)}
+.sbi-sec{padding:4px 14px 4px 26px;cursor:pointer;font-size:10px;color:var(--text3);display:flex;align-items:center;gap:6px;border-left:2px solid transparent;transition:all .1s;font-family:"IBM Plex Mono",monospace;line-height:1.3}
+.sbi-sec:hover{color:var(--text2);background:var(--bg3);border-left-color:var(--border2)}
+.sbi-sec::before{content:"›";color:var(--text3);font-size:10px;flex-shrink:0}
+.sbi-grp{border-bottom:1px solid var(--border);padding-bottom:4px;margin-bottom:4px}
+#main{flex:1;padding:24px 28px;overflow-y:auto;min-width:0}
+
+/* SECTIONS — scroll-margin-top accounts for both sticky bars */
+.sec{margin-bottom:44px;scroll-margin-top:150px}
+
+.sec-hd{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;padding-bottom:9px;border-bottom:1px solid var(--border)}
+.sec-num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.5px;flex-shrink:0}
+.sec-title{font-family:'IBM Plex Sans',sans-serif;font-size:17px;font-weight:700;color:#fff}
+.sec-tags{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto}
+.stag{font-size:9px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:var(--bg4);border:1px solid var(--border2);color:var(--text3)}
+
+/* SUBSECTIONS */
+.sub{margin-bottom:20px}
+.sub-t{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--text2);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.sub-t::before{content:'';display:inline-block;width:14px;height:1px;background:var(--border2)}
+
+/* CODE BLOCKS */
+.cb{background:var(--bg3);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:8px}
+.cb-bar{background:var(--bg4);padding:4px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.cb-lang{font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
+.cp-btn{background:none;border:1px solid var(--border2);border-radius:4px;padding:2px 8px;font-size:9px;color:var(--text3);cursor:pointer;font-family:'IBM Plex Mono',monospace;transition:all .15s}
+.cp-btn:hover{color:var(--green);border-color:var(--green)}
+.cp-btn.done{color:var(--green);border-color:var(--green)}
+pre{padding:13px 15px;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.65;color:var(--text);scrollbar-width:thin;scrollbar-color:var(--border2) transparent}
+
+/* SPECIAL COMPONENTS */
+.flow-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:10px}
+.flow-step{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 9px;border-radius:4px;background:var(--bg3);border:1px solid var(--border2);color:var(--text)}
+.flow-arr{color:var(--text3);font-size:11px}
+.flow-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--text2);margin-bottom:6px;margin-top:14px}
+
+.alias-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:7px;margin-bottom:14px}
+.al-row{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:7px 12px;display:flex;align-items:center;gap:9px;cursor:pointer;transition:border-color .15s;font-family:'IBM Plex Mono',monospace}
+.al-row:hover{border-color:var(--green)}
+.al-k{font-size:12px;color:var(--green);font-weight:600;white-space:nowrap;min-width:50px}
+.al-eq{font-size:9px;color:var(--text3)}
+.al-v{font-size:11px;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.checks{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.chk{display:flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:12px;padding:7px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:6px}
+.chk-i{font-size:13px;flex-shrink:0}
+
+.mantra{background:linear-gradient(135deg,rgba(63,255,162,.05),rgba(34,229,238,.03));border:1px solid rgba(63,255,162,.18);border-radius:9px;padding:18px 22px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:2;color:var(--text)}
+.m-line{display:flex;align-items:center;gap:9px}
+.m-b{color:var(--green);font-size:9px}
+
+.info{background:rgba(79,158,255,.04);border:1px solid rgba(79,158,255,.18);border-radius:7px;padding:10px 14px;margin-bottom:10px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--text);line-height:1.7}
+.info.warn{background:rgba(245,200,66,.04);border-color:rgba(245,200,66,.2)}
+
+#nr{display:none;text-align:center;padding:80px 20px;color:var(--text3)}
+#nr.show{display:block}
+#nr .nr-big{font-size:32px;margin-bottom:12px}
+
+mark{background:rgba(245,200,66,.25);color:#fff;border-radius:2px;font-style:normal}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* subsection scroll-margin same as section */
+.sub[id]{scroll-margin-top:150px}
+
+@media(max-width:760px){#sb{display:none}#main{padding:14px}}
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DevOps Reference",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/tech/devops/devops-reference.html",
+  "description": "A practical DevOps reference covering CI/CD pipelines, containerisation, infrastructure as code, and platform engineering best practices."
+}
+  </script>
+
+  <meta name="description" content="A practical DevOps reference covering CI/CD pipelines, containerisation, infrastructure as code, and platform engineering best practices." />
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech",
+      "item": "https://yasirbilgin.com/tech/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "DevOps Reference",
+      "item": "https://yasirbilgin.com/tech/devops/devops-reference.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+<div id="header">
+  <div class="hdr-top">
+    <div class="logo"><span class="logo-b">REF</span>DevOps Reference</div>
+    <div class="srch-wrap">
+      <span class="s-ic">⌕</span>
+      <input id="si" type="text" placeholder="Search commands, flags, concepts, tools…" autocomplete="off" spellcheck="false">
+      <div id="ac"></div>
+    </div>
+  </div>
+  <div class="tool-row" id="tr"></div>
+</div>
+
+<div id="app">
+  <div id="sb"><div class="sb-hd">Sections</div><div id="sbl"></div></div>
+  <div id="main">
+    <div id="nr"><div class="nr-big">⌀</div><div>No matches found.</div></div>
+    <div id="secs"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+//  DATA
+// ══════════════════════════════════════════
+const SEC = [
+{id:'universal',n:'0',title:'Universal CLI Patterns',tool:'universal',
+ tags:['cli','shell','patterns','safety','operators'],
+ subs:[
+  {t:'Help and discovery',l:'bash',c:`command --help\ncommand -h\nman command\ntldr command        # if installed\nwhich command\ntype command\ncommand -v command`},
+  {t:'Safe command habits',l:'bash',c:`# Print command before running in scripts\nset -x\n\n# Exit on error, unset variables, and failed pipes\nset -euo pipefail\n\n# Dry-run style pattern\ncommand --dry-run\ncommand --check\ncommand --diff`},
+  {t:'Useful shell operators',l:'bash',c:`cmd1 && cmd2          # run cmd2 only if cmd1 succeeds\ncmd1 || cmd2          # run cmd2 only if cmd1 fails\ncmd1 ; cmd2           # run both sequentially\ncmd1 | cmd2           # pipe stdout\ncmd > file            # redirect stdout\ncmd >> file           # append stdout\ncmd 2> err.log        # redirect stderr\ncmd > out.log 2>&1    # redirect stdout + stderr\ncmd &                 # background\njobs\nfg`},
+ ]},
+
+{id:'linux',n:'1',title:'Linux',tool:'linux',
+ tags:['linux','system','processes','systemd','files','permissions','packages','archives'],
+ subs:[
+  {t:'System information',l:'bash',c:`uname -a\nhostnamectl\ncat /etc/os-release\nuptime\ndate\nwhoami\nid\nwho\nw\nlast`},
+  {t:'CPU, memory, disk',l:'bash',c:`lscpu\nfree -h\nvmstat 1\ntop\nhtop\nps aux --sort=-%mem | head\nps aux --sort=-%cpu | head\n\ndf -h\ndu -sh *\ndu -ah . | sort -rh | head -20\nlsblk\nblkid\nmount\nfindmnt`},
+  {t:'Processes',l:'bash',c:`ps aux\nps -ef\npgrep nginx\npidof nginx\nkill PID\nkill -9 PID\npkill process_name\nnice -n 10 command\nrenice 10 -p PID`},
+  {t:'Services with systemd',l:'bash',c:`systemctl status nginx\nsystemctl start nginx\nsystemctl stop nginx\nsystemctl restart nginx\nsystemctl reload nginx\nsystemctl enable nginx\nsystemctl disable nginx\nsystemctl is-active nginx\nsystemctl is-enabled nginx\njournalctl -u nginx\njournalctl -u nginx -f\njournalctl -xe\njournalctl --since "1 hour ago"`},
+  {t:'Files and directories',l:'bash',c:`pwd\nls -lah\ncd /path\nmkdir -p dir/subdir\ncp source dest\ncp -r dir1 dir2\nmv old new\nrm file\nrm -rf dir\ntouch file\nstat file\nfile file`},
+  {t:'Find files',l:'bash',c:`find . -name "*.log"\nfind . -type f -size +100M\nfind . -type f -mtime -7\nfind . -type f -exec grep -H "error" {} \\;\nlocate filename`},
+  {t:'Text inspection',l:'bash',c:`cat file\nless file\nhead file\nhead -100 file\ntail file\ntail -f file\ngrep "pattern" file\ngrep -R "pattern" .\ngrep -i "pattern" file\ngrep -n "pattern" file\nawk '{print $1}' file\nsed 's/old/new/g' file\nsort file\nuniq -c\nwc -l file\ncut -d: -f1 /etc/passwd`},
+  {t:'Users and permissions',l:'bash',c:`sudo command\nsu - user\nuseradd username\npasswd username\nusermod -aG group user\ngroups user\nchown user:group file\nchmod 644 file\nchmod 755 script.sh\nchmod +x script.sh\nls -l\ngetfacl file\nsetfacl -m u:user:rwx file`},
+  {t:'Permission meanings',l:'text',c:`r = read    = 4\nw = write   = 2\nx = execute = 1\n\n644 = owner read/write, group read, others read\n755 = owner rwx, group rx, others rx\n600 = owner read/write only`},
+  {t:'Package managers — Debian / Ubuntu',l:'bash',c:`sudo apt update\nsudo apt upgrade\nsudo apt install package\nsudo apt remove package\napt search package\napt show package\ndpkg -l | grep package`},
+  {t:'Package managers — RHEL / Amazon Linux / Fedora',l:'bash',c:`sudo yum install package\nsudo yum update\nsudo yum remove package\nyum search package\n\nsudo dnf install package\nsudo dnf update`},
+  {t:'Archives',l:'bash',c:`tar -czvf archive.tar.gz dir/\ntar -xzvf archive.tar.gz\nzip -r archive.zip dir/\nunzip archive.zip\ngzip file\ngunzip file.gz`},
+ ]},
+
+{id:'bash',n:'2',title:'Bash Scripting',tool:'bash',
+ tags:['bash','scripting','automation','functions','loops','conditions','arguments'],
+ subs:[
+  {t:'Variables',l:'bash',c:`NAME="Yasir"\necho "$NAME"\necho "Hello \${NAME}"`},
+  {t:'Command substitution',l:'bash',c:`NOW=$(date)\nFILES=$(ls)`},
+  {t:'Conditions',l:'bash',c:`if [ -f file.txt ]; then\n  echo "File exists"\nfi\n\nif [ "$ENV" = "prod" ]; then\n  echo "Production"\nelse\n  echo "Not production"\nfi`},
+  {t:'File tests',l:'bash',c:`[ -f file ]    # regular file\n[ -d dir ]     # directory\n[ -e path ]    # exists\n[ -s file ]    # non-empty\n[ -x file ]    # executable\n[ -z "$VAR" ]  # empty string\n[ -n "$VAR" ]  # non-empty string`},
+  {t:'Loops',l:'bash',c:`for item in a b c; do\n  echo "$item"\ndone\n\nfor file in *.log; do\n  echo "$file"\ndone\n\nwhile read -r line; do\n  echo "$line"\ndone < file.txt`},
+  {t:'Functions',l:'bash',c:`hello() {\n  echo "Hello $1"\n}\n\nhello "Yasir"`},
+  {t:'Arguments',l:'bash',c:`echo "$0"   # script name\necho "$1"   # first arg\necho "$2"   # second arg\necho "$@"   # all args\necho "$#"   # arg count`},
+  {t:'Robust script template',l:'bash',c:`#!/usr/bin/env bash\nset -euo pipefail\n\nlog() {\n  echo "[$(date -Iseconds)] $*"\n}\n\nmain() {\n  log "Starting"\n  # your code\n}\n\nmain "$@"`},
+ ]},
+
+{id:'git',n:'3',title:'Git',tool:'git',
+ tags:['git','version-control','branches','remote','undo','stash','tags','revert'],
+ subs:[
+  {t:'Setup',l:'bash',c:`git config --global user.name "Your Name"\ngit config --global user.email "you@example.com"\ngit config --global init.defaultBranch main\ngit config --list`},
+  {t:'Repository basics',l:'bash',c:`git init\ngit clone URL\ngit status\ngit add file\ngit add .\ngit commit -m "message"\ngit log --oneline --graph --decorate --all\ngit diff\ngit diff --staged`},
+  {t:'Branches',l:'bash',c:`git branch\ngit branch new-branch\ngit checkout branch\ngit checkout -b new-branch\ngit switch branch\ngit switch -c new-branch\ngit branch -d branch\ngit branch -D branch`},
+  {t:'Remote operations',l:'bash',c:`git remote -v\ngit remote add origin URL\ngit fetch origin\ngit pull\ngit pull --rebase\ngit push\ngit push -u origin branch`},
+  {t:'Undo and recovery',l:'bash',c:`git restore file                 # discard local changes\ngit restore --staged file        # unstage file\ngit reset --soft HEAD~1          # undo commit, keep staged\ngit reset --mixed HEAD~1         # undo commit, keep working tree\ngit reset --hard HEAD~1          # destructive undo\ngit revert COMMIT                # safe undo via new commit\ngit reflog                       # find lost commits`},
+  {t:'Stash',l:'bash',c:`git stash\ngit stash list\ngit stash pop\ngit stash apply\ngit stash drop`},
+  {t:'Tags',l:'bash',c:`git tag\ngit tag v1.0.0\ngit tag -a v1.0.0 -m "release v1.0.0"\ngit push origin v1.0.0\ngit push origin --tags`},
+  {t:'Useful inspection',l:'bash',c:`git blame file\ngit show COMMIT\ngit log -- file\ngit shortlog -sn\ngit clean -fd       # remove untracked files/directories`},
+ ]},
+
+{id:'yaml',n:'4',title:'YAML',tool:'yaml',
+ tags:['yaml','config','syntax','structure','multiline','validation','pitfalls'],
+ subs:[
+  {t:'Basic structure',l:'yaml',c:`name: app\nreplicas: 3\nenabled: true\nports:\n  - 80\n  - 443\nlabels:\n  app: web\n  env: prod`},
+  {t:'Lists of objects',l:'yaml',c:`containers:\n  - name: app\n    image: nginx:latest\n    ports:\n      - containerPort: 80\n  - name: sidecar\n    image: busybox`},
+  {t:'Strings',l:'yaml',c:`single_line: "hello"\nplain: hello\nmultiline_literal: |\n  line one\n  line two\nmultiline_folded: >\n  this becomes\n  one paragraph`},
+  {t:'Common pitfalls',l:'text',c:`- YAML is indentation-sensitive.\n- Use spaces, not tabs.\n- Quote values like "yes", "no", "on", "off" if they are strings.\n- Be careful with colons in strings.`},
+  {t:'Validate YAML',l:'bash',c:`python3 -c 'import yaml,sys; yaml.safe_load(open(sys.argv[1]))' file.yaml\nyq '.' file.yaml`},
+ ]},
+
+{id:'docker',n:'5',title:'Docker',tool:'docker',
+ tags:['docker','containers','images','volumes','networks','compose','dockerfile','cleanup'],
+ subs:[
+  {t:'Images',l:'bash',c:`docker images\ndocker pull nginx\ndocker build -t myapp:latest .\ndocker rmi image\ndocker image prune\ndocker image prune -a`},
+  {t:'Containers',l:'bash',c:`docker ps\ndocker ps -a\ndocker run nginx\ndocker run -d --name web -p 8080:80 nginx\ndocker stop web\ndocker start web\ndocker restart web\ndocker rm web\ndocker logs web\ndocker logs -f web\ndocker exec -it web sh\ndocker inspect web`},
+  {t:'Volumes',l:'bash',c:`docker volume ls\ndocker volume create data\ndocker run -v data:/data image\ndocker run -v $(pwd):/app image\ndocker volume rm data`},
+  {t:'Networks',l:'bash',c:`docker network ls\ndocker network create appnet\ndocker run --network appnet image\ndocker network inspect appnet`},
+  {t:'Cleanup',l:'bash',c:`docker system df\ndocker system prune\ndocker system prune -a\ndocker volume prune`},
+  {t:'Dockerfile example',l:'dockerfile',c:`FROM python:3.12-slim\nWORKDIR /app\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\nCOPY . .\nCMD ["python", "app.py"]`},
+  {t:'Docker Compose — commands',l:'bash',c:`docker compose up\ndocker compose up -d\ndocker compose down\ndocker compose logs -f\ndocker compose ps\ndocker compose exec service sh`},
+  {t:'Docker Compose — config example',l:'yaml',c:`services:\n  app:\n    build: .\n    ports:\n      - "8080:8080"\n    environment:\n      ENV: dev`},
+ ]},
+
+{id:'kubernetes',n:'6',title:'Kubernetes / kubectl',tool:'kubernetes',
+ tags:['kubernetes','kubectl','k8s','pods','deployments','services','namespaces','rollouts','scaling','jsonpath','debug'],
+ subs:[
+  {t:'Context and config',l:'bash',c:`kubectl config get-contexts\nkubectl config current-context\nkubectl config use-context CONTEXT\nkubectl cluster-info\nkubectl version`},
+  {t:'Namespaces',l:'bash',c:`kubectl get ns\nkubectl create ns dev\nkubectl config set-context --current --namespace=dev`},
+  {t:'Get resources',l:'bash',c:`kubectl get pods\nkubectl get pods -A\nkubectl get deploy\nkubectl get svc\nkubectl get ingress\nkubectl get nodes\nkubectl get all\nkubectl get pod POD -o wide\nkubectl get pod POD -o yaml\nkubectl get pod POD -o json`},
+  {t:'Describe and logs',l:'bash',c:`kubectl describe pod POD\nkubectl describe node NODE\nkubectl logs POD\nkubectl logs POD -c CONTAINER\nkubectl logs -f POD\nkubectl logs --previous POD\nkubectl events --sort-by=.lastTimestamp`},
+  {t:'Exec and debug',l:'bash',c:`kubectl exec -it POD -- sh\nkubectl exec -it POD -c CONTAINER -- bash\nkubectl port-forward pod/POD 8080:80\nkubectl port-forward svc/SERVICE 8080:80\nkubectl debug node/NODE -it --image=busybox`},
+  {t:'Apply and delete',l:'bash',c:`kubectl apply -f file.yaml\nkubectl apply -f dir/\nkubectl delete -f file.yaml\nkubectl delete pod POD\nkubectl delete deploy DEPLOYMENT`},
+  {t:'Rollouts',l:'bash',c:`kubectl rollout status deployment/APP\nkubectl rollout history deployment/APP\nkubectl rollout undo deployment/APP\nkubectl rollout restart deployment/APP`},
+  {t:'Scaling',l:'bash',c:`kubectl scale deployment APP --replicas=3\nkubectl autoscale deployment APP --min=2 --max=10 --cpu-percent=70`},
+  {t:'Labels and selectors',l:'bash',c:`kubectl get pods --show-labels\nkubectl get pods -l app=web\nkubectl label pod POD env=prod\nkubectl label pod POD env-`},
+  {t:'Resource usage',l:'bash',c:`kubectl top nodes\nkubectl top pods\nkubectl top pods -A`},
+  {t:'Common troubleshooting flow',l:'bash',c:`kubectl get pods -o wide\nkubectl describe pod POD\nkubectl logs POD --previous\nkubectl get events --sort-by=.lastTimestamp\nkubectl describe node NODE\nkubectl get svc,endpoints,ingress`},
+  {t:'JSONPath examples',l:'bash',c:`kubectl get pods -o jsonpath='{.items[*].metadata.name}'\nkubectl get nodes -o jsonpath='{.items[*].status.addresses[*].address}'`},
+ ]},
+
+{id:'helm',n:'7',title:'Helm',tool:'helm',
+ tags:['helm','kubernetes','charts','release','install','upgrade','rollback','templates','values'],
+ subs:[
+  {t:'Repos',l:'bash',c:`helm repo list\nhelm repo add bitnami https://charts.bitnami.com/bitnami\nhelm repo update\nhelm search repo nginx`},
+  {t:'Install and upgrade',l:'bash',c:`helm install RELEASE CHART\nhelm install app ./chart\nhelm install app repo/chart -n namespace --create-namespace\nhelm upgrade app ./chart\nhelm upgrade --install app ./chart\nhelm upgrade --install app repo/chart -f values.yaml\nhelm upgrade --install app repo/chart --set image.tag=1.2.3`},
+  {t:'Inspect',l:'bash',c:`helm list\nhelm list -A\nhelm status RELEASE\nhelm get values RELEASE\nhelm get manifest RELEASE\nhelm history RELEASE`},
+  {t:'Rollback and uninstall',l:'bash',c:`helm rollback RELEASE REVISION\nhelm uninstall RELEASE`},
+  {t:'Template and dry run',l:'bash',c:`helm template app ./chart\nhelm template app ./chart -f values.yaml\nhelm install app ./chart --dry-run --debug\nhelm upgrade app ./chart --dry-run --debug\nhelm lint ./chart`},
+  {t:'Chart structure',l:'text',c:`chart/\n  Chart.yaml\n  values.yaml\n  templates/\n    deployment.yaml\n    service.yaml`},
+  {t:'Template examples',l:'yaml',c:`replicas: {{ .Values.replicaCount }}\nimage: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"\nname: {{ include "chart.fullname" . }}`},
+ ]},
+
+{id:'ansible',n:'8',title:'Ansible',tool:'ansible',
+ tags:['ansible','automation','playbooks','inventory','vault','roles','modules','loops','handlers','facts'],
+ subs:[
+  {t:'Basic commands',l:'bash',c:`ansible --version\nansible all -i inventory.ini -m ping\nansible all -i inventory.ini -m setup\nansible-playbook -i inventory.ini playbook.yml\nansible-playbook -i inventory.ini playbook.yml --check\nansible-playbook -i inventory.ini playbook.yml --diff\nansible-playbook -i inventory.ini playbook.yml -l host_or_group\nansible-playbook -i inventory.ini playbook.yml --tags tag1\nansible-playbook -i inventory.ini playbook.yml --skip-tags tag2`},
+  {t:'Inventory INI',l:'ini',c:`[web]\nweb1 ansible_host=10.0.1.10\nweb2 ansible_host=10.0.1.11\n\n[db]\ndb1 ansible_host=10.0.2.10\n\n[all:vars]\nansible_user=ubuntu`},
+  {t:'Inventory YAML',l:'yaml',c:`all:\n  children:\n    web:\n      hosts:\n        web1:\n          ansible_host: 10.0.1.10\n    db:\n      hosts:\n        db1:\n          ansible_host: 10.0.2.10`},
+  {t:'Playbook skeleton',l:'yaml',c:`- name: Configure servers\n  hosts: web\n  become: true\n  tasks:\n    - name: Install nginx\n      ansible.builtin.apt:\n        name: nginx\n        state: present\n        update_cache: true`},
+  {t:'Common modules',l:'yaml',c:`- ansible.builtin.copy\n- ansible.builtin.template\n- ansible.builtin.file\n- ansible.builtin.command\n- ansible.builtin.shell\n- ansible.builtin.apt\n- ansible.builtin.yum\n- ansible.builtin.service\n- ansible.builtin.systemd\n- ansible.builtin.user\n- ansible.builtin.group\n- ansible.builtin.lineinfile\n- ansible.builtin.blockinfile\n- ansible.builtin.debug`},
+  {t:'Variables',l:'yaml',c:`vars:\n  app_name: myapp\n\ntasks:\n  - debug:\n      msg: "App is {{ app_name }}"`},
+  {t:'Facts — ad-hoc',l:'bash',c:`ansible host -m setup\nansible host -m setup -a 'filter=ansible_distribution*'`},
+  {t:'Facts — playbook',l:'yaml',c:`- debug:\n    var: ansible_distribution`},
+  {t:'Loops',l:'yaml',c:`- name: Install packages\n  ansible.builtin.apt:\n    name: "{{ item }}"\n    state: present\n  loop:\n    - nginx\n    - curl\n    - jq`},
+  {t:'Conditionals',l:'yaml',c:`- name: Only on Ubuntu\n  debug:\n    msg: "Ubuntu"\n  when: ansible_distribution == "Ubuntu"`},
+  {t:'Handlers',l:'yaml',c:`tasks:\n  - name: Update config\n    template:\n      src: app.conf.j2\n      dest: /etc/app.conf\n    notify: Restart app\n\nhandlers:\n  - name: Restart app\n    systemd:\n      name: app\n      state: restarted`},
+  {t:'Roles — directory structure',l:'text',c:`roles/\n  app/\n    tasks/main.yml\n    handlers/main.yml\n    templates/\n    files/\n    defaults/main.yml\n    vars/main.yml`},
+  {t:'Roles — usage in playbook',l:'yaml',c:`- hosts: web\n  roles:\n    - app`},
+  {t:'Vault',l:'bash',c:`ansible-vault create secrets.yml\nansible-vault edit secrets.yml\nansible-vault encrypt file.yml\nansible-vault decrypt file.yml\nansible-playbook playbook.yml --ask-vault-pass\nansible-playbook playbook.yml --vault-password-file .vault_pass`},
+  {t:'Debugging',l:'bash',c:`ansible-playbook playbook.yml -vvv\nansible-inventory -i inventory.yml --graph\nansible-inventory -i inventory.yml --list\nansible-config dump --only-changed`},
+ ]},
+
+{id:'terraform',n:'9',title:'Terraform',tool:'terraform',
+ tags:['terraform','iac','state','workspaces','modules','providers','variables','hcl','backend','lifecycle'],
+ subs:[
+  {t:'Workflow',l:'bash',c:`terraform init\nterraform fmt\nterraform validate\nterraform plan\nterraform apply\nterraform apply -auto-approve\nterraform destroy\nterraform destroy -auto-approve`},
+  {t:'Providers',l:'hcl',c:`terraform {\n  required_providers {\n    aws = {\n      source  = "hashicorp/aws"\n      version = "~> 5.0"\n    }\n  }\n}\n\nprovider "aws" {\n  region = "us-east-1"\n}`},
+  {t:'Variables',l:'hcl',c:`variable "environment" {\n  type        = string\n  description = "Environment name"\n  default     = "dev"\n}`},
+  {t:'Variables — CLI usage',l:'bash',c:`terraform plan -var="environment=prod"\nterraform apply -var-file="prod.tfvars"`},
+  {t:'Outputs',l:'hcl',c:`output "bucket_name" {\n  value = aws_s3_bucket.example.bucket\n}`},
+  {t:'Outputs — CLI',l:'bash',c:`terraform output\nterraform output bucket_name`},
+  {t:'State',l:'bash',c:`terraform state list\nterraform state show RESOURCE\nterraform state mv OLD NEW\nterraform state rm RESOURCE\nterraform import RESOURCE ID\nterraform refresh`},
+  {t:'Workspaces',l:'bash',c:`terraform workspace list\nterraform workspace new dev\nterraform workspace select dev\nterraform workspace show`},
+  {t:'Modules',l:'hcl',c:`module "vpc" {\n  source = "./modules/vpc"\n  cidr   = "10.0.0.0/16"\n}`},
+  {t:'Useful meta-arguments',l:'hcl',c:`count    = 3\nfor_each = var.instances\n\ndepends_on = [aws_iam_role.example]\n\nlifecycle {\n  prevent_destroy = true\n  ignore_changes  = [tags]\n}`},
+  {t:'Remote backend (S3)',l:'hcl',c:`terraform {\n  backend "s3" {\n    bucket         = "my-terraform-state"\n    key            = "env/prod/terraform.tfstate"\n    region         = "us-east-1"\n    dynamodb_table = "terraform-locks"\n    encrypt        = true\n  }\n}`},
+  {t:'Debugging',l:'bash',c:`TF_LOG=DEBUG terraform plan\nTF_LOG=TRACE terraform apply\nterraform providers\nterraform graph`},
+ ]},
+
+{id:'aws',n:'10',title:'AWS CLI',tool:'aws',
+ tags:['aws','ec2','s3','iam','eks','rds','cloudwatch','lambda','cli','query'],
+ subs:[
+  {t:'Identity and config',l:'bash',c:`aws sts get-caller-identity\naws configure\naws configure list\naws configure sso\naws sso login --profile PROFILE\nexport AWS_PROFILE=profile\nexport AWS_REGION=us-east-1`},
+  {t:'EC2',l:'bash',c:`aws ec2 describe-instances\naws ec2 describe-instances --filters "Name=instance-state-name,Values=running"\naws ec2 start-instances --instance-ids i-xxx\naws ec2 stop-instances --instance-ids i-xxx\naws ec2 describe-security-groups\naws ec2 describe-subnets\naws ec2 describe-vpcs`},
+  {t:'S3',l:'bash',c:`aws s3 ls\naws s3 ls s3://bucket\naws s3 cp file s3://bucket/path/\naws s3 cp s3://bucket/path/file .\naws s3 sync ./dir s3://bucket/path/\naws s3 rm s3://bucket/path/file\naws s3 rb s3://bucket --force`},
+  {t:'IAM',l:'bash',c:`aws iam list-users\naws iam list-roles\naws iam get-role --role-name ROLE\naws iam list-attached-role-policies --role-name ROLE\naws iam simulate-principal-policy \\\n  --policy-source-arn ARN \\\n  --action-names s3:ListBucket`},
+  {t:'EKS',l:'bash',c:`aws eks list-clusters\naws eks describe-cluster --name CLUSTER\naws eks update-kubeconfig --name CLUSTER --region REGION\naws eks list-nodegroups --cluster-name CLUSTER\naws eks describe-nodegroup --cluster-name CLUSTER --nodegroup-name NODEGROUP`},
+  {t:'RDS',l:'bash',c:`aws rds describe-db-instances\naws rds describe-db-clusters\naws rds describe-db-snapshots\naws rds create-db-snapshot --db-instance-identifier DB --db-snapshot-identifier SNAPSHOT`},
+  {t:'CloudWatch Logs',l:'bash',c:`aws logs describe-log-groups\naws logs describe-log-streams --log-group-name GROUP\naws logs tail GROUP --follow\naws logs filter-log-events --log-group-name GROUP --filter-pattern "ERROR"`},
+  {t:'Useful query patterns',l:'bash',c:`aws ec2 describe-instances \\\n  --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PrivateIpAddress]' \\\n  --output table\n\naws s3api list-buckets --query 'Buckets[*].Name' --output text`},
+ ]},
+
+{id:'gitlabci',n:'11',title:'GitLab CI',tool:'gitlabci',
+ tags:['gitlab','ci','cd','pipeline','jobs','artifacts','cache','docker','rules','variables','manual'],
+ subs:[
+  {t:'Basic .gitlab-ci.yml',l:'yaml',c:`stages:\n  - test\n  - build\n  - deploy\n\nvariables:\n  APP_NAME: myapp\n\ntest:\n  stage: test\n  image: python:3.12\n  script:\n    - python --version\n    - pytest`},
+  {t:'Job rules',l:'yaml',c:`job:\n  script:\n    - echo "Run job"\n  rules:\n    - if: '$CI_COMMIT_BRANCH == "main"'\n    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'`},
+  {t:'Only run on tags',l:'yaml',c:`release:\n  script:\n    - echo "release"\n  rules:\n    - if: '$CI_COMMIT_TAG'`},
+  {t:'Artifacts',l:'yaml',c:`build:\n  script:\n    - mkdir dist\n    - echo hello > dist/app.txt\n  artifacts:\n    paths:\n      - dist/\n    expire_in: 1 week`},
+  {t:'Cache',l:'yaml',c:`cache:\n  key: "$CI_COMMIT_REF_SLUG"\n  paths:\n    - .cache/`},
+  {t:'Dependencies between jobs',l:'yaml',c:`build:\n  stage: build\n  script:\n    - echo build\n\ndeploy:\n  stage: deploy\n  needs:\n    - build\n  script:\n    - echo deploy`},
+  {t:'Docker build example',l:'yaml',c:`build-image:\n  image: docker:latest\n  services:\n    - docker:dind\n  variables:\n    DOCKER_TLS_CERTDIR: ""\n  script:\n    - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .\n    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"\n    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"`},
+  {t:'Common CI variables',l:'text',c:`CI_COMMIT_BRANCH\nCI_COMMIT_SHA\nCI_COMMIT_SHORT_SHA\nCI_COMMIT_TAG\nCI_PIPELINE_SOURCE\nCI_PROJECT_DIR\nCI_PROJECT_NAME\nCI_REGISTRY_IMAGE\nCI_DEFAULT_BRANCH`},
+  {t:'Manual deploy',l:'yaml',c:`deploy-prod:\n  stage: deploy\n  script:\n    - ./deploy.sh\n  when: manual\n  environment:\n    name: production`},
+ ]},
+
+{id:'promql',n:'12',title:'PromQL',tool:'prometheus',
+ tags:['prometheus','promql','metrics','alerting','grafana','monitoring','histogram','rate','counter','gauge'],
+ subs:[
+  {t:'Basic selectors',l:'promql',c:`http_requests_total\nhttp_requests_total{job="api"}\nhttp_requests_total{job="api",status="500"}\nhttp_requests_total{status=~"5.."}\nhttp_requests_total{status!="200"}`},
+  {t:'Rates and counters',l:'promql',c:`rate(http_requests_total[5m])\nirate(http_requests_total[5m])\nincrease(http_requests_total[1h])`},
+  {t:'Aggregation',l:'promql',c:`sum(rate(http_requests_total[5m]))\nsum by (service) (rate(http_requests_total[5m]))\nsum by (service, status) (rate(http_requests_total[5m]))\navg by (instance) (cpu_usage_seconds_total)\nmax by (pod) (container_memory_usage_bytes)`},
+  {t:'Gauges',l:'promql',c:`node_memory_MemAvailable_bytes\nnode_filesystem_avail_bytes\ncontainer_memory_working_set_bytes`},
+  {t:'Histograms — p95 latency',l:'promql',c:`histogram_quantile(\n  0.95,\n  sum by (le) (rate(http_request_duration_seconds_bucket[5m]))\n)`},
+  {t:'Histograms — grouped p95',l:'promql',c:`histogram_quantile(\n  0.95,\n  sum by (service, le) (rate(http_request_duration_seconds_bucket[5m]))\n)`},
+  {t:'Error rate',l:'promql',c:`sum(rate(http_requests_total{status=~"5.."}[5m]))\n/\nsum(rate(http_requests_total[5m]))`},
+  {t:'Availability query',l:'promql',c:`1 - (\n  sum(rate(http_requests_total{status=~"5.."}[5m]))\n  /\n  sum(rate(http_requests_total[5m]))\n)`},
+  {t:'Kubernetes examples',l:'promql',c:`# CPU usage by pod\nsum by (pod) (rate(container_cpu_usage_seconds_total{container!=""}[5m]))\n\n# Memory usage by pod\nsum by (pod) (container_memory_working_set_bytes{container!=""})\n\n# Pod restarts\nsum by (pod) (increase(kube_pod_container_status_restarts_total[1h]))\n\n# Pods not ready\nkube_pod_status_ready{condition="false"}`},
+  {t:'PromQL mental model',l:'text',c:`Counter   -> use rate() or increase()\nGauge     -> use directly or aggregate\nHistogram -> use histogram_quantile() over *_bucket metrics\nSummary   -> may expose precomputed quantiles`},
+ ]},
+
+{id:'sql',n:'13',title:'SQL',tool:'sql',
+ tags:['sql','database','select','joins','aggregation','indexes','transactions','explain','performance'],
+ subs:[
+  {t:'Basic select',l:'sql',c:`SELECT * FROM users;\nSELECT id, name, email FROM users;\nSELECT * FROM users LIMIT 10;\nSELECT * FROM users ORDER BY created_at DESC;`},
+  {t:'Filtering',l:'sql',c:`SELECT * FROM users WHERE id = 1;\nSELECT * FROM users WHERE status = 'active';\nSELECT * FROM users WHERE created_at >= '2026-01-01';\nSELECT * FROM users WHERE name LIKE '%yasir%';\nSELECT * FROM users WHERE status IN ('active', 'pending');\nSELECT * FROM users WHERE deleted_at IS NULL;`},
+  {t:'Aggregation',l:'sql',c:`SELECT COUNT(*) FROM users;\nSELECT status, COUNT(*) FROM users GROUP BY status;\nSELECT status, COUNT(*) FROM users GROUP BY status HAVING COUNT(*) > 10;`},
+  {t:'Joins',l:'sql',c:`SELECT u.id, u.name, o.id AS order_id\nFROM users u\nJOIN orders o ON o.user_id = u.id;\n\nSELECT u.id, u.name, o.id AS order_id\nFROM users u\nLEFT JOIN orders o ON o.user_id = u.id;`},
+  {t:'Insert, update, delete',l:'sql',c:`INSERT INTO users (name, email) VALUES ('Yasir', 'yasir@example.com');\n\nUPDATE users\nSET status = 'active'\nWHERE id = 1;\n\nDELETE FROM users\nWHERE id = 1;`},
+  {t:'Transactions',l:'sql',c:`BEGIN;\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT;\n-- ROLLBACK;`},
+  {t:'Indexes',l:'sql',c:`CREATE INDEX idx_users_email ON users(email);\nCREATE INDEX idx_orders_user_id ON orders(user_id);\nDROP INDEX idx_users_email;`},
+  {t:'Explain',l:'sql',c:`EXPLAIN SELECT * FROM users WHERE email = 'a@example.com';\nEXPLAIN ANALYZE SELECT * FROM users WHERE email = 'a@example.com';`},
+  {t:'Common performance checks',l:'sql',c:`-- Large tables\nSELECT table_name, table_rows\nFROM information_schema.tables\nORDER BY table_rows DESC;\n\n-- Duplicate values\nSELECT email, COUNT(*)\nFROM users\nGROUP BY email\nHAVING COUNT(*) > 1;`},
+ ]},
+
+{id:'python',n:'14',title:'Python',tool:'python',
+ tags:['python','scripting','venv','pip','files','json','subprocess','requests','logging','exceptions'],
+ subs:[
+  {t:'Run Python',l:'bash',c:`python3 --version\npython3 script.py\npython3 -m venv .venv\nsource .venv/bin/activate\npip install package\npip freeze > requirements.txt\npip install -r requirements.txt`},
+  {t:'Basic script',l:'python',c:`def main():\n    print("Hello")\n\nif __name__ == "__main__":\n    main()`},
+  {t:'Variables and data structures',l:'python',c:`name = "Yasir"\ncount = 3\nitems = ["a", "b", "c"]\nconfig = {"env": "prod", "replicas": 3}\nunique = {"a", "b"}`},
+  {t:'Loops',l:'python',c:`for item in items:\n    print(item)\n\nfor index, item in enumerate(items):\n    print(index, item)`},
+  {t:'Conditions',l:'python',c:`if count > 5:\n    print("large")\nelif count == 5:\n    print("five")\nelse:\n    print("small")`},
+  {t:'Files',l:'python',c:`from pathlib import Path\n\npath = Path("file.txt")\ntext = path.read_text()\npath.write_text("hello")`},
+  {t:'JSON',l:'python',c:`import json\n\nwith open("data.json") as f:\n    data = json.load(f)\n\nprint(json.dumps(data, indent=2))`},
+  {t:'Subprocess',l:'python',c:`import subprocess\n\nresult = subprocess.run(\n    ["kubectl", "get", "pods"],\n    capture_output=True,\n    text=True,\n    check=True,\n)\nprint(result.stdout)`},
+  {t:'HTTP requests',l:'python',c:`import requests\n\nresponse = requests.get("https://example.com")\nresponse.raise_for_status()\nprint(response.text)`},
+  {t:'Exceptions',l:'python',c:`try:\n    risky_operation()\nexcept Exception as e:\n    print(f"Error: {e}")`},
+  {t:'Logging',l:'python',c:`import logging\n\nlogging.basicConfig(level=logging.INFO)\nlogging.info("Started")\nlogging.error("Failed")`},
+ ]},
+
+{id:'network',n:'15',title:'Network Troubleshooting',tool:'network',
+ tags:['networking','dns','curl','tcp','tls','openssl','firewall','tcpdump','ports','ping','connectivity'],
+ subs:[
+  {t:'Basic identity',l:'bash',c:`hostname\nhostname -I\nip addr\nip route\nip link\nifconfig       # older systems`},
+  {t:'DNS',l:'bash',c:`nslookup example.com\ndig example.com\ndig example.com A\ndig example.com CNAME\ndig example.com MX\ndig +short example.com\ncat /etc/resolv.conf`},
+  {t:'Connectivity',l:'bash',c:`ping example.com\nping 8.8.8.8\ntraceroute example.com\ntracepath example.com\nmtr example.com`},
+  {t:'Ports',l:'bash',c:`ss -tulpn\nss -lntp\nnetstat -tulpn\nlsof -i :8080\nnc -vz host 443\ntelnet host 443`},
+  {t:'HTTP debugging',l:'bash',c:`curl -I https://example.com\ncurl -v https://example.com\ncurl -k https://example.com\ncurl -H "Host: example.com" http://IP\ncurl -X POST -H "Content-Type: application/json" -d '{"a":1}' URL`},
+  {t:'TLS certificates',l:'bash',c:`openssl s_client -connect example.com:443 -servername example.com\nopenssl x509 -in cert.pem -text -noout`},
+  {t:'Packet capture',l:'bash',c:`sudo tcpdump -i any\nsudo tcpdump -i any port 443\nsudo tcpdump -i any host 10.0.0.5\nsudo tcpdump -i any -w capture.pcap`},
+  {t:'Firewall',l:'bash',c:`sudo iptables -L -n -v\nsudo nft list ruleset\nsudo ufw status\nsudo firewall-cmd --list-all`},
+  {t:'Network troubleshooting flow',l:'text',c:`1. Is the host up?\n   ping host\n\n2. Does DNS resolve?\n   dig host\n\n3. Is routing correct?\n   ip route\n   traceroute host\n\n4. Is the port open?\n   nc -vz host port\n\n5. Does the application respond?\n   curl -v URL\n\n6. Is TLS valid?\n   openssl s_client -connect host:443 -servername host\n\n7. Are local firewalls or security groups blocking traffic?\n   iptables / nft / cloud firewall / security group`},
+ ]},
+
+{id:'workflows',n:'16',title:'Practical Cross-Tool Workflows',tool:'workflows',
+ tags:['workflows','debugging','troubleshooting','kubernetes','helm','terraform','aws','docker','prometheus','gitlab'],
+ subs:[
+  {t:'Kubernetes pod is crashing',l:'bash',c:`kubectl get pods -A | grep -i crash\nkubectl describe pod POD -n NS\nkubectl logs POD -n NS --previous\nkubectl get events -n NS --sort-by=.lastTimestamp\nkubectl describe node NODE`},
+  {t:'Pod crash checklist',l:'text',c:`- ImagePullBackOff: image, tag, registry secret\n- CrashLoopBackOff: app logs, env vars, config, health checks\n- Pending: resources, node selectors, taints, PVCs\n- OOMKilled: memory limits, app memory behavior`},
+  {t:'Helm deployment failed',l:'bash',c:`helm status RELEASE -n NS\nhelm history RELEASE -n NS\nhelm get values RELEASE -n NS\nhelm get manifest RELEASE -n NS\nhelm upgrade RELEASE CHART -n NS --dry-run --debug\nkubectl get events -n NS --sort-by=.lastTimestamp`},
+  {t:'Terraform apply failed',l:'bash',c:`terraform fmt\nterraform validate\nterraform plan\nterraform state list\nterraform state show RESOURCE\nTF_LOG=DEBUG terraform apply`},
+  {t:'Terraform failure checklist',l:'text',c:`- Provider credentials\n- Region/account mismatch\n- Resource already exists\n- State drift\n- IAM permission denied\n- Dependency ordering`},
+  {t:'AWS EKS access issue',l:'bash',c:`aws sts get-caller-identity\naws eks update-kubeconfig --name CLUSTER --region REGION\nkubectl config current-context\nkubectl auth can-i get pods -A\nkubectl get pods -A`},
+  {t:'Docker container cannot connect out',l:'bash',c:`docker inspect CONTAINER\ndocker exec -it CONTAINER sh\ndocker exec CONTAINER ip addr\ndocker exec CONTAINER cat /etc/resolv.conf\ndocker exec CONTAINER nslookup example.com\ndocker exec CONTAINER nc -vz host 443\ndocker network inspect NETWORK`},
+  {t:'GitLab CI failed deploy — checklist',l:'text',c:`- branch/tag rules\n- CI variables\n- runner tags\n- registry auth\n- kubeconfig/context\n- cloud credentials\n- artifact availability`},
+  {t:'GitLab CI — temporary debug script',l:'yaml',c:`script:\n  - env | sort\n  - pwd\n  - ls -lah\n  - kubectl config current-context\n  - kubectl get ns`},
+  {t:'Prometheus alert query debugging',l:'promql',c:`# Start with raw metric\nmetric_name\n\n# Add labels\nmetric_name{job="app"}\n\n# Add rate\nrate(metric_name[5m])\n\n# Add aggregation\nsum by (service) (rate(metric_name[5m]))\n\n# Add threshold\nsum by (service) (rate(metric_name[5m])) > 10`},
+ ]},
+
+{id:'toolkit',n:'17',title:'Daily DevOps Toolkit',tool:'toolkit',
+ tags:['jq','yq','watch','ssh','scp','rsync','cron','env','json','yaml','tools','ssh-tunnel'],
+ subs:[
+  {t:'JSON tools — jq',l:'bash',c:`jq '.' file.json\njq '.items[] | .metadata.name' file.json\nkubectl get pods -o json | jq '.items[].metadata.name'`},
+  {t:'YAML tools — yq',l:'bash',c:`yq '.' file.yaml\nyq '.metadata.name' file.yaml`},
+  {t:'Watch commands',l:'bash',c:`watch kubectl get pods\nwatch -n 2 'kubectl get pods -A | grep -i error'\nwatch df -h`},
+  {t:'Environment variables',l:'bash',c:`env\nprintenv\nexport NAME=value\nunset NAME\necho $PATH`},
+  {t:'SSH',l:'bash',c:`ssh user@host\nssh -i key.pem user@host\nscp file user@host:/tmp/\nrsync -av dir/ user@host:/tmp/dir/\nssh -L 8080:localhost:80 user@host`},
+  {t:'Cron',l:'bash',c:`crontab -l\ncrontab -e`},
+  {t:'Cron syntax example',l:'cron',c:`# Run every day at 2 AM\n0 2 * * * /path/script.sh >> /var/log/script.log 2>&1`},
+ ]},
+
+{id:'mentalmodels',n:'18',title:'Mental Models',tool:'mentalmodels',
+ tags:['mental-models','troubleshooting','methodology','linux','kubernetes','terraform','ansible','network','prometheus'],
+ subs:[],special:'mm'},
+
+{id:'aliases',n:'19',title:'High-Value Aliases',tool:'aliases',
+ tags:['aliases','shortcuts','productivity','kubectl','docker','git','terraform','shell'],
+ subs:[],special:'al'},
+
+{id:'security',n:'20',title:'Security & Compliance (DevSecOps)',tool:'security',
+ tags:['security','devsecops','secrets','scanning','trivy','kubernetes','iac','aws','compliance','gitleaks'],
+ subs:[
+  {t:'Security mental model',l:'text',c:`Code → dependencies → image → pipeline → infrastructure → runtime → identity → audit → compliance evidence`},
+  {t:'Core DevSecOps checks',l:'text',c:`- Are secrets exposed?\n- Are dependencies vulnerable?\n- Is the container image vulnerable?\n- Is the image running as root?\n- Are Kubernetes permissions too broad?\n- Are cloud IAM permissions least-privilege?\n- Are public resources intentionally public?\n- Are logs/audit trails enabled?\n- Are backups encrypted?\n- Are production changes traceable?`},
+  {t:'Secret detection — git grep',l:'bash',c:`git grep -n -i "password\\|secret\\|token\\|apikey\\|api_key\\|private_key"\ngit log -p --all | grep -i "password\\|secret\\|token\\|api_key"`},
+  {t:'Secret detection — Gitleaks',l:'bash',c:`gitleaks detect --source .\ngitleaks detect --source . --verbose\ngitleaks protect --staged`},
+  {t:'Secret detection — TruffleHog',l:'bash',c:`trufflehog git file://. --only-verified\ntrufflehog filesystem .`},
+  {t:'Dependency scanning — Python',l:'bash',c:`pip-audit\npip-audit -r requirements.txt\nsafety check -r requirements.txt`},
+  {t:'Dependency scanning — Node.js',l:'bash',c:`npm audit\nnpm audit fix\nnpm outdated`},
+  {t:'Dependency scanning — Go',l:'bash',c:`govulncheck ./...\ngo list -m -u all`},
+  {t:'Dependency scanning — Trivy (filesystem)',l:'bash',c:`trivy fs .\ntrivy fs --severity HIGH,CRITICAL .\ntrivy repo https://github.com/org/repo`},
+  {t:'Container image scanning',l:'bash',c:`trivy image nginx:latest\ntrivy image --severity HIGH,CRITICAL myapp:latest\ntrivy image --ignore-unfixed myapp:latest`},
+  {t:'Dockerfile security checklist',l:'text',c:`- Use minimal base images.\n- Pin image versions instead of using latest.\n- Avoid running as root.\n- Avoid copying secrets into images.\n- Use multi-stage builds.\n- Remove package manager cache.\n- Add HEALTHCHECK where useful.\n- Keep dependencies updated.`},
+  {t:'Dockerfile non-root example',l:'dockerfile',c:`FROM python:3.12-slim\nWORKDIR /app\nRUN useradd -r -u 10001 appuser\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\nCOPY . .\nUSER appuser\nCMD ["python", "app.py"]`},
+  {t:'Kubernetes — check permissions',l:'bash',c:`kubectl auth can-i get pods\nkubectl auth can-i '*' '*'\nkubectl auth can-i create pods --as system:serviceaccount:ns:name\nkubectl get role,rolebinding,clusterrole,clusterrolebinding -A`},
+  {t:'Kubernetes — find privileged pods',l:'bash',c:`kubectl get pods -A -o json | jq -r '\n  .items[] |\n  select(.spec.containers[]?.securityContext.privileged == true) |\n  [.metadata.namespace, .metadata.name] | @tsv\n'`},
+  {t:'Kubernetes — find containers without runAsNonRoot',l:'bash',c:`kubectl get pods -A -o json | jq -r '\n  .items[] |\n  select(.spec.containers[]?.securityContext.runAsNonRoot != true) |\n  [.metadata.namespace, .metadata.name] | @tsv\n'`},
+  {t:'Kubernetes securityContext example',l:'yaml',c:`securityContext:\n  runAsNonRoot: true\n  runAsUser: 10001\n  runAsGroup: 10001\n  fsGroup: 10001\n\ncontainers:\n  - name: app\n    securityContext:\n      allowPrivilegeEscalation: false\n      readOnlyRootFilesystem: true\n      capabilities:\n        drop:\n          - ALL`},
+  {t:'Kubernetes NetworkPolicy default deny',l:'yaml',c:`apiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: default-deny-all\n  namespace: app\nspec:\n  podSelector: {}\n  policyTypes:\n    - Ingress\n    - Egress`},
+  {t:'Kubernetes security tools',l:'bash',c:`kube-bench run\nkube-hunter\nkubescape scan\npolaris audit --audit-path ./manifests\nconftest test deployment.yaml`},
+  {t:'IaC security — tfsec',l:'bash',c:`tfsec .\ntfsec . --minimum-severity HIGH`},
+  {t:'IaC security — Checkov',l:'bash',c:`checkov -d .\ncheckov -d . --framework terraform\ncheckov -d . --check CKV_AWS_*`},
+  {t:'IaC security — Terrascan',l:'bash',c:`terrascan scan -t aws -i terraform\nterrascan scan -i k8s`},
+  {t:'AWS — identity and IAM review',l:'bash',c:`aws sts get-caller-identity\naws iam get-user\naws iam list-account-aliases\naws iam list-users\naws iam list-roles\naws iam list-policies --scope Local\naws iam list-attached-role-policies --role-name ROLE\naws iam get-policy-version --policy-arn ARN --version-id v1`},
+  {t:'AWS — find public S3 buckets',l:'bash',c:`aws s3api list-buckets --query 'Buckets[*].Name' --output text\naws s3api get-public-access-block --bucket BUCKET\naws s3api get-bucket-policy-status --bucket BUCKET\naws s3api get-bucket-acl --bucket BUCKET`},
+  {t:'AWS — Security Hub / GuardDuty / Inspector',l:'bash',c:`aws securityhub get-findings --max-results 10\naws guardduty list-detectors\naws inspector2 list-findings --max-results 10`},
+  {t:'AWS — CloudTrail',l:'bash',c:`aws cloudtrail describe-trails\naws cloudtrail lookup-events --max-results 10\naws cloudtrail lookup-events --lookup-attributes AttributeKey=Username,AttributeValue=USER`},
+  {t:'GitLab CI — DevSecOps jobs',l:'yaml',c:`stages:\n  - test\n  - security\n  - build\n  - deploy\n\nsecret-detection:\n  stage: security\n  image: zricethezav/gitleaks:latest\n  script:\n    - gitleaks detect --source . --verbose\n\ndependency-scan:\n  stage: security\n  image: aquasec/trivy:latest\n  script:\n    - trivy fs --severity HIGH,CRITICAL .\n\nimage-scan:\n  stage: security\n  image: aquasec/trivy:latest\n  script:\n    - trivy image --severity HIGH,CRITICAL "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"`},
+  {t:'Compliance evidence checklist',l:'text',c:`- Change request or merge request link\n- Approver identity\n- CI/CD pipeline result\n- Terraform plan/apply output\n- Security scan results\n- Artifact or image digest\n- Deployment timestamp\n- Rollback plan\n- Audit logs\n- Monitoring screenshots or links`},
+  {t:'DevSecOps release gate',l:'text',c:`A deployment should not continue if:\n\n- Secrets are detected in code.\n- Critical vulnerabilities are present without exception approval.\n- Terraform plan includes unexpected destructive changes.\n- Kubernetes manifests require privileged containers without approval.\n- IAM policy grants broad wildcard access without justification.\n- Public exposure changed unexpectedly.\n- Required audit logging or encryption is disabled.`},
+ ]},
+
+{id:'finops',n:'21',title:'Cost & Resource Optimization (FinOps)',tool:'finops',
+ tags:['finops','cost','aws','kubernetes','ec2','s3','rds','tagging','rightsizing','optimization'],
+ subs:[
+  {t:'FinOps mental model',l:'text',c:`Visibility → allocation → rightsizing → optimization → automation → governance → unit economics`},
+  {t:'Core FinOps questions',l:'text',c:`- What are we spending?\n- Who owns the spend?\n- Which service, team, customer, cluster, or workload caused it?\n- Is usage expected?\n- Is the resource idle, oversized, or underutilized?\n- Can it be scheduled, rightsized, reserved, or moved to Spot?\n- What is cost per customer, workload, transaction, query, or environment?`},
+  {t:'AWS Cost Explorer — by service',l:'bash',c:`aws ce get-cost-and-usage \\\n  --time-period Start=2026-05-01,End=2026-06-01 \\\n  --granularity MONTHLY \\\n  --metrics UnblendedCost \\\n  --group-by Type=DIMENSION,Key=SERVICE`},
+  {t:'AWS Cost Explorer — by tag',l:'bash',c:`aws ce get-cost-and-usage \\\n  --time-period Start=2026-05-01,End=2026-06-01 \\\n  --granularity DAILY \\\n  --metrics UnblendedCost \\\n  --group-by Type=TAG,Key=Environment`},
+  {t:'AWS Cost Explorer — find expensive services (table)',l:'bash',c:`aws ce get-cost-and-usage \\\n  --time-period Start=2026-05-01,End=2026-06-01 \\\n  --granularity MONTHLY \\\n  --metrics UnblendedCost \\\n  --group-by Type=DIMENSION,Key=SERVICE \\\n  --query 'ResultsByTime[0].Groups[*].[Keys[0],Metrics.UnblendedCost.Amount]' \\\n  --output table`},
+  {t:'Tagging strategy',l:'text',c:`Required tags:\n\n- Environment: prod / staging / dev\n- Team: platform / data / app / sre\n- Service: app name or platform component\n- Owner: team or email\n- CostCenter: finance allocation\n- Customer: customer name or id, if applicable\n- ManagedBy: terraform / ansible / manual\n- Criticality: high / medium / low`},
+  {t:'AWS tag inspection',l:'bash',c:`aws resourcegroupstaggingapi get-resources\naws resourcegroupstaggingapi get-resources \\\n  --tag-filters Key=Environment,Values=prod`},
+  {t:'EC2 — list instances',l:'bash',c:`aws ec2 describe-instances \\\n  --query 'Reservations[*].Instances[*].[InstanceId,InstanceType,State.Name,PrivateIpAddress,Tags]' \\\n  --output table`},
+  {t:'EC2 — find stopped instances',l:'bash',c:`aws ec2 describe-instances \\\n  --filters "Name=instance-state-name,Values=stopped" \\\n  --query 'Reservations[*].Instances[*].[InstanceId,InstanceType,LaunchTime]' \\\n  --output table`},
+  {t:'EC2 rightsizing checklist',l:'text',c:`- CPU average and p95 utilization\n- Memory average and p95 utilization\n- Network throughput\n- Disk IOPS and throughput\n- Autoscaling behavior\n- Business criticality\n- Reserved Instance or Savings Plan coverage\n- Spot suitability`},
+  {t:'EBS — list volumes',l:'bash',c:`aws ec2 describe-volumes \\\n  --query 'Volumes[*].[VolumeId,Size,VolumeType,State,AvailabilityZone]' \\\n  --output table`},
+  {t:'EBS — find unattached volumes',l:'bash',c:`aws ec2 describe-volumes \\\n  --filters Name=status,Values=available \\\n  --query 'Volumes[*].[VolumeId,Size,VolumeType,CreateTime]' \\\n  --output table`},
+  {t:'EBS — snapshot inspection',l:'bash',c:`aws ec2 describe-snapshots --owner-ids self \\\n  --query 'Snapshots[*].[SnapshotId,VolumeSize,StartTime,Description]' \\\n  --output table`},
+  {t:'S3 — bucket size via CloudWatch',l:'bash',c:`aws cloudwatch get-metric-statistics \\\n  --namespace AWS/S3 \\\n  --metric-name BucketSizeBytes \\\n  --dimensions Name=BucketName,Value=BUCKET Name=StorageType,Value=StandardStorage \\\n  --start-time 2026-05-01T00:00:00Z \\\n  --end-time 2026-05-02T00:00:00Z \\\n  --period 86400 \\\n  --statistics Average`},
+  {t:'S3 lifecycle ideas',l:'text',c:`- Move old objects to infrequent access.\n- Archive rarely used objects to Glacier classes.\n- Expire temporary files.\n- Delete incomplete multipart uploads.\n- Enable intelligent tiering where access patterns are unknown.`},
+  {t:'S3 lifecycle rule example',l:'json',c:`{\n  "Rules": [\n    {\n      "ID": "archive-old-objects",\n      "Status": "Enabled",\n      "Filter": { "Prefix": "logs/" },\n      "Transitions": [\n        { "Days": 30, "StorageClass": "STANDARD_IA" },\n        { "Days": 90, "StorageClass": "GLACIER" }\n      ],\n      "Expiration": { "Days": 365 }\n    }\n  ]\n}`},
+  {t:'RDS — list instances',l:'bash',c:`aws rds describe-db-instances \\\n  --query 'DBInstances[*].[DBInstanceIdentifier,DBInstanceClass,Engine,DBInstanceStatus,AllocatedStorage,MultiAZ]' \\\n  --output table`},
+  {t:'RDS optimization checklist',l:'text',c:`- CPU utilization\n- Freeable memory\n- Free storage space\n- Read/write IOPS\n- Slow queries\n- Replica lag\n- Storage autoscaling\n- Backup retention\n- Multi-AZ requirement\n- Instance family modernization`},
+  {t:'Kubernetes — resource usage',l:'bash',c:`kubectl top nodes\nkubectl top pods -A\nkubectl describe node NODE\nkubectl get pods -A -o custom-columns='NS:.metadata.namespace,POD:.metadata.name,CPU_REQ:.spec.containers[*].resources.requests.cpu,MEM_REQ:.spec.containers[*].resources.requests.memory,CPU_LIM:.spec.containers[*].resources.limits.cpu,MEM_LIM:.spec.containers[*].resources.limits.memory'`},
+  {t:'Kubernetes — find pods without requests/limits',l:'bash',c:`kubectl get pods -A -o json | jq -r '\n  .items[] |\n  select(.spec.containers[]?.resources.requests.cpu == null or .spec.containers[]?.resources.requests.memory == null) |\n  [.metadata.namespace, .metadata.name] | @tsv\n'`},
+  {t:'Kubernetes optimization checklist',l:'text',c:`- Set realistic CPU/memory requests.\n- Avoid overly high limits.\n- Use HPA for variable workloads.\n- Use VPA recommendations carefully.\n- Use Cluster Autoscaler or Karpenter.\n- Use Spot nodes for fault-tolerant workloads.\n- Separate critical and non-critical workloads with node pools.\n- Clean unused namespaces, PVCs, services, and load balancers.`},
+  {t:'Kubernetes HPA example',l:'yaml',c:`apiVersion: autoscaling/v2\nkind: HorizontalPodAutoscaler\nmetadata:\n  name: app\nspec:\n  scaleTargetRef:\n    apiVersion: apps/v1\n    kind: Deployment\n    name: app\n  minReplicas: 2\n  maxReplicas: 10\n  metrics:\n    - type: Resource\n      resource:\n        name: cpu\n        target:\n          type: Utilization\n          averageUtilization: 70`},
+  {t:'Load balancer and network cost checks',l:'bash',c:`aws elbv2 describe-load-balancers \\\n  --query 'LoadBalancers[*].[LoadBalancerName,Type,Scheme,State.Code,DNSName]' \\\n  --output table`},
+  {t:'Network cost checklist',l:'text',c:`- Unused load balancers\n- Idle NAT gateways\n- Cross-AZ data transfer\n- Public data egress\n- Excessive log ingestion\n- Unused Elastic IPs`},
+  {t:'Observability cost optimization',l:'text',c:`- Reduce high-cardinality labels.\n- Drop noisy metrics before ingestion.\n- Sample verbose logs.\n- Separate debug logs from production default logs.\n- Set retention by environment.\n- Avoid collecting duplicate metrics.\n- Use recording rules for expensive PromQL queries.`},
+  {t:'Prometheus high-cardinality detection',l:'promql',c:`count by (__name__)({__name__=~".+"})\ntopk(20, count by (__name__)({__name__=~".+"}))`},
+  {t:'Cleanup — Docker',l:'bash',c:`docker system df\ndocker system prune\ndocker image prune -a\ndocker volume prune`},
+  {t:'Cleanup — Kubernetes inspection',l:'bash',c:`kubectl get pvc -A\nkubectl get svc -A\nkubectl get ingress -A\nkubectl get pods -A --field-selector=status.phase=Succeeded\nkubectl get pods -A --field-selector=status.phase=Failed`},
+  {t:'Cleanup — Terraform',l:'bash',c:`terraform plan -destroy\nterraform state list\nterraform state show RESOURCE`},
+  {t:'FinOps release gate',l:'text',c:`Before approving infrastructure changes, ask:\n\n- What new monthly cost does this introduce?\n- Is it tagged correctly?\n- Is this resource required 24/7?\n- Is autoscaling configured?\n- Are cheaper instance families possible?\n- Can this use Spot?\n- Is storage lifecycle configured?\n- Is log/metric volume controlled?\n- Who owns the cost after deployment?`},
+  {t:'FinOps KPIs',l:'text',c:`- Monthly cloud spend\n- Spend by service\n- Spend by team\n- Spend by environment\n- Spend by customer\n- Idle resource percentage\n- Reserved/Savings Plan coverage\n- Kubernetes request vs actual usage\n- Cost per request/query/customer/workload\n- Forecast vs actual spend`},
+ ]},
+
+{id:'safety',n:'22',title:'Final Safety Reminders',tool:'safety',
+ tags:['safety','production','context','aws','kubernetes','terraform','git','database','pre-flight'],
+ subs:[
+  {t:'Context verification commands',l:'bash',c:`aws sts get-caller-identity\nkubectl config current-context\nkubectl config view --minify --output 'jsonpath={..namespace}'\nterraform workspace show\ngit branch --show-current`},
+ ],special:'sf'},
+];
+
+// ── TOOLS ─────────────────────────────────
+const TOOLS=[
+ {id:'all',   label:'All',       c:'#3fffa2'},
+ {id:'universal',label:'Universal',c:'#c084fc'},
+ {id:'linux', label:'Linux',     c:'#f97316'},
+ {id:'bash',  label:'Bash',      c:'#fbbf24'},
+ {id:'git',   label:'Git',       c:'#f472b6'},
+ {id:'yaml',  label:'YAML',      c:'#94a3b8'},
+ {id:'docker',label:'Docker',    c:'#22d3ee'},
+ {id:'kubernetes',label:'k8s',   c:'#3b82f6'},
+ {id:'helm',  label:'Helm',      c:'#8b5cf6'},
+ {id:'ansible',label:'Ansible',  c:'#ef4444'},
+ {id:'terraform',label:'Terraform',c:'#a78bff'},
+ {id:'aws',   label:'AWS',       c:'#fb923c'},
+ {id:'gitlabci',label:'GitLab CI',c:'#fc6d26'},
+ {id:'prometheus',label:'PromQL',c:'#f59e0b'},
+ {id:'sql',   label:'SQL',       c:'#10b981'},
+ {id:'python',label:'Python',    c:'#34d399'},
+ {id:'network',label:'Network',  c:'#06b6d4'},
+ {id:'workflows',label:'Workflows',c:'#e879f9'},
+ {id:'toolkit',label:'Toolkit',  c:'#64748b'},
+ {id:'mentalmodels',label:'Models',c:'#818cf8'},
+ {id:'aliases',label:'Aliases',  c:'#38bdf8'},
+ {id:'security',label:'Security', c:'#f43f5e'},
+ {id:'finops',  label:'FinOps',   c:'#a3e635'},
+ {id:'safety',label:'Safety',    c:'#ff5e7a'},
+];
+
+const ALIASES=[
+ {k:'k',   v:'kubectl'},
+ {k:'kgp', v:'kubectl get pods'},
+ {k:'kga', v:'kubectl get all'},
+ {k:'kctx',v:'kubectl config current-context'},
+ {k:'tf',  v:'terraform'},
+ {k:'dps', v:'docker ps'},
+ {k:'dlog',v:'docker logs -f'},
+ {k:'gst', v:'git status'},
+ {k:'gl',  v:'git log --oneline --graph --decorate --all'},
+ {k:'ll',  v:'ls -lah'},
+ {k:'ports',v:'ss -tulpn'},
+];
+
+const MM=[
+ {l:'Linux',      s:['CPU','memory','disk','network','process','logs','config','permissions']},
+ {l:'Kubernetes', s:['Desired state','controller','pod','container','logs','events','node','network','storage']},
+ {l:'Terraform',  s:['Code','variables','provider','plan','state','cloud API','permissions','drift']},
+ {l:'Ansible',    s:['Inventory','connectivity','privilege escalation','variables','task logic','idempotency','handlers']},
+ {l:'Network',    s:['DNS','route','firewall','port','TLS','HTTP','application logs']},
+ {l:'Prometheus', s:['Metric exists?','labels correct?','scrape working?','rate window valid?','aggregation right?','alert threshold sane?']},
+];
+
+const SAFETY_C=[
+ {i:'☁', t:'Which AWS account?'},
+ {i:'☸', t:'Which Kubernetes context?'},
+ {i:'⬡', t:'Which namespace?'},
+ {i:'🟣',t:'Which Terraform workspace?'},
+ {i:'🌿',t:'Which Git branch?'},
+ {i:'🗄', t:'Which database?'},
+ {i:'💾',t:'Is there a backup?'},
+ {i:'🚨',t:'Is this prod?'},
+];
+
+const MANTRA=['Observe first.','Understand state.','Change one thing.','Verify impact.','Document what changed.','Automate when repeated.'];
+
+// ── STATE ──────────────────────────────────
+let AT='all', Q='', AI=-1;
+
+// ── INIT ───────────────────────────────────
+function init(){
+  renderPills();
+  renderSidebar();
+  renderAll();
+  bindSearch();
+}
+
+// ── PILLS ──────────────────────────────────
+function renderPills(){
+  document.getElementById('tr').innerHTML=TOOLS.map(t=>{
+    const on=t.id===AT;
+    return `<button class="pill${on?' on':''}" data-id="${t.id}"
+      style="${on?`background:${t.c};color:#000;border-color:${t.c}`:''}"
+      onclick="setTool('${t.id}')">${t.label}</button>`;
+  }).join('');
+}
+function setTool(id){AT=id;renderPills();renderSidebar();renderAll();}
+
+// ── SIDEBAR ────────────────────────────────
+function subAnchorId(secId, subTitle){
+  return 'sub-'+secId+'-'+subTitle.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+}
+function renderSidebar(){
+  const vis=SEC.filter(s=>isVisible(s));
+  const showSubs = AT!=='all';
+  document.getElementById('sbl').innerHTML=vis.map(s=>{
+    const header=`<div class="sbi" onclick="goTo('${s.id}')"><span class="sbi-dot"></span>${s.n}. ${s.title}</div>`;
+    if(!showSubs || !s.subs || !s.subs.length) return header;
+    const subs=s.subs.map(sub=>{
+      const aid=subAnchorId(s.id,sub.t);
+      return `<div class="sbi-sec" onclick="goToSub('${aid}')">${escH(sub.t)}</div>`;
+    }).join('');
+    return `<div class="sbi-grp">${header}${subs}</div>`;
+  }).join('');
+}
+function goTo(id){
+  const el=document.getElementById('s-'+id);
+  if(el) el.scrollIntoView({behavior:'smooth'});
+}
+function goToSub(id){
+  const el=document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth'});
+}
+
+// ── VISIBILITY ─────────────────────────────
+function isVisible(s){
+  if(AT!=='all'&&s.tool!==AT) return false;
+  if(!Q) return true;
+  const q=Q.toLowerCase();
+  if(s.title.toLowerCase().includes(q)) return true;
+  if(s.tags.some(t=>t.includes(q))) return true;
+  return s.subs.some(sub=>sub.t.toLowerCase().includes(q)||sub.c.toLowerCase().includes(q));
+}
+
+// ── MAIN RENDER ────────────────────────────
+function renderAll(){
+  const visible=SEC.filter(s=>isVisible(s));
+  document.getElementById('nr').classList.toggle('show',visible.length===0);
+  document.getElementById('secs').innerHTML=visible.map(renderSec).join('');
+  document.querySelectorAll('.cp-btn').forEach(btn=>{
+    btn.onclick=e=>{
+      e.stopPropagation();
+      const pre=btn.closest('.cb').querySelector('pre');
+      navigator.clipboard.writeText(pre.innerText).then(()=>{
+        btn.textContent='✓ done';btn.classList.add('done');
+        setTimeout(()=>{btn.textContent='copy';btn.classList.remove('done');},1500);
+      });
+    };
+  });
+}
+
+function renderSec(s){
+  const tc=TOOLS.find(t=>t.id===s.tool);
+  const col=tc?tc.c:'var(--green)';
+  const tagHtml=s.tags.map(t=>`<span class="stag">${t}</span>`).join('');
+  let body='';
+
+  if(s.special==='mm'){
+    body=MM.map(m=>`
+      <div class="sub">
+        <div class="flow-lbl">${m.l}</div>
+        <div class="flow-row">
+          ${m.s.map((st,i)=>`
+            <span class="flow-step">${HL(escH(st))}</span>
+            ${i<m.s.length-1?'<span class="flow-arr">→</span>':''}
+          `).join('')}
+        </div>
+      </div>`).join('');
+  } else if(s.special==='al'){
+    const aliasCode=ALIASES.map(a=>`alias ${a.k}='${a.v}'`).join('\n');
+    body=`
+      <div class="alias-grid">
+        ${ALIASES.map(a=>`
+          <div class="al-row" title="Click to copy alias definition"
+            onclick="navigator.clipboard.writeText('alias ${a.k}=\\'${a.v}\\'')">
+            <span class="al-k">${HL(escH(a.k))}</span>
+            <span class="al-eq">=</span>
+            <span class="al-v">${HL(escH(a.v))}</span>
+          </div>`).join('')}
+      </div>
+      <div class="cb">
+        <div class="cb-bar"><span class="cb-lang">bash — add to ~/.bashrc or ~/.zshrc</span><button class="cp-btn">copy</button></div>
+        <pre>${HL(escH(aliasCode))}</pre>
+      </div>`;
+  } else if(s.special==='sf'){
+    body=`
+      <div class="sub">
+        <div class="sub-t">Pre-destructive command checklist</div>
+        <div class="info warn">Before any destructive command, verify your context:</div>
+        <div class="checks">
+          ${SAFETY_C.map(c=>`
+            <div class="chk"><span class="chk-i">${c.i}</span><span>${HL(escH(c.t))}</span></div>`
+          ).join('')}
+        </div>
+      </div>
+      ${s.subs.map(sub=>renderSub(sub,s.id)).join('')}
+      <div class="sub">
+        <div class="sub-t">Personal DevOps Mantra</div>
+        <div class="mantra">
+          ${MANTRA.map(l=>`<div class="m-line"><span class="m-b">▸</span><span>${HL(escH(l))}</span></div>`).join('')}
+        </div>
+      </div>`;
+  } else {
+    body=s.subs.map(sub=>renderSub(sub,s.id)).join('');
+  }
+
+  return `<div class="sec" id="s-${s.id}">
+    <div class="sec-hd" style="border-bottom-color:${col}22">
+      <span class="sec-num">${s.n.padStart(2,'0')}</span>
+      <span class="sec-title" style="color:#fff">${HL(escH(s.title))}</span>
+      <div class="sec-tags">${tagHtml}</div>
+    </div>
+    ${body}
+  </div>`;
+}
+
+function renderSub(sub, secId){
+  const aid = secId ? subAnchorId(secId, sub.t) : '';
+  return `<div class="sub"${aid ? ` id="${aid}"` : ''} style="scroll-margin-top:150px">
+    <div class="sub-t">${HL(escH(sub.t))}</div>
+    <div class="cb">
+      <div class="cb-bar"><span class="cb-lang">${sub.l}</span><button class="cp-btn">copy</button></div>
+      <pre>${HL(escH(sub.c))}</pre>
+    </div>
+  </div>`;
+}
+
+// ── SEARCH ─────────────────────────────────
+function bindSearch(){
+  const inp=document.getElementById('si');
+  inp.addEventListener('input',e=>{
+    Q=e.target.value.trim();
+    renderAll();renderSidebar();showAC(Q);AI=-1;
+  });
+  inp.addEventListener('keydown',e=>{
+    const drop=document.getElementById('ac');
+    const rows=drop.querySelectorAll('.ac-r');
+    if(e.key==='ArrowDown'){e.preventDefault();AI=Math.min(AI+1,rows.length-1);hiAC(rows);}
+    else if(e.key==='ArrowUp'){e.preventDefault();AI=Math.max(AI-1,-1);hiAC(rows);}
+    else if(e.key==='Enter'&&AI>=0){e.preventDefault();applyAC(rows[AI].dataset.v);}
+    else if(e.key==='Escape'){drop.classList.remove('show');}
+    else if(e.key==='Tab'&&rows.length){e.preventDefault();applyAC(rows[0].dataset.v);}
+  });
+  inp.addEventListener('blur',()=>setTimeout(()=>document.getElementById('ac').classList.remove('show'),180));
+  inp.addEventListener('focus',()=>{if(Q.length>=1)showAC(Q);});
+}
+
+function showAC(q){
+  const drop=document.getElementById('ac');
+  if(!q){drop.classList.remove('show');return;}
+  const ql=q.toLowerCase();
+  const hits=[];const seen=new Set();
+  SEC.forEach(s=>{
+    if(s.title.toLowerCase().includes(ql)&&!seen.has(s.title)){
+      seen.add(s.title);hits.push({v:s.title,src:s.n+'. '+s.title});
+    }
+    s.tags.forEach(t=>{if(t.includes(ql)&&!seen.has(t)){seen.add(t);hits.push({v:t,src:'tag'});}});
+    s.subs.forEach(sub=>{
+      if(sub.t.toLowerCase().includes(ql)&&!seen.has(sub.t)){
+        seen.add(sub.t);hits.push({v:sub.t,src:s.title});
+      }
+      sub.c.split('\n').forEach(line=>{
+        const l=line.trim();
+        if(l&&!l.startsWith('#')&&l.toLowerCase().includes(ql)&&l.length<72&&!seen.has(l)){
+          seen.add(l);hits.push({v:l,src:sub.t});
+        }
+      });
+    });
+  });
+  const uniq=hits.slice(0,10);
+  if(!uniq.length){drop.classList.remove('show');return;}
+  drop.innerHTML=uniq.map((h,i)=>`
+    <div class="ac-r${i===AI?' hi':''}" data-v="${escAttr(h.v)}" onmousedown="applyAC('${escJ(h.v)}')">
+      <span class="ac-c">${hlAC(escH(h.v),ql)}</span>
+      <span class="ac-s">${escH(h.src)}</span>
+    </div>`).join('');
+  drop.classList.add('show');
+}
+function hlAC(t,q){const i=t.toLowerCase().indexOf(q);if(i<0)return t;return t.slice(0,i)+`<mark>${t.slice(i,i+q.length)}</mark>`+t.slice(i+q.length);}
+function applyAC(v){const inp=document.getElementById('si');inp.value=v;Q=v;document.getElementById('ac').classList.remove('show');renderAll();renderSidebar();}
+function hiAC(rows){rows.forEach((r,i)=>r.classList.toggle('hi',i===AI));}
+
+// ── UTILS ──────────────────────────────────
+function escH(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function escAttr(s){return String(s).replace(/"/g,'&quot;');}
+function escJ(s){return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
+function HL(t){if(!Q)return t;const q=escH(Q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>');}
+
+init();
+</script>
+</article>
+</main>
+</body>
+</html>

@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="Arabic rhetoric, balaghah, language">
+  <meta property="og:title"       content="Arabic Balāghah: A Complete Guide" />
+  <meta property="og:description" content="Arabic Balāghah: A Complete Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/learning/languages/arabic-balaghah.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Arabic Balāghah: A Complete Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Arabic Balāghah: A Complete Guide">
+  <meta name="twitter:description" content="Arabic Balāghah: A Complete Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/learning/languages/arabic-balaghah.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Yasir Bilgin" />
+  
+  <title>Arabic Balāghah: A Complete Guide | Yasir Bilgin</title>
+
+  <!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+  <!-- Aref Ruqaa served ONLY via @font-face with unicode-range below.
+       No Google Fonts link for it — that would load Latin glyphs too. -->
+
+  <style>
+    /* ============================================================
+       TOKENS & RESET
+    ============================================================ */
+    :root {
+      --ink:        #1c1712;
+      --ink-2:      #3d3427;
+      --ink-3:      #6b5d4f;
+      --ink-4:      #9c8b7a;
+      --cream:      #faf7f2;
+      --cream-2:    #f3ede4;
+      --cream-3:    #e8dfd3;
+      --gold:       #b5882e;
+      --gold-light: #d4a84b;
+      --gold-pale:  #f5edda;
+      --rust:       #8b3a2f;
+      --sage:       #4a6741;
+      --teal:       #2a6b6b;
+      --blue-deep:  #2c4a6e;
+
+      --accent-maani:  #2c4a6e;
+      --accent-bayan:  #4a6741;
+      --accent-badi:   #7a3a6b;
+
+      --sidebar-w: 280px;
+      --nav-h:     62px;
+      --sub-h:     52px;
+    }
+
+    .page-body, .hero, .toc-panel { font-size: 18px; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    .page-body *, .article-body *, .sidebar *, .hero *, .toc-panel *,
+    .article-header *, footer * { margin: 0; padding: 0; }
+
+    /* Aref Ruqaa — Arabic subset ONLY (no Latin glyphs in these files).
+       Served from Fontsource/jsDelivr. Font-family name is unique so it
+       can never be inherited by nav.js or any non-Arabic element.        */
+    @font-face {
+      font-family: 'ArefRuqaaArabic';
+      src: url('https://cdn.jsdelivr.net/fontsource/fonts/aref-ruqaa@latest/arabic-400-normal.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'ArefRuqaaArabic';
+      src: url('https://cdn.jsdelivr.net/fontsource/fonts/aref-ruqaa@latest/arabic-700-normal.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Source Serif 4', 'Georgia', serif;
+      line-height: 1.75;
+      padding-top: 62px !important;
+    }
+
+    /* ============================================================
+       PROGRESS BAR
+    ============================================================ */
+    .progress-bar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ============================================================
+       TOC OVERLAY
+    ============================================================ */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--cream);
+      width: min(380px, 92vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem 3rem;
+      border-left: 3px solid var(--gold);
+    }
+    .toc-close {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1.2rem;
+    }
+    .toc-close button {
+      background: none;
+      border: 1px solid var(--cream-3);
+      color: var(--ink-3);
+      font-size: 0.85rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .toc-panel h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+      border-bottom: 1px solid var(--cream-3);
+      padding-bottom: 0.7rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block;
+      text-decoration: none;
+      padding: 0.28rem 0;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      color: var(--ink-2);
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s;
+    }
+    .toc-list a:hover { color: var(--gold); }
+    .toc-list a.toc-main {
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 0.8rem;
+      font-size: 0.92rem;
+    }
+    .toc-list a.toc-sub {
+      padding-left: 1rem;
+      color: var(--ink-3);
+      font-size: 0.83rem;
+    }
+    .toc-list a.toc-sub2 {
+      padding-left: 2rem;
+      color: var(--ink-4);
+      font-size: 0.8rem;
+    }
+    .toc-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-left: 5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      vertical-align: middle;
+    }
+    .badge-maani  { background: #dde6f0; color: var(--accent-maani); }
+    .badge-bayan  { background: #ddeedd; color: var(--accent-bayan); }
+    .badge-badi   { background: #edddf0; color: var(--accent-badi); }
+
+    /* ============================================================
+       ARTICLE SUB-HEADER
+    ============================================================ */
+    .article-header {
+      background: rgba(250,247,242,0.97);
+      border-bottom: 1px solid var(--cream-3);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: var(--sub-h);
+      overflow: hidden;
+      font-family: 'Lora', 'Georgia', serif !important;
+      font-size: 0.88rem !important;
+      line-height: 1 !important;
+    }
+    .article-header *, .article-header *::before, .article-header *::after {
+      font-family: 'Lora', 'Georgia', serif !important;
+      line-height: 1 !important;
+    }
+    .article-header .site-name {
+      font-family: 'Lora', serif;
+      font-size: 0.88rem;
+      color: var(--ink-3);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .read-time {
+      font-size: 0.8rem;
+      color: var(--ink-4);
+      font-style: italic;
+    }
+    .toc-btn {
+      background: var(--gold);
+      color: white;
+      border: none;
+      padding: 0.35rem 1rem;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      font-family: 'Lora', serif;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .toc-btn:hover { background: var(--gold-light); }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 0.25rem 0.9rem;
+      border-radius: 2px;
+      margin-bottom: 1.8rem;
+      font-family: 'Lora', serif;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+    .hero-arabic {
+      font-family: 'ArefRuqaaArabic', serif;
+      font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1.4rem;
+      direction: rtl;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--ink-3);
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .byline-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    .byline-name { font-size: 0.9rem; font-weight: 600; color: var(--ink-2); }
+    .byline-meta { font-size: 0.78rem; color: var(--ink-4); font-style: italic; }
+
+    /* Science badges row in hero */
+    .science-badges {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 2.5rem 0 0;
+    }
+    .sci-badge {
+      padding: 0.6rem 1.4rem;
+      border-radius: 4px;
+      font-family: 'Lora', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .sci-badge.maani { background: #dde6f0; color: var(--accent-maani); border: 1.5px solid #b0c4de; }
+    .sci-badge.bayan { background: #ddeedd; color: var(--accent-bayan); border: 1.5px solid #a8c8a8; }
+    .sci-badge.badi  { background: #edddf0; color: var(--accent-badi);  border: 1.5px solid #d0a8d8; }
+    .sci-badge:hover { opacity: 0.75; transform: translateY(-1px); }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--cream-3);
+      margin: 0 2.5rem;
+    }
+
+    /* ============================================================
+       MAIN LAYOUT: SIDEBAR + CONTENT
+    ============================================================ */
+    .page-body {
+      display: flex;
+      align-items: flex-start;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---- Left sidebar ---- */
+    .sidebar {
+      width: var(--sidebar-w);
+      flex-shrink: 0;
+      position: sticky;
+      top: calc(var(--nav-h) + var(--sub-h) + 1.5rem);
+      max-height: calc(100vh - var(--nav-h) - var(--sub-h) - 3rem);
+      overflow-y: auto;
+      padding: 1.5rem 1.2rem 2rem 0.2rem;
+    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--cream-3); border-radius: 2px; }
+
+    .sidebar-section { margin-bottom: 1.6rem; }
+    .sidebar-label {
+      font-family: 'Lora', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+      display: block;
+      margin-bottom: 0.7rem;
+      padding-left: 0.2rem;
+    }
+
+    /* Search box */
+    .search-wrap {
+      position: relative;
+      margin-bottom: 1.4rem;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--ink-4);
+      pointer-events: none;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 0.5rem 0.7rem 0.5rem 2.2rem;
+      border: 1px solid var(--cream-3);
+      border-radius: 4px;
+      background: white;
+      font-family: inherit;
+      font-size: 0.85rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #searchInput:focus { border-color: var(--gold); }
+    #searchInput::placeholder { color: var(--ink-4); }
+    #clearSearch {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--ink-4);
+      cursor: pointer;
+      font-size: 1rem;
+      display: none;
+      line-height: 1;
+      padding: 0;
+    }
+    #searchResults {
+      font-size: 0.78rem;
+      color: var(--ink-4);
+      padding-left: 0.2rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    /* Filter buttons */
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.4rem 0.7rem;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background: transparent;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.84rem;
+      color: var(--ink-2);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s;
+    }
+    .filter-btn:hover { background: var(--cream-2); }
+    .filter-btn.active {
+      background: var(--gold-pale);
+      border-color: var(--gold);
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .filter-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-all    { background: var(--ink-3); }
+    .dot-maani  { background: var(--accent-maani); }
+    .dot-bayan  { background: var(--accent-bayan); }
+    .dot-badi   { background: var(--accent-badi); }
+    .dot-intro  { background: var(--gold); }
+
+    /* Concept quick-nav */
+    .concept-nav { display: flex; flex-direction: column; gap: 0.25rem; }
+    .concept-link {
+      font-size: 0.8rem;
+      color: var(--ink-3);
+      text-decoration: none;
+      padding: 0.18rem 0.6rem;
+      border-radius: 3px;
+      transition: color 0.15s, background 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .concept-link:hover { color: var(--ink); background: var(--cream-2); }
+    .concept-link .ctag {
+      font-size: 0.62rem;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ---- Article content ---- */
+    .article-body {
+      flex: 1;
+      min-width: 0;
+      padding: 2.5rem 0 8rem 2.5rem;
+    }
+
+    /* ============================================================
+       SECTIONS
+    ============================================================ */
+    .major-section {
+      margin-bottom: 4rem;
+      scroll-margin-top: calc(var(--nav-h) + var(--sub-h) + 2rem);
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-family: 'Lora', serif;
+      padding: 0.2rem 0.7rem;
+      border-radius: 2px;
+      margin-bottom: 0.8rem;
+    }
+    .label-intro  { background: #f5edda; color: var(--gold); border: 1px solid var(--gold); }
+    .label-maani  { background: #dde6f0; color: var(--accent-maani); border: 1px solid #b0c4de; }
+    .label-bayan  { background: #ddeedd; color: var(--accent-bayan); border: 1px solid #a8c8a8; }
+    .label-badi   { background: #edddf0; color: var(--accent-badi);  border: 1px solid #d0a8d8; }
+
+    .major-section > h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+      line-height: 1.3;
+    }
+
+    .sub-heading {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin: 2.2rem 0 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      line-height: 1.4;
+      scroll-margin-top: calc(var(--nav-h) + var(--sub-h) + 2rem);
+    }
+    .sh-num {
+      font-size: 0.78rem;
+      color: var(--ink-4);
+      font-weight: 400;
+      font-style: italic;
+    }
+    /* Arabic text inline inside Latin headings — clamp metrics so they
+       don't stretch the heading's line-height */
+    .sub-heading .ar, .sub-sub-heading .ar,
+    h2 .ar, h3 .ar, p .ar {
+      font-family: 'ArefRuqaaArabic', serif;
+      font-size: 0.95em;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+      direction: rtl;
+    }
+
+    .sub-sub-heading {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin: 1.6rem 0 0.6rem;
+      font-style: italic;
+      scroll-margin-top: calc(var(--nav-h) + var(--sub-h) + 2rem);
+    }
+
+    .article-body p { margin-bottom: 1rem; color: var(--ink-2); }
+
+    /* ============================================================
+       ARABIC TEXT BLOCKS
+    ============================================================ */
+    .arabic-block {
+      direction: rtl;
+      text-align: right;
+      font-family: 'ArefRuqaaArabic', serif;
+      font-size: 1.65rem;
+      line-height: 2.4;
+      color: var(--ink);
+      background: var(--cream-2);
+      border-right: 4px solid var(--gold);
+      padding: 1rem 1.3rem 1rem 1rem;
+      margin: 1.2rem 0 0.6rem;
+      border-radius: 0 6px 6px 0;
+    }
+    .transliteration {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--ink-3);
+      margin: -0.4rem 0 0.3rem;
+      padding-left: 1rem;
+    }
+    .translation {
+      font-size: 0.95rem;
+      color: var(--ink-2);
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    .translation::before { content: '"'; }
+    .translation::after  { content: '"'; }
+
+    /* ============================================================
+       CALL-OUT BOXES
+    ============================================================ */
+    .callout {
+      border-radius: 6px;
+      padding: 1.1rem 1.4rem;
+      margin: 1.4rem 0;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+    .callout-def {
+      background: #f5edda;
+      border-left: 4px solid var(--gold);
+      color: var(--ink-2);
+    }
+    .callout-note {
+      background: #dde6f0;
+      border-left: 4px solid var(--accent-maani);
+      color: var(--ink-2);
+    }
+    .callout-example {
+      background: #f0f5ee;
+      border-left: 4px solid var(--accent-bayan);
+      color: var(--ink-2);
+    }
+    .callout-warning {
+      background: #f5eeee;
+      border-left: 4px solid var(--rust);
+      color: var(--ink-2);
+    }
+    .callout strong { color: var(--ink); }
+    .callout-label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .callout-def .callout-label    { color: var(--gold); }
+    .callout-note .callout-label   { color: var(--accent-maani); }
+    .callout-example .callout-label { color: var(--accent-bayan); }
+    .callout-warning .callout-label { color: var(--rust); }
+
+    /* ============================================================
+       TABLES
+    ============================================================ */
+    .table-wrap { overflow-x: auto; margin: 1.4rem 0; }
+    .table-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .table-wrap thead th {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 0.65rem 1rem;
+      text-align: left;
+      font-family: 'Lora', serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+    .table-wrap tbody tr:nth-child(even) { background: var(--cream-2); }
+    .table-wrap tbody tr:hover { background: var(--gold-pale); }
+    .table-wrap tbody td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--cream-3);
+      vertical-align: top;
+      color: var(--ink-2);
+    }
+    .table-wrap tbody td:first-child { font-weight: 600; color: var(--ink); }
+    .td-arabic {
+      font-family: 'ArefRuqaaArabic', serif;
+      font-size: 1.2rem;
+      direction: rtl;
+    }
+
+    /* ============================================================
+       EXAMPLE CARDS
+    ============================================================ */
+    .example-card {
+      background: white;
+      border: 1px solid var(--cream-3);
+      border-radius: 8px;
+      padding: 1.3rem 1.5rem;
+      margin: 1.2rem 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .example-card .card-title {
+      font-family: 'Lora', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* Comparison row */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+    .comp-cell {
+      background: white;
+      border: 1px solid var(--cream-3);
+      border-radius: 6px;
+      padding: 1rem 1.1rem;
+    }
+    .comp-cell h4 {
+      font-family: 'Lora', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .comp-cell.cell-a h4 { color: var(--accent-maani); }
+    .comp-cell.cell-b h4 { color: var(--accent-bayan); }
+    .comp-cell p { font-size: 0.9rem; margin-bottom: 0; }
+
+    /* ============================================================
+       EMPHASIS LEVELS VISUAL
+    ============================================================ */
+    .emphasis-levels {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .em-row {
+      display: grid;
+      grid-template-columns: 140px 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--cream-3);
+      border-radius: 6px;
+      padding: 0.8rem 1.1rem;
+    }
+    .em-label { font-size: 0.82rem; font-weight: 600; color: var(--ink-3); font-family: 'Lora', serif; }
+    .em-arabic { font-family: 'ArefRuqaaArabic', serif; font-size: 1.3rem; direction: rtl; text-align: right; }
+    .em-strength {
+      display: flex;
+      gap: 3px;
+    }
+    .em-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--cream-3);
+    }
+    .em-dot.filled { background: var(--gold); }
+
+    /* ============================================================
+       THREE-SCIENCES OVERVIEW TABLE
+    ============================================================ */
+    .sciences-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .science-card {
+      border-radius: 8px;
+      padding: 1.4rem;
+      border: 1.5px solid transparent;
+    }
+    .sci-maani { background: #dde6f0; border-color: #b0c4de; }
+    .sci-bayan { background: #ddeedd; border-color: #a8c8a8; }
+    .sci-badi  { background: #edddf0; border-color: #d0a8d8; }
+    .science-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .sci-maani h3 { color: var(--accent-maani); }
+    .sci-bayan h3 { color: var(--accent-bayan); }
+    .sci-badi  h3 { color: var(--accent-badi);  }
+    .science-card .sci-arabic {
+      font-family: 'ArefRuqaaArabic', serif;
+      font-size: 1.3rem;
+      direction: rtl;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .science-card p { font-size: 0.88rem; margin: 0; color: var(--ink-2); }
+    .science-card .sci-question {
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--ink-3);
+      margin-top: 0.4rem;
+    }
+
+    /* ============================================================
+       DEFINITION PULL — classical quote
+    ============================================================ */
+    .classical-quote {
+      border-left: 4px solid var(--gold);
+      margin: 1.6rem 0;
+      padding: 0.6rem 0 0.6rem 1.5rem;
+    }
+    .classical-quote .q-arabic {
+      font-family: 'ArefRuqaaArabic', serif;
+      font-size: 1.55rem;
+      direction: rtl;
+      text-align: right;
+      display: block;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+      line-height: 2;
+    }
+    .classical-quote .q-trans { font-style: italic; font-size: 0.88rem; color: var(--ink-3); display: block; margin-bottom: 0.2rem; }
+    .classical-quote .q-eng  { font-size: 0.93rem; color: var(--ink-2); }
+
+    /* ============================================================
+       DIAGNOSTIC GUIDE
+    ============================================================ */
+    .diagnostic {
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 10px;
+      padding: 2rem 2.2rem;
+      margin: 2rem 0;
+    }
+    .diagnostic h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+    }
+    .diagnostic ol {
+      padding-left: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .diagnostic li { font-size: 0.9rem; line-height: 1.55; color: #d4c9bb; }
+    .diagnostic strong { color: var(--gold-light); }
+
+    /* ============================================================
+       SEARCH HIGHLIGHT
+    ============================================================ */
+    mark.search-hl {
+      background: #ffe066;
+      color: var(--ink);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+    .hidden-by-filter { display: none !important; }
+    .dim-section { opacity: 0.25; pointer-events: none; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--cream-3);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--ink-4);
+    }
+    .footer-logo { font-family: 'Lora', serif; font-size: 1rem; color: var(--ink-3); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .article-body { padding-left: 0; }
+      .page-body { padding: 0 1rem; }
+    }
+    @media (max-width: 720px) {
+      .article-body { padding: 2rem 0 5rem; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .em-row { grid-template-columns: 1fr; gap: 0.4rem; }
+      .em-strength { display: none; }
+    }
+    @media (max-width: 560px) {
+      .hero { padding: 3rem 1.4rem 2rem; }
+      .sciences-grid { grid-template-columns: 1fr; }
+    }
+  
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="The science of eloquence — how Arabic achieves precision, beauty, and contextual power across three interlocking disciplines: Maʿānī, Bayān, and" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Arabic Balāghah: A Complete Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/learning/languages/arabic-balaghah.html",
+  "description": "The science of eloquence — how Arabic achieves precision, beauty, and contextual power across three interlocking disciplines: Maʿānī, Bayān, and"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learning",
+      "item": "https://yasirbilgin.com/learning/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Arabic Balāghah: A Complete Guide",
+      "item": "https://yasirbilgin.com/learning/languages/arabic-balaghah.html"
+    }
+  ]
+}
+</script>
+
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ============================================================
+     TOC OVERLAY
+============================================================ -->
+<div class="toc-overlay" id="tocOverlay"
+     onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <div class="toc-close">
+      <button onclick="document.getElementById('tocOverlay').classList.remove('open')">✕ Close</button>
+    </div>
+    <h3>Table of Contents</h3>
+    <ul class="toc-list">
+      <li><a href="#s0" class="toc-main">Introduction &amp; Overview</a></li>
+      <li><a href="#s0-1" class="toc-sub">What Is Balāghah?</a></li>
+      <li><a href="#s0-2" class="toc-sub">Faṣāḥah vs Balāghah</a></li>
+      <li><a href="#s0-3" class="toc-sub">The Three Sciences</a></li>
+
+      <li><a href="#s1" class="toc-main">ʿIlm al-Maʿānī <span class="toc-badge badge-maani">Maʿānī</span></a></li>
+      <li><a href="#s1-1" class="toc-sub">Khabar &amp; Inshāʾ</a></li>
+      <li><a href="#s1-2" class="toc-sub">Levels of Emphasis</a></li>
+      <li><a href="#s1-3" class="toc-sub">Command (Amr)</a></li>
+      <li><a href="#s1-4" class="toc-sub">Prohibition (Nahy)</a></li>
+      <li><a href="#s1-5" class="toc-sub">Question (Istifhām)</a></li>
+      <li><a href="#s1-6" class="toc-sub">Wish (Tamannī)</a></li>
+      <li><a href="#s1-7" class="toc-sub">Vocative (Nidāʾ)</a></li>
+      <li><a href="#s1-8" class="toc-sub">Nominal vs Verbal Sentence</a></li>
+      <li><a href="#s1-9" class="toc-sub">Definite &amp; Indefinite</a></li>
+      <li><a href="#s1-10" class="toc-sub">Mention &amp; Omission</a></li>
+      <li><a href="#s1-11" class="toc-sub">Fronting &amp; Delaying</a></li>
+      <li><a href="#s1-12" class="toc-sub">Restriction (Qaṣr)</a></li>
+      <li><a href="#s1-13" class="toc-sub">Brevity, Equality, Expansion</a></li>
+
+      <li><a href="#s2" class="toc-main">ʿIlm al-Bayān <span class="toc-badge badge-bayan">Bayān</span></a></li>
+      <li><a href="#s2-1" class="toc-sub">Simile (Tashbīh)</a></li>
+      <li><a href="#s2-2" class="toc-sub">Metaphor (Istiʿārah)</a></li>
+      <li><a href="#s2-3" class="toc-sub">Figurative Usage (Majāz)</a></li>
+      <li><a href="#s2-4" class="toc-sub">Allusion (Kināyah)</a></li>
+      <li><a href="#s2-5" class="toc-sub">Comparing the Four Devices</a></li>
+
+      <li><a href="#s3" class="toc-main">ʿIlm al-Badīʿ <span class="toc-badge badge-badi">Badīʿ</span></a></li>
+      <li><a href="#s3-1" class="toc-sub">Antithesis (Ṭibāq)</a></li>
+      <li><a href="#s3-2" class="toc-sub">Parallel Contrast (Muqābalah)</a></li>
+      <li><a href="#s3-3" class="toc-sub">Wordplay (Jinās)</a></li>
+      <li><a href="#s3-4" class="toc-sub">Rhymed Prose (Sajʿ)</a></li>
+      <li><a href="#s3-5" class="toc-sub">Iqtibās, Tawrīyah, Husn al-Taʿlīl</a></li>
+      <li><a href="#s3-6" class="toc-sub">Hyperbole, Iltifāt, Semantic Harmony</a></li>
+
+      <li><a href="#s4" class="toc-main">Worked Examples &amp; Analysis</a></li>
+      <li><a href="#s5" class="toc-main">Common Mistakes</a></li>
+      <li><a href="#s6" class="toc-main">Learning Path</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     ARTICLE SUB-HEADER
+============================================================ -->
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero">
+      <div class="eyebrow">Learning · Languages</div>
+  <h1>A Complete Guide to Arabic Balāghah</h1>
+  <span class="hero-arabic"><span lang="ar" dir="rtl">عِلْمُ الْبَلَاغَةِ الْعَرَبِيَّةِ</span></span>
+  <p class="hero-sub">The science of eloquence — how Arabic achieves precision, beauty, and contextual power across three interlocking disciplines: Maʿānī, Bayān, and Badīʿ.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Updated 2026 · Classical Arabic Studies</span>
+    </div>
+  </div>
+  <div class="science-badges">
+    <a href="#s1" class="sci-badge maani">ʿIlm al-Maʿānī</a>
+    <a href="#s2" class="sci-badge bayan">ʿIlm al-Bayān</a>
+    <a href="#s3" class="sci-badge badi">ʿIlm al-Badīʿ</a>
+  </div>
+</section>
+<hr class="hero-rule">
+<header class="article-header">
+  <span class="read-time">~45 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+</header>
+
+
+<!-- ============================================================
+     PAGE BODY
+============================================================ -->
+<div class="page-body">
+
+  <!-- ---- SIDEBAR ---- -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Search</span>
+      <div class="search-wrap">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Search concepts…" autocomplete="off">
+        <button id="clearSearch" onclick="clearSearch()" title="Clear">✕</button>
+      </div>
+      <div id="searchResults"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Filter by Science</span>
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">
+          <span class="filter-dot dot-all"></span> All sections
+        </button>
+        <button class="filter-btn" data-filter="intro" onclick="setFilter('intro',this)">
+          <span class="filter-dot dot-intro"></span> Introduction
+        </button>
+        <button class="filter-btn" data-filter="maani" onclick="setFilter('maani',this)">
+          <span class="filter-dot dot-maani"></span> ʿIlm al-Maʿānī
+        </button>
+        <button class="filter-btn" data-filter="bayan" onclick="setFilter('bayan',this)">
+          <span class="filter-dot dot-bayan"></span> ʿIlm al-Bayān
+        </button>
+        <button class="filter-btn" data-filter="badi" onclick="setFilter('badi',this)">
+          <span class="filter-dot dot-badi"></span> ʿIlm al-Badīʿ
+        </button>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Key Concepts</span>
+      <nav class="concept-nav">
+        <a href="#s1-1" class="concept-link"><span class="ctag badge-maani">M</span>Khabar &amp; Inshāʾ</a>
+        <a href="#s1-2" class="concept-link"><span class="ctag badge-maani">M</span>Emphasis (Tawkīd)</a>
+        <a href="#s1-3" class="concept-link"><span class="ctag badge-maani">M</span>Amr – Command</a>
+        <a href="#s1-5" class="concept-link"><span class="ctag badge-maani">M</span>Istifhām – Question</a>
+        <a href="#s1-8" class="concept-link"><span class="ctag badge-maani">M</span>Nominal vs Verbal</a>
+        <a href="#s1-11" class="concept-link"><span class="ctag badge-maani">M</span>Taqdīm – Fronting</a>
+        <a href="#s1-12" class="concept-link"><span class="ctag badge-maani">M</span>Qaṣr – Restriction</a>
+        <a href="#s2-1" class="concept-link"><span class="ctag badge-bayan">B</span>Tashbīh – Simile</a>
+        <a href="#s2-2" class="concept-link"><span class="ctag badge-bayan">B</span>Istiʿārah – Metaphor</a>
+        <a href="#s2-3" class="concept-link"><span class="ctag badge-bayan">B</span>Majāz – Figurative</a>
+        <a href="#s2-4" class="concept-link"><span class="ctag badge-bayan">B</span>Kināyah – Allusion</a>
+        <a href="#s3-1" class="concept-link"><span class="ctag badge-badi">D</span>Ṭibāq – Antithesis</a>
+        <a href="#s3-3" class="concept-link"><span class="ctag badge-badi">D</span>Jinās – Wordplay</a>
+        <a href="#s3-4" class="concept-link"><span class="ctag badge-badi">D</span>Sajʿ – Rhymed Prose</a>
+        <a href="#s3-5" class="concept-link"><span class="ctag badge-badi">D</span>Tawrīyah – Double Meaning</a>
+        <a href="#s3-6" class="concept-link"><span class="ctag badge-badi">D</span>Iltifāt – Shift</a>
+      </nav>
+    </div>
+
+  </aside>
+
+  <!-- ---- ARTICLE BODY ---- -->
+  <article class="article-body" id="articleBody">
+
+    <!-- =====================================================
+         SECTION 0: INTRODUCTION
+    ===================================================== -->
+    <section id="s0" class="major-section" data-science="intro">
+      <span class="section-label label-intro">Introduction</span>
+      <h2>What Is Balāghah?</h2>
+
+      <p>The Arabic word <strong>balāghah</strong> (<span lang="ar" dir="rtl">بَلَاغَة</span>) derives from the root <em>b-l-gh</em> (<span lang="ar" dir="rtl">بَلَغَ</span>), meaning "to reach" or "to arrive." A speech is <em>balīgh</em> when it <em>reaches</em> the listener's mind and heart with precision, clarity, and appropriate force. Balāghah is therefore not decoration; it is the science of <em>effective communication</em>.</p>
+
+      <div id="s0-1" class="sub-heading" style="display:block; margin-top:0;">
+        <h3 style="font-family:'Lora',serif;font-size:1.25rem;font-weight:600;color:var(--ink-2);margin:2.2rem 0 0.9rem;">The Classical Definition</h3>
+      </div>
+
+      <p>Classical rhetoricians, notably al-Khaṭīb al-Qazwīnī (d. 1338 CE) in his <em>Talkhīṣ al-Miftāḥ</em>, defined balāghah as:</p>
+
+      <div class="classical-quote">
+        <span class="q-arabic"><span lang="ar" dir="rtl">مُطَابَقَةُ الكَلَامِ لِمُقْتَضَى الحَالِ مَعَ فَصَاحَتِهِ</span></span>
+        <span class="q-trans">muṭābaqat al-kalām li-muqtaḍā al-ḥāl maʿa faṣāḥatihi</span>
+        <span class="q-eng">Speech conforming to the demands of the situation, while being linguistically pure and clear.</span>
+      </div>
+
+      <p>This definition has two irreducible components: <strong>faṣāḥah</strong> (linguistic purity) and <strong>muqtaḍā al-ḥāl</strong> (contextual appropriateness). Both are necessary; neither is sufficient alone.</p>
+
+      <div id="s0-2">
+        <h3 class="sub-heading"><span class="sh-num">0.2</span>Faṣāḥah vs Balāghah</h3>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comp-cell cell-a">
+          <h4>Faṣāḥah — Linguistic Purity</h4>
+          <p>A word is <em>faṣīḥ</em> when it is phonetically smooth, widely accepted among eloquent speakers, and unambiguous in meaning. A sentence is faṣīḥ when it is grammatically sound and naturally composed. This is the prerequisite.</p>
+        </div>
+        <div class="comp-cell cell-b">
+          <h4>Balāghah — Contextual Power</h4>
+          <p>Balāghah adds appropriateness to the situation. A sentence may be correct yet wrong for the moment — too formal for a grieving friend, too casual for a king. Balāghah asks: does this expression <em>fit</em>?</p>
+        </div>
+      </div>
+
+      <div class="callout callout-example">
+        <span class="callout-label">Illustration</span>
+        Saying <em>"Your father has undergone biological cessation of vital functions"</em> to a mourner is grammatically correct but rhetorically catastrophic. Balāghah demands instead: <em>"Your father has passed away"</em> — or, in poetry, something still more tender and oblique.
+      </div>
+
+      <div id="s0-3">
+        <h3 class="sub-heading"><span class="sh-num">0.3</span>The Three Sciences</h3>
+      </div>
+
+      <p>Classical Arabic rhetoric is divided into three major sciences. Each addresses a different dimension of eloquent speech:</p>
+
+      <div class="sciences-grid">
+        <div class="science-card sci-maani">
+          <span class="sci-arabic"><span lang="ar" dir="rtl">عِلْمُ الْمَعَانِي</span></span>
+          <h3>ʿIlm al-Maʿānī</h3>
+          <p>Studies sentence structure and how it changes according to context. Why this word order? Why this emphasis? Why this omission?</p>
+          <p class="sci-question">→ "Why is the sentence arranged this way?"</p>
+        </div>
+        <div class="science-card sci-bayan">
+          <span class="sci-arabic"><span lang="ar" dir="rtl">عِلْمُ الْبَيَانِ</span></span>
+          <h3>ʿIlm al-Bayān</h3>
+          <p>Studies figurative meaning and imagery — simile, metaphor, figurative usage, and allusion. How is meaning shown indirectly or vividly?</p>
+          <p class="sci-question">→ "How is meaning expressed through imagery?"</p>
+        </div>
+        <div class="science-card sci-badi">
+          <span class="sci-arabic"><span lang="ar" dir="rtl">عِلْمُ الْبَدِيعِ</span></span>
+          <h3>ʿIlm al-Badīʿ</h3>
+          <p>Studies stylistic beautification: antithesis, wordplay, rhyme, parallelism. How is the expression made memorable and elegant?</p>
+          <p class="sci-question">→ "How is the expression beautified?"</p>
+        </div>
+      </div>
+
+      <div class="callout callout-def">
+        <span class="callout-label">Memory Aid</span>
+        <strong>Maʿānī = architecture of meaning</strong> · <strong>Bayān = imagery of meaning</strong> · <strong>Badīʿ = beauty of expression</strong>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 1: ʿILM AL-MAʿĀNĪ
+    ===================================================== -->
+    <section id="s1" class="major-section" data-science="maani">
+      <span class="section-label label-maani">ʿIlm al-Maʿānī</span>
+      <h2>The Science of Contextual Sentence Meaning</h2>
+
+      <p>ʿIlm al-Maʿānī was systematically codified by ʿAbd al-Qāhir al-Jurjānī (d. 1078 CE) in his landmark works <em>Dalāʾil al-Iʿjāz</em> and <em>Asrār al-Balāghah</em>. It studies how the same idea can be expressed in structurally different ways for different rhetorical purposes.</p>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>Structural Variation — One Idea, Four Forms</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Arabic</th><th>Transliteration</th><th>English</th><th>Rhetorical Force</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="td-arabic"><span lang="ar" dir="rtl">قامَ زيدٌ</span></td>
+                <td><em>qāma Zaydun</em></td>
+                <td>Zayd stood.</td>
+                <td>Neutral, informative</td>
+              </tr>
+              <tr>
+                <td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ قائمٌ</span></td>
+                <td><em>Zaydun qāʾimun</em></td>
+                <td>Zayd is standing.</td>
+                <td>Stable quality, ongoing state</td>
+              </tr>
+              <tr>
+                <td class="td-arabic"><span lang="ar" dir="rtl">إنَّ زيدًا قائمٌ</span></td>
+                <td><em>inna Zaydan qāʾimun</em></td>
+                <td>Indeed, Zayd is standing.</td>
+                <td>Moderate emphasis (listener doubts)</td>
+              </tr>
+              <tr>
+                <td class="td-arabic"><span lang="ar" dir="rtl">واللهِ إنَّ زيدًا لَقائمٌ</span></td>
+                <td><em>wallāhi inna Zaydan la-qāʾimun</em></td>
+                <td>By Allah, Zayd is certainly standing.</td>
+                <td>Strong emphasis (listener denies)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 1.1 Khabar & Insha -->
+      <h3 id="s1-1" class="sub-heading"><span class="sh-num">1.1</span>Khabar and Inshāʾ — <span class="ar"><span lang="ar" dir="rtl">خبر</span></span> <span class="ar"><span lang="ar" dir="rtl">وإنشاء</span></span></h3>
+
+      <p>The most fundamental distinction in Maʿānī is between two types of speech:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Arabic</th><th>Nature</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Khabar</td>
+              <td class="td-arabic"><span lang="ar" dir="rtl">خَبَر</span></td>
+              <td>Informative statement; can be true or false</td>
+              <td>"Zayd came." / "The sun has risen."</td>
+            </tr>
+            <tr>
+              <td>Inshāʾ</td>
+              <td class="td-arabic"><span lang="ar" dir="rtl">إِنْشَاء</span></td>
+              <td>Performative speech; not judged true or false</td>
+              <td>"Come!" / "May Allah bless you." / "I swear…"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>A <strong>khabar</strong> can serve many purposes beyond mere information: expressing grief (<em>"Youth has gone"</em>), pride (<em>"We are a people who do not betray promises"</em>), or subtle praise. The rhetorical purpose emerges from context.</p>
+
+      <!-- 1.2 Emphasis -->
+      <h3 id="s1-2" class="sub-heading"><span class="sh-num">1.2</span>Levels of Emphasis — <span class="ar"><span lang="ar" dir="rtl">مستويات</span></span> <span class="ar"><span lang="ar" dir="rtl">التوكيد</span></span></h3>
+
+      <p>One of the most practically significant topics in Maʿānī is calibrating emphasis to the listener's state. Rhetoricians identify three states:</p>
+
+      <div class="emphasis-levels">
+        <div class="em-row">
+          <div class="em-label">Neutral (<span lang="ar" dir="rtl">خالي الذهن</span>)</div>
+          <div class="em-arabic"><span lang="ar" dir="rtl">زيدٌ مسافرٌ</span></div>
+          <div class="em-strength">
+            <span class="em-dot filled"></span><span class="em-dot"></span><span class="em-dot"></span>
+          </div>
+        </div>
+        <div class="em-row">
+          <div class="em-label">Doubtful (<span lang="ar" dir="rtl">متردد</span>)</div>
+          <div class="em-arabic"><span lang="ar" dir="rtl">إنَّ زيدًا مسافرٌ</span></div>
+          <div class="em-strength">
+            <span class="em-dot filled"></span><span class="em-dot filled"></span><span class="em-dot"></span>
+          </div>
+        </div>
+        <div class="em-row">
+          <div class="em-label">Denying (<span lang="ar" dir="rtl">منكر</span>)</div>
+          <div class="em-arabic"><span lang="ar" dir="rtl">واللهِ إنَّ زيدًا لَمُسافرٌ</span></div>
+          <div class="em-strength">
+            <span class="em-dot filled"></span><span class="em-dot filled"></span><span class="em-dot filled"></span>
+          </div>
+        </div>
+      </div>
+
+      <p>Common Arabic emphasis tools include <strong><span lang="ar" dir="rtl">إنَّ</span></strong> (inna — "indeed"), the emphatic <strong><span lang="ar" dir="rtl">لام</span></strong> (lām), the particle <strong><span lang="ar" dir="rtl">قد</span></strong> (qad — "certainly/already"), oaths (<strong><span lang="ar" dir="rtl">قَسَم</span></strong>), the emphatic <strong><span lang="ar" dir="rtl">نون</span></strong> (nūn al-tawkīd), and repetition.</p>
+
+      <div class="callout callout-note">
+        <span class="callout-label">Historical note</span>
+        Al-Jurjānī argued that emphasis is not merely grammatical but psychological — it is the speaker's response to a perceived state of the listener's mind. This insight made Maʿānī a science of communication, not just grammar.
+      </div>
+
+      <!-- 1.3 Command -->
+      <h3 id="s1-3" class="sub-heading"><span class="sh-num">1.3</span>Command — <span class="ar"><span lang="ar" dir="rtl">الأمر</span></span></h3>
+
+      <p>The Arabic imperative (<em>ṣīghat al-amr</em>) formally commands, but balāghah recognizes that the same form can carry very different meanings depending on speaker, listener, and context:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Function</th><th>Arabic</th><th>Transliteration</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td>Literal command</td><td class="td-arabic"><span lang="ar" dir="rtl">اُكتبِ الدرسَ</span></td><td><em>uktub al-darsa</em></td><td>Write the lesson.</td></tr>
+            <tr><td>Supplication (duʿāʾ)</td><td class="td-arabic"><span lang="ar" dir="rtl">رَبِّ اغْفِرْ لِي</span></td><td><em>rabbi ighfir lī</em></td><td>My Lord, forgive me.</td></tr>
+            <tr><td>Advice</td><td class="td-arabic"><span lang="ar" dir="rtl">اِحفظْ لسانَكَ</span></td><td><em>iḥfaẓ lisānaka</em></td><td>Guard your tongue.</td></tr>
+            <tr><td>Threat (implied)</td><td class="td-arabic"><span lang="ar" dir="rtl">اِفعلْ ما شِئتَ</span></td><td><em>ifʿal mā shiʾta</em></td><td>Do whatever you want. [You will face consequences.]</td></tr>
+            <tr><td>Permission</td><td class="td-arabic"><span lang="ar" dir="rtl">اِجلسْ إنْ شِئتَ</span></td><td><em>ijlis in shiʾta</em></td><td>Sit if you wish.</td></tr>
+            <tr><td>Challenge (taʿjīz)</td><td class="td-arabic"><span lang="ar" dir="rtl">فَأْتُوا بِسُورَةٍ مِن مِثْلِهِ</span></td><td><em>faʾtū bi-sūratin min mithlihi</em></td><td>Then bring a chapter like it. [Q. 2:23]</td></tr>
+            <tr><td>Honour / Concession</td><td class="td-arabic"><span lang="ar" dir="rtl">اُنظرْنِي إلى يومِ يُبعثونَ</span></td><td><em>unẓirnī ilā yawmi yubʿathūn</em></td><td>Reprieve me until the Day of Resurrection. [Q. 7:14]</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 1.4 Prohibition -->
+      <h3 id="s1-4" class="sub-heading"><span class="sh-num">1.4</span>Prohibition — <span class="ar"><span lang="ar" dir="rtl">النهي</span></span></h3>
+
+      <p>Prohibition (formed with <strong><span lang="ar" dir="rtl">لا</span> + <span lang="ar" dir="rtl">مضارع مجزوم</span></strong>) similarly admits multiple rhetorical functions:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Function</th><th>Arabic</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td>Literal prohibition</td><td class="td-arabic"><span lang="ar" dir="rtl">لا تَسرِقْ</span></td><td>Do not steal.</td></tr>
+            <tr><td>Advice</td><td class="td-arabic"><span lang="ar" dir="rtl">لا تُصاحِبِ الجاهِلَ</span></td><td>Do not keep company with the ignorant.</td></tr>
+            <tr><td>Supplication</td><td class="td-arabic"><span lang="ar" dir="rtl">رَبَّنا لا تُؤاخِذْنا</span></td><td>Our Lord, do not hold us accountable. [Q. 2:286]</td></tr>
+            <tr><td>Despair / futility</td><td class="td-arabic"><span lang="ar" dir="rtl">لا تَعتَذِروا اليومَ</span></td><td>Make no excuses today. [Excuses are useless now.]</td></tr>
+            <tr><td>Encouragement (irony)</td><td class="td-arabic"><span lang="ar" dir="rtl">لا تَخَفْ</span></td><td>Do not fear. [Said reassuringly]</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 1.5 Question -->
+      <h3 id="s1-5" class="sub-heading"><span class="sh-num">1.5</span>Question — <span class="ar"><span lang="ar" dir="rtl">الاستفهام</span></span></h3>
+
+      <p>Questions in balāghah are among the richest rhetorical tools. Only one of the many uses of <em>istifhām</em> is a genuine request for information:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Function</th><th>Arabic</th><th>English</th><th>Rhetorical Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Real question</td><td class="td-arabic"><span lang="ar" dir="rtl">متى وصلتَ؟</span></td><td>When did you arrive?</td><td>Genuine inquiry</td></tr>
+            <tr><td>Rhetorical denial (inkār)</td><td class="td-arabic"><span lang="ar" dir="rtl">أَتَعبُدونَ ما تَنحِتون؟</span></td><td>Do you worship what you carve? [Q. 37:95]</td><td>Rebuke; the answer is no</td></tr>
+            <tr><td>Amazement (taʿajjub)</td><td class="td-arabic"><span lang="ar" dir="rtl">كيفَ تَكفُرونَ باللهِ؟</span></td><td>How can you deny Allah? [Q. 2:28]</td><td>Shock, disbelief</td></tr>
+            <tr><td>Affirmation (taqrīr)</td><td class="td-arabic"><span lang="ar" dir="rtl">أَلَيسَ اللهُ بِكافٍ عبدَهُ؟</span></td><td>Is Allah not sufficient for His servant? [Q. 39:36]</td><td>Yes — emphatically</td></tr>
+            <tr><td>Magnification (taʿẓīm)</td><td class="td-arabic"><span lang="ar" dir="rtl">وَمَا أَدْرَاكَ مَا يَوْمُ الدِّين؟</span></td><td>What can make you know what the Day of Judgment is? [Q. 82:17]</td><td>Awe, beyond comprehension</td></tr>
+            <tr><td>Rebuke (tawbīkh)</td><td class="td-arabic"><span lang="ar" dir="rtl">أَتَكسَلُ وقدِ اقتَرَبَ الامتحانُ؟</span></td><td>Are you being lazy when the exam is near?</td><td>Shame, reproach</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 1.6 Wish -->
+      <h3 id="s1-6" class="sub-heading"><span class="sh-num">1.6</span>Wish — <span class="ar"><span lang="ar" dir="rtl">التمني</span></span></h3>
+
+      <p><strong>Tamannī</strong> expresses longing for something that is loved but absent — often impossible or difficult to attain. The primary particle is <strong><span lang="ar" dir="rtl">لَيْتَ</span></strong> (<em>layta</em>, "if only…"), which in Arabic grammar does not govern expectations of fulfilment, unlike <em>laʿalla</em> (hope with expectation).</p>
+
+      <div class="arabic-block"><span lang="ar" dir="rtl">لَيْتَ الشَّبَابَ يَعُودُ يَوْمًا</span></div>
+      <div class="transliteration">layta al-shabāba yaʿūdu yawman</div>
+      <div class="translation">If only youth would return one day!</div>
+
+      <p>This line is attributed to various classical poets and is one of the most cited examples of <em>tamannī</em> because youth cannot literally be recalled — making the wish plaintive rather than hopeful. Other particles (<strong><span lang="ar" dir="rtl">هل</span></strong>, <strong><span lang="ar" dir="rtl">لو</span></strong>, <strong><span lang="ar" dir="rtl">لعلّ</span></strong>) can function as tamannī when context implies impossible longing rather than expectation.</p>
+
+      <!-- 1.7 Vocative -->
+      <h3 id="s1-7" class="sub-heading"><span class="sh-num">1.7</span>Vocative — <span class="ar"><span lang="ar" dir="rtl">النداء</span></span></h3>
+
+      <p>The vocative particle <strong><span lang="ar" dir="rtl">يا</span></strong> is the most versatile. Other particles calibrate distance: <strong><span lang="ar" dir="rtl">أيا</span> / <span lang="ar" dir="rtl">هيا</span></strong> for those far away; <strong><span lang="ar" dir="rtl">أي</span> / <span lang="ar" dir="rtl">همزة</span></strong> for those near. Rhetorical functions include:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Function</th><th>Arabic</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Calling / attention</td><td class="td-arabic"><span lang="ar" dir="rtl">يَا طَالِبَ الْعِلْمِ</span></td><td>Standard address</td></tr>
+            <tr><td>Honor / reverence</td><td class="td-arabic"><span lang="ar" dir="rtl">يَا رَسُولَ اللهِ</span></td><td>Title elevates the addressee</td></tr>
+            <tr><td>Sorrow / lamentation</td><td class="td-arabic"><span lang="ar" dir="rtl">يَا حَسرَتَا</span></td><td>Addressing an abstraction — regret itself</td></tr>
+            <tr><td>Tenderness / affection</td><td class="td-arabic"><span lang="ar" dir="rtl">يَا بُنَيَّ</span></td><td>Diminutive form expresses warmth</td></tr>
+            <tr><td>Self-reproach</td><td class="td-arabic"><span lang="ar" dir="rtl">يَا نَفسِي</span></td><td>Addressing one's own soul</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Addressing an inanimate object or abstraction (such as regret, youth, or one's own soul) is a device called <strong>nidāʾ al-majāzī</strong> — vocative used figuratively — and is common in classical Arabic poetry.</p>
+
+      <!-- 1.8 Nominal vs Verbal -->
+      <h3 id="s1-8" class="sub-heading"><span class="sh-num">1.8</span>Nominal and Verbal Sentences</h3>
+
+      <p>One of the most practically important distinctions in Maʿānī is between the <strong>nominal sentence</strong> (al-jumla al-ismiyya) and the <strong>verbal sentence</strong> (al-jumla al-fiʿliyya):</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Arabic</th><th>English</th><th>Rhetorical Signal</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Verbal</td>
+              <td class="td-arabic"><span lang="ar" dir="rtl">يُكرِمُ زيدٌ الضيفَ</span></td>
+              <td>Zayd honours the guest.</td>
+              <td>Action, event, renewal — it happens</td>
+            </tr>
+            <tr>
+              <td>Nominal</td>
+              <td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ كريمٌ</span></td>
+              <td>Zayd is generous.</td>
+              <td>Stable quality — it is his nature</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-example">
+        <span class="callout-label">Qurʾānic illustration</span>
+        Compare <span style="font-family:'ArefRuqaaArabic';font-size:1.1rem"><span lang="ar" dir="rtl">وَاللَّهُ غَفُورٌ رَحِيمٌ</span></span> (Q. 2:173, nominal: "Allah is Forgiving, Merciful" — a permanent attribute) with <span style="font-family:'ArefRuqaaArabic';font-size:1.1rem"><span lang="ar" dir="rtl">غَفَرَ اللَّهُ لَهُمْ</span></span> (verbal: "Allah forgave them" — a specific act). The nominal form establishes a divine attribute as ontological truth; the verbal form reports a concrete event.
+      </div>
+
+      <!-- 1.9 Definite/Indefinite -->
+      <h3 id="s1-9" class="sub-heading"><span class="sh-num">1.9</span>Definite and Indefinite — <span class="ar"><span lang="ar" dir="rtl">التعريف</span></span> <span class="ar"><span lang="ar" dir="rtl">والتنكير</span></span></h3>
+
+      <p>Arabic definiteness is not merely grammatical; it carries rhetorical weight. Indefiniteness can signal magnification, diminution, or generality:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Use</th><th>Arabic</th><th>English</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Definite — known identity</td><td class="td-arabic"><span lang="ar" dir="rtl">جاءَ الرَّجُلُ</span></td><td>The man came.</td><td>Specific, known man</td></tr>
+            <tr><td>Indefinite — unknown</td><td class="td-arabic"><span lang="ar" dir="rtl">جاءَ رَجُلٌ</span></td><td>A man came.</td><td>Unspecified identity</td></tr>
+            <tr><td>Indefinite — magnification</td><td class="td-arabic"><span lang="ar" dir="rtl">لَهُ عِلْمٌ</span></td><td>He has knowledge.</td><td>Knowledge of great quality</td></tr>
+            <tr><td>Definite — genus (istighrāq)</td><td class="td-arabic"><span lang="ar" dir="rtl">وَخُلِقَ الإِنسَانُ ضَعِيفًا</span></td><td>Mankind was created weak. [Q. 4:28]</td><td>The entire human species</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 1.10 Mention & Omission -->
+      <h3 id="s1-10" class="sub-heading"><span class="sh-num">1.10</span>Mention and Omission — <span class="ar"><span lang="ar" dir="rtl">الذكر</span></span> <span class="ar"><span lang="ar" dir="rtl">والحذف</span></span></h3>
+
+      <p>Arabic allows extensive ellipsis. Omission (<em>ḥadhf</em>) is one of the most powerful rhetorical tools in Maʿānī — silence can be louder than speech:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Purpose</th><th>Example</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Mention for emphasis</td><td><span lang="ar" dir="rtl">أَنَا فَعَلتُ هَذَا</span> (the pronoun <span lang="ar" dir="rtl">أنا</span> is grammatically redundant)</td><td>Highlights the doer</td></tr>
+            <tr><td>Omission for brevity</td><td>The Qurʾānic formula: <span lang="ar" dir="rtl">قَالَ سَلَامٌ</span> (omitting "his peace is") — Q. 11:69</td><td>Elegant compression</td></tr>
+            <tr><td>Omission for awe</td><td><span lang="ar" dir="rtl">وَلَوْ تَرَى إِذْ وُقِفُوا عَلَى النَّارِ</span>… [the consequence left unsaid]</td><td>Horror too great to name</td></tr>
+            <tr><td>Omission for intimacy</td><td>Compressed dialogue in Qurʾān (Q. 12:17: brothers omit their guilt)</td><td>Psychological truth</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 1.11 Fronting -->
+      <h3 id="s1-11" class="sub-heading"><span class="sh-num">1.11</span>Fronting and Delaying — <span class="ar"><span lang="ar" dir="rtl">التقديم</span></span> <span class="ar"><span lang="ar" dir="rtl">والتأخير</span></span></h3>
+
+      <p>Arabic word order is flexible. Moving an element to the front of the sentence is called <em>taqdīm</em> (fronting) and creates emphasis, exclusivity, or anticipatory tension:</p>
+
+      <div class="arabic-block"><span lang="ar" dir="rtl">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</span></div>
+      <div class="transliteration">iyyāka naʿbudu wa-iyyāka nastaʿīn</div>
+      <div class="translation">You alone we worship, and You alone we seek for help.</div>
+
+      <div class="callout callout-def">
+        <span class="callout-label">Analysis — Al-Fātiḥah 5</span>
+        Normal Arabic order would be <em>naʿbuduka</em> ("we worship You"). Fronting <em>iyyāka</em> creates <strong>qaṣr</strong> (restriction): not merely "we worship You," but "You — and none other — do we worship." Al-Jurjānī considered this one of the clearest demonstrations that word order is a carrier of meaning.
+      </div>
+
+      <!-- 1.12 Restriction -->
+      <h3 id="s1-12" class="sub-heading"><span class="sh-num">1.12</span>Restriction and Exclusivity — <span class="ar"><span lang="ar" dir="rtl">القصر</span></span></h3>
+
+      <p><strong>Qaṣr</strong> restricts a predicate to a subject, or an action to a specific agent, excluding all others. It is among the most emphatic structures in Arabic:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Method</th><th>Arabic</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td>Negation + exception (nafy wa-istisnāʾ)</td><td class="td-arabic"><span lang="ar" dir="rtl">لَا إِلَهَ إِلَّا اللهُ</span></td><td>There is no deity except Allah.</td></tr>
+            <tr><td>Innamā</td><td class="td-arabic"><span lang="ar" dir="rtl">إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ</span></td><td>The believers are but brothers. [Q. 49:10]</td></tr>
+            <tr><td>Fronting (taqdīm)</td><td class="td-arabic"><span lang="ar" dir="rtl">إِيَّاكَ نَعبُدُ</span></td><td>You alone we worship.</td></tr>
+            <tr><td>Definite mubtadaʾ + khabar</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ الشجاعُ</span></td><td>Zayd is the brave one (no other).</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 1.13 Brevity/Expansion -->
+      <h3 id="s1-13" class="sub-heading"><span class="sh-num">1.13</span>Brevity, Equality, and Expansion</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Term</th><th>Arabic</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Brevity</td><td class="td-arabic"><span lang="ar" dir="rtl">إيجاز</span></td><td>Much meaning in few words</td></tr>
+            <tr><td>Equal expression</td><td class="td-arabic"><span lang="ar" dir="rtl">مساواة</span></td><td>Wording proportionate to meaning</td></tr>
+            <tr><td>Purposeful expansion</td><td class="td-arabic"><span lang="ar" dir="rtl">إطناب</span></td><td>More words for a rhetorical reason</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-def">
+        <span class="callout-label">Classic example of Ījāz</span>
+        <div class="arabic-block" style="font-size:1.2rem"><span lang="ar" dir="rtl">وَلَكُمْ فِي الْقِصَاصِ حَيَاةٌ</span></div>
+        <div class="transliteration">wa-lakum fī al-qiṣāṣi ḥayātun</div>
+        <div class="translation">For you in just retribution there is life.</div>
+        This seven-word Qurʾānic verse (Q. 2:179) encapsulates an entire social theory: the public application of proportional justice deters killing and thereby protects life. Classical rhetoricians marveled that it surpassed the pre-Islamic Arab proverb "killing begets restraint" (<span style="font-family:'ArefRuqaaArabic'"><span lang="ar" dir="rtl">القتل أنفى للقتل</span></span>) in both concision and depth of meaning.
+      </div>
+
+      <p><strong>Iṭnāb</strong> (expansion) is equally legitimate when used purposefully. Classical rhetoricians enumerate its valid forms: clarifying an ambiguity after a general statement, repetition for emotional intensification, mentioning the specific after the general (as in Q. 2:238 where the "middle prayer" is singled out after "all prayers"), and parenthetical elaboration (<em>iʿtirāḍ</em>).</p>
+    </section>
+
+    <!-- =====================================================
+         SECTION 2: ʿILM AL-BAYĀN
+    ===================================================== -->
+    <section id="s2" class="major-section" data-science="bayan">
+      <span class="section-label label-bayan">ʿIlm al-Bayān</span>
+      <h2>The Science of Figurative Clarity and Imagery</h2>
+
+      <p>ʿIlm al-Bayān studies how a single meaning can be expressed at different degrees of directness and vividness. Its four core devices — simile, metaphor, figurative usage, and allusion — form a spectrum from explicit comparison to indirect implication. The discipline was principally developed by al-Jurjānī and later systematised by al-Sakkākī (d. 1229 CE) in <em>Miftāḥ al-ʿUlūm</em>.</p>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>One Idea, Five Expressions — "Zayd is brave"</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Expression</th><th>Arabic</th><th>Device</th></tr></thead>
+            <tbody>
+              <tr><td>Direct statement</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ شجاعٌ</span></td><td>Plain khabar</td></tr>
+              <tr><td>Simile</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ كالأسدِ</span></td><td>Tashbīh</td></tr>
+              <tr><td>Stated metaphor</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ أسدٌ</span></td><td>Tashbīh balīgh / Istiʿārah</td></tr>
+              <tr><td>Full metaphor</td><td class="td-arabic"><span lang="ar" dir="rtl">رأيتُ أسدًا يَحمِلُ سيفًا</span></td><td>Istiʿārah taṣrīḥiyyah</td></tr>
+              <tr><td>Allusion</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ كثيرُ الرَّمادِ</span></td><td>Kināyah (generous = much ash from cooking)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2.1 Tashbih -->
+      <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>Simile — <span class="ar"><span lang="ar" dir="rtl">التشبيه</span></span></h3>
+
+      <p>Tashbīh explicitly compares two things that share a quality. A complete simile has four components:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Component</th><th>Arabic Term</th><th>In the example</th></tr></thead>
+          <tbody>
+            <tr><td>Thing compared</td><td class="td-arabic"><span lang="ar" dir="rtl">المُشَبَّه</span></td><td>Zayd</td></tr>
+            <tr><td>Thing compared to</td><td class="td-arabic"><span lang="ar" dir="rtl">المُشَبَّه بِه</span></td><td>the lion</td></tr>
+            <tr><td>Tool of comparison</td><td class="td-arabic"><span lang="ar" dir="rtl">أَداة التَّشبيه</span></td><td><span lang="ar" dir="rtl">كـ</span> (ka- "like")</td></tr>
+            <tr><td>Shared quality</td><td class="td-arabic"><span lang="ar" dir="rtl">وَجهُ الشَّبَه</span></td><td>bravery (<span lang="ar" dir="rtl">شجاعة</span>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Types of tashbīh</strong> based on what is omitted or retained:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Arabic</th><th>What is omitted</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Complete (tāmm)</td><td class="td-arabic"><span lang="ar" dir="rtl">العالِمُ كالمِصباحِ في الهِدايةِ</span></td><td>Nothing</td><td>Explicit, pedagogical</td></tr>
+            <tr><td>Confirmed (muʾakkad)</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ أسدٌ في الشجاعةِ</span></td><td>Tool (ka-)</td><td>Stronger identification</td></tr>
+            <tr><td>Concise (mujmal)</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ كالأسدِ</span></td><td>Shared quality</td><td>Listener infers the quality</td></tr>
+            <tr><td>Intense (balīgh)</td><td class="td-arabic"><span lang="ar" dir="rtl">زيدٌ أسدٌ</span></td><td>Both tool and quality</td><td>Strongest — borders on metaphor</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-note">
+        <span class="callout-label">Key insight</span>
+        Al-Jurjānī observed that the rhetorical force of a simile increases as elements are omitted — the <em>tashbīh balīgh</em> (intense simile, both tool and quality absent) approaches istiʿārah and creates the most powerful identification between the two sides. This is because the mind is forced to collapse the distinction between them.
+      </div>
+
+      <!-- 2.2 Istiara -->
+      <h3 id="s2-2" class="sub-heading"><span class="sh-num">2.2</span>Metaphor — <span class="ar"><span lang="ar" dir="rtl">الاستعارة</span></span></h3>
+
+      <p>Istiʿārah (literally "borrowing") occurs when one side of a comparison is replaced by the other. The word <em>lion</em> is "borrowed" for a brave man; the man is not mentioned. This creates a more vivid and startling effect than explicit comparison.</p>
+
+      <p>Istiʿārah is always derived from a latent tashbīh. Rhetoricians describe two main types:</p>
+
+      <div class="comparison-grid">
+        <div class="comp-cell cell-a">
+          <h4>Explicit Metaphor (Taṣrīḥiyyah)</h4>
+          <p>The <em>mushabbah bih</em> (lion) is stated; the <em>mushabbah</em> (brave man) is omitted.</p>
+          <div class="arabic-block" style="font-size:1.1rem"><span lang="ar" dir="rtl">رأيتُ أسدًا يَخطُبُ الناسَ</span></div>
+          <p style="font-size:0.88rem;font-style:italic">I saw a lion addressing the people. [= a courageous orator]</p>
+        </div>
+        <div class="comp-cell cell-b">
+          <h4>Implied Metaphor (Makniyyah)</h4>
+          <p>The <em>mushabbah</em> (death) is stated; the <em>mushabbah bih</em> (beast) is omitted — but a defining feature of it (claws) remains.</p>
+          <div class="arabic-block" style="font-size:1.1rem"><span lang="ar" dir="rtl">أَنشَبَ الموتُ أظفارَهُ</span></div>
+          <p style="font-size:0.88rem;font-style:italic">Death sank its claws. [Death = beast, claws = the lingering attribute]</p>
+        </div>
+      </div>
+
+      <div class="callout callout-def">
+        <span class="callout-label">Qurʾānic masterpiece of istiʿārah</span>
+        <div class="arabic-block"><span lang="ar" dir="rtl">وَاشْتَعَلَ الرَّأْسُ شَيْبًا</span></div>
+        <div class="transliteration">wa-ishtaʿala al-raʾsu shayban</div>
+        <div class="translation">And the head flared [ignited] with white hair. [Q. 19:4, Prophet Zakariyya speaking]</div>
+        The verb <strong>ishtaʿala</strong> ("ignited/flared") borrows fire for the spreading of grey hair. The image captures the rapidity and inevitability of ageing, the inescapable spread of whiteness, and the emotional weight of old age — in a single verb. The plain alternative ("my hair has become grey") loses all of this. Al-Jurjānī cited this verse as among the finest examples of Arabic rhetorical achievement.
+      </div>
+
+      <!-- 2.3 Majaz -->
+      <h3 id="s2-3" class="sub-heading"><span class="sh-num">2.3</span>Figurative Usage — <span class="ar"><span lang="ar" dir="rtl">المجاز</span></span></h3>
+
+      <p>Majāz is the use of a word in a non-original meaning, based on a relationship (<em>ʿalāqa</em>), with a contextual clue (<em>qarīna</em>) that prevents the literal interpretation.</p>
+
+      <p><strong>Majāz ʿAqlī</strong> attributes an action to something other than its true agent, based on causation, time, or place:</p>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>Examples of Majāz ʿAqlī</div>
+        <p style="font-size:0.9rem"><span style="font-family:'ArefRuqaaArabic';font-size:1.1rem"><span lang="ar" dir="rtl">بَنَى الأَمِيرُ الْمَدِينَةَ</span></span> — "The prince built the city." He commissioned it; the workers built it. The action is attributed to him as the cause.</p>
+        <p style="font-size:0.9rem"><span style="font-family:'ArefRuqaaArabic';font-size:1.1rem"><span lang="ar" dir="rtl">أَنبَتَ الرَّبِيعُ الزَّرعَ</span></span> — "Spring grew the crops." Spring is the time; rain and soil are the cause. Attribution by temporal association.</p>
+      </div>
+
+      <p><strong>Majāz Mursal</strong> (free figurative usage) is based on a relationship <em>other than similarity</em> (which is reserved for istiʿārah). Classical rhetoricians enumerate many such relationships:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Relationship</th><th>Arabic term</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Part for whole</td><td class="td-arabic"><span lang="ar" dir="rtl">الجزئية</span></td><td><span lang="ar" dir="rtl">فَكُّ رَقَبَةٍ</span> — "freeing a neck" = freeing a person [Q. 90:13]</td></tr>
+            <tr><td>Whole for part</td><td class="td-arabic"><span lang="ar" dir="rtl">الكلية</span></td><td><span lang="ar" dir="rtl">يَجعَلونَ أصابِعَهُم في آذانِهِم</span> — "they place fingers in their ears" [Q. 2:19] (fingertips, not whole fingers)</td></tr>
+            <tr><td>Cause for effect</td><td class="td-arabic"><span lang="ar" dir="rtl">السببية</span></td><td><span lang="ar" dir="rtl">وَيُنَزِّلُ لَكُم مِن السَّماءِ رِزقًا</span> — "He sends down provision from the sky" (rain → crops → provision) [Q. 40:13]</td></tr>
+            <tr><td>Place for people</td><td class="td-arabic"><span lang="ar" dir="rtl">المحلية</span></td><td><span lang="ar" dir="rtl">وَاسأَلِ الْقَرْيَةَ</span> — "ask the village" = ask its people [Q. 12:82]</td></tr>
+            <tr><td>Past for future (certain)</td><td class="td-arabic"><span lang="ar" dir="rtl">اعتبار ما كان</span></td><td><span lang="ar" dir="rtl">إِنَّكَ مَيِّتٌ</span> — "You are [going to be] dead" [Q. 39:30]</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2.4 Kinaya -->
+      <h3 id="s2-4" class="sub-heading"><span class="sh-num">2.4</span>Allusion — <span class="ar"><span lang="ar" dir="rtl">الكناية</span></span></h3>
+
+      <p>Kināyah expresses a meaning indirectly through a phrase that necessarily implies it, while the literal reading remains possible. This is what distinguishes it from istiʿārah, where the literal meaning is usually blocked.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Expression</th><th>Literal meaning</th><th>Intended meaning</th><th>The necessary link</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">كثيرُ الرَّمادِ</span></td>
+              <td>Has much ash</td>
+              <td>Generous</td>
+              <td>Much ash → much cooking → many guests fed → generosity</td>
+            </tr>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">طَوِيلُ النِّجادِ</span></td>
+              <td>Long sword-strap</td>
+              <td>Tall &amp; brave warrior</td>
+              <td>Long strap → tall man → warrior physique → valor</td>
+            </tr>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">نَقِيُّ الثَّوبِ</span></td>
+              <td>Clean garment</td>
+              <td>Morally pure</td>
+              <td>Clean clothing → personal discipline → moral purity</td>
+            </tr>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">يَعَضُّ أَصَابِعَهُ</span></td>
+              <td>Bites his fingers</td>
+              <td>Feels deep regret</td>
+              <td>Physical gesture of frustration → emotional regret</td>
+            </tr>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">نَقِيُّ الجَيبِ</span></td>
+              <td>Clean pocket/collar</td>
+              <td>Honest, not corrupt</td>
+              <td>Clean pocket → untouched by bribery → integrity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Classical rhetoricians further classify kināyah by what it points to: an <strong>attribute</strong> (most common), the <strong>person</strong> bearing the attribute, or a <strong>relationship</strong> between two things.</p>
+
+      <!-- 2.5 Comparing the four -->
+      <h3 id="s2-5" class="sub-heading"><span class="sh-num">2.5</span>Comparing the Four Devices</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Device</th><th>How it works</th><th>Literal meaning</th><th>Quick test</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Tashbīh</strong></td><td>Explicit comparison with a tool (like/as)</td><td>Retained</td><td>Is "like" or "as" present?</td></tr>
+            <tr><td><strong>Istiʿārah</strong></td><td>One side of comparison replaces the other (similarity)</td><td>Blocked by context</td><td>Is one word doing the work of another by similarity, no tool?</td></tr>
+            <tr><td><strong>Majāz Mursal</strong></td><td>Word used for a related but non-similar meaning</td><td>Blocked by context</td><td>Is the relationship something other than similarity?</td></tr>
+            <tr><td><strong>Kināyah</strong></td><td>Phrase implies a meaning through necessary association</td><td>Possible / allowed</td><td>Can the phrase be taken literally <em>and</em> figuratively?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 3: ʿILM AL-BADĪʿ
+    ===================================================== -->
+    <section id="s3" class="major-section" data-science="badi">
+      <span class="section-label label-badi">ʿIlm al-Badīʿ</span>
+      <h2>The Science of Stylistic Beauty</h2>
+
+      <p>ʿIlm al-Badīʿ studies how speech is made memorable, rhythmically satisfying, and aesthetically elegant. Classical scholars warn that Badīʿ employed without purpose becomes empty ornament (<em>taklīf</em>), weakening rather than strengthening speech. True Badīʿ arises naturally from meaning — it is discovered, not imposed.</p>
+
+      <p>The discipline is traditionally divided into <strong>maḥāsin maʿnawiyya</strong> (conceptual/rhetorical beauty) and <strong>maḥāsin lafẓiyya</strong> (phonetic/lexical beauty).</p>
+
+      <!-- 3.1 Tibaq -->
+      <h3 id="s3-1" class="sub-heading"><span class="sh-num">3.1</span>Antithesis — <span class="ar"><span lang="ar" dir="rtl">الطباق</span></span></h3>
+
+      <p><strong>Ṭibāq</strong> pairs opposites within a single expression to create sharp conceptual contrast. It is one of the most pervasive devices in the Qurʾān and classical Arabic poetry:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Arabic</th><th>English</th><th>Opposites</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">وَتَحسَبُهُم أَيقاظًا وَهُم رُقُودٌ</span></td>
+              <td>You would think them awake, while they were asleep.</td>
+              <td>awake / asleep</td>
+              <td>Q. 18:18</td>
+            </tr>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">يُحيِي وَيُمِيتُ</span></td>
+              <td>He gives life and causes death.</td>
+              <td>life / death</td>
+              <td>Q. 57:2</td>
+            </tr>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">الحَقُّ مِن رَبِّكَ فَلا تَكُونَنَّ مِنَ المُمتَرِينَ</span></td>
+              <td>Truth is from your Lord, so do not be among the doubters.</td>
+              <td>truth / doubt</td>
+              <td>Q. 2:147</td>
+            </tr>
+            <tr>
+              <td class="td-arabic"><span lang="ar" dir="rtl">وَأَنَّهُ هُوَ أَضحَكَ وَأَبكَى</span></td>
+              <td>It is He who causes laughter and weeping.</td>
+              <td>laugh / weep</td>
+              <td>Q. 53:43</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Rhetoricians distinguish between <strong>ṭibāq al-ījāb</strong> (two positive opposites, e.g. life/death) and <strong>ṭibāq al-salb</strong> (affirmative vs negative form of the same root, e.g. <span style="font-family:'ArefRuqaaArabic'"><span lang="ar" dir="rtl">لا يَعلَمُ</span> / <span lang="ar" dir="rtl">يَعلَمُ</span></span> — "does not know / knows").</p>
+
+      <!-- 3.2 Muqabala -->
+      <h3 id="s3-2" class="sub-heading"><span class="sh-num">3.2</span>Parallel Contrast — <span class="ar"><span lang="ar" dir="rtl">المقابلة</span></span></h3>
+
+      <p><strong>Muqābalah</strong> extends ṭibāq to multiple pairs of contrasts aligned in parallel, creating a more elaborate conceptual architecture:</p>
+
+      <div class="arabic-block"><span lang="ar" dir="rtl">فَلْيَضْحَكُوا قَلِيلًا وَلْيَبْكُوا كَثِيرًا</span></div>
+      <div class="transliteration">fal-yaḍḥakū qalīlan wa-l-yabkū kathīran</div>
+      <div class="translation">Let them laugh little and weep much. [Q. 9:82]</div>
+
+      <p>Contrasts: laugh/weep and little/much — two simultaneous pairs. Classical rhetoricians considered the most beautiful muqābalah to have three or four corresponding pairs, as in the saying:</p>
+
+      <div class="callout callout-example">
+        <span class="callout-label">Three-pair muqābalah</span>
+        "The wise person works today to rest tomorrow; the foolish person rests today to toil tomorrow." — Three contrasts: wise/foolish, work/rest, today-for-tomorrow / today-against-tomorrow.
+      </div>
+
+      <!-- 3.3 Jinas -->
+      <h3 id="s3-3" class="sub-heading"><span class="sh-num">3.3</span>Wordplay — <span class="ar"><span lang="ar" dir="rtl">الجناس</span></span></h3>
+
+      <p><strong>Jinās</strong> brings together two words that are phonetically similar but semantically different. The effect is surprise, musicality, and memorability. It requires exceptional skill to use without forcing meaning.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Arabic</th><th>English</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Complete (tāmm)</td>
+              <td class="td-arabic"><span lang="ar" dir="rtl">وَيَوْمَ تَقُومُ السَّاعَةُ</span>… <span lang="ar" dir="rtl">مَا لَبِثُوا غَيرَ سَاعَةٍ</span></td>
+              <td>On the Day the Hour rises… they will say they stayed only an hour. [Q. 30:55]</td>
+              <td><span lang="ar" dir="rtl">الساعة</span> (the Hour/Day of Judgment) vs <span lang="ar" dir="rtl">ساعة</span> (an hour of time)</td>
+            </tr>
+            <tr>
+              <td>Incomplete (nāqiṣ)</td>
+              <td class="td-arabic"><span lang="ar" dir="rtl">دَوامُ الحالِ مِن المُحالِ</span></td>
+              <td>The permanence of a state is impossible.</td>
+              <td><span lang="ar" dir="rtl">الحال</span> (the state) vs <span lang="ar" dir="rtl">المحال</span> (impossibility) — similar sound, different roots</td>
+            </tr>
+            <tr>
+              <td>By addition (muḍāf)</td>
+              <td class="td-arabic"><span lang="ar" dir="rtl">بَيْنَ الجَنِينِ وَالجُنُونِ</span></td>
+              <td>Between the embryo and madness.</td>
+              <td><span lang="ar" dir="rtl">جَنِين</span> / <span lang="ar" dir="rtl">جُنُون</span> — same root, different derivations</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3.4 Saj -->
+      <h3 id="s3-4" class="sub-heading"><span class="sh-num">3.4</span>Rhymed Prose — <span class="ar"><span lang="ar" dir="rtl">السجع</span></span></h3>
+
+      <p><strong>Sajʿ</strong> is rhyme in prose — the alignment of final syllables or sounds across prose clauses. It is the dominant rhythmic device of classical Arabic prose genres: the Qurʾān's shorter suras, prophetic supplication, the <em>maqāmāt</em> of al-Ḥarīrī (d. 1122 CE), and sermon literature (<em>khuṭbah</em>).</p>
+
+      <div class="arabic-block"><span lang="ar" dir="rtl">اللَّهُمَّ أَعطِ مُنفِقًا خَلَفًا، وَأَعطِ مُمسِكًا تَلَفًا</span></div>
+      <div class="transliteration">Allāhumma aʿṭi munfiqan khalafan, wa-aʿṭi mumsikan talafan</div>
+      <div class="translation">O Allah, give replacement to the one who spends, and give loss to the one who withholds. [Hadith, Ṣaḥīḥ Muslim]</div>
+
+      <p>The endings <em>khalafan / talafan</em> rhyme while conveying the opposite outcomes. Classical rhetoricians distinguished three types of sajʿ: <strong>muṭarraf</strong> (identical final letter, different weight), <strong>mutawāzī</strong> (parallel syntactic units of equal length), and <strong>mutawāzin</strong> (metrically balanced without identical rhyme).</p>
+
+      <!-- 3.5 Iqtibas / Tawriya / Husn al-Talil -->
+      <h3 id="s3-5" class="sub-heading"><span class="sh-num">3.5</span>Iqtibās, Tawrīyah, and Ḥusn al-Taʿlīl</h3>
+
+      <div class="sub-sub-heading">Iqtibās — <span class="ar"><span lang="ar" dir="rtl">الاقتباس</span></span></div>
+      <p><strong>Iqtibās</strong> (scriptural borrowing) is the incorporation of Qurʾānic or ḥadīth wording into one's own speech without formal citation, creating spiritual resonance and authority through allusive echo. Classical scholars insisted it must be employed respectfully and that the borrowed phrasing not be used in unworthy contexts.</p>
+
+      <div class="sub-sub-heading">Tawrīyah — <span class="ar"><span lang="ar" dir="rtl">التورية</span></span></div>
+      <p><strong>Tawrīyah</strong> (double entendre) exploits a word with two meanings: a near, obvious meaning and a remote, intended one. The listener first thinks of the near meaning and then discovers the deeper intended sense:</p>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>Classic Tawrīyah by Ibn al-Muʿtazz (d. 908 CE)</div>
+        <div class="arabic-block" style="font-size:1.15rem"><span lang="ar" dir="rtl">رَقَّ الزُّجاجُ وَرَقَّتِ الخَمرُ فَتَشابَها وَتَشاكَلَ الأَمرُ</span></div>
+        <div class="transliteration">raqqa al-zujāju wa-raqqat al-khamru fa-tashābahā wa-tashākala al-amr</div>
+        <div class="translation">The glass became thin and the wine became fine — they resembled each other and the matter grew confusing.</div>
+        <p style="font-size:0.88rem;color:var(--ink-3);margin-top:0.5rem">The word <strong>raqqa</strong> means both "became thin/fine" (near sense: the physical glass) and "became delicate/subtle" (far sense: the aesthetic experience of wine). The double meaning makes the poem shimmer.</p>
+      </div>
+
+      <div class="sub-sub-heading">Ḥusn al-Taʿlīl — <span class="ar"><span lang="ar" dir="rtl">حسن</span></span> <span class="ar"><span lang="ar" dir="rtl">التعليل</span></span></div>
+      <p><strong>Ḥusn al-taʿlīl</strong> (beautiful justification) is the device of assigning an imaginative, poetic cause to a phenomenon instead of the real one, for aesthetic or emotional effect:</p>
+
+      <div class="arabic-block" style="font-size:1.2rem"><span lang="ar" dir="rtl">اِنحَنَى الغُصنُ حَيَاءً مِن جَمالِكِ</span></div>
+      <div class="transliteration">inḥanā al-ghuṣnu ḥayāʾan min jamālik</div>
+      <div class="translation">The branch bent out of shyness before your beauty.</div>
+
+      <p>The real cause (gravity, wind) is replaced by a poetic cause (shyness). This is not deception but a rhetorical gift — it attributes intention and emotion to the natural world in service of praise.</p>
+
+      <!-- 3.6 Hyperbole, Iltifat, Semantic Harmony -->
+      <h3 id="s3-6" class="sub-heading"><span class="sh-num">3.6</span>Hyperbole, Iltifāt, and Semantic Harmony</h3>
+
+      <div class="sub-sub-heading">Mubālaghah — <span class="ar"><span lang="ar" dir="rtl">المبالغة</span></span> (Hyperbole)</div>
+      <p>Hyperbole serves to intensify emotional truth. Classical rhetoricians distinguished three levels: <strong>tablīgh</strong> (attainable exaggeration), <strong>mubālaghah</strong> (barely possible), and <strong>ghuluww</strong> (impossible exaggeration, acceptable in poetry). The Qurʾān generally avoids <em>ghuluww</em>; classical poetry embraces it.</p>
+
+      <div class="arabic-block" style="font-size:1.2rem"><span lang="ar" dir="rtl">وَلَوْ أَنَّمَا فِي الأَرضِ مِن شَجَرَةٍ أَقلَامٌ</span></div>
+      <div class="transliteration">wa-law annamā fī al-arḍi min shajaratin aqlām</div>
+      <div class="translation">If all the trees on earth were pens… [Q. 31:27 — the words of Allah would not be exhausted]</div>
+
+      <div class="sub-sub-heading">Iltifāt — <span class="ar"><span lang="ar" dir="rtl">الالتفات</span></span> (Rhetorical Shift)</div>
+      <p><strong>Iltifāt</strong> is a sudden, intentional shift in person (3rd → 2nd), number (singular → plural), or tense within a passage. It serves to create intimacy, urgency, or contrast. The Qurʾān employs it with extraordinary sophistication:</p>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>Iltifāt in Sūrat al-Fātiḥah</div>
+        <p style="font-size:0.9rem">Verses 1–3 speak <em>about</em> Allah in the third person: "Praise belongs to Allah, Lord of the Worlds, the Compassionate, the Merciful, Master of the Day of Judgment." Then verse 4 suddenly shifts to second person: "You alone we worship, You alone we ask for help." The shift from description to address creates an abrupt intimacy — the worshipper, having recalled Allah's attributes, suddenly turns and speaks <em>to</em> Him directly. This is widely cited as the most emotionally powerful iltifāt in the Qurʾān.</p>
+      </div>
+
+      <div class="sub-sub-heading">Murāʿāt al-Naẓīr — <span class="ar"><span lang="ar" dir="rtl">مراعاة</span></span> <span class="ar"><span lang="ar" dir="rtl">النظير</span></span> (Semantic Harmony)</div>
+      <p>Also known as <em>al-tawfīq</em> or <em>al-iʾtilāf</em>, this device brings together words from the same conceptual field, creating thematic coherence and reinforcing the mental image:</p>
+
+      <div class="arabic-block" style="font-size:1.15rem"><span lang="ar" dir="rtl">الشَّمْسُ وَالقَمَرُ بِحُسبانٍ وَالنَّجمُ وَالشَّجَرُ يَسجُدانِ</span></div>
+      <div class="transliteration">al-shamsu wa-l-qamaru bi-ḥusbān, wa-l-najmu wa-l-shajaru yasjudān</div>
+      <div class="translation">The sun and the moon move by precise calculation, and the stars and the trees prostrate. [Q. 55:5–6]</div>
+      <p>Sun, moon, stars — celestial field. Trees introduced alongside them — the contrast between the cosmic and the terrestrial, yet both in prostration. The harmony intensifies the sense of universal submission.</p>
+    </section>
+
+    <!-- =====================================================
+         SECTION 4: WORKED EXAMPLES
+    ===================================================== -->
+    <section id="s4" class="major-section" data-science="all">
+      <span class="section-label label-intro">Analysis</span>
+      <h2>Worked Examples</h2>
+
+      <p>These examples show all three sciences working together in a single passage.</p>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>Example 1 — Al-Fātiḥah 5</div>
+        <div class="arabic-block"><span lang="ar" dir="rtl">إِيَّاكَ نَعبُدُ وَإِيَّاكَ نَستَعِينُ</span></div>
+        <div class="transliteration">iyyāka naʿbudu wa-iyyāka nastaʿīn</div>
+        <div class="translation">You alone we worship, and You alone we seek for help.</div>
+        <p style="margin-top:0.8rem"><strong>Maʿānī:</strong> Fronting of <em>iyyāka</em> creates qaṣr (restriction): worship and help-seeking are exclusively for Allah. Normal word order (naʿbuduka) would lack this exclusivity. The repetition is iṭnāb for emphasis.</p>
+        <p><strong>Bayān:</strong> No major figurative device — the power is structural.</p>
+        <p><strong>Badīʿ:</strong> Perfect muqābalah — two parallel clauses of identical structure. The iltifāt from the third-person description of Allah (v. 1–3) to direct second-person address here creates sudden intimacy.</p>
+      </div>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>Example 2 — Q. 19:4 (Prophet Zakariyya)</div>
+        <div class="arabic-block"><span lang="ar" dir="rtl">وَاشتَعَلَ الرَّأسُ شَيبًا وَلَم أَكُن بِدُعائِكَ رَبِّ شَقِيًّا</span></div>
+        <div class="transliteration">wa-ishtaʿala al-raʾsu shayban wa-lam akun bi-duʿāʾika rabbi shaqiyyan</div>
+        <div class="translation">And the head flared with white hair, and I have never been disappointed in my supplication to You, my Lord.</div>
+        <p style="margin-top:0.8rem"><strong>Maʿānī:</strong> Nominal-style predication (<em>shayban</em> as a tamyīz) makes the whiteness the dominant image. The clause "I have not been disappointed" is khabar used for gentle argument — an implicit reason supporting the coming supplication.</p>
+        <p><strong>Bayān:</strong> Istiʿārah in <em>ishtaʿala</em> — fire borrowed for the spreading of grey. The literal meaning (ignition) is blocked; the rhetorical meaning (rapid, inevitable spread) is vivid and emotionally resonant.</p>
+        <p><strong>Badīʿ:</strong> Ḥusn al-taʿlīl is present if we read the ageing as a sign — the poetic cause of the supplication. Murāʿāt al-naẓīr between head, hair, whiteness, and the physical body of an aged suppliant creates thematic coherence.</p>
+      </div>
+
+      <div class="example-card">
+        <div class="card-title"><span class="card-dot"></span>Example 3 — Q. 17:29 (On Generosity)</div>
+        <div class="arabic-block"><span lang="ar" dir="rtl">وَلَا تَجعَل يَدَكَ مَغلُولَةً إِلَى عُنُقِكَ وَلَا تَبسُطهَا كُلَّ البَسطِ</span></div>
+        <div class="transliteration">wa-lā tajʿal yadaka maghlūlatan ilā ʿunuqika wa-lā tabsuṭhā kulla al-basṭ</div>
+        <div class="translation">Do not make your hand chained to your neck, nor extend it completely.</div>
+        <p style="margin-top:0.8rem"><strong>Maʿānī:</strong> Double prohibition (<em>nahy</em>) creates a rhetorical balance. Neither extreme is permitted. The absence of a middle term is deliberate — the listener must infer the golden mean.</p>
+        <p><strong>Bayān:</strong> Both phrases are kināyah (or metaphorical istiʿārah): hand chained to neck = miserliness; hand fully extended = extravagance. The literal images are physically possible but contextually blocked.</p>
+        <p><strong>Badīʿ:</strong> Muqābalah — two parallel contrasting prohibitions. Ṭibāq between restraint and extension. The parallelism makes the moral principle memorable.</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 5: COMMON MISTAKES
+    ===================================================== -->
+    <section id="s5" class="major-section" data-science="all">
+      <span class="section-label label-intro">Guidance</span>
+      <h2>Common Mistakes in Studying Balāghah</h2>
+
+      <div class="callout callout-warning">
+        <span class="callout-label">Mistake 1 — Treating Balāghah as Decoration</span>
+        Balāghah is not "pretty language" layered onto meaning. Maʿānī is meaning itself; Bayān is meaning through image; Badīʿ is meaning enhanced by form. Remove the rhetorical device and you often change what is being communicated, not merely how it looks.
+      </div>
+
+      <div class="callout callout-warning">
+        <span class="callout-label">Mistake 2 — Confusing Tashbīh and Istiʿārah</span>
+        If both sides of the comparison appear with a tool (<span lang="ar" dir="rtl">كـ</span>, <span lang="ar" dir="rtl">كأنّ</span>, <span lang="ar" dir="rtl">مثل</span>), it is tashbīh. If one side replaces the other and the tool is absent, it is istiʿārah. Test: "Zayd is like a lion" (tashbīh) vs "I saw a lion giving a sermon" (istiʿārah — a real lion cannot preach).
+      </div>
+
+      <div class="callout callout-warning">
+        <span class="callout-label">Mistake 3 — Confusing Istiʿārah and Kināyah</span>
+        In istiʿārah, the literal meaning is blocked by reason or context. In kināyah, the literal meaning remains possible alongside the intended one. "A lion gave a sermon" — impossible literally. "He has much ash" — possible literally (he may really have ash) but meant as generosity.
+      </div>
+
+      <div class="callout callout-warning">
+        <span class="callout-label">Mistake 4 — Assuming Every Question Seeks Information</span>
+        Rhetorical questions (inkār, taqrīr, taʿajjub, tawbīkh, taʿẓīm) are questions in grammatical form only. In balāghah, the question is often the answer. "Is Allah not sufficient for His servant?" means: He certainly is.
+      </div>
+
+      <div class="callout callout-warning">
+        <span class="callout-label">Mistake 5 — Ignoring Context (muqtaḍā al-ḥāl)</span>
+        The same expression can function as a literal command, a threat, a permission, or an ironic despair — all depending on speaker, listener, and situation. <span style="font-family:'ArefRuqaaArabic'"><span lang="ar" dir="rtl">افعل ما شئت</span></span> ("Do what you want") changes meaning entirely based on context.
+      </div>
+
+      <div class="callout callout-warning">
+        <span class="callout-label">Mistake 6 — Skipping Maʿānī for the "exciting" devices</span>
+        Students often rush to tashbīh and istiʿārah because they feel more tangible, while neglecting the subtler Maʿānī tools (fronting, omission, emphasis levels, nominal vs verbal) that carry enormous rhetorical weight in the Qurʾān. The power of <span lang="ar" dir="rtl">إِيَّاكَ نَعبُدُ</span> is structural, not figurative.
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 6: LEARNING PATH
+    ===================================================== -->
+    <section id="s6" class="major-section" data-science="all">
+      <span class="section-label label-intro">Method</span>
+      <h2>Analytical Method and Learning Path</h2>
+
+      <div class="diagnostic">
+        <h3>Six-Step Balāghic Analysis</h3>
+        <ol>
+          <li><strong>Literal comprehension:</strong> What does the sentence say grammatically? Identify subject, predicate, verb. Resolve all iʿrāb.</li>
+          <li><strong>Context (muqtaḍā al-ḥāl):</strong> Who speaks? To whom? In what emotional state? Is the audience accepting, doubting, or denying? What is the occasion?</li>
+          <li><strong>Structural choices (Maʿānī):</strong> Why nominal or verbal? Why definite or indefinite? Why this word order? What is omitted? Why this level of emphasis? What does the command / question really mean here?</li>
+          <li><strong>Imagery (Bayān):</strong> Is there a comparison? Metaphor? Is an abstract made visible? Is a word used figuratively? Is the meaning indirect while possible literally?</li>
+          <li><strong>Beauty (Badīʿ):</strong> Are there opposites? Rhyme or rhythm? Wordplay? Parallel structures? Repetition? Semantic harmony? What is the ornament serving?</li>
+          <li><strong>Effect:</strong> What does this rhetorical choice produce in the listener — awe, fear, intimacy, certainty, urgency, shame, hope, clarity, memorability?</li>
+        </ol>
+      </div>
+
+      <h3 class="sub-heading"><span class="sh-num">6.1</span>Recommended Learning Sequence</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Stage</th><th>Focus</th><th>Recommended Primary Texts</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>1. Grammar foundation</td>
+              <td>Naḥw, ṣarf, iʿrāb, classical vocabulary</td>
+              <td>Ibn Ājurrūm's <em>Muqaddimah</em>; Ibn Hishām's <em>Qaṭr al-Nadā</em></td>
+            </tr>
+            <tr>
+              <td>2. ʿIlm al-Maʿānī</td>
+              <td>Sentence structure and contextual meaning</td>
+              <td>Al-Jurjānī's <em>Dalāʾil al-Iʿjāz</em>; al-Qazwīnī's <em>Talkhīṣ al-Miftāḥ</em></td>
+            </tr>
+            <tr>
+              <td>3. ʿIlm al-Bayān</td>
+              <td>Imagery, simile, metaphor, figurative usage</td>
+              <td>Al-Jurjānī's <em>Asrār al-Balāghah</em>; al-Sakkākī's <em>Miftāḥ al-ʿUlūm</em> (Part III)</td>
+            </tr>
+            <tr>
+              <td>4. ʿIlm al-Badīʿ</td>
+              <td>Stylistic ornament</td>
+              <td>Ibn al-Muʿtazz's <em>Kitāb al-Badīʿ</em> (earliest systematic treatment); al-Qazwīnī's <em>Talkhīṣ</em></td>
+            </tr>
+            <tr>
+              <td>5. Applied analysis</td>
+              <td>Qurʾān, ḥadīth, poetry, khutbahs</td>
+              <td>Zamakhsharī's <em>al-Kashshāf</em> (Qurʾānic rhetoric); Al-Bāqillānī's <em>Iʿjāz al-Qurʾān</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-def">
+        <span class="callout-label">Final Summary</span>
+        Arabic balāghah is the science of meaningful eloquence. <strong>Maʿānī</strong> teaches you to see structure. <strong>Bayān</strong> teaches you to see images. <strong>Badīʿ</strong> teaches you to hear beauty. Together they ask one question: why <em>this</em> — this word, this order, this image, this rhythm — and what does it do to the one who receives it?
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial · Classical Arabic Studies</span>
+</footer>
+
+<script>
+/* ============================================================
+   PROGRESS BAR
+============================================================ */
+const bar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (scrollTop / docH * 100) + '%';
+}, { passive: true });
+
+/* ============================================================
+   NAV HEIGHT LOCK
+   nav.js measures the DOM to set body padding-top. If Arabic
+   font metrics inflate that measurement we correct it here.
+============================================================ */
+function lockNavPadding() {
+  const pt = parseInt(window.getComputedStyle(document.body).paddingTop, 10);
+  if (pt > 66) {
+    document.body.style.setProperty('padding-top', '62px', 'important');
+  }
+}
+// Run after nav.js has had time to set its value
+window.addEventListener('load', lockNavPadding);
+setTimeout(lockNavPadding, 100);
+setTimeout(lockNavPadding, 500);
+// Watch for any subsequent style mutations on body
+new MutationObserver(lockNavPadding)
+  .observe(document.body, { attributes: true, attributeFilter: ['style'] });
+
+/* ============================================================
+   FILTER
+============================================================ */
+function setFilter(science, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const sections = document.querySelectorAll('.major-section');
+  sections.forEach(sec => {
+    const s = sec.dataset.science;
+    if (science === 'all' || s === science || s === 'all') {
+      sec.classList.remove('hidden-by-filter');
+    } else {
+      sec.classList.add('hidden-by-filter');
+    }
+  });
+
+  // Also clear any search
+  if (document.getElementById('searchInput').value) {
+    clearSearch();
+  }
+}
+
+/* ============================================================
+   SEARCH
+============================================================ */
+const searchInput  = document.getElementById('searchInput');
+const clearBtn     = document.getElementById('clearSearch');
+const searchInfo   = document.getElementById('searchResults');
+const articleBody  = document.getElementById('articleBody');
+
+let originalHTML = null;
+
+searchInput.addEventListener('input', function() {
+  const q = this.value.trim();
+  clearBtn.style.display = q ? 'block' : 'none';
+
+  if (!q) {
+    clearSearch();
+    return;
+  }
+
+  // Restore original HTML first if re-searching
+  if (originalHTML) {
+    articleBody.innerHTML = originalHTML;
+    rebindEvents();
+  }
+
+  originalHTML = articleBody.innerHTML;
+
+  // Remove filter while searching
+  document.querySelectorAll('.major-section').forEach(s => s.classList.remove('hidden-by-filter'));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+
+  // Highlight occurrences
+  let count = 0;
+  const walker = document.createTreeWalker(articleBody, NodeFilter.SHOW_TEXT, {
+    acceptNode: node => {
+      const p = node.parentElement;
+      if (['SCRIPT','STYLE','MARK'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
+  const regex = new RegExp('(' + escapeReg(q) + ')', 'gi');
+  const nodesToReplace = [];
+  while (walker.nextNode()) {
+    if (regex.test(walker.currentNode.textContent)) {
+      nodesToReplace.push(walker.currentNode);
+    }
+  }
+
+  nodesToReplace.forEach(node => {
+    const span = document.createElement('span');
+    span.innerHTML = node.textContent.replace(regex, '<mark class="search-hl">$1</mark>');
+    count += (node.textContent.match(regex) || []).length;
+    node.parentNode.replaceChild(span, node);
+  });
+
+  searchInfo.style.display = 'block';
+  searchInfo.textContent = count > 0 ? `${count} match${count !== 1 ? 'es' : ''} found` : 'No matches found';
+
+  // Scroll to first highlight
+  const first = articleBody.querySelector('mark.search-hl');
+  if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+function clearSearch() {
+  searchInput.value = '';
+  clearBtn.style.display = 'none';
+  searchInfo.style.display = 'none';
+  searchInfo.textContent = '';
+  if (originalHTML) {
+    articleBody.innerHTML = originalHTML;
+    originalHTML = null;
+    rebindEvents();
+  }
+}
+
+function escapeReg(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function rebindEvents() {
+  // Nothing special needed — event listeners are on static elements
+}
+
+  (function () {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const section = parts[0];
+  if (!section) return;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+  const href  = '/' + section + '/';
+  const el = document.querySelector('a.site-name');
+  if (el) { el.textContent = label; el.href = href; }
+})();
+</script>
+
+
+  <script>
+  // Auto read-time calculation
+  (function() {
+    var selectors = ['.article-body','article','main','.content','.stage-cards'];
+    var el = null;
+    for (var i = 0; i < selectors.length; i++) {
+      el = document.querySelector(selectors[i]);
+      if (el) break;
+    }
+    if (!el) return;
+    var words = el.textContent.trim().split(/\s+/).length;
+    var mins  = Math.max(1, Math.ceil(words / 230));
+    var targets = document.querySelectorAll('.read-time,[class*="read-time"],[class*="readtime"]');
+    targets.forEach(function(t) { t.textContent = mins + ' min read'; });
+    // Also replace any hardcoded "~N min read" pattern in plain text nodes
+    document.querySelectorAll('[data-readtime]').forEach(function(t) {
+      t.textContent = mins + ' min read';
+    });
+  })();
+  </script>
+</main>
+</body>
+</html>

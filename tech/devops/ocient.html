@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="Ocient, data warehouse, SQL">
+  <meta property="og:title"       content="Ocient Hyperscale Data Warehouse — Complete Guide" />
+  <meta property="og:description" content="Ocient Hyperscale Data Warehouse — Complete Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/tech/devops/ocient.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Ocient Hyperscale Data Warehouse — Complete Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Ocient Hyperscale Data Warehouse — Complete Guide">
+  <meta name="twitter:description" content="Ocient Hyperscale Data Warehouse — Complete Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/tech/devops/ocient.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>Ocient Hyperscale Data Warehouse — Complete Guide</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+:root {
+  --ink: #0a0f1e;
+  --paper: #f5f3ef;
+  --paper2: #ede9e2;
+  --rule: #d4cfc6;
+  --accent: #0052cc;
+  --accent2: #e85d04;
+  --accent3: #1a936f;
+  --muted: #6b6762;
+  --code-bg: #0a0f1e;
+  --code-text: #a8d8ea;
+  --node-sql: #0052cc;
+  --node-found: #1a936f;
+  --node-load: #e85d04;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ── TOP NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  height: 52px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+nav .nav-brand {
+  font-family: 'DM Serif Display', serif;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+nav a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+nav a:hover { color: #fff; }
+nav .nav-dot { color: rgba(255,255,255,0.2); font-size: 0.5rem; flex-shrink: 0; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--ink);
+  color: #fff;
+  padding: 5rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  max-width: 500px; width: 100%;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,82,204,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+}
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.hero h1 em {
+  font-style: normal;
+  color: rgba(255,255,255,0.35);
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  max-width: 620px;
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+}
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.stat {
+  border-left: 2px solid var(--accent);
+  padding-left: 0.9rem;
+}
+.stat-val {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+.stat-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── LAYOUT ── */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── SECTION ── */
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+section:last-of-type { border-bottom: none; }
+
+.section-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-style: italic;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+.section-lead {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+  color: var(--ink);
+}
+h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+p { margin-bottom: 0.9rem; color: #2c2c2c; }
+
+/* ── GRID SYSTEMS ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+
+/* ── CARDS ── */
+.card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+.card-accent-blue { border-top: 3px solid var(--accent); }
+.card-accent-orange { border-top: 3px solid var(--accent2); }
+.card-accent-green { border-top: 3px solid var(--accent3); }
+
+.card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.card h3 { margin-bottom: 0.5rem; }
+.card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 0; }
+
+/* ── NODE DIAGRAM ── */
+.arch-diagram {
+  background: var(--ink);
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.arch-diagram::before {
+  content: 'ARCHITECTURE';
+  position: absolute;
+  right: 2rem;
+  top: 1.2rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.1);
+}
+.arch-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.arch-row.center { justify-content: center; }
+.arch-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.node-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  min-width: 120px;
+  position: relative;
+}
+.node-box.sql { border-color: var(--node-sql); background: rgba(0,82,204,0.15); }
+.node-box.found { border-color: var(--node-found); background: rgba(26,147,111,0.15); }
+.node-box.load { border-color: var(--node-load); background: rgba(232,93,4,0.15); }
+.node-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.node-sub {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.4);
+  font-family: 'IBM Plex Mono', monospace;
+}
+.arch-connector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.3);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  margin: -0.5rem 0;
+}
+.arch-connector-h {
+  height: 1px;
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  max-width: 80px;
+}
+.network-badge {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 3px;
+  padding: 0.15rem 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.05em;
+}
+.arch-legend {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.5);
+}
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── CODE ── */
+pre {
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #1e2740;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  line-height: 1.75;
+}
+code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82em;
+  background: #e8e3da;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  color: var(--ink);
+}
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  border-radius: 0;
+}
+.kw { color: #7ec8e3; }   /* keyword */
+.fn { color: #ffd166; }   /* function/module */
+.str { color: #a8d8a8; }  /* string */
+.cm { color: #4a5568; font-style: italic; } /* comment */
+.nb { color: #fc9e4f; }   /* number/bool */
+.op { color: #e2e8f0; }   /* operator/punctuation */
+.id { color: #c4b5fd; }   /* identifier */
+.ty { color: #67c8ff; }   /* type */
+
+/* ── TABLE ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+thead tr {
+  background: var(--ink);
+  color: #fff;
+}
+th {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: 'IBM Plex Mono', monospace;
+}
+td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+.td-mono { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--accent); }
+.td-desc { color: var(--muted); font-size: 0.84rem; }
+
+/* ── CALLOUT ── */
+.callout {
+  border-left: 3px solid var(--accent);
+  background: rgba(0,82,204,0.05);
+  padding: 1rem 1.25rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.25rem 0;
+}
+.callout.orange { border-color: var(--accent2); background: rgba(232,93,4,0.05); }
+.callout.green { border-color: var(--accent3); background: rgba(26,147,111,0.05); }
+.callout p { margin-bottom: 0; font-size: 0.88rem; }
+.callout strong { color: var(--ink); }
+
+/* ── BADGE ── */
+.badge {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 3px;
+  margin: 0.15rem;
+  letter-spacing: 0.04em;
+}
+.badge-blue { background: rgba(0,82,204,0.1); color: var(--accent); border: 1px solid rgba(0,82,204,0.2); }
+.badge-orange { background: rgba(232,93,4,0.1); color: var(--accent2); border: 1px solid rgba(232,93,4,0.2); }
+.badge-green { background: rgba(26,147,111,0.1); color: var(--accent3); border: 1px solid rgba(26,147,111,0.2); }
+.badge-gray { background: rgba(0,0,0,0.05); color: var(--muted); border: 1px solid var(--rule); }
+
+/* ── PIPELINE DIAGRAM ── */
+.pipeline {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+.pipe-step {
+  flex: 1;
+  min-width: 100px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}
+.pipe-step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--paper);
+  padding: 0 2px;
+  font-size: 1rem;
+  color: var(--muted);
+  z-index: 1;
+}
+.pipe-step:first-child { border-radius: 6px 0 0 6px; }
+.pipe-step:last-child { border-radius: 0 6px 6px 0; }
+.pipe-icon { font-size: 1.4rem; margin-bottom: 0.3rem; display: block; }
+.pipe-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.pipe-desc { font-size: 0.68rem; color: var(--muted); }
+
+/* ── DEPLOYMENT GRID ── */
+.deploy-card {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.deploy-header {
+  background: var(--ink);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.deploy-body { padding: 1.25rem; background: #fff; }
+.deploy-body ul {
+  list-style: none;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+.deploy-body ul li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.deploy-body ul li:last-child { border-bottom: none; }
+.deploy-body ul li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+
+/* ── FEATURE LIST ── */
+.feat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.feat-item {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.feat-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+.feat-text h4 { font-family: 'DM Sans', sans-serif; font-size: 0.84rem; font-weight: 700; text-transform: none; letter-spacing: 0; color: var(--ink); margin-bottom: 0.2rem; }
+.feat-text p { font-size: 0.78rem; color: var(--muted); margin-bottom: 0; }
+
+/* ── INDEX SECTION ── */
+.index-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: flex-start;
+}
+.index-row:last-child { border-bottom: none; }
+.index-tag {
+  background: var(--ink);
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  letter-spacing: 0.05em;
+}
+.index-tag.secondary { background: var(--accent); }
+.index-content h4 { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 700; text-transform: none; letter-spacing: 0; color: var(--ink); margin-bottom: 0.2rem; }
+.index-content p { font-size: 0.82rem; color: var(--muted); margin-bottom: 0; }
+
+/* ── SECURITY GRID ── */
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.sec-item {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 1rem;
+}
+.sec-item h4 { font-family: 'DM Sans', sans-serif; font-size: 0.84rem; font-weight: 700; text-transform: none; letter-spacing: 0; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
+.sec-item p { font-size: 0.8rem; color: var(--muted); margin-bottom: 0; }
+
+/* ── INTEGRATION CHIPS ── */
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.chip {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.chip-cat {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── VERTICAL SOLUTION CARDS ── */
+.vs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.vs-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.vs-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+}
+.vs-card:nth-child(2)::before { background: var(--accent2); }
+.vs-card:nth-child(3)::before { background: var(--accent3); }
+.vs-card:nth-child(4)::before { background: #9b5de5; }
+.vs-card:nth-child(5)::before { background: #f72585; }
+.vs-card:nth-child(6)::before { background: #06d6a0; }
+.vs-emoji { font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+.vs-card h3 { font-size: 0.9rem; margin-bottom: 0.4rem; }
+.vs-card p { font-size: 0.8rem; color: var(--muted); margin-bottom: 0; }
+
+/* ── ML MODELS ── */
+.ml-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+.ml-item {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 0.9rem;
+}
+.ml-item h4 { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--accent); text-transform: none; letter-spacing: 0; margin-bottom: 0.3rem; }
+.ml-item p { font-size: 0.8rem; color: var(--muted); margin-bottom: 0; }
+
+/* ── QUOTE ── */
+blockquote {
+  border-left: 3px solid var(--rule);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--muted);
+  font-style: italic;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem;
+}
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── ERASURE CODING VIZ ── */
+.erasure-viz {
+  background: var(--ink);
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+.ec-block {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+.ec-data { background: rgba(0,82,204,0.6); border: 1px solid rgba(0,82,204,0.8); }
+.ec-parity { background: rgba(232,93,4,0.5); border: 1px solid rgba(232,93,4,0.7); }
+.ec-fail { background: rgba(255,255,255,0.05); border: 2px dashed rgba(255,255,255,0.2); color: rgba(255,255,255,0.2); }
+.ec-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  margin-top: 0.3rem;
+}
+.ec-group { display: flex; flex-direction: column; align-items: center; }
+.ec-plus { color: rgba(255,255,255,0.2); font-size: 1.2rem; }
+.ec-legend { display: flex; gap: 1.25rem; margin-top: 1rem; flex-wrap: wrap; }
+.ec-leg-item { display: flex; align-items: center; gap: 0.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: rgba(255,255,255,0.4); }
+.ec-leg-sq { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+/* ── GLOSSARY ── */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+.gloss-item {
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+.gloss-term {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.gloss-def { font-size: 0.8rem; color: var(--muted); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4, .feat-list, .security-grid, .ml-grid, .glossary-grid { grid-template-columns: 1fr; }
+  .vs-grid { grid-template-columns: 1fr 1fr; }
+  .pipeline { flex-direction: column; }
+  .pipe-step:not(:last-child)::after { content: '↓'; right: auto; left: 50%; top: auto; bottom: -12px; transform: translateX(-50%); }
+  .pipe-step { border-radius: 0; }
+  .pipe-step:first-child { border-radius: 6px 6px 0 0; }
+  .pipe-step:last-child { border-radius: 0 0 6px 6px; }
+}
+@media (max-width: 500px) {
+  .vs-grid { grid-template-columns: 1fr; }
+}
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="A comprehensive guide to Ocient's architecture, storage technology, query engine, machine learning, geospatial capabilities, deployment options, and…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ocient Hyperscale Data Warehouse — Complete Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2024-01-01",
+    "dateModified": "2024-01-01",
+  "url": "https://yasirbilgin.com/tech/devops/ocient.html",
+  "description": "A comprehensive guide to Ocient's architecture, storage technology, query engine, machine learning, geospatial capabilities, deployment options, and…"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech",
+      "item": "https://yasirbilgin.com/tech/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ocient Hyperscale Data Warehouse — Complete Guide",
+      "item": "https://yasirbilgin.com/tech/devops/ocient.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">Ocient</span>
+  <a href="#" onclick="goTo('overview');return false;">Overview</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('architecture');return false;">Architecture</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('storage');return false;">Storage</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('ingestion');return false;">Data Ingestion</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('query');return false;">Querying</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('indexes');return false;">Indexing</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('ocientml');return false;">OcientML</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('ocientgeo');return false;">OcientGeo</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('deployment');return false;">Deployment</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('security');return false;">Security</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('admin');return false;">Administration</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('integrations');return false;">Integrations</a>
+  <span class="nav-dot">●</span>
+  <a href="#" onclick="goTo('glossary');return false;">Glossary</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+      <div class="eyebrow">Tech · DevOps</div>
+  <div class="hero-inner">
+    <h1>Ocient Hyperscale<br><em>Data Warehouse</em></h1>
+    <p class="hero-sub">A comprehensive guide to Ocient's architecture, storage technology, query engine, machine learning, geospatial capabilities, deployment options, and administration — drawn directly from official documentation.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-val">Trillions+</div>
+        <div class="stat-label">Rows analyzed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">90%</div>
+        <div class="stat-label">Less datacenter space</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">100 Gbps</div>
+        <div class="stat-label">Node interconnect</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">ANSI SQL</div>
+        <div class="stat-label">Standard interface</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- ═══════════════════════════════════════ 1. OVERVIEW ═══════════════════════════════════════ -->
+<section id="overview">
+  <div class="section-num">01 — Product Overview</div>
+  <h2>What is Ocient?</h2>
+  <p class="section-lead">Ocient is a modern, purpose-built hyperscale data warehouse engineered to run real-time OLAP analytics on the world's largest and most complex structured and semi-structured datasets using standard ANSI SQL.</p>
+
+  <p>Founded in 2016 by industry veterans, Ocient set out to solve a fundamental problem: traditional analytical databases don't scale cost-effectively to extremely large datasets, while Big Data solutions can scale but are expensive, complex, and too slow for interactive analysis. Ocient bridges that gap — delivering interactive query speeds at petabyte scale.</p>
+
+  <blockquote>
+    "Queries that used to take hours, or not run at all, now execute in seconds, and systems that used to fill up multiple data center racks now require up to 90% less space and energy."
+    <cite>— Ocient Documentation</cite>
+  </blockquote>
+
+  <div class="grid-3" style="margin-top:2rem">
+    <div class="card card-accent-blue">
+      <span class="card-icon">⚡</span>
+      <h3>Ultra-Fast Analytics</h3>
+      <p>Purpose-built execution engine and I/O layer delivers 10×–50× faster performance than competitive solutions on hyperscale datasets.</p>
+    </div>
+    <div class="card card-accent-orange">
+      <span class="card-icon">📐</span>
+      <h3>ANSI SQL Standard</h3>
+      <p>Full SQL dialect closely following PostgreSQL conventions. JDBC, pyocient, and ODBC drivers available. No proprietary language learning required.</p>
+    </div>
+    <div class="card card-accent-green">
+      <span class="card-icon">🔧</span>
+      <h3>Commodity Hardware</h3>
+      <p>Designed to run on standard hardware. Supports on-premises, OcientCloud®, and public cloud (AWS, GCP) deployments.</p>
+    </div>
+    <div class="card card-accent-blue">
+      <span class="card-icon">🤖</span>
+      <h3>In-Database ML/AI</h3>
+      <p>OcientML® places the entire machine learning stack inside the database. Train and score models against petabytes of data with SQL.</p>
+    </div>
+    <div class="card card-accent-orange">
+      <span class="card-icon">🗺️</span>
+      <h3>Native Geospatial</h3>
+      <p>OcientGeo® provides native geospatial and spatiotemporal analytics including point, polygon, and complex geographic analysis.</p>
+    </div>
+    <div class="card card-accent-green">
+      <span class="card-icon">♻️</span>
+      <h3>Energy Efficient</h3>
+      <p>Up to 90% smaller data center footprint. OcientCloud® runs on 100% renewable energy in a LEED-certified facility.</p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:2rem">
+    <p><strong>Key differentiation:</strong> Ocient consolidates real-time analytics, traditional OLAP, ETL/ELT pipelines, geospatial analysis, and in-database machine learning onto a single unified platform — eliminating the cost and complexity of multiple specialized systems.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 2. ARCHITECTURE ═══════════════════════════════════════ -->
+<section id="architecture">
+  <div class="section-num">02 — Architecture</div>
+  <h2>System Architecture</h2>
+  <p class="section-lead">Ocient is a distributed system built around the Compute-Adjacent Storage Architecture™ (CASA) — co-locating NVMe SSD storage with compute resources to eliminate common bottlenecks.</p>
+
+  <h3>The Three Node Types</h3>
+  <p>Every Ocient system is composed of three distinct node roles, each with a specific responsibility. These roles are consistent across all environments — only the number of nodes varies.</p>
+
+  <div class="arch-diagram">
+    <div class="arch-label">CLIENT CONNECTIONS</div>
+    <div class="arch-row">
+      <div class="node-box" style="border-color:rgba(255,255,255,0.2)">
+        <div class="node-title">JDBC Client</div>
+        <div class="node-sub">Port 4050</div>
+      </div>
+      <div class="node-box" style="border-color:rgba(255,255,255,0.2)">
+        <div class="node-title">pyocient</div>
+        <div class="node-sub">Python Driver</div>
+      </div>
+      <div class="node-box" style="border-color:rgba(255,255,255,0.2)">
+        <div class="node-title">BI Tools / CLI</div>
+        <div class="node-sub">3rd Party Clients</div>
+      </div>
+    </div>
+    <div class="arch-connector">
+      <div class="arch-connector-h"></div>
+      <span>TCP / Network</span>
+      <div class="arch-connector-h"></div>
+    </div>
+    <div class="arch-label" style="margin-top:0.5rem">SQL NODES — Query Parsing & Orchestration</div>
+    <div class="arch-row">
+      <div class="node-box sql">
+        <div class="node-title">SQL Node 1</div>
+        <div class="node-sub">Parse · Plan · Orchestrate</div>
+      </div>
+      <div class="node-box sql">
+        <div class="node-title">SQL Node 2</div>
+        <div class="node-sub">Load Balanced</div>
+      </div>
+    </div>
+    <div class="arch-connector">
+      <div class="arch-connector-h"></div>
+      <span class="network-badge">100 Gbps High-Speed Network</span>
+      <div class="arch-connector-h"></div>
+    </div>
+    <div class="arch-label">FOUNDATION NODES — Storage + Bulk Processing (CASA)</div>
+    <div class="arch-row">
+      <div class="node-box found">
+        <div class="node-title">FN 1</div>
+        <div class="node-sub">NVMe · Columnar</div>
+      </div>
+      <div class="node-box found">
+        <div class="node-title">FN 2</div>
+        <div class="node-sub">NVMe · Columnar</div>
+      </div>
+      <div class="node-box found">
+        <div class="node-title">FN 3</div>
+        <div class="node-sub">NVMe · Columnar</div>
+      </div>
+      <div class="node-box found">
+        <div class="node-title">FN N…</div>
+        <div class="node-sub">Scalable</div>
+      </div>
+    </div>
+    <div class="arch-connector" style="margin-top:0.5rem">
+      <div class="arch-connector-h"></div>
+      <span class="network-badge">100 Gbps Loading Network</span>
+      <div class="arch-connector-h"></div>
+    </div>
+    <div class="arch-label">LOADER NODES — ETL / Stream Ingestion</div>
+    <div class="arch-row">
+      <div class="node-box load">
+        <div class="node-title">Loader 1</div>
+        <div class="node-sub">Extract · Transform · Index</div>
+      </div>
+      <div class="node-box load">
+        <div class="node-title">Loader 2</div>
+        <div class="node-sub">Kafka · S3 · Files</div>
+      </div>
+    </div>
+    <div class="arch-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--node-sql)"></div>SQL Node</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--node-found)"></div>Foundation Node</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--node-load)"></div>Loader Node</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <h3>SQL Nodes</h3>
+      <p>SQL nodes are the entry point to the system. They receive incoming SQL from JDBC/pyocient clients, parse statements, and create an execution plan using one of two optimization methods. Once planned, the work is distributed to foundation nodes. SQL nodes also handle final aggregations and joins on intermediate result sets returned from foundation nodes, then package and return results to the client.</p>
+      <p>Administrators connect to SQL nodes via CLI or SQL client to issue DDL/DCL commands, which the node then propagates throughout the system. Multiple SQL nodes provide automatic load balancing across connections.</p>
+    </div>
+    <div>
+      <h3>Foundation Nodes</h3>
+      <p>Foundation nodes are the heart of Ocient — they store user data in columnar format on NVMe SSDs and perform the bulk of query processing. The CASA principle means data and compute are co-located: when a query arrives, a foundation node processes as much of it as possible against its own local data before returning intermediate results upstream.</p>
+      <p>Foundation nodes contain the majority of storage in an Ocient system and are typically the largest in number. They are connected to SQL nodes via 100 Gbps high-speed network, and all foundation nodes are connected to all SQL nodes.</p>
+    </div>
+    <div>
+      <h3>Loader Nodes</h3>
+      <p>Loader nodes handle the full ETL/ELT ingestion lifecycle: extracting from batch file sources (e.g., S3) or streaming sources (e.g., Kafka), transforming using SQL functions, indexing data, and loading into foundation nodes. They operate in a horizontal scale-out fashion, so adding more loader nodes increases ingestion throughput transparently.</p>
+      <p>Loader nodes also enforce exactly-once delivery guarantees — ensuring data is never duplicated even in the case of network or system failure during loading.</p>
+    </div>
+    <div>
+      <h3>Networking</h3>
+      <p>Two separate networks connect the nodes of an Ocient system. A <strong>100 Gbps high-speed network</strong> handles query execution traffic between SQL nodes and foundation nodes, and data movement between loader nodes and foundation nodes. A <strong>10 Gbps network</strong> handles administrative flows — DDL/DCL command propagation across the system.</p>
+      <p>Every foundation node is connected to every SQL node. All nodes are connected through these two networks, ensuring high throughput and low latency for every workload type.</p>
+    </div>
+  </div>
+
+  <div class="callout orange" style="margin-top:1.5rem">
+    <p><strong>CASA (Compute-Adjacent Storage Architecture):</strong> By co-locating NVMe drive storage with compute resources, Ocient avoids the network bottlenecks common in cloud-style separated storage/compute architectures. Data never needs to leave the node for first-pass processing.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 3. STORAGE ═══════════════════════════════════════ -->
+<section id="storage">
+  <div class="section-num">03 — Storage Technology</div>
+  <h2>Storage, Segments & Erasure Coding</h2>
+  <p class="section-lead">Ocient stores data in a columnar format organized into segments and segment groups, protected by erasure coding for fault tolerance without the overhead of full data replication.</p>
+
+  <div class="grid-2">
+    <div>
+      <h3>Columnar Storage</h3>
+      <p>While tables are created and queried using familiar SQL syntax, Ocient stores data on disk in a highly compressed columnar format. Segments are the fundamental storage unit: they contain rows organized by column, along with embedded indexes and statistical metadata used to accelerate query processing.</p>
+
+      <h3>Pages → Segments → Segment Groups</h3>
+      <p>As data is ingested by loader nodes, it is initially stored in row-based <strong>pages</strong> on foundation nodes for rapid ingestion throughput. As pages accumulate, loader nodes convert them into columnar <strong>segments</strong> — highly compressed structures that include data, multiple indexes, and metadata.</p>
+      <p>Multiple segments combine to form <strong>segment groups</strong>. A segment group has a fixed width (number of segments) and a defined number of parity blocks for resilience. Segment groups are physically stored in a <strong>storage cluster</strong> — a set of foundation nodes with an associated storage space.</p>
+
+      <h3>Storage Configuration</h3>
+      <p>When configuring an Ocient system, administrators define at least one <strong>storage space</strong> and <strong>storage cluster</strong>. At the storage space level, administrators set the <code>width</code> (number of segments per group) and <code>parity_width</code> (number of parity blocks), which determines the level of fault tolerance.</p>
+    </div>
+    <div>
+      <h3>Erasure Coding for Fault Tolerance</h3>
+      <p>Ocient uses <strong>erasure coding</strong> — not data replication — for hardware fault tolerance. Erasure coding computes parity blocks that allow the system to reconstruct any missing data, without needing to store a second (or third) full copy of all data.</p>
+      <p>This design means an Ocient system requires <em>significantly less storage</em> than replication-based approaches, while still providing full recovery from hardware failures. The coding block is the smallest unit of recovery and the unit of parity calculation.</p>
+
+      <div class="erasure-viz">
+        <div class="ec-group">
+          <div class="ec-block ec-data">D1</div>
+          <div class="ec-label">Data</div>
+        </div>
+        <span class="ec-plus">+</span>
+        <div class="ec-group">
+          <div class="ec-block ec-data">D2</div>
+          <div class="ec-label">Data</div>
+        </div>
+        <span class="ec-plus">+</span>
+        <div class="ec-group">
+          <div class="ec-block ec-data">D3</div>
+          <div class="ec-label">Data</div>
+        </div>
+        <span class="ec-plus">+</span>
+        <div class="ec-group">
+          <div class="ec-block ec-data">D4</div>
+          <div class="ec-label">Data</div>
+        </div>
+        <span class="ec-plus">→</span>
+        <div class="ec-group">
+          <div class="ec-block ec-parity">P1</div>
+          <div class="ec-label">Parity</div>
+        </div>
+        <span class="ec-plus">+</span>
+        <div class="ec-group">
+          <div class="ec-block ec-parity">P2</div>
+          <div class="ec-label">Parity</div>
+        </div>
+        <div class="ec-legend" style="width:100%">
+          <div class="ec-leg-item"><div class="ec-leg-sq" style="background:rgba(0,82,204,0.6)"></div>Data Block</div>
+          <div class="ec-leg-item"><div class="ec-leg-sq" style="background:rgba(232,93,4,0.5)"></div>Parity Block</div>
+          <div class="ec-leg-item" style="font-size:0.6rem">2 parity blocks can recover any 2 failed data blocks</div>
+        </div>
+      </div>
+
+      <h3>Data Types Supported</h3>
+      <div style="margin-top:0.5rem">
+        <span class="badge badge-blue">INT8/16/32/64</span>
+        <span class="badge badge-blue">FLOAT/DOUBLE</span>
+        <span class="badge badge-blue">DECIMAL</span>
+        <span class="badge badge-blue">VARCHAR</span>
+        <span class="badge badge-blue">CHAR</span>
+        <span class="badge badge-blue">BOOLEAN</span>
+        <span class="badge badge-blue">TIMESTAMP</span>
+        <span class="badge badge-blue">DATE / TIME</span>
+        <span class="badge badge-orange">IP ADDRESS</span>
+        <span class="badge badge-orange">ARRAYS</span>
+        <span class="badge badge-orange">TUPLES</span>
+        <span class="badge badge-green">ST_POINT</span>
+        <span class="badge badge-green">ST_POLYGON</span>
+        <span class="badge badge-green">ST_LINESTRING</span>
+        <span class="badge badge-gray">VECTOR</span>
+        <span class="badge badge-gray">BINARY</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:2rem">TimeKey & Clustering Key</h3>
+  <div class="grid-2">
+    <div class="card card-accent-blue">
+      <h3>⏱ TimeKey</h3>
+      <p>Each table can designate a column as its TimeKey. This column partitions data on disk by time, enabling the system to rapidly skip irrelevant time ranges during query execution without reading unnecessary data. Since most analytical queries include a time filter, this is a critical performance mechanism.</p>
+    </div>
+    <div class="card card-accent-orange">
+      <h3>🗂 Clustering Key</h3>
+      <p>In addition to the TimeKey, tables can specify a Clustering Key: one or more columns that are frequently queried together. The system subdivides time-partitioned segments further on disk according to these key columns, enabling fast lookup of records with matching key values within a partition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 4. INGESTION ═══════════════════════════════════════ -->
+<section id="ingestion">
+  <div class="section-num">04 — Data Ingestion</div>
+  <h2>Data Pipelines & Loading</h2>
+  <p class="section-lead">Ocient uses SQL-defined data pipelines as the primary mechanism for ingesting data from both batch file sources and real-time streaming sources, with real-time transformation and exactly-once delivery semantics.</p>
+
+  <h3>Pipeline Overview</h3>
+  <p>A <strong>data pipeline</strong> is a database object that defines end-to-end data processing: extraction from a source, optional transformations, and load into one or more Ocient tables. Pipelines are defined, started, stopped, and modified using standard DDL statements.</p>
+
+  <div class="pipeline">
+    <div class="pipe-step">
+      <span class="pipe-icon">📥</span>
+      <div class="pipe-name">Source</div>
+      <div class="pipe-desc">S3, Kafka, File</div>
+    </div>
+    <div class="pipe-step">
+      <span class="pipe-icon">📋</span>
+      <div class="pipe-name">Extract Format</div>
+      <div class="pipe-desc">Delimited, JSON, Binary, Parquet</div>
+    </div>
+    <div class="pipe-step">
+      <span class="pipe-icon">⚙️</span>
+      <div class="pipe-name">Transform</div>
+      <div class="pipe-desc">SQL Functions on records</div>
+    </div>
+    <div class="pipe-step">
+      <span class="pipe-icon">📄</span>
+      <div class="pipe-name">Page Buffer</div>
+      <div class="pipe-desc">Row-based staging</div>
+    </div>
+    <div class="pipe-step">
+      <span class="pipe-icon">🗄️</span>
+      <div class="pipe-name">Segment</div>
+      <div class="pipe-desc">Columnar + Indexes</div>
+    </div>
+    <div class="pipe-step">
+      <span class="pipe-icon">✅</span>
+      <div class="pipe-name">Foundation Nodes</div>
+      <div class="pipe-desc">Queryable storage</div>
+    </div>
+  </div>
+
+  <h3>Pipeline DDL Structure</h3>
+  <p>A pipeline definition contains three sections: the data source, the extract format, and the transformation/target specification:</p>
+
+  <pre><code><span class="cm">-- Create a pipeline loading CSV data from S3 into the orders table</span>
+<span class="kw">CREATE PIPELINE</span> <span class="id">orders_pipeline</span>
+  <span class="kw">SOURCE</span> <span class="fn">S3</span>
+    <span class="kw">ENDPOINT</span> <span class="str">'https://s3.us-east-1.amazonaws.com'</span>
+    <span class="kw">BUCKET</span>   <span class="str">'my-data-bucket'</span>
+    <span class="kw">FILTER</span>   <span class="str">'orders/'</span>
+  <span class="kw">EXTRACT FORMAT</span> <span class="fn">DELIMITED</span>
+    <span class="kw">FIELDS TERMINATED BY</span> <span class="str">','</span>
+    <span class="kw">LINES TERMINATED BY</span>  <span class="str">'\n'</span>
+  <span class="kw">INTO</span> <span class="id">"public"</span>.<span class="id">"orders"</span>
+  <span class="kw">SELECT</span>
+    <span class="id">$1</span> <span class="kw">AS</span> <span class="id">id</span>,
+    <span class="id">$2</span> <span class="kw">AS</span> <span class="id">user_id</span>,
+    <span class="id">$3</span> <span class="kw">AS</span> <span class="id">product_id</span>,
+    <span class="fn">TO_TIMESTAMP</span>(<span class="id">$4</span>, <span class="str">'YYYY-MM-DD HH24:MI:SS'</span>) <span class="kw">AS</span> <span class="id">order_ts</span>,
+    <span class="fn">CAST</span>(<span class="id">$5</span> <span class="kw">AS</span> <span class="ty">DECIMAL</span>(<span class="nb">10</span>,<span class="nb">2</span>)) <span class="kw">AS</span> <span class="id">amount</span>;
+
+<span class="cm">-- Lifecycle management</span>
+<span class="kw">START PIPELINE</span>  <span class="id">orders_pipeline</span>;
+<span class="kw">STOP PIPELINE</span>   <span class="id">orders_pipeline</span>;
+<span class="kw">DROP PIPELINE</span>   <span class="id">orders_pipeline</span>;
+<span class="kw">PREVIEW PIPELINE</span> <span class="id">orders_pipeline</span>;</code></pre>
+
+  <h3>Pipeline Lifecycle States</h3>
+  <table>
+    <thead><tr><th>State</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td class="td-mono">CREATED</td><td class="td-desc">Pipeline defined but never started. No tasks created, no files listed.</td></tr>
+      <tr><td class="td-mono">RUNNING</td><td class="td-desc">Actively processing data. At least one task is queued, running, or cancelling.</td></tr>
+      <tr><td class="td-mono">STOPPED</td><td class="td-desc">User-initiated stop. All tasks complete, failed, or cancelled. Position retained.</td></tr>
+      <tr><td class="td-mono">COMPLETED</td><td class="td-desc">All assigned work finished within error limits. All tasks complete.</td></tr>
+      <tr><td class="td-mono">FAILED</td><td class="td-desc">Error limits exceeded. At least one task failed. Pipeline will not retry.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2">
+    <div>
+      <h3>Supported Sources</h3>
+      <div class="chip-grid">
+        <div class="chip">☁️ AWS S3</div>
+        <div class="chip">📡 Apache Kafka</div>
+        <div class="chip">📁 Local Files</div>
+        <div class="chip">☁️ Google Cloud Storage</div>
+        <div class="chip">☁️ Azure Blob Storage</div>
+      </div>
+      <h3 style="margin-top:1rem">Supported Extract Formats</h3>
+      <div class="chip-grid">
+        <div class="chip">CSV / Delimited</div>
+        <div class="chip">JSON</div>
+        <div class="chip">Binary</div>
+        <div class="chip">Parquet</div>
+        <div class="chip">Avro</div>
+        <div class="chip">ORC</div>
+      </div>
+    </div>
+    <div>
+      <h3>Key Guarantees</h3>
+      <div class="callout green">
+        <p><strong>Exactly-Once Delivery:</strong> Loader nodes maintain pipeline position and deduplication state. If a pipeline is stopped and restarted, it continues from where it left off — no data is duplicated and no data is lost.</p>
+      </div>
+      <div class="callout">
+        <p><strong>Scale-Out Loading:</strong> Pipelines execute across all available loader nodes in parallel. Work is partitioned across tasks (file chunks or Kafka partitions). Add more loader nodes to increase throughput without any configuration changes.</p>
+      </div>
+      <div class="callout orange">
+        <p><strong>ELT Support:</strong> In addition to pipelines, Ocient supports <code>CREATE TABLE AS SELECT</code> (CTAS) and <code>INSERT INTO … SELECT</code> for ELT workflows that extract data and write results directly into new or existing tables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 5. QUERY ═══════════════════════════════════════ -->
+<section id="query">
+  <div class="section-num">05 — Query Engine</div>
+  <h2>Querying & Performance</h2>
+  <p class="section-lead">Ocient's query engine was built from scratch using modern design principles, deeply integrated with the storage and I/O layer to minimize on-disk reads and maximize parallel processing throughput.</p>
+
+  <div class="grid-2">
+    <div>
+      <h3>Query Execution Flow</h3>
+      <p>When a user issues a SQL statement through a JDBC or pyocient client:</p>
+      <ol style="padding-left:1.25rem;font-size:0.88rem;color:#2c2c2c;line-height:1.8">
+        <li>Client sends SQL to a SQL node (port 4050, load balanced)</li>
+        <li>SQL node parses the statement and creates an execution plan</li>
+        <li>Plan is distributed to relevant foundation nodes</li>
+        <li>Each foundation node processes its local data and returns intermediate results</li>
+        <li>SQL node performs final aggregations, joins, and sorts across intermediates</li>
+        <li>Packaged result set is returned to the client</li>
+      </ol>
+      <p style="margin-top:0.75rem">The foundation nodes do as much work as possible locally (filtering, projection, local aggregation) before returning data up to the SQL node, minimizing data movement across the network.</p>
+    </div>
+    <div>
+      <h3>Custom I/O Pipeline Per Query</h3>
+      <p>For each query, the Ocient system compiles a <strong>custom I/O pipeline</strong> for every relevant data segment. These pipelines are tailored to use any applicable keys or indexes to reduce the volume of data that must be read from disk.</p>
+      <p>This design means that query performance directly benefits from proper index configuration — the system does not perform table scans when indexes can be used to skip irrelevant data blocks.</p>
+
+      <h3>Query Optimization Methods</h3>
+      <p>SQL nodes use two complementary query optimization strategies. The cost-based optimizer analyzes data statistics and available indexes to construct efficient execution plans. For complex workloads, the system can also apply rule-based optimizations to rewrite query plans before execution.</p>
+    </div>
+  </div>
+
+  <h3>SQL Capabilities</h3>
+  <div class="feat-list">
+    <div class="feat-item">
+      <span class="feat-icon">🔗</span>
+      <div class="feat-text"><h4>Joins</h4><p>INNER, LEFT/RIGHT OUTER, CROSS joins across large tables. Join pushdown to foundation nodes where possible.</p></div>
+    </div>
+    <div class="feat-item">
+      <span class="feat-icon">📊</span>
+      <div class="feat-text"><h4>Aggregate Functions</h4><p>Standard (SUM, AVG, COUNT, MIN, MAX) plus sorted aggregates and window/analytic functions.</p></div>
+    </div>
+    <div class="feat-item">
+      <span class="feat-icon">🪟</span>
+      <div class="feat-text"><h4>Window Functions</h4><p>Full OVER() clause support with PARTITION BY, ORDER BY, ROWS/RANGE frames, LAG, LEAD, RANK, DENSE_RANK, NTILE.</p></div>
+    </div>
+    <div class="feat-item">
+      <span class="feat-icon">📋</span>
+      <div class="feat-text"><h4>DDL & DCL</h4><p>CREATE/ALTER/DROP TABLE, VIEW, INDEX, SCHEMA, DATABASE. GRANT/REVOKE role-based access control.</p></div>
+    </div>
+    <div class="feat-item">
+      <span class="feat-icon">🔍</span>
+      <div class="feat-text"><h4>Semi-Structured Data</h4><p>Query JSON and complex data types including arrays, tuples, and IP addresses inline with SQL operators.</p></div>
+    </div>
+    <div class="feat-item">
+      <span class="feat-icon">💾</span>
+      <div class="feat-text"><h4>Result Set Caching</h4><p>Configurable result set caching to avoid re-executing identical queries. Managed per database via DBA settings.</p></div>
+    </div>
+    <div class="feat-item">
+      <span class="feat-icon">🔄</span>
+      <div class="feat-text"><h4>Workload Management</h4><p>Assign priority levels to users and groups. Control resource allocation and query priority across concurrent workloads.</p></div>
+    </div>
+    <div class="feat-item">
+      <span class="feat-icon">📐</span>
+      <div class="feat-text"><h4>PostgreSQL Compatibility</h4><p>SQL dialect closely follows PostgreSQL conventions. Most PostgreSQL functions work identically in Ocient.</p></div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:2rem">Connecting to Ocient</h3>
+  <pre><code><span class="cm">-- JDBC Connection String</span>
+<span class="id">jdbc:ocient://</span><span class="str">&lt;sql_node_host&gt;</span><span class="op">:</span><span class="nb">4050</span><span class="op">/</span><span class="str">&lt;database&gt;</span>
+
+<span class="cm">// Java JDBC Example</span>
+<span class="ty">Class</span>.<span class="fn">forName</span>(<span class="str">"com.ocient.jdbc.JDBCDriver"</span>);
+<span class="ty">Connection</span> <span class="id">conn</span> <span class="op">=</span> <span class="ty">DriverManager</span>.<span class="fn">getConnection</span>(
+    <span class="str">"jdbc:ocient://host:4050/mydb"</span>,
+    <span class="str">"username"</span>, <span class="str">"password"</span>
+);
+
+<span class="cm"># Python pyocient Example</span>
+<span class="kw">import</span> <span class="id">pyocient</span>
+<span class="id">conn</span> <span class="op">=</span> <span class="id">pyocient</span>.<span class="fn">connect</span>(
+    <span class="id">dsn</span><span class="op">=</span><span class="str">"ocient://user:pass@host:4050/mydb"</span>
+)
+<span class="id">cursor</span> <span class="op">=</span> <span class="id">conn</span>.<span class="fn">cursor</span>()
+<span class="id">cursor</span>.<span class="fn">execute</span>(<span class="str">"SELECT COUNT(*) FROM events WHERE ts > '2024-01-01'"</span>)
+<span class="id">rows</span> <span class="op">=</span> <span class="id">cursor</span>.<span class="fn">fetchall</span>()</code></pre>
+</section>
+
+<!-- ═══════════════════════════════════════ 6. INDEXING ═══════════════════════════════════════ -->
+<section id="indexes">
+  <div class="section-num">06 — Indexing</div>
+  <h2>Indexing Strategy</h2>
+  <p class="section-lead">Multi-layer indexing is central to Ocient's performance model. Indexes are embedded in segments alongside data and require no separate storage overhead for segment keys.</p>
+
+  <div class="index-row">
+    <div class="index-tag">SEGMENT KEY</div>
+    <div class="index-content">
+      <h3>TimeKey (Temporal Partition Key)</h3>
+      <p>Partitions all data in a table by time. Queries with time filters skip entire partitions, dramatically reducing I/O. Defined at table creation time and cannot be changed later. Recommended for any time-series dataset. No additional storage required.</p>
+    </div>
+  </div>
+  <div class="index-row">
+    <div class="index-tag">SEGMENT KEY</div>
+    <div class="index-content">
+      <h4>Clustering Key (Multi-Column Sort Key)</h4>
+      <p>Sorts and subdivides data within time partitions by one or more columns frequently queried together. Enables fast lookup without full partition scans. Ideal for high-cardinality filter columns like user_id, device_id, or IP address. No additional storage required.</p>
+    </div>
+  </div>
+  <div class="index-row">
+    <div class="index-tag secondary">SECONDARY</div>
+    <div class="index-content">
+      <h4>Numeric Index</h4>
+      <p>Dense or sparse B-tree style index on numeric columns. Dramatically reduces I/O for equality and range queries on numeric columns that are not part of the clustering key. Useful for columns with medium-to-high cardinality.</p>
+    </div>
+  </div>
+  <div class="index-row">
+    <div class="index-tag secondary">SECONDARY</div>
+    <div class="index-content">
+      <h4>String (Full-Text) Index</h4>
+      <p>Full text index on VARCHAR columns for exact-match and prefix queries. Enables fast lookup on string identifier columns without full segment scans.</p>
+    </div>
+  </div>
+  <div class="index-row">
+    <div class="index-tag secondary">SECONDARY</div>
+    <div class="index-content">
+      <h4>N-Gram Index (Partial String)</h4>
+      <p>An N-gram index on VARCHAR columns enables efficient LIKE queries with wildcard patterns (e.g., <code>WHERE col LIKE '%substring%'</code>). Particularly useful for log analysis and text search workloads.</p>
+    </div>
+  </div>
+  <div class="index-row">
+    <div class="index-tag secondary">SECONDARY</div>
+    <div class="index-content">
+      <h4>Geospatial Index</h4>
+      <p>Spatial index on ST_POINT and ST_POLYGON columns for bounding box and containment queries. Used by OcientGeo® functions to efficiently resolve geographic predicates without scanning entire segments.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.5rem">Defining Indexes — DDL Examples</h3>
+  <pre><code><span class="cm">-- Create table with TimeKey and Clustering Key</span>
+<span class="kw">CREATE TABLE</span> <span class="id">events</span> (
+  <span class="id">event_id</span>   <span class="ty">BIGINT</span>,
+  <span class="id">user_id</span>    <span class="ty">BIGINT</span>,
+  <span class="id">event_ts</span>   <span class="ty">TIMESTAMP</span>,
+  <span class="id">event_type</span> <span class="ty">VARCHAR</span>(<span class="nb">64</span>),
+  <span class="id">ip_addr</span>    <span class="ty">IP</span>,
+  <span class="id">payload</span>    <span class="ty">VARCHAR</span>(<span class="nb">512</span>)
+)
+<span class="kw">TIMEKEY</span>     <span class="id">event_ts</span>
+<span class="kw">CLUSTERING KEY</span> (<span class="id">user_id</span>, <span class="id">event_type</span>);
+
+<span class="cm">-- Add secondary indexes after table creation</span>
+<span class="kw">CREATE INDEX</span> <span class="id">idx_ip</span>         <span class="kw">ON</span> <span class="id">events</span>(<span class="id">ip_addr</span>)    <span class="kw">USING</span> <span class="fn">NUMERIC</span>;
+<span class="kw">CREATE INDEX</span> <span class="id">idx_payload</span>    <span class="kw">ON</span> <span class="id">events</span>(<span class="id">payload</span>)   <span class="kw">USING</span> <span class="fn">NGRAM</span>;
+<span class="kw">CREATE INDEX</span> <span class="id">idx_event_type</span> <span class="kw">ON</span> <span class="id">events</span>(<span class="id">event_type</span>) <span class="kw">USING</span> <span class="fn">STRING</span>;</code></pre>
+
+  <div class="callout orange">
+    <p><strong>Best Practice:</strong> Configure all keys and indexes <em>before</em> loading large amounts of data. Data loaded before index creation is stored without the index structures; re-indexing existing data requires a segment rebuild operation.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 7. OCIENTML ═══════════════════════════════════════ -->
+<section id="ocientml">
+  <div class="section-num">07 — OcientML®</div>
+  <h2>In-Database Machine Learning</h2>
+  <p class="section-lead">OcientML® places the entire machine learning stack inside the Ocient Hyperscale Data Warehouse, eliminating the need for separate ML tooling, data movement, or external model training infrastructure.</p>
+
+  <div class="callout green">
+    <p><strong>Key insight:</strong> Traditional ML workflows require extracting data from a data warehouse, loading it into a separate ML platform, training the model, and then returning predictions. OcientML® collapses this entire workflow into a single system — train and score directly against petabytes of fresh data using SQL.</p>
+  </div>
+
+  <h3>Supported ML Algorithms</h3>
+  <div class="ml-grid">
+    <div class="ml-item">
+      <h4>Linear Regression</h4>
+      <p>Ordinary least squares regression for continuous numeric target prediction. Train and score in SQL.</p>
+    </div>
+    <div class="ml-item">
+      <h4>Logistic Regression</h4>
+      <p>Binary and multinomial classification. Outputs class probabilities alongside predictions.</p>
+    </div>
+    <div class="ml-item">
+      <h4>K-Means Clustering</h4>
+      <p>Unsupervised cluster assignment. Assign cluster IDs to new data using a trained K-means model in SQL queries.</p>
+    </div>
+    <div class="ml-item">
+      <h4>K-Nearest Neighbors (KNN)</h4>
+      <p>Instance-based classification and regression. Find nearest neighbors at query time across large datasets.</p>
+    </div>
+    <div class="ml-item">
+      <h4>Decision Tree</h4>
+      <p>Interpretable classification and regression trees with configurable depth and split criteria.</p>
+    </div>
+    <div class="ml-item">
+      <h4>Feedforward Neural Network</h4>
+      <p>Multi-layer perceptrons for both classification and regression tasks. Configurable layers and activation functions.</p>
+    </div>
+    <div class="ml-item">
+      <h4>Naive Bayes</h4>
+      <p>Probabilistic classifier based on Bayes' theorem. Fast and effective for text classification and anomaly detection.</p>
+    </div>
+    <div class="ml-item">
+      <h4>Autoregression</h4>
+      <p>Time series forecasting using autoregressive models. Forecast future values based on historical patterns.</p>
+    </div>
+    <div class="ml-item">
+      <h4>Principal Component Analysis (PCA)</h4>
+      <p>Dimensionality reduction. Reduce feature space for downstream analysis or visualization.</p>
+    </div>
+    <div class="ml-item">
+      <h4>Support Vector Machine (SVM)</h4>
+      <p>Classification and regression with kernel support. Effective for high-dimensional data.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.5rem">Training & Scoring with SQL</h3>
+  <pre><code><span class="cm">-- Train a logistic regression model</span>
+<span class="kw">CREATE MODEL</span> <span class="id">churn_model</span>
+  <span class="kw">TYPE</span> <span class="fn">LOGISTIC</span>
+  <span class="kw">TARGET</span> <span class="id">churned</span>
+  <span class="kw">FEATURES</span> (<span class="id">tenure_days</span>, <span class="id">monthly_spend</span>, <span class="id">support_tickets</span>, <span class="id">last_login_days</span>)
+  <span class="kw">AS SELECT</span> <span class="id">tenure_days</span>, <span class="id">monthly_spend</span>, <span class="id">support_tickets</span>,
+             <span class="id">last_login_days</span>, <span class="id">churned</span>
+     <span class="kw">FROM</span>   <span class="id">customer_features</span>
+     <span class="kw">WHERE</span>  <span class="id">training_set</span> <span class="op">=</span> <span class="nb">TRUE</span>;
+
+<span class="cm">-- Score new customers using the trained model</span>
+<span class="kw">SELECT</span>
+  <span class="id">customer_id</span>,
+  <span class="fn">PREDICT</span>(<span class="id">churn_model</span>, <span class="id">tenure_days</span>, <span class="id">monthly_spend</span>, <span class="id">support_tickets</span>, <span class="id">last_login_days</span>) <span class="kw">AS</span> <span class="id">churn_probability</span>
+<span class="kw">FROM</span> <span class="id">customers</span>
+<span class="kw">WHERE</span> <span class="id">active</span> <span class="op">=</span> <span class="nb">TRUE</span>;
+
+<span class="cm">-- K-Means clustering on user behavior</span>
+<span class="kw">CREATE MODEL</span> <span class="id">user_segments</span>
+  <span class="kw">TYPE</span> <span class="fn">KMEANS</span>
+  <span class="kw">CLUSTERS</span> <span class="nb">5</span>
+  <span class="kw">AS SELECT</span> <span class="id">page_views</span>, <span class="id">session_duration</span>, <span class="id">purchase_count</span>
+     <span class="kw">FROM</span>   <span class="id">user_behavior</span>;</code></pre>
+
+  <p>Trained models are stored as database objects, subject to the same role-based access controls as tables and views. Models can be exported to BI tools via built-in connectors or scored directly inside dashboards using the SQL interface.</p>
+</section>
+
+<!-- ═══════════════════════════════════════ 8. OCIENTGEO ═══════════════════════════════════════ -->
+<section id="ocientgeo">
+  <div class="section-num">08 — OcientGeo®</div>
+  <h2>Native Geospatial Analytics</h2>
+  <p class="section-lead">OcientGeo® provides a comprehensive suite of geospatial and spatiotemporal analysis capabilities built directly into the SQL engine — enabling complex geographic queries at petabyte scale without external GIS systems.</p>
+
+  <div class="grid-2">
+    <div>
+      <h3>Geospatial Data Types</h3>
+      <table>
+        <thead><tr><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="td-mono">ST_POINT</td><td class="td-desc">Single geographic coordinate (lon, lat)</td></tr>
+          <tr><td class="td-mono">ST_LINESTRING</td><td class="td-desc">Ordered sequence of points forming a line or path</td></tr>
+          <tr><td class="td-mono">ST_POLYGON</td><td class="td-desc">Closed polygon defined by a ring of coordinates</td></tr>
+          <tr><td class="td-mono">GEOGRAPHY</td><td class="td-desc">Generic geography type with spherical earth calculations</td></tr>
+          <tr><td class="td-mono">GEOHASH</td><td class="td-desc">Compact string encoding of a geographic location</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Key Spatial Functions</h3>
+      <div style="margin-top:0.5rem">
+        <span class="badge badge-green">ST_Distance</span>
+        <span class="badge badge-green">ST_DistanceSphere</span>
+        <span class="badge badge-green">ST_DistanceSpheroid</span>
+        <span class="badge badge-green">ST_Contains</span>
+        <span class="badge badge-green">ST_Within</span>
+        <span class="badge badge-green">ST_Intersects</span>
+        <span class="badge badge-green">ST_DWithin</span>
+        <span class="badge badge-green">ST_Length2D</span>
+        <span class="badge badge-green">ST_HausdorffDistance</span>
+        <span class="badge badge-green">ST_Area</span>
+        <span class="badge badge-green">ST_Dimension</span>
+        <span class="badge badge-green">ST_GeoHash</span>
+        <span class="badge badge-green">ST_SRID</span>
+        <span class="badge badge-green">ST_AsWKT</span>
+        <span class="badge badge-green">ST_AsWKB</span>
+        <span class="badge badge-green">ST_AsEWKT</span>
+        <span class="badge badge-green">ST_Simplify</span>
+        <span class="badge badge-green">ST_MakeEnvelope</span>
+        <span class="badge badge-green">ST_GeoGPoint</span>
+        <span class="badge badge-green">ST_MakePolygonOriented</span>
+      </div>
+    </div>
+    <div>
+      <h3>Geospatial SQL Examples</h3>
+      <pre><code><span class="cm">-- Find all events within 5km of a location</span>
+<span class="kw">SELECT</span> <span class="id">event_id</span>, <span class="id">event_ts</span>,
+  <span class="fn">ST_Distance</span>(<span class="id">location</span>,
+    <span class="fn">ST_GeoGPoint</span>(<span class="op">-</span><span class="nb">87.6298</span>, <span class="nb">41.8781</span>)) <span class="kw">AS</span> <span class="id">dist_m</span>
+<span class="kw">FROM</span> <span class="id">mobile_events</span>
+<span class="kw">WHERE</span> <span class="fn">ST_DWithin</span>(
+  <span class="id">location</span>,
+  <span class="fn">ST_GeoGPoint</span>(<span class="op">-</span><span class="nb">87.6298</span>, <span class="nb">41.8781</span>),
+  <span class="nb">5000</span>  <span class="cm">-- meters</span>
+)
+<span class="kw">ORDER BY</span> <span class="id">dist_m</span>;
+
+<span class="cm">-- Count devices in a polygon region</span>
+<span class="kw">SELECT</span> <span class="fn">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> <span class="id">devices_in_zone</span>
+<span class="kw">FROM</span> <span class="id">device_pings</span>
+<span class="kw">WHERE</span> <span class="fn">ST_Contains</span>(
+  <span class="fn">ST_Polygon_FromEWKT</span>(<span class="str">'POLYGON((-87.7 41.9,-87.5 41.9,...))'</span>),
+  <span class="id">device_location</span>
+);
+
+<span class="cm">-- Aggregate by geohash grid cell</span>
+<span class="kw">SELECT</span>
+  <span class="fn">ST_GeoHash</span>(<span class="id">location</span>, <span class="nb">6</span>) <span class="kw">AS</span> <span class="id">cell</span>,
+  <span class="fn">COUNT</span>(<span class="op">*</span>)               <span class="kw">AS</span> <span class="id">event_count</span>
+<span class="kw">FROM</span> <span class="id">events</span>
+<span class="kw">GROUP BY</span> <span class="id">cell</span>
+<span class="kw">ORDER BY</span> <span class="id">event_count</span> <span class="kw">DESC</span>;</code></pre>
+    </div>
+  </div>
+
+  <h3>Use Cases for OcientGeo®</h3>
+  <div class="grid-4">
+    <div class="card card-accent-green"><h3>📡 Telecom</h3><p>Network tower coverage analysis, customer location density mapping, spatiotemporal churn analysis.</p></div>
+    <div class="card card-accent-green"><h3>🚗 AdTech</h3><p>Geo-targeted ad delivery, store visit attribution, location-based audience segmentation.</p></div>
+    <div class="card card-accent-green"><h3>🛡 Government</h3><p>Territory management, satellite imagery analysis, geofence monitoring and compliance.</p></div>
+    <div class="card card-accent-green"><h3>🏦 Financial</h3><p>Fraud detection via location anomaly, risk exposure by geography, branch coverage modeling.</p></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 9. DEPLOYMENT ═══════════════════════════════════════ -->
+<section id="deployment">
+  <div class="section-num">09 — Deployment</div>
+  <h2>Deployment Options</h2>
+  <p class="section-lead">Ocient is designed for flexible deployment with consistent feature parity across all options. Every deployment includes 24/7 critical on-call support, subscription licensing, training, and access to updates.</p>
+
+  <div class="grid-3">
+    <div class="deploy-card">
+      <div class="deploy-header">☁️ OcientCloud®</div>
+      <div class="deploy-body">
+        <ul>
+          <li>Fully managed Software-as-a-Service</li>
+          <li>Hosted in LEED-certified data center, Chicago</li>
+          <li>100% renewable energy powered</li>
+          <li>Ocient-owned and procured hardware</li>
+          <li>All-inclusive: hardware, network, software, ops, support</li>
+          <li>Optimal hardware pre-configured for peak performance</li>
+          <li>Simplify cloud migration with no training overhead</li>
+          <li>Predictable low-cost pricing based on cores</li>
+        </ul>
+      </div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-header">🏢 On-Premises</div>
+      <div class="deploy-body">
+        <ul>
+          <li>Self-managed in your own data center</li>
+          <li>Runs on commodity (standard) hardware</li>
+          <li>Full data sovereignty and compliance control</li>
+          <li>Maximum price-performance when using NVMe hardware</li>
+          <li>Air-gapped environments supported</li>
+          <li>Ideal for regulated industries (government, finance)</li>
+          <li>Ocient Management Services available as add-on</li>
+          <li>Same performance as cloud deployments</li>
+        </ul>
+      </div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-header">🌐 Public Cloud</div>
+      <div class="deploy-body">
+        <ul>
+          <li>Deploy on AWS or Google Cloud Platform</li>
+          <li>Customer-managed cloud account and resources</li>
+          <li>Elastic scaling of cloud instances</li>
+          <li>Integrate with cloud-native data sources (S3, GCS)</li>
+          <li>Case study: Dun & Bradstreet on Google Cloud, ROI in 10 months</li>
+          <li>Compatible with cloud-native security and networking</li>
+          <li>Bring-your-own cloud contract pricing</li>
+          <li>Ocient software installed on cloud VMs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:1.5rem">
+    <p><strong>Management Services:</strong> Regardless of deployment model, organizations can engage the Ocient Management Services team to handle system setup, 24/7 monitoring, software updates, and ongoing operations. This is offered as a fully managed layer on top of any deployment modality.</p>
+  </div>
+
+  <h3 style="margin-top:1.5rem">Ocient Simulator</h3>
+  <p>Ocient provides a <strong>Simulator</strong> — a single-node development and testing environment — for developers and data teams to explore Ocient's SQL dialect, pipeline functionality, and ML capabilities without provisioning a full multi-node system. The Simulator is ideal for query development, schema design, and pipeline prototyping.</p>
+</section>
+
+<!-- ═══════════════════════════════════════ 10. SECURITY ═══════════════════════════════════════ -->
+<section id="security">
+  <div class="section-num">10 — Security & Compliance</div>
+  <h2>Security Model</h2>
+  <p class="section-lead">As a unified platform, Ocient consolidates security capabilities in one place, simplifying compliance and reducing the attack surface compared to multi-system analytics stacks.</p>
+
+  <div class="security-grid">
+    <div class="sec-item">
+      <h3>🔐 Encryption</h3>
+      <p>Optional TLS/SSL encryption for data in transit between clients and SQL nodes. Encryption at rest configurable at the storage space level.</p>
+    </div>
+    <div class="sec-item">
+      <h3>👤 Authentication</h3>
+      <p>Native username/password authentication, SSO integration (Single Sign-On), and configurable authentication policies per user or group.</p>
+    </div>
+    <div class="sec-item">
+      <h3>🎭 Role-Based Access Control</h3>
+      <p>SQL GRANT/REVOKE DCL statements for fine-grained table, schema, database, and system-level permissions. User groups and roles for scalable access management.</p>
+    </div>
+    <div class="sec-item">
+      <h3>📋 Auditing</h3>
+      <p>Comprehensive log-level monitoring and auditing of all query and administrative activity. System catalog tables expose audit trails for compliance reporting.</p>
+    </div>
+    <div class="sec-item">
+      <h3>📊 Compliance</h3>
+      <p>SOC 2 Type 2 certified. OcientCloud® operates in a LEED-certified facility. Designed to support HIPAA, FedRAMP-aligned, and government-regulated workloads.</p>
+    </div>
+    <div class="sec-item">
+      <h3>🌐 Network Security</h3>
+      <p>Separate admin network (10 Gbps) isolated from query traffic (100 Gbps). Configurable network access controls and firewall integration at the infrastructure level.</p>
+    </div>
+    <div class="sec-item">
+      <h3>🔑 ML Model Access Control</h3>
+      <p>ML models created with OcientML® are governed by the same RBAC framework as database objects — access to train, score, or drop models is controlled via SQL GRANT/REVOKE.</p>
+    </div>
+    <div class="sec-item">
+      <h3>🏷 Priority & Resource Controls</h3>
+      <p>User group priority settings control query scheduling and resource allocation. Prevent any single workload or user from monopolizing system resources.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 11. ADMINISTRATION ═══════════════════════════════════════ -->
+<section id="admin">
+  <div class="section-num">11 — Administration</div>
+  <h2>Database & System Administration</h2>
+  <p class="section-lead">Ocient provides comprehensive tooling for both Database Administrators (DBAs) managing data structures, users, and performance; and System Administrators managing node configuration, monitoring, and maintenance.</p>
+
+  <div class="grid-2">
+    <div>
+      <h3>Database Administration</h3>
+      <p>DBAs interact with Ocient through standard SQL DDL and DCL commands via any connected SQL client. Key responsibilities include:</p>
+      <ul style="padding-left:1.25rem;font-size:0.88rem;color:#2c2c2c;line-height:1.9">
+        <li>Schema, table, and view management</li>
+        <li>Index creation and optimization</li>
+        <li>User, group, and role management</li>
+        <li>Workload priority configuration</li>
+        <li>Result set caching configuration</li>
+        <li>Data compression settings</li>
+        <li>Storage group assignment</li>
+        <li>Query performance analysis via system catalog</li>
+        <li>Pipeline monitoring and error handling</li>
+      </ul>
+    </div>
+    <div>
+      <h3>System Administration</h3>
+      <p>System administrators handle the physical infrastructure layer of an Ocient deployment:</p>
+      <ul style="padding-left:1.25rem;font-size:0.88rem;color:#2c2c2c;line-height:1.9">
+        <li>Node provisioning and role assignment</li>
+        <li>Storage cluster and storage space configuration</li>
+        <li>Segment group width and parity configuration</li>
+        <li>System installation, upgrades, and patches</li>
+        <li>Network configuration (100 Gbps / 10 Gbps)</li>
+        <li>System health monitoring and alerting</li>
+        <li>Backup and recovery procedures</li>
+        <li>Hardware failure detection and erasure code recovery</li>
+        <li>Integration with Datadog, Prometheus, and other observability tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>System Catalog</h3>
+  <p>All operational metadata in Ocient is exposed through queryable <strong>system catalog tables</strong> (prefixed with <code>sys_</code>). DBAs and system admins can query these tables using standard SQL to monitor the state of the system in real time.</p>
+
+  <pre><code><span class="cm">-- View all pipeline events</span>
+<span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> <span class="id">sys_pipeline_events</span>
+<span class="kw">WHERE</span>  <span class="id">pipeline_name</span> <span class="op">=</span> <span class="str">'orders_pipeline'</span>
+<span class="kw">ORDER BY</span> <span class="id">event_ts</span> <span class="kw">DESC</span>;
+
+<span class="cm">-- View pipeline errors for troubleshooting</span>
+<span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> <span class="id">sys_pipeline_errors</span>
+<span class="kw">WHERE</span>  <span class="id">error_ts</span> <span class="op">></span> <span class="fn">NOW</span>() <span class="op">-</span> <span class="kw">INTERVAL</span> <span class="str">'1 hour'</span>;
+
+<span class="cm">-- Check active queries and their state</span>
+<span class="kw">SELECT</span> <span class="id">query_id</span>, <span class="id">user_name</span>, <span class="id">state</span>, <span class="id">elapsed_ms</span>, <span class="id">query_text</span>
+<span class="kw">FROM</span>   <span class="id">sys_queries</span>
+<span class="kw">WHERE</span>  <span class="id">state</span> <span class="op">=</span> <span class="str">'RUNNING'</span>;
+
+<span class="cm">-- Check node health and storage utilization</span>
+<span class="kw">SELECT</span> <span class="id">node_id</span>, <span class="id">node_role</span>, <span class="id">status</span>, <span class="id">storage_used_gb</span>, <span class="id">storage_total_gb</span>
+<span class="kw">FROM</span>   <span class="id">sys_nodes</span>;</code></pre>
+
+  <h3>Datadog Integration</h3>
+  <p>Ocient provides a native Datadog integration for shipping OpenMetrics to Datadog dashboards. Install the integration with:</p>
+  <pre><code><span class="cm"># Install Datadog integration</span>
+<span class="fn">agent integration install</span> <span class="op">-t</span> <span class="id">datadog-ocient</span><span class="op">==</span><span class="nb">1.0.0</span>
+
+<span class="cm"># ocient.d/conf.yaml</span>
+<span class="id">instances</span><span class="op">:</span>
+  <span class="op">-</span> <span class="id">use_openmetrics</span><span class="op">:</span> <span class="nb">true</span>
+    <span class="id">openmetrics_endpoint</span><span class="op">:</span> <span class="str">http://&lt;master_node_host&gt;:9090/metrics</span></code></pre>
+  <p>Metrics include query performance counters, disk usage, database table statistics, loading throughput, and system health indicators.</p>
+</section>
+
+<!-- ═══════════════════════════════════════ 12. INTEGRATIONS ═══════════════════════════════════════ -->
+<section id="integrations">
+  <div class="section-num">12 — Integrations</div>
+  <h2>Ecosystem & Integrations</h2>
+  <p class="section-lead">Ocient integrates with the broader data ecosystem through standard SQL interfaces and purpose-built connectors for BI tools, data engineering platforms, and monitoring systems.</p>
+
+  <h3>Connection Drivers</h3>
+  <div class="grid-2">
+    <div class="card card-accent-blue">
+      <h3>JDBC Driver</h3>
+      <p>Official Java JDBC driver for connecting any JVM-based application, BI tool, or ETL framework to Ocient. Default port 4050. Used by Tableau, DBeaver, Metabase, and JDBC-compatible tools.</p>
+      <pre style="margin-top:0.75rem;font-size:0.72rem"><code><span class="id">com.ocient.jdbc.JDBCDriver</span>
+<span class="id">jdbc:ocient://host:4050/db</span></code></pre>
+    </div>
+    <div class="card card-accent-blue">
+      <h3>pyocient</h3>
+      <p>Official Python driver (DB-API 2.0 compliant). Enables Python applications, data science notebooks, and Airflow DAGs to connect to Ocient with native Python syntax.</p>
+      <pre style="margin-top:0.75rem;font-size:0.72rem"><code><span class="fn">pip install</span> <span class="id">pyocient</span>
+<span class="kw">import</span> <span class="id">pyocient</span>
+<span class="id">conn</span> <span class="op">=</span> <span class="id">pyocient</span>.<span class="fn">connect</span>(<span class="id">dsn</span><span class="op">=</span><span class="str">"..."</span>)</code></pre>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.5rem">Business Intelligence & Visualization</h3>
+  <div class="chip-grid">
+    <div class="chip"><span class="chip-cat">BI</span> Tableau</div>
+    <div class="chip"><span class="chip-cat">BI</span> Metabase</div>
+    <div class="chip"><span class="chip-cat">BI</span> Looker</div>
+    <div class="chip"><span class="chip-cat">BI</span> Power BI</div>
+    <div class="chip"><span class="chip-cat">BI</span> Apache Superset</div>
+    <div class="chip"><span class="chip-cat">BI</span> Grafana</div>
+    <div class="chip"><span class="chip-cat">BI</span> Mode Analytics</div>
+    <div class="chip"><span class="chip-cat">BI</span> Redash</div>
+  </div>
+
+  <h3>Data Engineering & ETL</h3>
+  <div class="chip-grid">
+    <div class="chip"><span class="chip-cat">ETL</span> Apache Kafka</div>
+    <div class="chip"><span class="chip-cat">ETL</span> Apache Airflow</div>
+    <div class="chip"><span class="chip-cat">ETL</span> dbt</div>
+    <div class="chip"><span class="chip-cat">ETL</span> Fivetran</div>
+    <div class="chip"><span class="chip-cat">ETL</span> Spark</div>
+    <div class="chip"><span class="chip-cat">STORAGE</span> AWS S3</div>
+    <div class="chip"><span class="chip-cat">STORAGE</span> Google Cloud Storage</div>
+    <div class="chip"><span class="chip-cat">STORAGE</span> Azure Blob Storage</div>
+  </div>
+
+  <h3>Monitoring & Observability</h3>
+  <div class="chip-grid">
+    <div class="chip"><span class="chip-cat">MONITORING</span> Datadog</div>
+    <div class="chip"><span class="chip-cat">MONITORING</span> Prometheus / OpenMetrics</div>
+    <div class="chip"><span class="chip-cat">DATABASE</span> DBeaver</div>
+    <div class="chip"><span class="chip-cat">AI</span> LLM / AI Prompt Tools</div>
+  </div>
+
+  <h3 style="margin-top:1.5rem">AI Tools Integration</h3>
+  <p>Ocient provides a machine-readable documentation endpoint at <code>https://docs.ocient.com/llms.txt</code> for optimal content extraction by LLM-based AI tools. This enables AI coding assistants to provide accurate SQL and API suggestions when working with Ocient systems.</p>
+
+  <h3>Vertical Industry Solutions</h3>
+  <div class="vs-grid">
+    <div class="vs-card">
+      <span class="vs-emoji">📡</span>
+      <h3>AdTech</h3>
+      <p>Real-time bidding analytics, attribution modeling, audience segmentation at billions of events per day.</p>
+    </div>
+    <div class="vs-card">
+      <span class="vs-emoji">📶</span>
+      <h3>Telecommunications / CSPs</h3>
+      <p>Network visibility, data retention & regulatory compliance, CDR analysis, spatiotemporal network performance.</p>
+    </div>
+    <div class="vs-card">
+      <span class="vs-emoji">🛡</span>
+      <h3>Government & Defense</h3>
+      <p>National security analytics, large-scale surveillance data processing, satellite imagery, intelligence workflows.</p>
+    </div>
+    <div class="vs-card">
+      <span class="vs-emoji">🏦</span>
+      <h3>Financial Services</h3>
+      <p>Real-time fraud detection, risk analytics, trade surveillance, regulatory reporting on massive transaction histories.</p>
+    </div>
+    <div class="vs-card">
+      <span class="vs-emoji">⚙️</span>
+      <h3>Operational IT</h3>
+      <p>Log analytics, infrastructure performance monitoring, security event correlation at hyperscale data volumes.</p>
+    </div>
+    <div class="vs-card">
+      <span class="vs-emoji">🗺</span>
+      <h3>Geospatial</h3>
+      <p>Location intelligence, proximity analysis, spatiotemporal data fusion for mapping and territory analytics.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ 13. GLOSSARY ═══════════════════════════════════════ -->
+<section id="glossary">
+  <div class="section-num">13 — Glossary</div>
+  <h2>Glossary of Terms</h2>
+  <p class="section-lead">Core terminology used throughout the Ocient Hyperscale Data Warehouse documentation and product.</p>
+
+  <div class="glossary-grid">
+    <div class="gloss-item"><div class="gloss-term">CASA (Compute-Adjacent Storage Architecture)</div><div class="gloss-def">Ocient's patented design principle of co-locating NVMe storage with compute resources on foundation nodes to eliminate storage-compute network bottlenecks.</div></div>
+    <div class="gloss-item"><div class="gloss-term">System</div><div class="gloss-def">The complete collection of all SQL nodes, foundation nodes, loader nodes, their data, and interconnecting networks in a single Ocient environment.</div></div>
+    <div class="gloss-item"><div class="gloss-term">SQL Node</div><div class="gloss-def">Node role responsible for parsing SQL, creating execution plans, distributing work to foundation nodes, and returning results to clients.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Foundation Node</div><div class="gloss-def">Node role that stores columnar data on NVMe SSDs and performs the bulk of query processing as close to the data as possible.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Loader Node</div><div class="gloss-def">Node role responsible for extracting, transforming, indexing, and loading data from batch files or streaming sources into foundation nodes.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Segment</div><div class="gloss-def">The primary columnar storage unit on foundation nodes. Contains compressed row data, embedded indexes, and statistical metadata for a range of records.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Segment Group</div><div class="gloss-def">A fixed set of segments (the "width") plus associated parity blocks for erasure coding resilience, stored across a storage cluster.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Erasure Coding</div><div class="gloss-def">A method of organizing data and computing parity blocks so the system can reconstruct missing data after hardware failure, without storing full redundant copies.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Page</div><div class="gloss-def">A row-based staging structure used during data loading before records are converted into columnar segments for permanent storage.</div></div>
+    <div class="gloss-item"><div class="gloss-term">TimeKey</div><div class="gloss-def">A special segment key column that time-partitions data on disk, enabling queries with time filters to skip irrelevant time ranges entirely.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Clustering Key</div><div class="gloss-def">One or more columns that further subdivide time partitions on disk, enabling fast lookup of rows matching specific key values within a partition.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Data Pipeline</div><div class="gloss-def">A SQL-defined database object that manages end-to-end data ingestion from a source through transformation into Ocient tables, with lifecycle state tracking.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Storage Cluster</div><div class="gloss-def">A set of foundation nodes with an associated storage space that coordinates together to store segment groups reliably using erasure coding.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Storage Space</div><div class="gloss-def">A configuration object that defines the width and parity width for segments stored on a storage cluster, determining fault tolerance levels.</div></div>
+    <div class="gloss-item"><div class="gloss-term">OcientML®</div><div class="gloss-def">Ocient's in-database machine learning capability, allowing SQL-based model training, scoring, and management directly against data in the warehouse.</div></div>
+    <div class="gloss-item"><div class="gloss-term">OcientGeo®</div><div class="gloss-def">Ocient's native geospatial and spatiotemporal analytics library, providing ST_ spatial functions and geographic data types within the SQL engine.</div></div>
+    <div class="gloss-item"><div class="gloss-term">OcientCloud®</div><div class="gloss-def">Ocient's fully managed, SaaS deployment option hosted in a LEED-certified Chicago data center running on 100% renewable energy.</div></div>
+    <div class="gloss-item"><div class="gloss-term">N-Gram Index</div><div class="gloss-def">A secondary index on VARCHAR columns that breaks strings into overlapping character n-grams to enable efficient LIKE substring queries.</div></div>
+    <div class="gloss-item"><div class="gloss-term">System Catalog</div><div class="gloss-def">A set of queryable sys_ prefixed tables that expose real-time metadata about the Ocient system, including queries, pipelines, nodes, and events.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Workload Management</div><div class="gloss-def">The system's capability to assign priority levels to users and user groups, controlling how compute resources are allocated across concurrent queries.</div></div>
+  </div>
+</section>
+
+</div><!-- /page -->
+
+<footer style="background:var(--ink);color:rgba(255,255,255,0.4);padding:2rem;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;margin-top:0">
+  OCIENT HYPERSCALE DATA WAREHOUSE — TECHNICAL REFERENCE GUIDE &nbsp;|&nbsp; SOURCE: docs.ocient.com &nbsp;|&nbsp; © 2026 OCIENT INC.
+</footer>
+
+<script>
+function goTo(id) {
+  var el = document.getElementById(id);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+}
+</script>
+
+</article>
+</main>
+</body>
+</html>

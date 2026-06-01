@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="chaplaincy, pastoral care, interfaith">
+  <meta property="og:title"       content="The Chaplaincy Guide" />
+  <meta property="og:description" content="The Chaplaincy Guide" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/faith/comparative-religion/chaplaincy.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="The Chaplaincy Guide" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="The Chaplaincy Guide">
+  <meta name="twitter:description" content="The Chaplaincy Guide">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/faith/comparative-religion/chaplaincy.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>The Chaplaincy Guide | Yasir Bilgin</title>
+
+<!-- ① Global nav — always first -->
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+  :root {
+    --ink: #1a1410;
+    --parchment: #f5efe6;
+    --gold: #b8945a;
+    --gold-light: #d4b07a;
+    --emerald: #2d5a4a;
+    --emerald-light: #3d7a64;
+    --rust: #8b3a2a;
+    --cream: #faf6ef;
+    --border: #d4c4a8;
+    --muted: #7a6e5f;
+    --section-bg: #f0e8d8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: auto; }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(184,148,90,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 50%, rgba(45,90,74,0.2) 0%, transparent 60%);
+  }
+
+  .header-ornament {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    position: relative;
+  }
+
+  header h1 em {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.55em;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+    margin-top: 0.3em;
+  }
+
+  .header-divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 1.5rem auto;
+  }
+
+  header p.subtitle {
+    font-size: 1rem;
+    color: #c8bfb0;
+    font-style: italic;
+    max-width: 520px;
+    margin: 0 auto;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── LAYOUT ── */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  @media (max-width: 720px) {
+    main { padding: 0 1.4rem 3rem; }
+    body { font-size: 17px; }
+  }
+
+  /* ── ARTICLE-INTERNAL NAV ── */
+  nav.article-nav {
+    position: sticky;
+    top: 62px;       /* sits flush below the global nav.js bar */
+    z-index: 50;     /* well below nav.js z-index */
+    background: var(--emerald);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+
+  nav.article-nav ul {
+    display: flex;
+    flex-wrap: wrap;   /* wraps on narrow screens — no horizontal overflow */
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  nav.article-nav ul li a {
+    display: block;
+    padding: 0.85rem 1rem;
+    color: #c8e6d8;
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 2px solid transparent;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  nav.article-nav ul li a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.08);
+    border-bottom-color: var(--gold);
+  }
+
+  @media (max-width: 680px) {
+    nav.article-nav ul li a {
+      padding: 0.7rem 0.6rem;
+      font-size: 0.6rem;
+    }
+  }
+
+  /* ── SECTION ── */
+  section {
+    margin: 4rem 0;
+    /* 62px global nav + ~60px article nav + 8px gap */
+    scroll-margin-top: 130px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .icon-gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); }
+  .icon-emerald { background: linear-gradient(135deg, var(--emerald), var(--emerald-light)); }
+  .icon-rust { background: linear-gradient(135deg, var(--rust), #b55a44); }
+  .icon-ink { background: linear-gradient(135deg, var(--ink), #3a2e24); }
+
+  .section-title-wrap { flex: 1; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.15rem;
+  }
+
+  section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  /* ── PART BANNER ── */
+  .part-banner {
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 2rem 2.5rem;
+    margin: 5rem 0 3rem;
+    position: relative;
+    border-left: 4px solid var(--gold);
+  }
+
+  .part-banner::after {
+    content: attr(data-roman);
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-style: italic;
+    color: rgba(184,148,90,0.2);
+    line-height: 1;
+  }
+
+  .part-banner small {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .part-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-style: italic;
+  }
+
+  /* ── CARDS ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+  }
+
+  .card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .card p, .card ul {
+    font-size: 0.9rem;
+    color: #4a4035;
+    line-height: 1.6;
+  }
+
+  .card ul { padding-left: 1.1rem; }
+  .card ul li { margin-bottom: 0.25rem; }
+
+  .card-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--gold);
+    color: #fff;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    padding: 0.25rem 0.6rem;
+    text-transform: uppercase;
+  }
+
+  /* ── TWO-COL ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 560px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  /* ── GLOSSARY ── */
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .gloss-item {
+    background: var(--section-bg);
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.2rem;
+  }
+
+  .gloss-item dt {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .gloss-item .arabic {
+    font-size: 1.3rem;
+    color: var(--emerald);
+    margin: 0.1rem 0;
+    direction: rtl;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .gloss-item dd {
+    font-size: 0.88rem;
+    color: #4a4035;
+    margin-top: 0.25rem;
+  }
+
+  /* ── TABLE ── */
+  .table-wrap { overflow-x: auto; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  thead tr {
+    background: var(--ink);
+    color: var(--parchment);
+  }
+
+  th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: var(--section-bg); }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    margin: 2rem 0;
+    padding: 2rem 2.5rem;
+    border-left: 4px solid var(--emerald);
+    background: linear-gradient(135deg, rgba(45,90,74,0.06), rgba(45,90,74,0.02));
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--emerald);
+    position: relative;
+  }
+
+  @media (max-width: 640px) {
+    .pull-quote { margin-left: 0; }
+  }
+
+  .pull-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -0.5rem;
+    left: 1.5rem;
+    font-size: 5rem;
+    color: rgba(45,90,74,0.15);
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+  }
+
+  .pull-quote cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* ── ISLAMIC BANNER ── */
+  .islamic-ornament {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a2e24, #0f1f18);
+    color: var(--gold-light);
+    margin: 3rem 0 2rem;
+    border-radius: 1px;
+  }
+
+  .islamic-ornament .bismillah {
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    direction: rtl;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0.5rem;
+  }
+
+  .islamic-ornament small {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(212,176,122,0.6);
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .checklist li {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    padding: 0.6rem 0.8rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  .checklist li::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 0.6rem;
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  /* ── RESOURCE BOX ── */
+  .resource-box {
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    border-left: 3px solid var(--gold);
+  }
+
+  .resource-box h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+
+  .resource-box ul {
+    list-style: none;
+    font-size: 0.88rem;
+    line-height: 2;
+    color: #c8bfb0;
+  }
+
+  .resource-box ul li::before { content: '→ '; color: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: #c8bfb0;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 5rem;
+    font-size: 0.85rem;
+  }
+
+  footer .footer-ornament {
+    color: var(--gold);
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── INTRO LEAD ── */
+  .lead {
+    font-size: 1.15rem;
+    color: var(--muted);
+    font-style: italic;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: #fff;
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .highlight-box strong { display: block; font-size: 1rem; margin-bottom: 0.25rem; }
+
+  /* ── COMPETENCY TAGS ── */
+  .competency-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .comp-tag {
+    padding: 0.4rem 0.9rem;
+    border: 1.5px solid var(--emerald);
+    color: var(--emerald);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    cursor: default;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .comp-tag:hover {
+    background: var(--emerald);
+    color: #fff;
+  }
+
+  .comp-tag.gold {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .comp-tag.gold:hover { background: var(--gold); color: #fff; }
+</style>
+  <meta name="description" content="A professional reference for chaplains across all contexts, with dedicated attention to Islamic" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Chaplaincy Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/faith/comparative-religion/chaplaincy.html",
+  "description": "A professional reference for chaplains across all contexts, with dedicated attention to Islamic"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Faith",
+      "item": "https://yasirbilgin.com/faith/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Chaplaincy Guide",
+      "item": "https://yasirbilgin.com/faith/comparative-religion/chaplaincy.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header>
+  <div class="header-ornament">✦ A Comprehensive Reference ✦</div>
+  <h1>
+    The Chaplaincy Guide
+    <em>Theories · Practices · Traditions · Resources</em>
+  </h1>
+  <div class="header-divider"></div>
+  <p class="subtitle">A professional reference for chaplains across all contexts, with dedicated attention to Islamic chaplaincy</p>
+</header>
+
+<!-- ══════════════ ARTICLE-INTERNAL NAV ══════════════ -->
+<!-- Sits below the global nav.js bar (top: 62px) — all links are internal anchors -->
+<nav class="article-nav">
+  <ul>
+    <li><a href="#foundations">Foundations</a></li>
+    <li><a href="#theories">Theories</a></li>
+    <li><a href="#practices">Practices</a></li>
+    <li><a href="#contexts">Contexts</a></li>
+    <li><a href="#competencies">Competencies</a></li>
+    <li><a href="#islamic">Islamic Chaplaincy</a></li>
+    <li><a href="#terms">Terms</a></li>
+    <li><a href="#ethics">Ethics</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<main>
+
+  <!-- PART I BANNER -->
+  <div class="part-banner" data-roman="I">
+    <small>Part One</small>
+    <h2>General Chaplaincy: Universal Foundations</h2>
+  </div>
+
+  <!-- ── FOUNDATIONS ── -->
+  <section id="foundations">
+    <div class="section-header">
+      <div class="section-icon icon-gold">⚓</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 01</div>
+        <h2>What is Chaplaincy?</h2>
+      </div>
+    </div>
+
+    <p class="lead">Chaplaincy is a professional ministry of presence, care, and spiritual accompaniment offered to people in specific institutional or community settings—regardless of their religious affiliation or lack thereof.</p>
+
+    <div class="two-col">
+      <div>
+        <div class="card">
+          <h3>Core Definition</h3>
+          <p>A chaplain is a specially trained religious or spiritual care professional who provides pastoral care within secular or pluralistic institutions—hospitals, prisons, military, universities, workplaces, hospices, and emergency services.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Historical Roots</h3>
+          <p>The word <em>chaplain</em> derives from the Latin <em>capellanus</em>—keeper of the cloak of St. Martin of Tours. From medieval military and royal chaplains, the role evolved into today's pluralistic, professionally trained discipline spanning all faiths and none.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      A chaplain is a guest in someone else's crisis. The work is not to fix, convert, or advise—but to accompany.
+      <cite>— Classic formulation in Clinical Pastoral Education</cite>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-tag">Function</div>
+        <h3>Presence</h3>
+        <p>Being <em>with</em> someone in suffering, confusion, celebration, or transition—without an agenda. The ministry of presence is the primary tool.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Function</div>
+        <h3>Spiritual Care</h3>
+        <p>Addressing meaning, purpose, hope, identity, transcendence—dimensions that go beyond psychological or medical care.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Function</div>
+        <h3>Religious Facilitation</h3>
+        <p>Enabling individuals to practice their own faith: prayer, rituals, sacraments, connection to clergy of their tradition.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Function</div>
+        <h3>Advocacy</h3>
+        <p>Representing spiritual and religious needs to the institution; ensuring accommodation of diverse practices.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Function</div>
+        <h3>Crisis Care</h3>
+        <p>First-response spiritual support in trauma, grief, moral injury, death, disaster, and acute distress.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Function</div>
+        <h3>Ethical Consultation</h3>
+        <p>Participating in ethics committees; bridging moral/spiritual perspectives in complex institutional decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── THEORIES ── -->
+  <section id="theories">
+    <div class="section-header">
+      <div class="section-icon icon-emerald">📖</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 02</div>
+        <h2>Theoretical Frameworks</h2>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Pastoral Theology</h3>
+        <p>The theological reflection on human experience and suffering. Draws on traditions of <em>cura animarum</em> (care of souls). Key figures: Eduard Thurneysen, Seward Hiltner, Carroll Wise.</p>
+      </div>
+      <div class="card">
+        <h3>Attachment Theory</h3>
+        <p>Bowlby's framework applied to spiritual care: chaplains as a "secure base" for those in crisis. The chaplain's non-anxious presence re-regulates the nervous system.</p>
+      </div>
+      <div class="card">
+        <h3>Person-Centred Care (Rogers)</h3>
+        <p>Carl Rogers' three conditions—unconditional positive regard, empathy, congruence—form the relational core of modern chaplaincy practice.</p>
+      </div>
+      <div class="card">
+        <h3>Narrative Theology</h3>
+        <p>People make meaning through stories. The chaplain helps individuals articulate, reframe, and find coherence in their life narratives amid disruption.</p>
+      </div>
+      <div class="card">
+        <h3>Existential Phenomenology</h3>
+        <p>Drawing on Heidegger, Frankl, and Yalom: concerns of death, freedom, isolation, and meaninglessness as the spiritual terrain chaplains navigate.</p>
+      </div>
+      <div class="card">
+        <h3>Trauma-Informed Care</h3>
+        <p>Understanding how trauma shapes spirituality, religious coping, and the capacity to trust. Chaplains recognize and respond to trauma triggers in spiritual encounters.</p>
+      </div>
+      <div class="card">
+        <h3>Moral Injury Framework</h3>
+        <p>Jonathan Shay's concept of damage to the moral core through witnessing or perpetrating acts violating one's moral code—central to military and first-responder chaplaincy.</p>
+      </div>
+      <div class="card">
+        <h3>Systems Theory</h3>
+        <p>The chaplain as interpreter between individual, family, institution, and community systems. Understanding how spiritual distress ripples through relational networks.</p>
+      </div>
+      <div class="card">
+        <h3>Spiritual Assessment Models</h3>
+        <p>FICA (Puchalski), HOPE (Anandarajah), RICA—structured frameworks for assessing spiritual history, meaning, and needs in healthcare settings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRACTICES ── -->
+  <section id="practices">
+    <div class="section-header">
+      <div class="section-icon icon-rust">🤲</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 03</div>
+        <h2>Core Practices & Tools</h2>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="card">
+          <h3>Active Listening</h3>
+          <p>Full, undivided attention—verbal and non-verbal. Reflecting, paraphrasing, noticing what is unsaid. The chaplain's most essential skill.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>Verbatim Writing</h3>
+          <p>The practice of writing out verbatim accounts of pastoral encounters for peer supervision and CPE reflection. Cultivates self-awareness in the helper.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>Spiritual Assessment</h3>
+          <p>Systematic inquiry into a person's spiritual history, community, beliefs, and needs. Documented in care plans. Not diagnosis—mapping.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>Ritual Facilitation</h3>
+          <p>Enabling or co-creating meaningful rituals: prayer, anointing, blessings, last rites, memorials, coming-of-age moments in institutional settings.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Care Planning & Documentation</h3>
+          <p>Integrating spiritual care into interdisciplinary care plans. Clear, concise charting of spiritual needs and chaplain interventions.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>Ethical Consultation</h3>
+          <p>Participating in clinical or institutional ethics processes, representing spiritual/religious perspectives in dilemmas around consent, end-of-life, and more.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>Grief & Bereavement Support</h3>
+          <p>Accompanying individuals and families through anticipatory grief, active dying, death, and bereavement. Drawing on stages, tasks, and continuing-bonds models.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>Supervision & Reflective Practice</h3>
+          <p>Regular peer or individual supervision to process countertransference, burnout, vicarious trauma, and theological questions arising from the work.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin: 2rem 0 1rem; font-family: 'Playfair Display', serif; font-size: 1.3rem;">Spiritual Care Competency Areas</h3>
+    <div class="competency-list">
+      <span class="comp-tag">Listening</span>
+      <span class="comp-tag">Presence</span>
+      <span class="comp-tag">Grief facilitation</span>
+      <span class="comp-tag">Crisis response</span>
+      <span class="comp-tag">Ritual leadership</span>
+      <span class="comp-tag gold">Interfaith literacy</span>
+      <span class="comp-tag gold">Cultural humility</span>
+      <span class="comp-tag">Self-awareness</span>
+      <span class="comp-tag">Theological reflection</span>
+      <span class="comp-tag">Boundary-setting</span>
+      <span class="comp-tag gold">Documentation</span>
+      <span class="comp-tag">Team collaboration</span>
+      <span class="comp-tag">Moral distress support</span>
+      <span class="comp-tag gold">Trauma-informed practice</span>
+      <span class="comp-tag">Ethical reasoning</span>
+      <span class="comp-tag">Community networking</span>
+    </div>
+  </section>
+
+  <!-- ── CONTEXTS ── -->
+  <section id="contexts">
+    <div class="section-header">
+      <div class="section-icon icon-ink">🏛️</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 04</div>
+        <h2>Chaplaincy Contexts</h2>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Primary Population</th>
+            <th>Unique Concerns</th>
+            <th>Key Organisations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Healthcare</strong></td>
+            <td>Patients, families, staff</td>
+            <td>End-of-life, diagnosis, moral distress, ICU</td>
+            <td>APC, ACPE, NACC, HCPC (UK)</td>
+          </tr>
+          <tr>
+            <td><strong>Military</strong></td>
+            <td>Service members, veterans, families</td>
+            <td>Moral injury, combat trauma, unit cohesion, deployment</td>
+            <td>US Armed Forces Chaplains, MOD (UK)</td>
+          </tr>
+          <tr>
+            <td><strong>Prison / Correctional</strong></td>
+            <td>Incarcerated people, staff</td>
+            <td>Coercion dynamics, religious conversion, death row</td>
+            <td>ACA, Prison Fellowship, NACCC</td>
+          </tr>
+          <tr>
+            <td><strong>Higher Education</strong></td>
+            <td>Students, faculty, staff</td>
+            <td>Identity development, pluralism, mental health</td>
+            <td>NACUC, AUCF, SCUPE</td>
+          </tr>
+          <tr>
+            <td><strong>Workplace / Corporate</strong></td>
+            <td>Employees</td>
+            <td>Stress, burnout, grief, workplace injury</td>
+            <td>Marketplace Chaplains, Corporate Chaplains of America</td>
+          </tr>
+          <tr>
+            <td><strong>Emergency Services</strong></td>
+            <td>First responders, disaster survivors</td>
+            <td>Critical incident stress, acute trauma, death notification</td>
+            <td>NVOAD, IACP, Red Cross chaplaincy</td>
+          </tr>
+          <tr>
+            <td><strong>Hospice / Palliative</strong></td>
+            <td>Dying, families, bereaved</td>
+            <td>Meaning-making, legacy, spiritual pain, ritual at death</td>
+            <td>NHPCO, St Christopher's, Cicely Saunders International</td>
+          </tr>
+          <tr>
+            <td><strong>Schools (K–12)</strong></td>
+            <td>Children, young people, staff</td>
+            <td>Safeguarding, pastoral care, wellbeing</td>
+            <td>ACSI, CHARIS (UK), Schools Chaplaincy Alliance</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── COMPETENCIES ── -->
+  <section id="competencies">
+    <div class="section-header">
+      <div class="section-icon icon-gold">🎓</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 05</div>
+        <h2>Training, Certification & Competencies</h2>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Clinical Pastoral Education (CPE)</h3>
+        <p>The standard formation model in North America. Supervised units of ministry in clinical settings. Offered by ACPE-accredited centres. Combines reflection, theology, and clinical skill.</p>
+      </div>
+      <div class="card">
+        <h3>Board Certification</h3>
+        <p>Professional bodies (APC, NACC, ACPE, NAJC, NAVAC) offer board certification requiring: theological/religious endorsement, CPE units, written and oral exams, supervised experience.</p>
+      </div>
+      <div class="card">
+        <h3>Endorsement</h3>
+        <p>Denominational or faith-community endorsement certifies the chaplain's standing within their tradition—a distinct requirement from professional certification.</p>
+      </div>
+      <div class="card">
+        <h3>Common Competency Standards</h3>
+        <ul>
+          <li>Spiritual assessment and care planning</li>
+          <li>Multi-faith and cross-cultural literacy</li>
+          <li>Crisis and trauma intervention</li>
+          <li>Ethical and legal understanding</li>
+          <li>Interprofessional team collaboration</li>
+          <li>Reflective and supervisory practice</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>UK Pathways</h3>
+        <p>UK chaplains may pursue: NHS chaplaincy (UKBHC standards), armed forces chaplaincy (MOD), prison service, or university. No single national register exists though UKBHC and HEA are key bodies.</p>
+      </div>
+      <div class="card">
+        <h3>Continuing Education</h3>
+        <p>Maintenance of certification requires ongoing CPE, continuing education credits, supervision, and peer consultation. Spiritual formation and self-care are professional obligations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART II BANNER -->
+  <div class="part-banner" data-roman="II">
+    <small>Part Two</small>
+    <h2>Islamic Chaplaincy: Theology, Practice & Identity</h2>
+  </div>
+
+  <!-- BISMILLAH ORNAMENT -->
+  <div class="islamic-ornament">
+    <div class="bismillah"><span lang="ar" dir="rtl">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</span></div>
+    <small>In the Name of God, the Most Gracious, the Most Merciful</small>
+  </div>
+
+  <!-- ── ISLAMIC FOUNDATIONS ── -->
+  <section id="islamic">
+    <div class="section-header">
+      <div class="section-icon icon-emerald">☽</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 06</div>
+        <h2>Foundations of Islamic Chaplaincy</h2>
+      </div>
+    </div>
+
+    <p class="lead">Islamic chaplaincy is a modern professional expression of ancient Islamic principles of care for the soul (<em>ri'āyat al-nafs</em>), accompanied by theological grounding in the Qur'an and Sunnah, alongside training in professional pastoral methods.</p>
+
+    <div class="two-col">
+      <div>
+        <div class="card">
+          <h3>Theological Basis</h3>
+          <p>Care for others is rooted in Qur'anic injunctions of <em>tawāṣī bil-ḥaqq</em> (mutual counsel in truth) and the prophetic model of pastoral engagement—visiting the sick (<em>ʿiyādat al-marīḍ</em>), consoling the grieving, and accompanying the dying.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>The Prophetic Model (Uswa Hasana)</h3>
+          <p>The Prophet ﷺ is the supreme model: known to sit with the distressed, visit the sick of any faith, console the bereaved, and practice deep listening. His practice forms the normative foundation of Islamic care.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Emergence of the Profession</h3>
+          <p>Formal Islamic chaplaincy emerged in the US in the late 20th century, initially in prisons where a growing Muslim population lacked religious access. The field expanded to healthcare, military (Muslim chaplains in US Armed Forces since 1993), universities, and beyond.</p>
+        </div>
+        <br>
+        <div class="card">
+          <h3>Dual Identity</h3>
+          <p>The Muslim chaplain navigates dual accountability: to professional institutional standards and to Islamic religious/legal norms. Tension and synergy between these two identities is a defining feature of the discipline.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote" style="border-color: var(--emerald);">
+      Whoever relieves a believer of one of life's difficulties, Allah will relieve them of one of the difficulties of the Day of Resurrection.
+      <cite>— Prophet Muḥammad ﷺ (Ṣaḥīḥ Muslim)</cite>
+    </div>
+  </section>
+
+  <!-- ── ISLAMIC THEOLOGY ── -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon icon-emerald">📿</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 07</div>
+        <h2>Key Islamic Theological Concepts</h2>
+      </div>
+    </div>
+
+    <div class="glossary-grid">
+      <dl class="gloss-item">
+        <dt>Tawḥīd</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">التوحيد</span></div>
+        <dd>The oneness of God—the theological foundation shaping all Islamic care. Care for the person is an act of worship; the chaplain's work is framed as ibāda.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Raḥma</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">الرحمة</span></div>
+        <dd>Divine mercy and compassion—the supreme divine attribute and the animating spirit of pastoral care. The chaplain embodies raḥma in every encounter.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Amāna</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">الأمانة</span></div>
+        <dd>Sacred trust. The human being is a trust held from God; the chaplain holds the person's confidence and vulnerability as a sacred trust.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Nafs</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">النفس</span></div>
+        <dd>The soul/self in its dimensions (ammāra, lawwāma, muṭmaʾinna). Islamic chaplaincy is fundamentally care for the nafs toward its return to peace (iṭmiʾnān).</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Ṣabr</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">الصبر</span></div>
+        <dd>Patience and steadfast endurance in difficulty. A central theological theme in accompaniment: helping people locate suffering within a framework of ṣabr and tawakkul.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Tawakkul</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">التوكل</span></div>
+        <dd>Reliance and trust in God. Especially significant in illness, grief, and crisis—the chaplain helps individuals reconnect with tawakkul as a spiritual resource.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Shūrā</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">الشورى</span></div>
+        <dd>Mutual consultation. The chaplain neither directs nor judges but engages in a consultative, collaborative model of care respecting the person's autonomy.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>ʿAql & Naql</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">العقل والنقل</span></div>
+        <dd>Reason and revelation—two sources of knowledge the Muslim chaplain integrates, drawing on both Islamic texts and evidence-based professional frameworks.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Maqāṣid al-Sharīʿa</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">مقاصد الشريعة</span></div>
+        <dd>The higher objectives of Islamic law: protection of life, intellect, lineage, property, and religion. A framework for ethical reasoning in chaplaincy dilemmas.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Iḥsān</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">الإحسان</span></div>
+        <dd>Excellence and beauty in action—worshipping and serving as if one sees God, knowing God sees. The standard of presence and quality in spiritual care.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Kaffārat & Tawba</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">الكفارة والتوبة</span></div>
+        <dd>Expiation and repentance—major spiritual concerns for patients, prisoners, and those facing mortality. The chaplain facilitates, never adjudicates, these processes.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Qadar</dt>
+        <div class="arabic"><span lang="ar" dir="rtl">القدر</span></div>
+        <dd>Divine decree—a complex theological terrain in crisis care. Distinguishing fatalism from faith, the chaplain helps people engage qadar as a source of peace, not passivity.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ── ISLAMIC PRACTICES ── -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon icon-gold">🕌</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 08</div>
+        <h2>Islamic Chaplaincy Practices</h2>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>ʿIyādat al-Marīḍ — Visiting the Sick</h3>
+        <p>A prophetic sunnah with detailed etiquette: entering with salām, sitting at the level of the patient, offering duʿāʾ, brevity unless more is needed, giving comfort and hope. A fard kifāya on the community.</p>
+      </div>
+      <div class="card">
+        <h3>Accompaniment at Death (Taḥḍīr al-Muḥtaḍar)</h3>
+        <p>Presence with the dying: prompting the shahāda, reciting Yā-Sīn (Sūra 36), ensuring the face is toward the qibla, post-death care (ghusl arrangements), notification of family.</p>
+      </div>
+      <div class="card">
+        <h3>Duʿāʾ & Ruqya</h3>
+        <p>Offering and facilitating personal supplication. Ruqya sharʿiyya (Qur'anic recitation for spiritual distress) may be requested—the chaplain navigates this with care and appropriate referral.</p>
+      </div>
+      <div class="card">
+        <h3>Jumu'a & Prayer Facilitation</h3>
+        <p>Organising Friday prayers in institutions. Facilitating access to wuḍūʾ, prayer space, prayer times, qibla direction, and halal food. Core chaplaincy advocacy in every setting.</p>
+      </div>
+      <div class="card">
+        <h3>Ramadan & Eid Support</h3>
+        <p>Facilitating fasting accommodations in hospitals/prisons, organising iftar, arranging Eid prayers and celebrations, navigating fasting exemptions (rukhṣa) with patients.</p>
+      </div>
+      <div class="card">
+        <h3>Spiritual Direction (Tarbiya)</h3>
+        <p>Guiding individuals in their deeper relationship with God: reflection on the Qur'an, dhikr practices, development of spiritual virtues. Drawing on classical ṭarīqa traditions adapted for modern contexts.</p>
+      </div>
+      <div class="card">
+        <h3>Islamic Counselling Integration</h3>
+        <p>Drawing on therapeutic frameworks (CBT, ACT, narrative) interpreted through Islamic values—e.g., the role of shukr (gratitude) in positive psychology; tawba as a healing process.</p>
+      </div>
+      <div class="card">
+        <h3>Interfaith Care</h3>
+        <p>Muslim chaplains routinely serve non-Muslims. Confidentiality, non-proselytising, cultural respect, and genuine presence apply equally across all faith backgrounds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ISLAMIC CONTEXTS ── -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon icon-rust">🌙</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 09</div>
+        <h2>Muslim Chaplaincy in Specific Contexts</h2>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="highlight-box">
+          <strong>Healthcare</strong>
+          Key concerns: halal food, prayer accommodations, modesty in examination, female physician requests, wuḍūʾ access, end-of-life shahāda, post-mortem consent, ghusl and janāza arrangements.
+        </div>
+        <br>
+        <div class="highlight-box" style="background: linear-gradient(135deg, var(--emerald), var(--emerald-light));">
+          <strong>Prisons & Corrections</strong>
+          Historically the birthplace of American Islamic chaplaincy. Concerns: gang and radicalisation dynamics, Jumu'a rights, Quran access, halal meals, Eid celebrations, conversion support, reentry care.
+        </div>
+        <br>
+        <div class="highlight-box" style="background: linear-gradient(135deg, #4a2a20, #7a4a30);">
+          <strong>Military</strong>
+          Serving Muslim soldiers in non-Muslim military institutions. Prayer accommodations, halal rations, Ramadan observance during deployment, the challenge of faith and combat, chaplain confidentiality.
+        </div>
+      </div>
+      <div>
+        <div class="highlight-box" style="background: linear-gradient(135deg, #1a3a5a, #2a5a8a);">
+          <strong>Higher Education</strong>
+          Campus Muslim chaplains support students' spiritual development, MSA partnerships, ʿAqīda questions, interfaith dialogue, integration of Islamic identity in secular academia.
+        </div>
+        <br>
+        <div class="highlight-box" style="background: linear-gradient(135deg, #3a2a5a, #5a3a8a);">
+          <strong>Community / Masjid-Based</strong>
+          Community imams functioning in chaplaincy roles: nikah, funeral (janāza), counselling, domestic violence response, interfaith engagement. Growing recognition of formal chaplaincy training needs.
+        </div>
+        <br>
+        <div class="highlight-box" style="background: linear-gradient(135deg, #2a3a2a, #3a5a3a);">
+          <strong>Schools & Youth Work</strong>
+          Supporting Muslim young people in non-faith schools: identity, Islamophobia, prayer access, fasting, spiritual resilience. Navigating safeguarding and religious expression.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART III BANNER -->
+  <div class="part-banner" data-roman="III">
+    <small>Part Three</small>
+    <h2>Shared Reference: Terms, Ethics & Resources</h2>
+  </div>
+
+  <!-- ── GLOSSARY ── -->
+  <section id="terms">
+    <div class="section-header">
+      <div class="section-icon icon-ink">📚</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 10</div>
+        <h2>Key Terms & Concepts</h2>
+      </div>
+    </div>
+
+    <div class="glossary-grid">
+      <dl class="gloss-item">
+        <dt>Pastoral Care</dt>
+        <dd>The holistic care of people in life's most challenging moments—drawing on religious, spiritual, and human resources.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Spiritual Care</dt>
+        <dd>A broader term than pastoral care, encompassing care for those with no religious affiliation; attending to meaning, hope, and transcendence.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Ministry of Presence</dt>
+        <dd>Intentional, non-agenda-driven presence as the primary chaplaincy tool. "Being with" rather than "doing for."</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Clinical Pastoral Education (CPE)</dt>
+        <dd>Supervised clinical training for chaplains combining theological reflection with interpersonal and pastoral skill development.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Verbatim</dt>
+        <dd>A written account of a pastoral encounter used in CPE supervision to examine the chaplain's responses, assumptions, and growth edges.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Spiritual Pain</dt>
+        <dd>Suffering arising from disruption of meaning, purpose, identity, or one's relationship to God/transcendence—distinct from psychological or physical pain.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Moral Injury</dt>
+        <dd>Damage to the moral core from perpetrating, witnessing, or failing to prevent acts that transgress deeply held moral beliefs.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Spiritual Distress</dt>
+        <dd>Acute disruption in a person's spiritual well-being—often presenting as anger at God, loss of faith, or existential despair.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Interfaith / Pluralistic Care</dt>
+        <dd>Providing spiritual care across faith traditions without proselytising; facilitating religious practice outside one's own tradition.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Countertransference</dt>
+        <dd>The chaplain's emotional reactions to those in their care. Awareness and supervision of countertransference is a professional obligation.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Non-anxious Presence</dt>
+        <dd>The quality of calm, grounded presence that does not escalate distress—a core competency attributed to Edwin Friedman's family systems work.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Endorsement</dt>
+        <dd>Formal credentialing by a faith community or denomination affirming the chaplain's standing, belief, and fitness for ministry.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Rukhṣa (Islamic)</dt>
+        <dd>Islamic legal dispensation/concession; the chaplain helps patients understand their legitimate religious accommodations (e.g., non-fasting in illness).</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Janāza (Islamic)</dt>
+        <dd>Islamic funeral rites: the prayer (ṣalāt al-janāza), burial preparation (ghusl, kafan), and burial. Chaplains facilitate and coordinate these.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Trauma-Informed Care</dt>
+        <dd>A framework assuming high prevalence of trauma, emphasising safety, trustworthiness, peer support, and empowerment in every encounter.</dd>
+      </dl>
+      <dl class="gloss-item">
+        <dt>Spiritual Assessment</dt>
+        <dd>Structured inquiry (FICA, HOPE, RICA tools) to understand a person's spiritual needs, resources, and history as part of holistic care.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ── ETHICS ── -->
+  <section id="ethics">
+    <div class="section-header">
+      <div class="section-icon icon-gold">⚖️</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 11</div>
+        <h2>Ethics & Professional Standards</h2>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Confidentiality</h3>
+        <p>Chaplain–care-receiver communications carry a high level of confidentiality, often legally protected as privileged clergy communication. Limits include mandatory reporting of harm.</p>
+      </div>
+      <div class="card">
+        <h3>Non-Proselytising</h3>
+        <p>Chaplains do not attempt to convert those in their care. Their role is to serve the spiritual needs of the individual, not advance their own tradition.</p>
+      </div>
+      <div class="card">
+        <h3>Boundaries</h3>
+        <p>Clear professional boundaries: no dual relationships, appropriate physical contact norms, managing dependency, knowing when to refer. More complex in total institutions (prison, military).</p>
+      </div>
+      <div class="card">
+        <h3>Cultural Humility</h3>
+        <p>Ongoing, self-reflexive practice of examining one's own cultural assumptions. Not "competence" (a fixed endpoint) but humility (an ongoing posture).</p>
+      </div>
+      <div class="card">
+        <h3>Power & Vulnerability</h3>
+        <p>Awareness of power differentials—institutional, religious, gendered—in all chaplaincy relationships. Especially acute with incarcerated, dying, or traumatised populations.</p>
+      </div>
+      <div class="card">
+        <h3>Conscientious Objection</h3>
+        <p>When the chaplain's own beliefs conflict with a care request (e.g., blessing a same-sex union), they must ensure the person's needs are met through referral. Their conscience matters; abandonment does not.</p>
+      </div>
+      <div class="card">
+        <h3>Safeguarding</h3>
+        <p>Mandatory awareness and reporting obligations regarding children and vulnerable adults. Chaplains are not exempt from statutory safeguarding duties.</p>
+      </div>
+      <div class="card">
+        <h3>Self-Care as Ethics</h3>
+        <p>Neglect of one's own wellbeing is an ethical failure in chaplaincy. Burnout, vicarious trauma, and compassion fatigue are occupational hazards requiring active prevention.</p>
+      </div>
+    </div>
+
+    <h3 style="margin: 2rem 0 1rem; font-family: 'Playfair Display', serif; font-size: 1.3rem;">Ethical Checklist for Muslim Chaplains</h3>
+    <ul class="checklist">
+      <li>Am I serving this person's spiritual needs, not my own?</li>
+      <li>Is my practice within Islamic ethical norms (halal)?</li>
+      <li>Am I maintaining appropriate gender-related boundaries?</li>
+      <li>Have I obtained informed consent for any religious intervention?</li>
+      <li>Am I protecting confidentiality within required limits?</li>
+      <li>Am I avoiding taking on a fatwā-issuing role?</li>
+      <li>Is my care responsive to the person's own tradition/practice?</li>
+      <li>Am I free of conflicts of interest?</li>
+      <li>Have I referred when my scope of practice is exceeded?</li>
+      <li>Am I maintaining my own spiritual and physical wellbeing?</li>
+    </ul>
+  </section>
+
+  <!-- ── RESOURCES ── -->
+  <section id="resources">
+    <div class="section-header">
+      <div class="section-icon icon-emerald">🔗</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 12</div>
+        <h2>Resources & Further Study</h2>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="resource-box">
+          <h3>General Chaplaincy — Foundational Texts</h3>
+          <ul>
+            <li>Seward Hiltner — <em>Pastoral Counseling</em> (1949)</li>
+            <li>Howard Clinebell — <em>Basic Types of Pastoral Care & Counseling</em></li>
+            <li>Henri Nouwen — <em>The Wounded Healer</em></li>
+            <li>Viktor Frankl — <em>Man's Search for Meaning</em></li>
+            <li>Naomi Remen — <em>Kitchen Table Wisdom: Stories That Heal</em></li>
+            <li>Larry VandeCreek — <em>The Discipline for Pastoral Care Giving</em></li>
+            <li>Rabbi Stephen B. Roberts (ed.) — <em>Professional Spiritual & Pastoral Care: A Practical Clergy and Chaplain's Handbook</em></li>
+          </ul>
+        </div>
+        <br>
+        <div class="resource-box">
+          <h4>Professional Organisations</h4>
+          <ul>
+            <li>APC — Association of Professional Chaplains (US)</li>
+            <li>ACPE — Association for Clinical Pastoral Education</li>
+            <li>NACC — National Association of Catholic Chaplains</li>
+            <li>NAJC — National Association of Jewish Chaplains</li>
+            <li>UKBHC — UK Board of Healthcare Chaplaincy</li>
+            <li>HEA — Healthcare Education Authority (UK)</li>
+            <li>MECA — Muslim Association for Healthcare Chaplaincy</li>
+          </ul>
+        </div>
+        <br>
+        <div class="resource-box">
+          <h4>Journals & Publications</h4>
+          <ul>
+            <li><em>Journal of Pastoral Care & Counseling</em></li>
+            <li><em>Journal of Health Care Chaplaincy</em></li>
+            <li><em>Chaplaincy Today</em></li>
+            <li><em>Journal of Muslim Mental Health</em></li>
+            <li><em>Religions</em> (MDPI open-access)</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="resource-box" style="border-color: var(--emerald-light);">
+          <h4>Islamic Chaplaincy — Key Texts</h4>
+          <ul>
+            <li>Muhammad A. Ali et al. (eds.) — <em>Mantle of Mercy: Islamic Chaplaincy in North America</em> (Templeton Press, 2022)</li>
+            <li>Tariq Ramadan — <em>In the Footsteps of the Prophet</em></li>
+            <li>Bilal Ansari — <em>Islamic Pastoral Care and the Development of Muslim Chaplaincy</em> (Journal of Muslim Mental Health, 2018)</li>
+            <li>Khalid Latif — <em>Duʿāʾ: The Heart of Chaplaincy</em> (essay in <em>Mantle of Mercy</em>)</li>
+            <li>Keshavarzi, Khan, Ali & Awaad (eds.) — <em>Applying Islamic Principles to Clinical Mental Health Care</em> (Routledge, 2021)</li>
+            <li>Ibn Qayyim al-Jawziyya — <em>Ṭibb al-Qulūb</em> (Medicine of Hearts)</li>
+            <li>Al-Ghazālī — <em>Iḥyāʾ ʿUlūm al-Dīn</em> (Revival of Religious Sciences)</li>
+          </ul>
+        </div>
+        <br>
+        <div class="resource-box" style="border-color: var(--emerald-light);">
+          <h4>Islamic Chaplaincy Programmes & Organisations</h4>
+          <ul>
+            <li>Hartford International University — Islamic Chaplaincy MA</li>
+            <li>Bayan Islamic Graduate School (Claremont)</li>
+            <li>Zaytuna College chaplaincy training</li>
+            <li>Muslim Chaplain Association (MCA)</li>
+            <li>Islamic Scholarship Fund</li>
+            <li>Association of Muslim Chaplains (UK)</li>
+            <li>Muslim Council of Britain — Chaplaincy Network</li>
+          </ul>
+        </div>
+        <br>
+        <div class="resource-box" style="border-color: var(--gold);">
+          <h4>Spiritual Assessment Tools</h4>
+          <ul>
+            <li>FICA — Faith, Importance, Community, Address (Puchalski)</li>
+            <li>HOPE — Sources of Hope, Organised Religion, Personal Practice, Effects</li>
+            <li>RICA — Religion, Importance, Community, Address (adapted)</li>
+            <li>ISEL — Islamic Spiritual and Existential Landscape tool</li>
+            <li>FACIT-Sp — Functional Assessment of Chronic Illness Therapy–Spiritual</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 2rem; background: var(--section-bg);">
+      <h3>Online & Digital Resources</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; margin-top: 1rem; font-size: 0.88rem;">
+        <div>• ACPE.edu — CPE standards & centres</div>
+        <div>• Chaplaincy.org — APC resources</div>
+        <div>• SpiritualCareAssociation.org</div>
+        <div>• MuslimChaplain.org</div>
+        <div>• JournalPastoralCare.org</div>
+        <div>• UKBHC.org.uk</div>
+        <div>• IIITusa.org — Islamic scholarship</div>
+        <div>• Yaqeen Institute — applied research</div>
+        <div>• SeekersGuidance.org — Islamic learning</div>
+        <div>• Sunnah.com — Hadith reference</div>
+        <div>• Quran.com — Qur'an with tafsīr</div>
+        <div>• CPE Podcast (various platforms)</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-ornament">✦ ✧ ✦</div>
+  <p><strong>The Chaplaincy Guide</strong> — A Comprehensive Reference for Spiritual Care Professionals</p>
+  <p style="margin-top: 0.5rem; color: #8a7e70; font-style: italic;">General Chaplaincy · Islamic Chaplaincy · Theories · Practices · Ethics · Resources</p>
+  <p style="margin-top: 1rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: #5a4e40; text-transform: uppercase;">For professional development and educational use</p>
+</footer>
+
+<script>
+  // Anchor scrolling — accounts for global nav.js (62px) + article nav height
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById(this.getAttribute('href').slice(1));
+      if (!target) return;
+      const globalNavH   = 62;
+      const articleNavH  = document.querySelector('nav.article-nav').offsetHeight;
+      const offset = globalNavH + articleNavH + 8; // 8px breathing room
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+</script>
+</article>
+</main>
+</body>
+</html>

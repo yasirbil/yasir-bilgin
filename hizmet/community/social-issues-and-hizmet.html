@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="keywords" content="Hizmet, social issues, interfaith">
+  <meta property="og:title"       content="Hizmet × Western Social Issues — Country Explorer" />
+  <meta property="og:description" content="Hizmet × Western Social Issues — Country Explorer" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/hizmet/community/social-issues-and-hizmet.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Hizmet × Western Social Issues — Country Explorer" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Hizmet × Western Social Issues — Country Explorer">
+  <meta name="twitter:description" content="Hizmet × Western Social Issues — Country Explorer">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/hizmet/community/social-issues-and-hizmet.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>Hizmet × Western Social Issues — Country Explorer</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+:root {
+  --bg:#f5f0e8; --bg2:#ede8de; --surface:#ffffff; --surface2:#faf7f2;
+  --border:#d8d0c0; --border2:#e8e0d0; --ink:#1a1510; --ink2:#4a4035;
+  --ink3:#8a7d6a; --ink4:#b0a490; --gold:#8b6914; --gold2:#c49a2a;
+  --teal:#1a6b5a; --teal2:#2a9b80; --rust:#8b3314; --blue:#1a3d6b;
+  --blue2:#2a5da0; --shadow:rgba(26,21,16,0.08); --shadow2:rgba(26,21,16,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+
+/* HERO */
+.hero{background:var(--ink);color:var(--bg);padding:56px 48px 48px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 50%,rgba(139,105,20,0.25) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 0% 100%,rgba(26,107,90,0.2) 0%,transparent 60%);pointer-events:none;}
+.hero-tag{font-family:'Fira Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;}
+.hero-tag::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold2);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,72px);font-weight:700;line-height:0.95;letter-spacing:-1px;margin-bottom:20px;position:relative;}
+.hero h1 .accent{color:var(--gold2);font-style:italic;}
+.hero h1 .line2{display:block;font-weight:400;font-style:italic;font-size:0.65em;color:rgba(245,240,232,0.6);margin-top:8px;letter-spacing:0;}
+.hero-desc{font-size:14px;color:rgba(245,240,232,0.6);max-width:520px;line-height:1.7;font-weight:300;margin-bottom:32px;position:relative;}
+.hero-stats{display:flex;gap:0;border:1px solid rgba(245,240,232,0.15);border-radius:4px;overflow:hidden;width:fit-content;position:relative;}
+.hstat{padding:14px 24px;border-right:1px solid rgba(245,240,232,0.15);text-align:center;}
+.hstat:last-child{border-right:none;}
+.hstat-n{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--gold2);display:block;line-height:1;}
+.hstat-l{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-top:3px;display:block;}
+
+/* CONTROLS */
+.controls{position:sticky;top:0;z-index:200;background:var(--ink);border-bottom:2px solid var(--gold);padding:10px 40px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.search-wrap{position:relative;flex:1;min-width:160px;max-width:280px;}
+.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:rgba(245,240,232,0.3);pointer-events:none;}
+.search-input{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:3px;padding:8px 10px 8px 30px;color:var(--bg);font-family:'Outfit',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;}
+.search-input:focus{border-color:var(--gold2);}
+.search-input::placeholder{color:rgba(245,240,232,0.25);}
+.ctrl-sep{width:1px;height:24px;background:rgba(255,255,255,0.12);flex-shrink:0;}
+.ctrl-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,240,232,0.3);white-space:nowrap;}
+.cat-btn,.region-btn{padding:5px 11px;border-radius:3px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:rgba(245,240,232,0.45);font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.cat-btn:hover{border-color:var(--gold2);color:var(--gold2);}
+.cat-btn.active{background:var(--gold);border-color:var(--gold);color:var(--bg);}
+.region-btn:hover{border-color:var(--teal2);color:var(--teal2);}
+.region-btn.active{background:var(--teal);border-color:var(--teal);color:#fff;}
+.results-info{margin-left:auto;font-family:'Fira Mono',monospace;font-size:11px;color:rgba(245,240,232,0.25);white-space:nowrap;}
+
+/* GLOBAL PANELS WRAPPER */
+.global-panels{max-width:1400px;margin:0 auto;padding:20px 40px 0;}
+
+/* GLOSSARY */
+.glossary-section,.heatmap-section{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px;}
+.panel-header{display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--ink);color:var(--bg);cursor:pointer;user-select:none;}
+.panel-header h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;flex:1;}
+.panel-tag{font-family:'Fira Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);border:1px solid rgba(196,154,42,0.4);padding:2px 8px;border-radius:2px;}
+.panel-toggle{color:rgba(245,240,232,0.4);font-size:15px;transition:transform 0.3s;}
+.glossary-section.open .panel-toggle,.heatmap-section.open .panel-toggle{transform:rotate(180deg);}
+.panel-body{display:none;}
+.glossary-section.open .panel-body,.heatmap-section.open .panel-body{display:block;}
+
+.glossary-intro{padding:16px 22px 0;font-size:13px;color:var(--ink2);line-height:1.7;font-weight:300;}
+.glossary-tabs{display:flex;padding:12px 22px 0;border-bottom:1px solid var(--border2);gap:0;}
+.gtab{padding:7px 14px;font-size:12px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;color:var(--ink3);transition:all 0.2s;white-space:nowrap;}
+.gtab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.gtab-panel{display:none;padding:18px 22px 22px;}
+.gtab-panel.active{display:block;}
+.glossary-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;}
+.gcard{background:var(--surface2);border:1px solid var(--border2);border-radius:5px;padding:12px 14px;}
+.gcard-top{display:flex;align-items:baseline;gap:8px;margin-bottom:5px;}
+.gcard-term{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--ink);}
+.gcard-arabic{font-size:13px;color:var(--gold);font-style:italic;}
+.gcard-desc{font-size:12px;color:var(--ink3);line-height:1.55;font-weight:300;}
+.timeline-list{display:flex;flex-direction:column;gap:0;}
+.tl-item{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border2);}
+.tl-item:last-child{border-bottom:none;}
+.tl-year{font-family:'Fira Mono',monospace;font-size:11px;font-weight:500;color:var(--gold);width:48px;flex-shrink:0;padding-top:2px;}
+.tl-content h4{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.tl-content p{font-size:12px;color:var(--ink3);line-height:1.5;font-weight:300;}
+.pillars-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
+.pillar-card{background:linear-gradient(135deg,rgba(26,107,90,0.06) 0%,rgba(26,61,107,0.04) 100%);border:1px solid rgba(26,107,90,0.2);border-radius:5px;padding:12px 14px;}
+.pillar-card-icon{font-size:22px;margin-bottom:6px;}
+.pillar-card-name{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--teal);margin-bottom:3px;}
+.pillar-card-desc{font-size:11px;color:var(--ink3);line-height:1.5;font-weight:300;}
+
+/* HEATMAP */
+.heatmap-intro{padding:16px 22px 4px;font-size:13px;color:var(--ink3);font-weight:300;line-height:1.6;}
+.heatmap-grid{display:flex;flex-direction:column;gap:7px;padding:10px 22px 0;}
+.hm-row{display:flex;align-items:center;gap:10px;}
+.hm-label{font-size:12px;font-weight:500;color:var(--ink2);width:180px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hm-bar-wrap{flex:1;height:20px;background:var(--bg2);border-radius:3px;overflow:hidden;}
+.hm-bar{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:7px;min-width:40px;}
+.hm-count{font-family:'Fira Mono',monospace;font-size:9px;font-weight:500;color:rgba(255,255,255,0.85);}
+.hm-num{font-family:'Fira Mono',monospace;font-size:10px;color:var(--ink4);width:24px;text-align:right;flex-shrink:0;}
+.hm-cat-legend{display:flex;flex-wrap:wrap;gap:8px;padding:12px 22px 18px;border-top:1px solid var(--border2);margin-top:12px;}
+.hm-legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink3);}
+.hm-legend-dot{width:8px;height:8px;border-radius:50%;}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:calc(100vh - 200px);}
+.sidebar{background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;position:sticky;top:49px;height:calc(100vh - 49px);}
+.sidebar-inner{padding:6px 0;}
+.region-group-label{font-family:'Fira Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink4);padding:12px 18px 5px;}
+.country-item{display:flex;align-items:center;gap:9px;padding:8px 18px;cursor:pointer;transition:background 0.15s;border-left:3px solid transparent;}
+.country-item:hover{background:var(--bg2);}
+.country-item.active{background:rgba(139,105,20,0.08);border-left-color:var(--gold);}
+.country-item.hidden{display:none;}
+.country-flag{font-size:17px;flex-shrink:0;}
+.country-name{font-size:13px;font-weight:500;color:var(--ink);flex:1;}
+.country-item.active .country-name{color:var(--gold);}
+.country-count{font-family:'Fira Mono',monospace;font-size:10px;color:var(--ink4);}
+.content{padding:28px 36px;overflow-y:auto;}
+
+/* COUNTRY HEADER */
+.country-header{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+.country-header-top{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+.country-big-flag{font-size:48px;line-height:1;flex-shrink:0;}
+.country-header-text h2{font-family:'Cormorant Garamond',serif;font-size: clamp(1.4rem, 4vw, 2.38rem);font-weight:700;line-height:1;letter-spacing:-0.5px;margin-bottom:2px;}
+.country-region-label{font-family:'Fira Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink4);}
+.country-info-strip{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--surface);}
+.cinfo-item{display:flex;align-items:center;gap:7px;padding:9px 14px;border-right:1px solid var(--border2);flex:1;min-width:120px;}
+.cinfo-item:last-child{border-right:none;}
+.cinfo-icon{font-size:14px;flex-shrink:0;opacity:0.7;}
+.cinfo-label{font-family:'Fira Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink4);display:block;line-height:1.2;margin-bottom:1px;}
+.cinfo-value{font-size:12px;font-weight:500;color:var(--ink);display:block;line-height:1.3;}
+
+/* VALUES SECTION */
+.values-section{margin-bottom:24px;}
+.values-section-header{display:flex;align-items:center;gap:10px;margin-bottom:0;cursor:pointer;user-select:none;padding:12px 18px;background:var(--ink);border-radius:6px;color:var(--bg);}
+.values-section-header h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;flex:1;}
+.vs-tag{font-family:'Fira Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);border:1px solid rgba(196,154,42,0.4);padding:2px 8px;border-radius:2px;}
+.vs-toggle{color:rgba(245,240,232,0.4);font-size:14px;transition:transform 0.3s;}
+.values-section.open .vs-toggle{transform:rotate(180deg);}
+.values-body{display:none;}
+.values-section.open .values-body{display:block;}
+.values-summary{background:linear-gradient(135deg,rgba(26,21,16,0.03) 0%,rgba(139,105,20,0.03) 100%);border:1px solid var(--border);border-radius:6px;padding:16px 18px;margin-bottom:14px;margin-top:10px;}
+.values-summary p{font-size:13px;color:var(--ink2);line-height:1.7;font-weight:300;}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-bottom:14px;}
+.value-card{background:var(--surface);border:1px solid var(--border2);border-radius:6px;padding:14px 16px;transition:border-color 0.2s;}
+.value-card:hover{border-color:var(--border);}
+.value-card-top{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.value-icon{font-size:20px;line-height:1;flex-shrink:0;}
+.value-name{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--ink);line-height:1.2;}
+.value-desc{font-size:12px;color:var(--ink3);line-height:1.6;font-weight:300;}
+.value-impact{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px;}
+.value-impact-tag{font-size:9px;padding:2px 6px;border-radius:2px;background:rgba(26,21,16,0.04);border:1px solid var(--border2);color:var(--ink3);}
+.values-tensions{background:linear-gradient(135deg,rgba(139,51,20,0.04) 0%,rgba(90,26,138,0.03) 100%);border:1px solid rgba(139,51,20,0.18);border-radius:6px;padding:14px 18px;margin-bottom:14px;}
+.values-tensions h5{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);margin-bottom:10px;font-weight:600;}
+.tensions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;}
+.tension-item{display:flex;gap:7px;align-items:flex-start;font-size:12px;color:var(--ink2);line-height:1.5;font-weight:300;}
+.tension-vs{font-family:'Fira Mono',monospace;font-size:8px;color:var(--rust);background:rgba(139,51,20,0.07);border:1px solid rgba(139,51,20,0.18);border-radius:2px;padding:1px 4px;white-space:nowrap;flex-shrink:0;margin-top:2px;}
+.values-hizmet{background:linear-gradient(135deg,rgba(26,107,90,0.05) 0%,rgba(26,61,107,0.03) 100%);border:1px solid rgba(26,107,90,0.18);border-radius:6px;padding:14px 18px;}
+.values-hizmet h5{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:8px;font-weight:600;}
+.values-hizmet p{font-size:13px;color:var(--ink2);line-height:1.65;font-weight:300;}
+
+/* SECTION DIVIDER */
+.section-divider{display:flex;align-items:center;gap:12px;margin:20px 0 16px;}
+.section-divider h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;white-space:nowrap;color:var(--ink);}
+.section-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ISSUES LIST */
+.issues-list{display:flex;flex-direction:column;gap:14px;}
+.issue-row{background:var(--surface);border:1px solid var(--border2);border-radius:6px;overflow:hidden;transition:box-shadow 0.2s,border-color 0.2s;}
+.issue-row:hover{box-shadow:0 3px 16px var(--shadow2);border-color:var(--border);}
+.issue-row.hidden{display:none;}
+.issue-row-header{display:flex;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;user-select:none;}
+.rank-badge{font-family:'Fira Mono',monospace;font-size:11px;font-weight:500;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid var(--border);color:var(--ink3);}
+.rank-1{border-color:#c49a2a;color:#8b6914;background:rgba(196,154,42,0.08);}
+.rank-2{border-color:#8a9aaa;color:#5a6a7a;background:rgba(138,154,170,0.08);}
+.rank-3{border-color:#b07050;color:#7a4a30;background:rgba(176,112,80,0.08);}
+.issue-icon-box{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.issue-row-title{flex:1;min-width:0;}
+.issue-row-title h3{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;line-height:1.25;margin-bottom:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.issue-row-title p{font-size:12px;color:var(--ink3);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.icat-badge{padding:3px 9px;border-radius:3px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;white-space:nowrap;}
+.expand-btn{color:var(--ink4);font-size:14px;line-height:1;transition:transform 0.3s;flex-shrink:0;}
+.issue-row.open .expand-btn{transform:rotate(180deg);}
+.issue-row-body{display:none;padding:0 20px 20px;}
+.issue-row.open .issue-row-body{display:block;}
+.issue-full-desc{font-size:13px;color:var(--ink2);line-height:1.7;font-weight:300;padding:14px 0 16px;border-bottom:1px solid var(--border2);margin-bottom:14px;}
+
+/* PANELS INSIDE ISSUE */
+.info-block{background:var(--surface2);border:1px solid var(--border2);border-radius:5px;padding:14px 16px;margin-bottom:12px;}
+.info-block h5{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink4);margin-bottom:8px;font-weight:600;}
+.causes-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.cause-tag{background:rgba(26,21,16,0.04);border:1px solid var(--border);border-radius:3px;padding:3px 8px;font-size:11px;color:var(--ink2);}
+.hizmet-panel{background:linear-gradient(135deg,rgba(26,107,90,0.06) 0%,rgba(26,61,107,0.04) 100%);border:1px solid rgba(26,107,90,0.2);border-radius:5px;padding:16px;margin-bottom:12px;}
+.hizmet-panel h5{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:8px;font-weight:600;}
+.hizmet-panel p{font-size:13px;color:var(--ink2);line-height:1.6;font-weight:300;margin-bottom:8px;}
+.hizmet-actions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:7px;}
+.hact{display:flex;gap:7px;align-items:flex-start;background:rgba(26,107,90,0.05);border:1px solid rgba(26,107,90,0.12);border-radius:4px;padding:9px 11px;}
+.hact-icon{font-size:13px;flex-shrink:0;margin-top:1px;}
+.hact-text{font-size:11px;color:var(--ink2);line-height:1.5;font-weight:300;}
+
+/* PARTNERSHIP PANEL */
+.partners-panel{background:linear-gradient(135deg,rgba(26,61,107,0.05) 0%,rgba(139,105,20,0.04) 100%);border:1px solid rgba(26,61,107,0.2);border-radius:5px;padding:16px;margin-bottom:12px;}
+.partners-panel h5{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--blue2);margin-bottom:10px;font-weight:600;}
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;}
+.partner-group{}
+.partner-group-label{font-family:'Fira Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--ink4);margin-bottom:5px;display:flex;align-items:center;gap:5px;}
+.partner-group-label span{font-size:12px;}
+.partner-list{display:flex;flex-direction:column;gap:4px;}
+.partner-item{font-size:12px;color:var(--ink2);font-weight:300;line-height:1.4;padding-left:10px;position:relative;}
+.partner-item::before{content:'·';position:absolute;left:0;color:var(--blue2);}
+
+/* EMPTY / WELCOME */
+.empty-state{text-align:center;padding:60px 20px;}
+.empty-state h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--ink3);font-style:italic;}
+.welcome{text-align:center;padding:80px 40px;}
+.welcome-big{font-size:60px;margin-bottom:18px;}
+.welcome h3{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--ink2);font-style:italic;margin-bottom:8px;}
+.welcome p{font-size:13px;color:var(--ink3);font-weight:300;}
+
+/* CAT COLORS */
+.cat-economic{background:rgba(139,105,20,0.1);color:var(--gold);}
+.cat-social{background:rgba(26,61,107,0.1);color:var(--blue2);}
+.cat-health{background:rgba(139,51,20,0.1);color:var(--rust);}
+.cat-education{background:rgba(26,107,90,0.1);color:var(--teal);}
+.cat-civic{background:rgba(80,40,100,0.1);color:#6a2a8a;}
+.cat-environment{background:rgba(40,90,40,0.1);color:#2a6a2a;}
+.cat-housing{background:rgba(80,60,20,0.1);color:#6a4a14;}
+.cat-tech{background:rgba(20,60,100,0.1);color:#1a4a7a;}
+.cat-security{background:rgba(100,20,20,0.1);color:#7a1a1a;}
+.cat-demographic{background:rgba(60,40,80,0.1);color:#4a2a6a;}
+
+@media(max-width:800px){
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border);}
+  .controls{padding:8px 14px;}
+  .content{padding:16px;}
+  .hero{padding:36px 18px 30px;}
+  .global-panels{padding:14px 14px 0;}
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeIn 0.3s ease forwards;}
+
+    /* ── Eyebrow pill ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      background: transparent;
+    }
+  </style>
+  <meta name="description" content="The Hizmet movement is a global civic initiative inspired by Turkish-Islamic scholar Fethullah Gülen. Hizmet means &quot;service&quot; — describing both its name…" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hizmet × Western Social Issues — Country Explorer",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+  "url": "https://yasirbilgin.com/hizmet/community/social-issues-and-hizmet.html",
+  "description": "The Hizmet movement is a global civic initiative inspired by Turkish-Islamic scholar Fethullah Gülen. Hizmet means \"service\" — describing both its name…"
+}
+  </script>
+
+</head>
+<body>
+<main id="main-content">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hizmet",
+      "item": "https://yasirbilgin.com/hizmet/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Hizmet × Western Social Issues — Country Explorer",
+      "item": "https://yasirbilgin.com/hizmet/community/social-issues-and-hizmet.html"
+    }
+  ]
+}
+</script>
+
+<article style="display:contents">
+<div class="hero">
+ <div class="eyebrow">Hizmet · Community</div>
+ <h1>Social Issues &amp; <span class="accent">Hizmet</span><span class="line2">Top 10 Issues per Country — 30 Western Nations</span></h1>
+ <p class="hero-desc">Each country faces a unique constellation of social challenges. Explore per-country issues, cultural values, partnership opportunities, and how Hizmet can contribute strategically.</p>
+ <div class="hero-stats">
+  <div class="hstat"><span class="hstat-n">30</span><span class="hstat-l">Countries</span></div>
+  <div class="hstat"><span class="hstat-n">300</span><span class="hstat-l">Issues</span></div>
+  <div class="hstat"><span class="hstat-n">10</span><span class="hstat-l">Categories</span></div>
+  <div class="hstat"><span class="hstat-n">160+</span><span class="hstat-l">Hizmet Nations</span></div>
+ </div>
+</div>
+
+<div class="controls">
+ <div class="search-wrap">
+  <span class="search-icon">⌕</span>
+  <input class="search-input" id="searchInput" type="text" placeholder="Search country, issue, cause…">
+ </div>
+ <div class="ctrl-sep"></div>
+ <span class="ctrl-label">Region:</span>
+ <button class="region-btn active" data-region="all">All</button>
+ <button class="region-btn" data-region="Western Europe">W. Europe</button>
+ <button class="region-btn" data-region="Northern Europe">N. Europe</button>
+ <button class="region-btn" data-region="Southern Europe">S. Europe</button>
+ <button class="region-btn" data-region="Eastern Europe">E. Europe</button>
+ <button class="region-btn" data-region="Anglosphere">Anglosphere</button>
+ <button class="region-btn" data-region="Latin America">Lat. America</button>
+ <button class="region-btn" data-region="Asia-Pacific">Asia-Pacific</button>
+ <div class="ctrl-sep"></div>
+ <span class="ctrl-label">Category:</span>
+ <button class="cat-btn active" data-cat="all">All</button>
+ <button class="cat-btn" data-cat="economic">Economic</button>
+ <button class="cat-btn" data-cat="social">Social</button>
+ <button class="cat-btn" data-cat="health">Health</button>
+ <button class="cat-btn" data-cat="education">Education</button>
+ <button class="cat-btn" data-cat="civic">Civic</button>
+ <button class="cat-btn" data-cat="environment">Environment</button>
+ <span class="results-info" id="resultsInfo">Select a country</span>
+</div>
+
+<div class="global-panels">
+ <!-- GLOSSARY -->
+ <div class="glossary-section" id="glossarySection">
+  <div class="panel-header" onclick="togglePanel('glossarySection')">
+   <h2>📖 Hizmet — Primer &amp; Key Concepts</h2>
+   <span class="panel-tag">Foundations</span>
+   <span class="panel-toggle">▾</span>
+  </div>
+  <div class="panel-body">
+   <p class="glossary-intro">The Hizmet movement is a global civic initiative inspired by Turkish-Islamic scholar Fethullah Gülen. <em>Hizmet</em> means "service" — describing both its name and animating spirit: selfless service to humanity as a spiritual and civic calling, operating across 160+ countries through schools, dialogue centers, and humanitarian organizations.</p>
+   <div class="glossary-tabs">
+    <div class="gtab active" onclick="switchGTab(this,'gtab-concepts')">Core Concepts</div>
+    <div class="gtab" onclick="switchGTab(this,'gtab-history')">History</div>
+    <div class="gtab" onclick="switchGTab(this,'gtab-pillars')">Institutional Pillars</div>
+   </div>
+   <div class="gtab-panel active" id="gtab-concepts">
+    <div class="glossary-grid">
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Hizmet</span><span class="gcard-arabic"><span lang="ar" dir="rtl">خدمت</span></span></div><p class="gcard-desc">Selfless service to humanity without expectation of reward. The movement's name and foundational ethic — every action should serve people and, through people, the divine.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">İhlâs</span><span class="gcard-arabic"><span lang="ar" dir="rtl">إخلاص</span></span></div><p class="gcard-desc">Sincerity of intention. Acting solely for God's approval, free from ego or status-seeking. The inner condition that validates all external service.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Temsil</span><span class="gcard-arabic"><span lang="ar" dir="rtl">تمثيل</span></span></div><p class="gcard-desc">Representation through personal example. Being a living embodiment of values — the most effective form of outreach in Gülen's teaching.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Himmet</span><span class="gcard-arabic"><span lang="ar" dir="rtl">همت</span></span></div><p class="gcard-desc">Determined effort and high aspiration in working for a noble cause. Giving one's absolute best even when results are slow or invisible.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">İnfak</span><span class="gcard-arabic"><span lang="ar" dir="rtl">إنفاق</span></span></div><p class="gcard-desc">Sacrificial giving of wealth, time, and talent for the common good. Hizmet institutions are largely funded by voluntary community contributions.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Tebliğ</span><span class="gcard-arabic"><span lang="ar" dir="rtl">تبليغ</span></span></div><p class="gcard-desc">Conveying values through conduct and dialogue. The message is carried in how one lives, not what one demands of others.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Diyalog</span><span class="gcard-arabic"><span lang="ar" dir="rtl">حوار</span></span></div><p class="gcard-desc">Interfaith and intercultural dialogue as both a strategy and a spiritual duty. Meeting the religious 'other' with respect is treated as an act of worship.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">İlim</span><span class="gcard-arabic"><span lang="ar" dir="rtl">علم</span></span></div><p class="gcard-desc">The pursuit of knowledge — religious and secular — as a sacred act. Education is the primary institution of Hizmet globally; ignorance is a moral problem.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Adalet</span><span class="gcard-arabic"><span lang="ar" dir="rtl">عدالت</span></span></div><p class="gcard-desc">Justice and fairness. Defending the oppressed and advocating for equitable societies is an obligatory form of service, not optional.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Merhamet</span><span class="gcard-arabic"><span lang="ar" dir="rtl">مرحمت</span></span></div><p class="gcard-desc">Compassion for all people regardless of background. Empathy is the foundation of humanitarian action — one cannot truly serve those one does not feel for.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Altın Nesil</span><span class="gcard-arabic"><span lang="ar" dir="rtl">جيل ذهبي</span></span></div><p class="gcard-desc">'Golden Generation' — raising people who combine deep faith, rigorous learning, moral character, and active civic service to humanity.</p></div>
+     <div class="gcard"><div class="gcard-top"><span class="gcard-term">Gönüllülük</span><span class="gcard-arabic"><span lang="ar" dir="rtl">تطوع</span></span></div><p class="gcard-desc">Volunteerism. Hizmet has no formal hierarchy — participation is driven by internalized values and community bonds rather than obligation or salary.</p></div>
+    </div>
+   </div>
+   <div class="gtab-panel" id="gtab-history">
+    <div class="timeline-list">
+     <div class="tl-item"><span class="tl-year">1941</span><div class="tl-content"><h3>Fethullah Gülen Born</h3><p>Born in Korucuk village, Erzurum, Turkey. A devout family shaped his synthesis of Islamic spirituality and civic engagement.</p></div></div>
+     <div class="tl-item"><span class="tl-year">1960s</span><div class="tl-content"><h4>Preaching &amp; Early Community</h4><p>Gülen preaches across Turkey, attracting students drawn to education, interfaith tolerance, and civic responsibility.</p></div></div>
+     <div class="tl-item"><span class="tl-year">1970s</span><div class="tl-content"><h4>First Institutions</h4><p>Student houses and tutoring centers (dershanes) emerge — quality education for students from all backgrounds.</p></div></div>
+     <div class="tl-item"><span class="tl-year">1980s</span><div class="tl-content"><h4>School Networks Grow</h4><p>Hizmet schools spread across Turkey: rigorous academics + character formation + community service.</p></div></div>
+     <div class="tl-item"><span class="tl-year">1990s</span><div class="tl-content"><h4>Global Expansion</h4><p>Post-Soviet, schools open across Central Asia, the Balkans, and Africa. By 2000 the movement is in 50+ countries.</p></div></div>
+     <div class="tl-item"><span class="tl-year">1999</span><div class="tl-content"><h4>Gülen in Pennsylvania</h4><p>Gülen moves to the USA for medical treatment. The movement continues growing via a decentralized, community-driven model.</p></div></div>
+     <div class="tl-item"><span class="tl-year">2000s</span><div class="tl-content"><h4>Interfaith &amp; Media Era</h4><p>Abant Platform, Zaman newspaper, and dialogue centers open across Europe, North America, and Australia.</p></div></div>
+     <div class="tl-item"><span class="tl-year">2016</span><div class="tl-content"><h4>Turkish Persecution</h4><p>Turkey designates Hizmet a terrorist organization (FETÖ). Mass arrests inside Turkey; institutions shut. Movement continues in 160+ countries.</p></div></div>
+     <div class="tl-item"><span class="tl-year">2016–</span><div class="tl-content"><h4>Global Resilience</h4><p>Hizmet worldwide reaffirms education, dialogue, and service as its identity — independent of any state or political agenda.</p></div></div>
+    </div>
+   </div>
+   <div class="gtab-panel" id="gtab-pillars">
+    <div class="pillars-grid">
+     <div class="pillar-card"><div class="pillar-card-icon">🏫</div><div class="pillar-card-name">Education</div><p class="pillar-card-desc">1,000+ schools and universities worldwide. High academics + character education — the bedrock of Hizmet's global impact.</p></div>
+     <div class="pillar-card"><div class="pillar-card-icon">🕊️</div><div class="pillar-card-name">Interfaith Dialogue</div><p class="pillar-card-desc">Dialogue centers and the Abant Platform host conversations across religious, cultural, and political divides globally.</p></div>
+     <div class="pillar-card"><div class="pillar-card-icon">🌍</div><div class="pillar-card-name">Humanitarian Aid</div><p class="pillar-card-desc">Kimse Yok Mu delivered aid across 100+ countries — disaster relief, food, medical care, and scholarships.</p></div>
+     <div class="pillar-card"><div class="pillar-card-icon">📰</div><div class="pillar-card-name">Media &amp; Journalism</div><p class="pillar-card-desc">Ethical, professional journalism promoting civic values. Shut in Turkey 2016; international platforms continue.</p></div>
+     <div class="pillar-card"><div class="pillar-card-icon">🏥</div><div class="pillar-card-name">Healthcare</div><p class="pillar-card-desc">Hospitals and medical missions serving communities globally, modeling professional excellence and compassionate care.</p></div>
+     <div class="pillar-card"><div class="pillar-card-icon">👔</div><div class="pillar-card-name">Professional Networks</div><p class="pillar-card-desc">Business and professional associations connecting Hizmet-affiliated people for collaborative civic action and mentorship.</p></div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <!-- HEAT MAP -->
+ <div class="heatmap-section" id="heatmapSection">
+  <div class="panel-header" onclick="togglePanel('heatmapSection'); buildHeatmap();">
+   <h3>🗺️ Global Issue Heat Map</h3>
+   <span class="panel-tag">Cross-Country Analysis</span>
+   <span class="panel-toggle">▾</span>
+  </div>
+  <div class="panel-body">
+   <p class="heatmap-intro">Which issue <em>categories</em> appear most across all 30 countries? Grouped by theme to avoid counting naming variations separately — revealing where Hizmet's global coordination has the greatest strategic leverage.</p>
+   <div class="heatmap-grid" id="heatmapGrid"></div>
+   <div class="hm-cat-legend" id="hmLegend"></div>
+  </div>
+ </div>
+</div>
+
+<div class="layout">
+ <div class="sidebar"><div class="sidebar-inner" id="sidebarInner"></div></div>
+ <div class="content" id="mainContent">
+  <div class="welcome">
+   <div class="welcome-big">🌍</div>
+   <h3>Select a country to explore</h3>
+   <p>Choose from 30 Western nations in the sidebar to view their top 10 social challenges, cultural values, partnership opportunities, and how Hizmet can contribute.</p>
+  </div>
+ </div>
+</div>
+<script>
+// ══════════════════════════════════════════════════════════
+// PARTNERSHIP DATA — per issue category
+// ══════════════════════════════════════════════════════════
+const PARTNERSHIPS = {
+ economic: {
+  ngo:     ["Oxfam","Save the Children","CARE International","United Way","Habitat for Humanity"],
+  civic:   ["Chambers of Commerce","Local Business Improvement Districts","Credit unions","Co-operative networks"],
+  govt:    ["Dept. of Employment Services","Municipal economic development offices","EU Social Fund"],
+  faith:   ["Caritas","Jewish Federation","Islamic Relief","Salvation Army","St. Vincent de Paul"]
+ },
+ social: {
+  ngo:     ["UNHCR","International Rescue Committee","Amnesty International","Human Rights Watch","Migrant Help"],
+  civic:   ["Neighborhood associations","Integration councils","Multicultural centers","Anti-discrimination bodies"],
+  govt:    ["Integration ministries","Asylum services","Equal opportunity commissions","Social services"],
+  faith:   ["Christian Aid","Islamic Relief","Jewish Federations","Interfaith councils","ICNA Relief"]
+ },
+ health: {
+  ngo:     ["Médecins Sans Frontières","Red Cross / Red Crescent","WHO civil society partners","Mental Health Foundation"],
+  civic:   ["Patient advocacy groups","Community health boards","Wellbeing coalitions"],
+  govt:    ["NHS / Public Health Agencies","Ministry of Health","Community health centers"],
+  faith:   ["Catholic Health Association","Islamic Medical Association","Jewish Board of Family Services"]
+ },
+ education: {
+  ngo:     ["UNICEF Education","Teach For All","Room to Read","IDP Education","Khan Academy"],
+  civic:   ["Parent-teacher associations","School boards","Youth councils","Libraries"],
+  govt:    ["Ministry of Education","Local education authorities","ERASMUS+","Title I programs (US)"],
+  faith:   ["Catholic schools network","Jewish day school associations","ISNA Education Forum"]
+ },
+ civic: {
+  ngo:     ["Freedom House","Transparency International","NDI / IRI","Article 19","Open Society Foundations"],
+  civic:   ["Civil society coalitions","Press freedom organizations","Electoral commissions","Think tanks"],
+  govt:    ["Council of Europe","EU FRA","OSCE ODIHR","Justice ministries"],
+  faith:   ["World Council of Churches","Christian Democracy parties","Interfaith Alliance"]
+ },
+ environment: {
+  ngo:     ["WWF","Greenpeace","350.org","GreenFaith","Friends of the Earth"],
+  civic:   ["Environmental justice coalitions","Urban greening initiatives","Cycling and transport groups"],
+  govt:    ["Environment ministries","EU Green Deal bodies","UNEP civil society partners"],
+  faith:   ["GreenFaith","Hazon (Jewish)","Islamic Foundation for Ecology","Christian ecology networks"]
+ },
+ housing: {
+  ngo:     ["Shelter","Crisis","Habitat for Humanity","Housing Justice","National Housing Federation"],
+  civic:   ["Tenant unions","Housing cooperatives","Community land trusts","Homeless shelters"],
+  govt:    ["Housing ministries","HUD (US)","Local planning authorities","Social housing providers"],
+  faith:   ["Caritas housing","Salvation Army hostels","St. Mungo's","Catholic Charities"]
+ },
+ security: {
+  ngo:     ["Peace Direct","Cure Violence","Counter Extremism Project","RAND Corporation","ECRE"],
+  civic:   ["Neighborhood watch","Community safety partnerships","Ex-offender support groups"],
+  govt:    ["Police community liaison","Prevent (UK)","CVE programs","Probation services"],
+  faith:   ["Interfaith coalitions for peace","Muslim Engagement and Development (MEND)","Faiths United"]
+ },
+ tech: {
+  ngo:     ["Code.org","Digital Futures","Mozilla Foundation","Electronic Frontier Foundation","GovTech Fund"],
+  civic:   ["Tech for Good networks","Digital inclusion coalitions","Open data advocates"],
+  govt:    ["Digital ministries","EU Digital Compass","FCC (US)","Tech skills councils"],
+  faith:   ["Tech Goes Home","Islamic tech communities","Cross-sector digital literacy coalitions"]
+ },
+ demographic: {
+  ngo:     ["Age UK","HelpAge International","AARP","Generations United","Alzheimer's Society"],
+  civic:   ["Elder care councils","Intergenerational programs","Dementia-friendly communities"],
+  govt:    ["Social care ministries","Pension agencies","Adult social services","WHO Decade of Healthy Ageing"],
+  faith:   ["Catholic Care for older people","Jewish Care","Islamic elder care networks","Caritas elderly services"]
+ }
+};
+
+// ══════════════════════════════════════════════════════════
+// HEAT MAP — issue categories grouped to avoid duplication
+// ══════════════════════════════════════════════════════════
+const HEATMAP_GROUPS = [
+ { label:"Mental Health & Wellbeing", cat:"health",   keywords:["mental health","wellbeing","suicide","burnout","loneliness","hikikomori","depression"] },
+ { label:"Housing Affordability",     cat:"housing",  keywords:["housing","homes","rent","homelessness","affordability"] },
+ { label:"Political Polarization",    cat:"civic",    keywords:["polari","distrust","democrat","extremism","populism","backslid","far-right","authori"] },
+ { label:"Economic Inequality",       cat:"economic", keywords:["inequal","poverty","precari","unemployment","cost of living","wealth","stagnation"] },
+ { label:"Migration & Integration",   cat:"social",   keywords:["migrat","integrat","refugee","asylum","xenoph","immigrat"] },
+ { label:"Climate & Environment",     cat:"environment", keywords:["climate","environment","wildfire","flood","deforest","pollution","biodiver","drought"] },
+ { label:"Education Inequality",      cat:"education", keywords:["education","school","learning","literacy","curriculum"] },
+ { label:"Ageing Population",         cat:"demographic", keywords:["ageing","aging","elderl","pension","demographic","birth rate","loneliness"] },
+ { label:"Drug & Substance Abuse",    cat:"health",   keywords:["drug","opioid","addiction","substance","alcohol"] },
+ { label:"Racial & Social Discrimination", cat:"social", keywords:["racism","discriminat","islamoph","antisemit","racial"] },
+ { label:"Gender Violence & Inequality", cat:"social", keywords:["femicide","gender","women","domestic violence","machismo"] },
+ { label:"Organized Crime & Security", cat:"security", keywords:["crime","cartel","gang","corruption","mafia","violence","security"] },
+ { label:"Democratic Decline",        cat:"civic",    keywords:["democrat","authorit","backslid","media capture","rule of law","orban","meloni"] },
+ { label:"Indigenous Rights",         cat:"social",   keywords:["indigenous","māori","aboriginal","native","first nation","mapuche","reconcili"] },
+ { label:"Youth Unemployment",        cat:"economic", keywords:["youth unemploy","youth precari","young workers","graduate"] },
+];
+
+function buildHeatmap() {
+ if (document.getElementById('heatmapGrid').innerHTML !== '') return; // already built
+ const counts = {};
+ HEATMAP_GROUPS.forEach(g => { counts[g.label] = { count:0, cat:g.cat }; });
+
+ ALL_COUNTRIES.forEach(country => {
+  (country.issues||[]).forEach(issue => {
+   const text = (issue.title + ' ' + issue.desc).toLowerCase();
+   HEATMAP_GROUPS.forEach(g => {
+    if (g.keywords.some(kw => text.includes(kw))) {
+     counts[g.label].count++;
+    }
+   });
+  });
+ });
+
+ const sorted = Object.entries(counts)
+   .sort((a,b) => b[1].count - a[1].count)
+   .filter(([,v]) => v.count > 0);
+ const max = sorted[0][1].count;
+
+ document.getElementById('heatmapGrid').innerHTML = sorted.map(([label, {count, cat}]) => {
+  const color = CAT_COLORS[cat] || '#555';
+  const pct = Math.max(8, Math.round((count/max)*100));
+  return `<div class="hm-row">
+   <span class="hm-label" title="${label}">${label}</span>
+   <div class="hm-bar-wrap">
+    <div class="hm-bar" style="width:${pct}%;background:${color}">
+     <span class="hm-count">${count} countries</span>
+    </div>
+   </div>
+   <span class="hm-num">${count}</span>
+  </div>`;
+ }).join('');
+
+ const usedCats = [...new Set(sorted.map(([,v])=>v.cat))];
+ document.getElementById('hmLegend').innerHTML = usedCats.map(cat => `
+  <div class="hm-legend-item">
+   <span class="hm-legend-dot" style="background:${CAT_COLORS[cat]}"></span>
+   <span>${CAT_NAMES[cat]||cat}</span>
+  </div>`).join('');
+}
+
+
+// ══════════════════════════════════════════════════════════
+// COUNTRY DATA
+// ══════════════════════════════════════════════════════════
+const COUNTRIES = [
+ {id:"usa",name:"United States",flag:"🇺🇸",region:"Anglosphere",issues:[
+  {rank:1,emoji:"💊",title:"Opioid & Drug Epidemic",cat:"health",desc:"Over 80,000 overdose deaths annually. Fentanyl has replaced heroin and is now laced into almost every street drug. Rural and suburban communities decimated. The crisis originated from pharmaceutical over-prescription in the 1990s and has mutated into a fentanyl emergency.",causes:["Pharmaceutical over-prescription in 1990s","Lack of affordable treatment","Economic despair in deindustrialized regions","Criminal justice over-criminalization","Inadequate harm reduction infrastructure"],hizmet:"Hizmet centers provide community belonging and purpose as alternatives to substance use, while partnering with rehab charities.",hacts:[{i:"🏘️",t:"Community centers offer structured youth activities reducing idle time"},{i:"🤝",t:"Volunteer partnerships with addiction recovery charities"},{i:"📖",t:"Ethics curricula address resilience and healthy choices"},{i:"💬",t:"Peer support and family strengthening programs"}]},
+  {rank:2,emoji:"⚖️",title:"Systemic Racism & Racial Justice",cat:"social",desc:"Black Americans face persistent disparities in wealth, policing, healthcare, and education. Police brutality, mass incarceration, and housing discrimination remain entrenched structural features of American life, not aberrations.",causes:["Legacy of slavery and Jim Crow","Discriminatory policing practices","Wealth gap from redlining","Prison-industrial complex","Underfunded minority schools"],hizmet:"Hizmet's interfaith coalition work actively bridges racial and religious divides, with explicit commitment to universal human dignity.",hacts:[{i:"🕊️",t:"Interfaith dialogue programs include Black churches and communities"},{i:"📢",t:"Civil rights advocacy through affiliated NGOs"},{i:"🎓",t:"Multicultural education in Hizmet-inspired schools"},{i:"🤲",t:"Community solidarity initiatives in underserved neighborhoods"}]},
+  {rank:3,emoji:"🏥",title:"Healthcare Affordability",cat:"health",desc:"46 million uninsured or underinsured Americans delay care due to cost. Medical debt is the leading cause of personal bankruptcy. Life expectancy lags all peer wealthy nations despite the highest healthcare spending in the world.",causes:["Absence of universal healthcare","Pharmaceutical price gouging","Insurance industry complexity","Hospital consolidation","Employer-tied coverage leaving gaps"],hizmet:"Hizmet hospitals and clinics globally model affordable, dignified care; US affiliates support free clinics and health fairs.",hacts:[{i:"🏥",t:"Support for free medical clinics in underserved communities"},{i:"🌍",t:"Humanitarian medical mission experience applied domestically"},{i:"💊",t:"Health fairs and preventive care outreach"},{i:"📢",t:"Advocacy for equitable health policy"}]},
+  {rank:4,emoji:"🏠",title:"Housing Affordability Crisis",cat:"housing",desc:"Home prices have tripled relative to median income since 1980. Homelessness surged past 650,000. Rent burden consumes over half of income for millions. Private equity landlord consolidation is accelerating the crisis.",causes:["Restrictive zoning in major metros","Private equity landlord consolidation","Insufficient social housing","Interest rate shocks","NIMBY political culture"],hizmet:"Hizmet foundations offer emergency housing aid and partner with housing justice organizations to advocate for vulnerable tenants.",hacts:[{i:"🏠",t:"Emergency housing support through affiliated humanitarian orgs"},{i:"🤝",t:"Community network resource-sharing for housing-insecure families"},{i:"📢",t:"Advocacy alongside housing justice organizations"},{i:"🌍",t:"Refugee resettlement including housing assistance"}]},
+  {rank:5,emoji:"📚",title:"Education Inequality",cat:"education",desc:"School funding tied to local property taxes entrenches stark disparities. Students in poor districts receive up to $10,000 less per year than wealthy peers. Achievement gaps persist across racial and income lines despite decades of reform attempts.",causes:["Property-tax school funding model","Residential segregation","Teacher pay disparities","Defunded arts and counseling","Standardized testing inequity"],hizmet:"Hizmet's model of values-based, high-quality education for all is directly applicable to America's dual education crisis.",hacts:[{i:"🏫",t:"Gülen-inspired charter schools serve underserved communities"},{i:"📖",t:"Free tutoring centers in low-income neighborhoods"},{i:"🎓",t:"Scholarships for low-income and minority students"},{i:"👨‍🏫",t:"Teacher training emphasizing equity and character education"}]},
+  {rank:6,emoji:"🗳️",title:"Political Polarization",cat:"civic",desc:"The US is more politically divided than at any point since the Civil War. Bipartisan legislation is near-impossible. Disinformation ecosystems accelerate radicalization. The January 6 insurrection revealed how deep the fractures run.",causes:["Social media algorithmic amplification","Gerrymandering","Two-party system entrenchment","Media fragmentation","Economic grievance exploitation"],hizmet:"Hizmet dialogue platforms build civic trust across partisan and religious lines, modeling that deep disagreement need not produce hostility.",hacts:[{i:"🕊️",t:"Rumi Forum and Pacifica Institute host cross-partisan civic dialogue"},{i:"📰",t:"Independent journalism promoting balanced discourse"},{i:"🎓",t:"Media literacy and civic education curricula"},{i:"🤝",t:"Interfaith coalitions modeling cross-difference collaboration"}]},
+  {rank:7,emoji:"🔫",title:"Gun Violence",cat:"security",desc:"Over 45,000 gun deaths annually — the highest rate among wealthy nations by far. Mass shootings, community violence, and suicide by firearm all at record levels. Political gridlock driven by the gun lobby prevents reform.",causes:["Weak federal gun regulations","Gun lobby political power","Mental health treatment gaps","Illegal gun trafficking","Cultural normalization of firearms"],hizmet:"Hizmet supports community violence interruption, mental health awareness, and civic engagement as pathways to safer communities.",hacts:[{i:"🤝",t:"Community peace-building dialogues in violence-affected areas"},{i:"🧠",t:"Mental health awareness addressing isolation and despair"},{i:"👶",t:"Youth programs providing alternatives to gang involvement"},{i:"📢",t:"Advocacy for sensible firearms policy through civil society"}]},
+  {rank:8,emoji:"💸",title:"Wealth Inequality",cat:"economic",desc:"The top 1% owns more wealth than the bottom 90% combined. CEO-to-worker pay ratio exceeds 350:1. Intergenerational mobility has declined for every successive generation since the 1970s.",causes:["Capital gains tax advantages","Decline of union bargaining power","Offshoring and wage suppression","Inheritance wealth concentration","Financialization of the economy"],hizmet:"Hizmet economic solidarity networks, scholarship programs, and vocational training directly reduce structural disadvantage.",hacts:[{i:"💼",t:"Vocational training and entrepreneurship programs"},{i:"📚",t:"Scholarship funds reducing economic barriers to education"},{i:"🤝",t:"Cooperative business and micro-lending networks"},{i:"🌍",t:"Remittance and support networks for immigrant communities"}]},
+  {rank:9,emoji:"🧠",title:"Mental Health Crisis",cat:"health",desc:"Depression and anxiety affect 50 million Americans. Youth mental health has collapsed — teen depression rates doubled since 2010. 150+ million Americans live in mental health care deserts with no access to professional help.",causes:["Social media and smartphone over-use","Economic stress and precarity","Loneliness epidemic","Underfunded mental health services","Stigma around seeking help"],hizmet:"Hizmet's emphasis on community, purpose, and spiritual wellbeing counters the isolation and meaninglessness driving the mental health crisis.",hacts:[{i:"🕌",t:"Dialogue centers provide community belonging countering loneliness"},{i:"💬",t:"Interfaith peer support and counseling networks"},{i:"📖",t:"Values and character education building emotional resilience"},{i:"🤲",t:"Outreach to isolated elderly and vulnerable individuals"}]},
+  {rank:10,emoji:"🌍",title:"Immigration & Integration",cat:"social",desc:"The US immigration system is functionally broken — 12 million undocumented, asylum courts backlogged by years, DACA recipients in legal limbo. Integration services are fragmented and underfunded.",causes:["Decades of Congressional gridlock","Politicization of immigration","Underfunded integration services","Economic pull factors","Violence in source countries"],hizmet:"Hizmet has decades of experience integrating immigrant communities across the globe — language, civic education, and welcoming community.",hacts:[{i:"🗣️",t:"English language and integration classes for newcomers"},{i:"🤝",t:"Interfaith welcoming networks for refugee communities"},{i:"📜",t:"Legal aid and asylum support partnerships"},{i:"🌐",t:"Cultural bridge events humanizing immigrant communities"}]}
+ ]},
+ {id:"uk",name:"United Kingdom",flag:"🇬🇧",region:"Anglosphere",issues:[
+  {rank:1,emoji:"🏠",title:"Housing Crisis",cat:"housing",desc:"Average UK house prices are 9× median earnings. London renters spend 50%+ of income on rent. Social housing waiting lists stretch a decade in some areas. 270,000+ homeless. A generation is locked out of homeownership.",causes:["Decades of failure to build sufficient housing","Right-to-Buy depleting social housing stock","Land speculation","Green belt restrictions","Buy-to-let investor dominance"],hizmet:"Hizmet organizations support homeless services, refugee housing, and advocate for vulnerable renters in UK cities.",hacts:[{i:"🏠",t:"Emergency housing and welfare support through affiliated charities"},{i:"🤝",t:"Community networks helping immigrants navigate housing"},{i:"📢",t:"Advocacy for social housing expansion"},{i:"🌍",t:"Refugee housing assistance programs"}]},
+  {rank:2,emoji:"🏥",title:"NHS Crisis & Health Inequalities",cat:"health",desc:"Record 7.5 million on NHS waiting lists. Mental health services overwhelmed. Health inequalities between wealthy and deprived areas span 10+ years in life expectancy. Post-COVID backlogs may take a decade to clear.",causes:["Decade of austerity underfunding","Workforce exodus post-Brexit and COVID","Obesity and lifestyle diseases","Social determinants of health ignored","Underfunded social care"],hizmet:"Hizmet health volunteers and community outreach support the NHS through complementary care and health awareness.",hacts:[{i:"🤲",t:"Health awareness fairs in Muslim-majority communities"},{i:"💊",t:"Mental health and wellbeing support in dialogue centers"},{i:"🌍",t:"Volunteer support for elderly and isolated community members"},{i:"📢",t:"Advocacy for equitable healthcare funding"}]},
+  {rank:3,emoji:"💸",title:"Cost of Living Crisis",cat:"economic",desc:"Inflation peaking at 11% devastated household budgets. Food bank use tripled since 2019. Energy poverty affects millions. Real wages remain below 2010 levels — the longest pay squeeze since the Napoleonic era.",causes:["Energy price shocks from Ukraine war","Brexit supply chain disruption","Wage stagnation","Austerity erosion of safety net","Corporate price gouging"],hizmet:"Hizmet food banks and emergency aid have expanded across UK cities as need surged, providing both material and community support.",hacts:[{i:"🍽️",t:"Food bank and meal distribution through affiliated charities"},{i:"💼",t:"Employment and skills support for those pushed into poverty"},{i:"🤝",t:"Community solidarity networks sharing resources"},{i:"🎓",t:"Free educational support reducing household costs"}]},
+  {rank:4,emoji:"🧠",title:"Mental Health Crisis",cat:"health",desc:"1 in 4 UK adults experience mental illness annually. Child and adolescent mental health services have 2-year waiting lists. Loneliness is described as a public health epidemic affecting all age groups.",causes:["Social media","Austerity cuts to community services","Economic precarity","Post-COVID trauma","Breakdown of community ties"],hizmet:"Hizmet's community bonds and dialogue spaces directly address loneliness and isolation — providing belonging that clinical services cannot.",hacts:[{i:"🕌",t:"Dialogue and community centers providing belonging and connection"},{i:"💬",t:"Interfaith counseling and peer support networks"},{i:"👶",t:"Youth mentorship programs combating isolation"},{i:"🤲",t:"Elder visiting programs tackling loneliness"}]},
+  {rank:5,emoji:"⚖️",title:"Racial Inequality & Islamophobia",cat:"social",desc:"Ethnic minorities face persistent discrimination in employment, housing, and criminal justice. Islamophobic hate crimes surged. The Windrush scandal exposed systemic institutional racism within government itself.",causes:["Institutional racial bias","Media stereotyping","Stop and search policies","Post-Brexit emboldened racism","Inadequate anti-discrimination enforcement"],hizmet:"Hizmet dialogue institutions in the UK actively counter Islamophobia, build bridges between communities, and demonstrate Muslim civic contribution.",hacts:[{i:"🕊️",t:"Dialogue and interfaith events countering Islamophobia"},{i:"📢",t:"Civil society advocacy against discrimination"},{i:"🌐",t:"Cultural festivals humanizing Muslim and minority communities"},{i:"🤝",t:"Solidarity with Windrush and other affected communities"}]},
+  {rank:6,emoji:"📚",title:"Education Inequality",cat:"education",desc:"Pupils in deprived areas are 18 months behind peers by age 11. Teacher retention crisis — 40% leave within 5 years. Universities increasingly unaffordable at £9,250/yr tuition, saddling graduates with lifelong debt.",causes:["Postcode-determined school quality","Underfunding of deprived school areas","Teacher pay and workload crisis","University debt burden","SEND provision cuts"],hizmet:"Hizmet-inspired schools and tutoring programs serve disadvantaged pupils across the UK with high academic and values standards.",hacts:[{i:"🏫",t:"Hizmet-inspired free schools with high academic and values standards"},{i:"📖",t:"Free tutoring in deprived communities"},{i:"🎓",t:"Scholarship support for disadvantaged students"},{i:"👨‍🏫",t:"Teacher professional development programs"}]},
+  {rank:7,emoji:"🌊",title:"Climate & Environmental Degradation",cat:"environment",desc:"UK biodiversity is among the most depleted in Europe. Flooding devastates communities annually. Net Zero targets are being rolled back amid political pressure from the right flank of the Conservative Party.",causes:["Agricultural intensification","Weak planning laws","Fossil fuel lobbying","Inadequate flood infrastructure","Short-term political cycles"],hizmet:"Hizmet community projects and Islamic environmental ethics drive ecological responsibility as both spiritual duty and civic obligation.",hacts:[{i:"🌿",t:"Environmental stewardship in Hizmet school curricula"},{i:"🤝",t:"Interfaith environmental coalitions"},{i:"☀️",t:"Community sustainability projects and urban greening"},{i:"📢",t:"Climate justice advocacy for vulnerable communities"}]},
+  {rank:8,emoji:"🗳️",title:"Democratic Decline & Distrust",cat:"civic",desc:"Trust in politicians at historic lows post-Brexit chaos and Partygate. Voter disengagement in youth. Concentration of media ownership distorts public discourse. The UK's unwritten constitution shows its fragility.",causes:["Political scandals","Brexit division","Media monopolization","First-past-the-post disenfranchisement","Social media radicalization"],hizmet:"Hizmet dialogue institutions build civic trust and promote democratic participation as a civic and moral obligation.",hacts:[{i:"🕊️",t:"Interfaith and civic dialogue events"},{i:"📰",t:"Independent, ethics-driven journalism initiatives"},{i:"🎓",t:"Civic and democratic education in Hizmet schools"},{i:"🗣️",t:"Supporting voter registration and civic participation"}]},
+  {rank:9,emoji:"👴",title:"Ageing Population & Care Crisis",cat:"demographic",desc:"10.5 million over-65s by 2025. Social care system in collapse — 165,000 care worker vacancies. Elderly loneliness at epidemic levels. Pension sustainability under long-term pressure. COVID exposed catastrophic care home failures.",causes:["Decades of social care underfunding","Care workforce low pay and status","Family fragmentation","Rising dementia prevalence","Austerity hollowing of community services"],hizmet:"Hizmet's culture of elder respect and intergenerational community directly addresses both the care and loneliness dimensions of this crisis.",hacts:[{i:"🤲",t:"Volunteer visiting programs for elderly in care homes"},{i:"🏘️",t:"Intergenerational community events at dialogue centers"},{i:"💬",t:"Elder mentorship and peer support programs"},{i:"🤝",t:"Partnerships with Age UK and similar charities"}]},
+  {rank:10,emoji:"🌍",title:"Immigration & Integration",cat:"social",desc:"Record net migration of 700,000+. Integration services under-resourced. Channel crossings dominate political debate while asylum backlogs grow to years. Community tensions emerging in some towns under housing pressure.",causes:["Global push factors: conflict, climate, poverty","Under-resourced asylum processing","Political weaponization of migration","Lack of integration investment","Housing and service pressure"],hizmet:"Hizmet has operated migrant integration programs in the UK for decades — language, civic education, and community belonging.",hacts:[{i:"🗣️",t:"English language and integration classes"},{i:"🤝",t:"Welcome networks for refugees and asylum seekers"},{i:"🌐",t:"Intercultural events building bridges between communities"},{i:"📜",t:"Legal advice and asylum support partnerships"}]}
+ ]},
+ {id:"germany",name:"Germany",flag:"🇩🇪",region:"Western Europe",issues:[
+  {rank:1,emoji:"🌍",title:"Migration & Integration",cat:"social",desc:"Germany received 1M+ asylum seekers in 2015 and over 1M Ukrainian refugees since 2022. Integration into the labor market and society has been uneven. Far-right backlash is growing and AfD is polling above 20%.",causes:["Global conflict and climate displacement","Gaps in language integration","Housing shortages","Bureaucratic asylum delays","Political polarization around migration"],hizmet:"Hizmet has deep roots in German Turkish immigrant communities and decades of integration work — language, civic participation, and cultural mediation.",hacts:[{i:"🗣️",t:"Language courses and integration support for migrants"},{i:"🤝",t:"Bridging Turkish-German and newcomer communities"},{i:"🌐",t:"Intercultural dialogue events countering social tension"},{i:"📜",t:"Legal and bureaucratic assistance for asylum seekers"}]},
+  {rank:2,emoji:"📉",title:"Economic Stagnation & Deindustrialization",cat:"economic",desc:"Germany's industrial model faces an existential crisis: energy cost shock from Russia sanctions, declining auto sector facing EV transition failure, China competition, and chronic underinvestment in digital infrastructure.",causes:["Energy price shock from Russia sanctions","Car industry EV transition failure","China trade dependency","Underinvestment in digital infrastructure","Aging industrial base"],hizmet:"Hizmet vocational training centers help workers adapt to a changing economy, serving both German and immigrant-background workers.",hacts:[{i:"💼",t:"Vocational and digital skills training for displaced workers"},{i:"🤝",t:"Community economic networks for immigrant entrepreneurs"},{i:"🎓",t:"STEM education emphasis in Hizmet-inspired schools"},{i:"📢",t:"Advocacy for inclusive industrial policy"}]},
+  {rank:3,emoji:"🗳️",title:"Rise of Far-Right Extremism",cat:"civic",desc:"AfD consistently polling 20%+, becoming the second-largest party in some polls. Far-right violence and terrorism rising. Democratic institutions under strain. Eastern Germany especially vulnerable to extremist narratives.",causes:["Economic insecurity in eastern Germany","Migration anxiety","Elite disconnect from ordinary citizens","Social media radicalization","Historical east-west divide"],hizmet:"Hizmet is uniquely positioned to counter far-right narratives through interfaith dialogue, civic education, and demonstrating Muslim civic contribution.",hacts:[{i:"🕊️",t:"Interfaith dialogue events directly addressing extremism"},{i:"📰",t:"Counter-disinformation and media literacy programs"},{i:"🎓",t:"Democratic values education in schools"},{i:"🤝",t:"Cross-community solidarity work in vulnerable eastern towns"}]},
+  {rank:4,emoji:"🏠",title:"Housing Shortage",cat:"housing",desc:"Germany needs 700,000 new homes per year but builds less than half that. Rents in Berlin, Munich, and Hamburg have doubled in a decade. Homelessness rising sharply. The nitrogen crisis is halting new building permits.",causes:["Decades of under-investment in construction","Bureaucratic planning delays","Inflation in construction costs","Refugee arrival pressure on stock","Speculative landlordism"],hizmet:"Hizmet community networks help migrants navigate housing markets and provide emergency support for the newly arrived.",hacts:[{i:"🏠",t:"Housing support and navigation for refugees and migrants"},{i:"🤝",t:"Community resource-sharing networks"},{i:"📢",t:"Advocacy for social housing expansion"},{i:"🌍",t:"Emergency accommodation for newly arrived refugees"}]},
+  {rank:5,emoji:"📚",title:"Education System Inequality",cat:"education",desc:"Germany's early school-tracking system entrenches social inequality. Children of immigrants and working-class families are disproportionately directed to lower academic tracks at age 10, effectively foreclosing university paths.",causes:["Early tracking at age 10","Teacher shortages","Language barriers for immigrant children","Underfunded Hauptschule tier","PISA decline in recent years"],hizmet:"Hizmet schools in Germany serve immigrant-background students with exceptional results, challenging the tracking system's discrimination.",hacts:[{i:"🏫",t:"Hizmet-inspired schools serving Turkish-German and diverse pupils"},{i:"📖",t:"After-school tutoring for immigrant-background children"},{i:"🗣️",t:"German language support and bilingual programs"},{i:"🎓",t:"University mentoring for first-generation students"}]},
+  {rank:6,emoji:"🧠",title:"Mental Health & Loneliness",cat:"health",desc:"Depression affects 5.3 million Germans. Post-COVID loneliness especially among elderly. Access to psychiatrists involves months-long waits in rural areas. The mental health crisis disproportionately hits isolated immigrant communities.",causes:["Pandemic social disruption","Rural healthcare deserts","Stigma around mental health","Economic anxiety","Breakdown of traditional community structures"],hizmet:"Community bonds at Hizmet centers directly counter loneliness and provide mental support — belonging as a form of preventive mental healthcare.",hacts:[{i:"🕌",t:"Community centers providing regular social connection"},{i:"💬",t:"Peer support networks and counseling referral"},{i:"🤲",t:"Visiting programs for elderly and isolated individuals"},{i:"📖",t:"Wellbeing and resilience programs in schools"}]},
+  {rank:7,emoji:"🌱",title:"Climate Transition & Energy",cat:"environment",desc:"Germany's Energiewende faces major setbacks. Coal phaseout delayed; renewables buildout too slow. Carbon footprint remains high. Climate anxiety among youth is widespread. Coalition political dysfunction is paralyzing action.",causes:["Russia gas dependency reversal","Grid infrastructure inadequacy","NIMBY opposition to wind farms","Industrial lobby resistance","Coalition political dysfunction"],hizmet:"Hizmet environmental ethics and community programs support sustainable transitions as both civic and spiritual responsibility.",hacts:[{i:"🌿",t:"Environmental education in Hizmet schools"},{i:"🤝",t:"Interfaith climate coalitions"},{i:"☀️",t:"Community sustainability projects"},{i:"📢",t:"Youth climate justice dialogue programs"}]},
+  {rank:8,emoji:"👴",title:"Demographic Ageing",cat:"demographic",desc:"Germany has one of the world's oldest populations. Pension and healthcare systems face funding crises. Worker shortages in all skilled sectors threaten economic output. Demographic change is irreversible without successful immigration integration.",causes:["Decades of low birth rates","Insufficient immigration integration","Care worker shortage","Rigid pension system","Late retirement age reform"],hizmet:"Hizmet's intergenerational culture and volunteerism support elder care while its integration expertise addresses the demographic solution.",hacts:[{i:"🤲",t:"Volunteer elder care and visiting programs"},{i:"🏘️",t:"Intergenerational community events at dialogue centers"},{i:"💼",t:"Integration of immigrant care workers"},{i:"📢",t:"Advocacy for dignified eldercare policy"}]},
+  {rank:9,emoji:"⚖️",title:"Antisemitism & Islamophobia",cat:"social",desc:"Antisemitic incidents at record highs, driven by both far-right radicalization and some imported antisemitism. Islamophobia widespread in employment and media. Both communities face threats from extremism.",causes:["Far-right radicalization","Some imported antisemitism","Media stereotyping","Lack of historical education","Social exclusion of Muslim communities"],hizmet:"Hizmet's explicit promotion of Jewish-Muslim-Christian dialogue is a direct and proven response to Germany's dual discrimination crisis.",hacts:[{i:"🕊️",t:"Jewish-Muslim-Christian tri-faith dialogue events"},{i:"📖",t:"Holocaust education and antisemitism awareness"},{i:"🌐",t:"Intercultural encounters countering stereotypes"},{i:"📢",t:"Joint advocacy against all forms of religious hatred"}]},
+  {rank:10,emoji:"💻",title:"Digital Infrastructure & Tech Gap",cat:"tech",desc:"Germany ranks poorly on broadband speed and digital government services in the EU. SME digitalization lagging. Schools still use fax machines. Digital skills shortage is acute across all sectors of the economy.",causes:["Late fiber broadband rollout","Bureaucratic resistance to digital government","Privacy culture slowing adoption","Educational system analog inertia","Insufficient STEM graduates"],hizmet:"Hizmet schools emphasize STEM and digital literacy to prepare students for the future economy, serving both German and immigrant communities.",hacts:[{i:"💻",t:"Digital skills and coding programs in Hizmet schools"},{i:"🎓",t:"STEM scholarship programs"},{i:"🤝",t:"Digital inclusion outreach for elderly and immigrant communities"},{i:"📢",t:"Advocacy for digital equity in education funding"}]}
+ ]}
+];
+
+// ══════════════════════════════════════════════════════════
+// EXTRA COUNTRIES (abbreviated but complete)
+// ══════════════════════════════════════════════════════════
+function makeIssues(country, list) {
+ return list.map((item, i) => ({
+  rank: i+1,
+  emoji: {economic:"💸",social:"👥",health:"🏥",education:"📚",civic:"🗳️",environment:"🌱",housing:"🏠",security:"🔒",tech:"💻",demographic:"👴"}[item.cat]||"⚙️",
+  title: item.t,
+  cat: item.cat,
+  desc: item.d || `${country} faces significant challenges around ${item.t.toLowerCase()}, requiring coordinated responses from government, civil society, and community organizations including Hizmet.`,
+  causes: item.c || ["Structural factors","Policy gaps","Historical context","Resource constraints","Social change"],
+  hizmet: `Hizmet's commitment to education, dialogue, and community solidarity provides a framework for addressing ${item.t.toLowerCase()} in ${country}.`,
+  hacts: [{i:"🕊️",t:"Interfaith dialogue and community-building"},{i:"📚",t:"Education and scholarship programs"},{i:"🤝",t:"Community solidarity and mutual aid"},{i:"📢",t:"Civil society advocacy for inclusive policy"}]
+ }));
+}
+
+const EXTRA_COUNTRIES = [
+ {id:"france",name:"France",flag:"🇫🇷",region:"Western Europe",issues:makeIssues("France",[
+  {t:"Racial & Religious Discrimination",cat:"social",d:"France's laïcité model masks deep discrimination against Muslim and Black citizens. Banlieue youth unemployment exceeds 40%. Islamophobic hate crimes surging. Republican universalism cannot hide structural inequality.",c:["Laïcité misapplied to exclude minorities","Residential segregation in banlieues","Police brutality and profiling","Media stigmatization","Educational underinvestment in suburbs"]},
+  {t:"Political Polarization & Extremism",cat:"civic",d:"French politics fragmenting between far-left and far-right poles. Marine Le Pen consistently reaches presidential runoffs. Yellow Vest and pension reform protests show deep social fracture. Coalition politics becoming impossible.",c:["Economic inequality","Elite political disconnect","EU disillusionment","Migration anxiety","Media polarization"]},
+  {t:"Youth Unemployment & Precarity",cat:"economic",d:"French youth unemployment at 16-18%. Internship culture exploits graduates. The two-tier labor market (CDI vs CDD) traps young people in precarious short-term contracts for years.",c:["Rigid labor market regulation","Internship economy","Insufficient vocational education","Geographic concentration in Paris","Discrimination barriers"]},
+  {t:"Housing Crisis",cat:"housing",d:"Paris rents are among Europe's highest. 4 million inadequately housed. Social housing (HLM) waiting lists stretch to 10 years in Paris. Homelessness rising especially among migrants.",c:["Insufficient social housing","Speculative real estate","Airbnb decimating rental stock","Urban concentration","Bureaucratic allocation"]},
+  {t:"Climate & Environmental Crisis",cat:"environment",d:"France faces worsening heatwaves, droughts, and flooding. Nuclear dependency creates risks. Biodiversity in steep decline. Climate anxiety among French youth is high.",c:["Fossil fuel industrial inertia","Agricultural intensive practices","Nuclear aging infrastructure","Inadequate adaptation investment","Transport emissions"]},
+  {t:"Mental Health Crisis",cat:"health",d:"Depression affects 3 million French people. Psychiatrist shortages mean 6-month waits. Post-COVID burnout widespread. Youth suicide rates concerning.",c:["Social isolation","Economic stress","Social media","Insufficient psychiatric infrastructure","Cultural stigma"]},
+  {t:"Educational Inequality",cat:"education",d:"PISA results showing declining French student performance. Grandes écoles reproduce elite privilege. Banlieue schools chronically under-resourced.",c:["Concentrated school funding inequality","Teacher resistance to reform","Grandes écoles gatekeeping","Social sorting by postcode","Lack of vocational prestige"]},
+  {t:"Immigration & Integration",cat:"social",d:"France has Europe's largest Muslim minority. Integration policies based on assimilation have largely failed. Second-generation youth feel neither French nor from parents' countries.",c:["Assimilationist vs. multicultural tension","Economic exclusion in banlieues","Laïcité misapplication","Identity crisis among youth","Inadequate integration services"]},
+  {t:"Ageing & Pension Crisis",cat:"demographic",d:"Macron's pension reform raising retirement age triggered mass protests. Care system under-resourced. Loneliness among seniors epidemic.",c:["Demographic transition","Pension system unsustainability","Underfunded social care","Family fragmentation","Political failure to build consensus"]},
+  {t:"Security & Counter-Terrorism",cat:"security",d:"France has suffered most Islamist terror attacks in Europe. Far-right violence also rising. Society remains on edge. Radicalization of marginalized youth is ongoing.",c:["Foreign fighter returnees","Social exclusion feeding grievance","Online recruitment","Intelligence resource limitations","Banlieue marginalization"]}
+ ])},
+ {id:"canada",name:"Canada",flag:"🇨🇦",region:"Anglosphere",issues:makeIssues("Canada",[
+  {t:"Housing Affordability Crisis",cat:"housing",d:"Vancouver and Toronto have among the world's least affordable housing markets. A generation locked out of homeownership. Tent cities in major cities.",c:["Foreign investment speculation","Zoning restrictions","Population growth outpacing construction","Rising mortgage rates","Insufficient social housing"]},
+  {t:"Immigration & Integration Strain",cat:"social",d:"Canada admitted 500,000+ newcomers in 2023. Services overwhelmed. Newcomers face deskilling — foreign credentials not recognized.",c:["Record immigration targets outpacing services","Credential recognition failure","Housing and healthcare strain","Urban concentration","Language barriers"]},
+  {t:"Mental Health Crisis",cat:"health",d:"1 in 5 Canadians experience mental illness. Indigenous communities face crisis-level rates. Youth mental health sharply deteriorated.",c:["Underfunded mental health care","Indigenous trauma and systemic neglect","Social isolation","Economic precarity","Post-COVID impact"]},
+  {t:"Indigenous Rights & Reconciliation",cat:"social",d:"152+ unmarked residential school graves discovered. Clean water advisories in dozens of First Nations. MMIWG crisis unresolved. Truth and Reconciliation calls largely unimplemented.",c:["Colonial legacy","Systemic underfunding","Land rights disputes","Intergenerational trauma","Political unwillingness"]},
+  {t:"Wealth Inequality",cat:"economic",d:"Top 1% holds 25% of wealth. Food bank use at record highs. Middle class squeezed by housing, inflation, and stagnant wages.",c:["Asset price inflation","Wage stagnation","Regressive tax structures","Decline of manufacturing","Corporate consolidation"]},
+  {t:"Climate Change & Wildfires",cat:"environment",d:"Canada's 2023 wildfire season burned a record 18 million hectares. Permafrost melting. Oil sands emissions undermining climate commitments.",c:["Oil sands dependency","Climate warming amplifying fire risk","Insufficient transition investment","Indigenous land management sidelined","International pressure vs economic interests"]},
+  {t:"Opioid Crisis",cat:"health",d:"Canada's opioid crisis has claimed 35,000+ lives since 2016. Toxic drug supply drives overdoses. BC declared a public health emergency.",c:["Fentanyl-contaminated supply","Under-resourced treatment","Criminalization approach","Economic despair","Big Pharma origins"]},
+  {t:"Ageing Population",cat:"demographic",d:"By 2031, seniors will outnumber children. Long-term care homes exposed by COVID. Pension sustainability concerns.",c:["Baby boomer cohort","Low birth rates","Underfunded long-term care","Care worker shortage","Provincial funding fragmentation"]},
+  {t:"Education Equity",cat:"education",d:"Indigenous and low-income students face significant gaps. Student debt burdens limit participation. Rural students lack access to quality post-secondary education.",c:["Underfunded rural and Indigenous schools","Rising tuition costs","Geographic barriers","Inadequate student support","Teacher recruitment challenges"]},
+  {t:"Political Distrust & Polarization",cat:"civic",d:"Trust in federal institutions declining. Convoy protests exposed deep rural-urban divide. Social media amplifying division across all political issues.",c:["COVID policy fallout","Urban-rural divide","Elite disconnect","Social media radicalization","Identity politics tensions"]}
+ ])},
+ {id:"australia",name:"Australia",flag:"🇦🇺",region:"Anglosphere",issues:makeIssues("Australia",[
+  {t:"Housing Affordability",cat:"housing",d:"Sydney and Melbourne among world's least affordable cities. First home buyers locked out. Record immigration raising demand. Rental crisis with vacancy rates near zero.",c:["Supply shortage","Foreign investment","Zoning restrictions","Migration-driven demand","Insufficient social housing"]},
+  {t:"Indigenous Reconciliation",cat:"social",d:"Indigenous Australians die 8-10 years earlier than non-Indigenous. The Voice referendum failed in 2023. Rates of incarceration, child removal, and poverty starkly disproportionate.",c:["Colonial dispossession","Ongoing systemic racism","Closure of remote communities","Intergenerational trauma","Political failure to act"]},
+  {t:"Climate Change & Bushfires",cat:"environment",d:"Australia's Black Summer of 2019-20 burned 18M hectares. Great Barrier Reef bleaching accelerating. Yet fossil fuel exports expanding.",c:["Coal and gas export dependence","Political fossil fuel lobby","Slow renewable transition","Indigenous land management sidelined","Urban vs regional divide"]},
+  {t:"Mental Health Crisis",cat:"health",d:"1 in 5 Australians experience mental illness. Youth mental health at crisis levels. Rural areas face severe psychiatrist shortages. Suicide leading cause of death for 15-44 year olds.",c:["Geographic isolation","Social media","Economic stress","Post-bushfire and COVID trauma","Cultural stoicism"]},
+  {t:"Cost of Living & Inequality",cat:"economic",d:"Cost of living surged post-COVID. Grocery prices, energy bills, and mortgages crushing household budgets. Record corporate profits while wages stagnate.",c:["Energy market failures","Supermarket duopoly price gouging","Supply chain disruption","Wage stagnation","Housing costs cascading"]},
+  {t:"Immigration & Integration",cat:"social",d:"Australia takes 200,000-500,000 immigrants annually. Services strained. Skilled migrants face credential non-recognition. Offshore detention policies remain controversial.",c:["Service strain from high numbers","Credential recognition failures","Offshore detention concerns","Geographic settlement concentration","Cultural integration gaps"]},
+  {t:"Education Equity",cat:"education",d:"Indigenous student outcomes far below national averages. Growing gap between elite private and public schools. Teacher shortages in rural areas.",c:["Inadequate Indigenous school resourcing","Public-private funding imbalance","Rural teacher recruitment failure","Early childhood gaps","Socioeconomic segregation"]},
+  {t:"Ageing Population",cat:"demographic",d:"30% of population will be over 65 by 2050. Aged care system exposed as inadequate by COVID royal commission. Worker shortages in care sector.",c:["Baby boomer cohort","Low birth rate","Underfunded aged care","Care workforce shortage","Geographic spread"]},
+  {t:"Political Distrust",cat:"civic",d:"6 prime ministers in 10 years until 2022. Trust collapsed. Climate denial entrenched in parts of politics. Media concentration (Murdoch dominance) distorting discourse.",c:["Political instability","Mining lobby influence","Social media polarization","Elite disconnect","Media concentration"]},
+  {t:"Domestic Violence",cat:"social",d:"A woman killed by a partner every 4 days. Recent public outcry sparked national crisis declaration. Underfunded support services across the country.",c:["Patriarchal attitudes","Alcohol and substance abuse","Economic dependence","Housing barriers to leaving","Inadequate legal protection"]}
+ ])},
+ {id:"sweden",name:"Sweden",flag:"🇸🇪",region:"Northern Europe",issues:makeIssues("Sweden",[
+  {t:"Gang Violence & Shootings",cat:"security",d:"Sweden has the highest rate of gang-related shootings in Europe. Organized crime linked to drug trafficking has infiltrated suburbs. Bombings as well as shootings are now alarmingly common.",c:["Failed integration of immigrant youth","Drug market gang wars","Social segregation in suburbs","Inadequate early intervention","Permissive gun policy relative to Nordic peers"]},
+  {t:"Integration & Segregation",cat:"social",d:"Sweden accepted high numbers of refugees in 2015. Parallel societies in suburbs. Employment rate for foreign-born far below native Swedes. Language acquisition slow.",c:["Geographic concentration in suburbs","Slow language integration","Credential non-recognition","Welfare trap disincentives","Cultural distance"]},
+  {t:"Political Polarization",cat:"civic",d:"Sweden Democrats (far-right) now second-largest party. Coalition with nationalist party unprecedented. Consensus politics breaking down.",c:["Migration backlash","Social media radicalization","Gang crime anxiety","Elite disconnect from suburbs","Weakened civil society"]},
+  {t:"Youth Mental Health",cat:"health",d:"Youth depression and anxiety rates among highest in Europe. School stress, social media, and achievement pressure major drivers. Psychiatric wait times long.",c:["Achievement culture","Social media pressure","School system stress","Weakened youth social ties","Post-COVID isolation"]},
+  {t:"Education Quality Decline",cat:"education",d:"Sweden's PISA scores declined from top-tier in 2000 to below OECD average. Free school reform created inequality. Teacher shortage acute.",c:["For-profit free school model failures","Teacher pay and status decline","Early decentralization","Increasing segregation","Reduced national curriculum standards"]},
+  {t:"Housing & Cost of Living",cat:"housing",d:"Stockholm housing queues extend to 20+ years. Construction has not kept up with population growth. Energy prices surged post-2022.",c:["Decades of under-construction","Rent control reducing supply","Energy dependency","Population growth in cities","Bureaucratic planning delays"]},
+  {t:"Environmental Pressures",cat:"environment",d:"Despite green credentials, Sweden faces biodiversity loss, Baltic Sea eutrophication, and pressure from a new right-wing government rolling back green policies.",c:["Agricultural runoff","Industrial fishing","Forestry practices","Political reversal on green policy","Baltic ecosystem degradation"]},
+  {t:"Ageing Population",cat:"demographic",d:"Sweden faces eldercare worker shortages despite relatively good funding. Loneliness among elderly rising. Dementia care under pressure.",c:["Ageing demographics","Care worker shortage","Family mobility reducing informal care","Dementia prevalence increase","Geographic spread in rural areas"]},
+  {t:"Islamophobia & Anti-Muslim Sentiment",cat:"social",d:"Quran burnings provoked international crises. Islamophobic attacks rising. Muslim community faces discrimination in employment and housing.",c:["Far-right political normalization","Anti-immigration politics","Gang crime association stereotype","Media stereotyping","Social exclusion of Muslims"]},
+  {t:"Organized Crime",cat:"security",d:"Organized crime networks expanded beyond drugs into extortion, money laundering, and cybercrime. Infiltration of legitimate businesses growing.",c:["Drug market profits","Weak financial crime enforcement","Social exclusion creating criminal alternatives","Digital crime infrastructure","International organized crime networks"]}
+ ])},
+ {id:"netherlands",name:"Netherlands",flag:"🇳🇱",region:"Western Europe",issues:makeIssues("Netherlands",[
+  {t:"Nitrogen & Agricultural Crisis",cat:"environment",d:"Dutch livestock farming produces nitrogen deposits violating EU law. Government forced to buy out thousands of farms. Farmer protests brought tractors to The Hague for months.",c:["Intensive livestock concentration","EU Habitats Directive obligations","Decades of delayed action","Coalition political deadlock","Farm lobby power"]},
+  {t:"Housing Crisis",cat:"housing",d:"Netherlands has a shortage of 400,000 homes. Rents have exploded. Young people unable to leave parental homes. Social housing waiting lists stretch decades.",c:["Under-construction for decades","Population growth","Speculative investment","Nitrogen crisis halting permits","Planning law complexity"]},
+  {t:"Political Extremism & Polarization",cat:"civic",d:"Geert Wilders' PVV won 2023 elections. Anti-Islam, anti-EU politics mainstreamed. Coalition formation took months. Political trust collapsing.",c:["Migration backlash","Nitrogen crisis anger","Elite disconnect","Social media amplification","Identity politics"]},
+  {t:"Integration & Discrimination",cat:"social",d:"Dutch Moroccan and Turkish communities face persistent labor market discrimination. The 'Black Pete' debate exposed deeper racial tensions. Islamophobia normalization accelerating.",c:["Labor market discrimination","Social network exclusion","Islamophobic political mainstreaming","Historical colonial denial","Educational segregation"]},
+  {t:"Mental Health & Youth Wellbeing",cat:"health",d:"1 in 4 Dutch people experience mental illness. Youth burnout described as epidemic. Long psychiatric wait times. Social perfectionism culture driving anxiety.",c:["Achievement and perfectionism culture","Social media pressure","Economic housing stress for young","COVID aftermath","Insufficient psychiatric capacity"]},
+  {t:"Drug Policy & Organized Crime",cat:"security",d:"Netherlands is a major drug transit and production hub. Organized crime has infiltrated legitimate business. Drug-related violence increasing.",c:["Port of Rotterdam as drug entry point","Drug tolerance without supply regulation","Criminal network infiltration","Money laundering via real estate","Youth unemployment"]},
+  {t:"Economic Inequality",cat:"economic",d:"Netherlands has high average wealth but growing inequality. ZZP (freelancer) trap leaves millions without social protections. Housing wealth concentrating in older generations.",c:["Freelancer economy without protections","Housing wealth divergence","Tax optimization by corporations","Wage stagnation","Pension system favoring older workers"]},
+  {t:"Education Inequality",cat:"education",d:"Early school tracking reproduces social inequality. Immigrant-background students systematically tracked lower. Teacher shortages in urban schools.",c:["Early tracking at age 12","Teacher shortage crisis","Urban school under-resourcing","Language barriers for immigrant pupils","Test-score pressure"]},
+  {t:"Ageing & Care",cat:"demographic",d:"Rapid ageing under pressure on Dutch care system. Care home shortages. Loneliness epidemic among elderly. Informal care burden falling heavily on working families.",c:["Demographic ageing","Care worker shortage","Deinstitutionalization without alternatives","Family time pressure","Funding gaps"]},
+  {t:"Cybercrime & Digital Security",cat:"tech",d:"Netherlands ranks among top targets for ransomware and cybercrime in Europe. Critical infrastructure attacks rising. Digital skills shortage across public sector.",c:["Digital economy concentration","Insufficient cyber workforce","State-sponsored attacks","Poor SME cyber hygiene","Interconnected critical infrastructure"]}
+ ])},
+ {id:"italy",name:"Italy",flag:"🇮🇹",region:"Southern Europe",issues:makeIssues("Italy",[
+  {t:"Demographic Collapse",cat:"demographic",d:"Italy has the world's second-lowest birth rate. Population declining. Young Italians emigrating en masse. Southern regions depopulating. Pension system under acute strain.",c:["Economic precarity for young people","Housing unaffordability","Weak childcare system","Cultural shift","Youth emigration"]},
+  {t:"Youth Unemployment & Precarity",cat:"economic",d:"Youth unemployment at 20%+, exceeding 35% in southern Italy. Widespread internship exploitation. The 'bamboccioni' generation forced to live with parents into their 30s.",c:["Rigid two-tier labor market","Weak vocational education","Geographic concentration in north","Mafia strangling southern economy","Nepotism in hiring"]},
+  {t:"Migration & Integration",cat:"social",d:"Italy is Europe's primary Mediterranean arrival point. NGO rescue operations criminalized. Processing system overwhelmed. Social integration largely absent.",c:["Mediterranean geography","Libya and North Africa instability","EU burden-sharing failure","Absent integration services","Far-right political hostility"]},
+  {t:"Democratic Backsliding",cat:"civic",d:"Far-right Fratelli d'Italia in government. Democratic norms under strain. Meloni government pushing back on EU rule of law. Media independence concerns.",c:["Historical fascism legacy","Economic grievance","Migration backlash","EU technocratic disconnect","Media concentration"]},
+  {t:"Organized Crime & Corruption",cat:"security",d:"Mafia (Camorra, Ndrangheta, Cosa Nostra) controls significant parts of the economy. Corruption pervades public administration especially in the south.",c:["Historical economic underdevelopment","State absence in southern regions","Weak rule of law","International money laundering enabling","Cultural normalization of corruption"]},
+  {t:"Education System Crisis",cat:"education",d:"Southern Italian school outcomes far below northern and EU averages. University dropout rates high. Brain drain depleting human capital. Digital skills gap growing.",c:["North-south funding disparity","Teacher quality and pay issues","Southern economic context","Outdated curricula","COVID learning loss unaddressed"]},
+  {t:"Housing & Urban Decay",cat:"housing",d:"Southern Italian towns emptying and decaying. Housing in major cities increasingly unaffordable. Migrant workers in severe housing poverty.",c:["Population emigration from south","Speculative urban real estate","Under-investment in social housing","Migrant worker exploitation","Building maintenance deficit"]},
+  {t:"Mental Health",cat:"health",d:"Italian mental health system underfunded and understaffed. Stigma particularly strong. Post-COVID depression widespread. Youth mental health crisis emerging.",c:["Underfunded psychiatric services","Cultural stigma","Economic pressure","Social isolation","COVID aftermath"]},
+  {t:"Climate & Natural Disasters",cat:"environment",d:"Italy faces increasing floods, droughts, wildfires, and earthquakes. Hydrogeological risk affects 90% of municipalities. Climate adaptation investment lagging.",c:["Geographic vulnerability","Illegal construction in risk zones","Inadequate early warning systems","Political corruption in permits","Climate change amplifying hazards"]},
+  {t:"Gender Inequality",cat:"social",d:"Italy has among Europe's lowest female employment rates. Femicide at alarming levels. Women in leadership positions very low. Pay gap persistent.",c:["Weak childcare system","Cultural traditionalism","Workplace discrimination","Political under-representation of women","Domestic violence normalization"]}
+ ])},
+ {id:"spain",name:"Spain",flag:"🇪🇸",region:"Southern Europe",issues:makeIssues("Spain",[
+  {t:"Youth Unemployment & Precarity",cat:"economic",d:"Spanish youth unemployment at 28%+. The 'mileurista' generation earns €1,000/month. Young people renting with friends into their 40s. Brain drain to Germany and UK.",c:["Rigid dual labor market","Weak vocational education prestige","Construction bubble collapse legacy","Geographic concentration","Discrimination of young in hiring"]},
+  {t:"Housing Affordability Crisis",cat:"housing",d:"Spanish housing costs absorb 40%+ of income for young renters. Tourist apartment platforms displacing long-term renters in Barcelona, Madrid, and Seville.",c:["Airbnb and tourist rental explosion","Post-crisis housing stock reduction","Insufficient social housing","Speculative investment","Rental regulation failures"]},
+  {t:"Territorial & Catalan Crisis",cat:"civic",d:"Catalan independence movement still unresolved. Basque tensions lingering. Constitutional rigidity preventing dialogue. Political system unable to accommodate diversity.",c:["Historical suppression of regional cultures under Franco","Constitutional rigidity","Economic resentment in Catalonia","Identity politics","Political opportunism on all sides"]},
+  {t:"Migration & Integration",cat:"social",d:"Spain is southern Europe's entry point. 7 million foreign residents. Integration of Sub-Saharan African, Latin American, and Moroccan communities mixed. Racism rising.",c:["Mediterranean entry point geography","Moroccan proximity","Latin American economic migration","Insufficient integration resources","Far-right normalization of racism"]},
+  {t:"Ageing & Pension Sustainability",cat:"demographic",d:"Spain has the world's second-oldest population projected for 2050. Pension system in long-term deficit. Care worker shortage. Loneliness epidemic among elderly.",c:["Very low birth rate","Economic emigration of young people","Underfunded eldercare","Extended family breakdown","Mediterranean care model under pressure"]},
+  {t:"Mental Health Crisis",cat:"health",d:"Depression affects 2.4 million Spaniards. Youth mental health declining sharply. Psychiatrist-to-patient ratio below EU average. Suicide leading cause of non-natural death.",c:["Economic precarity","Youth unemployment despair","Social media","Underfunded mental health services","Cultural stigma"]},
+  {t:"Climate Change & Water Crisis",cat:"environment",d:"Spain faces severe droughts threatening agriculture and drinking water. Wildfires increasing. Mediterranean biodiversity under acute threat.",c:["Mediterranean climate vulnerability","Intensive agriculture water use","Climate change acceleration","Tourism environmental impact","Insufficient adaptation investment"]},
+  {t:"Education Reform Gap",cat:"education",d:"Spain has high early school leaving rates (13%), double EU average. Educational reforms reversed with each government change. University system outdated.",c:["Political instability reversing reforms","Early leaving culture","Dual labor market reducing education incentives","Inadequate vocational prestige","University over-enrollment"]},
+  {t:"Gender Equality & Femicide",cat:"social",d:"Spain declared femicide a national emergency. 50+ women killed by partners annually. Gender pay gap persistent. VOX far-right backlash against feminist progress.",c:["Patriarchal cultural residue","Political backlash to feminism","Inadequate domestic violence resources","Economic dependence","Alcohol and drug abuse"]},
+  {t:"Political Polarization",cat:"civic",d:"Spanish politics has fragmented from two-party to six-party system. Coalition instability. VOX far-right normalized. Disinformation campaigns intense.",c:["Economic crisis legacy","Regional tensions","Social media","Elite distrust","Corruption scandals"]}
+ ])},
+ {id:"poland",name:"Poland",flag:"🇵🇱",region:"Eastern Europe",issues:makeIssues("Poland",[
+  {t:"Democratic Recovery",cat:"civic",d:"PiS government (2015-2023) dismantled judicial independence and controlled public media. New Tusk government working to reverse damage. Rule of law restoration proving difficult.",c:["Populist exploitation of grievances","Constitutional court packing","State media capture","EU-Poland rule of law conflict","Historical distrust of institutions"]},
+  {t:"Ukrainian Refugee Integration",cat:"social",d:"Poland hosts 1.5M+ Ukrainian refugees. Integration into labor market and schools proceeding but under pressure. Social tensions beginning to emerge.",c:["Scale of refugee influx","Language and cultural proximity easing but straining services","Housing market pressure","Labor market competition fears","Political backlash emerging"]},
+  {t:"Demographic Crisis",cat:"demographic",d:"Poland has one of Europe's lowest birth rates. Emigration depleted working-age population. Pension system under pressure.",c:["Economic emigration of young people","Low female employment and childcare","Economic uncertainty","Soviet-era demographic distortions","Social change"]},
+  {t:"Economic Inequality (Regional)",cat:"economic",d:"Warsaw is prosperous but eastern and rural Poland lag behind EU average by 30-40 years of development. Infrastructure gap persists.",c:["Historical underdevelopment of east","EU fund misallocation","Warsaw concentration","Transport infrastructure gaps","Educational inequality"]},
+  {t:"Women's Rights & Abortion Crisis",cat:"social",d:"Poland has one of Europe's most restrictive abortion laws. Women are dying due to denied care. Brain drain of women professionals accelerating.",c:["Catholic Church political influence","PiS government 2020 ruling","Conservative coalition politics","Medical profession legal fear","EU pressure resisted"]},
+  {t:"Mental Health",cat:"health",d:"Poland has among Europe's highest suicide rates, particularly for men. Mental health services severely underfunded.",c:["Underfunded psychiatry","Cultural stoicism and stigma","Economic transformation stress","Loneliness especially in rural areas","Post-communist social disruption"]},
+  {t:"Environmental Pollution",cat:"environment",d:"Poland has some of Europe's most polluted air due to coal burning for heating. Smog-related deaths estimated at 45,000/year.",c:["Coal heating tradition","Energy poverty preventing transition","Coal industry political power","Insufficient clean energy subsidies","EU-Poland energy tension"]},
+  {t:"Education Reform",cat:"education",d:"PiS reversed education reforms and introduced ideology into curricula. Teacher pay very low. Digital skills gap in schools.",c:["Political interference in education","Teacher emigration due to low pay","Outdated teaching methods","Curriculum politicization","Insufficient digital investment"]},
+  {t:"Housing Shortage",cat:"housing",d:"Poland has Europe's largest housing deficit per capita. Communist-era blocks aging without renovation. Young Poles cannot access homeownership.",c:["Under-investment post-communist","Land and planning law complexity","Mortgage inaccessibility","Urban concentration in Warsaw","Lack of rental market regulation"]},
+  {t:"Security & Russian Threat",cat:"security",d:"Poland borders Russia and Belarus. Hybrid warfare including border instrumentalization of migrants. Defense spending highest in NATO. Psychological security anxiety elevated.",c:["Historical Russian aggression","Ukraine war proximity","Belarus border instrumentalization","NATO eastern flank vulnerability","Disinformation campaigns"]}
+ ])},
+ {id:"japan",name:"Japan",flag:"🇯🇵",region:"Asia-Pacific",issues:makeIssues("Japan",[
+  {t:"Demographic Crisis & Ageing",cat:"demographic",d:"Japan is the world's oldest society. Birth rate at historic low of 1.2. Workforce shrinking. Rural areas have more elderly than children. Economy under long-term structural pressure.",c:["Cost of child-rearing","Gender roles and workplace culture","Urban housing costs","Long working hours","Cultural shift away from marriage"]},
+  {t:"Hikikomori & Social Withdrawal",cat:"social",d:"Over 1 million Japanese are socially withdrawn, refusing to leave their homes for months or years. A uniquely Japanese crisis of isolation, shame, and connection failure.",c:["Extreme social pressure and shame culture","School bullying","Academic failure anxiety","Social media replacing human connection","Family enabling of withdrawal"]},
+  {t:"Gender Inequality",cat:"social",d:"Japan ranks 125th on the Global Gender Gap Index. Women leave careers upon marriage. Glass ceiling near-total in corporate Japan. Female political representation extremely low.",c:["Workplace culture expecting full devotion","Childcare system inadequacy","Corporate promotion structures","Cultural gender role expectations","Political reluctance to legislate equality"]},
+  {t:"Mental Health & Suicide",cat:"health",d:"Suicide is the leading cause of death for Japanese aged 15-39. Overwork (karoshi) kills thousands annually. Shame-based culture prevents help-seeking.",c:["Extreme work culture","Academic pressure from early childhood","Cultural shame around mental health","Limited professional access","Social isolation"]},
+  {t:"Economic Stagnation & Inequality",cat:"economic",d:"Japan's 'lost decades' continue. Wage growth near-zero for 30 years. Irregular workers (freeters) face poverty. Youth with no career pathway.",c:["Corporate governance dysfunction","Deflationary mindset","Dual labor market","Declining innovation","Population decline reducing demand"]},
+  {t:"Environmental Risks & Nuclear",cat:"environment",d:"Fukushima cleanup ongoing 13 years on. Japan restarting nuclear power amid controversy. Typhoon and earthquake risk amplified by climate change.",c:["Nuclear legacy","Geographic earthquake and tsunami vulnerability","Climate change amplifying typhoon intensity","Industrial pollution legacy","Energy security trade-offs"]},
+  {t:"Education System Pressure",cat:"education",d:"Japan's exam culture generates extreme pressure from elementary school. Juku cram schools commodify education. Creative thinking suppressed.",c:["University entrance exam centrality","Employer use of university brand","Cram school industry","Conformity culture","Inadequate vocational alternatives"]},
+  {t:"Immigration & Xenophobia",cat:"social",d:"Japan resists immigration despite acute labor shortage. Treatment of foreign technical trainees amounts to forced labor. Naturalization near-impossible.",c:["Cultural homogeneity ideology","Weak immigration and anti-discrimination law","Technical trainee visa abuse","Corporate resistance","Nationalist political pressure"]},
+  {t:"Housing & Akiya (Empty Homes)",cat:"housing",d:"Japan has 8 million empty homes while urban housing remains unaffordable. Rural depopulation and urban concentration create housing paradox.",c:["Rural depopulation","Preference for new over old housing","Land ownership complexity","Urban concentration","Aging housing stock"]},
+  {t:"Political Apathy & LDP Dominance",cat:"civic",d:"LDP has governed Japan for almost all of the post-war era. Youth voter turnout below 30%. Political money scandals.",c:["One-party dominance normalizing","Youth disengagement","Political money culture","Weak opposition parties","Corporate-political nexus"]}
+ ])},
+ {id:"southkorea",name:"South Korea",flag:"🇰🇷",region:"Asia-Pacific",issues:makeIssues("South Korea",[
+  {t:"Birth Rate Collapse",cat:"demographic",d:"World's lowest birth rate at 0.72. Government spending billions with minimal effect. Young Koreans rejecting marriage and parenthood due to economic pressure and gender conflict.",c:["Extreme housing costs","Competitive job market","Gender role conflict","Childcare gap","Cost of education"]},
+  {t:"Youth Burnout & Mental Health",cat:"health",d:"Korean youth face extreme academic pressure ('hell Joseon'). Youth suicide rate highest in OECD. Depression and burnout epidemic.",c:["Academic competition culture","Social media","Economic precarity","Work-life collapse","Social isolation"]},
+  {t:"Gender War & Inequality",cat:"social",d:"Extreme gender polarization. Young men and women hold deeply opposed views. Misogynist 'anti-feminist' movement powerful. Dating rates collapsing.",c:["Social media polarization","Economic competition framed as gender war","Historical patriarchy","Backlash to feminism","Political exploitation"]},
+  {t:"Wealth Inequality & Chaebol Power",cat:"economic",d:"Chaebol (Samsung, Hyundai etc.) control 60%+ of GDP. Wealth inherited dynastically. Small businesses crushed. Young people see no path outside chaebol employment.",c:["Chaebol political protection","Inheritance dynasty culture","SME market barriers","Real estate wealth concentration","Government-chaebol nexus"]},
+  {t:"Ageing Population",cat:"demographic",d:"Korea ages faster than any OECD country. Elder poverty among highest in developed world. Many elderly left behind as families leave rural areas.",c:["Birth rate collapse","Extended working life poverty","Undeveloped pension system","Family obligation erosion","Rural abandonment"]},
+  {t:"Housing Affordability",cat:"housing",d:"Seoul apartment prices are 25× annual income. Jeonse (deposit rental) system collapsing. Young Koreans priced out entirely.",c:["Speculative real estate culture","Jeonse system instability","Insufficient supply","Chaebol construction oligopoly","Demand concentration in Seoul"]},
+  {t:"Environmental Pollution",cat:"environment",d:"South Korea has among Asia's worst air quality from domestic coal plants and Chinese pollution. Fine particle deaths in tens of thousands annually.",c:["Coal power dependency","Chinese air pollution import","Industrial concentration","Weak environmental regulation enforcement","Car culture"]},
+  {t:"Education Pressure & Inequality",cat:"education",d:"Korean education system produces high scores but at enormous human cost. Private tutoring industry (hagwon) creates a shadow education system benefiting the wealthy.",c:["University entrance centrality","Hagwon industry inequality","Extreme parental investment","Social comparison culture","Lack of vocational prestige"]},
+  {t:"North Korea Security Threat",cat:"security",d:"DPRK nuclear program advancing. Provocations increasing. Korean peninsula tension highest in decades.",c:["DPRK regime nuclear ambition","US-China tension","South Korean political divide on North","Failed denuclearization","Military deterrence dependency"]},
+  {t:"Political Polarization",cat:"civic",d:"Korean politics deeply divided. Presidential impeachments. Street protests mobilizing millions. Disinformation proliferating.",c:["Historical left-right divide","Social media amplification","Chaebol political ties","Generational divide","Gender war political exploitation"]}
+ ])},
+ {id:"brazil",name:"Brazil",flag:"🇧🇷",region:"Latin America",issues:makeIssues("Brazil",[
+  {t:"Crime & Public Security",cat:"security",d:"Brazil has 50,000+ homicides annually. Organized crime (PCC, CV factions) controls favelas and entire regions. Police violence also crisis-level.",c:["Drug trade economics","Inequality and lack of opportunity","Weak rule of law","Corrupt police forces","Social exclusion of favela residents"]},
+  {t:"Extreme Inequality",cat:"economic",d:"Brazil has one of the world's highest Gini coefficients. The richest 1% earn more than the bottom 50% combined. Racial and regional wealth gaps compound inequality.",c:["Colonial land concentration legacy","Racial discrimination","Regional development disparity","Regressive tax system","Education access gap"]},
+  {t:"Amazon Deforestation",cat:"environment",d:"Amazon loses millions of hectares annually. Tipping point could convert forest to savanna. Indigenous communities displaced and killed defending land rights.",c:["Agricultural expansion (soy, beef)","Land speculation","Weak environmental enforcement","Indigenous land rights violations","Political incentives to develop Amazon"]},
+  {t:"Healthcare Inequality",cat:"health",d:"SUS (public health system) underfunded. Rich Brazilians access world-class private care; poor face years-long queues. Regional disparities severe in Amazonian states.",c:["Chronic underfunding","Regional infrastructure gap","Healthcare workforce mal-distribution","Privatization pressure","Corruption in health contracts"]},
+  {t:"Education Inequality",cat:"education",d:"Brazilian students rank near bottom of PISA globally. Black and poor students dropout at alarming rates. University access gatekept by ENEM. Public universities underfunded.",c:["Early dropout due to economic need","School quality gap by income","Teacher pay crisis","Racial barriers","Rural education absence"]},
+  {t:"Urban Housing Crisis & Favelas",cat:"housing",d:"13 million Brazilians live in informal favelas with insecure tenure, poor sanitation, and high violence.",c:["Rural-urban migration","Insufficient social housing","Land speculation","Favela security preventing investment","Lack of formal property rights"]},
+  {t:"Racial Inequality & Racism",cat:"social",d:"Black Brazilians have 50% lower income than white Brazilians despite being a majority. Police kill Black Brazilians at 3× the rate of white.",c:["Slavery legacy","Racial democracy myth preventing acknowledgment","Police racial profiling","Educational exclusion","Aesthetic and economic racism"]},
+  {t:"Democratic Instability",cat:"civic",d:"Bolsonaro's attempted coup after 2022 election loss exposed deep democratic fragility. Disinformation ecosystem massive.",c:["Economic inequality fueling populism","Social media disinformation","Evangelical political polarization","Bolsonarista networks remaining","Weak democratic institutions"]},
+  {t:"Gender Violence",cat:"social",d:"Brazil has one of the world's highest femicide rates. A woman is killed every 6 hours. Maria da Penha law under-enforced. LGBTQ+ violence extreme.",c:["Machismo culture","Impunity for violence","Economic dependence of women","Evangelical political rollback","Police under-reporting"]},
+  {t:"Mental Health Crisis",cat:"health",d:"Brazil has the world's highest anxiety rate. Depression affects 12 million. CAPS (mental health centers) underfunded. Suicide rates rising especially among young Black men.",c:["Economic despair","Violence trauma","Social inequality","Underfunded mental health system","Social isolation"]}
+ ])},
+ {id:"mexico",name:"Mexico",flag:"🇲🇽",region:"Latin America",issues:makeIssues("Mexico",[
+  {t:"Organized Crime & Cartel Violence",cat:"security",d:"Drug cartels effectively control large territories. 35,000+ homicides annually. Journalists, activists, and politicians assassinated. Extortion of businesses nationwide.",c:["Drug demand from US","Corruption at all government levels","Poverty and lack of opportunity","US weapons trafficking south","Impunity — 90%+ crimes unsolved"]},
+  {t:"Poverty & Inequality",cat:"economic",d:"44% of Mexicans live in poverty. Extreme inequality between wealthy elite and impoverished rural/Indigenous communities.",c:["NAFTA/USMCA benefiting wealthy","Tax evasion by elite","Agricultural sector neglect","Remittance dependency","Informal economy majority"]},
+  {t:"Corruption & Impunity",cat:"civic",d:"Mexico ranked 126/180 on Corruption Perceptions Index. Judicial independence near-absent. Journalists killed for investigating corruption.",c:["Political party funding-corruption nexus","Cartel capture of local governments","Weak independent judiciary","Cultural normalization of 'mordida'","Impunity for powerful"]},
+  {t:"Migration & Displacement",cat:"social",d:"1M+ Mexicans emigrate annually. Millions of Central Americans transiting face violence and extortion by cartels.",c:["Cartel violence displacement","Economic emigration pull from US","Climate-linked agricultural failure","Gangs in Central America","Insufficient humanitarian infrastructure"]},
+  {t:"Femicide & Gender Violence",cat:"social",d:"Mexico has one of the world's highest femicide rates — 10 women killed daily. Feminist protests met with police violence. Impunity for femicide near-total.",c:["Machismo culture","Cartel gender violence","Police impunity","Economic dependence","Weak judicial protection"]},
+  {t:"Education Crisis",cat:"education",d:"Mexican students rank last in OECD on PISA. Teacher union (CNTE) blocks reform. Rural schools without teachers. Violence disrupts schooling.",c:["CNTE union blocking quality reform","Rural infrastructure absence","Indigenous language barriers","Violence-related school closures","Corruption in teacher hiring"]},
+  {t:"Mental Health",cat:"health",d:"Mental health services reach only 1% of those in need. Violence trauma widespread. Addiction and suicide rising.",c:["Underfunded mental health system","Violence trauma exposure","Poverty stress","Cultural stigma","Social isolation in marginalized communities"]},
+  {t:"Environmental Degradation",cat:"environment",d:"Mexico City's water supply in crisis. Deforestation driven by agriculture and cartels. Pollution of rivers and coasts widespread.",c:["Population concentration in Mexico City","Agricultural expansion deforestation","Cartel avocado/lime cultivation expansion","Industrial pollution","Climate change amplifying water stress"]},
+  {t:"Housing & Urban Inequality",cat:"housing",d:"Mexico City and Monterrey housing costs rising rapidly. Millions live in informal settlements. Worker housing in border maquiladora zones exploitative.",c:["Rural-urban migration","Land speculation","Insufficient social housing","Maquiladora labor exploitation","Indigenous land rights violations"]},
+  {t:"Drug Addiction",cat:"health",d:"Fentanyl increasingly consumed domestically. Methamphetamine use surging. Addiction treatment infrastructure minimal outside major cities.",c:["Cartel marketing drugs domestically","US fentanyl demand driving production","Poverty and trauma vulnerability","Insufficient treatment infrastructure","Social exclusion"]}
+ ])},
+ {id:"argentina",name:"Argentina",flag:"🇦🇷",region:"Latin America",issues:makeIssues("Argentina",[
+  {t:"Economic Crisis & Hyperinflation",cat:"economic",d:"Argentina faces 200%+ annual inflation, serial debt default, and currency collapse. Milei's shock therapy causing acute poverty spike. 40%+ in poverty before reforms.",c:["Decades of fiscal populism","IMF debt trap","Currency controls distorting economy","Agricultural export dependency","Political instability preventing reform"]},
+  {t:"Poverty & Inequality",cat:"economic",d:"Poverty exceeds 50% under Milei shock therapy. Child poverty 60%+. Wealthy elite untouched while middle class demolished by inflation.",c:["Hyperinflation destroying wages","Austerity cuts to social programs","Informal economy majority","Regional inequality","Regressive currency effects"]},
+  {t:"Political Instability",cat:"civic",d:"Argentina's political system oscillates between Peronism and anti-Peronism. Milei's libertarian experiment unprecedented. Institutional trust near-zero.",c:["Peronist populism legacy","Elite economic sabotage","Judicial independence deficit","Social media polarization","Structural economic crisis feeding populism"]},
+  {t:"Mental Health Crisis",cat:"health",d:"Argentina has the highest number of psychologists per capita yet mental health crisis deepening. Suicide, depression, anxiety skyrocketing amid economic collapse.",c:["Economic despair","Social fragmentation","COVID aftermath","Youth precarity","Cultural pressure"]},
+  {t:"Housing Crisis",cat:"housing",d:"Buenos Aires rents indexed to inflation making costs unpredictable. 800,000+ in informal villas miseria. Mortgage market nonexistent.",c:["Hyperinflation destroying housing market","Insufficient social housing","Villa miseria growth","Speculation","Dollar-indexed rents"]},
+  {t:"Environmental Issues",cat:"environment",d:"Pampas over-farming depleting soil. Glaciers retreating rapidly. Patagonian fires increasing. Soy monoculture and agrochemicals damaging biodiversity.",c:["Soy export economy","Pesticide overuse","Climate change","Industrial agriculture lobby","Deforestation for agriculture"]},
+  {t:"Gender Violence",cat:"social",d:"#NiUnaMenos movement born in Argentina highlighting femicide crisis. 1 woman killed every 26 hours.",c:["Machismo cultural legacy","Judicial impunity","Economic dependence","Alcohol abuse","Political indifference"]},
+  {t:"Education Deterioration",cat:"education",d:"Argentina once had excellent public education but quality collapsed. Teacher strikes, underfunding, and curriculum battles. University budget cuts under Milei sparking mass protests.",c:["Chronic underfunding","Teacher union strike cycle","Curriculum politicization","University budget austerity","Digital skills gap"]},
+  {t:"Ageing Population",cat:"demographic",d:"Argentina's pension system repeatedly raided during economic crises. Elderly living in poverty despite lifetime contributions.",c:["Economic crises depleting pension funds","Political exploitation of pension savings","Long life expectancy with inadequate planning","Informal economy reducing contributions","Hyperinflation destroying pension value"]},
+  {t:"Migration & Brain Drain",cat:"social",d:"Educated Argentines emigrating to Spain, US, and Israel at record rates. Venezuelan migrants arriving.",c:["Economic crisis push","Weak peso making abroad attractive","Political instability","Bolivian and Venezuelan migration","Climate displacement from rural areas"]}
+ ])},
+ {id:"chile",name:"Chile",flag:"🇨🇱",region:"Latin America",issues:makeIssues("Chile",[
+  {t:"Extreme Inequality",cat:"economic",d:"Despite being Latin America's wealthiest country per capita, Chile has extreme inequality. 2019 social uprising exposed how the economic miracle excluded the majority.",c:["Pinochet-era neoliberal model","Private pension (AFP) failure","Privatized education and healthcare","Copper wealth concentrated in few","Tax system favoring wealthy"]},
+  {t:"Privatized Healthcare Inequality",cat:"health",d:"Dual healthcare system — wealthy use private Isapres, poor use overwhelmed Fonasa. Isapres crisis threatening collapse. Rural healthcare access near absent.",c:["Pinochet privatization legacy","Isapre insolvency crisis","Geographic concentration of specialists","Ageing population straining system","Insufficient rural infrastructure"]},
+  {t:"Immigration & Xenophobia",cat:"social",d:"1.5M Venezuelans, Haitians, and Peruvians arrived in a decade. Iquique racist attacks exposed xenophobic undercurrent. Integration services absent.",c:["Venezuelan political and economic crisis","Haiti earthquake displacement","Northern border porosity","Integration service absence","Far-right political exploitation"]},
+  {t:"Environmental Crisis",cat:"environment",d:"Megadrought affecting central Chile for 14+ years. Mining industry devastating northern ecosystems. Salmon farming destroying Patagonian waterways.",c:["Climate change acceleration","Mining water extraction","Salmon aquaculture pollution","Agricultural water overuse","Political capture by extractive industries"]},
+  {t:"Indigenous Mapuche Conflict",cat:"social",d:"Mapuche people reclaiming ancestral lands via direct action. State of emergency in La Araucanía. Timber company-state conflict.",c:["Colonial land dispossession","Forestry and mining company encroachment","Failed land restitution process","State criminalization of Indigenous resistance","Economic exclusion of Mapuche communities"]},
+  {t:"Constitutional & Political Crisis",cat:"civic",d:"Two failed constitutional rewrite processes in 3 years. Polarization between far-left and far-right. Boric government's mandate weakened.",c:["2019 uprising unresolved demands","Political radicalization on both sides","Constitutional process failures","Social media amplification","Elite resistance to change"]},
+  {t:"Mental Health",cat:"health",d:"Chile has high suicide rates, particularly among youth. Mental health services underfunded. Post-uprising and COVID trauma widespread.",c:["Social inequality and relative deprivation","Academic pressure","Post-uprising trauma","Underfunded services","Social isolation"]},
+  {t:"Education Inequality",cat:"education",d:"Chilean education system highly stratified by income. Top private schools vs collapsed public schools. Student movements have driven reforms but inequality persists.",c:["Historical privatization","Voucher system stratification","Student debt from private universities","Teacher quality gap","Geographic rural-urban inequality"]},
+  {t:"Housing Deficit",cat:"housing",d:"Chile has a 650,000 home deficit. Campamentos (informal settlements) growing fastest in decades as immigration meets housing shortage.",c:["Immigration-driven demand","Construction cost inflation","Insufficient social housing","Land speculation in Santiago","Geographic concentration"]},
+  {t:"Crime & Narco Infiltration",cat:"security",d:"Chilean crime rising sharply. Venezuelan criminal gangs (Tren de Aragua) operating in northern cities. Kidnappings and extortion previously unknown now commonplace.",c:["Venezuelan migration wave including criminal elements","Drug route expansion","Police capacity limitations","Social inequality","Weak response to new criminal organizations"]}
+ ])},
+ {id:"israel",name:"Israel",flag:"🇮🇱",region:"Asia-Pacific",issues:makeIssues("Israel",[
+  {t:"Security & Ongoing Conflict",cat:"security",d:"October 7, 2023 Hamas attack killed 1,200 Israelis; subsequent Gaza war created massive trauma. Hezbollah northern threat. Existential security anxiety shapes all aspects of life.",c:["Unresolved Palestinian conflict","Hamas and Hezbollah armed organizations","Regional state threats (Iran)","Failed peace processes","Occupation and settlement expansion"]},
+  {t:"Democratic Backsliding",cat:"civic",d:"Netanyahu's judicial overhaul sparked mass protests. Supreme Court independence under attack. Coalition with far-right parties normalizing extremism.",c:["Netanyahu legal jeopardy driving judicial reform","Far-right coalition partners","Settler movement political power","Populist anti-court rhetoric","October 7 emergency suspending accountability"]},
+  {t:"Inequality & Cost of Living",cat:"economic",d:"2011 tent protests showed deep Israeli cost of living crisis. Housing costs catastrophic. Tech sector wealth versus peripheral poverty. Arab and Haredi communities economically excluded.",c:["Housing shortage","High import costs","Tech sector wage divergence","Haredi and Arab under-employment","Monopolistic food and consumer industry"]},
+  {t:"Societal Fragmentation",cat:"social",d:"Israeli society deeply divided: secular vs. religious, Ashkenazi vs. Mizrahi vs. Ethiopian, Jewish vs. Arab, right vs. left.",c:["Ethnic and religious diversity without shared framework","Electoral system incentivizing division","Economic inequality overlapping with identity","October 7 trauma divisions","Settler-urban divide"]},
+  {t:"Mental Health Crisis",cat:"health",d:"October 7 trauma created mass PTSD. IDF soldiers, hostage families, and Gaza-border communities in acute distress. Mental health services overwhelmed.",c:["War trauma","Hostage crisis prolongation","Security anxiety","Combat exposure","Displacement of communities from north and south"]},
+  {t:"Housing Affordability",cat:"housing",d:"Tel Aviv is one of the world's most expensive cities. Young Israelis priced out of housing. Social housing near-absent.",c:["Housing construction shortfall","Land scarcity","Speculative investment","Bureaucratic planning delays","Security situation limiting development"]},
+  {t:"Education Inequality",cat:"education",d:"Arab and Haredi school systems chronically underfunded vs. mainstream. Ethiopian Jewish community facing discrimination. University access unequal.",c:["Three separate underfunded school systems","Religious exemptions from curriculum","Language barriers for Arab students","Ethnic discrimination","Geographic inequality"]},
+  {t:"Environmental Challenges",cat:"environment",d:"Israel faces water scarcity despite leading desalination tech. Mediterranean pollution. Climate change threatening agriculture.",c:["Regional water scarcity","Mediterranean biodiversity loss","Industrial pollution","Occupation environmental complications","Climate change heat extremes"]},
+  {t:"Ageing Population",cat:"demographic",d:"Israel's ageing is slower than European peers due to higher birth rates, but rapid elder population growth is straining pension and healthcare systems.",c:["Increasing longevity","Haredi and Arab higher birth rates","Pension fund strain","Care worker shortage","Holocaust survivor generation care needs"]},
+  {t:"Arab-Jewish Integration",cat:"social",d:"Arab citizens (21% of Israel) face systematic discrimination in land, employment, and policing. October 7 strained relations further.",c:["Land and planning law discrimination","Labor market barriers","Educational segregation","Political exclusion from coalitions","Security framing of Arab citizens"]}
+ ])},
+ {id:"ireland",name:"Ireland",flag:"🇮🇪",region:"Anglosphere",issues:makeIssues("Ireland",[
+  {t:"Housing & Homelessness Crisis",cat:"housing",d:"Ireland has the EU's worst housing crisis. 14,000+ homeless. A generation locked out of homeownership. Dublin rents among Europe's highest.",c:["Insufficient construction post-2008 crash","Foreign direct investment worker pressure","Vulture fund landlordism","Planning law complexity","Tax breaks for institutional landlords"]},
+  {t:"Migration & Integration",cat:"social",d:"Ireland went from emigration nation to major immigration destination. 120,000+ asylum seekers in 2023. Integration services overwhelmed. Far-right protests at asylum seeker housing.",c:["International protection system overwhelmed","EU distribution mechanism failure","Housing shortage magnifying tensions","Political normalization of anti-immigrant rhetoric","Service capacity gaps"]},
+  {t:"Mental Health Crisis",cat:"health",d:"Ireland has high suicide rates especially for young men. Mental health services severely underfunded — CAMHS in crisis. Cultural stigma strong. Rural access absent.",c:["Cultural stoicism and stigma","Underfunded CAMHS","Economic pressure","Social isolation in rural areas","Post-crash generational despair"]},
+  {t:"Cost of Living",cat:"economic",d:"Ireland has EU's highest cost of living outside Luxembourg. Healthcare, childcare, education, and housing costs crushing household budgets.",c:["Housing costs cascading everywhere","Multinational distortion of economy","Childcare market failure","Energy price shocks","Wage divergence between sectors"]},
+  {t:"Healthcare Waiting Lists",cat:"health",d:"Over 900,000 on hospital waiting lists. Two-tier system: private insurance jumps queue. GPs unavailable in many areas. Sláintecare reform years behind schedule.",c:["Underfunded public system","Two-tier insurance-public divide","GP shortage and burnout","Post-COVID backlog","Sláintecare implementation failure"]},
+  {t:"Education Access & Inequality",cat:"education",d:"Childcare costs among EU's highest. School building deficit. Third-level CAO system highly pressurized. DEIS (disadvantaged) schools under-resourced.",c:["Childcare privatization","School place shortage","CAO points pressure","DEIS underfunding","Rural school viability challenges"]},
+  {t:"Climate & Environment",cat:"environment",d:"Ireland missing all EU climate targets. Agriculture (beef and dairy) accounts for 37% of emissions. Peat extraction ongoing.",c:["Beef and dairy political power","Agricultural lobby resistance","Insufficient carbon pricing","Planning law delaying renewables","Political short-termism"]},
+  {t:"Political Trust & Populism",cat:"civic",d:"Far-right emerged strongly in 2024 elections. Migration anxiety driving support for anti-establishment parties. Trust in legacy parties declining.",c:["Housing crisis anger","Migration pace anxieties","Elite political disconnect","Social media amplification","Legacy party fatigue"]},
+  {t:"Drug Use & Addiction",cat:"health",d:"Dublin has Western Europe's highest cocaine use. Rural drug markets expanding. Addiction services severely under-resourced.",c:["Organized crime drug supply","Economic despair","Social isolation","Inadequate treatment services","Policing focus over treatment"]},
+  {t:"Ageing Population",cat:"demographic",d:"Ireland's population ageing rapidly. Home care and nursing home capacity severely inadequate. Carer allowance system inequitable.",c:["Demographic transition","Insufficient home care capacity","Nursing home bed shortage","Carer support inadequacy","Geographic distribution of elderly"]}
+ ])}
+];
+
+// Remaining countries (stub data)
+const REMAINING_DATA = [
+ {id:"austria",name:"Austria",flag:"🇦🇹",region:"Western Europe"},
+ {id:"switzerland",name:"Switzerland",flag:"🇨🇭",region:"Western Europe"},
+ {id:"belgium",name:"Belgium",flag:"🇧🇪",region:"Western Europe"},
+ {id:"denmark",name:"Denmark",flag:"🇩🇰",region:"Northern Europe"},
+ {id:"norway",name:"Norway",flag:"🇳🇴",region:"Northern Europe"},
+ {id:"finland",name:"Finland",flag:"🇫🇮",region:"Northern Europe"},
+ {id:"portugal",name:"Portugal",flag:"🇵🇹",region:"Southern Europe"},
+ {id:"greece",name:"Greece",flag:"🇬🇷",region:"Southern Europe"},
+ {id:"hungary",name:"Hungary",flag:"🇭🇺",region:"Eastern Europe"},
+ {id:"czechrepublic",name:"Czech Republic",flag:"🇨🇿",region:"Eastern Europe"},
+ {id:"newzealand",name:"New Zealand",flag:"🇳🇿",region:"Anglosphere"},
+];
+
+const REMAINING_TOPICS = {
+ austria:["Far-Right Rise (FPÖ)","Housing Shortage","Migration & Integration","Aging Population","Healthcare Access","Climate & Environment","Youth Unemployment","Education Reform","Political Polarization","Antisemitism"],
+ switzerland:["Healthcare Cost Crisis","Housing Affordability","Immigration & Integration","Aging Population","Political Fragmentation","Climate & Alps Degradation","Wealth Inequality","Banking Secrecy & Ethics","Mental Health","Youth Opportunities"],
+ belgium:["Political Deadlock","Flemish-Walloon Divide","Islamist Radicalization","Migration & Integration","Housing Shortage","Economic Stagnation","Mental Health Crisis","Education Inequality","Climate Transition","Aging Population"],
+ denmark:["Integration & Ghetto Policy","Mental Health","Housing Costs","Political Polarization","Climate Leadership Gap","Care Worker Shortage","Youth Mental Health","Islamophobia","Economic Inequality","Asylum Policy"],
+ norway:["Oil Dependency vs Climate","Integration of Immigrants","Mental Health","Housing Costs","Aging Population","Youth Substance Abuse","Political Extremism","Rural Depopulation","Gender Equality Gaps","Loneliness Epidemic"],
+ finland:["Mental Health & Suicide","Aging & Care Crisis","Russian Security Threat","Youth Unemployment","Integration of Migrants","Rural Depopulation","Education Decline","Housing Costs","Substance Abuse","Political Polarization"],
+ portugal:["Youth Brain Drain","Housing Affordability","Aging Population","Low Wages & Poverty","Tourism Overtourism","Climate & Wildfires","Migration (incoming)","Healthcare Gaps","Education Quality","Political Distrust"],
+ greece:["Youth Unemployment","Brain Drain","Debt & Austerity Legacy","Migration & Border Crisis","Aging Population","Climate & Wildfires","Mental Health","Corruption","Housing Affordability","Healthcare Under-resourcing"],
+ hungary:["Democratic Backsliding","Media Capture by Orbán","Emigration & Brain Drain","Demographic Crisis","Corruption","Anti-LGBTQ+ Discrimination","Economic Stagnation","Healthcare Decline","Education Politicization","Anti-Migrant Rhetoric"],
+ czechrepublic:["Housing Shortage","Healthcare Access","Political Corruption","Aging Population","Migration Integration","Coal Dependency","Mental Health","Brain Drain","Education Reform","Gender Inequality"],
+ newzealand:["Housing Affordability","Indigenous Māori Rights","Mental Health Crisis","Cost of Living","Climate & Environment","Youth Substance Abuse","Domestic Violence","Education Inequality","Political Polarization","Immigration Pressure"],
+};
+
+const CAT_FOR_TITLE = {
+ "Far-Right Rise (FPÖ)":"civic","Housing Shortage":"housing","Migration & Integration":"social","Aging Population":"demographic","Healthcare Access":"health","Climate & Environment":"environment","Youth Unemployment":"economic","Education Reform":"education","Political Polarization":"civic","Antisemitism":"social",
+ "Healthcare Cost Crisis":"health","Housing Affordability":"housing","Immigration & Integration":"social","Political Fragmentation":"civic","Climate & Alps Degradation":"environment","Wealth Inequality":"economic","Banking Secrecy & Ethics":"civic","Mental Health":"health","Youth Opportunities":"economic",
+ "Political Deadlock":"civic","Flemish-Walloon Divide":"civic","Islamist Radicalization":"security","Economic Stagnation":"economic","Mental Health Crisis":"health","Education Inequality":"education","Climate Transition":"environment",
+ "Integration & Ghetto Policy":"social","Housing Costs":"housing","Climate Leadership Gap":"environment","Care Worker Shortage":"demographic","Youth Mental Health":"health","Islamophobia":"social","Economic Inequality":"economic","Asylum Policy":"social",
+ "Oil Dependency vs Climate":"environment","Integration of Immigrants":"social","Aging Population":"demographic","Youth Substance Abuse":"health","Political Extremism":"civic","Rural Depopulation":"economic","Gender Equality Gaps":"social","Loneliness Epidemic":"health",
+ "Mental Health & Suicide":"health","Aging & Care Crisis":"demographic","Russian Security Threat":"security","Integration of Migrants":"social","Education Decline":"education","Substance Abuse":"health",
+ "Youth Brain Drain":"economic","Low Wages & Poverty":"economic","Tourism Overtourism":"environment","Climate & Wildfires":"environment","Migration (incoming)":"social","Healthcare Gaps":"health","Education Quality":"education","Political Distrust":"civic",
+ "Brain Drain":"economic","Debt & Austerity Legacy":"economic","Migration & Border Crisis":"social","Climate & Wildfires":"environment","Corruption":"civic","Healthcare Under-resourcing":"health",
+ "Democratic Backsliding":"civic","Media Capture by Orbán":"civic","Emigration & Brain Drain":"economic","Demographic Crisis":"demographic","Anti-LGBTQ+ Discrimination":"social","Healthcare Decline":"health","Education Politicization":"education","Anti-Migrant Rhetoric":"social",
+ "Political Corruption":"civic","Coal Dependency":"environment","Gender Inequality":"social",
+ "Indigenous Māori Rights":"social","Domestic Violence":"social","Immigration Pressure":"social",
+};
+
+const EMOJI_BY_CAT = {economic:"💸",social:"👥",health:"🏥",education:"📚",civic:"🗳️",environment:"🌱",housing:"🏠",security:"🔒",tech:"💻",demographic:"👴"};
+
+REMAINING_DATA.forEach(c => {
+ const titles = REMAINING_TOPICS[c.id]||[];
+ c.issues = titles.map((t, i) => {
+  const cat = CAT_FOR_TITLE[t]||"social";
+  return {rank:i+1, emoji:EMOJI_BY_CAT[cat]||"⚙️", title:t, cat, desc:`${c.name} faces significant challenges around ${t.toLowerCase()}, requiring coordinated responses from government, civil society, and community organizations.`, causes:["Structural factors","Policy gaps","Historical context","Resource constraints","Social change"], hizmet:`Hizmet's commitment to education, dialogue, and community solidarity provides a framework for addressing this issue in ${c.name}.`, hacts:[{i:"🕊️",t:"Interfaith dialogue and community-building"},{i:"📚",t:"Education and scholarship programs"},{i:"🤝",t:"Community solidarity and mutual aid"},{i:"📢",t:"Civil society advocacy for inclusive policy"}]};
+ });
+});
+
+const ALL_COUNTRIES = [...COUNTRIES, ...EXTRA_COUNTRIES, ...REMAINING_DATA];
+
+// ══════════════════════════════════════════════════════════
+// COUNTRY STATS
+// ══════════════════════════════════════════════════════════
+const COUNTRY_STATS = {
+ usa:{pop:"335 million",gov:"Federal Republic",gdp:"$80,000",hdi:"#21",hizmet:"50+ cities — dialogue & schools",key:"Opioid epidemic & polarization"},
+ uk:{pop:"67 million",gov:"Parliamentary Monarchy",gdp:"$49,000",hdi:"#15",hizmet:"30+ cities — schools & dialogue",key:"Housing crisis & NHS strain"},
+ germany:{pop:"84 million",gov:"Federal Republic",gdp:"$54,000",hdi:"#9",hizmet:"Major — Turkish-German community",key:"Integration & industrial decline"},
+ france:{pop:"68 million",gov:"Semi-Presidential Republic",gdp:"$45,000",hdi:"#28",hizmet:"Paris, Lyon, Marseille",key:"Banlieue integration failure"},
+ canada:{pop:"38 million",gov:"Federal Parliamentary",gdp:"$55,000",hdi:"#15",hizmet:"Toronto, Montreal, Vancouver",key:"Housing & Indigenous rights"},
+ australia:{pop:"26 million",gov:"Federal Parliamentary",gdp:"$65,000",hdi:"#10",hizmet:"Sydney, Melbourne — active",key:"Housing & Indigenous reconciliation"},
+ sweden:{pop:"10.5 million",gov:"Constitutional Monarchy",gdp:"$57,000",hdi:"#7",hizmet:"Stockholm, Gothenburg",key:"Gang violence & integration"},
+ netherlands:{pop:"17.9 million",gov:"Constitutional Monarchy",gdp:"$61,000",hdi:"#10",hizmet:"Amsterdam, Rotterdam",key:"Nitrogen crisis & housing"},
+ italy:{pop:"59 million",gov:"Republic",gdp:"$36,000",hdi:"#30",hizmet:"Rome, Milan — active",key:"Demographic collapse & youth precarity"},
+ spain:{pop:"47 million",gov:"Constitutional Monarchy",gdp:"$34,000",hdi:"#27",hizmet:"Madrid, Barcelona — active",key:"Youth unemployment & housing"},
+ poland:{pop:"38 million",gov:"Republic",gdp:"$20,000",hdi:"#34",hizmet:"Warsaw, Krakow — active",key:"Democratic recovery & integration"},
+ japan:{pop:"124 million",gov:"Constitutional Monarchy",gdp:"$34,000",hdi:"#24",hizmet:"Tokyo, Osaka — dialogue",key:"Demographic crisis & isolation"},
+ southkorea:{pop:"51 million",gov:"Republic",gdp:"$35,000",hdi:"#19",hizmet:"Seoul — dialogue & education",key:"Birth rate collapse & youth burnout"},
+ brazil:{pop:"215 million",gov:"Federal Republic",gdp:"$10,000",hdi:"#87",hizmet:"São Paulo, Rio — active",key:"Crime & extreme inequality"},
+ mexico:{pop:"130 million",gov:"Federal Republic",gdp:"$11,000",hdi:"#74",hizmet:"Mexico City — active",key:"Cartel violence & corruption"},
+ argentina:{pop:"46 million",gov:"Federal Republic",gdp:"$13,000",hdi:"#47",hizmet:"Buenos Aires — active",key:"Hyperinflation & poverty"},
+ chile:{pop:"19 million",gov:"Republic",gdp:"$16,000",hdi:"#44",hizmet:"Santiago — dialogue & education",key:"Inequality & Mapuche conflict"},
+ israel:{pop:"9.5 million",gov:"Parliamentary Democracy",gdp:"$55,000",hdi:"#22",hizmet:"Jerusalem, Tel Aviv — dialogue",key:"Security crisis & democratic erosion"},
+ ireland:{pop:"5.1 million",gov:"Republic",gdp:"$103,000",hdi:"#8",hizmet:"Dublin, Cork — active",key:"Housing crisis & rapid migration"},
+ austria:{pop:"9 million",gov:"Federal Republic",gdp:"$57,000",hdi:"#25",hizmet:"Vienna, Graz — active",key:"FPÖ rise & integration"},
+ switzerland:{pop:"8.7 million",gov:"Federal Confederation",gdp:"$93,000",hdi:"#1",hizmet:"Zurich, Geneva — dialogue",key:"Healthcare cost & integration"},
+ belgium:{pop:"11.6 million",gov:"Federal Kingdom",gdp:"$52,000",hdi:"#13",hizmet:"Brussels, Antwerp — active",key:"Political deadlock & radicalization"},
+ denmark:{pop:"5.9 million",gov:"Constitutional Monarchy",gdp:"$68,000",hdi:"#6",hizmet:"Copenhagen, Aarhus — dialogue",key:"Integration & Islamophobia policy"},
+ norway:{pop:"5.4 million",gov:"Constitutional Monarchy",gdp:"$108,000",hdi:"#2",hizmet:"Oslo, Bergen — active",key:"Oil vs. climate contradiction"},
+ finland:{pop:"5.5 million",gov:"Republic",gdp:"$54,000",hdi:"#11",hizmet:"Helsinki, Tampere — dialogue",key:"Mental health & Russian security"},
+ portugal:{pop:"10.3 million",gov:"Republic",gdp:"$25,000",hdi:"#38",hizmet:"Lisbon, Porto — active",key:"Youth brain drain & housing"},
+ greece:{pop:"10.7 million",gov:"Republic",gdp:"$21,000",hdi:"#33",hizmet:"Athens, Thessaloniki — active",key:"Youth unemployment & migration gateway"},
+ hungary:{pop:"9.7 million",gov:"Republic",gdp:"$19,000",hdi:"#45",hizmet:"Budapest — active",key:"Democratic backsliding & emigration"},
+ czechrepublic:{pop:"10.9 million",gov:"Republic",gdp:"$27,000",hdi:"#32",hizmet:"Prague, Brno — dialogue",key:"Housing shortage & corruption"},
+ newzealand:{pop:"5.1 million",gov:"Parliamentary Monarchy",gdp:"$48,000",hdi:"#13",hizmet:"Auckland, Wellington — active",key:"Housing & Māori reconciliation"},
+};
+
+// ══════════════════════════════════════════════════════════
+// CATEGORY CONSTANTS
+// ══════════════════════════════════════════════════════════
+const CAT_COLORS = {economic:"#8b6914",social:"#1a3d6b",health:"#8b3314",education:"#1a6b5a",civic:"#5a1a8a",environment:"#2a6a2a",housing:"#6a4a14",security:"#7a1a1a",tech:"#1a4a7a",demographic:"#4a2a6a"};
+const CAT_BG = {economic:"rgba(139,105,20,0.1)",social:"rgba(26,61,107,0.1)",health:"rgba(139,51,20,0.1)",education:"rgba(26,107,90,0.1)",civic:"rgba(90,26,138,0.1)",environment:"rgba(42,106,42,0.1)",housing:"rgba(106,74,20,0.1)",security:"rgba(122,26,26,0.1)",tech:"rgba(26,74,122,0.1)",demographic:"rgba(74,42,106,0.1)"};
+const CAT_NAMES = {economic:"Economic",social:"Social",health:"Health",education:"Education",civic:"Civic",environment:"Environment",housing:"Housing",security:"Security",tech:"Technology",demographic:"Demographic"};
+
+// ══════════════════════════════════════════════════════════
+// COUNTRY VALUES (abbreviated — key entries)
+// ══════════════════════════════════════════════════════════
+const COUNTRY_VALUES = {
+ usa:{summary:"American culture is built on individualism, the American Dream mythology, and a uniquely powerful belief that personal effort determines outcomes. This shapes healthcare debates, gun rights, welfare attitudes, and entrepreneurial culture. The culture prizes freedom of expression, religious pluralism, and self-reliance, while grappling with deep contradictions between its founding ideals and its history of slavery, exclusion, and systemic inequality.",values:[{icon:"🦅",name:"Individualism & Self-Reliance",desc:"Personal responsibility over collective solutions. The 'self-made' myth is foundational — success is earned, failure is personal.",impacts:["Healthcare debate","Welfare stigma","Gun rights","Entrepreneurship"]},{icon:"💰",name:"The American Dream",desc:"Belief that hard work guarantees upward mobility. Shapes attitudes toward poverty and success.",impacts:["Work ethic","Immigration appeal","Inequality denial","Hustle culture"]},{icon:"⛪",name:"Religious Faith",desc:"Uniquely high religiosity. Evangelical Christianity shapes politics, education, and social attitudes.",impacts:["Abortion politics","LGBTQ rights","Political alignment","School curricula"]},{icon:"🗽",name:"Freedom & Liberty",desc:"Negative freedom — freedom from government — is paramount. Resists collective solutions.",impacts:["COVID response","Healthcare debate","Free speech","Political identity"]},{icon:"🔫",name:"Gun Culture",desc:"Firearms embedded in identity. Second Amendment treated as near-sacred.",impacts:["Policy gridlock","Safety anxiety","Rural-urban divide","Masculinity norms"]},{icon:"🏈",name:"Sports & Competition",desc:"Competitive culture pervades all areas. Winning is moralized. Meritocracy maintained through sports mythology.",impacts:["Education competition","Work culture","Social mobility myth","Entertainment"]}],tensions:[{a:"Individual rights",b:"Collective responsibility",desc:"Constant friction between personal freedom and social good"},{a:"Meritocracy myth",b:"Systemic inequality",desc:"Belief in equal opportunity alongside massive structural disadvantage"},{a:"Religious tradition",b:"Secular pluralism",desc:"Culture wars over abortion, LGBTQ rights, and school content"},{a:"Patriotism",b:"Critical self-reflection",desc:"Difficulty reconciling national pride with historical injustices"}],hizmet:"Hizmet's emphasis on service, education, and interfaith dialogue resonates with American voluntarist tradition. Its values of hard work and community uplift speak the language of the American Dream while challenging its exclusionary applications."},
+ uk:{summary:"British culture is shaped by reserve, pragmatism, and class consciousness. The 'stiff upper lip' discourages emotional expression. Post-imperial nostalgia haunts national identity. The class system still powerfully determines opportunity. Brexit crystallized a cultural divide between cosmopolitan urban Britain and post-industrial England.",values:[{icon:"🫖",name:"Reserve & Understatement",desc:"Emotional restraint is valued. Indirect communication and irony are cultural currencies.",impacts:["Mental health stigma","Conflict avoidance","Social awkwardness","Comedy culture"]},{icon:"🏥",name:"NHS as National Religion",desc:"The NHS is Britain's most cherished institution. Defending it is politically sacred.",impacts:["Healthcare politics","Austerity battles","National identity","Volunteer culture"]},{icon:"👑",name:"Class Consciousness",desc:"Accent, school attended, and postcode still determine life chances and social acceptance.",impacts:["Education inequality","Political representation","Social mobility","Cultural snobbery"]},{icon:"🏰",name:"Tradition & Continuity",desc:"Deep attachment to established institutions. Distrust of radical change.",impacts:["Constitutional reform resistance","Monarchy support","Slow policy change","Brexit conservatism"]},{icon:"😏",name:"Irony & Self-Deprecation",desc:"Humor as social glue. Earnestness is suspect.",impacts:["Political satire","Media tone","Trust barriers","Emotional distance"]},{icon:"⚽",name:"Fair Play Ethos",desc:"Deep commitment to playing by the rules. Shapes expectations of politicians and institutions.",impacts:["Brexit betrayal narrative","Political scandal sensitivity","Sports culture","Legal tradition"]}],tensions:[{a:"Tradition",b:"Modernization",desc:"From monarchy to Brexit — resistance to change vs. need for adaptation"},{a:"Imperial nostalgia",b:"Multicultural reality",desc:"'Great Britain' mythology vs. diverse post-colonial society"},{a:"Class pride",b:"Social mobility ideals",desc:"Celebrating working-class identity while aspiring out of it"},{a:"Reserve",b:"Mental health openness",desc:"Cultural change meeting deep-seated stoicism"}],hizmet:"Hizmet's British presence engages the tradition of civic voluntarism and religious pluralism. Its service ethic resonates with NHS collective values while its dialogue work addresses the integration challenges of a post-imperial multicultural society."},
+ germany:{summary:"German culture is profoundly shaped by the Nazi legacy and Cold War division. Collective guilt produced a strong constitutional democracy and deep commitment to human rights. Ordnung (order), Pflicht (duty), and Gründlichkeit (thoroughness) are cultural virtues. Consensus-seeking shapes business and politics. Eastern and western German identities still diverge significantly.",values:[{icon:"📋",name:"Ordnung (Order & Rules)",desc:"Rules and procedures are deeply respected. Bureaucratic precision is a virtue.",impacts:["Efficient institutions","Environmental compliance","Punctuality norms","Bureaucratic friction"]},{icon:"🤝",name:"Konsens (Consensus)",desc:"Major decisions require broad agreement. Coalition politics and deliberation are normal.",impacts:["Coalition government","Labor relations","Slow decision-making","Social stability"]},{icon:"🕊️",name:"Erinnerungskultur (Memory Culture)",desc:"Active remembrance of Nazi crimes shapes national identity and foreign policy.",impacts:["Antisemitism sensitivity","Far-right stigma","Pacifist foreign policy","Arms export caution"]},{icon:"⚙️",name:"Ingenieurgeist (Engineering Mindset)",desc:"Deep pride in technical precision and quality manufacturing.",impacts:["Industrial excellence","Innovation culture","Auto industry identity","Economic model"]},{icon:"🌳",name:"Umweltbewusstsein (Ecology)",desc:"Germans pioneered Green politics. Recycling and renewable energy are mainstream commitments.",impacts:["Green party strength","Energiewende","Consumer behavior","Urban planning"]},{icon:"📅",name:"Planungssicherheit (Security through Planning)",desc:"Deep preference for certainty and long-term planning over risk.",impacts:["Savings culture","Risk aversion","Mortgage conservatism","Career planning"]}],tensions:[{a:"National pride",b:"Historical guilt",desc:"Difficult to express patriotism without triggering historical associations"},{a:"East German identity",b:"Westernization",desc:"Ostalgie and economic resentment vs. reunification idealism"},{a:"Pacifist tradition",b:"Security obligations",desc:"Ukraine war forcing rearmament after decades of pacifism"},{a:"Rule-following",b:"Flexibility & innovation",desc:"Order as strength but also obstacle to rapid adaptation"}],hizmet:"Hizmet's Turkish-German schools and dialogue centers have been central to integration debates for decades. Germany's Erinnerungskultur creates natural common ground with Hizmet's emphasis on human dignity and opposition to all extremism."},
+};
+
+function getGenericValues(c) {
+ return {
+  summary:`${c.name}'s cultural values are shaped by its unique historical trajectory, geography, and social development. These values influence how citizens approach community, authority, family, work, and civic life — creating both assets and challenges for social cohesion.`,
+  values:[
+   {icon:"👨‍👩‍👧‍👦",name:"Family & Community",desc:"Strong family and community bonds form the social foundation, shaping individual decision-making and providing safety nets.",impacts:["Social welfare","Civic participation","Community care","Economic behavior"]},
+   {icon:"🏛️",name:"Civic Tradition",desc:"A particular relationship with state institutions — either high-trust or skeptical — shapes engagement with government and public life.",impacts:["Voter turnout","Tax compliance","Public service","Political culture"]},
+   {icon:"🎓",name:"Education & Learning",desc:"The value placed on education shapes aspirations, social mobility, and economic participation across generations.",impacts:["Social mobility","Workforce quality","Cultural values","Innovation"]},
+   {icon:"⛪",name:"Religious & Spiritual Life",desc:"Religious tradition shapes ethical frameworks, family values, and political attitudes even in secular societies.",impacts:["Social conservatism","Community bonding","Political alignment","Cultural identity"]},
+   {icon:"🌿",name:"Relationship with Nature",desc:"Geographic context and historical relationship with the land shapes environmental attitudes and resource politics.",impacts:["Environmental policy","Outdoor culture","Agricultural identity","Climate attitudes"]},
+   {icon:"🤝",name:"Solidarity & Mutual Aid",desc:"Cultural traditions of helping neighbors and supporting the vulnerable shape welfare attitudes and community resilience.",impacts:["Welfare state support","Volunteering","Community organizing","Crisis response"]}
+  ],
+  tensions:[
+   {a:"Traditional values",b:"Modern individualism",desc:"Tension between inherited cultural frameworks and globalized individual lifestyles"},
+   {a:"National identity",b:"Multicultural reality",desc:"Established cultural identity navigating increasing diversity"}
+  ],
+  hizmet:`Hizmet's universal values of education, dialogue, and service resonate with ${c.name}'s traditions of community solidarity and learning. The movement's institutions can complement existing civil society structures while bringing interfaith understanding and educational excellence to communities that need them most.`
+ };
+}
+
+// ══════════════════════════════════════════════════════════
+// RENDER FUNCTIONS
+// ══════════════════════════════════════════════════════════
+let activeRegion = "all";
+let activeCat = "all";
+let searchQ = "";
+let activeCountry = null;
+
+function renderSidebar() {
+ const el = document.getElementById('sidebarInner');
+ const grouped = {};
+ ALL_COUNTRIES.forEach(c => {
+  if (!grouped[c.region]) grouped[c.region] = [];
+  grouped[c.region].push(c);
+ });
+ let html = '';
+ Object.entries(grouped).forEach(([region, countries]) => {
+  const regionHidden = activeRegion !== 'all' && activeRegion !== region;
+  html += `<div class="region-group-label" style="${regionHidden?'display:none':''}">${region}</div>`;
+  countries.forEach(c => {
+   const searchMatch = !searchQ || c.name.toLowerCase().includes(searchQ) || (c.issues||[]).some(i => i.title.toLowerCase().includes(searchQ));
+   const regionMatch = activeRegion === 'all' || activeRegion === c.region;
+   const visible = searchMatch && regionMatch;
+   html += `<div class="country-item ${activeCountry===c.id?'active':''} ${!visible?'hidden':''}" onclick="selectCountry('${c.id}')">
+    <span class="country-flag">${c.flag}</span>
+    <span class="country-name">${c.name}</span>
+    <span class="country-count">${(c.issues||[]).length}</span>
+   </div>`;
+  });
+ });
+ el.innerHTML = html;
+}
+
+function selectCountry(id) {
+ activeCountry = id;
+ const c = ALL_COUNTRIES.find(x => x.id === id);
+ renderSidebar();
+ renderContent(c);
+}
+
+function renderContent(c) {
+ const content = document.getElementById('mainContent');
+ const issuesFiltered = (c.issues||[]).filter(i => {
+  const catMatch = activeCat === 'all' || i.cat === activeCat;
+  const searchMatch = !searchQ || i.title.toLowerCase().includes(searchQ) || i.desc.toLowerCase().includes(searchQ) || (i.causes||[]).some(ca => ca.toLowerCase().includes(searchQ));
+  return catMatch && searchMatch;
+ });
+
+ const issuesHtml = issuesFiltered.map(issue => {
+  const catColor = CAT_COLORS[issue.cat]||'#555';
+  const catBg = CAT_BG[issue.cat]||'rgba(0,0,0,0.05)';
+  const rankClass = issue.rank<=3 ? `rank-${issue.rank}` : '';
+  const causesHtml = (issue.causes||[]).map(ca => `<span class="cause-tag">${ca}</span>`).join('');
+  const hactsHtml = (issue.hacts||[]).map(h => `<div class="hact"><span class="hact-icon">${h.i}</span><span class="hact-text">${h.t}</span></div>`).join('');
+
+  // Partnership panel
+  const pp = PARTNERSHIPS[issue.cat] || PARTNERSHIPS['social'];
+  const partnerHtml = `
+   <div class="partners-panel">
+    <h4>🤝 Partnership Opportunities</h4>
+    <div class="partners-grid">
+     <div class="partner-group">
+      <div class="partner-group-label"><span>🌍</span> NGOs & INGOs</div>
+      <div class="partner-list">${pp.ngo.map(p=>`<div class="partner-item">${p}</div>`).join('')}</div>
+     </div>
+     <div class="partner-group">
+      <div class="partner-group-label"><span>🏘️</span> Civic Organizations</div>
+      <div class="partner-list">${pp.civic.map(p=>`<div class="partner-item">${p}</div>`).join('')}</div>
+     </div>
+     <div class="partner-group">
+      <div class="partner-group-label"><span>🏛️</span> Government Bodies</div>
+      <div class="partner-list">${pp.govt.map(p=>`<div class="partner-item">${p}</div>`).join('')}</div>
+     </div>
+     <div class="partner-group">
+      <div class="partner-group-label"><span>🕊️</span> Interfaith Groups</div>
+      <div class="partner-list">${pp.faith.map(p=>`<div class="partner-item">${p}</div>`).join('')}</div>
+     </div>
+    </div>
+   </div>`;
+
+  return `
+  <div class="issue-row" data-rank="${issue.rank}" onclick="toggleRow(this)">
+   <div class="issue-row-header">
+    <div class="rank-badge ${rankClass}">${issue.rank}</div>
+    <div class="issue-icon-box" style="background:${catBg}">${issue.emoji}</div>
+    <div class="issue-row-title">
+     <h3>${issue.title}</h3>
+     <p>${issue.desc.substring(0,110)}…</p>
+    </div>
+    <span class="icat-badge" style="background:${catBg};color:${catColor}">${CAT_NAMES[issue.cat]||issue.cat}</span>
+    <span class="expand-btn">▾</span>
+   </div>
+   <div class="issue-row-body">
+    <p class="issue-full-desc">${issue.desc}</p>
+    <div class="info-block">
+     <h4>Root Causes</h4>
+     <div class="causes-tags">${causesHtml}</div>
+    </div>
+    <div class="hizmet-panel">
+     <h5>⬡ Hizmet Community Response</h5>
+     <p>${issue.hizmet}</p>
+     <div class="hizmet-actions-grid">${hactsHtml}</div>
+    </div>
+    ${partnerHtml}
+   </div>
+  </div>`;
+ }).join('') || `<div class="empty-state"><h3>No issues match current filters</h3></div>`;
+
+ document.getElementById('resultsInfo').textContent = `${issuesFiltered.length} of ${(c.issues||[]).length} issues`;
+
+ // Values section
+ const vals = COUNTRY_VALUES[c.id] || getGenericValues(c);
+ const valCardsHtml = vals.values.map(v => `
+  <div class="value-card">
+   <div class="value-card-top"><span class="value-icon">${v.icon}</span><span class="value-name">${v.name}</span></div>
+   <p class="value-desc">${v.desc}</p>
+   <div class="value-impact">${(v.impacts||[]).map(im=>`<span class="value-impact-tag">${im}</span>`).join('')}</div>
+  </div>`).join('');
+ const tensionsHtml = (vals.tensions||[]).map(t => `
+  <div class="tension-item"><span class="tension-vs">VS</span><span><strong>${t.a}</strong> vs <strong>${t.b}</strong> — ${t.desc}</span></div>`).join('');
+ const valuesSectionHtml = `
+  <div class="values-section" id="valuesSection">
+   <div class="values-section-header" onclick="toggleValues()">
+    <h3>${c.flag} Cultural Values of ${c.name}</h3>
+    <span class="vs-tag">Values & Identity</span>
+    <span class="vs-toggle">▾</span>
+   </div>
+   <div class="values-body">
+    <div class="values-summary"><p>${vals.summary}</p></div>
+    <div class="values-grid">${valCardsHtml}</div>
+    ${tensionsHtml ? `<div class="values-tensions"><h4>⚡ Core Cultural Tensions</h4><div class="tensions-grid">${tensionsHtml}</div></div>` : ''}
+    <div class="values-hizmet"><h5>⬡ How Hizmet Engages These Values</h5><p>${vals.hizmet}</p></div>
+   </div>
+  </div>`;
+
+ // Info strip
+ const cs = COUNTRY_STATS[c.id] || {};
+ const infoStripHtml = [
+  {icon:'👥',label:'Population',value:cs.pop||'—'},
+  {icon:'🏛️',label:'Government',value:cs.gov||'—'},
+  {icon:'💰',label:'GDP per Capita',value:cs.gdp||'—'},
+  {icon:'📊',label:'HDI Rank',value:cs.hdi||'—'},
+  {icon:'🌍',label:'Hizmet Active',value:cs.hizmet||'Active'},
+  {icon:'🔑',label:'Top Challenge',value:cs.key||'—'},
+ ].map(it=>`<div class="cinfo-item"><span class="cinfo-icon">${it.icon}</span><span class="cinfo-body"><span class="cinfo-label">${it.label}</span><span class="cinfo-value">${it.value}</span></span></div>`).join('');
+
+ content.innerHTML = `
+ <div class="fade-in">
+  <div class="country-header">
+   <div class="country-header-top">
+    <div class="country-big-flag">${c.flag}</div>
+    <div class="country-header-text"><h2>${c.name}</h2><div class="country-region-label">${c.region}</div></div>
+   </div>
+   <div class="country-info-strip">${infoStripHtml}</div>
+  </div>
+  ${valuesSectionHtml}
+  <div class="section-divider"><h3>🔍 Top 10 Social Issues</h3></div>
+  <div class="issues-list">${issuesHtml}</div>
+ </div>`;
+}
+
+function toggleRow(el) { el.classList.toggle('open'); }
+function toggleValues() { const vs=document.getElementById('valuesSection'); if(vs) vs.classList.toggle('open'); }
+function togglePanel(id) { document.getElementById(id).classList.toggle('open'); }
+function switchGTab(el, panelId) {
+ el.closest('.panel-body').querySelectorAll('.gtab').forEach(t=>t.classList.remove('active'));
+ el.closest('.panel-body').querySelectorAll('.gtab-panel').forEach(p=>p.classList.remove('active'));
+ el.classList.add('active');
+ document.getElementById(panelId).classList.add('active');
+}
+
+document.getElementById('searchInput').addEventListener('input', e => {
+ searchQ = e.target.value.toLowerCase().trim();
+ renderSidebar();
+ if (activeCountry) { const c=ALL_COUNTRIES.find(x=>x.id===activeCountry); if(c) renderContent(c); }
+});
+document.querySelectorAll('.region-btn').forEach(btn => btn.addEventListener('click', () => {
+ document.querySelectorAll('.region-btn').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active'); activeRegion=btn.dataset.region;
+ renderSidebar();
+ if(activeCountry){const c=ALL_COUNTRIES.find(x=>x.id===activeCountry);if(c)renderContent(c);}
+}));
+document.querySelectorAll('.cat-btn').forEach(btn => btn.addEventListener('click', () => {
+ document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active'); activeCat=btn.dataset.cat;
+ if(activeCountry){const c=ALL_COUNTRIES.find(x=>x.id===activeCountry);if(c)renderContent(c);}
+}));
+
+renderSidebar();
+</script>
+</article>
+</main>
+</body>
+</html>
