@@ -1,31 +1,5 @@
 [
   {
-    "url": "https://yasirbilgin.com/arts/music/bendir-usuller.html",
-    "section": "Arts",
-    "subsec": "Music",
-    "title": "Usüller Bendir",
-    "desc": "An interactive reference guide to usül rhythmic patterns for the bendir — the frame drum at the heart of Turkish Sufi music and devotional practice.",
-    "date": "2026-01-01",
-    "tags": [
-      "bendir",
-      "Turkish music",
-      "rhythm"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/arts/music/suno-structure-extractor.html",
-    "section": "Arts",
-    "subsec": "Music",
-    "title": "Suno Structure Extractor",
-    "desc": "Suno Structure Extractor",
-    "date": "",
-    "tags": [
-      "music AI",
-      "song structure",
-      "audio tools"
-    ]
-  },
-  {
     "url": "https://yasirbilgin.com/arts/aesthetics/home-design-philosophies.html",
     "section": "Arts",
     "subsec": "Aesthetics",
@@ -75,6 +49,32 @@
       "calligraphy",
       "Islamic art",
       "Arabic script"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/arts/music/bendir-usuller.html",
+    "section": "Arts",
+    "subsec": "Music",
+    "title": "Usüller Bendir",
+    "desc": "An interactive reference guide to usül rhythmic patterns for the bendir — the frame drum at the heart of Turkish Sufi music and devotional practice.",
+    "date": "2026-01-01",
+    "tags": [
+      "bendir",
+      "Turkish music",
+      "rhythm"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/arts/music/suno-structure-extractor.html",
+    "section": "Arts",
+    "subsec": "Music",
+    "title": "Suno Structure Extractor",
+    "desc": "Suno Structure Extractor",
+    "date": "",
+    "tags": [
+      "music AI",
+      "song structure",
+      "audio tools"
     ]
   },
   {
@@ -247,6 +247,32 @@
     ]
   },
   {
+    "url": "https://yasirbilgin.com/civilization/civilizations/atlas-of-melody-muslim-world.html",
+    "section": "Civilization",
+    "subsec": "Civilizations",
+    "title": "Atlas of Melody in the Muslim World",
+    "desc": "How local cultures across fourteen centuries and five continents shaped, inflected, and transformed Islamic devotional sound — from Ottoman makam to South…",
+    "date": "2026-01-01",
+    "tags": [
+      "music",
+      "Muslim world",
+      "cultural atlas"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/civilization/civilizations/typologies-of-societies.html",
+    "section": "Civilization",
+    "subsec": "Civilizations",
+    "title": "Typologies of Societies",
+    "desc": "A society",
+    "date": "2026-01-01",
+    "tags": [
+      "sociology",
+      "civilizations",
+      "social theory"
+    ]
+  },
+  {
     "url": "https://yasirbilgin.com/civilization/geopolitics/cultural-and-religious-conflict-zones.html",
     "section": "Civilization",
     "subsec": "Geopolitics",
@@ -296,32 +322,6 @@
       "international relations",
       "governance",
       "global systems"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/civilization/civilizations/atlas-of-melody-muslim-world.html",
-    "section": "Civilization",
-    "subsec": "Civilizations",
-    "title": "Atlas of Melody in the Muslim World",
-    "desc": "How local cultures across fourteen centuries and five continents shaped, inflected, and transformed Islamic devotional sound — from Ottoman makam to South…",
-    "date": "2026-01-01",
-    "tags": [
-      "music",
-      "Muslim world",
-      "cultural atlas"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/civilization/civilizations/typologies-of-societies.html",
-    "section": "Civilization",
-    "subsec": "Civilizations",
-    "title": "Typologies of Societies",
-    "desc": "A society",
-    "date": "2026-01-01",
-    "tags": [
-      "sociology",
-      "civilizations",
-      "social theory"
     ]
   },
   {
@@ -426,110 +426,6 @@
       "Japan",
       "spirituality",
       "Shinto Buddhism"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/essential-books--islam.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "Essential Books of the Islamic Tradition",
-    "desc": "200 foundational works spanning theology, jurisprudence, philosophy, science, history, literature, and social thought — the intellectual heritage that…",
-    "date": "2026-01-01",
-    "tags": [
-      "Islamic books",
-      "reading list",
-      "scholarship"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/islam-in-china.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "Islam in China: Civilization, Synthesis, and Mutual Influence",
-    "desc": "From Silk Road merchants to Han Kitāb philosophers, from Sīnī calligraphy to Uyghur muqam — how two great civilizations have shaped each other across…",
-    "date": "2026-01-01",
-    "tags": [
-      "Islam",
-      "China",
-      "cultural history"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/madrasa-books.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "Medrese Kitapları",
-    "desc": "A structured guide to the classical madrasa curriculum — the foundational texts in Arabic grammar, logic, theology, jurisprudence, and Islamic sciences.",
-    "date": "2026-01-01",
-    "tags": [
-      "madrasa",
-      "Islamic education",
-      "Turkish"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/science-of-the-heart.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "The Science of the Heart: A Complete Methodology of Sufism | Religious Sciences",
-    "desc": "Taṣawwuf is Islam",
-    "date": "2026-01-01",
-    "tags": [
-      "tasawwuf",
-      "Sufism",
-      "spiritual psychology"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/tafseer.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "The Science of Listening: A Complete Guide to Tafsīr",
-    "desc": "The Qurʾān has been recited in the same words for fourteen centuries. But what those words mean — and who has the right to say — has been the central…",
-    "date": "2026-05-01",
-    "tags": [
-      "tafsir",
-      "Quran commentary",
-      "Islamic sciences"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/the-grammar-of-belief-kalam.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "The Grammar of Belief: A Complete Guide to Kalām",
-    "desc": "Before a Muslim can say what God does , she must ask what God is . Kalām is the discipline that makes that question answerable — the rational theology…",
-    "date": "2026-05-01",
-    "tags": [
-      "kalam",
-      "Islamic theology",
-      "aqeedah"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/usul-fiqh.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "The Architecture of the Law: A Complete Methodology of Uṣūl al-Fiqh | Fikir Defteri",
-    "desc": "Before a jurist can rule, she must ask: by what right, from what source, through what reasoning? Uṣūl al-Fiqh is the discipline that answers those prior…",
-    "date": "2026-01-01",
-    "tags": [
-      "usul al-fiqh",
-      "Islamic law",
-      "jurisprudence"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/faith/islamic-studies/usul-hadith.html",
-    "section": "Faith",
-    "subsec": "Islamic Studies",
-    "title": "The Custodians of the Word: A Complete Methodology of ʿUlūm al-Ḥadīth | Religious Sciences",
-    "desc": "Before a prophetic tradition can guide a life or ground a legal ruling, it must be verified. ʿUlūm al-Ḥadīth is the Islamic science that makes…",
-    "date": "2026-01-01",
-    "tags": [
-      "hadith sciences",
-      "Islamic tradition",
-      "sunnah"
     ]
   },
   {
@@ -663,6 +559,110 @@
     ]
   },
   {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/essential-books--islam.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "Essential Books of the Islamic Tradition",
+    "desc": "200 foundational works spanning theology, jurisprudence, philosophy, science, history, literature, and social thought — the intellectual heritage that…",
+    "date": "2026-01-01",
+    "tags": [
+      "Islamic books",
+      "reading list",
+      "scholarship"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/islam-in-china.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "Islam in China: Civilization, Synthesis, and Mutual Influence",
+    "desc": "From Silk Road merchants to Han Kitāb philosophers, from Sīnī calligraphy to Uyghur muqam — how two great civilizations have shaped each other across…",
+    "date": "2026-01-01",
+    "tags": [
+      "Islam",
+      "China",
+      "cultural history"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/madrasa-books.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "Medrese Kitapları",
+    "desc": "A structured guide to the classical madrasa curriculum — the foundational texts in Arabic grammar, logic, theology, jurisprudence, and Islamic sciences.",
+    "date": "2026-01-01",
+    "tags": [
+      "madrasa",
+      "Islamic education",
+      "Turkish"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/science-of-the-heart.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "The Science of the Heart: A Complete Methodology of Sufism | Religious Sciences",
+    "desc": "Taṣawwuf is Islam",
+    "date": "2026-01-01",
+    "tags": [
+      "tasawwuf",
+      "Sufism",
+      "spiritual psychology"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/tafseer.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "The Science of Listening: A Complete Guide to Tafsīr",
+    "desc": "The Qurʾān has been recited in the same words for fourteen centuries. But what those words mean — and who has the right to say — has been the central…",
+    "date": "2026-05-01",
+    "tags": [
+      "tafsir",
+      "Quran commentary",
+      "Islamic sciences"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/the-grammar-of-belief-kalam.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "The Grammar of Belief: A Complete Guide to Kalām",
+    "desc": "Before a Muslim can say what God does , she must ask what God is . Kalām is the discipline that makes that question answerable — the rational theology…",
+    "date": "2026-05-01",
+    "tags": [
+      "kalam",
+      "Islamic theology",
+      "aqeedah"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/usul-fiqh.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "The Architecture of the Law: A Complete Methodology of Uṣūl al-Fiqh | Fikir Defteri",
+    "desc": "Before a jurist can rule, she must ask: by what right, from what source, through what reasoning? Uṣūl al-Fiqh is the discipline that answers those prior…",
+    "date": "2026-01-01",
+    "tags": [
+      "usul al-fiqh",
+      "Islamic law",
+      "jurisprudence"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/faith/islamic-studies/usul-hadith.html",
+    "section": "Faith",
+    "subsec": "Islamic Studies",
+    "title": "The Custodians of the Word: A Complete Methodology of ʿUlūm al-Ḥadīth | Religious Sciences",
+    "desc": "Before a prophetic tradition can guide a life or ground a legal ruling, it must be verified. ʿUlūm al-Ḥadīth is the Islamic science that makes…",
+    "date": "2026-01-01",
+    "tags": [
+      "hadith sciences",
+      "Islamic tradition",
+      "sunnah"
+    ]
+  },
+  {
     "url": "https://yasirbilgin.com/faith/quran-and-hadith/resources.html",
     "section": "Faith",
     "subsec": "Quran & Hadith",
@@ -793,6 +793,32 @@
     ]
   },
   {
+    "url": "https://yasirbilgin.com/life/family/family-therapy.html",
+    "section": "Life",
+    "subsec": "Family",
+    "title": "Family Therapy — Complete Clinical Guide",
+    "desc": "Family therapy begins with a shift in vision. Instead of seeing human problems only as internal defects within individuals, family therapy asks how…",
+    "date": "2026-01-01",
+    "tags": [
+      "family therapy",
+      "counseling",
+      "mental health"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/life/family/family-workshops-trainer-guide.html",
+    "section": "Life",
+    "subsec": "Family",
+    "title": "Family Workshops — Trainer Guide",
+    "desc": "A complete trainer guide for Hizmet family workshops covering nine sessions: ground rules, family life cycle, MBTI, expectations, family of origin, communication, and spiritual foundations.",
+    "date": "2026-05-30",
+    "tags": [
+      "family workshops",
+      "facilitation",
+      "Hizmet"
+    ]
+  },
+  {
     "url": "https://yasirbilgin.com/life/wellbeing/how-body-repairs-itself.html",
     "section": "Life",
     "subsec": "Wellbeing",
@@ -829,32 +855,6 @@
       "wellbeing",
       "self-care",
       "psychology"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/life/family/family-therapy.html",
-    "section": "Life",
-    "subsec": "Family",
-    "title": "Family Therapy — Complete Clinical Guide",
-    "desc": "Family therapy begins with a shift in vision. Instead of seeing human problems only as internal defects within individuals, family therapy asks how…",
-    "date": "2026-01-01",
-    "tags": [
-      "family therapy",
-      "counseling",
-      "mental health"
-    ]
-  },
-  {
-    "url": "https://yasirbilgin.com/life/family/family-workshops-trainer-guide.html",
-    "section": "Life",
-    "subsec": "Family",
-    "title": "Family Workshops — Trainer Guide",
-    "desc": "A complete trainer guide for Hizmet family workshops covering nine sessions: ground rules, family life cycle, MBTI, expectations, family of origin, communication, and spiritual foundations.",
-    "date": "2026-05-30",
-    "tags": [
-      "family workshops",
-      "facilitation",
-      "Hizmet"
     ]
   },
   {

@@ -7,6 +7,7 @@ Run from the repo root before committing:
 """
 
 import json, re, sys
+from datetime import date as _date
 from pathlib import Path
 
 SECTION_NAMES = {
@@ -69,6 +70,23 @@ for section_dir in sorted(root.iterdir()):
 out = root / 'assets' / 'search-index.json'
 out.write_text(json.dumps(entries, ensure_ascii=False, indent=2))
 print(f'search-index.json: {len(entries)} entries ({out.stat().st_size // 1024} KB)')
+
+# Regenerate sitemap.xml from the same entries
+today = _date.today().isoformat()
+sitemap_lines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    '  <url><loc>https://yasirbilgin.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>',
+]
+for e in entries:
+    lastmod = e.get('date') or today
+    sitemap_lines.append(
+        f'  <url><loc>{e["url"]}</loc><lastmod>{lastmod}</lastmod>'
+        f'<changefreq>monthly</changefreq><priority>0.8</priority></url>'
+    )
+sitemap_lines.append('</urlset>')
+(root / 'sitemap.xml').write_text('\n'.join(sitemap_lines) + '\n')
+print(f'sitemap.xml: {len(entries)+1} URLs')
 
 # Bump service worker cache version so browsers discard the old cached search-index.json
 sw = root / 'sw.js'

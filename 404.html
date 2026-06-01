@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Redirect old uppercase folder URLs to their lowercase equivalents -->
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var lower = path.toLowerCase();
+      if (lower !== path) {
+        window.location.replace(lower + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Yasir Bilgin" />
   <meta name="description" content="The page you're looking for doesn't exist. Search for content or browse sections on yasirbilgin.com." />
