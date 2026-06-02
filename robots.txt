@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /assets/search-index.json
+Disallow: /assets/fonts.css
+Disallow: /assets/tokens.css
+Disallow: /assets/section.css
+Disallow: /assets/article.css
 Sitemap: https://yasirbilgin.com/sitemap.xml

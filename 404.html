@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Redirect old uppercase folder URLs to their lowercase equivalents -->
+  <!-- Redirect old URLs: lowercase case-only changes + known path renames -->
   <script>
     (function () {
       var path = window.location.pathname;
       var lower = path.toLowerCase();
-      if (lower !== path) {
-        window.location.replace(lower + window.location.search + window.location.hash);
+      // Fix known section renames (old slug → current slug)
+      var pathRemap = [
+        ['/spirituality/', '/spirit/'],
+      ];
+      var remapped = lower;
+      for (var i = 0; i < pathRemap.length; i++) {
+        if (remapped.indexOf(pathRemap[i][0]) === 0) {
+          remapped = pathRemap[i][1] + remapped.slice(pathRemap[i][0].length);
+          break;
+        }
+      }
+      if (remapped !== path) {
+        window.location.replace(remapped + window.location.search + window.location.hash);
       }
     })();
   </script>
