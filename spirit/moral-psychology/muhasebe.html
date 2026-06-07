@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en" id="root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Muhasebe / Günlük Muhasebe | Yasir Bilgin</title>
+
+  <meta name="description" content="A ten-step daily self-accounting verbatim rooted in Islamic moral psychology — available in English and Turkish. Reflect on your day with honesty and return to God with clarity.">
+  <meta name="keywords" content="muhasebe, spiritual growth, moral psychology">
+
+  <link rel="canonical" href="https://yasirbilgin.com/spirit/Moral-Psychology/muhasebe.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Daily Muhasebe / Günlük Muhasebe">
+  <meta property="og:description" content="A ten-step daily self-accounting verbatim rooted in Islamic moral psychology — available in English and Turkish.">
+  <meta property="og:url"         content="https://yasirbilgin.com/spirit/Moral-Psychology/muhasebe.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="Daily Muhasebe — Self-Accounting Verbatim">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Daily Muhasebe / Günlük Muhasebe">
+  <meta name="twitter:description" content="A ten-step daily self-accounting verbatim rooted in Islamic moral psychology — available in English and Turkish.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Daily Muhasebe / Günlük Muhasebe",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-06-06",
+    "dateModified": "2026-06-06",
+    "description": "A ten-step daily self-accounting verbatim rooted in Islamic moral psychology — available in English and Turkish.",
+    "url": "https://yasirbilgin.com/spirit/Moral-Psychology/muhasebe.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",             "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Spirit",           "item": "https://yasirbilgin.com/spirit/" },
+      { "@type": "ListItem", "position": 3, "name": "Moral Psychology", "item": "https://yasirbilgin.com/spirit/Moral-Psychology/" },
+      { "@type": "ListItem", "position": 4, "name": "Daily Muhasebe",   "item": "https://yasirbilgin.com/spirit/Moral-Psychology/muhasebe.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Tokens ─────────────────────────────────────────── */
+    :root {
+      --bg:        #faf7f2;
+      --surface:   #ffffff;
+      --border:    #e8e0d4;
+      --text:      #1e1a14;
+      --text-dim:  #5c5248;
+      --faint:     #6e5f4e;
+      --accent:    #7c5c3a;
+      --accent-lt: #b8895a;
+      --accent-bg: #f5ede2;
+      --gold:      #c4933a;
+      --gold-lt:   #f0ddb8;
+      --step-bg:   #fdf9f4;
+      --nav-h:     62px;
+      --radius:    10px;
+      --shadow:    0 2px 18px rgba(100,70,30,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    /* ── Language toggle ─────────────────────────────────── */
+    /* Elements are hidden/shown purely by toggling [data-lang] on <html> */
+    html[lang="en"] [data-tr] { display: none !important; }
+    html[lang="tr"] [data-en] { display: none !important; }
+
+    /* ── Language switcher bar ───────────────────────────── */
+    .lang-bar {
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 200;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 0;
+    }
+    .lang-btn {
+      flex: 0 0 auto;
+      padding: 0.55rem 1.4rem;
+      font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--faint);
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      min-height: 40px;
+    }
+    .lang-btn:hover { color: var(--accent); }
+    .lang-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--gold);
+    }
+    .lang-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .lang-sep {
+      width: 1px;
+      height: 16px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    /* ── Progress bar ────────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+      pointer-events: none;
+    }
+
+    /* ── TOC overlay ─────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--surface);
+      width: min(340px, 90vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.5rem 3rem;
+      border-left: 1px solid var(--border);
+    }
+    .toc-close {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1.2rem;
+    }
+    .toc-close button {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: var(--faint);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .toc-close button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-panel h3 {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--border); }
+    .toc-list a {
+      display: block;
+      padding: 0.72rem 0;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover, .toc-list a:focus-visible { color: var(--accent); outline: none; }
+    .toc-list a.toc-main { font-weight: 600; color: var(--text); }
+    .toc-num {
+      display: inline-block;
+      width: 1.4rem;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ── Eyebrow ─────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+
+    /* ── Hero ────────────────────────────────────────────── */
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3.5rem 2.5rem 2.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-dim);
+      max-width: 580px;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.75rem; }
+    .avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .byline-name { font-weight: 600; font-size: 0.9rem; display: block; }
+    .byline-meta { font-size: 0.8rem; color: var(--faint); }
+    .hero-rule { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ── Article header (meta-bar) ───────────────────────── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      padding: 0.65rem 2.5rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .read-time {
+      font-size: 0.8rem;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+      margin-right: auto;
+    }
+    .toc-btn, .print-btn {
+      font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif;
+      padding: 0.38rem 0.85rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      min-height: 34px;
+    }
+    .toc-btn {
+      background: var(--accent-bg);
+      border: 1px solid rgba(124,92,58,0.22);
+      color: var(--accent);
+    }
+    .toc-btn:hover { background: var(--gold-lt); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .print-btn {
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .print-btn:hover { background: var(--accent-lt); border-color: var(--accent-lt); }
+    .print-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ── Article body ────────────────────────────────────── */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 8rem;
+    }
+
+    /* ── Intro block ─────────────────────────────────────── */
+    .intro-block {
+      background: var(--accent-bg);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+    }
+    .intro-block strong { color: var(--accent); }
+
+    /* ── Step cards ──────────────────────────────────────── */
+    .step-card {
+      background: var(--step-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 2rem 1.8rem;
+      margin-bottom: 2.4rem;
+      box-shadow: var(--shadow);
+      scroll-margin-top: 110px;
+    }
+    .step-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .step-title-block h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.32rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.15rem;
+    }
+    .step-subtitle {
+      font-size: 0.82rem;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+    }
+    .step-divider { border: none; border-top: 1px solid var(--border); margin: 1.2rem 0; }
+
+    .prompt-label {
+      font-size: 0.71rem;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .prompt-q {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.45rem;
+    }
+    .prompt-note {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      font-style: italic;
+      line-height: 1.65;
+      margin-bottom: 0.9rem;
+    }
+    .prompt-example {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.7rem 1rem;
+      font-size: 0.86rem;
+      color: var(--text-dim);
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    .prompt-example strong { color: var(--text); font-weight: 600; }
+
+    /* Checkboxes */
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.45rem;
+      margin: 0.65rem 0 0.9rem;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.86rem;
+      color: var(--text-dim);
+      cursor: pointer;
+      padding: 0.3rem 0.5rem;
+      border-radius: 6px;
+      transition: background 0.12s;
+      user-select: none;
+    }
+    .check-item:hover { background: rgba(196,147,58,0.08); }
+    .check-item input[type="checkbox"] {
+      appearance: none;
+      width: 16px; height: 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 3px;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: all 0.12s;
+      position: relative;
+    }
+    .check-item input[type="checkbox"]:checked {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    .check-item input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      top: 1px; left: 4px;
+      width: 5px; height: 9px;
+      border: 2px solid #fff;
+      border-top: none; border-left: none;
+      transform: rotate(40deg);
+    }
+    .check-item input[type="checkbox"]:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px;
+    }
+    .custom-input-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.86rem;
+      color: var(--text-dim);
+      margin-top: 0.2rem;
+    }
+    .custom-input-row input[type="checkbox"] {
+      appearance: none;
+      width: 16px; height: 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 3px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .custom-text {
+      border: none;
+      border-bottom: 1px solid var(--border);
+      background: transparent;
+      font-size: 0.86rem;
+      color: var(--text);
+      width: 140px;
+      padding: 0.1rem 0;
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+    .custom-text:focus { outline: none; border-color: var(--accent); }
+
+    /* Textareas */
+    .reflect-area {
+      width: 100%;
+      min-height: 88px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.8);
+      padding: 0.7rem 1rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.65;
+      resize: vertical;
+      margin-top: 0.45rem;
+      transition: border-color 0.15s;
+    }
+    .reflect-area:focus { outline: none; border-color: var(--accent); }
+    .reflect-area::placeholder { color: var(--faint); font-style: italic; }
+
+    .sub-group { margin-top: 1.2rem; }
+
+    /* Chips */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.65rem 0;
+    }
+    .chip {
+      padding: 0.28rem 0.72rem;
+      border-radius: 999px;
+      font-size: 0.79rem;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--gold-lt);
+      color: var(--accent);
+      border: 1px solid rgba(196,147,58,0.25);
+      cursor: pointer;
+      transition: background 0.12s;
+      user-select: none;
+    }
+    .chip.selected { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* Gratitude */
+    .gratitude-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .gratitude-num {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--gold-lt);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 8px;
+    }
+    .gratitude-row textarea {
+      flex: 1;
+      min-height: 58px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.8);
+      padding: 0.55rem 0.9rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: var(--text);
+      resize: none;
+      line-height: 1.55;
+    }
+    .gratitude-row textarea:focus { outline: none; border-color: var(--accent); }
+    .gratitude-row textarea::placeholder { color: var(--faint); font-style: italic; }
+
+    /* Action */
+    .action-input {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid var(--gold-lt);
+      background: transparent;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1rem;
+      color: var(--text);
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+      transition: border-color 0.15s;
+    }
+    .action-input:focus { outline: none; border-color: var(--gold); }
+    .action-input::placeholder { color: var(--faint); font-style: italic; }
+    .action-cues {
+      display: flex;
+      gap: 0.65rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .cue-tag {
+      font-size: 0.77rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--faint);
+      background: var(--accent-bg);
+      border-radius: 4px;
+      padding: 0.18rem 0.48rem;
+    }
+
+    .ornament {
+      text-align: center;
+      color: var(--gold-lt);
+      font-size: 1.2rem;
+      letter-spacing: 0.4em;
+      margin: 0.3rem 0 2rem;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .footer-logo { font-weight: 600; font-family: 'Source Serif 4', Georgia, serif; }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      .hero { padding: 3rem 1.4rem 2rem; }
+      .article-header { padding: 0.65rem 1.4rem; }
+      .article-body { padding: 1.5rem 1.4rem 5rem; }
+      .step-card { padding: 1.4rem 1.1rem 1.3rem; }
+      .check-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+      footer { padding: 1.5rem 1.4rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    /* ── Print ───────────────────────────────────────────── */
+    @media print {
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body { background: #fff; font-size: 11pt; }
+      .progress-bar, .toc-overlay, .lang-bar, .toc-btn, .print-btn,
+      .article-header { display: none !important; }
+      .hero { padding: 1.2cm 0 0.8cm; page-break-after: avoid; }
+      .hero h1 { font-size: 20pt; }
+      .hero-sub { font-size: 11pt; }
+      .article-body { padding: 0.3cm 0 1cm; }
+      .step-card {
+        break-inside: avoid;
+        margin-bottom: 1.1cm;
+        border: 1px solid #d0c8bc;
+        box-shadow: none;
+      }
+      .reflect-area, .action-input, .gratitude-row textarea {
+        border: 1px solid #ccc;
+        background: #fff;
+        min-height: 48pt;
+      }
+      footer { page-break-before: avoid; }
+      @page { margin: 1.8cm 2cm; size: A4; }
+    }
+
+    /* ── Reduced motion ──────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main-content">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LANGUAGE SWITCHER — sticky below global nav
+  ════════════════════════════════════════════════════════════ -->
+  <div class="lang-bar" role="tablist" aria-label="Language / Dil">
+    <button class="lang-btn active" id="btn-en" role="tab"
+            aria-selected="true" aria-controls="main-content"
+            onclick="setLang('en')">English</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-tr" role="tab"
+            aria-selected="false" aria-controls="main-content"
+            onclick="setLang('tr')">Türkçe</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TOC OVERLAY (bilingual — only active lang items shown)
+  ════════════════════════════════════════════════════════════ -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <div class="toc-close">
+        <button onclick="document.getElementById('tocOverlay').classList.remove('open')"
+                aria-label="Close / Kapat">✕</button>
+      </div>
+      <h3 data-en>Contents</h3>
+      <h3 data-tr>İçindekiler</h3>
+      <ul class="toc-list" data-en>
+        <li><a href="#s1" class="toc-main"><span class="toc-num">1.</span>The Key Moment</a></li>
+        <li><a href="#s2" class="toc-main"><span class="toc-num">2.</span>What Did I Feel?</a></li>
+        <li><a href="#s3" class="toc-main"><span class="toc-num">3.</span>What Did I Think?</a></li>
+        <li><a href="#s4" class="toc-main"><span class="toc-num">4.</span>What Did My Nafs Want?</a></li>
+        <li><a href="#s5" class="toc-main"><span class="toc-num">5.</span>What Is Allah Teaching Me?</a></li>
+        <li><a href="#s6" class="toc-main"><span class="toc-num">6.</span>The Other Person's World</a></li>
+        <li><a href="#s7" class="toc-main"><span class="toc-num">7.</span>Where Did Guidance Appear?</a></li>
+        <li><a href="#s8" class="toc-main"><span class="toc-num">8.</span>Gratitude</a></li>
+        <li><a href="#s9" class="toc-main"><span class="toc-num">9.</span>Tawbah</a></li>
+        <li><a href="#s10" class="toc-main"><span class="toc-num">10.</span>One Step for Tomorrow</a></li>
+      </ul>
+      <ul class="toc-list" data-tr>
+        <li><a href="#s1" class="toc-main"><span class="toc-num">1.</span>Günün Önemli Anı</a></li>
+        <li><a href="#s2" class="toc-main"><span class="toc-num">2.</span>Ne Hissettim?</a></li>
+        <li><a href="#s3" class="toc-main"><span class="toc-num">3.</span>Ne Düşündüm?</a></li>
+        <li><a href="#s4" class="toc-main"><span class="toc-num">4.</span>Nefis Ne İstedi?</a></li>
+        <li><a href="#s5" class="toc-main"><span class="toc-num">5.</span>Allah Bana Ne Öğretiyor?</a></li>
+        <li><a href="#s6" class="toc-main"><span class="toc-num">6.</span>Karşı Tarafın Dünyası</a></li>
+        <li><a href="#s7" class="toc-main"><span class="toc-num">7.</span>Hidayet Nerede Belirdi?</a></li>
+        <li><a href="#s8" class="toc-main"><span class="toc-num">8.</span>Şükür</a></li>
+        <li><a href="#s9" class="toc-main"><span class="toc-num">9.</span>Tevbe</a></li>
+        <li><a href="#s10" class="toc-main"><span class="toc-num">10.</span>Yarın İçin Bir Adım</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="eyebrow" data-en>Spirit · Moral Psychology</div>
+    <div class="eyebrow" data-tr>Spirit · Ahlak Psikolojisi</div>
+
+    <h1 data-en>Daily <em>Muhasebe</em></h1>
+    <h1 data-tr>Günlük <em>Muhasebe</em></h1>
+
+    <p class="hero-sub" data-en>A ten-step self-accounting verbatim rooted in Islamic moral psychology — to sit with your day honestly, understand what moved inside you, and return to God with clarity.</p>
+    <p class="hero-sub" data-tr>İslami ahlak psikolojisine dayanan on adımlı nefis hesabı verbatimi — günü dürüstçe oturup incelemek, içinde ne hareket ettiğini anlamak ve Allah'a netlikle dönmek için.</p>
+
+    <div class="byline-row">
+      <div class="avatar" aria-hidden="true">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta" data-en>Spirit · Moral Psychology &nbsp;·&nbsp; June 2026</span>
+        <span class="byline-meta" data-tr>Spirit · Ahlak Psikolojisi &nbsp;·&nbsp; Haziran 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar -->
+  <header class="article-header">
+    <span class="read-time" data-en>~15 min daily practice</span>
+    <span class="read-time" data-tr>~15 dakika günlük pratik</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')"
+            aria-label="Open table of contents">
+      <span data-en>Contents</span><span data-tr>İçindekiler</span>
+    </button>
+    <button class="print-btn" onclick="window.print()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      <span data-en>Print / PDF</span><span data-tr>Yazdır / PDF</span>
+    </button>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ARTICLE BODY
+  ════════════════════════════════════════════════════════════ -->
+  <article class="article-body">
+
+    <!-- Intro -->
+    <div class="intro-block" data-en>
+      <strong>Muhasebe</strong> — from the Arabic <span lang="ar">محاسبة</span>, "to settle accounts" — is the nightly practice of holding yourself to a careful reckoning. The Prophet ﷺ said: <em>"The wise person is one who calls themselves to account before they are called to account."</em> (Tirmidhi, 2459) Umar ibn al-Khattab (رضي الله عنه) would strike his own leg at night, asking: <em>"What have you done today?"</em> This verbatim is not a journal of achievements. It is a mirror. Work through each step honestly.
+    </div>
+    <div class="intro-block" data-tr>
+      <strong>Muhasebe</strong> — Arapça <span lang="ar">محاسبة</span> kökünden, "hesap sormak" anlamına gelir — geceyi dürüst bir hesaplaşmayla geçirme pratiğidir. Hz. Peygamber ﷺ şöyle buyurmuştur: <em>"Akıllı kişi, hesaba çekilmeden önce kendini hesaba çekendir."</em> (Tirmizî, 2459) Hz. Ömer (رضي الله عنه) geceleri kendi baldırına vurarak şöyle derdi: <em>"Bugün ne yaptın?"</em> Bu verbatim bir başarı günlüğü değildir. Bir aynadır. Her adımı dürüstçe çalış.
+    </div>
+
+    <!-- ── STEP 1 ─────────────────────────────────────────── -->
+    <section id="s1" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">1</div>
+        <div class="step-title-block">
+          <h2 data-en>The Key Moment of the Day</h2>
+          <h2 data-tr>Günün Önemli Anı</h2>
+          <span class="step-subtitle" data-en>Narrate — don't interpret yet</span>
+          <span class="step-subtitle" data-tr>Anlat — henüz yorumlama</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <span class="prompt-label" data-en>Reflect</span>
+      <span class="prompt-label" data-tr>Düşün</span>
+      <p class="prompt-q" data-en>What was the most significant moment that stayed with you today?</p>
+      <p class="prompt-q" data-tr>Bugün aklında en çok kalan an neydi?</p>
+      <p class="prompt-note" data-en>A conversation, a conflict, an achievement, a mistake, a moment of service, or a strong emotion. The only rule: <em>describe what happened without judgment.</em></p>
+      <p class="prompt-note" data-tr>Bir konuşma, tartışma, başarı, hata, hizmet anı ya da güçlü bir duygu olabilir. Tek kural: <em>olayı yorum yapmadan anlat.</em></p>
+
+      <div class="prompt-example" data-en><strong>Examples:</strong> "Today I spoke with X about Y and said…" · "This event happened…" · "I said this, and then…"</div>
+      <div class="prompt-example" data-tr><strong>Örnekler:</strong> "Bugün X kişiyle şu konuşmayı yaptım…" · "Şu olay yaşandı…" · "Ben şunu söyledim ve ardından…"</div>
+
+      <div class="sub-group">
+        <span class="prompt-label" data-en>The moment was…</span>
+        <span class="prompt-label" data-tr>O an…</span>
+        <div class="check-grid" data-en>
+          <label class="check-item"><input type="checkbox"> A conversation</label>
+          <label class="check-item"><input type="checkbox"> A conflict</label>
+          <label class="check-item"><input type="checkbox"> An achievement</label>
+          <label class="check-item"><input type="checkbox"> A mistake</label>
+          <label class="check-item"><input type="checkbox"> A moment of service</label>
+          <label class="check-item"><input type="checkbox"> A strong emotion</label>
+          <label class="check-item"><input type="checkbox"> A decision I made</label>
+          <label class="check-item"><input type="checkbox"> Something I witnessed</label>
+        </div>
+        <div class="check-grid" data-tr>
+          <label class="check-item"><input type="checkbox"> Bir konuşmaydı</label>
+          <label class="check-item"><input type="checkbox"> Bir tartışmaydı</label>
+          <label class="check-item"><input type="checkbox"> Bir başarıydı</label>
+          <label class="check-item"><input type="checkbox"> Bir hata ya da başarısızlıktı</label>
+          <label class="check-item"><input type="checkbox"> Bir hizmet anıydı</label>
+          <label class="check-item"><input type="checkbox"> Güçlü bir duyguydu</label>
+          <label class="check-item"><input type="checkbox"> Verdiğim bir karardı</label>
+          <label class="check-item"><input type="checkbox"> Tanıklık ettiğim bir şeydi</label>
+        </div>
+      </div>
+
+      <span class="prompt-label" data-en>Narrate it</span>
+      <span class="prompt-label" data-tr>Anlat</span>
+      <textarea class="reflect-area" data-en placeholder="What happened? Describe it plainly, without interpretation…" rows="5" aria-label="Narrate the key moment"></textarea>
+      <textarea class="reflect-area" data-tr placeholder="Ne oldu? Yorumsuz, sade bir şekilde anlat…" rows="5" aria-label="Günün önemli anını anlat"></textarea>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 2 ─────────────────────────────────────────── -->
+    <section id="s2" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">2</div>
+        <div class="step-title-block">
+          <h2 data-en>What Did I Feel?</h2>
+          <h2 data-tr>Ne Hissettim?</h2>
+          <span class="step-subtitle" data-en>Name the surface emotion — then go deeper</span>
+          <span class="step-subtitle" data-tr>Yüzey duygunu isimlendir — sonra daha derine in</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <span class="prompt-label" data-en>In that moment, I felt…</span>
+      <span class="prompt-label" data-tr>O anda şunu hissediyordum…</span>
+      <div class="check-grid" data-en>
+        <label class="check-item"><input type="checkbox"> Peace</label>
+        <label class="check-item"><input type="checkbox"> Joy</label>
+        <label class="check-item"><input type="checkbox"> Gratitude</label>
+        <label class="check-item"><input type="checkbox"> Hurt / offended</label>
+        <label class="check-item"><input type="checkbox"> Anger</label>
+        <label class="check-item"><input type="checkbox"> Fear</label>
+        <label class="check-item"><input type="checkbox"> Anxiety</label>
+        <label class="check-item"><input type="checkbox"> Shame</label>
+        <label class="check-item"><input type="checkbox"> Disappointment</label>
+        <label class="check-item"><input type="checkbox"> Jealousy / envy</label>
+        <label class="check-item"><input type="checkbox"> Pride (positive)</label>
+        <label class="check-item"><input type="checkbox"> Loneliness</label>
+        <label class="check-item"><input type="checkbox"> Confusion</label>
+        <label class="check-item"><input type="checkbox"> Relief</label>
+      </div>
+      <div class="check-grid" data-tr>
+        <label class="check-item"><input type="checkbox"> Huzur</label>
+        <label class="check-item"><input type="checkbox"> Sevinç</label>
+        <label class="check-item"><input type="checkbox"> Şükran</label>
+        <label class="check-item"><input type="checkbox"> Kırgınlık</label>
+        <label class="check-item"><input type="checkbox"> Öfke</label>
+        <label class="check-item"><input type="checkbox"> Korku</label>
+        <label class="check-item"><input type="checkbox"> Kaygı</label>
+        <label class="check-item"><input type="checkbox"> Utanç</label>
+        <label class="check-item"><input type="checkbox"> Hayal kırıklığı</label>
+        <label class="check-item"><input type="checkbox"> Kıskançlık</label>
+        <label class="check-item"><input type="checkbox"> Gurur (olumlu)</label>
+        <label class="check-item"><input type="checkbox"> Yalnızlık</label>
+        <label class="check-item"><input type="checkbox"> Karmaşa / belirsizlik</label>
+        <label class="check-item"><input type="checkbox"> Rahatlama</label>
+      </div>
+      <div class="custom-input-row" data-en>
+        <input type="checkbox"><span>Other:</span>
+        <input type="text" class="custom-text" placeholder="name it…" aria-label="Other emotion">
+      </div>
+      <div class="custom-input-row" data-tr>
+        <input type="checkbox"><span>Başka:</span>
+        <input type="text" class="custom-text" placeholder="isimlendir…" aria-label="Başka duygu">
+      </div>
+
+      <div class="sub-group">
+        <span class="prompt-label" data-en>Go deeper</span>
+        <span class="prompt-label" data-tr>Daha derine in</span>
+        <p class="prompt-q" data-en>What was underneath that feeling?</p>
+        <p class="prompt-q" data-tr>O duygunun altında ne vardı?</p>
+        <p class="prompt-note" data-en>Anger often hides fear. Hurt often hides unmet expectation. Jealousy often hides a longing. Ask: <em>what was the deeper layer?</em></p>
+        <p class="prompt-note" data-tr>Öfkenin altında çoğu zaman korku vardır. Kırgınlığın altında karşılanmamış bir beklenti. Kıskançlığın altında özlem. Sor kendin: <em>daha derin olan katman ne?</em></p>
+        <textarea class="reflect-area" data-en placeholder="What was the deeper layer beneath the surface emotion?" rows="4" aria-label="Deeper emotional layer"></textarea>
+        <textarea class="reflect-area" data-tr placeholder="Yüzey duygunun altındaki derin katman neydi?" rows="4" aria-label="Duygunun derin katmanı"></textarea>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 3 ─────────────────────────────────────────── -->
+    <section id="s3" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">3</div>
+        <div class="step-title-block">
+          <h2 data-en>What Did I Think?</h2>
+          <h2 data-tr>Ne Düşündüm?</h2>
+          <span class="step-subtitle" data-en>Examine the interpretation — then test it</span>
+          <span class="step-subtitle" data-tr>Yorumu incele — sonra sına</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <span class="prompt-label" data-en>My interpretation of the event</span>
+      <span class="prompt-label" data-tr>Olayı nasıl yorumladım</span>
+      <p class="prompt-q" data-en>How did I make sense of what happened?</p>
+      <p class="prompt-q" data-tr>Olanı nasıl anlamlandırdım?</p>
+      <p class="prompt-note" data-en>We rarely respond to events — we respond to the story we tell about them. Identify your automatic interpretation.</p>
+      <p class="prompt-note" data-tr>Olaylara nadiren doğrudan tepki veririz — aslında onlar hakkında kurduğumuz hikâyeye tepki veririz. Zihnin otomatik yorumunu belirle.</p>
+      <div class="prompt-example" data-en><strong>Examples:</strong> "He disrespected me." · "I failed." · "They don't value me." · "I'm not capable of this."</div>
+      <div class="prompt-example" data-tr><strong>Örnekler:</strong> "Bana saygısızlık yaptı." · "Başarısız oldum." · "Beni takdir etmiyorlar." · "Buna yetkim yok."</div>
+      <textarea class="reflect-area" data-en placeholder="The story I told myself was…" rows="3" aria-label="My interpretation"></textarea>
+      <textarea class="reflect-area" data-tr placeholder="Kendime anlattığım hikâye şuydu…" rows="3" aria-label="Olayı nasıl yorumladım"></textarea>
+
+      <div class="sub-group">
+        <p class="prompt-q" data-en>What evidence do I actually have that this interpretation is true?</p>
+        <p class="prompt-q" data-tr>Bu yorumun doğru olduğuna dair elimde ne delil var?</p>
+        <textarea class="reflect-area" data-en placeholder="The evidence I have is… (or: I realise I have no real evidence)" rows="3" aria-label="Evidence for interpretation"></textarea>
+        <textarea class="reflect-area" data-tr placeholder="Elimdeki delil şu… (ya da: gerçek bir delilim olmadığını fark ettim)" rows="3" aria-label="Yorumum için delil"></textarea>
+      </div>
+      <div class="sub-group">
+        <p class="prompt-q" data-en>What other explanations might be possible?</p>
+        <p class="prompt-q" data-tr>Başka açıklamalar mümkün mü?</p>
+        <textarea class="reflect-area" data-en placeholder="Alternative explanations include…" rows="3" aria-label="Alternative interpretations"></textarea>
+        <textarea class="reflect-area" data-tr placeholder="Alternatif açıklamalar şunlar olabilir…" rows="3" aria-label="Alternatif yorumlar"></textarea>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 4 ─────────────────────────────────────────── -->
+    <section id="s4" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">4</div>
+        <div class="step-title-block">
+          <h2 data-en>What Did My Nafs Want?</h2>
+          <h2 data-tr>Nefis Ne İstedi?</h2>
+          <span class="step-subtitle" data-en>The most important step — honest self-disclosure</span>
+          <span class="step-subtitle" data-tr>En önemli adım — dürüst özaçıklama</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <p class="prompt-note" data-en>The <em lang="ar">nafs</em> always has an agenda underneath. This is often mixed — multiple desires operating simultaneously. Be honest. There is no shame in naming it — only in not naming it.</p>
+      <p class="prompt-note" data-tr>Nefis, yüzeyin altında her zaman bir gündem taşır. Bu çoğu zaman karmaşık bir karışımdır. Dürüst ol. Onu isimlendirmekte utanılacak bir şey yoktur — isimlendirmemekte vardır.</p>
+
+      <span class="prompt-label" data-en>In that moment, what I most wanted was…</span>
+      <span class="prompt-label" data-tr>O anda en çok istediğim şey…</span>
+      <div class="check-grid" data-en>
+        <label class="check-item"><input type="checkbox"> To be right / vindicated</label>
+        <label class="check-item"><input type="checkbox"> To be appreciated</label>
+        <label class="check-item"><input type="checkbox"> To be in control</label>
+        <label class="check-item"><input type="checkbox"> To be comfortable</label>
+        <label class="check-item"><input type="checkbox"> To win</label>
+        <label class="check-item"><input type="checkbox"> To appear superior</label>
+        <label class="check-item"><input type="checkbox"> To be loved</label>
+        <label class="check-item"><input type="checkbox"> To feel safe / secure</label>
+        <label class="check-item"><input type="checkbox"> To escape / avoid</label>
+        <label class="check-item"><input type="checkbox"> To serve sincerely</label>
+        <label class="check-item"><input type="checkbox"> Allah's pleasure (<span lang="ar" dir="rtl">رضا الله</span>)</label>
+        <label class="check-item"><input type="checkbox"> To be seen / acknowledged</label>
+        <label class="check-item"><input type="checkbox"> To protect myself</label>
+        <label class="check-item"><input type="checkbox"> To prove my worth</label>
+      </div>
+      <div class="check-grid" data-tr>
+        <label class="check-item"><input type="checkbox"> Haklı çıkmak</label>
+        <label class="check-item"><input type="checkbox"> Takdir edilmek</label>
+        <label class="check-item"><input type="checkbox"> Kontrol etmek</label>
+        <label class="check-item"><input type="checkbox"> Rahat etmek</label>
+        <label class="check-item"><input type="checkbox"> Kazanmak</label>
+        <label class="check-item"><input type="checkbox"> Üstün görünmek</label>
+        <label class="check-item"><input type="checkbox"> Sevilmek</label>
+        <label class="check-item"><input type="checkbox"> Güvende hissetmek</label>
+        <label class="check-item"><input type="checkbox"> Kaçmak / kaçınmak</label>
+        <label class="check-item"><input type="checkbox"> İhlasla hizmet etmek</label>
+        <label class="check-item"><input type="checkbox"> Allah'ın rızası (<span lang="ar" dir="rtl">رضا الله</span>)</label>
+        <label class="check-item"><input type="checkbox"> Görülmek / kabul görmek</label>
+        <label class="check-item"><input type="checkbox"> Kendimi korumak</label>
+        <label class="check-item"><input type="checkbox"> Değerimi kanıtlamak</label>
+      </div>
+      <div class="custom-input-row" data-en>
+        <input type="checkbox"><span>Other:</span>
+        <input type="text" class="custom-text" placeholder="be specific…" aria-label="Other nafs desire">
+      </div>
+      <div class="custom-input-row" data-tr>
+        <input type="checkbox"><span>Başka:</span>
+        <input type="text" class="custom-text" placeholder="somut olarak…" aria-label="Başka nefis isteği">
+      </div>
+
+      <div class="sub-group">
+        <p class="prompt-q" data-en>Were these desires mixed? What combination was active?</p>
+        <p class="prompt-q" data-tr>Bu arzular karışık mıydı? Hangi kombinasyon aktifti?</p>
+        <p class="prompt-note" data-en>Naming the tangle is the beginning of <em lang="ar">ikhlas</em> (sincerity).</p>
+        <p class="prompt-note" data-tr>Düğümü isimlendirmek, <em lang="ar">ihlâs</em>'ın başlangıcıdır.</p>
+        <textarea class="reflect-area" data-en placeholder="Honestly, the mix I notice is…" rows="3" aria-label="Mix of nafs desires"></textarea>
+        <textarea class="reflect-area" data-tr placeholder="Dürüstçe, fark ettiğim karışım şu…" rows="3" aria-label="Nefis arzularının karışımı"></textarea>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 5 ─────────────────────────────────────────── -->
+    <section id="s5" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">5</div>
+        <div class="step-title-block">
+          <h2 data-en>What Is Allah Teaching Me?</h2>
+          <h2 data-tr>Allah Bana Ne Öğretiyor?</h2>
+          <span class="step-subtitle" data-en>Find the lesson inscribed in the event</span>
+          <span class="step-subtitle" data-tr>Olayın içine yazılmış dersi bul</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <p class="prompt-q" data-en>If this event were a lesson sent by God, what would it be teaching?</p>
+      <p class="prompt-q" data-tr>Bu olay Allah'tan gelen bir ders olsaydı ne öğretirdi?</p>
+      <p class="prompt-note" data-en>The classical scholars taught that every difficulty, every friction is a <em lang="ar">tarbiyyah</em> — a divine education. The question is not "why did this happen?" but "what is being cultivated in me through this?"</p>
+      <p class="prompt-note" data-tr>Klasik alimler her güçlüğün, her sürtüşmenin bir <em lang="ar">terbiye</em> (<span lang="ar">تربية</span>) olduğunu öğretmiştir. Soru "bu bana neden oldu?" değil, "bu aracılığıyla bende ne yetiştirilmektedir?" sorusudur.</p>
+
+      <span class="prompt-label" data-en>Select the lesson(s) you sense</span>
+      <span class="prompt-label" data-tr>Sezdiğin dersleri seç</span>
+      <div class="chip-row" data-en>
+        <button class="chip" onclick="this.classList.toggle('selected')">Patience (<span lang="ar">صبر</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Humility (<span lang="ar">تواضع</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Courage</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Trust in God (<span lang="ar">توكل</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Setting boundaries</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Compassion</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Sincerity (<span lang="ar">إخلاص</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Gratitude</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Letting go</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Speaking truth</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Forgiving</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Slowing down</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Dependence on God</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Self-discipline</button>
+      </div>
+      <div class="chip-row" data-tr>
+        <button class="chip" onclick="this.classList.toggle('selected')">Sabır (<span lang="ar">صبر</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Tevazu (<span lang="ar">تواضع</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Cesaret</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Tevekkül (<span lang="ar">توكل</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Sınır koymak</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Şefkat</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">İhlâs (<span lang="ar">إخلاص</span>)</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Şükür</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Bırakmak</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Doğruyu söylemek</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Affetmek</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Yavaşlamak</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Allah'a muhtaçlık</button>
+        <button class="chip" onclick="this.classList.toggle('selected')">Nefis terbiyesi</button>
+      </div>
+      <textarea class="reflect-area" data-en placeholder="In my own words, the lesson I sense in this event is…" rows="4" aria-label="Lesson from the event"></textarea>
+      <textarea class="reflect-area" data-tr placeholder="Kendi kelimelerimle bu olayda sezdiğim ders şu…" rows="4" aria-label="Olaydan aldığım ders"></textarea>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 6 ─────────────────────────────────────────── -->
+    <section id="s6" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">6</div>
+        <div class="step-title-block">
+          <h2 data-en>The Other Person's World</h2>
+          <h2 data-tr>Karşı Tarafın Dünyası</h2>
+          <span class="step-subtitle" data-en>Empathy — not to excuse, but to understand</span>
+          <span class="step-subtitle" data-tr>Empati — mazur görmek için değil, anlamak için</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <p class="prompt-q" data-en>If I stepped into that person's shoes, what might I have seen?</p>
+      <p class="prompt-q" data-tr>O kişinin yerine geçseydim ne görebilirdim?</p>
+      <p class="prompt-note" data-en>This is not about excusing another's behaviour. It is about expanding the frame — practising the prophetic quality of seeing others with mercy before judgment. The Prophet ﷺ said: <em>"None of you truly believes until he loves for his brother what he loves for himself."</em> (Bukhari, 13)</p>
+      <p class="prompt-note" data-tr>Bu alıştırma başkasının davranışını mazur göstermek için değildir. Çerçeveyi genişletmek içindir. Hz. Peygamber ﷺ şöyle buyurmuştur: <em>"Sizden biri, kendisi için istediğini kardeşi için de istemedikçe gerçek anlamda iman etmiş olmaz."</em> (Buhârî, 13)</p>
+      <div class="prompt-example" data-en><strong>Possible realities in their world:</strong> Perhaps they were exhausted. Perhaps they were carrying fear I couldn't see. Perhaps they wanted to be understood but didn't know how to ask. Perhaps they misread the situation.</div>
+      <div class="prompt-example" data-tr><strong>Onun dünyasındaki olası gerçekler:</strong> Belki yorgundu. Belki göremediğim bir korku taşıyordu. Belki anlaşılmak istiyordu ama nasıl soracağını bilmiyordu. Belki durumu yanlış anladı.</div>
+      <textarea class="reflect-area" data-en placeholder="From their perspective, they may have been feeling or thinking…" rows="4" aria-label="Other person's perspective"></textarea>
+      <textarea class="reflect-area" data-tr placeholder="Onun perspektifinden bakınca şunu hissediyor ya da düşünüyor olabilirdi…" rows="4" aria-label="Karşı tarafın perspektifi"></textarea>
+
+      <div class="sub-group">
+        <p class="prompt-q" data-en>Does this change how I feel about the event?</p>
+        <p class="prompt-q" data-tr>Bu, olaya ilişkin hissimi değiştiriyor mu?</p>
+        <textarea class="reflect-area" data-en placeholder="Reflecting on their world, I now notice…" rows="3" aria-label="Effect of empathy"></textarea>
+        <textarea class="reflect-area" data-tr placeholder="Onun dünyasını düşününce şunu fark ediyorum…" rows="3" aria-label="Empatinin hissime etkisi"></textarea>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 7 ─────────────────────────────────────────── -->
+    <section id="s7" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">7</div>
+        <div class="step-title-block">
+          <h2 data-en>Where Did Guidance Appear?</h2>
+          <h2 data-tr>Hidayet Nerede Belirdi?</h2>
+          <span class="step-subtitle" data-en>Trace the signs of hidayah in your day</span>
+          <span class="step-subtitle" data-tr>Günündeki hidayet izlerini takip et</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <p class="prompt-q" data-en>Where did God's guidance (<span lang="ar">هداية</span>) show itself today?</p>
+      <p class="prompt-q" data-tr>Allah'ın hidayeti (<span lang="ar">هداية</span>) bugün nerede kendini gösterdi?</p>
+      <p class="prompt-note" data-en>Guidance does not always arrive as comfort. It arrives as truth — and truth can sting. A verse, a friend's honest word, the discomfort when you were about to go wrong, an unexpected ease that opened a door.</p>
+      <p class="prompt-note" data-tr>Hidayet her zaman teselli olarak gelmez. Hakikat olarak gelir — ve hakikat zaman zaman acıtır. Bir ayet, bir dostun dürüst sözü, yanlış yapmak üzereyken içindeki rahatsızlık, kapı açan beklenmedik bir kolaylık.</p>
+      <div class="prompt-example" data-en><strong>Forms guidance may have taken:</strong> A Qur'anic verse or hadith · A wise word from someone · An inner feeling of unease or peace · An unexpected ease · A mistake that corrected my direction · A moment of clarity in prayer</div>
+      <div class="prompt-example" data-tr><strong>Hidayetin büründüğü biçimler:</strong> Bir ayet ya da hadis · Birinin hikmetli sözü · İçindeki rahatsızlık ya da huzur hissi · Beklenmedik bir kolaylık · Yönünü düzelten bir hata · Namazda gelen bir netlik anı</div>
+      <textarea class="reflect-area" data-en placeholder="Today, guidance came through…" rows="4" aria-label="Where guidance appeared today"></textarea>
+      <textarea class="reflect-area" data-tr placeholder="Bugün hidayet şu şekilde geldi…" rows="4" aria-label="Bugün hidayetin belirdiği yer"></textarea>
+
+      <div class="sub-group">
+        <p class="prompt-q" data-en>Am I responding to this signal — or ignoring it?</p>
+        <p class="prompt-q" data-tr>Bu sinyale karşılık veriyor muyum — yoksa görmezden mi geliyorum?</p>
+        <textarea class="reflect-area" data-en placeholder="My response to this guidance is…" rows="3" aria-label="My response to the guidance signal"></textarea>
+        <textarea class="reflect-area" data-tr placeholder="Bu hidayete cevabım şu…" rows="3" aria-label="Hidayet sinyaline verdiğim yanıt"></textarea>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 8 ─────────────────────────────────────────── -->
+    <section id="s8" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">8</div>
+        <div class="step-title-block">
+          <h2 data-en>Gratitude</h2>
+          <h2 data-tr>Şükür</h2>
+          <span class="step-subtitle" data-en>Three specific things — not generic</span>
+          <span class="step-subtitle" data-tr>Üç somut şey — genel değil</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <p class="prompt-note" data-en>The Prophet ﷺ began and ended each day with <span lang="ar">الحمد لله</span>. Gratitude is not sentiment — it is a discipline of perception that trains the eye to see what it would otherwise overlook. Be specific: name something real from <em>today</em>.</p>
+      <p class="prompt-note" data-tr>Hz. Peygamber ﷺ her güne <span lang="ar">الحمد لله</span> ile başlar ve aynı şekilde bitirirdi. Şükür bir his değil — gözün başka türlü göremeyeceği şeyleri görmeyi öğreten bir algı disiplinidir. Somut ol: <em>bugünden</em> gerçek bir şey isimlendir.</p>
+
+      <span class="prompt-label" data-en>Today I am grateful for</span>
+      <span class="prompt-label" data-tr>Bugün için şükrümüm</span>
+      <div class="gratitude-row">
+        <div class="gratitude-num" aria-hidden="true">1</div>
+        <textarea data-en placeholder="Something specific from today…" aria-label="First gratitude"></textarea>
+        <textarea data-tr placeholder="Bugünden somut bir şey…" aria-label="Birinci şükür"></textarea>
+      </div>
+      <div class="gratitude-row">
+        <div class="gratitude-num" aria-hidden="true">2</div>
+        <textarea data-en placeholder="Another specific thing…" aria-label="Second gratitude"></textarea>
+        <textarea data-tr placeholder="Başka somut bir şey…" aria-label="İkinci şükür"></textarea>
+      </div>
+      <div class="gratitude-row">
+        <div class="gratitude-num" aria-hidden="true">3</div>
+        <textarea data-en placeholder="A third thing — push yourself to be specific…" aria-label="Third gratitude"></textarea>
+        <textarea data-tr placeholder="Üçüncü bir şey — somut olmaya gayret et…" aria-label="Üçüncü şükür"></textarea>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 9 ─────────────────────────────────────────── -->
+    <section id="s9" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">9</div>
+        <div class="step-title-block">
+          <h2 data-en>Tawbah</h2>
+          <h2 data-tr>Tevbe</h2>
+          <span class="step-subtitle" data-en>Return — with honesty, without self-punishment</span>
+          <span class="step-subtitle" data-tr>Dön — dürüstçe, kendine eziyet etmeden</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <p class="prompt-q" data-en>What do I want to correct from today?</p>
+      <p class="prompt-q" data-tr>Bugün düzeltmek istediğim şey nedir?</p>
+      <p class="prompt-note" data-en><em lang="ar">Tawbah</em> (<span lang="ar">توبة</span>) is not self-flagellation. It is a clear-eyed return. Three conditions: genuine remorse (<span lang="ar">ندم</span>), ceasing the harm (<span lang="ar">إقلاع</span>), and resolving not to return to it (<span lang="ar">عزم</span>). Tawbah is completed when you turn your face back toward God — not when you feel sufficiently bad about yourself.</p>
+      <p class="prompt-note" data-tr><em lang="ar">Tevbe</em> (<span lang="ar">توبة</span>) kendini kamçılamak değildir. Açık gözlü bir dönüştür. Üç şart: gerçek pişmanlık (<span lang="ar">ندم</span>), zararı durdurmak (<span lang="ar">إقلاع</span>) ve geri dönmeme azmi (<span lang="ar">عزم</span>). Tevbe, yüzünü Allah'a döndürdüğünde tamamlanır — kendinden yeterince kötü hissettiğinde değil.</p>
+      <div class="prompt-example" data-en><strong>What to name:</strong> A harsh word · Inattention in prayer · Backbiting or gossip · A promise not kept · Time wasted knowingly · A neglected obligation · An act of pride or showing off</div>
+      <div class="prompt-example" data-tr><strong>İsimlendirilebilecekler:</strong> Sert söylenen bir söz · Namazda dikkatsizlik · Gıybet ya da dedikodu · Tutulmayan bir söz · Bilerek harcanan zaman · İhmal edilen bir yükümlülük · Kibir ya da gösteriş anı</div>
+      <textarea class="reflect-area" data-en placeholder="Today I want to return to Allah from…" rows="4" aria-label="Tawbah — what I wish to correct"></textarea>
+      <textarea class="reflect-area" data-tr placeholder="Bugün Allah'a şundan dönmek istiyorum…" rows="4" aria-label="Tevbe — düzeltmek istediğim"></textarea>
+
+      <div class="sub-group">
+        <p class="prompt-q" data-en>Is there a specific person I need to make right with?</p>
+        <p class="prompt-q" data-tr>Hakkını vermem gereken belirli biri var mı?</p>
+        <textarea class="reflect-area" data-en placeholder="If so: who, and what is the repair needed?" rows="3" aria-label="Repair needed with another person"></textarea>
+        <textarea class="reflect-area" data-tr placeholder="Varsa: kim, ve gereken düzeltme nedir?" rows="3" aria-label="Başkasıyla onarılması gereken"></textarea>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">· · ·</div>
+
+    <!-- ── STEP 10 ────────────────────────────────────────── -->
+    <section id="s10" class="step-card">
+      <div class="step-header">
+        <div class="step-num" aria-hidden="true">10</div>
+        <div class="step-title-block">
+          <h2 data-en>One Step for Tomorrow</h2>
+          <h2 data-tr>Yarın İçin Bir Adım</h2>
+          <span class="step-subtitle" data-en>Small. Concrete. Realistic.</span>
+          <span class="step-subtitle" data-tr>Küçük. Somut. Gerçekçi.</span>
+        </div>
+      </div>
+      <hr class="step-divider">
+
+      <p class="prompt-q" data-en>What is the single concrete action I will take tomorrow?</p>
+      <p class="prompt-q" data-tr>Yarın atacağım tek somut adım nedir?</p>
+      <p class="prompt-note" data-en>Not a resolution. Not a list. One step. The Prophet ﷺ said: <em>"The most beloved of deeds to Allah are those done consistently, even if they are small."</em> (Bukhari, 6464)</p>
+      <p class="prompt-note" data-tr>Bir karar değil. Bir liste değil. Tek bir adım. Hz. Peygamber ﷺ şöyle buyurmuştur: <em>"Allah'a en sevimli ameller, az da olsa devamlı yapılanlardır."</em> (Buhârî, 6464)</p>
+      <input type="text" class="action-input" data-en placeholder="Tomorrow I will…" aria-label="One concrete step for tomorrow">
+      <input type="text" class="action-input" data-tr placeholder="Yarın yapacağım şey…" aria-label="Yarın için somut bir adım">
+      <div class="action-cues" data-en>
+        <span class="cue-tag">Keep it small</span>
+        <span class="cue-tag">Keep it realistic</span>
+        <span class="cue-tag">One thing only</span>
+        <span class="cue-tag">Not a list</span>
+      </div>
+      <div class="action-cues" data-tr>
+        <span class="cue-tag">Küçük olsun</span>
+        <span class="cue-tag">Gerçekçi olsun</span>
+        <span class="cue-tag">Sadece bir şey</span>
+        <span class="cue-tag">Liste değil</span>
+      </div>
+    </section>
+
+  </article>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  /* ── Language switcher ─────────────────────────────────── */
+  function setLang(lang) {
+    // Update html[lang] — the CSS [data-en]/[data-tr] rules handle visibility
+    document.getElementById('root').lang = lang;
+
+    // Update button states
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('btn-en').setAttribute('aria-selected', lang === 'en');
+    document.getElementById('btn-tr').setAttribute('aria-selected', lang === 'tr');
+
+    // Persist preference
+    try { localStorage.setItem('muhasebe-lang', lang); } catch(e) {}
+  }
+
+  // On load: honour localStorage → default 'en'
+  (function() {
+    let saved;
+    try { saved = localStorage.getItem('muhasebe-lang'); } catch(e) {}
+    const lang = (saved === 'en' || saved === 'tr') ? saved : 'en';
+    if (lang !== 'en') setLang(lang);
+  })();
+
+  /* ── Progress bar ──────────────────────────────────────── */
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const st = window.scrollY;
+      const dh = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (dh > 0 ? (st / dh * 100) : 0) + '%';
+    }, { passive: true });
+  }
+</script>
+</body>
+</html>
