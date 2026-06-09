@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Problem Taxonomy | Yasir Bilgin</title>
+
+  <meta name="description" content="A reusable six-bucket ontology for diagnosing failure across DevOps incidents, family conflicts, organisational problems, and spiritual struggles.">
+  <meta name="keywords" content="mental models, problem solving, root cause analysis">
+
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/Mental-Models/universal-problem-taxonomy.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Universal Problem Taxonomy">
+  <meta property="og:description" content="A reusable six-bucket ontology for diagnosing failure across DevOps incidents, family conflicts, organisational problems, and spiritual struggles.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Mental-Models/universal-problem-taxonomy.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="Universal Problem Taxonomy">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Universal Problem Taxonomy">
+  <meta name="twitter:description" content="A reusable six-bucket ontology for diagnosing failure across DevOps incidents, family conflicts, organisational problems, and spiritual struggles.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Universal Problem Taxonomy",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "description": "A reusable six-bucket ontology for diagnosing failure across DevOps incidents, family conflicts, organisational problems, and spiritual struggles.",
+    "url": "https://yasirbilgin.com/atlas/Mental-Models/universal-problem-taxonomy.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",          "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas",         "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "Universal Problem Taxonomy", "item": "https://yasirbilgin.com/atlas/Mental-Models/universal-problem-taxonomy.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Tokens ─────────────────────────────────────────────── */
+    :root {
+      --gold:       #c9a84c;
+      --gold-light: #e2c47a;
+      --ink:        #1c1a17;
+      --bg:         #f7f3ec;
+      --parchment:  #faf7f2;
+      --accent:     #7a5c38;
+      --faint:      #6e5f4e;
+      --rule:       rgba(107,93,79,0.18);
+      --nav-h:      62px;
+
+      /* Bucket colours */
+      --c-human:        #8b3a3a;
+      --c-human-bg:     #fdf5f5;
+      --c-human-border: rgba(139,58,58,0.18);
+      --c-process:      #5a6e2e;
+      --c-process-bg:   #f4f7ef;
+      --c-process-border: rgba(90,110,46,0.18);
+      --c-system:       #2e5a7a;
+      --c-system-bg:    #f0f5fa;
+      --c-system-border: rgba(46,90,122,0.18);
+      --c-resource:     #7a5a1e;
+      --c-resource-bg:  #fdf8ef;
+      --c-resource-border: rgba(122,90,30,0.18);
+      --c-relation:     #5a2e7a;
+      --c-relation-bg:  #f7f2fc;
+      --c-relation-border: rgba(90,46,122,0.18);
+      --c-environ:      #2e6a5a;
+      --c-environ-bg:   #f0faf6;
+      --c-environ-border: rgba(46,106,90,0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* ── Progress bar ───────────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ────────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--parchment);
+      width: min(340px, 90vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem;
+      border-left: 1px solid var(--rule);
+      box-shadow: -8px 0 32px rgba(0,0,0,0.12);
+    }
+    .toc-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--faint);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      transition: background 0.15s;
+    }
+    .toc-close:hover { background: rgba(107,93,79,0.08); }
+    .toc-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .toc-panel h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 1.2rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li + li { margin-top: 0.15rem; }
+    .toc-list a {
+      display: block;
+      padding: 0.45rem 0.6rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      transition: background 0.12s;
+    }
+    .toc-list a:hover { background: rgba(107,93,79,0.07); }
+    .toc-list a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .toc-list a.toc-main { font-weight: 600; }
+    .toc-list a.toc-sub { padding-left: 1.4rem; color: var(--faint); font-size: 0.82rem; }
+    .toc-divider {
+      height: 1px;
+      background: var(--rule);
+      margin: 0.8rem 0;
+    }
+
+    /* Bucket colour swatches in TOC */
+    .toc-bucket { display: flex; align-items: center; gap: 0.5rem; }
+    .toc-swatch {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Eyebrow ────────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+
+    /* ── Hero ───────────────────────────────────────────────── */
+    .hero {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', 'Source Serif 4', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--faint);
+      line-height: 1.65;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .byline-text { text-align: left; }
+    .byline-name {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .byline-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+    }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ── Article header (static) ───────────────────────────── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 0.75rem 2.5rem;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .read-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--faint);
+    }
+    .toc-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.45rem 1rem;
+      border: 1px solid rgba(107,93,79,0.3);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+      min-height: 44px;
+    }
+    .toc-btn:hover { background: rgba(107,93,79,0.07); border-color: rgba(107,93,79,0.5); }
+    .toc-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ── Article body ───────────────────────────────────────── */
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 8rem;
+    }
+
+    section[id] { scroll-margin-top: 90px; }
+
+    .major-section { margin-bottom: 5rem; }
+
+    .section-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 0.6rem;
+    }
+
+    .major-section > h2 {
+      font-family: 'Cormorant Garamond', 'Source Serif 4', Georgia, serif;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    .major-section > h2 em { font-style: italic; color: var(--accent); }
+
+    .lead {
+      font-size: 1.12rem;
+      color: #3a3028;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    p { margin-bottom: 1.4rem; }
+
+    /* ── Shortcut sequence box ──────────────────────────────── */
+    .sequence-box {
+      background: var(--parchment);
+      border: 1px solid rgba(107,93,79,0.22);
+      border-left: 4px solid var(--gold);
+      border-radius: 10px;
+      padding: 2rem 2.2rem;
+      margin: 2.5rem 0;
+    }
+    .sequence-box h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 1.2rem;
+    }
+    .sequence-step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.2rem;
+    }
+    .sequence-step:last-child { margin-bottom: 0; }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.1rem;
+    }
+    .step-body { flex: 1; }
+    .step-body strong {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+    .step-body p {
+      font-size: 0.92rem;
+      color: var(--faint);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .bucket-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+    .bucket-pill {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Bucket section headers ─────────────────────────────── */
+    .bucket-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      padding: 1.4rem 1.8rem;
+      border-radius: 12px;
+      border: 1px solid;
+    }
+    .bucket-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .bucket-header-text h2 {
+      font-family: 'Cormorant Garamond', 'Source Serif 4', Georgia, serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+    .bucket-header-text p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.4;
+      opacity: 0.8;
+    }
+
+    /* Per-bucket colours */
+    .bucket-human .bucket-header    { background: var(--c-human-bg);    border-color: var(--c-human-border);    color: var(--c-human); }
+    .bucket-process .bucket-header  { background: var(--c-process-bg);  border-color: var(--c-process-border);  color: var(--c-process); }
+    .bucket-system .bucket-header   { background: var(--c-system-bg);   border-color: var(--c-system-border);   color: var(--c-system); }
+    .bucket-resource .bucket-header { background: var(--c-resource-bg); border-color: var(--c-resource-border); color: var(--c-resource); }
+    .bucket-relation .bucket-header { background: var(--c-relation-bg); border-color: var(--c-relation-border); color: var(--c-relation); }
+    .bucket-environ .bucket-header  { background: var(--c-environ-bg);  border-color: var(--c-environ-border);  color: var(--c-environ); }
+
+    .bucket-human    .bucket-pill { color: var(--c-human);    border-color: var(--c-human-border);    background: var(--c-human-bg); }
+    .bucket-process  .bucket-pill { color: var(--c-process);  border-color: var(--c-process-border);  background: var(--c-process-bg); }
+    .bucket-system   .bucket-pill { color: var(--c-system);   border-color: var(--c-system-border);   background: var(--c-system-bg); }
+    .bucket-resource .bucket-pill { color: var(--c-resource); border-color: var(--c-resource-border); background: var(--c-resource-bg); }
+    .bucket-relation .bucket-pill { color: var(--c-relation); border-color: var(--c-relation-border); background: var(--c-relation-bg); }
+    .bucket-environ  .bucket-pill { color: var(--c-environ);  border-color: var(--c-environ-border);  background: var(--c-environ-bg); }
+
+    .bucket-human    .step-num { background: var(--c-human); }
+    .bucket-process  .step-num { background: var(--c-process); }
+    .bucket-system   .step-num { background: var(--c-system); }
+    .bucket-resource .step-num { background: var(--c-resource); }
+    .bucket-relation .step-num { background: var(--c-relation); }
+    .bucket-environ  .step-num { background: var(--c-environ); }
+
+    /* ── Subtype cards ──────────────────────────────────────── */
+    .subtype-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .subtype-card {
+      background: var(--parchment);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 1.3rem 1.4rem;
+    }
+    .subtype-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+    .subtype-card .definition {
+      font-size: 0.88rem;
+      color: var(--faint);
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+    .examples-label,
+    .fixes-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .examples-label { color: var(--faint); }
+    .fixes-label    { color: var(--accent); margin-top: 0.6rem; }
+    .mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .mini-list li {
+      font-size: 0.82rem;
+      color: #5a5048;
+      line-height: 1.5;
+      padding-left: 0.9rem;
+      position: relative;
+      margin-bottom: 0.1rem;
+    }
+    .mini-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--faint);
+    }
+
+    /* Resource bucket — simple list layout */
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .resource-card {
+      background: var(--parchment);
+      border: 1px solid var(--c-resource-border);
+      border-radius: 10px;
+      padding: 1.2rem 1.3rem;
+    }
+    .resource-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--c-resource);
+      margin-bottom: 0.5rem;
+    }
+    .resource-card p {
+      font-size: 0.8rem;
+      color: var(--faint);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* ── Pull quote ─────────────────────────────────────────── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2rem;
+      padding: 1.2rem 1.8rem 1.2rem 2rem;
+      border-left: 3px solid var(--gold);
+      font-family: 'Cormorant Garamond', 'Source Serif 4', Georgia, serif;
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-style: italic;
+      color: var(--accent);
+      line-height: 1.6;
+    }
+
+    /* ── Quick reference summary table ─────────────────────── */
+    .ref-table-wrap { overflow-x: auto; margin: 2rem 0; }
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.86rem;
+    }
+    .ref-table th {
+      text-align: left;
+      padding: 0.7rem 1rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+      background: var(--parchment);
+      border-bottom: 2px solid var(--rule);
+    }
+    .ref-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    .ref-table tr:last-child td { border-bottom: none; }
+    .ref-table .bucket-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 600;
+      font-size: 0.84rem;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--rule);
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .footer-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+    }
+
+    /* ── Filter bar ─────────────────────────────────────────── */
+    .filter-bar {
+      position: sticky;
+      top: 62px;
+      z-index: 50;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.7rem 2.5rem;
+    }
+    .filter-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1 1 220px;
+      min-width: 180px;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      opacity: 0.4;
+      flex-shrink: 0;
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.5rem 2.2rem 0.5rem 2.2rem;
+      border: 1px solid rgba(107,93,79,0.28);
+      border-radius: 8px;
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.86rem;
+      line-height: 1.4;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      min-height: 38px;
+    }
+    .search-input::placeholder { color: var(--faint); opacity: 0.7; }
+    .search-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+    }
+    .search-clear {
+      position: absolute;
+      right: 0.55rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--faint);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      padding: 0;
+    }
+    .search-clear:hover { background: rgba(107,93,79,0.1); }
+    .search-clear:focus-visible { outline: 2px solid var(--gold); }
+    .search-clear.visible { display: flex; }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      align-items: center;
+    }
+    .filter-pill {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1.5px solid;
+      cursor: pointer;
+      transition: background 0.12s, opacity 0.12s, transform 0.1s;
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      user-select: none;
+      letter-spacing: 0.02em;
+      background: transparent;
+    }
+    .filter-pill:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .filter-pill .pill-count {
+      font-size: 0.68rem;
+      opacity: 0.7;
+      font-weight: 500;
+    }
+    /* Default (inactive) state — muted */
+    .filter-pill { opacity: 0.55; }
+    /* Active state */
+    .filter-pill.active { opacity: 1; }
+    /* All-pill */
+    .filter-pill-all {
+      color: var(--ink);
+      border-color: rgba(107,93,79,0.35);
+      opacity: 0.55;
+    }
+    .filter-pill-all.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--bg);
+      opacity: 1;
+    }
+    /* Per-bucket pill colours */
+    .fp-human    { color: var(--c-human);    border-color: var(--c-human-border);    }
+    .fp-human.active    { background: var(--c-human-bg); }
+    .fp-process  { color: var(--c-process);  border-color: var(--c-process-border);  }
+    .fp-process.active  { background: var(--c-process-bg); }
+    .fp-system   { color: var(--c-system);   border-color: var(--c-system-border);   }
+    .fp-system.active   { background: var(--c-system-bg); }
+    .fp-resource { color: var(--c-resource); border-color: var(--c-resource-border); }
+    .fp-resource.active { background: var(--c-resource-bg); }
+    .fp-relation { color: var(--c-relation); border-color: var(--c-relation-border); }
+    .fp-relation.active { background: var(--c-relation-bg); }
+    .fp-environ  { color: var(--c-environ);  border-color: var(--c-environ-border);  }
+    .fp-environ.active  { background: var(--c-environ-bg); }
+
+    /* Search highlight */
+    mark.hl {
+      background: rgba(201,168,76,0.28);
+      color: inherit;
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+
+    /* No-results message */
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .no-results.visible { display: block; }
+    .no-results-emoji { font-size: 2.5rem; margin-bottom: 1rem; }
+    .no-results h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .no-results p {
+      font-size: 0.88rem;
+      color: var(--faint);
+    }
+
+    /* Card match/hide states */
+    .subtype-card.hidden  { display: none; }
+    .resource-card.hidden { display: none; }
+    /* Bucket section hide when all cards hidden */
+    .major-section.bucket-hidden { display: none; }
+
+    /* ── Dark mode ──────────────────────────────────────────── */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:       #e8e0d4;
+        --bg:        #131310;
+        --parchment: #1a1a16;
+        --accent:    #c9a84c;
+        --faint:     #9a8e7c;
+        --rule:      rgba(255,255,255,0.09);
+      }
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint);
+      }
+      :root {
+        --c-human-bg:     #1e1414;
+        --c-process-bg:   #141a10;
+        --c-system-bg:    #101520;
+        --c-resource-bg:  #1a1608;
+        --c-relation-bg:  #160e1e;
+        --c-environ-bg:   #0e1a16;
+      }
+    }
+
+    /* ── Mobile ─────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 4rem 1.4rem 2.5rem; }
+      .article-body { padding: 2.5rem 1.4rem 5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .filter-bar { padding: 0.6rem 1.4rem; }
+      .filter-inner { gap: 0.5rem; }
+      .search-wrap { flex: 1 1 100%; }
+      .subtype-grid { grid-template-columns: 1fr; }
+      .pull-quote { margin-left: 0; }
+      footer { padding: 2rem 1.4rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+      .bucket-header { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+    }
+
+    /* ── Reduced motion ─────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main-content">
+
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close"
+              onclick="document.getElementById('tocOverlay').classList.remove('open')"
+              aria-label="Close table of contents">✕</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#overview" class="toc-main">Overview</a></li>
+        <li><a href="#shortcut" class="toc-main">The Three-Step Shortcut</a></li>
+        <div class="toc-divider"></div>
+        <li>
+          <a href="#human" class="toc-main">
+            <span class="toc-bucket">
+              <span class="toc-swatch" style="background:var(--c-human)"></span>
+              1. Human Problems
+            </span>
+          </a>
+        </li>
+        <li><a href="#knowledge-gap" class="toc-sub">Knowledge Gap</a></li>
+        <li><a href="#skill-gap" class="toc-sub">Skill Gap</a></li>
+        <li><a href="#judgment-gap" class="toc-sub">Judgment Gap</a></li>
+        <li><a href="#attention-gap" class="toc-sub">Attention Gap</a></li>
+        <li><a href="#motivation-gap" class="toc-sub">Motivation Gap</a></li>
+        <li><a href="#emotional-gap" class="toc-sub">Emotional Regulation Gap</a></li>
+        <div class="toc-divider"></div>
+        <li>
+          <a href="#process" class="toc-main">
+            <span class="toc-bucket">
+              <span class="toc-swatch" style="background:var(--c-process)"></span>
+              2. Process Problems
+            </span>
+          </a>
+        </li>
+        <li><a href="#missing-process" class="toc-sub">Missing Process</a></li>
+        <li><a href="#unclear-process" class="toc-sub">Unclear Process</a></li>
+        <li><a href="#not-followed" class="toc-sub">Process Not Followed</a></li>
+        <li><a href="#too-complex" class="toc-sub">Process Too Complex</a></li>
+        <div class="toc-divider"></div>
+        <li>
+          <a href="#system" class="toc-main">
+            <span class="toc-bucket">
+              <span class="toc-swatch" style="background:var(--c-system)"></span>
+              3. System Problems
+            </span>
+          </a>
+        </li>
+        <li><a href="#design-flaw" class="toc-sub">Design Flaw</a></li>
+        <li><a href="#feedback-loop" class="toc-sub">Feedback Loop Failure</a></li>
+        <li><a href="#incentives" class="toc-sub">Misaligned Incentives</a></li>
+        <li><a href="#capacity" class="toc-sub">Capacity Mismatch</a></li>
+        <div class="toc-divider"></div>
+        <li>
+          <a href="#resource" class="toc-main">
+            <span class="toc-bucket">
+              <span class="toc-swatch" style="background:var(--c-resource)"></span>
+              4. Resource Problems
+            </span>
+          </a>
+        </li>
+        <div class="toc-divider"></div>
+        <li>
+          <a href="#relationship" class="toc-main">
+            <span class="toc-bucket">
+              <span class="toc-swatch" style="background:var(--c-relation)"></span>
+              5. Relationship Problems
+            </span>
+          </a>
+        </li>
+        <li><a href="#trust" class="toc-sub">Trust Deficit</a></li>
+        <li><a href="#expectation" class="toc-sub">Expectation Mismatch</a></li>
+        <li><a href="#comm-failure" class="toc-sub">Communication Failure</a></li>
+        <li><a href="#value-conflict" class="toc-sub">Value Conflict</a></li>
+        <div class="toc-divider"></div>
+        <li>
+          <a href="#environment" class="toc-main">
+            <span class="toc-bucket">
+              <span class="toc-swatch" style="background:var(--c-environ)"></span>
+              6. Environment Problems
+            </span>
+          </a>
+        </li>
+        <div class="toc-divider"></div>
+        <li><a href="#reference" class="toc-main">Quick Reference</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Atlas · Mental Models</div>
+    <h1>Universal Problem <em>Taxonomy</em></h1>
+    <p class="hero-sub">A small, reusable ontology for diagnosing failure — across DevOps incidents, family conflicts, organisational challenges, and spiritual struggles.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">June 7, 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar -->
+  <header class="article-header">
+    <span class="read-time">18 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')"
+            aria-controls="tocOverlay">
+      Contents
+    </button>
+  </header>
+
+  <!-- Filter bar -->
+  <div class="filter-bar" id="filterBar" role="search" aria-label="Filter subtypes">
+    <div class="filter-inner">
+      <div class="search-wrap">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+          <path d="M10 6.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-.813 3.625 2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input
+          id="subtypeSearch"
+          class="search-input"
+          type="search"
+          placeholder="Search subtypes, examples, interventions…"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Search subtypes"
+        >
+        <button class="search-clear" id="searchClear" aria-label="Clear search" tabindex="0">✕</button>
+      </div>
+      <div class="filter-pills" role="group" aria-label="Filter by bucket">
+        <button class="filter-pill filter-pill-all active" data-bucket="all">All <span class="pill-count" id="pc-all"></span></button>
+        <button class="filter-pill fp-human" data-bucket="human">🧠 Human <span class="pill-count" id="pc-human"></span></button>
+        <button class="filter-pill fp-process" data-bucket="process">📋 Process <span class="pill-count" id="pc-process"></span></button>
+        <button class="filter-pill fp-system" data-bucket="system">⚙️ System <span class="pill-count" id="pc-system"></span></button>
+        <button class="filter-pill fp-resource" data-bucket="resource">🪙 Resource <span class="pill-count" id="pc-resource"></span></button>
+        <button class="filter-pill fp-relation" data-bucket="relation">🤝 Relation <span class="pill-count" id="pc-relation"></span></button>
+        <button class="filter-pill fp-environ" data-bucket="environ">🌐 Environ <span class="pill-count" id="pc-environ"></span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article body -->
+  <article class="article-body">
+
+    <!-- Overview -->
+    <section id="overview" class="major-section">
+      <span class="section-label">Introduction</span>
+      <h2>Why you need a <em>reusable</em> ontology of failure</h2>
+      <p class="lead">The goal is not merely to have categories, but to have a small, reusable ontology of failure and improvement that can be applied to anything: a production outage at 2am, a fight with your spouse, a stalled volunteer programme, or a spiritual drought.</p>
+      <p>Most people carry an implicit and therefore inconsistent theory of problems. Asked why the deployment failed, they blame the engineer. Asked why the marriage struggled, they blame miscommunication. Asked why the volunteer programme collapsed, they blame lack of resources. Each domain gets its own private vocabulary, and nothing transfers.</p>
+      <p>The Universal Problem Taxonomy solves this by giving you six stable buckets that work across every domain of human life. The abstraction is high enough to be universal, but low enough to generate concrete interventions.</p>
+
+      <div class="pull-quote">
+        The purpose of the taxonomy is not to explain the world perfectly. The purpose is to quickly move from <strong>Incident → Category → Intervention</strong>.
+      </div>
+
+      <p>When something goes wrong, the first question is always:</p>
+      <p><strong>Is this primarily a Human, Process, System, Resource, Relationship, or Environment problem?</strong></p>
+      <p>That single question — applied consistently — produces more useful diagnoses than most formal post-mortems or relationship counselling sessions.</p>
+    </section>
+
+    <!-- Three-Step Shortcut -->
+    <section id="shortcut" class="major-section">
+      <span class="section-label">How to use it</span>
+      <h2>The <em>Three-Step</em> Shortcut</h2>
+      <p class="lead">Under stress, you cannot run a twenty-category analysis. Keep this sequence. It takes under two minutes and produces actionable output every time.</p>
+
+      <div class="sequence-box">
+        <h3>Diagnosis Protocol</h3>
+
+        <div class="sequence-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Identify the primary bucket</strong>
+            <p>Which of the six categories is the main driver of this failure? Pick one. Resist the temptation to say "it's everything" — that is the same as saying nothing.</p>
+            <div class="bucket-pills" style="margin-top:0.7rem">
+              <span class="bucket-pill" style="color:var(--c-human);border-color:var(--c-human-border);background:var(--c-human-bg)">Human</span>
+              <span class="bucket-pill" style="color:var(--c-process);border-color:var(--c-process-border);background:var(--c-process-bg)">Process</span>
+              <span class="bucket-pill" style="color:var(--c-system);border-color:var(--c-system-border);background:var(--c-system-bg)">System</span>
+              <span class="bucket-pill" style="color:var(--c-resource);border-color:var(--c-resource-border);background:var(--c-resource-bg)">Resource</span>
+              <span class="bucket-pill" style="color:var(--c-relation);border-color:var(--c-relation-border);background:var(--c-relation-bg)">Relationship</span>
+              <span class="bucket-pill" style="color:var(--c-environ);border-color:var(--c-environ-border);background:var(--c-environ-bg)">Environment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sequence-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Name the specific subtype</strong>
+            <p>Each bucket contains 3–6 named subtypes. Pick the one that best characterises this instance. One only. Precision at this step is what separates useful diagnosis from vague hand-waving.</p>
+            <p style="font-size:0.84rem;color:var(--faint);margin-top:0.4rem">Example: "Human → Motivation Gap" is more actionable than just "Human."</p>
+          </div>
+        </div>
+
+        <div class="sequence-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Choose the intervention with the highest recurrence-reduction leverage</strong>
+            <p>Not the most satisfying. Not the most obvious. The one most likely to prevent this from happening again. This question keeps you from turning categorisation into an intellectual hobby.</p>
+            <p style="font-size:0.84rem;color:var(--faint);margin-top:0.4rem">Example: For a Skill Gap, "more practice with feedback" reduces recurrence far more than "document the process."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── BUCKET 1: HUMAN ─────────────────────────────────── -->
+    <section id="human" class="major-section bucket-human" data-bucket="human">
+      <div class="bucket-header">
+        <div class="bucket-icon" style="background:rgba(139,58,58,0.12);font-size:1.6rem">🧠</div>
+        <div class="bucket-header-text">
+          <h2>1. Human <em>Problems</em></h2>
+          <p>The individual is the primary bottleneck. There are six distinct ways a person can fail a task — and the intervention differs sharply between them.</p>
+        </div>
+      </div>
+
+      <div class="subtype-grid">
+
+        <div class="subtype-card" id="knowledge-gap" data-bucket="human">
+          <h3>Knowledge Gap</h3>
+          <p class="definition">The person doesn't know what they need to know. This is the most straightforward human failure — and the easiest to fix if caught early.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>New engineer doesn't understand Kubernetes networking</li>
+            <li>Child doesn't know the household rule that was assumed obvious</li>
+            <li>Volunteer doesn't understand the vision behind the project</li>
+            <li>Person unaware of a relevant fiqh ruling</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Training, documentation, onboarding</li>
+            <li>Mentorship and accessible reference material</li>
+            <li>Never assume — make explicit what you consider obvious</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="skill-gap" data-bucket="human">
+          <h3>Skill Gap</h3>
+          <p class="definition">Knows what to do but cannot execute reliably. Competence requires more than knowledge — it requires embodied, practised ability. This gap is often misdiagnosed as laziness.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Knows Git concepts but cannot resolve a complex merge conflict</li>
+            <li>Knows anger is harmful but cannot regulate it in the moment</li>
+            <li>Understands public speaking principles but freezes under pressure</li>
+            <li>Knows Arabic grammar rules but cannot produce fluent sentences</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Deliberate practice with feedback loops</li>
+            <li>Coaching and scenario simulation</li>
+            <li>Lower-stakes reps before high-stakes moments</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="judgment-gap" data-bucket="human">
+          <h3>Judgment Gap</h3>
+          <p class="definition">Incorrect decisions despite sufficient knowledge and skill. This is the most dangerous gap because it is hardest to detect — the person appears competent but makes consistently wrong calls.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Poor prioritisation — correct work, wrong order</li>
+            <li>Wrong diagnosis of a technical or relational problem</li>
+            <li>Misreading social cues, tone, or intent</li>
+            <li>Overconfidence causing avoidance of necessary checks</li>
+            <li>Engineer rolls back when the correct action is a hotfix forward</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Decision frameworks and pre-mortems</li>
+            <li>Structured reflection after consequential decisions</li>
+            <li>Exposure to experienced mentors with different pattern libraries</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="attention-gap" data-bucket="human">
+          <h3>Attention Gap</h3>
+          <p class="definition">Important signals were present but not registered. Modern environments produce far more signals than humans can track. This gap is structural, not moral — but the consequences are real.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Monitoring alert dismissed during a busy sprint</li>
+            <li>Forgot spouse's request made two weeks ago</li>
+            <li>Missed risk indicator buried in a weekly report</li>
+            <li>Deadline not noted because it was communicated verbally</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Checklists and external memory systems</li>
+            <li>Reduce cognitive load — fewer open loops</li>
+            <li>Structured review cadences (weekly review, morning intention)</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="motivation-gap" data-bucket="human">
+          <h3>Motivation Gap</h3>
+          <p class="definition">Knows and can do, but won't — or consistently delays. Unlike laziness (which is often a misdiagnosis), genuine motivation gaps have identifiable psychological roots: misalignment, meaninglessness, fear, or spiritual stagnation.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Procrastination on tasks that feel meaningless</li>
+            <li>Lack of ownership on a project assigned without context</li>
+            <li>Avoidance of a difficult conversation with no felt urgency</li>
+            <li>Spiritual laziness — knowing the practice but not starting</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Connect the task to a larger meaning or purpose</li>
+            <li>Accountability structures with real social stakes</li>
+            <li>Reduce activation cost — make the first step trivially easy</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="emotional-gap" data-bucket="human">
+          <h3>Emotional Regulation Gap</h3>
+          <p class="definition">Emotions overwhelm or hijack execution. The person's capacity is theoretically present, but emotional hijacking prevents deployment. This is the most overlooked of the six — especially in high-achievement cultures that pathologise emotional acknowledgment.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Panic during a production outage leads to compounding mistakes</li>
+            <li>Anger during a conflict destroys the repair attempt</li>
+            <li>Anxiety causes paralysis on a high-stakes decision</li>
+            <li>Fear of failure prevents shipping the nearly-ready product</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Emotional awareness practices (naming states in real time)</li>
+            <li>Pre-loaded protocols for high-stress scenarios</li>
+            <li>Spiritual practices that build equanimity as a baseline state</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── BUCKET 2: PROCESS ──────────────────────────────── -->
+    <section id="process" class="major-section bucket-process" data-bucket="process">
+      <div class="bucket-header">
+        <div class="bucket-icon" style="background:rgba(90,110,46,0.12);font-size:1.6rem">📋</div>
+        <div class="bucket-header-text">
+          <h2>2. Process <em>Problems</em></h2>
+          <p>The structure for getting things done is missing, ambiguous, ignored, or over-engineered. Process problems are often mistaken for human problems — "the person failed" when actually "the system had no guardrail."</p>
+        </div>
+      </div>
+
+      <div class="subtype-grid">
+
+        <div class="subtype-card" id="missing-process" data-bucket="process">
+          <h3>Missing Process</h3>
+          <p class="definition">No structure exists where one is needed. Absence of process is not freedom — it is unstructured risk exposure. Things work when conditions are ideal and break catastrophically when they're not.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>No deployment checklist — each engineer does it differently</li>
+            <li>No onboarding process — new hires find their own way</li>
+            <li>No family budget review — money decisions made ad hoc</li>
+            <li>No incident response runbook — each outage improvised</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Create a minimal viable process first</li>
+            <li>Document what the best performers already do implicitly</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="unclear-process" data-bucket="process">
+          <h3>Unclear Process</h3>
+          <p class="definition">A process exists but is ambiguous, inconsistently interpreted, or has unclear ownership. Multiple interpretations of the same process are as damaging as no process.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Nobody knows who owns the final deployment approval</li>
+            <li>Instructions say "review before merging" — but review means different things</li>
+            <li>Household division of labour was "agreed" but never specified</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Specify ownership explicitly (RACI if necessary)</li>
+            <li>Make the ambiguous step concrete — define done</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="not-followed" data-bucket="process">
+          <h3>Process Not Followed</h3>
+          <p class="definition">The process exists and is clear, but was bypassed. This is usually a symptom of another problem (process too slow, low trust in the process, time pressure, or individual judgment gap) rather than simple defiance.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Code pushed directly to production, bypassing code review</li>
+            <li>Safety checklist skipped because "we've done this a hundred times"</li>
+            <li>Communication step in a family disagreement protocol skipped in anger</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Diagnose why it was skipped before prescribing enforcement</li>
+            <li>Automate what can be automated — reduce bypass opportunity</li>
+            <li>Rebuild trust in the process by demonstrating its value</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="too-complex" data-bucket="process">
+          <h3>Process Too Complex</h3>
+          <p class="definition">The process is so burdensome that compliance itself becomes the bottleneck. This is common in mature organisations and over-engineered families. Complexity accumulates silently — no single addition seems unreasonable, but the whole becomes unusable.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>20-step deployment pipeline where 12 steps add no safety</li>
+            <li>Approval chain requiring 5 sign-offs for a $200 decision</li>
+            <li>Family rules that have accumulated into an unenforceable rulebook</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Audit: for each step, ask "what failure does this prevent?"</li>
+            <li>Remove steps that protect against failures that never occur</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── BUCKET 3: SYSTEM ───────────────────────────────── -->
+    <section id="system" class="major-section bucket-system" data-bucket="system">
+      <div class="bucket-header">
+        <div class="bucket-icon" style="background:rgba(46,90,122,0.12);font-size:1.6rem">⚙️</div>
+        <div class="bucket-header-text">
+          <h2>3. System <em>Problems</em></h2>
+          <p>The structure itself produces failure — reliably and repeatedly, regardless of which humans occupy the roles. Blame the system, not the person.</p>
+        </div>
+      </div>
+
+      <p>System problems are the most important to identify correctly because they resist all human-level interventions. If the incentive structure rewards speed over quality, you can train engineers in quality practices all day — the system will win. The intervention must operate at the system level.</p>
+
+      <div class="subtype-grid">
+
+        <div class="subtype-card" id="design-flaw" data-bucket="system">
+          <h3>Design Flaw</h3>
+          <p class="definition">The architecture of the system has a structural weakness that makes failure highly probable or inevitable. This includes technical architecture, organisational structure, and relationship structures.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Single point of failure in a critical infrastructure component</li>
+            <li>Organisational design that routes all decisions through one person</li>
+            <li>A family structure where one parent is always the enforcer and one the refuge — no integrated authority</li>
+            <li>A service mesh with no circuit breakers</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Redesign the architecture — no patch will hold</li>
+            <li>Introduce redundancy and distributed decision rights</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="feedback-loop" data-bucket="system">
+          <h3>Feedback Loop Failure</h3>
+          <p class="definition">The system produces no signal when it is degrading. Problems grow invisibly until they reach crisis threshold. Fast feedback is the immune system of any healthy system.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>No monitoring — first sign of the outage is a customer call</li>
+            <li>No performance review — employee's trajectory unknown until it's too late</li>
+            <li>No regular check-ins in a relationship — small resentments compound unaddressed</li>
+            <li>No muhasebe (self-accounting) practice — spiritual decay undetected</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Install leading indicators, not just lagging ones</li>
+            <li>Build regular reflection into the cadence — daily, weekly, quarterly</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="incentives" data-bucket="system">
+          <h3>Misaligned Incentives</h3>
+          <p class="definition">The reward structure optimises for the wrong outcome. People behave rationally given the incentives they face — if the incentives produce bad behaviour, change the incentives.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Engineers rewarded for velocity, not reliability — technical debt accumulates</li>
+            <li>Social praise for surface piety rather than depth — performance replaces sincerity</li>
+            <li>Parental attention goes to distressed behaviour — child learns distress is the access code</li>
+            <li>Business metric rewards ticket close rate — root causes get papered over</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Map what is actually being rewarded, not what you intend to reward</li>
+            <li>Redesign the reward structure — and monitor for unintended new misalignments</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="capacity" data-bucket="system">
+          <h3>Capacity Mismatch</h3>
+          <p class="definition">Demand exceeds the system's designed capacity. This produces chronic degradation — not a single catastrophic failure but a grinding erosion of quality, morale, and margin.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Team chronically at 120% capacity — every sprint cuts corners</li>
+            <li>Parent exhausted from dual career and full-time caregiving — no reserve for repair</li>
+            <li>Server undersized for actual traffic — constant throttling</li>
+            <li>Volunteer programme with more commitments than volunteers</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Increase capacity or reduce demand — doing both is ideal</li>
+            <li>Do not try to solve a capacity problem with motivation interventions</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── BUCKET 4: RESOURCE ─────────────────────────────── -->
+    <section id="resource" class="major-section bucket-resource" data-bucket="resource">
+      <div class="bucket-header">
+        <div class="bucket-icon" style="background:rgba(122,90,30,0.12);font-size:1.6rem">🪙</div>
+        <div class="bucket-header-text">
+          <h2>4. Resource <em>Problems</em></h2>
+          <p>Insufficient inputs. The work cannot be done at the required level regardless of human capability, because the raw materials are not there. Unlike human or process problems, resource problems are often genuinely outside the individual's control.</p>
+        </div>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-card" data-bucket="resource">
+          <h3>Time</h3>
+          <p>Unrealistic deadlines, chronic overcommitment, or insufficient calendar protection for deep work.</p>
+        </div>
+        <div class="resource-card" data-bucket="resource">
+          <h3>Money</h3>
+          <p>Budget constraints, underfunded initiatives, or financial pressure that forecloses necessary options.</p>
+        </div>
+        <div class="resource-card" data-bucket="resource">
+          <h3>Tools</h3>
+          <p>Outdated software, broken equipment, or missing infrastructure that creates unnecessary friction in every step.</p>
+        </div>
+        <div class="resource-card" data-bucket="resource">
+          <h3>Information</h3>
+          <p>Missing requirements, incomplete context, or withheld data that makes correct decisions structurally impossible.</p>
+        </div>
+        <div class="resource-card" data-bucket="resource">
+          <h3>People</h3>
+          <p>Understaffed team, insufficient expertise on the bench, or lack of volunteers for a programme's scope.</p>
+        </div>
+        <div class="resource-card" data-bucket="resource">
+          <h3>Energy</h3>
+          <p>Physical or emotional depletion that degrades every other resource. Often the unacknowledged root cause.</p>
+        </div>
+      </div>
+
+      <div class="sequence-box" style="border-left-color:var(--c-resource)">
+        <h3>Diagnostic caution</h3>
+        <div class="sequence-step">
+          <div class="step-num" style="background:var(--c-resource)">!</div>
+          <div class="step-body">
+            <strong>Resource vs. Motivation</strong>
+            <p>A genuine resource problem requires a supply intervention (more time, budget, people). A motivation gap masquerading as a resource problem requires meaning and accountability. Misdiagnosing one as the other is common — and expensive. Ask: if we doubled the resource, would the outcome change? If yes, it's probably a resource problem. If not, look at motivation or system.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── BUCKET 5: RELATIONSHIP ─────────────────────────── -->
+    <section id="relationship" class="major-section bucket-relation" data-bucket="relation">
+      <div class="bucket-header">
+        <div class="bucket-icon" style="background:rgba(90,46,122,0.12);font-size:1.6rem">🤝</div>
+        <div class="bucket-header-text">
+          <h2>5. Relationship <em>Problems</em></h2>
+          <p>Trust and coordination failures between two or more people. These problems travel with particular diagnostic invisibility — they present as process failures, resource failures, or human failures, while the root is actually relational.</p>
+        </div>
+      </div>
+
+      <div class="subtype-grid">
+
+        <div class="subtype-card" id="trust" data-bucket="relation">
+          <h3>Trust Deficit</h3>
+          <p class="definition">One or both parties withhold full engagement because they expect bad faith, incompetence, or betrayal. Trust is the invisible infrastructure of all cooperation — when it degrades, everything slows and distorts.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Team withholds concerns from leadership — they expect dismissal</li>
+            <li>Spouse assumes bad intentions behind an innocent question</li>
+            <li>Engineer doesn't flag a risk because "it'll just get ignored"</li>
+            <li>Community member disengages without saying why</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Repair through demonstrated reliability over repeated cycles</li>
+            <li>Increase transparency — explain decisions, especially unpopular ones</li>
+            <li>Never punish vulnerability — the first time someone shares a concern</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="expectation" data-bucket="relation">
+          <h3>Expectation Mismatch</h3>
+          <p class="definition">Different parties operate under different assumptions about roles, standards, or what success looks like. Neither party is failing — they are executing their mental model faithfully. The models just don't match.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Two engineers have different definitions of "done" for a ticket</li>
+            <li>Partners have different assumptions about who handles what at home</li>
+            <li>Manager expects initiative; employee expects direction</li>
+            <li>Volunteer expects recognition; organiser expects self-sufficiency</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Surface implicit expectations and make them explicit agreements</li>
+            <li>Revisit agreements as circumstances change</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="comm-failure" data-bucket="relation">
+          <h3>Communication Failure</h3>
+          <p class="definition">Important information was not transmitted accurately. This is the most commonly cited relationship problem — and often a symptom rather than the root cause. Ask why the communication failed before treating it as a standalone problem.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Critical architecture decision communicated in a Slack thread nobody reads</li>
+            <li>Concern mentioned once in passing, expected to be acted on</li>
+            <li>Emotional subtext in a message interpreted as its opposite</li>
+            <li>Important request made during an argument — timing guaranteed it wouldn't land</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Match channel to importance — critical things need synchronous loops</li>
+            <li>Close communication loops: sender confirms receipt and understanding</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" id="value-conflict" data-bucket="relation">
+          <h3>Value Conflict</h3>
+          <p class="definition">Two parties hold genuinely different values that produce incompatible priorities. This is the hardest relationship problem to resolve — because neither party is wrong by their own lights. It requires either alignment, negotiated co-existence, or, in the limit case, separation.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Engineering: efficiency vs. resilience — speed vs. correctness</li>
+            <li>Family: autonomy vs. order — child's freedom vs. parent's structure</li>
+            <li>Organisational: innovation vs. stability — change vs. preservation</li>
+            <li>Spiritual community: compassion vs. boundaries — inclusion vs. integrity</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Name the value conflict explicitly — most conflicts are never named</li>
+            <li>Agree on which value takes precedence in which contexts</li>
+            <li>Do not try to win the argument — try to produce a workable arrangement</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── BUCKET 6: ENVIRONMENT ──────────────────────────── -->
+    <section id="environment" class="major-section bucket-environ" data-bucket="environ">
+      <div class="bucket-header">
+        <div class="bucket-icon" style="background:rgba(46,106,90,0.12);font-size:1.6rem">🌐</div>
+        <div class="bucket-header-text">
+          <h2>6. Environment <em>Problems</em></h2>
+          <p>Forces outside the system's direct control. The critical task here is not to solve the environment — it is to correctly distinguish environmental problems from addressable ones, and to build systems robust enough to absorb the variation that cannot be prevented.</p>
+        </div>
+      </div>
+
+      <div class="subtype-grid">
+
+        <div class="subtype-card" data-bucket="environ">
+          <h3>Random Variation</h3>
+          <p class="definition">Normal statistical noise in the environment. Not every deviation is a signal requiring intervention — treating noise as signal is one of the most common managerial errors.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Weather causing supply chain delay</li>
+            <li>Illness disrupting a meeting's outcome</li>
+            <li>Market fluctuation unrelated to business fundamentals</li>
+            <li>A child's off day that doesn't reflect a pattern</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Build slack and buffers — not tighter controls</li>
+            <li>Distinguish one-time variation from trend before acting</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" data-bucket="environ">
+          <h3>External Constraint</h3>
+          <p class="definition">Regulatory, legal, economic, or political forces that constrain what the system can do. These are real constraints — but they are often treated as more absolute than they actually are.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Compliance requirements adding overhead to deployment</li>
+            <li>Economic conditions limiting hiring</li>
+            <li>Vendor limitations blocking a desired architecture</li>
+            <li>Legal constraints on a service's geographic expansion</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Distinguish "cannot" from "would be costly to" — often the latter</li>
+            <li>Work within constraints rather than pretending they don't exist</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" data-bucket="environ">
+          <h3>Black Swan Event</h3>
+          <p class="definition">A rare, high-impact event outside the range of normal expectation. The appropriate response is not prevention (which is impossible) but resilience: designing systems that can survive and recover.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Pandemic disrupting every assumption about work and service</li>
+            <li>Major cloud provider outage taking down dependent services</li>
+            <li>Natural disaster affecting an entire community's capacity</li>
+            <li>Sudden loss that restructures a family's functioning</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Invest in resilience — redundancy, diversification, recovery plans</li>
+            <li>Run scenario exercises before the event, not postmortems after</li>
+          </ul>
+        </div>
+
+        <div class="subtype-card" data-bucket="environ">
+          <h3>Chronic Ambient Pressure</h3>
+          <p class="definition">A sustained environmental condition — economic, social, political, or cultural — that degrades performance over time without a single identifiable cause. Often invisible because it is constant.</p>
+          <div class="examples-label">Examples</div>
+          <ul class="mini-list">
+            <li>Years of political persecution affecting a community's psychology</li>
+            <li>Sustained economic insecurity shaping family risk tolerance</li>
+            <li>Toxic industry culture normalising unhealthy practices</li>
+            <li>Chronic loneliness affecting spiritual engagement</li>
+          </ul>
+          <div class="fixes-label">Interventions</div>
+          <ul class="mini-list">
+            <li>Name the ambient condition — most people haven't articulated it</li>
+            <li>Create protected environments that temporarily lift the pressure</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quick Reference -->
+    <section id="reference" class="major-section">
+      <span class="section-label">Reference</span>
+      <h2>Quick <em>Reference</em> Summary</h2>
+      <p class="lead">The full taxonomy at a glance. Use this as a scanning layer before applying the three-step protocol.</p>
+
+      <div class="ref-table-wrap">
+        <table class="ref-table">
+          <thead>
+            <tr>
+              <th>Bucket</th>
+              <th>Subtype</th>
+              <th>Signature Question</th>
+              <th>Primary Intervention</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="6">
+                <span class="bucket-tag">
+                  <span class="dot" style="background:var(--c-human)"></span>
+                  Human
+                </span>
+              </td>
+              <td>Knowledge Gap</td>
+              <td>Do they know what to do?</td>
+              <td>Training, documentation</td>
+            </tr>
+            <tr>
+              <td>Skill Gap</td>
+              <td>Can they do it reliably?</td>
+              <td>Deliberate practice + feedback</td>
+            </tr>
+            <tr>
+              <td>Judgment Gap</td>
+              <td>Are their decisions correct?</td>
+              <td>Decision frameworks, mentorship</td>
+            </tr>
+            <tr>
+              <td>Attention Gap</td>
+              <td>Did they register the signal?</td>
+              <td>Checklists, reduced cognitive load</td>
+            </tr>
+            <tr>
+              <td>Motivation Gap</td>
+              <td>Are they engaged?</td>
+              <td>Meaning alignment, accountability</td>
+            </tr>
+            <tr>
+              <td>Emotional Regulation Gap</td>
+              <td>Are emotions interfering?</td>
+              <td>Awareness practices, protocols</td>
+            </tr>
+            <tr>
+              <td rowspan="4">
+                <span class="bucket-tag">
+                  <span class="dot" style="background:var(--c-process)"></span>
+                  Process
+                </span>
+              </td>
+              <td>Missing Process</td>
+              <td>Is there a process at all?</td>
+              <td>Create minimal viable process</td>
+            </tr>
+            <tr>
+              <td>Unclear Process</td>
+              <td>Is ownership clear?</td>
+              <td>Specify, define done</td>
+            </tr>
+            <tr>
+              <td>Not Followed</td>
+              <td>Why was it bypassed?</td>
+              <td>Diagnose cause, then automate</td>
+            </tr>
+            <tr>
+              <td>Too Complex</td>
+              <td>Is compliance the bottleneck?</td>
+              <td>Audit and remove steps</td>
+            </tr>
+            <tr>
+              <td rowspan="4">
+                <span class="bucket-tag">
+                  <span class="dot" style="background:var(--c-system)"></span>
+                  System
+                </span>
+              </td>
+              <td>Design Flaw</td>
+              <td>Does the structure produce failure?</td>
+              <td>Redesign architecture</td>
+            </tr>
+            <tr>
+              <td>Feedback Loop Failure</td>
+              <td>Does decay go undetected?</td>
+              <td>Install leading indicators</td>
+            </tr>
+            <tr>
+              <td>Misaligned Incentives</td>
+              <td>What behaviour is rewarded?</td>
+              <td>Redesign reward structure</td>
+            </tr>
+            <tr>
+              <td>Capacity Mismatch</td>
+              <td>Is demand exceeding capacity?</td>
+              <td>Add capacity or cut demand</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="bucket-tag">
+                  <span class="dot" style="background:var(--c-resource)"></span>
+                  Resource
+                </span>
+              </td>
+              <td>Time / Money / Tools / Info / People / Energy</td>
+              <td>Would doubling the resource change the outcome?</td>
+              <td>Supply the missing input</td>
+            </tr>
+            <tr>
+              <td rowspan="4">
+                <span class="bucket-tag">
+                  <span class="dot" style="background:var(--c-relation)"></span>
+                  Relationship
+                </span>
+              </td>
+              <td>Trust Deficit</td>
+              <td>Is full engagement being withheld?</td>
+              <td>Reliability, transparency</td>
+            </tr>
+            <tr>
+              <td>Expectation Mismatch</td>
+              <td>Do the mental models match?</td>
+              <td>Explicit agreements</td>
+            </tr>
+            <tr>
+              <td>Communication Failure</td>
+              <td>Was the signal transmitted accurately?</td>
+              <td>Channel + loop closure</td>
+            </tr>
+            <tr>
+              <td>Value Conflict</td>
+              <td>Are the values incompatible?</td>
+              <td>Name it, negotiate precedence</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="bucket-tag">
+                  <span class="dot" style="background:var(--c-environ)"></span>
+                  Environment
+                </span>
+              </td>
+              <td>Random / Constraint / Black Swan / Ambient</td>
+              <td>Is this inside or outside our control?</td>
+              <td>Build resilience, not tighter control</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pull-quote">
+        The trick is to keep the top-level buckets few enough that you can recall them under stress. Six is at the upper edge of that number.
+      </div>
+
+      <p>Used consistently, this taxonomy does something more valuable than any individual diagnosis: it builds a shared vocabulary across all the domains of your life. The same word — <em>feedback loop failure</em> — can describe a missing monitoring alert, a marriage with no regular check-ins, and a spiritual life with no muhasebe practice. When the vocabulary unifies, so does the pattern-recognition.</p>
+      <p>The purpose was never to explain the world perfectly. It was to get from incident to intervention, with just enough abstraction to gain leverage — but not so much that action is delayed.</p>
+    </section>
+
+    <!-- No-results state -->
+    <div class="no-results" id="noResults" role="status" aria-live="polite">
+      <div class="no-results-emoji">🔍</div>
+      <h3>No subtypes found</h3>
+      <p>Try a different search term, or clear the filters to see everything.</p>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // ── Progress bar ──────────────────────────────────────────
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+  }
+
+  // ── Filter + Search ───────────────────────────────────────
+  (function() {
+    const searchInput  = document.getElementById('subtypeSearch');
+    const searchClear  = document.getElementById('searchClear');
+    const noResults    = document.getElementById('noResults');
+    const pillButtons  = document.querySelectorAll('.filter-pill[data-bucket]');
+
+    // All filterable cards (subtype-card and resource-card) and their parent bucket sections
+    const allCards = Array.from(document.querySelectorAll('.subtype-card[data-bucket], .resource-card[data-bucket]'));
+    const bucketSections = Array.from(document.querySelectorAll('.major-section[data-bucket]'));
+
+    // Non-bucket sections (overview, shortcut, reference) — never filtered
+    const staticSections = Array.from(document.querySelectorAll('.major-section:not([data-bucket])'));
+
+    // Active bucket filter set; empty means "All"
+    let activeBuckets = new Set();
+    let currentQuery  = '';
+
+    // ── Get searchable text from a card ──────────────────────
+    function cardText(card) {
+      return card.innerText.toLowerCase();
+    }
+
+    // ── Highlight matching text ───────────────────────────────
+    function applyHighlight(card, query) {
+      // Remove existing highlights first
+      card.querySelectorAll('mark.hl').forEach(m => {
+        m.replaceWith(document.createTextNode(m.textContent));
+      });
+      // Normalize text nodes
+      card.normalize();
+      if (!query) return;
+
+      const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+
+      function highlightNode(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const parent = node.parentNode;
+          if (parent.nodeName === 'MARK') return;
+          const text = node.textContent;
+          if (!re.test(text)) return;
+          re.lastIndex = 0;
+          const frag = document.createDocumentFragment();
+          let last = 0, m;
+          while ((m = re.exec(text)) !== null) {
+            frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+            const mark = document.createElement('mark');
+            mark.className = 'hl';
+            mark.textContent = m[0];
+            frag.appendChild(mark);
+            last = m.index + m[0].length;
+          }
+          frag.appendChild(document.createTextNode(text.slice(last)));
+          parent.replaceChild(frag, node);
+        } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== 'MARK') {
+          Array.from(node.childNodes).forEach(highlightNode);
+        }
+      }
+      highlightNode(card);
+    }
+
+    // ── Core filter function ──────────────────────────────────
+    function applyFilters() {
+      const query = currentQuery.trim().toLowerCase();
+      const hasBucketFilter = activeBuckets.size > 0;
+      let totalVisible = 0;
+
+      // Per-bucket visible count (for pill labels)
+      const bucketCounts = { human: 0, process: 0, system: 0, resource: 0, relation: 0, environ: 0 };
+
+      allCards.forEach(card => {
+        const bucket = card.dataset.bucket;
+        const passedBucket = !hasBucketFilter || activeBuckets.has(bucket);
+        const passedSearch = !query || cardText(card).includes(query);
+        const visible = passedBucket && passedSearch;
+
+        card.classList.toggle('hidden', !visible);
+        if (visible) {
+          totalVisible++;
+          if (bucketCounts[bucket] !== undefined) bucketCounts[bucket]++;
+          applyHighlight(card, query);
+        } else {
+          applyHighlight(card, ''); // strip highlights
+        }
+      });
+
+      // Show/hide entire bucket sections based on whether any card in them is visible
+      bucketSections.forEach(section => {
+        const bucket = section.dataset.bucket;
+        const cards = section.querySelectorAll('.subtype-card[data-bucket], .resource-card[data-bucket]');
+        const anyVisible = Array.from(cards).some(c => !c.classList.contains('hidden'));
+        section.classList.toggle('bucket-hidden', !anyVisible);
+      });
+
+      // Static sections (overview, shortcut, reference): hide when any filter/search is active
+      const filtersActive = hasBucketFilter || !!query;
+      staticSections.forEach(s => {
+        s.classList.toggle('bucket-hidden', filtersActive);
+      });
+
+      // No-results state
+      noResults.classList.toggle('visible', totalVisible === 0);
+
+      // Update pill counts
+      const allCount = allCards.length;
+      const pcAll = document.getElementById('pc-all');
+      if (pcAll) pcAll.textContent = filtersActive ? `${totalVisible}` : `${allCount}`;
+      Object.entries(bucketCounts).forEach(([b, count]) => {
+        const el = document.getElementById(`pc-${b}`);
+        if (el) {
+          // Count total for this bucket when no filter, or filtered count when filtered
+          if (!filtersActive) {
+            el.textContent = `${allCards.filter(c => c.dataset.bucket === b).length}`;
+          } else {
+            el.textContent = `${count}`;
+          }
+        }
+      });
+    }
+
+    // ── Pill filter logic ─────────────────────────────────────
+    pillButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const bucket = btn.dataset.bucket;
+        if (bucket === 'all') {
+          activeBuckets.clear();
+          pillButtons.forEach(b => b.classList.toggle('active', b.dataset.bucket === 'all'));
+        } else {
+          if (activeBuckets.has(bucket)) {
+            activeBuckets.delete(bucket);
+          } else {
+            activeBuckets.add(bucket);
+          }
+          // Update active states
+          const allPill = document.querySelector('.filter-pill-all');
+          allPill.classList.toggle('active', activeBuckets.size === 0);
+          pillButtons.forEach(b => {
+            if (b.dataset.bucket !== 'all') {
+              b.classList.toggle('active', activeBuckets.has(b.dataset.bucket));
+            }
+          });
+        }
+        applyFilters();
+      });
+    });
+
+    // ── Search input logic ────────────────────────────────────
+    searchInput.addEventListener('input', () => {
+      currentQuery = searchInput.value;
+      searchClear.classList.toggle('visible', currentQuery.length > 0);
+      applyFilters();
+    });
+
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      currentQuery = '';
+      searchClear.classList.remove('visible');
+      searchInput.focus();
+      applyFilters();
+    });
+
+    // Keyboard: Escape clears search
+    searchInput.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        currentQuery = '';
+        searchClear.classList.remove('visible');
+        applyFilters();
+      }
+    });
+
+    // ── Initialise counts on load ─────────────────────────────
+    applyFilters();
+
+  })();
+</script>
+
+</body>
+</html>

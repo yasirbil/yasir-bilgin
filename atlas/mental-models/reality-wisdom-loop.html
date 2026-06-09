@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Reality–Wisdom Loop | Yasir Bilgin</title>
+
+  <meta name="description" content="A nine-stage decision hierarchy for INTJs: from raw observation to principled action — designed to delay abstraction by exactly one step.">
+  <meta name="keywords" content="mental models, INTJ, decision making">
+
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/Mental-Models/reality-wisdom-loop.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="The Reality–Wisdom Loop">
+  <meta property="og:description" content="A nine-stage decision hierarchy for INTJs: from raw observation to principled action — designed to delay abstraction by exactly one step.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Mental-Models/reality-wisdom-loop.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="The Reality–Wisdom Loop">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="The Reality–Wisdom Loop">
+  <meta name="twitter:description" content="A nine-stage decision hierarchy for INTJs: from raw observation to principled action — designed to delay abstraction by exactly one step.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Reality–Wisdom Loop",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "description": "A nine-stage decision hierarchy for INTJs: from raw observation to principled action — designed to delay abstraction by exactly one step.",
+    "url": "https://yasirbilgin.com/atlas/Mental-Models/reality-wisdom-loop.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "The Reality–Wisdom Loop", "item": "https://yasirbilgin.com/atlas/Mental-Models/reality-wisdom-loop.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Tokens ──────────────────────────────────────────────── */
+    :root {
+      --gold:      #c9a84c;
+      --ink:       #1c1a17;
+      --bg:        #f7f3ec;
+      --parchment: #faf7f2;
+      --accent:    #7a5c38;
+      --faint:     #6e5f4e;
+      --rule:      rgba(107,93,79,0.18);
+      --nav-h:     62px;
+
+      /* Phase-mode colours */
+      --act-bg:    #fff8f0;
+      --act-ink:   #7a3c18;
+      --act-line:  #c96a2a;
+      --think-bg:  #f0f5fa;
+      --think-ink: #1e4a72;
+      --think-line:#2e6eaa;
+      --both-bg:   #f2f7f0;
+      --both-ink:  #2a5a3a;
+      --both-line: #3a8a5a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* ── Progress bar ──────────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ───────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--parchment);
+      width: min(340px, 90vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.8rem;
+      border-left: 1px solid var(--rule);
+      box-shadow: -8px 0 32px rgba(0,0,0,0.12);
+    }
+    .toc-close {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      background: none; border: 1px solid var(--rule); border-radius: 6px;
+      cursor: pointer; color: var(--faint); font-size: 1rem;
+      margin-bottom: 1.5rem; transition: background 0.15s;
+    }
+    .toc-close:hover { background: rgba(107,93,79,0.08); }
+    .toc-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .toc-panel h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 1.2rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li + li { margin-top: 0.1rem; }
+    .toc-list a {
+      display: flex; align-items: center; gap: 0.55rem;
+      padding: 0.45rem 0.6rem; border-radius: 5px;
+      text-decoration: none; color: var(--ink);
+      font-family: 'DM Sans', sans-serif; font-size: 0.86rem; line-height: 1.35;
+      transition: background 0.12s;
+    }
+    .toc-list a:hover { background: rgba(107,93,79,0.07); }
+    .toc-list a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .toc-list a.toc-main { font-weight: 600; }
+    .toc-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem; font-weight: 700;
+      width: 22px; height: 22px;
+      border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      flex-shrink: 0; color: #fff;
+    }
+    .toc-divider { height: 1px; background: var(--rule); margin: 0.8rem 0; }
+
+    /* ── Eyebrow pill ─────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex; align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22); border-radius: 999px;
+      color: var(--faint); font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow { border-color: rgba(255,255,255,0.14); background: rgba(30,27,23,0.7); }
+    }
+
+    /* ── Hero ─────────────────────────────────────────────── */
+    .hero {
+      max-width: 820px; margin: 0 auto;
+      padding: 5rem 2.5rem 3rem; text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 600; line-height: 1.15; color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--faint); line-height: 1.65;
+      max-width: 640px; margin: 0 auto 2rem;
+    }
+    .byline-row {
+      display: flex; align-items: center;
+      justify-content: center; gap: 0.75rem;
+    }
+    .avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--gold); display: flex;
+      align-items: center; justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem; font-weight: 700; color: #fff; flex-shrink: 0;
+    }
+    .byline-name { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--ink); }
+    .byline-meta { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--faint); }
+    .hero-rule { border: none; border-top: 1px solid var(--rule); max-width: 820px; margin: 0 auto; }
+
+    /* ── Article header (static) ──────────────────────────── */
+    .article-header {
+      display: flex; align-items: center;
+      justify-content: flex-end; gap: 1rem;
+      padding: 0.75rem 2.5rem;
+      max-width: 820px; margin: 0 auto;
+    }
+    .read-time { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--faint); }
+    .toc-btn {
+      font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500;
+      padding: 0.45rem 1rem;
+      border: 1px solid rgba(107,93,79,0.3); border-radius: 6px;
+      background: transparent; color: var(--ink); cursor: pointer;
+      transition: background 0.15s, border-color 0.15s; min-height: 44px;
+    }
+    .toc-btn:hover { background: rgba(107,93,79,0.07); border-color: rgba(107,93,79,0.5); }
+    .toc-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ── Filter bar ──────────────────────────────────────── */
+    .filter-bar {
+      position: sticky;
+      top: 62px;
+      z-index: 50;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.65rem 2.5rem;
+    }
+    .filter-inner {
+      max-width: 820px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem;
+    }
+    .search-wrap {
+      position: relative; flex: 1 1 220px; min-width: 160px;
+    }
+    .search-wrap svg {
+      position: absolute; left: 0.75rem; top: 50%;
+      transform: translateY(-50%); pointer-events: none; opacity: 0.4;
+    }
+    .search-input {
+      width: 100%; padding: 0.48rem 2.1rem 0.48rem 2.2rem;
+      border: 1px solid rgba(107,93,79,0.28); border-radius: 8px;
+      background: var(--parchment); color: var(--ink);
+      font-family: 'DM Sans', sans-serif; font-size: 0.86rem;
+      outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+      min-height: 36px;
+    }
+    .search-input::placeholder { color: var(--faint); opacity: 0.7; }
+    .search-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+    .search-clear {
+      position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%);
+      width: 20px; height: 20px; border: none; background: none; cursor: pointer;
+      color: var(--faint); display: none; align-items: center; justify-content: center;
+      border-radius: 4px; font-size: 0.8rem; padding: 0;
+    }
+    .search-clear:hover { background: rgba(107,93,79,0.1); }
+    .search-clear:focus-visible { outline: 2px solid var(--gold); }
+    .search-clear.visible { display: flex; }
+
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .filter-pill {
+      font-family: 'DM Sans', sans-serif; font-size: 0.73rem; font-weight: 600;
+      padding: 0.28rem 0.7rem; border-radius: 999px; border: 1.5px solid;
+      cursor: pointer; transition: background 0.12s, opacity 0.12s;
+      min-height: 28px; display: inline-flex; align-items: center; gap: 0.25rem;
+      user-select: none; letter-spacing: 0.02em; background: transparent;
+      opacity: 0.5;
+    }
+    .filter-pill.active { opacity: 1; }
+    .filter-pill:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .fp-all   { color: var(--ink); border-color: rgba(107,93,79,0.35); }
+    .fp-all.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+    .fp-act   { color: var(--act-ink);   border-color: rgba(201,106,42,0.3); }
+    .fp-act.active   { background: var(--act-bg); }
+    .fp-think { color: var(--think-ink); border-color: rgba(46,110,170,0.3); }
+    .fp-think.active { background: var(--think-bg); }
+    .fp-both  { color: var(--both-ink);  border-color: rgba(58,138,90,0.3); }
+    .fp-both.active  { background: var(--both-bg); }
+    .pill-count { font-size: 0.68rem; opacity: 0.7; font-weight: 500; }
+
+    /* Highlight */
+    mark.hl { background: rgba(201,168,76,0.28); color: inherit; border-radius: 2px; padding: 0 1px; }
+
+    /* No-results */
+    .no-results { display: none; text-align: center; padding: 4rem 2rem; font-family: 'DM Sans', sans-serif; }
+    .no-results.visible { display: block; }
+    .no-results-emoji { font-size: 2.5rem; margin-bottom: 1rem; }
+    .no-results h3 { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; }
+    .no-results p { font-size: 0.88rem; color: var(--faint); }
+
+    /* Stage visibility */
+    .stage-card.hidden { display: none; }
+
+    /* ── Article body ─────────────────────────────────────── */
+    .article-body {
+      max-width: 820px; margin: 0 auto;
+      padding: 3rem 2.5rem 8rem;
+    }
+    section[id] { scroll-margin-top: 120px; }
+    .major-section { margin-bottom: 4rem; }
+    .section-label {
+      display: block; font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 0.6rem;
+    }
+    .major-section > h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 600; line-height: 1.25; color: var(--ink); margin-bottom: 1.2rem;
+    }
+    .major-section > h2 em { font-style: italic; color: var(--accent); }
+    .lead { font-size: 1.1rem; color: #3a3028; line-height: 1.75; margin-bottom: 2rem; }
+    p { margin-bottom: 1.4rem; }
+
+    /* ── Stage cards ─────────────────────────────────────── */
+    .stages-container { display: flex; flex-direction: column; gap: 0; }
+
+    .stage-card {
+      position: relative;
+      border-radius: 14px;
+      border: 1px solid var(--rule);
+      background: var(--parchment);
+      margin-bottom: 1.4rem;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .stage-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+
+    /* Connector line between cards */
+    .stage-connector {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 36px;
+      margin: -8px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .stage-connector.hidden { display: none; }
+    .connector-line {
+      width: 2px;
+      height: 100%;
+      background: var(--rule);
+    }
+    .connector-arrow {
+      position: absolute;
+      bottom: 2px;
+      font-size: 0.7rem;
+      color: var(--faint);
+      opacity: 0.6;
+      line-height: 1;
+    }
+
+    /* Stage header */
+    .stage-header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.4rem 1.8rem 1rem;
+      cursor: pointer;
+    }
+    .stage-num {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem; font-weight: 800;
+      color: #fff; flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .stage-header-text { flex: 1; }
+    .stage-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 600;
+      color: var(--ink); line-height: 1.2;
+    }
+    .stage-mantra {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem; font-style: italic;
+      color: var(--faint); margin-top: 0.15rem;
+    }
+    .stage-mode-badge {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      border: 1.5px solid;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .expand-icon {
+      width: 28px; height: 28px;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; color: var(--faint);
+      flex-shrink: 0;
+      transition: transform 0.2s, background 0.15s;
+      background: transparent;
+    }
+    .stage-card.open .expand-icon { transform: rotate(180deg); background: rgba(107,93,79,0.06); }
+
+    /* Stage body (collapsible) */
+    .stage-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    .stage-body-inner {
+      padding: 0 1.8rem 1.6rem;
+      border-top: 1px solid var(--rule);
+      margin-top: 0;
+    }
+
+    /* Stage body layout */
+    .stage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    .stage-col h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 0.6rem;
+    }
+    .q-list, .ex-list { list-style: none; padding: 0; }
+    .q-list li, .ex-list li {
+      font-size: 0.9rem; line-height: 1.55;
+      padding: 0.35rem 0 0.35rem 1.1rem;
+      position: relative;
+      border-bottom: 1px solid rgba(107,93,79,0.08);
+    }
+    .q-list li:last-child, .ex-list li:last-child { border-bottom: none; }
+    .q-list li::before {
+      content: '?'; position: absolute; left: 0;
+      color: var(--gold); font-weight: 700; font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem; top: 0.4rem;
+    }
+    .ex-list li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--faint); font-size: 0.8rem; top: 0.4rem;
+    }
+    .stage-definition {
+      font-size: 0.95rem; line-height: 1.7;
+      color: #3a3028; margin-top: 1rem; margin-bottom: 0;
+    }
+    .stage-warning {
+      margin-top: 1.2rem;
+      padding: 0.75rem 1rem;
+      background: rgba(201,108,42,0.07);
+      border-left: 3px solid var(--act-line);
+      border-radius: 0 6px 6px 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem; line-height: 1.5;
+      color: var(--act-ink);
+    }
+    .stage-warning strong {
+      display: block; font-size: 0.7rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 0.25rem; opacity: 0.7;
+    }
+    .intj-note {
+      margin-top: 1.2rem;
+      padding: 0.75rem 1rem;
+      background: rgba(46,110,170,0.07);
+      border-left: 3px solid var(--think-line);
+      border-radius: 0 6px 6px 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem; line-height: 1.5;
+      color: var(--think-ink);
+    }
+    .intj-note strong {
+      display: block; font-size: 0.7rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 0.25rem; opacity: 0.7;
+    }
+
+    /* Mode colours applied to card elements */
+    .mode-act .stage-num      { background: var(--act-line); }
+    .mode-act .stage-mode-badge { color: var(--act-ink); border-color: rgba(201,106,42,0.3); background: var(--act-bg); }
+    .mode-think .stage-num    { background: var(--think-line); }
+    .mode-think .stage-mode-badge { color: var(--think-ink); border-color: rgba(46,110,170,0.3); background: var(--think-bg); }
+    .mode-both .stage-num     { background: var(--both-line); }
+    .mode-both .stage-mode-badge { color: var(--both-ink); border-color: rgba(58,138,90,0.3); background: var(--both-bg); }
+
+    /* ── Compact wall-poster strip ───────────────────────── */
+    .poster-strip {
+      background: var(--ink);
+      border-radius: 14px;
+      padding: 2rem 2.4rem;
+      margin: 2.5rem 0;
+      color: var(--bg);
+    }
+    .poster-strip h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem; font-weight: 600;
+      color: var(--gold); margin-bottom: 1.4rem;
+      letter-spacing: 0.02em;
+    }
+    .poster-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: center;
+    }
+    .poster-step {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .poster-step-num {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.2);
+      border: 1px solid rgba(201,168,76,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.65rem; font-weight: 700;
+      color: var(--gold); flex-shrink: 0;
+    }
+    .poster-step-word {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(247,243,236,0.9);
+    }
+    .poster-arrow {
+      font-size: 0.65rem;
+      color: rgba(201,168,76,0.5);
+      padding: 0 0.4rem;
+    }
+    .poster-words {
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .poster-words p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; line-height: 1.8;
+      color: rgba(247,243,236,0.65);
+      margin: 0;
+    }
+    .poster-words span {
+      color: rgba(247,243,236,0.9);
+      font-weight: 600;
+    }
+
+    /* ── The INTJ Inversion box ──────────────────────────── */
+    .inversion-box {
+      background: var(--parchment);
+      border: 1px solid rgba(107,93,79,0.22);
+      border-top: 4px solid var(--gold);
+      border-radius: 0 0 12px 12px;
+      padding: 2rem 2.2rem;
+      margin: 2.5rem 0;
+    }
+    .inversion-box h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 600;
+      color: var(--ink); margin-bottom: 1rem;
+    }
+    .inversion-flow {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin: 1.5rem 0;
+    }
+    .inv-col {
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+    }
+    .inv-col.natural { background: rgba(139,58,58,0.07); border: 1px solid rgba(139,58,58,0.15); }
+    .inv-col.improved { background: rgba(58,138,90,0.07); border: 1px solid rgba(58,138,90,0.15); }
+    .inv-col h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+    .inv-col.natural h4 { color: #8b3a3a; }
+    .inv-col.improved h4 { color: #2a5a3a; }
+    .inv-steps { list-style: none; padding: 0; }
+    .inv-steps li {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem; line-height: 1.5;
+      padding: 0.3rem 0;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .inv-steps li .arrow { color: var(--faint); font-size: 0.75rem; }
+    .inv-vs {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem; font-style: italic;
+      color: var(--faint); text-align: center;
+    }
+    .inversion-box p { font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.8rem; }
+    .inversion-box p:last-child { margin-bottom: 0; }
+
+    /* ── Pull quote ──────────────────────────────────────── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2rem;
+      padding: 1.2rem 1.8rem 1.2rem 2rem;
+      border-left: 3px solid var(--gold);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-style: italic; color: var(--accent); line-height: 1.6;
+    }
+
+    /* ── INTJ Reminder footer block ─────────────────────── */
+    .intj-reminder {
+      background: #1a1410;
+      border-radius: 14px;
+      padding: 2.2rem 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .intj-reminder p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.9;
+      color: rgba(247,243,236,0.85);
+      margin: 0 0 0.6rem;
+    }
+    .intj-reminder p:last-child { margin: 0; }
+    .intj-reminder strong { color: var(--gold); font-weight: 600; }
+    .intj-reminder em { font-style: italic; color: rgba(247,243,236,0.6); }
+
+    /* ── Mode legend ────────────────────────────────────── */
+    .mode-legend {
+      display: flex; flex-wrap: wrap; gap: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; color: var(--faint);
+    }
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%; flex-shrink: 0;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      max-width: 820px; margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid var(--rule);
+    }
+    .footer-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; font-weight: 600; color: var(--ink); }
+    .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--faint); }
+
+    /* ── Dark mode ──────────────────────────────────────── */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:       #e8e0d4;
+        --bg:        #131310;
+        --parchment: #1a1a16;
+        --accent:    #c9a84c;
+        --faint:     #9a8e7c;
+        --rule:      rgba(255,255,255,0.09);
+        --act-bg:    #1e1208;
+        --think-bg:  #0c141e;
+        --both-bg:   #0c180e;
+      }
+      .intj-reminder { background: #0f0d0a; }
+      .poster-strip { background: #0f0d0a; }
+    }
+
+    /* ── Mobile ─────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 4rem 1.4rem 2.5rem; }
+      .article-body { padding: 2.5rem 1.4rem 5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .filter-bar { padding: 0.6rem 1.4rem; }
+      .search-wrap { flex: 1 1 100%; }
+      .stage-grid { grid-template-columns: 1fr; }
+      .stage-header { padding: 1.1rem 1.2rem 0.8rem; }
+      .stage-body-inner { padding: 0 1.2rem 1.2rem; }
+      .inversion-flow { grid-template-columns: 1fr; }
+      .inv-vs { display: none; }
+      .poster-flow { gap: 0.1rem; }
+      .pull-quote { margin-left: 0; }
+      footer { padding: 2rem 1.4rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    /* ── Reduced motion ─────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main-content">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close"
+              onclick="document.getElementById('tocOverlay').classList.remove('open')"
+              aria-label="Close table of contents">✕</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#intro" class="toc-main">The Core Problem</a></li>
+        <li><a href="#stages" class="toc-main">The Nine Stages</a></li>
+        <div class="toc-divider"></div>
+        <li><a href="#s1">
+          <span class="toc-num" style="background:var(--act-line)">1</span> Notice
+        </a></li>
+        <li><a href="#s2">
+          <span class="toc-num" style="background:var(--act-line)">2</span> Mitigate
+        </a></li>
+        <li><a href="#s3">
+          <span class="toc-num" style="background:var(--act-line)">3</span> Stabilize
+        </a></li>
+        <li><a href="#s4">
+          <span class="toc-num" style="background:var(--both-line)">4</span> Classify
+        </a></li>
+        <li><a href="#s5">
+          <span class="toc-num" style="background:var(--think-line)">5</span> Diagnose
+        </a></li>
+        <li><a href="#s6">
+          <span class="toc-num" style="background:var(--think-line)">6</span> Improve
+        </a></li>
+        <li><a href="#s7">
+          <span class="toc-num" style="background:var(--think-line)">7</span> Generalize
+        </a></li>
+        <li><a href="#s8">
+          <span class="toc-num" style="background:var(--think-line)">8</span> Systematize
+        </a></li>
+        <li><a href="#s9">
+          <span class="toc-num" style="background:var(--both-line)">9</span> Integrate
+        </a></li>
+        <div class="toc-divider"></div>
+        <li><a href="#inversion" class="toc-main">The INTJ Inversion</a></li>
+        <li><a href="#reminder" class="toc-main">Reality First</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Atlas · Mental Models</div>
+    <h1>The Reality–<em>Wisdom</em> Loop</h1>
+    <p class="hero-sub">A nine-stage decision hierarchy — from raw observation to principled architecture. Designed for the INTJ tendency to theorise before acting, and to help you delay abstraction by exactly one step.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">June 7, 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar -->
+  <header class="article-header">
+    <span class="read-time">14 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')"
+            aria-controls="tocOverlay">
+      Contents
+    </button>
+  </header>
+
+  <!-- Filter bar -->
+  <div class="filter-bar" id="filterBar" role="search" aria-label="Filter stages">
+    <div class="filter-inner">
+      <div class="search-wrap">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+          <path d="M10 6.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-.813 3.625 2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input id="stageSearch" class="search-input" type="search"
+               placeholder="Search stages, questions, examples…"
+               autocomplete="off" spellcheck="false" aria-label="Search stages">
+        <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+      </div>
+      <div class="filter-pills" role="group" aria-label="Filter by mode">
+        <button class="filter-pill fp-all active" data-mode="all">All <span class="pill-count" id="pc-all"></span></button>
+        <button class="filter-pill fp-act"   data-mode="act">🔥 Act <span class="pill-count" id="pc-act"></span></button>
+        <button class="filter-pill fp-think" data-mode="think">🧠 Think <span class="pill-count" id="pc-think"></span></button>
+        <button class="filter-pill fp-both"  data-mode="both">⚖️ Both <span class="pill-count" id="pc-both"></span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article body -->
+  <article class="article-body">
+
+    <!-- Intro -->
+    <section id="intro" class="major-section">
+      <span class="section-label">The Problem</span>
+      <h2>Reality First. <em>Theory Second.</em></h2>
+      <p class="lead">For a mind that runs on systems and principles, the biggest performance failure is rarely analytical — it is sequencing. The pattern looks like this: something happens, and instead of moving through <em>see → act → understand</em>, the instinct reverses to <em>see → understand → act</em>. The abstraction fires too early, before there is enough reality to theorise on.</p>
+      <p>This framework is not a checklist. A checklist implies you follow every item every time. What you need instead is a <strong>decision hierarchy</strong> — a sequenced set of modes that tells you which kind of thinking is appropriate at which stage of a problem's lifecycle.</p>
+      <p>The nine stages below divide into three zones:</p>
+
+      <div class="mode-legend">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:var(--act-line)"></span>
+          <span><strong>Act mode</strong> — Stages 1–3. Observe and contain. No theorising permitted.</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:var(--think-line)"></span>
+          <span><strong>Think mode</strong> — Stages 5–8. Analyse, improve, and design. This is where your INTJ gifts belong.</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:var(--both-line)"></span>
+          <span><strong>Bridge</strong> — Stages 4 and 9. Transition points between acting and thinking.</span>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        Do not redesign the healthcare system while the patient is still bleeding.
+      </div>
+    </section>
+
+    <!-- Stages section header -->
+    <section id="stages" class="major-section">
+      <span class="section-label">The Framework</span>
+      <h2>Nine <em>Stages</em></h2>
+      <p class="lead">Each stage card is expandable. Click any stage to reveal its diagnostic questions, examples, the INTJ-specific failure mode, and the governing warning. Filter by mode or search across all stages to find what you need.</p>
+
+      <!-- ─── NO RESULTS ──────────────────────────────────── -->
+      <div class="no-results" id="noResults" role="status" aria-live="polite">
+        <div class="no-results-emoji">🔍</div>
+        <h3>No stages match</h3>
+        <p>Try a different search term, or reset the filters.</p>
+      </div>
+
+      <!-- ─── STAGE CARDS ─────────────────────────────────── -->
+      <div class="stages-container" id="stagesContainer">
+
+        <!-- Stage 1: Notice -->
+        <div class="stage-card mode-act" id="s1" data-mode="act" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s1">
+            <div class="stage-num">1</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Notice</div>
+              <div class="stage-mantra">"See before you explain."</div>
+            </div>
+            <span class="stage-mode-badge">Act Mode</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s1">
+            <div class="stage-body-inner">
+              <p class="stage-definition">The most critical and most violated stage. The mind wants to jump immediately to causes and patterns — but a theory built on incomplete observation is a liability, not an asset. Notice is the discipline of staying in sensory contact with what is actually happening before any explanation is attempted.</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Diagnostic Questions</h4>
+                  <ul class="q-list">
+                    <li>What do I observe — not infer, not interpret, observe?</li>
+                    <li>What facts are known with certainty?</li>
+                    <li>What am I interpreting vs. what is actually in front of me?</li>
+                    <li>Who else has direct access to what happened?</li>
+                    <li>What would a camera have recorded?</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Domain Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>DevOps:</strong> Service latency at p99 is 4s. Three errors in the last 5 minutes. Deployment was 40 mins ago.</li>
+                    <li><strong>Family:</strong> Tone shifted. Dinner was quiet. Three questions went unanswered in one-word replies.</li>
+                    <li><strong>Spiritual:</strong> Prayer has felt mechanical for two weeks. No resistance to skipping dhikr. Quran sits unopened.</li>
+                    <li><strong>Hizmet:</strong> Attendance dropped 30% over three meetings. Two key volunteers stopped responding to messages.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="stage-warning">
+                <strong>⚠ INTJ failure mode</strong>
+                The pattern-recognition engine fires within seconds of a new input. You see one data point and the model is already running. The result is a theory that precedes sufficient evidence — and that theory then filters subsequent observations to confirm itself. Noticing requires you to stay deliberately dumb for longer than feels comfortable.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 2: Mitigate -->
+        <div class="stage-card mode-act" id="s2" data-mode="act" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s2">
+            <div class="stage-num">2</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Mitigate</div>
+              <div class="stage-mantra">"Stop the bleeding."</div>
+            </div>
+            <span class="stage-mode-badge">Act Mode</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s2">
+            <div class="stage-body-inner">
+              <p class="stage-definition">Harm reduction before analysis. This stage asks only one question: what is actively getting worse right now? The scope is minimal — only what is necessary to stop the bleeding. There is no room here for root cause, redesign, or post-mortem. Those come later. Mitigation is triage.</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Diagnostic Questions</h4>
+                  <ul class="q-list">
+                    <li>What is actively worsening as I stand here?</li>
+                    <li>What is at imminent risk of becoming irreversible?</li>
+                    <li>What single action reduces the most harm in the next 60 seconds?</li>
+                    <li>Who needs to know right now?</li>
+                    <li>Can I roll back, stop, or isolate without making things worse?</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Domain Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>DevOps:</strong> Roll back the deployment. Reroute traffic. Page the oncall.</li>
+                    <li><strong>Medical:</strong> Call 911. Apply pressure. Do not move the spine.</li>
+                    <li><strong>Family:</strong> Stop the argument escalation — leave the room, lower your voice, say "I need five minutes."</li>
+                    <li><strong>Community:</strong> Cancel the event before more people commit. Issue a brief holding message.</li>
+                    <li><strong>Household:</strong> Shut off the water valve. Unplug the appliance.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="stage-warning">
+                <strong>⚠ INTJ failure mode</strong>
+                Mitigation feels intellectually unsatisfying because it is not solving anything — it is buying time. The urge to understand why the pipe burst while water is still flooding the floor is recognisable. Resist it. Mitigation is the precondition for good analysis, not its substitute. The worst post-mortems in DevOps come from teams that let the incident run longer to "gather more data."
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 3: Stabilize -->
+        <div class="stage-card mode-act" id="s3" data-mode="act" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s3">
+            <div class="stage-num">3</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Stabilize</div>
+              <div class="stage-mantra">"Secure the patient."</div>
+            </div>
+            <span class="stage-mode-badge">Act Mode</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s3">
+            <div class="stage-body-inner">
+              <p class="stage-definition">Restoring basic functionality — not excellence, not the ideal state, not the redesigned state. "Good enough to analyse" is the target. Stabilization creates the conditions in which calm diagnosis becomes possible. Before this stage completes, no one has enough equanimity or bandwidth to think clearly.</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Diagnostic Questions</h4>
+                  <ul class="q-list">
+                    <li>What does "functional enough to think" look like here?</li>
+                    <li>What must be working before analysis begins?</li>
+                    <li>What creates temporary safety without requiring a permanent fix?</li>
+                    <li>What is the minimum viable normal?</li>
+                    <li>Have the affected parties been informed and acknowledged?</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Domain Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>DevOps:</strong> Service restored on fallback. Error rate back to baseline. Customers notified. Incident channel quiet.</li>
+                    <li><strong>Family:</strong> The argument has cooled. Both people are calm enough to hear. Physical needs (food, sleep) are met.</li>
+                    <li><strong>Parenting:</strong> Child is comforted and physically safe. Cause of distress can now be explored without re-triggering it.</li>
+                    <li><strong>Spiritual:</strong> Emergency daily minimum restored — fajr, brief dhikr. Not optimal — stable.</li>
+                    <li><strong>Hizmet:</strong> Core function of the programme continues even if some elements are paused.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="stage-warning">
+                <strong>⚠ INTJ failure mode</strong>
+                This stage ends before most INTJs want it to. The system is still imperfect — the workaround is clumsy, the temporary arrangement is inefficient — and the drive to redesign is intense. But redesigning from inside the emergency is the classic error: you build under stress, you build for the immediate shape of the crisis, and you get an architecture designed for the last war. Wait until Stage 8 for redesign.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 4: Classify -->
+        <div class="stage-card mode-both" id="s4" data-mode="both" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s4">
+            <div class="stage-num">4</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Classify</div>
+              <div class="stage-mantra">"Name the beast."</div>
+            </div>
+            <span class="stage-mode-badge">Bridge</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s4">
+            <div class="stage-body-inner">
+              <p class="stage-definition">The transition from action to analysis. Classification is the first act of thinking — it frames the diagnosis that follows. Choose the single most useful category. The taxonomy from the <a href="universal-problem-taxonomy.html" style="color:var(--accent)">Universal Problem Taxonomy</a> applies directly here: Human, Process, System, Resource, Relationship, or Environment. Getting the bucket wrong at this stage produces elegant solutions to the wrong problem.</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Diagnostic Questions</h4>
+                  <ul class="q-list">
+                    <li>Is this primarily a Human, Process, System, Resource, Relationship, or Environment problem?</li>
+                    <li>Would this have happened with a different person in the role?</li>
+                    <li>Would this have happened if the process had been followed?</li>
+                    <li>Is this a one-off or does the system produce it reliably?</li>
+                    <li>What kind of intervention would prevent recurrence — training, process, architecture?</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Classification Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>Outage after a new engineer's change:</strong> Resist "Human." Ask — was there a code review? A staging environment? A deployment checklist? Often it is a Process or System problem wearing a human face.</li>
+                    <li><strong>Family argument recurring weekly:</strong> Is it Communication Failure (both have the skill but not the channel), Expectation Mismatch (different assumptions), or Value Conflict (genuine disagreement in priorities)?</li>
+                    <li><strong>Volunteer programme stalling:</strong> Is capacity insufficient (Resource), coordination unclear (Process), or is there a trust issue (Relationship)?</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="intj-note">
+                <strong>🧠 INTJ note</strong>
+                This is the stage where your pattern-recognition is genuinely useful — but discipline it. Choose the most useful bucket, not the most intellectually interesting one. The goal is not to produce the most complete taxonomy of contributing factors. It is to choose the frame that generates the most leverage in Stage 6.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 5: Diagnose -->
+        <div class="stage-card mode-think" id="s5" data-mode="think" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s5">
+            <div class="stage-num">5</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Diagnose</div>
+              <div class="stage-mantra">"Understand before judging."</div>
+            </div>
+            <span class="stage-mode-badge">Think Mode</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s5">
+            <div class="stage-body-inner">
+              <p class="stage-definition">The full causal investigation. You have the category (Stage 4) — now build the causal chain. The classic framework is three layers: immediate cause (what directly triggered it), contributing causes (what made the system vulnerable), and root cause (what structural condition makes this failure possible in the first place). All three matter. Root cause alone is insufficient — a root cause that never has contributing cause conditions never fires.</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Diagnostic Questions</h4>
+                  <ul class="q-list">
+                    <li>What was the immediate trigger?</li>
+                    <li>What conditions had to be in place for the trigger to cause harm?</li>
+                    <li>What is the deepest contributing cause — the thing that, if removed, makes recurrence structurally unlikely?</li>
+                    <li>Is this a one-off (person, circumstance) or recurring (system, process)?</li>
+                    <li>What would have to change for this to become impossible?</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Domain Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>DevOps (3-layer):</strong> Immediate: config value wrong. Contributing: no staging parity. Root: feature flags deployed without validation gates.</li>
+                    <li><strong>Family (3-layer):</strong> Immediate: harsh tone during a tired Tuesday evening. Contributing: two weeks of unacknowledged stress. Root: no regular low-stakes check-in where small things get said before they compound.</li>
+                    <li><strong>Spiritual (3-layer):</strong> Immediate: missed Fajr. Contributing: three weeks of shortened sleep. Root: no bedtime protocol that protects sleep as a religious obligation.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="stage-warning">
+                <strong>⚠ Root cause is not blame</strong>
+                The 5-Why method and fishbone diagrams are useful tools here — but they require one discipline: follow the causation, not the fault. "The engineer didn't check" is a cause. "Why didn't they check?" leads to the process gap that made not-checking easy. Stopping at human fault produces blame without leverage.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 6: Improve -->
+        <div class="stage-card mode-think" id="s6" data-mode="think" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s6">
+            <div class="stage-num">6</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Improve</div>
+              <div class="stage-mantra">"Fix the generator, not the symptom."</div>
+            </div>
+            <span class="stage-mode-badge">Think Mode</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s6">
+            <div class="stage-body-inner">
+              <p class="stage-definition">The intervention that reduces recurrence. The frame is leverage: which action, if taken, reduces the probability and severity of this class of failure most efficiently? Note that "most efficient" is not the same as "most thorough." Seeking perfection at this stage is its own trap — overly comprehensive improvement plans get abandoned. The right intervention is specific, implementable, and addresses the highest-leverage node in the causal chain.</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Intervention Types by Category</h4>
+                  <ul class="q-list">
+                    <li><strong>Human/Knowledge:</strong> Training, documentation, mentorship</li>
+                    <li><strong>Human/Skill:</strong> Practice reps with feedback, scenario simulation</li>
+                    <li><strong>Human/Judgment:</strong> Decision frameworks, mentor exposure</li>
+                    <li><strong>Process missing:</strong> Create minimal viable checklist</li>
+                    <li><strong>Process not followed:</strong> Automate, or diagnose why it was skipped</li>
+                    <li><strong>System/Incentives:</strong> Redesign what the system actually rewards</li>
+                    <li><strong>Relationship/Trust:</strong> Reliability over cycles; transparent explanation</li>
+                    <li><strong>Resource/Capacity:</strong> Add capacity or reduce demand — do not use motivation interventions</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Domain Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>DevOps:</strong> Add a staging parity check to the deploy pipeline. Automate the config validation. Document the rollback procedure.</li>
+                    <li><strong>Family:</strong> Introduce a 15-minute weekly check-in with no agenda except "how are things really going?" Remove the condition that made the Tuesday argument possible.</li>
+                    <li><strong>Spiritual:</strong> Treat sleep as a religious obligation. Build a bedtime protocol. The dhikr problem is downstream of the sleep problem — fix the upstream cause.</li>
+                    <li><strong>Hizmet:</strong> Reduce the scope of the next programme to what the current capacity can absorb at quality. Stop adding commitments before the existing ones are stable.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="intj-note">
+                <strong>🧠 Seek leverage, not perfection</strong>
+                The improvement that addresses 80% of the problem with one action is almost always better than the comprehensive redesign that addresses 100% but never gets implemented. Identify the single highest-leverage node in the causal chain from Stage 5, and act on that one node first. The rest can follow.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 7: Generalize -->
+        <div class="stage-card mode-think" id="s7" data-mode="think" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s7">
+            <div class="stage-num">7</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Generalize</div>
+              <div class="stage-mantra">"Extract the principle."</div>
+            </div>
+            <span class="stage-mode-badge">Think Mode</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s7">
+            <div class="stage-body-inner">
+              <p class="stage-definition">This is where your INTJ gifts belong — not before. The mind that reaches for principles at Stage 1 is working on insufficient data. The mind that reaches for principles at Stage 7 is building on lived, verified, concrete experience. Generalization asks: what class of problems does this instance represent? What pattern is this a case of? What does this teach beyond itself?</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Diagnostic Questions</h4>
+                  <ul class="q-list">
+                    <li>Have I seen this structure before in a different domain?</li>
+                    <li>What recurring pattern does this instance exemplify?</li>
+                    <li>What principle, if held, would have prevented this?</li>
+                    <li>Is this a case I should add to my mental model of this failure type?</li>
+                    <li>Where else in my life is this same pattern operating right now?</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Cross-Domain Generalizations</h4>
+                  <ul class="ex-list">
+                    <li><strong>Feedback loop failure</strong> appears identically in: missing monitoring (DevOps), no muhasebe practice (spiritual life), no weekly check-in (marriage), no performance review (team management). One principle — install fast feedback — applies to all four.</li>
+                    <li><strong>Capacity mismatch</strong> shows up as: overloaded sprint, exhausted parent, underfunded initiative, depleted dhikr practice. The intervention is always the same: reduce demand or increase supply before adding more commitments.</li>
+                    <li><strong>Misaligned incentives</strong> appear in: rewarding velocity over reliability (engineering), praising surface piety over depth (community), optimising for ticket close rate over root cause (operations).</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="intj-note">
+                <strong>🧠 This is the INTJ home stage</strong>
+                The energy that went into restraining the abstraction impulse in Stages 1–3 pays its dividend here. The generalization that comes from having lived through the full arc — Notice through Improve — is grounded, verified, and genuinely portable. It is not a premature theory. It is earned wisdom. Write it down. It will compound.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 8: Systematize -->
+        <div class="stage-card mode-think" id="s8" data-mode="think" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s8">
+            <div class="stage-num">8</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Systematize</div>
+              <div class="stage-mantra">"Design for the future."</div>
+            </div>
+            <span class="stage-mode-badge">Think Mode</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s8">
+            <div class="stage-body-inner">
+              <p class="stage-definition">The architectural response to the generalised principle. If Stage 7 asked "what pattern is this a case of?", Stage 8 asks "what structural change would make this class of problems impossible or self-correcting?" This is where checklists, frameworks, guardrails, automation, habits, and architectural redesign belong. This is redesign from a position of clarity — not from inside the emergency.</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Systematization Tools</h4>
+                  <ul class="q-list">
+                    <li><strong>Framework:</strong> A decision tree or rubric that codifies the judgment you made in this incident</li>
+                    <li><strong>Guardrail:</strong> A constraint that makes the failure path harder to take than the correct path</li>
+                    <li><strong>Automation:</strong> Remove the human decision point from the failure-prone step entirely</li>
+                    <li><strong>Habit:</strong> A recurring practice that installs the correct behaviour at the cadence where failure occurs</li>
+                    <li><strong>Architecture:</strong> Redesign the structural relationship between components so failure requires more independent failures</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Domain Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>DevOps:</strong> Automated deploy validation that blocks bad config before it hits production. On-call runbook for the failure class. Post-mortem template that captures the 3-layer causal analysis.</li>
+                    <li><strong>Family:</strong> Weekly check-in as a non-negotiable calendar event — not when things are bad, but every week so things don't get bad. Pre-agreed de-escalation protocol ("I need five minutes").</li>
+                    <li><strong>Spiritual:</strong> A bedtime protocol that treats sleep as an ibada. A morning structure that makes fajr and brief dhikr require less willpower than skipping them.</li>
+                    <li><strong>Hizmet:</strong> A capacity planning practice before taking on new programmes. A minimum staffing threshold below which a programme doesn't launch.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="intj-note">
+                <strong>🧠 The INTJ natural habitat — use it wisely</strong>
+                Systematization is what the INTJ mind has been waiting to do since Stage 1. The discipline here is scope: systematize the failure class you diagnosed, not everything that could possibly go wrong in this domain. A system that tries to prevent all failure becomes too heavy to operate and gets bypassed — which is itself a Process → Not Followed failure.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-arrow">▾</div>
+        </div>
+
+        <!-- Stage 9: Integrate -->
+        <div class="stage-card mode-both" id="s9" data-mode="both" data-open="false">
+          <div class="stage-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-s9">
+            <div class="stage-num">9</div>
+            <div class="stage-header-text">
+              <div class="stage-name">Integrate</div>
+              <div class="stage-mantra">"Let reality correct the map."</div>
+            </div>
+            <span class="stage-mode-badge">Bridge</span>
+            <div class="expand-icon" aria-hidden="true">▾</div>
+          </div>
+          <div class="stage-body" id="body-s9">
+            <div class="stage-body-inner">
+              <p class="stage-definition">The step many smart people skip. After the incident is resolved, the improvement implemented, and the system redesigned, there is still a residual question: what did this reveal about my model of the world? Not "what did I do wrong" (that was Stage 5), and not "how do I prevent this specific failure" (that was Stage 6–8). This is: what assumption, held confidently before this event, turned out to be false?</p>
+              <div class="stage-grid">
+                <div class="stage-col">
+                  <h4>Diagnostic Questions</h4>
+                  <ul class="q-list">
+                    <li>What assumption was I holding that this event disproved?</li>
+                    <li>What surprised me — and what does the surprise reveal about my model?</li>
+                    <li>What should I believe differently now about this person, system, or domain?</li>
+                    <li>What did I understand about myself under pressure that I didn't know before?</li>
+                    <li>Is there a standing belief I should retire?</li>
+                  </ul>
+                </div>
+                <div class="stage-col">
+                  <h4>Domain Examples</h4>
+                  <ul class="ex-list">
+                    <li><strong>DevOps:</strong> "I assumed our staging environment was a faithful mirror of production. This incident shows it isn't — and I had never formally verified that assumption."</li>
+                    <li><strong>Family:</strong> "I assumed that the absence of complaint meant the absence of difficulty. I now understand that silence in this relationship means accumulation, not resolution."</li>
+                    <li><strong>Theological:</strong> "I assumed my spiritual state was stable because my outward practice was consistent. This period showed me that outward consistency can coexist with inner drought."</li>
+                    <li><strong>Leadership:</strong> "I assumed this volunteer understood the vision. They understood the task but not the purpose. My communication model was wrong."</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="intj-note">
+                <strong>🧠 Why smart people skip this stage</strong>
+                Integration requires epistemic humility — acknowledging that the pre-existing model was wrong. For a mind that identifies strongly with its models, this is uncomfortable. But it is precisely the feedback mechanism that separates accumulated wisdom from accumulated stubbornness. The map that never updates eventually stops matching the terrain, no matter how sophisticated it was when first drawn.
+              </div>
+              <div class="stage-warning" style="margin-top:1rem">
+                <strong>⚠ The loop closes here</strong>
+                Stage 9 feeds back into Stage 1. The updated model changes what you notice in the next incident. The loop is not a checklist to complete once — it is a repeated cycle. Each pass through it, if done with honesty at Stage 9, makes the next pass sharper.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /stages-container -->
+    </section>
+
+    <!-- Wall poster -->
+    <section id="poster" class="major-section">
+      <span class="section-label">Quick Reference</span>
+      <h2>The <em>Short</em> Versions</h2>
+      <p class="lead">The full loop in two compressed forms — for the wall, the notebook, or the moment of stress when you need a fast orientation.</p>
+
+      <div class="poster-strip">
+        <h3>The Loop — Nine Words</h3>
+        <div class="poster-flow">
+          <div class="poster-step">
+            <span class="poster-step-num">1</span>
+            <span class="poster-step-word">See</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">2</span>
+            <span class="poster-step-word">Stop</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">3</span>
+            <span class="poster-step-word">Stabilize</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">4</span>
+            <span class="poster-step-word">Name</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">5</span>
+            <span class="poster-step-word">Understand</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">6</span>
+            <span class="poster-step-word">Improve</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">7</span>
+            <span class="poster-step-word">Generalize</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">8</span>
+            <span class="poster-step-word">Systematize</span>
+          </div>
+          <span class="poster-arrow">→</span>
+          <div class="poster-step">
+            <span class="poster-step-num">9</span>
+            <span class="poster-step-word">Learn</span>
+          </div>
+        </div>
+        <div class="poster-words">
+          <p>
+            <span>Act first</span> (1–3) · <span>Bridge</span> (4) · <span>Think deeply</span> (5–8) · <span>Update the model</span> (9)
+          </p>
+          <p style="margin-top:0.4rem">
+            Stages 1–3: no theory permitted. &nbsp;·&nbsp; Stage 4: choose one bucket. &nbsp;·&nbsp; Stages 5–8: your gifts belong here. &nbsp;·&nbsp; Stage 9: do not skip this.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTJ Inversion -->
+    <section id="inversion" class="major-section">
+      <span class="section-label">The Core Shift</span>
+      <h2>The <em>INTJ</em> Inversion</h2>
+      <p class="lead">The biggest performance improvement for most INTJs will not come from becoming less analytical. It will come from learning to delay abstraction by exactly one step — from inserting a single act of grounded reality-contact between the observation and the theory.</p>
+
+      <div class="inversion-box">
+        <h3>Two Sequences — One Difference</h3>
+
+        <div class="inversion-flow">
+          <div class="inv-col natural">
+            <h4>Natural INTJ Sequence</h4>
+            <ul class="inv-steps">
+              <li><span class="arrow">→</span> Reality arrives</li>
+              <li><span class="arrow">→</span> <strong>Principle generated immediately</strong></li>
+              <li><span class="arrow">→</span> Action filtered through principle</li>
+              <li><span class="arrow">→</span> Reality re-contacted (if at all)</li>
+            </ul>
+          </div>
+          <div class="inv-vs">vs.</div>
+          <div class="inv-col improved">
+            <h4>The Corrected Sequence</h4>
+            <ul class="inv-steps">
+              <li><span class="arrow">→</span> Reality arrives</li>
+              <li><span class="arrow">→</span> <strong>Action to stay in contact</strong></li>
+              <li><span class="arrow">→</span> Understanding built from experience</li>
+              <li><span class="arrow">→</span> Principle extracted from understanding</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>In the natural sequence, the principle is generated from insufficient data and then defended. Each subsequent observation is unconsciously filtered to confirm it. The theory is elegant, internally consistent, and increasingly disconnected from the actual terrain.</p>
+        <p>The corrected sequence inserts a single act between observation and abstraction: contact with reality through action. This one shift — <strong>delay abstraction by one step</strong> — preserves every analytical strength while eliminating the specific failure mode of premature theorisation.</p>
+        <p>Applied to your own work: in DevOps incident response, in Nur-verse knowledge structuring, in Hizmet programme design, in theological modelling, in family leadership — the pattern is the same. The model is strong. The sequencing needs one adjustment. Reality first. Principle after.</p>
+      </div>
+    </section>
+
+    <!-- INTJ Reminder -->
+    <section id="reminder" class="major-section">
+      <div class="intj-reminder">
+        <p><strong>Reality First.</strong></p>
+        <p><strong>Theory Second.</strong></p>
+        <p><em>Do not redesign the healthcare system<br>while the patient is still bleeding.</em></p>
+        <p style="margin-top:1.2rem"><em>Act enough to stay connected to reality.<br>Think enough to improve reality.</em></p>
+        <p style="margin-top:1.2rem"><strong>Reality → Action → Understanding → Principle</strong></p>
+        <p><em>— not —</em></p>
+        <p><strong>Reality → Principle → Action</strong></p>
+        <p style="margin-top:1.2rem; font-size:0.85rem; opacity:0.5">That single shift preserves your strength while greatly reducing analysis paralysis.</p>
+      </div>
+    </section>
+
+  </article>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // ── Progress bar ──────────────────────────────────────────
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      bar.style.width = pct + '%';
+    }, { passive: true });
+  }
+
+  // ── Expandable stage cards ────────────────────────────────
+  document.querySelectorAll('.stage-card').forEach(card => {
+    const header = card.querySelector('.stage-header');
+    const body   = card.querySelector('.stage-body');
+    const icon   = card.querySelector('.expand-icon');
+
+    function toggle() {
+      const isOpen = card.classList.toggle('open');
+      header.setAttribute('aria-expanded', isOpen);
+      body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0';
+      icon.textContent = isOpen ? '▴' : '▾';
+    }
+
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
+  // Expand a card when its anchor is targeted directly
+  function openFromHash() {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const card = document.getElementById(hash);
+      if (card && card.classList.contains('stage-card') && !card.classList.contains('open')) {
+        card.querySelector('.stage-header').click();
+      }
+    }
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+
+  // ── Filter + Search ───────────────────────────────────────
+  (function() {
+    const searchInput = document.getElementById('stageSearch');
+    const searchClear = document.getElementById('searchClear');
+    const noResults   = document.getElementById('noResults');
+    const pillBtns    = document.querySelectorAll('.filter-pill[data-mode]');
+    const cards       = Array.from(document.querySelectorAll('.stage-card[data-mode]'));
+    const connectors  = Array.from(document.querySelectorAll('.stage-connector'));
+
+    // Static non-stage sections always visible
+    let activeMode   = 'all';
+    let currentQuery = '';
+
+    function cardText(card) { return card.innerText.toLowerCase(); }
+
+    function applyHighlight(card, query) {
+      card.querySelectorAll('mark.hl').forEach(m => m.replaceWith(document.createTextNode(m.textContent)));
+      card.normalize();
+      if (!query) return;
+      const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      function walk(node) {
+        if (node.nodeType === 3) {
+          const p = node.parentNode;
+          if (p.nodeName === 'MARK') return;
+          const t = node.textContent;
+          if (!re.test(t)) return;
+          re.lastIndex = 0;
+          const f = document.createDocumentFragment();
+          let last = 0, m;
+          while ((m = re.exec(t)) !== null) {
+            f.appendChild(document.createTextNode(t.slice(last, m.index)));
+            const mk = document.createElement('mark');
+            mk.className = 'hl'; mk.textContent = m[0]; f.appendChild(mk);
+            last = m.index + m[0].length;
+          }
+          f.appendChild(document.createTextNode(t.slice(last)));
+          p.replaceChild(f, node);
+        } else if (node.nodeType === 1 && node.nodeName !== 'MARK') {
+          Array.from(node.childNodes).forEach(walk);
+        }
+      }
+      walk(card);
+    }
+
+    function applyFilters() {
+      const query = currentQuery.trim().toLowerCase();
+      const counts = { act: 0, think: 0, both: 0 };
+      let total = 0;
+
+      cards.forEach(card => {
+        const mode = card.dataset.mode;
+        const passMode   = activeMode === 'all' || mode === activeMode;
+        const passSearch = !query || cardText(card).includes(query);
+        const visible = passMode && passSearch;
+        card.classList.toggle('hidden', !visible);
+        if (visible) { total++; counts[mode]++; applyHighlight(card, query); }
+        else { applyHighlight(card, ''); }
+      });
+
+      // Hide connectors when either adjacent card is hidden
+      connectors.forEach((conn, i) => {
+        const prev = cards[i];
+        const next = cards[i + 1];
+        const hide = (prev && prev.classList.contains('hidden')) ||
+                     (next && next.classList.contains('hidden'));
+        conn.classList.toggle('hidden', hide);
+      });
+
+      noResults.classList.toggle('visible', total === 0);
+
+      // Update pill counts
+      const filtersActive = activeMode !== 'all' || !!query;
+      const pcAll = document.getElementById('pc-all');
+      if (pcAll) pcAll.textContent = filtersActive ? `${total}` : `${cards.length}`;
+      ['act','think','both'].forEach(m => {
+        const el = document.getElementById(`pc-${m}`);
+        if (el) el.textContent = filtersActive
+          ? `${counts[m]}`
+          : `${cards.filter(c => c.dataset.mode === m).length}`;
+      });
+    }
+
+    pillBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeMode = btn.dataset.mode;
+        pillBtns.forEach(b => b.classList.toggle('active', b.dataset.mode === activeMode));
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', () => {
+      currentQuery = searchInput.value;
+      searchClear.classList.toggle('visible', currentQuery.length > 0);
+      applyFilters();
+    });
+    searchClear.addEventListener('click', () => {
+      searchInput.value = ''; currentQuery = '';
+      searchClear.classList.remove('visible');
+      searchInput.focus(); applyFilters();
+    });
+    searchInput.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        searchInput.value = ''; currentQuery = '';
+        searchClear.classList.remove('visible'); applyFilters();
+      }
+    });
+
+    applyFilters();
+  })();
+</script>
+
+</body>
+</html>
