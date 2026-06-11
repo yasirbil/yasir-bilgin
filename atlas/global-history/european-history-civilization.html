@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>European History &amp; Civilization | Yasir Bilgin</title>
+  <meta name="description" content="A comprehensive guide to European history and civilization — from Ancient Greece and Rome through medieval Christendom, Renaissance, Reformation, revolutions, world wars, and the European Union." />
+
+  <!-- Global nav — always first -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="European History &amp; Civilization | Yasir Bilgin" />
+  <meta property="og:description" content="A comprehensive guide to European history and civilization from Ancient Greece to the contemporary European Union." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://yasirbilgin.com/atlas/Global-History/european-history-civilization.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="European History &amp; Civilization | Yasir Bilgin" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "European History & Civilization: A Comprehensive Guide",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Organization", "name": "Yasir Bilgin Editorial" },
+    "url": "https://yasirbilgin.com/atlas/Global-History/european-history-civilization.html",
+    "dateModified": "2026-06-11",
+    "description": "From Ancient Greece and Rome through medieval Christendom, Renaissance, Enlightenment, world wars, and the European Union — a layered guide to European civilization."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://yasirbilgin.com/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas",        "item": "https://yasirbilgin.com/atlas/index.html" },
+      { "@type": "ListItem", "position": 3, "name": "Global History","item": "https://yasirbilgin.com/atlas/Global-History/index.html" },
+      { "@type": "ListItem", "position": 4, "name": "European History &amp; Civilization", "item": "https://yasirbilgin.com/atlas/Global-History/european-history-civilization.html" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --ink:        #1c1712;
+      --ink-light:  #4a4238;
+      --ink-faint:  #7a6e62;
+      --paper:      #faf8f4;
+      --paper-2:    #f2ede4;
+      --paper-3:    #e8e0d4;
+      --accent:     #8b2e0f;
+      --accent-2:   #c4571a;
+      --gold:       #9a7c2e;
+      --rule:       #d8cfc2;
+
+      /* Era palette */
+      --era-ancient:    #7a5c2e;
+      --era-medieval:   #2e6b45;
+      --era-earlymod:   #1e4d7a;
+      --era-modern:     #8b1a1a;
+      --era-contemp:    #1a5c66;
+      --era-thematic:   #6b4a8b;
+
+      --nav-h: 62px;
+      --body-max: 860px;
+      --serif-display: 'Cormorant Garamond', Georgia, serif;
+      --serif-body:    'Source Serif 4', Georgia, serif;
+      --sans:          'DM Sans', system-ui, sans-serif;
+    }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--serif-body);
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    /* ─── PROGRESS BAR ─── */
+    #progressBar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--accent);
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── TOC OVERLAY ─── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      width: 320px;
+      max-width: 90vw;
+      height: 100vh;
+      background: #faf8f4;
+      overflow-y: auto;
+      padding: 1.5rem 1.4rem 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+    .toc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .toc-title {
+      font-family: var(--sans);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .toc-close {
+      font-family: var(--sans);
+      font-size: .8rem;
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: .25rem .6rem;
+      cursor: pointer;
+      color: var(--ink-light);
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: .1rem; }
+    .toc-list a {
+      display: block;
+      font-family: var(--sans);
+      font-size: .82rem;
+      color: var(--ink-light);
+      text-decoration: none;
+      padding: .35rem .5rem;
+      border-radius: 4px;
+      line-height: 1.35;
+    }
+    .toc-list a:hover { background: var(--paper-2); color: var(--ink); }
+    .toc-list a.toc-main { font-weight: 600; color: var(--ink); }
+    .toc-list a.toc-sub { padding-left: 1.2rem; font-size: .78rem; }
+
+    /* ─── ARTICLE HEADER ─── */
+    .article-header {
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 50;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .6rem 2rem;
+      gap: 1rem;
+    }
+    .article-breadcrumb {
+      font-family: var(--sans);
+      font-size: .72rem;
+      color: var(--ink-faint);
+      letter-spacing: .04em;
+    }
+    .article-breadcrumb a { color: var(--ink-faint); text-decoration: none; }
+    .article-breadcrumb a:hover { color: var(--accent); }
+    .header-right { display: flex; align-items: center; gap: .75rem; }
+    .read-time {
+      font-family: var(--sans);
+      font-size: .72rem;
+      color: var(--ink-faint);
+    }
+    .toc-btn {
+      font-family: var(--sans);
+      font-size: .75rem;
+      font-weight: 500;
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: .35rem .9rem;
+      cursor: pointer;
+      color: var(--ink-light);
+      transition: border-color .15s, color .15s;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ─── HERO ─── */
+    .hero {
+      max-width: var(--body-max);
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: var(--serif-display);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.08;
+      color: var(--ink);
+      letter-spacing: -.01em;
+      margin-bottom: 1.2rem;
+    }
+    .hero-sub {
+      font-family: var(--serif-body);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      color: var(--ink-light);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: .8rem;
+      font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .byline-text { display: flex; flex-direction: column; gap: .1rem; }
+    .byline-name { font-family: var(--sans); font-size: .82rem; font-weight: 600; color: var(--ink); }
+    .byline-meta { font-family: var(--sans); font-size: .72rem; color: var(--ink-faint); }
+    .hero-rule { border: none; border-top: 1px solid var(--rule); margin: 2rem auto 0; max-width: var(--body-max); }
+
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      position: sticky;
+      top: calc(var(--nav-h) + 44px);
+      z-index: 45;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      padding: .6rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      flex-wrap: wrap;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 160px;
+      max-width: 280px;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: .6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--ink-faint);
+      pointer-events: none;
+    }
+    #searchInput {
+      width: 100%;
+      font-family: var(--sans);
+      font-size: .78rem;
+      padding: .4rem .6rem .4rem 2rem;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      background: var(--paper-2);
+      color: var(--ink);
+      outline: none;
+    }
+    #searchInput:focus { border-color: var(--accent); background: #fff; }
+    .era-pills { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
+    .era-pill {
+      font-family: var(--sans);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      padding: .28rem .75rem;
+      border-radius: 20px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: all .15s;
+      background: var(--paper-2);
+      color: var(--ink-light);
+    }
+    .era-pill:hover { background: var(--paper-3); }
+    .era-pill.active { color: #fff; }
+    .era-pill[data-era="all"].active    { background: var(--ink); border-color: var(--ink); }
+    .era-pill[data-era="ancient"].active   { background: var(--era-ancient);  border-color: var(--era-ancient); }
+    .era-pill[data-era="medieval"].active  { background: var(--era-medieval); border-color: var(--era-medieval); }
+    .era-pill[data-era="early-mod"].active { background: var(--era-earlymod); border-color: var(--era-earlymod); }
+    .era-pill[data-era="modern"].active    { background: var(--era-modern);   border-color: var(--era-modern); }
+    .era-pill[data-era="contemp"].active   { background: var(--era-contemp);  border-color: var(--era-contemp); }
+    .era-pill[data-era="thematic"].active  { background: var(--era-thematic); border-color: var(--era-thematic); }
+    #sectionCount {
+      font-family: var(--sans);
+      font-size: .7rem;
+      color: var(--ink-faint);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* ─── ARTICLE BODY ─── */
+    .article-body {
+      max-width: var(--body-max);
+      margin: 0 auto;
+      padding: 4rem 2rem 8rem;
+    }
+
+    /* ─── SECTION STRUCTURE ─── */
+    .major-section {
+      scroll-margin-top: 130px;
+      margin-bottom: 4.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .major-section:last-child { border-bottom: none; }
+
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: 1rem;
+    }
+    .era-badge {
+      font-family: var(--sans);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .2rem .6rem;
+      border-radius: 3px;
+      color: #fff;
+    }
+    .era-badge.ancient   { background: var(--era-ancient); }
+    .era-badge.medieval  { background: var(--era-medieval); }
+    .era-badge.early-mod { background: var(--era-earlymod); }
+    .era-badge.modern    { background: var(--era-modern); }
+    .era-badge.contemp   { background: var(--era-contemp); }
+    .era-badge.thematic  { background: var(--era-thematic); }
+
+    .section-num {
+      font-family: var(--sans);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .major-section h2 {
+      font-family: var(--serif-display);
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 1.4rem;
+    }
+    .major-section p {
+      font-family: var(--serif-body);
+      font-size: 1rem;
+      line-height: 1.78;
+      color: var(--ink);
+      margin-bottom: 1.1rem;
+    }
+    .major-section h3 {
+      font-family: var(--serif-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2rem 0 .8rem;
+      padding-bottom: .3rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .major-section h4 {
+      font-family: var(--sans);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin: 1.5rem 0 .6rem;
+    }
+
+    /* ─── TABLES ─── */
+    .table-wrap { overflow-x: auto; margin: 1.5rem 0; border-radius: 6px; border: 1px solid var(--rule); }
+    table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: .82rem; }
+    thead th {
+      background: var(--paper-2);
+      font-weight: 600;
+      color: var(--ink);
+      text-align: left;
+      padding: .65rem 1rem;
+      border-bottom: 1.5px solid var(--rule);
+      letter-spacing: .03em;
+    }
+    tbody td {
+      padding: .55rem 1rem;
+      color: var(--ink-light);
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.45;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(even) { background: #fbf9f6; }
+
+    /* ─── FIGURE GRID (key-figure cards) ─── */
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .75rem;
+      margin: 1.5rem 0;
+    }
+    .figure-card {
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .figure-name {
+      font-family: var(--sans);
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: .3rem;
+    }
+    .figure-role {
+      font-family: var(--sans);
+      font-size: .72rem;
+      color: var(--ink-faint);
+      line-height: 1.4;
+    }
+
+    /* ─── PULL QUOTE ─── */
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      margin: 2rem 0 2rem 2rem;
+      padding: .75rem 1.5rem;
+      font-family: var(--serif-display);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--ink-light);
+      line-height: 1.5;
+    }
+
+    /* ─── CALL-OUT BOX ─── */
+    .callout {
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent-2);
+      border-radius: 0 8px 8px 0;
+      padding: 1.1rem 1.4rem;
+      margin: 1.8rem 0;
+    }
+    .callout-label {
+      font-family: var(--sans);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: .4rem;
+    }
+    .callout p { font-size: .9rem; margin-bottom: 0; color: var(--ink-light); }
+
+    /* ─── LAYER STACK ─── */
+    .layer-stack { display: flex; flex-direction: column; gap: 0; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+    .layer-row {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      border-bottom: 1px solid var(--rule);
+    }
+    .layer-row:last-child { border-bottom: none; }
+    .layer-num {
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: .75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .layer-content { padding: .75rem 1.1rem; background: var(--paper-2); }
+    .layer-title {
+      font-family: var(--sans);
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .25rem;
+    }
+    .layer-desc {
+      font-family: var(--sans);
+      font-size: .73rem;
+      color: var(--ink-faint);
+      line-height: 1.45;
+    }
+
+    /* ─── TENSION GRID ─── */
+    .tension-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .5rem;
+      margin: 1.2rem 0;
+    }
+    .tension-cell {
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: .65rem .9rem;
+      font-family: var(--sans);
+      font-size: .78rem;
+      color: var(--ink-light);
+    }
+    .tension-cell.force { border-left: 3px solid var(--accent); }
+    .tension-cell.counter { border-left: 3px solid var(--era-contemp); }
+
+    /* ─── PERIOD TABLE ─── */
+    .period-era-badge {
+      display: inline-block;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    /* ─── QUESTIONS LIST ─── */
+    .questions-list { list-style: none; counter-reset: q-counter; display: flex; flex-direction: column; gap: .75rem; margin: 1.2rem 0; }
+    .questions-list li {
+      counter-increment: q-counter;
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: .6rem;
+      align-items: start;
+    }
+    .questions-list li::before {
+      content: counter(q-counter);
+      font-family: var(--sans);
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(139,46,15,.08);
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: .15rem;
+    }
+    .questions-list li span {
+      font-family: var(--sans);
+      font-size: .84rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    /* ─── CONTRIBUTION COLUMNS ─── */
+    .contrib-cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+    .contrib-col {
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+    }
+    .contrib-col h4 { margin-top: 0; font-size: .72rem; }
+    .contrib-col ul { list-style: none; margin-top: .5rem; display: flex; flex-direction: column; gap: .25rem; }
+    .contrib-col ul li {
+      font-family: var(--sans);
+      font-size: .77rem;
+      color: var(--ink-light);
+      padding-left: .9rem;
+      position: relative;
+    }
+    .contrib-col ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ─── DARK LEGACY LIST ─── */
+    .dark-legacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: .4rem;
+      margin: 1.2rem 0;
+    }
+    .dark-legacy-item {
+      font-family: var(--sans);
+      font-size: .77rem;
+      color: var(--ink-light);
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: .45rem .75rem;
+      border-left: 3px solid var(--era-modern);
+    }
+
+    /* ─── NO-RESULTS ─── */
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    #noResults p {
+      font-family: var(--sans);
+      color: var(--ink-faint);
+      font-size: .9rem;
+    }
+
+    /* ─── MARK HIGHLIGHT ─── */
+    mark {
+      background: rgba(196,87,26,.2);
+      color: var(--ink);
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.45);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--sans);
+      font-size: .75rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo { color: rgba(255,255,255,.8); font-weight: 600; }
+
+    /* ─── DARK MODE ─── */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:       #ede8e0;
+        --ink-light: #b0a898;
+        --ink-faint: #7a7068;
+        --paper:     #1a1410;
+        --paper-2:   #211d18;
+        --paper-3:   #2a2520;
+        --rule:      #3a3228;
+        --accent:    #d4622a;
+        --accent-2:  #e07840;
+        --gold:      #c4a050;
+      }
+      #searchInput { background: var(--paper-2); color: var(--ink); }
+      #searchInput:focus { background: var(--paper-3); }
+      tbody tr:nth-child(even) { background: #1e1a15; }
+    }
+
+    /* ─── REDUCED MOTION ─── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .article-body { padding: 2.5rem 1.3rem 5rem; }
+      .hero { padding: 2.5rem 1.3rem 1.5rem; }
+      .filter-bar { padding: .5rem 1rem; gap: .5rem; }
+      .article-header { padding: .5rem 1rem; }
+      .pull-quote { margin-left: 0; }
+      .tension-grid { grid-template-columns: 1fr; }
+      .figure-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .figure-grid { grid-template-columns: 1fr 1fr; }
+      .contrib-cols { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<!-- TOC Overlay -->
+<div class="toc-overlay" id="tocOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <div class="toc-header">
+      <span class="toc-title">Contents</span>
+      <button class="toc-close" onclick="document.getElementById('tocOverlay').classList.remove('open')">Close</button>
+    </div>
+    <ul class="toc-list">
+      <li><a href="#s1" class="toc-main">I. Europe as a Civilizational Space</a></li>
+      <li><a href="#s2" class="toc-main">II. Ancient Greece</a></li>
+      <li><a href="#s3" class="toc-main">III. Rome: Law, Empire &amp; Order</a></li>
+      <li><a href="#s4" class="toc-main">IV. Fall of Rome &amp; Medieval Formation</a></li>
+      <li><a href="#s5" class="toc-main">V. The Rise of Christendom</a></li>
+      <li><a href="#s6" class="toc-main">VI. Islam and Europe</a></li>
+      <li><a href="#s7" class="toc-main">VII. The High Middle Ages</a></li>
+      <li><a href="#s8" class="toc-main">VIII. Crisis of the Late Middle Ages</a></li>
+      <li><a href="#s9" class="toc-main">IX. Renaissance</a></li>
+      <li><a href="#s10" class="toc-main">X. The Reformation</a></li>
+      <li><a href="#s11" class="toc-main">XI. The Modern State</a></li>
+      <li><a href="#s12" class="toc-main">XII. Exploration &amp; Colonialism</a></li>
+      <li><a href="#s13" class="toc-main">XIII. Scientific Revolution</a></li>
+      <li><a href="#s14" class="toc-main">XIV. The Enlightenment</a></li>
+      <li><a href="#s15" class="toc-main">XV. Age of Revolutions</a></li>
+      <li><a href="#s16" class="toc-main">XVI. Industrial Revolution</a></li>
+      <li><a href="#s17" class="toc-main">XVII. Ideologies of the Modern Age</a></li>
+      <li><a href="#s18" class="toc-main">XVIII. Nationalism &amp; Nation-States</a></li>
+      <li><a href="#s19" class="toc-main">XIX. Imperialism</a></li>
+      <li><a href="#s20" class="toc-main">XX. World War I</a></li>
+      <li><a href="#s21" class="toc-main">XXI. Russian Revolution &amp; Communism</a></li>
+      <li><a href="#s22" class="toc-main">XXII. Interwar Crisis &amp; Fascism</a></li>
+      <li><a href="#s23" class="toc-main">XXIII. World War II</a></li>
+      <li><a href="#s24" class="toc-main">XXIV. Cold War Europe</a></li>
+      <li><a href="#s25" class="toc-main">XXV. European Integration</a></li>
+      <li><a href="#s26" class="toc-main">XXVI. Decolonization</a></li>
+      <li><a href="#s27" class="toc-main">XXVII. 1960s &amp; Secular Modernity</a></li>
+      <li><a href="#s28" class="toc-main">XXVIII. Fall of Communism</a></li>
+      <li><a href="#s29" class="toc-main">XXIX. Contemporary Europe</a></li>
+      <li><a href="#s30" class="toc-main">XXX. Civilizational Themes</a></li>
+      <li><a href="#s31" class="toc-main">XXXI. Major Periods</a></li>
+      <li><a href="#s32" class="toc-main">XXXII. Key Institutions</a></li>
+      <li><a href="#s33" class="toc-main">XXXIII. Contributions</a></li>
+      <li><a href="#s34" class="toc-main">XXXIV. Dark Legacies</a></li>
+      <li><a href="#s35" class="toc-main">XXXV. The Layered Model</a></li>
+      <li><a href="#s36" class="toc-main">XXXVI. Learning Path</a></li>
+      <li><a href="#s37" class="toc-main">XXXVII. Essential Questions</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Article Sub-Header -->
+<header class="article-header">
+  <nav class="article-breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a> · <a href="/atlas/index.html">Atlas</a> · <a href="/atlas/Global-History/index.html">Global History</a> · European History
+  </nav>
+  <div class="header-right">
+    <span class="read-time">~55 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <p class="hero-eyebrow">Atlas · Global History</p>
+  <h1>European History &amp; Civilization</h1>
+  <p class="hero-sub">How a small western peninsula of Eurasia — through Greek reason, Roman law, Christian faith, feudal kingdoms, Renaissance art, scientific revolution, industrial capitalism, and postwar integration — became one of the most consequential civilizational zones in world history.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">June 2026 · Comprehensive Reference</span>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+
+<!-- Filter Bar -->
+<div class="filter-bar" id="filterBar">
+  <div class="search-wrap">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="search" id="searchInput" placeholder="Search sections…" autocomplete="off" />
+  </div>
+  <div class="era-pills">
+    <button class="era-pill active" data-era="all">All</button>
+    <button class="era-pill" data-era="ancient">Ancient</button>
+    <button class="era-pill" data-era="medieval">Medieval</button>
+    <button class="era-pill" data-era="early-mod">Early Modern</button>
+    <button class="era-pill" data-era="modern">Modern</button>
+    <button class="era-pill" data-era="contemp">Contemporary</button>
+    <button class="era-pill" data-era="thematic">Thematic</button>
+  </div>
+  <span id="sectionCount"></span>
+</div>
+
+<!-- Article Body -->
+<article class="article-body" id="articleBody">
+<div id="noResults"><p>No sections match. Try a different search or filter.</p></div>
+
+<!-- ═══ SECTION 1: EUROPE AS CIVILIZATIONAL SPACE ═══ -->
+<section id="s1" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section I</span>
+  </div>
+  <h2>Europe as a Civilizational Space</h2>
+  <p>Europe is not a natural cultural unit in any simple geographic sense. It is a <em>historically constructed civilization</em> — a western peninsula of the Eurasian landmass that developed, over three millennia, into one of the most consequential cultural zones in world history through the layering of Greek reason, Roman law, Christian faith, Germanic warrior culture, medieval institutions, Renaissance humanism, scientific method, industrial capitalism, and postwar liberal order.</p>
+  <p>Geographically, Europe has no clean eastern boundary. The Ural Mountains are conventionally used, but this is a modern administrative convention, not an ancient cultural one. What shaped "Europe" was not geography alone but a shared set of institutions, religions, languages, trade networks, and recurring conflicts that created a recognizable — if always contested — civilizational field.</p>
+
+  <h3>The Major Civilizational Zones</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Region</th><th>Historical Role</th></tr></thead>
+      <tbody>
+        <tr><td>Mediterranean Europe</td><td>Greece, Rome, Christianity, classical learning, maritime trade</td></tr>
+        <tr><td>Western Europe</td><td>Feudalism, Catholic Church, universities, capitalism, nation-states</td></tr>
+        <tr><td>Central Europe</td><td>Holy Roman Empire, German lands, Habsburgs, religious conflict</td></tr>
+        <tr><td>Eastern Europe</td><td>Byzantium, Orthodoxy, Slavic worlds, Russian expansion</td></tr>
+        <tr><td>Northern Europe</td><td>Vikings, Protestantism, maritime trade, social democracy</td></tr>
+        <tr><td>Atlantic Europe</td><td>Exploration, colonial empires, capitalism, modern democracy</td></tr>
+        <tr><td>Balkan Europe</td><td>Byzantine, Ottoman, Slavic, Orthodox, Catholic, and Muslim crossings</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>What "Europe" Has Meant Over Time</h3>
+  <p>Europe's identity was never fixed. In different periods it meant something quite different: Greek civilization, Roman civilization, Christendom, the Latin West, Enlightened Europe, Industrial Europe, the nation-state system, liberal democratic Europe, or the European Union. When we speak of "European civilization" we are therefore speaking of a layered historical formation — not an ethnicity, not a race, not a single religion, but a field of tensions and syntheses that produced recurring patterns across centuries.</p>
+
+  <div class="callout">
+    <div class="callout-label">Key Insight</div>
+    <p>A civilization is better understood as a set of recurring tensions than a set of fixed achievements. Europe's most enduring tensions — faith vs. reason, unity vs. fragmentation, liberty vs. authority, empire vs. nation — are the engine of its history, not merely its problems.</p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 2: ANCIENT GREECE ═══ -->
+<section id="s2" class="major-section" data-era="ancient">
+  <div class="section-eyebrow">
+    <span class="era-badge ancient">Ancient</span>
+    <span class="section-num">Section II</span>
+  </div>
+  <h2>Ancient Greece: Philosophy, Politics, and Classical Culture</h2>
+  <p>Ancient Greek civilization developed from roughly the 8th century BCE onward. It was not a unified nation-state but a world of <em>poleis</em> — city-states such as Athens, Sparta, Corinth, and Thebes — each with distinct constitutions, cultures, and rivalries. At its height, the Greek world comprised over a thousand city-states scattered across the Aegean, Mediterranean, and Black Sea coasts.</p>
+  <p>Greece's intellectual achievements were rooted in a specific social form: the citizen community that gathered in the agora to debate, in the theater to process common experience, and in philosophical schools to pursue truth. Plato founded his Academy in Athens in 387 BCE; Aristotle established the Lyceum in 335 BCE. These were not merely schools but the first sustained institutions for organized secular inquiry in European history.</p>
+
+  <h3>Athens: Democracy, Philosophy, and Naval Power</h3>
+  <p>Athens became the archetype of Greek civic culture. Its democracy — developed through the reforms of Cleisthenes (508 BCE) and Pericles (c. 460–429 BCE) — was limited by modern standards: women, slaves, and resident foreigners were excluded. Yet it introduced the radical idea that free male citizens could govern themselves through direct participation. The Athenian assembly (ekklesia) could include 30,000 to 40,000 eligible citizens, though typical attendance at major decisions ran to several thousand.</p>
+  <p>The Persian Wars (490–479 BCE) defined Athenian self-image: the victory at Marathon (490 BCE) and the naval triumph at Salamis (480 BCE) became founding myths of democratic courage. The subsequent Peloponnesian War (431–404 BCE) — Athens against Sparta and its allies — became, through Thucydides' history, the defining text of political realism in Western thought.</p>
+
+  <h4>Key Athenian Figures</h4>
+  <div class="figure-grid">
+    <div class="figure-card"><div class="figure-name">Socrates (470–399 BCE)</div><div class="figure-role">Ethical questioning; the examined life; convicted and executed by democratic Athens</div></div>
+    <div class="figure-card"><div class="figure-name">Plato (428–348 BCE)</div><div class="figure-role">Theory of Forms; philosopher-kings; the Republic; founded the Academy (387 BCE)</div></div>
+    <div class="figure-card"><div class="figure-name">Aristotle (384–322 BCE)</div><div class="figure-role">Logic, ethics, politics, biology, metaphysics; tutor to Alexander; founded the Lyceum</div></div>
+    <div class="figure-card"><div class="figure-name">Herodotus (c. 484–425 BCE)</div><div class="figure-role">"Father of History"; wrote the first systematic historical narrative in the Western tradition</div></div>
+    <div class="figure-card"><div class="figure-name">Thucydides (c. 460–400 BCE)</div><div class="figure-role">Political realism; History of the Peloponnesian War; forerunner of modern strategic analysis</div></div>
+    <div class="figure-card"><div class="figure-name">Sophocles, Aeschylus, Euripides</div><div class="figure-role">Tragic drama; explored fate, guilt, divine order, and human limitation</div></div>
+  </div>
+
+  <h3>Sparta: The Countermodel</h3>
+  <p>Sparta represented a radically different political model: militarized discipline, collective austerity, and social hierarchy enforced through the agoge — the compulsory training regimen for Spartan male citizens from age seven. Sparta's constitution, attributed to the legendary lawgiver Lycurgus, balanced two hereditary kings, a council of elders (Gerousia), and a citizen assembly. The Spartan economy rested on a serf-like class, the helots, who vastly outnumbered their masters and were subject to periodic state terror.</p>
+  <p>Athens and Sparta together encode a recurring European tension: freedom, debate, and civic culture on one side; discipline, order, and martial virtue on the other. This tension recurs in debates between republican liberty and strong-state order throughout European history.</p>
+
+  <h3>Hellenism and the Spread of Greek Culture</h3>
+  <p>After Alexander the Great (356–323 BCE) conquered Persia, Egypt, and much of the Near East, Greek culture spread across a vast zone from the Nile to the Indus — what historians call the Hellenistic world. Greek language (koiné) became the Mediterranean's common tongue; Greek philosophy, science, and art fused with Egyptian, Persian, and Mesopotamian traditions to create new hybrid forms. The Library of Alexandria, founded c. 285 BCE under Ptolemy II, became the ancient world's greatest center of learning, housing hundreds of thousands of scrolls.</p>
+  <p>The Hellenistic legacy matters enormously: Rome, Christianity, Islam, and medieval Europe all inherited Greek intellectual traditions — often filtered through Hellenistic synthesis rather than classical Athens itself.</p>
+</section>
+
+<!-- ═══ SECTION 3: ROME ═══ -->
+<section id="s3" class="major-section" data-era="ancient">
+  <div class="section-eyebrow">
+    <span class="era-badge ancient">Ancient</span>
+    <span class="section-num">Section III</span>
+  </div>
+  <h2>Rome: Law, Empire, Citizenship, and Order</h2>
+  <p>Rome began as a small city on the Tiber in central Italy — probably founded as a monarchy around the 8th century BCE — and over eight centuries became one of the largest empires in world history. At its peak under Trajan (r. 98–117 CE), the Roman Empire stretched from Scotland to Mesopotamia, from Morocco to the Rhine, encompassing roughly 5 million square kilometers and perhaps 70 million people.</p>
+  <p>Rome's most durable legacy was not military conquest but institutional. Roman law, Latin language, urban planning, roads (approximately 250,000 miles of road network at its height), and administrative practice shaped European life for more than a millennium after Rome's political collapse. The Romance languages — Italian, Spanish, Portuguese, French, Romanian — are all descended from Latin. Roman legal concepts (property rights, contract, due process, judicial review) underlie European legal systems to this day.</p>
+
+  <h3>The Roman Republic (509–27 BCE)</h3>
+  <p>The Republic replaced Rome's early monarchy with a system of elected magistrates, senatorial governance, and popular assemblies. Its mixed constitution — balancing consular executive authority, senatorial aristocratic power, and popular tribunes — fascinated later political thinkers. Cicero (106–43 BCE), Polybius (c. 200–118 BCE), and later Montesquieu, Madison, and the American Founders all drew on the Roman republican model. The Republic's collapse through civil war — Julius Caesar's crossing of the Rubicon (49 BCE), his assassination (44 BCE), and the final victory of Augustus at Actium (31 BCE) — became a canonical political tragedy about the fragility of republican institutions.</p>
+
+  <h3>The Roman Empire (27 BCE – 476 CE West / 1453 CE East)</h3>
+  <p>Under the Principate established by Augustus, Rome transformed from republic to empire while maintaining republican forms. The empire created a shared Mediterranean world connected by roads, cities, trade, military forts, law, and Latin culture. The Pax Romana (27 BCE – 180 CE) — roughly two centuries of relative internal peace — allowed unprecedented economic integration across the Mediterranean basin.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Roman Legacy</th><th>Later Influence</th></tr></thead>
+      <tbody>
+        <tr><td>Roman law (corpus juris civilis)</td><td>European legal systems; the Justinian Code shaped Byzantine, Italian, French, Spanish, and German law</td></tr>
+        <tr><td>Latin language</td><td>Romance languages; Church Latin; medieval and Renaissance scholarship</td></tr>
+        <tr><td>Imperial administration</td><td>Later states and churches borrowed Roman bureaucratic forms</td></tr>
+        <tr><td>Urban planning (grid cities, forums, aqueducts)</td><td>Foundations of European cities; London, Paris, Vienna, Cologne, Lyon all Roman in origin</td></tr>
+        <tr><td>Roads (250,000+ miles)</td><td>Trade and military movement; many modern European roads follow Roman routes</td></tr>
+        <tr><td>Christianity as imperial religion</td><td>Gave Christianity institutional reach; shaped medieval Europe's entire civilizational framework</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Christianity and Rome</h3>
+  <p>Christianity emerged in Roman Judaea in the 1st century CE and spread rapidly through Roman trade networks, urban communities, and the Greek-speaking diaspora. At first persecuted — Nero blamed Christians for Rome's great fire of 64 CE; Decius and Diocletian launched systematic persecutions in the 3rd century — Christianity gained imperial favor under Constantine, who legalized it in the Edict of Milan (313 CE). Emperor Theodosius I made it the empire's sole official religion in 380 CE.</p>
+  <p>This was one of the most consequential transformations in European history. The Roman Empire gave Christianity institutional structure, Latin language, and geographical reach; Christianity gave Rome a spiritual legacy that outlasted its political collapse by over a millennium. When Western Rome fell, it was bishops like Ambrose of Milan and Pope Leo the Great who stepped into the administrative vacuum — not Germanic warlords.</p>
+</section>
+
+<!-- ═══ SECTION 4: FALL OF ROME ═══ -->
+<section id="s4" class="major-section" data-era="medieval">
+  <div class="section-eyebrow">
+    <span class="era-badge medieval">Medieval</span>
+    <span class="section-num">Section IV</span>
+  </div>
+  <h2>The Fall of Rome and the Birth of Medieval Europe</h2>
+  <p>The deposition of Romulus Augustulus by the Germanic chieftain Odoacer in 476 CE has traditionally marked the "fall" of the Western Roman Empire. But this is misleading: Rome did not collapse suddenly. It underwent a long transformation over two centuries — economic contraction, military overextension, political instability (the "Crisis of the Third Century," 235–284 CE involved over 50 emperors in 50 years), currency debasement, and repeated Germanic incursions.</p>
+  <p>The historian Edward Gibbon began his monumental <em>Decline and Fall of the Roman Empire</em> (1776) with the peaceful Antonine era (96–180 CE) and traced the dissolution as a process of centuries. Modern historians debate whether this period is better described as "transformation" than "fall" — the empire's institutions, law, language, and religion survived and shaped the medieval world profoundly.</p>
+
+  <h3>Germanic Kingdoms</h3>
+  <p>After Rome's western collapse, Germanic peoples settled in former Roman territories and established kingdoms that blended Roman law, Christian religion, and Germanic warrior customs. The Franks under Clovis (r. 481–511) converted to Catholic Christianity in 496 CE — a pivotal decision that aligned the most powerful Germanic kingdom with Rome's ecclesiastical network rather than Arian Christianity.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Group</th><th>Region</th><th>Notable Features</th></tr></thead>
+      <tbody>
+        <tr><td>Franks</td><td>Gaul (France)</td><td>Catholic Christianity; Carolingian Empire; foundation of France and Germany</td></tr>
+        <tr><td>Visigoths</td><td>Spain</td><td>Converted from Arianism to Catholicism (589 CE); defeated by Muslim Umayyads (711 CE)</td></tr>
+        <tr><td>Ostrogoths</td><td>Italy</td><td>Theodoric the Great (r. 493–526) maintained Roman administration; Boethius served at his court</td></tr>
+        <tr><td>Lombards</td><td>Northern Italy</td><td>Gave name to Lombardy; eventual incorporation into Frankish Empire</td></tr>
+        <tr><td>Anglo-Saxons</td><td>England</td><td>Seven kingdoms (Heptarchy); conversion by Augustine of Canterbury (597 CE)</td></tr>
+        <tr><td>Vandals</td><td>North Africa</td><td>Briefly held Carthage and Mediterranean sea-lanes; destroyed by Justinian (534 CE)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The Church as Civilizational Glue</h3>
+  <p>In Western Europe, the Catholic Church became the most stable institution after Rome's collapse. Monasteries — especially Benedictine foundations following the Rule of St. Benedict (c. 529 CE) — preserved Latin literacy, copied manuscripts (including classical pagan authors), maintained agricultural estates, provided hospitality to travelers, and served as the primary educational institutions of early medieval Europe. Without the monasteries, the works of Virgil, Cicero, Augustine, and the Greek Fathers would not have survived into the modern world.</p>
+
+  <h3>Byzantium: The Eastern Roman Empire</h3>
+  <p>While the West fragmented, the Eastern Roman Empire — Byzantium — survived with Constantinople as its capital until 1453 CE, when it fell to the Ottoman Sultan Mehmed II. For a thousand years, Byzantium preserved Greek learning, Roman imperial law (codified definitively in Justinian's <em>Corpus Juris Civilis</em>, 529–565 CE), Orthodox Christianity, classical art, and the imperial idea. Byzantine missionaries Cyril and Methodius (9th century) created the Glagolitic alphabet (ancestor of the Cyrillic) to translate scripture into Slavic languages, transmitting Byzantine civilization to Russia, Bulgaria, Serbia, and Romania.</p>
+</section>
+
+<!-- ═══ SECTION 5: CHRISTENDOM ═══ -->
+<section id="s5" class="major-section" data-era="medieval">
+  <div class="section-eyebrow">
+    <span class="era-badge medieval">Medieval</span>
+    <span class="section-num">Section V</span>
+  </div>
+  <h2>The Rise of Christendom</h2>
+  <p>For much of the Middle Ages, Europe understood itself not as "Europe" but as <em>Christendom</em> — a civilization defined by shared Christian faith, Latin liturgy in the West, Church hierarchy, a common sacred calendar, pilgrimage routes (Santiago de Compostela, Rome, Jerusalem), monastic orders, canon law, and the universities. The concept of "Europe" as a distinct cultural zone actually emerged partly in contrast to the Islamic world — the Christian Frankish victory at the Battle of Tours/Poitiers (732 CE) was later mythologized as "saving Europe."</p>
+  <p>Charlemagne's coronation as "Emperor of the Romans" by Pope Leo III on Christmas Day 800 CE established the template of the Christian West: a political-religious synthesis in which emperor and pope shared — and contested — authority over the same civilization. This Carolingian moment created institutions that shaped Western Europe for centuries: the promotion of Latin literacy, standardized religious practice, the manor economy, and the idea of a unified Christian empire.</p>
+
+  <h3>The Papacy and the Investiture Controversy</h3>
+  <p>The pope became a major religious and political figure in Western Europe. The central medieval political conflict was the Investiture Controversy — who had the right to appoint bishops and abbots, and thus control the Church's vast wealth and administrative network. The conflict peaked in the confrontation between Pope Gregory VII and Holy Roman Emperor Henry IV: in 1077 CE, Henry IV stood barefoot in the snow at Canossa for three days, begging papal absolution. The compromise reached at the Concordat of Worms (1122 CE) separated spiritual investiture (the pope's domain) from temporal investiture (the emperor's domain) — an early milestone in the distinction between religious and political authority that would eventually produce modern secularism.</p>
+
+  <h3>The Monastic Orders</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Order</th><th>Founded</th><th>Emphasis</th></tr></thead>
+      <tbody>
+        <tr><td>Benedictines</td><td>529 CE (Monte Cassino)</td><td>Ora et labora (prayer and work); stability; preservation of learning</td></tr>
+        <tr><td>Cluniacs</td><td>910 CE (Burgundy)</td><td>Liturgical reform; independence from feudal control; influence on papal reform</td></tr>
+        <tr><td>Cistercians</td><td>1098 CE (Cîteaux)</td><td>Simplicity, discipline, agricultural development; Bernard of Clairvaux</td></tr>
+        <tr><td>Franciscans</td><td>1209 CE</td><td>Radical poverty, itinerant preaching; Francis of Assisi; urban ministry</td></tr>
+        <tr><td>Dominicans</td><td>1216 CE</td><td>Learning, preaching, theology; Thomas Aquinas was Dominican; Inquisition</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Medieval Synthesis</div>
+    <p>The Middle Ages were not a "dark age" of intellectual stagnation. They were the period in which the basic structures of European civilization — universities, parliaments, common law, Gothic architecture, scholastic philosophy — were invented. The 12th century "renaissance" (c. 1050–1200) was in many ways as transformative as the 15th-century Italian Renaissance.</p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 6: ISLAM AND EUROPE ═══ -->
+<section id="s6" class="major-section" data-era="medieval">
+  <div class="section-eyebrow">
+    <span class="era-badge medieval">Medieval</span>
+    <span class="section-num">Section VI</span>
+  </div>
+  <h2>Islam and Europe</h2>
+  <p>Islam profoundly shaped European history — not only through conflict, but through intellectual transmission, commercial exchange, and cultural influence that European civilization could not have developed without. The standard narrative of European history often underplays this. The Islamic world was, for several centuries, the most advanced civilization in the world in mathematics, medicine, astronomy, philosophy, and literature.</p>
+  <p>After the Prophet Muhammad (570–632 CE) unified the Arabian Peninsula and launched the rapid expansion of the early Islamic community, Muslim powers expanded across North Africa, into Spain (711 CE), Sicily, and across the Mediterranean. By 750 CE, the Umayyad Caliphate stretched from the Iberian Peninsula to Central Asia — the largest empire the world had yet seen.</p>
+
+  <h3>Al-Andalus: The Jewel of Medieval Europe</h3>
+  <p>Muslim Spain (711–1492 CE) was one of the most intellectually and culturally advanced regions of the medieval world. At its height under the Umayyad Caliphate of Córdoba (929–1031 CE), with a population of perhaps 500,000, Córdoba was likely the largest city in Western Europe — larger than Paris or London — with street lighting, running water, and libraries. The Great Mosque of Córdoba (begun 784 CE) remains one of the most extraordinary architectural achievements of the medieval period.</p>
+  <p>The most important contribution of Al-Andalus to European civilization was the translation movement: from the 10th through 13th centuries, Arab, Jewish, and Christian scholars in Toledo, Seville, and Palermo translated hundreds of Arabic works — including Arabic translations of Greek texts that had been lost to Latin Europe — into Latin. This is how Aristotle's complete works, Euclid's <em>Elements</em>, Ptolemy's <em>Almagest</em>, Avicenna's <em>Canon of Medicine</em>, and al-Khwarizmi's algebra (the very word "algebra" is Arabic) entered European intellectual life.</p>
+
+  <h4>Key Figures of Al-Andalus and Islamic Mediterranean</h4>
+  <div class="figure-grid">
+    <div class="figure-card"><div class="figure-name">Ibn Rushd / Averroes (1126–1198)</div><div class="figure-role">Commentaries on Aristotle that became essential to scholastic philosophy; Thomas Aquinas engaged him extensively</div></div>
+    <div class="figure-card"><div class="figure-name">Ibn Tufayl (c. 1105–1185)</div><div class="figure-role">Philosophical novel <em>Hayy ibn Yaqzan</em>; influenced Enlightenment thought via Latin translation (1671)</div></div>
+    <div class="figure-card"><div class="figure-name">Al-Zahrawi / Abulcasis (936–1013)</div><div class="figure-role">"Father of surgery"; his <em>Kitab al-Tasrif</em> was the standard surgical reference in European universities for 500 years</div></div>
+    <div class="figure-card"><div class="figure-name">Maimonides (1138–1204)</div><div class="figure-role">Jewish philosopher and physician in Córdoba and Cairo; bridged Aristotle, Islamic thought, and Jewish theology</div></div>
+    <div class="figure-card"><div class="figure-name">Ibn Arabi (1165–1240)</div><div class="figure-role">Sufi mystic from Murcia; <em>Fusus al-Hikam</em>; profound influence on Islamic spirituality and philosophy</div></div>
+    <div class="figure-card"><div class="figure-name">Al-Idrisi (1100–1165)</div><div class="figure-role">Geographer and cartographer at the Norman court of Sicily; produced the most accurate world map of the 12th century</div></div>
+  </div>
+
+  <h3>The Crusades (1096–1291)</h3>
+  <p>The Crusades were a series of military-religious expeditions launched by Western Christendom primarily toward the eastern Mediterranean (though also into Iberia and the Baltic). Pope Urban II called the First Crusade at the Council of Clermont (1095 CE), promising spiritual reward for those who fought to reclaim Jerusalem. The Crusaders took Jerusalem in 1099 CE in a campaign of horrific violence.</p>
+  <p>The Crusades had complex consequences: they intensified Christian-Muslim conflict and left deep scars; they temporarily established Latin kingdoms in the Levant; they expanded trade (crusaders discovered Eastern luxury goods and spices); they strengthened papal authority temporarily; and they reinforced European stereotypes of the Muslim world while also generating genuine fascination and admiration. The Third Crusade (1189–1192) produced the famous encounter between Richard I of England and Saladin — a conflict in which contemporaries on both sides acknowledged the other's honor and skill.</p>
+
+  <div class="callout">
+    <div class="callout-label">Correcting the Record</div>
+    <p>Europe's relationship with Islam was never simply one of conflict. For centuries, Islamic civilization was the transmitter of Greek knowledge to medieval Europe, the source of mathematical and medical advances that Latin scholars openly acknowledged, and a commercial partner whose trade networks reached from Spain to China. The image of medieval "Christian Europe" standing apart from a hostile Islamic world is a 19th-century nationalist distortion of a more complex reality.</p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 7: HIGH MIDDLE AGES ═══ -->
+<section id="s7" class="major-section" data-era="medieval">
+  <div class="section-eyebrow">
+    <span class="era-badge medieval">Medieval</span>
+    <span class="section-num">Section VII</span>
+  </div>
+  <h2>The High Middle Ages: Growth, Cities, and Universities</h2>
+  <p>From roughly 1000 to 1300 CE, Europe experienced a remarkable expansion — in population, agricultural productivity, urban life, trade, and intellectual culture. Europe's population roughly doubled between 1000 and 1300, from perhaps 35 million to 70 million. This growth was made possible by agricultural innovation and a warming climate (the Medieval Warm Period, c. 950–1250 CE).</p>
+
+  <h3>Agricultural Revolution</h3>
+  <p>Several technological innovations transformed European agriculture: the heavy plow (capable of turning dense northern European soils), the horse collar (allowing horses rather than oxen to pull plows at twice the speed), the three-field system (rotating crops across three fields, leaving one fallow, which increased productivity by roughly 50% over the two-field system), and improved watermills and windmills for grinding grain.</p>
+
+  <h3>The Revival of Urban Life</h3>
+  <p>Cities became the engines of medieval Europe's new dynamism. Northern Italian city-states like Venice, Genoa, Florence, and Pisa became hubs of Mediterranean trade. The Hanseatic League (formally organized by 1358) linked cities from London to Riga in a commercial network controlling the Baltic and North Sea trade. The Champagne fairs in eastern France were the major venue for long-distance overland commerce between northern and southern Europe.</p>
+
+  <h3>Universities: Europe's Most Important Invention?</h3>
+  <p>The university emerged in the 11th–12th centuries as a new institutional form — a corporation of scholars (universitas magistrorum et scholarium) chartered to teach, debate, and award degrees. Bologna (c. 1088 CE), Paris (c. 1150), Oxford (c. 1167), and Cambridge (1209) were the earliest. By 1300 there were roughly twenty universities in Europe; by 1500, there were nearly eighty.</p>
+  <p>Universities taught the seven liberal arts (grammar, rhetoric, logic, arithmetic, geometry, music, astronomy) followed by advanced study in theology, law, or medicine. They created a common intellectual culture across political borders — a student might study in Paris, Bologna, and Oxford in a single career — and institutionalized debate, disputation, and the idea that knowledge could be organized and transmitted systematically.</p>
+
+  <h3>Scholasticism and the Integration of Faith and Reason</h3>
+  <p>Scholasticism — the medieval method of disciplined theological and philosophical reasoning — attempted to harmonize Christian revelation with Greek rational philosophy, especially Aristotle (whose complete works became available in Latin translation from the 12th century onward). Thomas Aquinas (1225–1274) stands as its greatest representative. His <em>Summa Theologiae</em> attempted to synthesize Aristotle's natural philosophy with Christian theology — arguing that reason and faith were not opposed but complementary paths to truth.</p>
+  <p>This was not intellectual timidity. Aquinas's claim that natural reason could reach genuine truth independently of revelation was bold and controversial. The 1277 Condemnations at Paris, which condemned 219 propositions (many Thomistic), show the genuine intellectual tension of the period. Scholasticism established the pattern of organized disputation — the quaestio format — that later became the foundation of modern academic argument.</p>
+</section>
+
+<!-- ═══ SECTION 8: LATE MIDDLE AGES CRISIS ═══ -->
+<section id="s8" class="major-section" data-era="medieval">
+  <div class="section-eyebrow">
+    <span class="era-badge medieval">Medieval</span>
+    <span class="section-num">Section VIII</span>
+  </div>
+  <h2>Crisis of the Late Middle Ages</h2>
+  <p>The 14th and early 15th centuries brought a sequence of catastrophes that shattered the confidence of high medieval civilization and forced a deep reorganization of European society, thought, and spirituality. The historian Barbara Tuchman called the 14th century "a violent, tormented, bewildered, suffering, and disintegrating age" — but also one of extraordinary creativity precisely because it forced the dismantling of old certainties.</p>
+
+  <h3>The Black Death (1347–1353)</h3>
+  <p>The Black Death — almost certainly a combination of bubonic, septicemic, and pneumonic plague caused by the bacterium <em>Yersinia pestis</em> — arrived in Sicily by ship from the Crimea in October 1347 and swept across Europe with terrifying speed. By 1353, it had killed between one-third and one-half of Europe's population — perhaps 25 million people out of a population of roughly 75 million. Some regions lost 60–70% of their population. Florence, one of Europe's wealthiest cities, shrank from perhaps 90,000 to 45,000 in two years. The plague returned repeatedly through the 15th century, preventing full demographic recovery until the 16th century.</p>
+  <p>Its consequences were transformative. Labor shortages empowered surviving peasants to demand better conditions — accelerating the end of serfdom in Western Europe. Religious authority was questioned when prayer failed to stop the plague. Flagellant movements, Jewish pogroms (Jews were scapegoated as well-poisoners), mystical spirituality, and macabre art (the <em>danse macabre</em> or Dance of Death became a pervasive theme) all emerged from the trauma. Giovanni Boccaccio wrote the <em>Decameron</em> in its immediate aftermath, framing it as stories told by Florentines sheltering from the plague.</p>
+
+  <h3>The Hundred Years' War (1337–1453)</h3>
+  <p>The Hundred Years' War between England and France was not a continuous conflict but a series of wars interrupted by truces. It transformed both kingdoms: it strengthened royal taxation, standing armies (replacing feudal levies), and national consciousness. Joan of Arc (c. 1412–1431), a peasant girl who claimed divine visions, rallied French forces and was captured and burned as a heretic by the English-aligned Burgundians — and later became France's national patron saint, retroactively rehabilitated (1456) and eventually canonized (1920).</p>
+
+  <h3>The Church in Crisis</h3>
+  <p>The prestige of the papacy suffered severe blows. The Avignon Papacy (1309–1377) saw seven successive popes reside in southern France under French influence rather than Rome — widely seen as a humiliation of papal independence. The Great Western Schism (1378–1417) was worse: rival claimants to the papacy in Rome and Avignon (and briefly a third in Pisa) condemned each other as anti-popes, leaving European Christianity with competing hierarchies. The Conciliarist movement emerged, arguing that a general council of the Church had authority over the pope — a challenge to papal monarchy that prefigured the Reformation.</p>
+
+  <div class="callout">
+    <div class="callout-label">Historical Turning Point</div>
+    <p>By 1400, the institutional and cultural certainties of high medieval civilization — the integrated worldview of scholasticism, the unchallenged authority of the papacy, the stability of feudal hierarchy — had all been subjected to serious challenge. Europe was primed for transformation. The Renaissance, Reformation, and early modern state-building were not sudden departures from medieval life but emerged directly from the creative destruction of the 14th-century crisis.</p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 9: RENAISSANCE ═══ -->
+<section id="s9" class="major-section" data-era="early-mod">
+  <div class="section-eyebrow">
+    <span class="era-badge early-mod">Early Modern</span>
+    <span class="section-num">Section IX</span>
+  </div>
+  <h2>The Renaissance: Recovery, Humanism, and the Rebirth of Classical Culture</h2>
+  <p>The Renaissance (French: <em>rebirth</em>) began especially in Italian cities from the 14th century and spread across Europe through the 16th. It was characterized by a renewed engagement with classical Greek and Roman texts, a celebration of human dignity and individual achievement, revolutionary developments in art and architecture, and a shift in the moral language of educated Europeans from purely theological categories toward civic virtue, eloquence, and human excellence.</p>
+  <p>The Renaissance was not a rejection of Christianity — most Renaissance figures were devout — but a reorientation of Christian culture toward classical sources and human achievement. The great humanists like Erasmus used classical philology to recover the authentic text of the New Testament (his 1516 Greek-Latin New Testament challenged the authority of the Vulgate) and criticized Church corruption in explicitly humanist terms.</p>
+
+  <h3>Why Italy First?</h3>
+  <p>Italy was the seedbed of the Renaissance for convergent reasons: it was the heir of Roman memory (surrounded by ruins); it contained the wealthiest cities in the medieval West (Venice, Florence, Genoa, Milan); its merchant and banking families (the Medici of Florence above all) had the wealth and competitive ambition to patronize art and learning; and it had uniquely close commercial and intellectual contact with Byzantium and the Islamic world through Mediterranean trade. When Byzantine scholars fled the Ottoman conquest of Constantinople (1453), many brought Greek manuscripts to Italian cities, accelerating the Greek revival.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>City</th><th>Role</th><th>Key Patrons / Figures</th></tr></thead>
+      <tbody>
+        <tr><td>Florence</td><td>Humanism, banking, republican civic culture</td><td>Medici family; Brunelleschi; Alberti; Botticelli; Leonardo; Michelangelo</td></tr>
+        <tr><td>Venice</td><td>Maritime trade, printing, visual splendor</td><td>Aldus Manutius (Aldine Press); Titian; Tintoretto</td></tr>
+        <tr><td>Rome</td><td>Papal patronage, ancient ruins, artistic commissions</td><td>Julius II; Leo X; Raphael; Michelangelo (Sistine Chapel)</td></tr>
+        <tr><td>Milan</td><td>Court culture, military engineering</td><td>Sforza dynasty; Leonardo da Vinci at the court</td></tr>
+        <tr><td>Ferrara, Mantua</td><td>Smaller courts; literary patronage</td><td>Este family; Ariosto; Mantegna</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Renaissance Art: A Visual Revolution</h3>
+  <p>Renaissance painting and sculpture transformed European visual culture through several innovations: linear perspective (first systematically described by Brunelleschi c. 1413 and theorized by Alberti in <em>Della Pittura</em>, 1435); accurate anatomical rendering based on dissection; the depiction of human emotion through facial expression and gesture; mathematical proportion derived from classical theory; and the integration of classical mythological and historical subjects alongside Christian ones.</p>
+  <p>Leonardo da Vinci (1452–1519) is the defining figure of Renaissance genius — not only a painter (<em>The Last Supper</em>, <em>Mona Lisa</em>) but an anatomist, engineer, geologist, and inventor whose notebooks filled with designs for flying machines, armored vehicles, and hydraulic works remained undiscovered for centuries. Michelangelo Buonarroti (1475–1564) painted the Sistine Chapel ceiling (1508–1512) — perhaps the single most ambitious artistic undertaking in European history — while simultaneously producing the <em>Pietà</em>, the <em>David</em>, and architectural work on St. Peter's Basilica.</p>
+
+  <h4>Key Renaissance Figures</h4>
+  <div class="figure-grid">
+    <div class="figure-card"><div class="figure-name">Petrarch (1304–1374)</div><div class="figure-role">"First humanist"; revived Latin literature; coined the term "Dark Ages" for the medieval period</div></div>
+    <div class="figure-card"><div class="figure-name">Erasmus (1466–1536)</div><div class="figure-role">Christian humanism; <em>In Praise of Folly</em>; critical edition of Greek New Testament; "prince of humanists"</div></div>
+    <div class="figure-card"><div class="figure-name">Machiavelli (1469–1527)</div><div class="figure-role"><em>The Prince</em> (1513); political realism; founder of modern political science; separated politics from moral theology</div></div>
+    <div class="figure-card"><div class="figure-name">Leonardo da Vinci (1452–1519)</div><div class="figure-role">Painter, anatomist, engineer; notebooks reveal a mind centuries ahead of his time</div></div>
+    <div class="figure-card"><div class="figure-name">Michelangelo (1475–1564)</div><div class="figure-role">Sistine Chapel; <em>David</em>; <em>Pietà</em>; St. Peter's dome; supreme expression of Renaissance genius</div></div>
+    <div class="figure-card"><div class="figure-name">Raphael (1483–1520)</div><div class="figure-role"><em>School of Athens</em>; classical harmony; celebrated reason and philosophy as much as Christian faith</div></div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 10: REFORMATION ═══ -->
+<section id="s10" class="major-section" data-era="early-mod">
+  <div class="section-eyebrow">
+    <span class="era-badge early-mod">Early Modern</span>
+    <span class="section-num">Section X</span>
+  </div>
+  <h2>The Reformation: The Fracturing of Western Christendom</h2>
+  <p>The Protestant Reformation began on October 31, 1517 — the date Martin Luther (1483–1546) reportedly posted his Ninety-Five Theses on the door of the Castle Church in Wittenberg, challenging the sale of indulgences. Within a decade, Western Christendom, which had been institutionally unified under Rome for a thousand years, was permanently divided. The Reformation was not primarily caused by Luther's personal theology — the conditions for religious revolt had been building for over a century — but Luther's bold public challenge, amplified by the printing press, made the break irreversible.</p>
+
+  <h3>Causes of the Reformation</h3>
+  <p>The Reformation drew on multiple sources: accumulated resentment of Church corruption, absentee clergy, and clerical wealth; the humanists' return to original scriptural texts (which exposed discrepancies with Catholic tradition); rising literacy among laypeople who could now read scripture themselves; political resentment of German princes against Rome's financial extraction; and deep theological anxiety about salvation in an age still traumatized by plague and apocalyptic expectation.</p>
+  <p>The printing press was the decisive accelerant. Gutenberg's movable-type press (c. 1450) had produced an estimated 15–20 million books by 1500. Luther's works spread across Germany within weeks of publication. His 1520 pamphlets — "Address to the Christian Nobility of the German Nation," "The Babylonian Captivity of the Church," "On Christian Liberty" — were the first bestsellers in European history.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Reformer</th><th>Location</th><th>Emphasis</th></tr></thead>
+      <tbody>
+        <tr><td>Martin Luther</td><td>Wittenberg, Germany</td><td>Justification by faith alone (<em>sola fide</em>); Scripture alone (<em>sola scriptura</em>); priesthood of all believers; German Bible (1534)</td></tr>
+        <tr><td>John Calvin</td><td>Geneva, Switzerland</td><td>Absolute sovereignty of God; predestination; disciplined godly community; Calvinist Geneva as "Protestant Rome"</td></tr>
+        <tr><td>Huldrych Zwingli</td><td>Zurich, Switzerland</td><td>Radical reform of worship; removal of images; Scripture as sole guide; killed at Kappel (1531)</td></tr>
+        <tr><td>Anabaptists</td><td>Various</td><td>Believers' baptism; separation of church and state; nonviolence; radical discipleship; persecuted by Catholics and Protestants alike</td></tr>
+        <tr><td>Henry VIII</td><td>England</td><td>Break with Rome for political reasons (divorce); Church of England; Reformation in England initially conservative in theology</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The Catholic Reformation</h3>
+  <p>The Catholic Church responded not simply with condemnation but with genuine internal reform — the Council of Trent (1545–1563) clarified Catholic doctrine, reformed clerical training (seminaries), and tightened moral standards. The Society of Jesus (Jesuits), founded by Ignatius of Loyola (1491–1556) and confirmed by Pope Paul III in 1540, became the intellectual vanguard of Catholic reform and global mission — running schools and universities from Japan to Brazil, and producing figures like the scientist Christoph Clavius, who reformed the calendar.</p>
+
+  <h3>Consequences</h3>
+  <p>The Reformation's consequences reshaped Europe for centuries: religious wars (culminating in the devastating Thirty Years' War, 1618–1648, which killed perhaps a third of the German-speaking population); confessional states where ruler determined religion (the principle <em>cuius regio, eius religio</em>); a Protestant literacy culture that valued Bible reading and therefore mass education; long-term secularization pressures as competing Christian truth-claims normalized religious doubt; and the eventual emergence of religious toleration as a political necessity rather than a virtue.</p>
+</section>
+
+<!-- ═══ SECTION 11: MODERN STATE ═══ -->
+<section id="s11" class="major-section" data-era="early-mod">
+  <div class="section-eyebrow">
+    <span class="era-badge early-mod">Early Modern</span>
+    <span class="section-num">Section XI</span>
+  </div>
+  <h2>The Rise of the Modern State</h2>
+  <p>Between the 15th and 18th centuries, European rulers built stronger centralized states equipped with standing armies, bureaucracies, tax systems, courts, and diplomatic services. This "state-building" process was driven partly by military competition — states that could not raise taxes and armies were conquered by those that could — and partly by the practical need to administer growing populations, territories, and commercial economies.</p>
+
+  <h3>Absolutism: France under Louis XIV</h3>
+  <p>In France, absolutism reached its most famous expression under Louis XIV (r. 1643–1715), who reportedly declared "L'état, c'est moi" ("I am the state"). Louis built Versailles as a physical monument to royal centrality, forced the French nobility to spend time at court (making them dependent on royal patronage), suppressed independent power centers, and pursued aggressive mercantilist economic policies through his finance minister Colbert. France under Louis XIV became the military, cultural, and diplomatic model for European states — French became the language of diplomacy, and every petty German prince built a Versailles-style palace.</p>
+
+  <h3>Constitutionalism: England's Different Path</h3>
+  <p>England followed a strikingly different trajectory. Magna Carta (1215) established that the king was subject to law. The English Civil War (1642–1651) — in which Parliament defeated and beheaded King Charles I — was the first major modern revolution, anticipating the French Revolution by 140 years. The Glorious Revolution (1688–1689) permanently settled parliamentary supremacy over the monarchy and produced the Bill of Rights (1689), which guaranteed parliamentary elections, free speech in Parliament, and prohibited royal suspension of laws. John Locke (1632–1704), writing in its immediate aftermath, provided the philosophical justification: government rests on the consent of the governed, and the people have the right to resist tyranny.</p>
+
+  <div class="callout">
+    <div class="callout-label">The State-Building Competition</div>
+    <p>European state-building was driven by war. Between 1500 and 1700, Europe was at war roughly 75% of the time. Only states that could tax and conscript effectively could survive this environment. The "military-fiscal state" — the linkage of military capacity, taxation bureaucracy, and financial innovation — is one of the distinctive features of early modern European development that later underwrote European global dominance.</p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 12: EXPLORATION AND COLONIALISM ═══ -->
+<section id="s12" class="major-section" data-era="early-mod">
+  <div class="section-eyebrow">
+    <span class="era-badge early-mod">Early Modern</span>
+    <span class="section-num">Section XII</span>
+  </div>
+  <h2>Exploration, Colonialism, and Global Europe</h2>
+  <p>From the 15th century onward, European maritime powers expanded across the globe in one of the most consequential series of encounters in human history. The Portuguese, under Prince Henry the Navigator (1394–1460) and successive monarchs, developed the caravel, navigational charts, and deep-sea sailing techniques that enabled systematic coastal exploration of Africa. Vasco da Gama's voyage to India (1497–1499) opened the direct sea route to Asian spice markets, shattering the Ottoman and Venetian middlemen. Columbus's 1492 voyage, funded by Castile, made contact with the Americas. Magellan-Elcano's expedition (1519–1522) completed the first circumnavigation of the Earth.</p>
+
+  <h3>The Columbian Exchange and Its Consequences</h3>
+  <p>The "Columbian Exchange" — the transfer of plants, animals, diseases, and people between the Old and New Worlds after 1492 — was one of the most ecologically and demographically transformative events in human history. Potatoes, maize, tomatoes, tobacco, chocolate, and rubber moved from the Americas to Europe and Asia. Horses, cattle, pigs, wheat, and — most catastrophically — Old World diseases moved to the Americas. Indigenous American populations had no immunity to smallpox, measles, typhus, and influenza; mortality estimates range from 50% to 90% of pre-contact populations in the first century after contact, amounting to perhaps 50–60 million deaths. It was the greatest demographic catastrophe in human history.</p>
+
+  <h3>The Atlantic Slave Trade</h3>
+  <p>Between approximately 1500 and 1900, European powers forcibly transported an estimated 12.5 million Africans across the Atlantic to labor in plantation economies. Another 1.5–2 million died in the crossing (the Middle Passage). The slave trade was the foundation of the Atlantic plantation economy that produced sugar, cotton, tobacco, and coffee for European and North American consumption — and the wealth that partly funded European industrialization. This is not separable from European civilization's economic development: Bristol, Liverpool, Nantes, and Lisbon grew rich on it; banks, insurance companies, and textile manufacturers were built on it.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Colonial Power</th><th>Main Areas</th><th>Key Products / Role</th></tr></thead>
+      <tbody>
+        <tr><td>Portugal</td><td>Brazil, Africa (coasts), Indian Ocean</td><td>Spice trade; sugar; slave trade to Brazil; strategic fortified trading posts</td></tr>
+        <tr><td>Spain</td><td>Americas (Central, South, Caribbean), Philippines</td><td>Silver from Potosí and Mexico; plantation agriculture; missionary networks</td></tr>
+        <tr><td>Netherlands</td><td>Indonesia, South Africa, Caribbean, Brazil</td><td>Spice trade (VOC); financial and commercial empire; early capitalism</td></tr>
+        <tr><td>France</td><td>North America (Quebec, Louisiana), Caribbean, West Africa, India</td><td>Fur trade; sugar colonies (Haiti most profitable colony in 18th century)</td></tr>
+        <tr><td>Britain</td><td>North America, India, Caribbean, Africa, Australia</td><td>Cotton; opium; textiles; eventually the largest empire in history</td></tr>
+        <tr><td>Belgium</td><td>Congo</td><td>Rubber extraction under Leopold II; death toll estimated at 10 million</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">The Central Contradiction</div>
+    <p>European civilization developed some of humanity's most powerful ideas about liberty, rights, and human dignity — and simultaneously built the Atlantic slave trade, practised colonial genocide, and constructed racial ideologies to justify both. This contradiction is not peripheral to European history. It is central to it.</p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 13: SCIENTIFIC REVOLUTION ═══ -->
+<section id="s13" class="major-section" data-era="early-mod">
+  <div class="section-eyebrow">
+    <span class="era-badge early-mod">Early Modern</span>
+    <span class="section-num">Section XIII</span>
+  </div>
+  <h2>The Scientific Revolution</h2>
+  <p>The Scientific Revolution transformed European and ultimately world thought between the 16th and 17th centuries. It was not a single event or discovery but a cumulative transformation in method, metaphysics, and the organization of knowledge — a shift from a universe understood through Aristotelian categories, theological symbolism, and inherited textual authority to one studied through observation, experiment, and mathematics.</p>
+  <p>The Revolution was enabled by several convergent developments: the printing press that allowed rapid dissemination of findings; Renaissance humanism's willingness to challenge classical authority; the availability of Hellenistic scientific texts (especially Archimedes); improved instruments (telescope, microscope, barometer, air pump); patronage from courts and learned societies; and the mathematical sophistication inherited from Islamic and Byzantine scholarship.</p>
+
+  <div class="figure-grid">
+    <div class="figure-card"><div class="figure-name">Copernicus (1473–1543)</div><div class="figure-role">Heliocentric model (<em>De Revolutionibus</em>, 1543); challenged Ptolemaic geocentrism; dedicated to Pope Paul III</div></div>
+    <div class="figure-card"><div class="figure-name">Tycho Brahe (1546–1601)</div><div class="figure-role">Most precise pre-telescope astronomical observations; his data enabled Kepler's laws</div></div>
+    <div class="figure-card"><div class="figure-name">Kepler (1571–1630)</div><div class="figure-role">Three laws of planetary motion; elliptical orbits; unified mathematical astronomy</div></div>
+    <div class="figure-card"><div class="figure-name">Galileo (1564–1642)</div><div class="figure-role">Telescope; mechanics; moons of Jupiter; conflict with Inquisition (1633); "father of observational astronomy"</div></div>
+    <div class="figure-card"><div class="figure-name">Descartes (1596–1650)</div><div class="figure-role">Analytic geometry; mind-body dualism; systematic rational method; <em>Cogito ergo sum</em></div></div>
+    <div class="figure-card"><div class="figure-name">Newton (1643–1727)</div><div class="figure-role">Laws of motion; universal gravitation; calculus; <em>Principia Mathematica</em> (1687); synthesized the entire revolution</div></div>
+    <div class="figure-card"><div class="figure-name">Vesalius (1514–1564)</div><div class="figure-role"><em>De Humani Corporis Fabrica</em> (1543); overturned Galenic anatomy through direct dissection</div></div>
+    <div class="figure-card"><div class="figure-name">Harvey (1578–1657)</div><div class="figure-role">Discovered circulation of the blood (1628); established experimental physiology</div></div>
+  </div>
+
+  <h3>The Key Shift in Method</h3>
+  <p>Before the Scientific Revolution, natural inquiry operated largely within Aristotelian categories: explaining phenomena in terms of final causes (purposes), qualitative essences, and inherited textual authority. Francis Bacon (1561–1626) argued for inductive empiricism — systematic observation and experiment as the foundation of knowledge. René Descartes argued for mathematical deduction from first principles. Newton combined both: his mechanics were mathematically deductive but grounded in observational data (Brahe's and his own). The result was a new vision: the universe as a law-governed mechanical system, in principle fully describable in mathematical terms.</p>
+  <p>This had profound long-term consequences for religion, philosophy, and politics. If nature operated by discoverable mechanical laws, did God's intervention become unnecessary? Did social and political arrangements also obey natural laws discoverable by reason? The Enlightenment was the cultural application of this question to human affairs.</p>
+</section>
+
+<!-- ═══ SECTION 14: ENLIGHTENMENT ═══ -->
+<section id="s14" class="major-section" data-era="early-mod">
+  <div class="section-eyebrow">
+    <span class="era-badge early-mod">Early Modern</span>
+    <span class="section-num">Section XIV</span>
+  </div>
+  <h2>The Enlightenment: Reason, Progress, and Critique</h2>
+  <p>The Enlightenment of the 17th and 18th centuries extended the spirit of scientific rational inquiry into politics, religion, society, and morality. It was not a single coherent movement but a family of overlapping conversations taking place in coffeehouses, salons, encyclopedias, pamphlets, and universities across Western Europe — in France, Scotland, England, the German states, the Dutch Republic, and beyond. Immanuel Kant defined it memorably: "Enlightenment is man's emergence from his self-incurred immaturity. Dare to know! Have the courage to use your own understanding."</p>
+  <p>The Enlightenment did not produce a single ideology. It contained liberals and reform monarchists, skeptics and deists, republicans and critics of inequality, theorists of free markets and of social contracts. What it shared was a conviction that inherited authority — religious, political, social — had to justify itself before the tribunal of reason, and that human life could be improved through the application of rational inquiry to social problems.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Thinker</th><th>Country</th><th>Key Contribution</th></tr></thead>
+      <tbody>
+        <tr><td>John Locke (1632–1704)</td><td>England</td><td>Natural rights (life, liberty, property); government by consent; right of revolution; foundational for liberalism and American constitutionalism</td></tr>
+        <tr><td>Voltaire (1694–1778)</td><td>France</td><td>Wit, satire, religious toleration; crusades against <em>l'infâme</em> (fanaticism); <em>Candide</em>; published from exile</td></tr>
+        <tr><td>Montesquieu (1689–1755)</td><td>France</td><td>Separation of powers; comparative constitutional analysis; <em>The Spirit of the Laws</em> (1748); directly influenced U.S. Constitution</td></tr>
+        <tr><td>Rousseau (1712–1778)</td><td>Geneva/France</td><td>Social contract; popular sovereignty; general will; romantic critique of civilization; influenced French Revolution and nationalism</td></tr>
+        <tr><td>Hume (1711–1776)</td><td>Scotland</td><td>Empiricist skepticism; attacked proofs of God; naturalistic ethics; foundational to modern philosophy</td></tr>
+        <tr><td>Kant (1724–1804)</td><td>Prussia</td><td>Moral autonomy; categorical imperative; limits of metaphysics; Copernican revolution in philosophy</td></tr>
+        <tr><td>Adam Smith (1723–1790)</td><td>Scotland</td><td><em>Wealth of Nations</em> (1776); division of labor; markets; free trade; founder of classical economics</td></tr>
+        <tr><td>Diderot &amp; d'Alembert</td><td>France</td><td><em>Encyclopédie</em> (28 vols, 1751–1772); systematized Enlightenment knowledge; challenged Church censorship</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Enlightenment and its Tensions</h3>
+  <p>The Enlightenment had deep tensions that its own advocates often failed to see. It proclaimed universal human rights while many of its champions owned slaves or defended colonial empire. It celebrated reason as universal while excluding women from public intellectual life (Mary Wollstonecraft's <em>A Vindication of the Rights of Woman</em>, 1792, was a direct response to this exclusion). It attacked religious "superstition" in terms that often betrayed contempt for popular culture. These tensions were not incidental — they became the central arguments of the next two centuries.</p>
+</section>
+
+<!-- ═══ SECTION 15: AGE OF REVOLUTIONS ═══ -->
+<section id="s15" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XV</span>
+  </div>
+  <h2>The Age of Revolutions</h2>
+  <p>Between the late 18th and mid-19th centuries, Europe and the Atlantic world entered an era of revolutionary upheaval that reshaped the political landscape of the modern world. The historian R.R. Palmer called this an "Age of Democratic Revolution" — a single interconnected wave from the American colonies to the streets of Paris that replaced the principle of hereditary privilege with the principle of popular sovereignty.</p>
+
+  <h3>The French Revolution (1789–1799)</h3>
+  <p>The French Revolution was the defining political event of the modern era. Its immediate cause was a fiscal crisis: France was bankrupt after decades of war (including funding the American Revolution), and King Louis XVI was forced to convene the Estates-General for the first time since 1614. Within months, the Third Estate (commoners) had declared itself a National Assembly, the Bastille had been stormed (July 14, 1789 — still France's national day), the Declaration of the Rights of Man and Citizen had been proclaimed, and the old regime was collapsing.</p>
+  <p>The Revolution went through several phases: the constitutional monarchy (1789–1792); the First Republic and the Terror (1792–1794), in which Robespierre's Committee of Public Safety guillotined perhaps 17,000 people and imprisoned 300,000; the Thermidorian reaction (1794); and the Directory and Consulate (1795–1799), which ended with Napoleon's coup. The Revolution permanently abolished feudalism and aristocratic privilege in France, established the principle of legal equality and citizenship, and introduced a model of popular sovereignty that inspired revolutions across the 19th century.</p>
+
+  <h3>Napoleon Bonaparte (1769–1821)</h3>
+  <p>Napoleon Bonaparte rose from Corsican military officer to Emperor of the French (1804) in fifteen years. He was simultaneously the heir of the Revolution — spreading its legal innovations across Europe — and its gravedigger, restoring an imperial monarchy. His Napoleonic Code (1804), still the basis of French civil law and influential in Louisiana, Quebec, Spain, Italy, and Latin America, codified legal equality, religious toleration, and contractual freedom while simultaneously establishing patriarchal authority over women and family.</p>
+  <p>Napoleon's campaigns transformed European politics: he dissolved the Holy Roman Empire (1806), reorganized Germany into the Confederation of the Rhine, made his brothers kings, and forced European rulers to modernize their administrations or be conquered. His defeat at Waterloo (1815) led to his exile and the Congress of Vienna's attempt to restore the pre-revolutionary order — but the revolutionary and nationalist ideas he had spread could not be undone.</p>
+</section>
+
+<!-- ═══ SECTION 16: INDUSTRIAL REVOLUTION ═══ -->
+<section id="s16" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XVI</span>
+  </div>
+  <h2>The Industrial Revolution</h2>
+  <p>The Industrial Revolution — the transformation of production through steam power, machinery, factories, and the systematic application of science and technology to economic life — began in Britain in the 1760s–1780s and spread across Europe and North America through the 19th century. It was the most consequential economic transformation since the Neolithic agricultural revolution, and it remains the foundation of the modern world economy.</p>
+
+  <h3>Why Britain First?</h3>
+  <p>Britain had a unique combination of enabling factors: abundant coal and iron deposits close to navigable water; well-developed capital markets and banking (the Bank of England, founded 1694); a large colonial empire providing raw materials (especially cotton from India and the American South) and export markets; high agricultural productivity that freed labor for industry; political stability after 1688; a culture of practical tinkering and patent protection; and a distinctive Protestant ethic of thrift, work, and improvement that Weber famously analyzed.</p>
+  <p>The specific innovations that launched industrialization were not single inventions but clusters: James Watt's improved steam engine (1769) applied coal-powered steam to machinery; Richard Arkwright's water frame (1769) mechanized cotton spinning; the power loom mechanized weaving. The Liverpool and Manchester Railway (1830), the world's first intercity steam railway, opened a new era of transportation that effectively shrunk the economic geography of Europe.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Domain</th><th>Transformation</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Work</td><td>From rural artisan/farm to factory wage labor</td><td>Manchester's cotton mills employed 25,000 workers by 1835</td></tr>
+        <tr><td>Urbanization</td><td>Mass migration from countryside to industrial cities</td><td>Manchester grew from 25,000 (1772) to 303,000 (1850)</td></tr>
+        <tr><td>Class structure</td><td>Industrial bourgeoisie and proletariat replaced estate hierarchy</td><td>Marx's analysis: two classes, one owning means of production</td></tr>
+        <tr><td>Family</td><td>Separation of home and workplace; women and children in factories</td><td>Factory Acts (1833+) began restricting child labor — minimum age 9</td></tr>
+        <tr><td>Environment</td><td>Coal smoke, river pollution, deforestation, slag heaps</td><td>Manchester's life expectancy c. 1840: ~28 years for working class</td></tr>
+        <tr><td>Transport</td><td>Railway networks unified national economies</td><td>Britain had 6,000 miles of railway by 1850; 15,000 by 1870</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Social Consequences: Wealth and Suffering Together</h3>
+  <p>Industrialization created unprecedented wealth — British GDP per capita roughly tripled between 1760 and 1860 — but its early decades brought enormous suffering. Factory workers labored 12–16 hours a day, six days a week, in dangerous conditions. Child labor in coal mines and textile mills was routine. Industrial cities were squalid and disease-ridden (Manchester's average life expectancy of around 28 years for the working class in 1840 is the most shocking statistic of the industrial era). Engels documented these conditions in <em>The Condition of the Working Class in England</em> (1845), which he wrote from firsthand observation in Manchester.</p>
+  <p>These conditions generated the labour movement, trade unions, socialist political parties, and modern welfare debates. The reform tradition — Factory Acts, public health legislation, compulsory education, democratic reform (the Reform Act of 1832, Chartism) — emerged as responses to industrial capitalism's human costs.</p>
+</section>
+
+<!-- ═══ SECTION 17: IDEOLOGIES ═══ -->
+<section id="s17" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XVII</span>
+  </div>
+  <h2>Ideologies of the Modern Age</h2>
+  <p>The 19th century produced a set of systematic political ideologies — coherent frameworks for understanding society and prescribing its reform — that still shape political life today. These ideologies emerged as responses to the triple challenge of the French Revolution, industrialization, and the decline of the old religious order.</p>
+
+  <h3>Liberalism</h3>
+  <p>Classical liberalism emphasized individual rights, constitutional government, free speech, rule of law, representative institutions, free markets, and religious toleration. It drew on Locke, Adam Smith, and Enlightenment natural rights theory. Its 19th-century champions — John Stuart Mill, Alexis de Tocqueville, Wilhelm von Humboldt — refined it into a systematic political philosophy. Mill's <em>On Liberty</em> (1859) remains perhaps the most eloquent statement of liberal individualism, arguing that society may only restrict individual freedom to prevent harm to others.</p>
+
+  <h3>Conservatism</h3>
+  <p>Conservatism emerged as a direct response to the French Revolution. Edmund Burke's <em>Reflections on the Revolution in France</em> (1790) — written before the Terror — argued that society is a partnership between the dead, the living, and the yet to be born; that inherited institutions embody accumulated wisdom that abstract reason cannot replicate; and that radical reform destroys the organic bonds of community. Conservatism emphasized tradition, social order, religion, monarchy, gradual change, and the dangers of abstract ideological schemes applied to complex social reality.</p>
+
+  <h3>Socialism and Marxism</h3>
+  <p>Socialism emerged from the observation that industrial capitalism produced wealth and misery simultaneously — and that the market alone would not distribute the gains fairly. Early "utopian" socialists (Robert Owen, Henri de Saint-Simon, Charles Fourier) proposed ideal communities and cooperative organization. Karl Marx (1818–1883) and Friedrich Engels (1820–1895) developed a systematic revolutionary socialism, arguing in the Communist Manifesto (1848) that all history is the history of class struggle, that capitalism necessarily produces its own gravediggers (the proletariat), and that only revolution could produce genuine emancipation. Marxism became the dominant ideology of the 20th century's left — inspiring revolutions, welfare states, trade unions, and academic social theory.</p>
+
+  <h3>Romanticism</h3>
+  <p>Romanticism was a cultural movement reacting against the cold rationalism of the Enlightenment and the mechanizing ugliness of industrial capitalism. It valued emotion over reason, nature over city, imagination over analysis, organic community over abstract rights, folk culture over cosmopolitan sophistication, and the sublime over the merely beautiful. In music, Beethoven, Schubert, Brahms, and Wagner; in literature, Goethe, Schiller, Wordsworth, Byron, Keats, Hugo; in painting, Caspar David Friedrich's transcendent landscapes — all expressed varieties of Romantic sensibility. Romanticism deeply influenced nationalism (the idealization of folk culture and national spirit) and late 19th-century spiritual revival.</p>
+</section>
+
+<!-- ═══ SECTION 18: NATIONALISM ═══ -->
+<section id="s18" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XVIII</span>
+  </div>
+  <h2>Nationalism and the Reshaping of Europe</h2>
+  <p>Nationalism — the political principle that the boundaries of the state should coincide with the boundaries of the nation (defined by shared language, culture, history, or ethnicity) — was one of the most powerful and destructive forces in modern European history. It unified peoples who shared cultural identity but were divided under empires; it simultaneously destabilized those same empires by insisting that minority peoples had the right to self-determination.</p>
+
+  <h3>German Unification (1871)</h3>
+  <p>Germany was unified under Prussian leadership through "blood and iron" — the phrase of Otto von Bismarck (1815–1898), who served as Prussia's Minister-President and later the German Empire's first Chancellor. Bismarck orchestrated three successful wars (against Denmark, 1864; Austria, 1866; France, 1870–71) to unify the German states under Prussian domination. The German Empire was proclaimed in the Hall of Mirrors at Versailles in January 1871 — a deliberate humiliation of France on French soil. The new Germany, with its 41 million people, industrial capacity, and military power, immediately transformed the European balance of power and set the stage for 1914.</p>
+
+  <h3>Italian Unification (1860–1870)</h3>
+  <p>Italian unification (the Risorgimento) was a more complex process involving liberal nationalism (Cavour), popular revolution (Garibaldi's Thousand, who conquered southern Italy in 1860), and dynastic politics (Victor Emmanuel II of Piedmont-Sardinia). Rome was finally incorporated in 1870 when French troops protecting the papal state withdrew. The new Kingdom of Italy inherited a profound regional divide — the industrializing north and the agricultural, impoverished south (the "southern question") — that has never fully healed.</p>
+
+  <h3>The Decline of Multiethnic Empires</h3>
+  <p>Nationalism was most destructive for the multiethnic empires — Habsburg Austria-Hungary, the Ottoman Empire, and the Russian Empire — which contained dozens of nationalities within single political structures. The Balkans became the most explosive zone: Serbia's aspirations for a South Slav state, Austria-Hungary's fear of Slavic nationalism, the Ottoman Empire's slow disintegration ("the Eastern Question"), and the competition of Russia and Austria for influence in the region created the structural conditions for 1914.</p>
+</section>
+
+<!-- ═══ SECTION 19: IMPERIALISM ═══ -->
+<section id="s19" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XIX</span>
+  </div>
+  <h2>Imperialism and the Global European Century</h2>
+  <p>In the 19th century, European industrial and military power allowed European states to dominate most of the globe. By 1914, European powers and their settler-colonial offshoots controlled approximately 84% of the Earth's land surface. This was not simply a military achievement: it rested on industrial capacity (the Maxim gun vs. spears), financial power (capital investment in infrastructure built for export extraction), bureaucratic organization, and ideological conviction of racial and civilizational superiority.</p>
+
+  <h3>The Scramble for Africa</h3>
+  <p>The Berlin Conference (1884–1885), convened by Bismarck, formalized the rules by which European powers divided Africa among themselves — without the presence of a single African representative. Within twenty-five years, virtually all of Africa was under European colonial administration. The Congo Free State, personally owned by Belgium's King Leopold II (not a colony of Belgium but his private property), became the most notorious case: a rubber extraction regime maintained through mutilation and terror. The death toll under Leopold's rule (c. 1885–1908) is estimated at 10 million — a fact documented by the journalist E.D. Morel and the diplomat Roger Casement, whose reports sparked one of the first modern human rights campaigns. Germany's campaigns against the Herero and Nama peoples in South-West Africa (1904–1908) — in which perhaps 80% of the Herero population was killed — are recognized as the first genocide of the 20th century.</p>
+
+  <h3>Imperial Ideology and Its Contradictions</h3>
+  <p>Imperialism was justified through an elaborate ideological apparatus: Rudyard Kipling's "White Man's Burden" (1899), claims of spreading "civilization," Christianity, and scientific progress, and pseudo-scientific racial hierarchy. These justifications masked extraction, dispossession, cultural destruction, and violence. John Stuart Mill — champion of liberty in Europe — defended British rule in India on paternalistic grounds. The same France that proclaimed liberté, égalité, fraternité maintained colonial domination through violence in Algeria, Indochina, and West Africa. The contradiction between European ideals and European practice was not invisible at the time — it was the central critique of anticolonial thinkers from Toussaint Louverture to Frantz Fanon.</p>
+</section>
+
+<!-- ═══ SECTION 20: WORLD WAR I ═══ -->
+<section id="s20" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XX</span>
+  </div>
+  <h2>World War I: The Collapse of Old Europe</h2>
+  <p>World War I (1914–1918) was not simply a catastrophic war. It was the suicide of 19th-century European civilization — the destruction of the world of empires, confident progress, and bourgeois stability by the very technologies, nationalisms, and alliance systems that Europe had developed. The war killed approximately 17–20 million people (military and civilian) and left another 20 million wounded. The psychological and cultural impact was even more profound: the generation that survived could no longer believe in progress, reason, or civilization in the old sense.</p>
+
+  <h3>The July Crisis of 1914</h3>
+  <p>The assassination of Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, by the Bosnian Serb nationalist Gavrilo Princip in Sarajevo on June 28, 1914 triggered a cascade of ultimatums, mobilizations, and alliance obligations that within six weeks had engulfed all the major European powers. The underlying causes were structural: German-British naval rivalry, Franco-German resentment (Germany had humiliated France in 1870–71 and during the Morocco Crises of 1905 and 1911), Austro-Russian competition in the Balkans, rigid alliance systems (Triple Alliance vs. Triple Entente), and military planning that assumed offensive war would be short (Germany's Schlieffen Plan, France's Plan XVII).</p>
+
+  <h3>The War's Conduct and Consequences</h3>
+  <p>The Western Front settled into four years of trench warfare — a technological stalemate in which millions of men were killed for gains measured in yards. The Battle of the Somme (July 1–November 18, 1916) produced over 1 million casualties; on its first day alone, the British Army suffered 57,470 casualties, including 19,240 dead — the greatest single-day loss in British military history. New weapons — poison gas (first used systematically by Germany at Ypres, 1915), tanks, aircraft — transformed warfare but could not break the stalemate.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Empire</th><th>Fate</th></tr></thead>
+      <tbody>
+        <tr><td>German Empire</td><td>Collapsed November 1918; Weimar Republic proclaimed; Kaiser Wilhelm II exiled</td></tr>
+        <tr><td>Austro-Hungarian Empire</td><td>Dissolved into successor states: Austria, Hungary, Czechoslovakia, Yugoslavia, parts of Poland and Romania</td></tr>
+        <tr><td>Ottoman Empire</td><td>Defeated; partitioned; Republic of Turkey proclaimed (1923) under Atatürk; Arab mandates to Britain and France</td></tr>
+        <tr><td>Russian Empire</td><td>Revolution (1917); Bolshevik seizure of power; civil war; Soviet Union formed (1922)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The Treaty of Versailles (1919) imposed enormous reparations on Germany, stripped it of territory, and assigned sole "war guilt" (Article 231) — a humiliation that John Maynard Keynes, attending as a British delegate, predicted would produce another catastrophic war within a generation. He was right.</p>
+</section>
+
+<!-- ═══ SECTION 21: RUSSIAN REVOLUTION ═══ -->
+<section id="s21" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XXI</span>
+  </div>
+  <h2>The Russian Revolution and Communism</h2>
+  <p>Russia in 1917 was simultaneously a collapsing military power, a society undergoing rapid but uneven industrialization, and a political system (tsarist autocracy) that had resisted the liberal and parliamentary reforms occurring elsewhere in Europe. The combination proved unstable. The February Revolution (March 1917 by the Western calendar) toppled Tsar Nicholas II and established a Provisional Government. The Bolshevik Revolution of October 1917 overthrew the Provisional Government, with Lenin's promise of "Peace, Land, Bread" resonating among a war-exhausted population.</p>
+  <p>The Soviet Union that emerged from the Civil War (1918–1921) and Lenin's death (1924) became, under Stalin, a totalitarian state of extraordinary brutality. The forced collectivization of agriculture (1929–1933) caused a famine — the Holodomor in Ukraine — that killed perhaps 3.5–7 million people. Stalin's Great Purge (1936–1938) executed 750,000 and sent millions to the Gulag. Yet the Soviet Union also industrialized at a pace unmatched in history, defeating Nazi Germany at an enormous cost (27 million Soviet dead in World War II), and providing an ideological alternative to capitalism that attracted movements across the developing world.</p>
+</section>
+
+<!-- ═══ SECTION 22: INTERWAR CRISIS AND FASCISM ═══ -->
+<section id="s22" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XXII</span>
+  </div>
+  <h2>Interwar Crisis and the Rise of Fascism</h2>
+  <p>The period between 1919 and 1939 is one of the most instructive in modern history — a demonstration of how democratic societies can collapse into totalitarianism under conditions of economic catastrophe, national humiliation, political polarization, and institutional weakness. Of the twenty-eight democracies that existed in Europe in 1920, only twelve remained by 1939.</p>
+  <p>The Great Depression (1929–1933) was the economic catastrophe that broke the interwar political order. The Wall Street Crash of October 1929 triggered a global contraction. German unemployment reached 30% by 1932. In the political vacuum, extreme parties flourished: the Nazi Party (NSDAP) gained 37.4% of the vote in July 1932 elections, making it Germany's largest party. Hitler was appointed Chancellor on January 30, 1933 — by conservative politicians who believed they could control him.</p>
+
+  <h3>Fascism: A New Political Religion</h3>
+  <p>Fascism was not simply extreme nationalism or a more violent conservatism. It was a genuinely novel political form — a political religion combining mass mobilization, leader worship, mythic nationalism, paramilitary violence, and totalitarian aspirations. Benito Mussolini founded the Fascist movement in Italy (1919) and became Prime Minister in 1922. His model — the March on Rome, the Blackshirts, "Il Duce," the suppression of opposition, the glorification of violence as regenerative — directly inspired Hitler.</p>
+  <p>Fascism's core appeal was the promise of national rebirth after humiliation and degradation — a movement from weakness and division to strength and unity through the charismatic leader. It was anti-liberal (individual rights were subordinate to national community), anti-communist (while appropriating socialist aesthetics of mass mobilization), and anti-rational (myth and will over argument and evidence).</p>
+
+  <h3>Nazism and the Holocaust</h3>
+  <p>Nazism was fascism radicalized by race. Hitler's ideology, laid out in <em>Mein Kampf</em> (1925), combined German nationalist grievance, biological racism, virulent antisemitism, and a Darwinian vision of racial struggle for living space (<em>Lebensraum</em>). The Holocaust — the systematic murder of approximately 6 million Jews, along with hundreds of thousands of Roma, disabled people, homosexuals, Soviet POWs, and political prisoners — was not a wartime accident but a planned genocidal project. The Wannsee Conference (January 20, 1942) coordinated the bureaucratic machinery of the "Final Solution" among senior Nazi officials. The Holocaust was carried out through shooting squads (the Einsatzgruppen killed approximately 1.5 million Jews in occupied Soviet territories, 1941–1942) and six extermination camps in occupied Poland — Auschwitz-Birkenau, Treblinka, Sobibór, Bełżec, Chełmno, Majdanek — where industrial killing was organized with bureaucratic efficiency.</p>
+
+  <div class="callout">
+    <div class="callout-label">Moral Reckoning</div>
+    <p>The Holocaust represents the deepest moral catastrophe in European history — and arguably in human history. It was carried out by one of Europe's most educated, technologically advanced, and culturally sophisticated societies. It demands the question: what does European civilization actually mean when it has also produced this? The post-1945 human rights order was built directly in response to this question.</p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 23: WORLD WAR II ═══ -->
+<section id="s23" class="major-section" data-era="modern">
+  <div class="section-eyebrow">
+    <span class="era-badge modern">Modern</span>
+    <span class="section-num">Section XXIII</span>
+  </div>
+  <h2>World War II and the End of European Dominance</h2>
+  <p>World War II (1939–1945) was the deadliest conflict in human history, killing an estimated 70–85 million people — approximately 3% of the world's population. It was fought simultaneously in Europe, Africa, the Pacific, and Asia. For Europe, it meant the near-total destruction of its remaining imperial self-confidence, the demographic catastrophe of the Holocaust and wartime killing, Soviet domination of its eastern half, and American presence in its western half.</p>
+  <p>Germany's defeat in 1945 was total: unconditional surrender on May 8 (VE Day in the West) and the country's division into four occupation zones. The Nuremberg Trials (1945–1946) established the principle that individuals — including heads of state — could be held criminally responsible for crimes against peace, war crimes, and crimes against humanity. This was the legal foundation of the modern human rights order.</p>
+  <p>After 1945, Europe was no longer the center of world power. The United States and Soviet Union had become superpowers; Britain and France retained imperial pretensions but no longer the resources to sustain them; Germany was destroyed and divided; the European colonial empires, weakened by war, were entering terminal decline. The era of "European civilization" as the unchallenged center of world history was over.</p>
+</section>
+
+<!-- ═══ SECTION 24: COLD WAR ═══ -->
+<section id="s24" class="major-section" data-era="contemp">
+  <div class="section-eyebrow">
+    <span class="era-badge contemp">Contemporary</span>
+    <span class="section-num">Section XXIV</span>
+  </div>
+  <h2>Cold War Europe (1945–1991)</h2>
+  <p>Europe was divided by the Iron Curtain — Churchill's phrase from his Fulton speech of March 1946 — into two blocs aligned respectively with the United States and the Soviet Union. This division was not simply geopolitical: it represented two different answers to the fundamental questions of modernity: liberal democracy and markets on one side; communist party rule and planned economies on the other.</p>
+
+  <h3>Western Europe</h3>
+  <p>Western Europe, under the American security umbrella provided by NATO (founded 1949), rebuilt remarkably rapidly. The Marshall Plan (1948–1952) provided $13 billion in American aid for European reconstruction — and was deliberately designed to promote economic integration. West Germany, under Chancellor Konrad Adenauer and Economics Minister Ludwig Erhard, achieved the "economic miracle" (<em>Wirtschaftswunder</em>) — doubling real wages and industrial output in the 1950s while simultaneously building a stable democracy (the Basic Law of 1949 was specifically designed to prevent Weimar-style democratic collapse). France under De Gaulle built a Fifth Republic with a strong executive; Britain developed the National Health Service (1948) and a welfare state; Scandinavia became the model for social democracy.</p>
+
+  <h3>Eastern Europe: The Communist Bloc</h3>
+  <p>Eastern Europe was under Soviet domination: one-party states, planned economies, political police, restricted speech, and Soviet military presence. Any attempt to liberalize was crushed: the East German uprising (1953), the Hungarian Revolution (1956, crushed by Soviet tanks — 2,500 Hungarians killed), the Prague Spring (1968, Czechoslovakia — "socialism with a human face" terminated by Warsaw Pact invasion). Poland's Solidarity movement (1980–1981), led by the electrician Lech Wałęsa, was the most sustained challenge — martial law was imposed in December 1981 but could not suppress the underlying movement.</p>
+
+  <h3>The Berlin Wall and the Symbolic Division</h3>
+  <p>Berlin was the most visible symbol of Cold War division. The Berlin Blockade (1948–1949) — the Soviet attempt to force the Western powers out of West Berlin — was defeated by a year-long Western airlift supplying 2.5 million people. The Berlin Wall was built in August 1961 to stop the hemorrhage of East Germans fleeing west (over 3 million had fled between 1945 and 1961). Its fall on the night of November 9, 1989 — after the East German government, facing mass demonstrations, accidentally announced that border crossings were open — was the defining image of communism's collapse.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Event</th><th>Location</th><th>Significance</th></tr></thead>
+      <tbody>
+        <tr><td>1953 Uprising</td><td>East Germany</td><td>Workers protested Soviet-imposed production quotas; suppressed by Soviet tanks</td></tr>
+        <tr><td>1956 Revolution</td><td>Hungary</td><td>Most serious challenge to Soviet domination; Imre Nagy's reformist government crushed by Soviet invasion</td></tr>
+        <tr><td>1968 Prague Spring</td><td>Czechoslovakia</td><td>"Socialism with a human face" (Dubček); ended by Warsaw Pact invasion; Brezhnev Doctrine formalized</td></tr>
+        <tr><td>Solidarity (1980s)</td><td>Poland</td><td>First independent trade union in the Eastern Bloc; led by Wałęsa; Gorbachev eventually conceded free elections</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ SECTION 25: EUROPEAN INTEGRATION ═══ -->
+<section id="s25" class="major-section" data-era="contemp">
+  <div class="section-eyebrow">
+    <span class="era-badge contemp">Contemporary</span>
+    <span class="section-num">Section XXV</span>
+  </div>
+  <h2>European Integration</h2>
+  <p>European integration is one of the most remarkable political experiments in modern history: the voluntary pooling of sovereignty by historically warring nation-states to create a zone of peace, prosperity, and shared governance. The Franco-German reconciliation at its core — between two countries that had fought each other three times in seventy years (1870–71, 1914–18, 1939–45) — is perhaps the most successful act of political statesmanship in the 20th century.</p>
+
+  <h3>The Founding Vision</h3>
+  <p>The founding generation — Robert Schuman (France), Konrad Adenauer (Germany), Alcide De Gasperi (Italy), Jean Monnet (France) — was motivated by the conviction that another European war must be made structurally impossible, not merely controlled by diplomatic goodwill. Monnet's method was functionalist: integrate specific economic sectors so deeply that national economies become interdependent, and political integration will follow. The Schuman Declaration (May 9, 1950 — now "Europe Day") proposed placing French and German coal and steel production under a common authority, specifically so that the raw materials of war could no longer be mobilized unilaterally.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Year</th><th>Development</th></tr></thead>
+      <tbody>
+        <tr><td>European Coal and Steel Community</td><td>1951</td><td>Six founding members (France, Germany, Italy, Benelux); first supranational institution</td></tr>
+        <tr><td>Treaties of Rome</td><td>1957</td><td>European Economic Community (common market) and Euratom</td></tr>
+        <tr><td>Single European Act</td><td>1986</td><td>Completed internal market; qualified majority voting; direct elections to Parliament</td></tr>
+        <tr><td>Maastricht Treaty</td><td>1992</td><td>European Union created; single currency planned; political union deepened</td></tr>
+        <tr><td>Eurozone</td><td>1999/2002</td><td>Euro currency introduced; 20 member states currently use the euro</td></tr>
+        <tr><td>Eastern Enlargement</td><td>2004–2007</td><td>Ten new members from former Communist Eastern Europe; EU expanded to 27 members</td></tr>
+        <tr><td>Brexit</td><td>2016–2020</td><td>UK voted to leave EU (52% – 48%); departure completed January 31, 2020</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Today the EU has 27 member states with a combined population of approximately 450 million people. It is the world's largest trading bloc and single market. Its Court of Justice, European Parliament, Commission, and Council of Ministers constitute a novel political form — neither a federation nor an intergovernmental organization, but something genuinely new. Brexit (formalized January 31, 2020) was the first time a member state left the EU, and represents a genuine question about integration's limits.</p>
+</section>
+
+<!-- ═══ SECTION 26: DECOLONIZATION ═══ -->
+<section id="s26" class="major-section" data-era="contemp">
+  <div class="section-eyebrow">
+    <span class="era-badge contemp">Contemporary</span>
+    <span class="section-num">Section XXVI</span>
+  </div>
+  <h2>Decolonization and Post-Imperial Europe</h2>
+  <p>After World War II, European colonial empires — weakened by the war, challenged by nationalist movements, and undermined by the Cold War logic that the US and USSR both (for different reasons) opposed European colonialism — collapsed with remarkable speed. In 1939, European powers controlled roughly half the world's population. By 1975, the age of formal empire was essentially over.</p>
+  <p>Decolonization was not peaceful. France fought brutal wars in Indochina (1946–1954, ending in defeat at Điện Biên Phủ) and Algeria (1954–1962), where torture was systematically used and over 1 million people died. Britain suppressed the Mau Mau uprising in Kenya (1952–1960) with concentration camps and torture. Belgium's Congo decolonization was catastrophic, producing immediate civil war. Portugal, the last colonial power in Africa, did not decolonize until 1974–1975, when a revolution in Lisbon ended the Estado Novo dictatorship.</p>
+
+  <h3>The Postcolonial Transformation of Europe</h3>
+  <p>Decolonization transformed Europe itself through immigration. The labor shortages of postwar reconstruction were partly filled by migrants from former colonies: North Africans in France, South Asians and Caribbeans in Britain, Turks in Germany (under "guest worker" programs), Indonesians and Surinamese in the Netherlands, Angolans and Mozambicans in Portugal. These communities, and their descendants, are now European — French, British, German, Dutch — changing the demographics, culture, and political debates of their countries. Modern Europe cannot be understood without its postcolonial populations: approximately 6.7 million people of North African origin live in France; approximately 3 million British citizens are of South Asian heritage; approximately 4 million people of Turkish origin live in Germany.</p>
+</section>
+
+<!-- ═══ SECTION 27: 1960s AND SECULAR MODERNITY ═══ -->
+<section id="s27" class="major-section" data-era="contemp">
+  <div class="section-eyebrow">
+    <span class="era-badge contemp">Contemporary</span>
+    <span class="section-num">Section XXVII</span>
+  </div>
+  <h2>The 1960s Cultural Revolution and Secular Modernity</h2>
+  <p>The 1960s and 1970s transformed European society in ways that proved as consequential as any political revolution. The combination of postwar prosperity, expanded higher education, generational change, the pill (oral contraceptive introduced in Europe in the early 1960s), the civil rights movement, decolonization, and new mass media produced a cultural revolution that challenged the sexual, political, and religious order simultaneously.</p>
+  <p>In May 1968, student protests in Paris rapidly became a general strike involving 10 million workers — the largest general strike in French history — that nearly toppled De Gaulle's government. Similar upheavals shook Germany, Italy, and elsewhere. The demands were cultural and political simultaneously: sexual liberation, women's rights, antiwar activism, decolonization, critique of consumer capitalism, and more participatory democracy. Second-wave feminism transformed gender relations: the UN Decade for Women (1975–1985) was preceded by national movements that won abortion rights, equal pay legislation, divorce reform, and access to contraception across Western Europe through the 1970s–1980s.</p>
+  <p>Europe became increasingly secular in this period — particularly in Northern and Western Europe, where church attendance collapsed and religious observance became a minority practice. Eastern and Southern Europe retained different patterns. The sociologist Charles Taylor has argued that Western secular modernity is not simply the absence of religion but a new "social imaginary" — a new understanding of human flourishing organized around individual autonomy, expressive authenticity, and immanent flourishing rather than transcendent religious meaning.</p>
+</section>
+
+<!-- ═══ SECTION 28: FALL OF COMMUNISM ═══ -->
+<section id="s28" class="major-section" data-era="contemp">
+  <div class="section-eyebrow">
+    <span class="era-badge contemp">Contemporary</span>
+    <span class="section-num">Section XXVIII</span>
+  </div>
+  <h2>The Fall of Communism and the Reunification of Europe</h2>
+  <p>The collapse of communist regimes across Eastern Europe in 1989 was one of the most remarkable events of the 20th century — a cascade of peaceful revolutions (the "Velvet Revolutions") that brought down Soviet-imposed systems in a matter of months. The underlying causes were structural: economic stagnation, information technology making censorship increasingly porous, and Mikhail Gorbachev's reform program (<em>glasnost</em> and <em>perestroika</em>) which signaled that the USSR would not use military force to maintain the Eastern Bloc.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Country</th><th>Event</th><th>Character</th></tr></thead>
+      <tbody>
+        <tr><td>Poland</td><td>Solidarity elections (June 1989)</td><td>First free elections in communist bloc; Solidarity won 99/100 Senate seats</td></tr>
+        <tr><td>Hungary</td><td>Multi-party elections (March 1990)</td><td>Communist Party reformed; opened its border with Austria (August 1989), enabling East Germans to flee west</td></tr>
+        <tr><td>East Germany</td><td>Berlin Wall falls (November 9, 1989)</td><td>Mass demonstrations; government error announced open borders; wall physically dismantled; reunification October 1990</td></tr>
+        <tr><td>Czechoslovakia</td><td>Velvet Revolution (November 1989)</td><td>Massive peaceful demonstrations; playwright Václav Havel became President in December</td></tr>
+        <tr><td>Romania</td><td>Revolution (December 1989)</td><td>The only violent transition; Ceaușescu and wife executed on Christmas Day</td></tr>
+        <tr><td>Soviet Union</td><td>Dissolved (December 25, 1991)</td><td>15 successor states; Gorbachev resigned; Boris Yeltsin's Russia emerged</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The post-communist transition was uneven. Some societies — Poland, Czech Republic, Baltic states — achieved reasonably successful democratization and rapid economic growth, eventually joining NATO and the EU. Others experienced painful "shock therapy" economic reforms, oligarchic capture of state assets, endemic corruption, and nationalist revival. The former Yugoslavia dissolved through wars (1991–1999) that produced ethnic cleansing and genocide (the Srebrenica massacre, 1995, in which Bosnian Serb forces killed approximately 8,000 Bosniak Muslim men and boys under UN observers' eyes, was the worst mass murder in Europe since the Holocaust).</p>
+</section>
+
+<!-- ═══ SECTION 29: CONTEMPORARY EUROPE ═══ -->
+<section id="s29" class="major-section" data-era="contemp">
+  <div class="section-eyebrow">
+    <span class="era-badge contemp">Contemporary</span>
+    <span class="section-num">Section XXIX</span>
+  </div>
+  <h2>Contemporary Europe</h2>
+  <p>Contemporary Europe is not a single civilization moving in one direction. It is a contested space in which several powerful forces pull in opposing directions simultaneously. The illusion of a linear "end of history" that seemed plausible in the early 1990s was shattered by the 2001 terrorist attacks, the Iraq War, the 2008 financial crisis, the migration crisis of 2015 (over 1 million migrants arrived in Europe), the Brexit referendum, and Russia's invasion of Ukraine (first in 2014 with Crimea's annexation; then the full-scale invasion of February 24, 2022).</p>
+
+  <div class="tension-grid">
+    <div class="tension-cell force">Integration &amp; supranational governance</div>
+    <div class="tension-cell counter">National sovereignty &amp; populist backlash</div>
+    <div class="tension-cell force">Secular liberal modernity</div>
+    <div class="tension-cell counter">Religious revival &amp; identity religion</div>
+    <div class="tension-cell force">Liberal democracy &amp; rule of law</div>
+    <div class="tension-cell counter">Populism &amp; democratic backsliding (Hungary, Poland)</div>
+    <div class="tension-cell force">Welfare state &amp; social solidarity</div>
+    <div class="tension-cell counter">Market pressure, austerity &amp; inequality</div>
+    <div class="tension-cell force">Postcolonial multicultural society</div>
+    <div class="tension-cell counter">Ethnic nationalism &amp; anti-immigration politics</div>
+    <div class="tension-cell force">Human rights universalism</div>
+    <div class="tension-cell counter">Cultural particularism &amp; civilizational discourse</div>
+  </div>
+
+  <h3>The Russian Challenge</h3>
+  <p>Russia's full-scale invasion of Ukraine in February 2022 ended the post-Cold War "peace dividend" and forced Europe to confront security questions it had largely outsourced to the United States since 1945. Germany's <em>Zeitenwende</em> (historical turning point), announced by Chancellor Scholz three days after the invasion — committing €100 billion to defense modernization — marked a genuine rupture with postwar German strategic culture. The war has accelerated European energy diversification away from Russian gas, reinvigorated NATO, and renewed debate about European strategic autonomy.</p>
+
+  <h3>Climate and Digital Transformation</h3>
+  <p>Europe has positioned itself as the global leader on climate policy: the European Green Deal (2019) aims for carbon neutrality by 2050; the EU's Emissions Trading System is the world's largest carbon market. Digital transformation presents both opportunity and challenge: the EU's General Data Protection Regulation (GDPR, 2018) has become a global standard for data privacy; the Digital Markets Act (2022) is the most ambitious attempt yet to regulate Big Tech.</p>
+</section>
+
+<!-- ═══ SECTION 30: CIVILIZATIONAL THEMES ═══ -->
+<section id="s30" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXX</span>
+  </div>
+  <h2>Major Civilizational Themes in European History</h2>
+  <p>Seven recurring tensions define the deep structure of European civilization — patterns that repeat across centuries in different forms but with recognizable underlying logic.</p>
+
+  <h3>1. Unity vs. Fragmentation</h3>
+  <p>Europe was rarely politically unified for long. Its fragmentation created endemic war but also intense competition that drove innovation: military, commercial, intellectual. Unlike China — which repeatedly returned to imperial unity under a single bureaucracy — Europe maintained a competitive state system. The historian Eric Jones called this the "European miracle": the plurality of states in competition produced the conditions for economic and scientific development. The Holy Roman Empire tried and failed for eight centuries to unify the German-speaking world. Napoleon unified Europe by force for a decade. The EU has attempted peaceful voluntary integration for seven decades — and remains fragile.</p>
+
+  <h3>2. The Roman Dream</h3>
+  <p>Europe repeatedly tried to recover Rome as a symbol of order, law, and civilization: Justinian's reconquest, Charlemagne's coronation, the Holy Roman Empire (Voltaire's quip: "neither holy, nor Roman, nor an empire"), Napoleon's self-styling as a Roman emperor, Mussolini's theatrical invocations of Roman grandeur, and — in a quite different register — the EU's attempt to create a peaceful continental order through law and institutions.</p>
+
+  <h3>3. Christianity as Civilizational Matrix</h3>
+  <p>Christianity shaped European art, music, moral imagination, marriage, education, charity, law, and concepts of personhood across fifteen centuries. Even secular Europe is deeply post-Christian: its moral vocabulary (human dignity, rights, compassion, guilt, individual conscience, the equal worth of all persons) derives largely from Christian sources, even when its carriers have abandoned Christian metaphysics. The philosopher Jürgen Habermas — himself secular — has acknowledged that Enlightenment universalism is "a direct heir to the Judaic ethic of justice and the Christian ethic of love."</p>
+
+  <h3>4. City and Countryside</h3>
+  <p>European civilization was built through the tension between rural aristocracy and urban merchant, land and money, manor and market, castle and city. Cities became engines of freedom, commerce, learning, and rebellion — the German phrase <em>Stadtluft macht frei</em> (city air makes you free) reflected the legal reality that serfs who escaped to a city for a year and a day became free. The university, the printing press, the stock exchange, the newspaper, parliamentary politics — all were urban inventions.</p>
+
+  <h3>5. Faith and Reason</h3>
+  <p>European intellectual history is structured by the recurring attempt to define the relationship between revelation, philosophy, science, and secular reason. Each generation reformulates the problem: scholastic synthesis, Renaissance humanism, Reformation scripturalism, Scientific Revolution, Enlightenment critique, Romantic reaction, secular modernity, and now — in a new form — the confrontation between scientistic naturalism and various religious and spiritual revivals. The tension is not resolved; it is generative.</p>
+
+  <h3>6. Liberty and Authority</h3>
+  <p>European political history is a long argument about the proper limits of power: kings versus nobles, popes versus emperors, parliaments versus monarchs, citizens versus aristocrats, workers versus capitalists, individuals versus states. Modern democracy, constitutionalism, human rights law, and the welfare state all emerged from these arguments — not as final resolutions but as temporary and contested settlements.</p>
+
+  <h3>7. Violence and Human Rights</h3>
+  <p>Europe produced both the greatest ideals of human dignity and some of history's worst atrocities — often simultaneously, often by the same societies. Colonialism and Enlightenment human rights emerged together. The Holocaust was carried out by a society that had produced Goethe, Beethoven, and Kant. The welfare state and comprehensive human rights law emerged from the specific experience of fascism and total war. This is not a paradox to be explained away. It is the central moral reality of European civilization.</p>
+</section>
+
+<!-- ═══ SECTION 31: MAIN PERIODS TABLE ═══ -->
+<section id="s31" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXXI</span>
+  </div>
+  <h2>The Main Periods of European History</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Period</th><th>Dates</th><th>Main Features</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Ancient Greece</td><td>c. 800–323 BCE</td><td>City-states, philosophy, democracy, classical art, Peloponnesian War</td></tr>
+        <tr><td>Hellenistic Age</td><td>323–31 BCE</td><td>Greek culture spreads from Egypt to Central Asia; Library of Alexandria</td></tr>
+        <tr><td>Roman Republic</td><td>509–27 BCE</td><td>Republican institutions, Senate, expansion, civil wars, Caesar</td></tr>
+        <tr><td>Roman Empire</td><td>27 BCE–476 CE (West) / 1453 CE (East)</td><td>Pax Romana, law, roads, Christianity; Byzantine continuity in East</td></tr>
+        <tr><td>Early Middle Ages</td><td>c. 500–1000</td><td>Germanic kingdoms, Church preservation, Charlemagne, Viking raids</td></tr>
+        <tr><td>High Middle Ages</td><td>c. 1000–1300</td><td>Agricultural growth, Crusades, universities, towns, Scholasticism</td></tr>
+        <tr><td>Late Middle Ages</td><td>c. 1300–1500</td><td>Black Death, Hundred Years' War, Church schism, printing press</td></tr>
+        <tr><td>Renaissance</td><td>c. 1350–1600</td><td>Humanism, classical revival, perspective, printing, exploration begins</td></tr>
+        <tr><td>Reformation</td><td>1517 onward</td><td>Protestant-Catholic division, religious wars, Bible vernaculars</td></tr>
+        <tr><td>Early Modern Europe</td><td>c. 1500–1750</td><td>State-building, exploration, absolutism, colonialism, mercantilism</td></tr>
+        <tr><td>Scientific Revolution</td><td>c. 1543–1700</td><td>Copernicus to Newton; new cosmology, physics, anatomy, chemistry</td></tr>
+        <tr><td>Enlightenment</td><td>c. 1650–1800</td><td>Reason, rights, reform, public debate, deism, encyclopedism</td></tr>
+        <tr><td>Revolutionary Era</td><td>c. 1770–1815</td><td>American Revolution, French Revolution, Napoleon</td></tr>
+        <tr><td>Industrial Age</td><td>c. 1750–1900</td><td>Factories, capitalism, railways, urbanization, class politics</td></tr>
+        <tr><td>Age of Nationalism</td><td>c. 1800–1914</td><td>Nation-states, unifications, imperialism, scramble for Africa</td></tr>
+        <tr><td>World War Era</td><td>1914–1945</td><td>Total war, fascism, communism, Holocaust, European collapse</td></tr>
+        <tr><td>Cold War Europe</td><td>1945–1991</td><td>East-West division, Marshall Plan, NATO, Warsaw Pact, détente</td></tr>
+        <tr><td>European Integration</td><td>1950s–present</td><td>EEC → EU → Eurozone; postwar liberal order</td></tr>
+        <tr><td>Contemporary Europe</td><td>1991–present</td><td>Globalization, migration, populism, Brexit, Russian aggression</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ SECTION 32: KEY INSTITUTIONS ═══ -->
+<section id="s32" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXXII</span>
+  </div>
+  <h2>Key Institutions of European Civilization</h2>
+  <p>European civilization is best understood not through abstract ideas alone but through the institutions that embodied, transmitted, and transformed those ideas across time.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Institution</th><th>Origin / Peak</th><th>Core Function</th></tr></thead>
+      <tbody>
+        <tr><td>The Church</td><td>4th century CE onward</td><td>Preserved learning, shaped morality, organized worship, legitimized authority, educated elites, structured time</td></tr>
+        <tr><td>The Monastery</td><td>5th–12th century peak</td><td>Prayer, discipline, manuscript copying, agriculture, hospitality, local order</td></tr>
+        <tr><td>The University</td><td>11th century onward</td><td>Institutionalized inquiry, debate, credentialing, and intellectual transmission — Europe's most distinctive invention</td></tr>
+        <tr><td>The City</td><td>Ancient; revived 10th c.</td><td>Commerce, law, freedom, guilds, political experimentation, printing, newspapers</td></tr>
+        <tr><td>The Bureaucratic State</td><td>16th century onward</td><td>Taxation, army, law, records, borders, passports, public administration</td></tr>
+        <tr><td>The Market / Corporation</td><td>Medieval Italian; expanded 17th c.</td><td>European capitalism: trade, banking, colonialism, finance, industry, legal infrastructure</td></tr>
+        <tr><td>The Parliament</td><td>Medieval; consolidated 17th–18th c.</td><td>Representation, taxation consent, lawmaking, constitutional limits on power</td></tr>
+        <tr><td>The Nation</td><td>18th–19th century</td><td>Modern source of identity, loyalty, sacrifice, and political legitimacy</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ SECTION 33: CONTRIBUTIONS ═══ -->
+<section id="s33" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXXIII</span>
+  </div>
+  <h2>Major European Civilizational Contributions</h2>
+  <div class="contrib-cols">
+    <div class="contrib-col">
+      <h4>Political</h4>
+      <ul>
+        <li>Democracy &amp; republican institutions</li>
+        <li>Constitutional monarchy</li>
+        <li>Parliamentary government</li>
+        <li>Rule of law &amp; judicial independence</li>
+        <li>Human rights language (1215 Magna Carta → 1948 UDHR)</li>
+        <li>International law (Grotius, Vattel)</li>
+        <li>Balance-of-power diplomacy</li>
+        <li>Modern bureaucratic state</li>
+      </ul>
+    </div>
+    <div class="contrib-col">
+      <h4>Intellectual</h4>
+      <ul>
+        <li>Philosophy (Greek to German Idealism)</li>
+        <li>Logic and formal mathematics</li>
+        <li>Scholastic method → modern academic discipline</li>
+        <li>Humanism and historical criticism</li>
+        <li>Scientific method</li>
+        <li>Social theory (Marx, Weber, Durkheim)</li>
+        <li>Modern research university</li>
+        <li>Enlightenment political philosophy</li>
+      </ul>
+    </div>
+    <div class="contrib-col">
+      <h4>Scientific &amp; Technical</h4>
+      <ul>
+        <li>Modern physics, astronomy, chemistry</li>
+        <li>Germ theory of disease (Pasteur, Koch)</li>
+        <li>Industrial machinery and engineering</li>
+        <li>Printing press (Gutenberg, 1450)</li>
+        <li>Steam engine → railways</li>
+        <li>Electricity (Faraday, Maxwell)</li>
+        <li>Vaccination (Jenner)</li>
+        <li>Modern computing foundations (Turing, Babbage)</li>
+      </ul>
+    </div>
+    <div class="contrib-col">
+      <h4>Cultural</h4>
+      <ul>
+        <li>Classical art and sculpture</li>
+        <li>Gothic cathedral architecture</li>
+        <li>Renaissance painting</li>
+        <li>Baroque, Classical, Romantic music</li>
+        <li>Opera and symphony</li>
+        <li>The novel as literary form</li>
+        <li>Modern theatre and cinema</li>
+        <li>Romantic poetry</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 34: DARK LEGACIES ═══ -->
+<section id="s34" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXXIV</span>
+  </div>
+  <h2>Dark Legacies of European Civilization</h2>
+  <p>A serious guide to European civilization must include its destructive legacies honestly — not as a counterweight to be balanced against achievements, but as central facts that belong to the same civilizational story. Europe's capacity for organized violence, ideological fanaticism, and systematic dehumanization was as great as its capacity for art, philosophy, and political innovation. Often, the same societies produced both simultaneously.</p>
+
+  <div class="dark-legacy-grid">
+    <div class="dark-legacy-item">Religious persecution &amp; inquisitions</div>
+    <div class="dark-legacy-item">Crusading violence</div>
+    <div class="dark-legacy-item">Witch hunts (c. 40,000–60,000 executed, 1450–1750)</div>
+    <div class="dark-legacy-item">Medieval and early modern antisemitism</div>
+    <div class="dark-legacy-item">Atlantic slave trade (12.5 million enslaved)</div>
+    <div class="dark-legacy-item">Colonial conquest and occupation</div>
+    <div class="dark-legacy-item">Indigenous genocide (Americas)</div>
+    <div class="dark-legacy-item">Scientific racism (19th c.)</div>
+    <div class="dark-legacy-item">Imperial extraction and famines</div>
+    <div class="dark-legacy-item">World War I (17–20 million dead)</div>
+    <div class="dark-legacy-item">World War II (70–85 million dead)</div>
+    <div class="dark-legacy-item">The Holocaust (6 million Jews; 11+ million total)</div>
+    <div class="dark-legacy-item">Stalinist terror (Gulag; forced famines)</div>
+    <div class="dark-legacy-item">Ethnic cleansing (20th c.)</div>
+    <div class="dark-legacy-item">Srebrenica genocide (1995)</div>
+    <div class="dark-legacy-item">Congo Free State (est. 10 million dead)</div>
+  </div>
+
+  <div class="pull-quote">
+    European civilization is not simply "civilization versus barbarism." It is a history of both immense cultural achievement and immense human suffering — often produced by the same institutions, ideologies, and peoples.
+  </div>
+</section>
+
+<!-- ═══ SECTION 35: THE LAYERED MODEL ═══ -->
+<section id="s35" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXXV</span>
+  </div>
+  <h2>The Layered Model of European Civilization</h2>
+  <p>European civilization is best understood not as a single progressive narrative but as a <em>palimpsest</em> — a manuscript written over repeatedly, with each age writing over the previous one but never fully erasing it. The layers interact, conflict, and combine in ways that produce the characteristic complexity of European culture. No single layer defines Europe; all twelve are simultaneously present in any contemporary European society.</p>
+
+  <div class="layer-stack">
+    <div class="layer-row"><div class="layer-num">1</div><div class="layer-content"><div class="layer-title">Greek Mind</div><div class="layer-desc">Philosophy, reason, beauty, civic politics, debate, logic, mathematics, drama. Foundation of Western intellectual culture.</div></div></div>
+    <div class="layer-row"><div class="layer-num">2</div><div class="layer-content"><div class="layer-title">Roman Order</div><div class="layer-desc">Law, empire, citizenship, administration, roads, urban planning, Latin language. Template for all subsequent European state-building.</div></div></div>
+    <div class="layer-row"><div class="layer-num">3</div><div class="layer-content"><div class="layer-title">Christian Soul</div><div class="layer-desc">Theology, salvation history, Church institution, moral universe, sacred time, concepts of personhood and dignity, charitable obligation.</div></div></div>
+    <div class="layer-row"><div class="layer-num">4</div><div class="layer-content"><div class="layer-title">Germanic-Feudal Body</div><div class="layer-desc">Warrior aristocracy, land-loyalty bonds, local power, chivalric culture, honor codes, the forest as symbolic space.</div></div></div>
+    <div class="layer-row"><div class="layer-num">5</div><div class="layer-content"><div class="layer-title">Medieval Institutional Web</div><div class="layer-desc">Monasteries, universities, guilds, towns, canon law, kingdoms, Parliament. The institutional infrastructure of European civilization.</div></div></div>
+    <div class="layer-row"><div class="layer-num">6</div><div class="layer-content"><div class="layer-title">Islamic Intellectual Bridge</div><div class="layer-desc">Translation movement, algebra, medicine, Aristotle's complete works, Al-Andalus — the transmission of Greek learning through Arabic scholarship that made scholasticism possible.</div></div></div>
+    <div class="layer-row"><div class="layer-num">7</div><div class="layer-content"><div class="layer-title">Renaissance Humanism</div><div class="layer-desc">Classical recovery, art, human dignity, individual excellence, civic virtue, historical consciousness, patronage culture.</div></div></div>
+    <div class="layer-row"><div class="layer-num">8</div><div class="layer-content"><div class="layer-title">Reformation Conscience</div><div class="layer-desc">Scripture, personal faith, confessional division, reform impulse, Protestant literacy culture, individual moral responsibility.</div></div></div>
+    <div class="layer-row"><div class="layer-num">9</div><div class="layer-content"><div class="layer-title">Scientific Method</div><div class="layer-desc">Nature as law-governed and measurable; experimental validation; mathematical description; skepticism toward inherited authority.</div></div></div>
+    <div class="layer-row"><div class="layer-num">10</div><div class="layer-content"><div class="layer-title">Enlightenment Critique</div><div class="layer-desc">Reason, natural rights, progress, secular reform, tolerance, public debate. The moral language of modern liberalism.</div></div></div>
+    <div class="layer-row"><div class="layer-num">11</div><div class="layer-content"><div class="layer-title">Industrial-Capitalist Machine</div><div class="layer-desc">Factories, markets, class society, technology, empire, global trade. Both the material foundation of modern prosperity and the source of exploitation.</div></div></div>
+    <div class="layer-row"><div class="layer-num">12</div><div class="layer-content"><div class="layer-title">National-Popular Identity</div><div class="layer-desc">Nation, citizenship, mass politics, public education, vernacular culture, democratic legitimacy — and nationalist violence.</div></div></div>
+    <div class="layer-row"><div class="layer-num">13</div><div class="layer-content"><div class="layer-title">Postwar Liberal Order</div><div class="layer-desc">Human rights law, welfare state, European integration, constitutional democracy, pluralism, Holocaust memory as civilizational foundation.</div></div></div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 36: LEARNING PATH ═══ -->
+<section id="s36" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXXVI</span>
+  </div>
+  <h2>Recommended Learning Path</h2>
+  <p>European history is vast. A structured learning path prevents both overwhelm and superficiality. Each stage builds on the previous and introduces a guiding question that keeps study purposeful.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Topics</th><th>Guiding Question</th><th>Recommended Entry Points</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Stage 1: Foundations</strong></td><td>Ancient Greece, Rome, Christianity, Germanic migrations, Byzantium</td><td>What ingredients formed Europe?</td><td>Thucydides (excerpts); Augustine's <em>Confessions</em>; Peter Heather, <em>The Fall of the Roman Empire</em></td></tr>
+        <tr><td><strong>Stage 2: Medieval Formation</strong></td><td>Feudalism, Church, monasticism, Crusades, towns, universities, scholasticism</td><td>How did Europe become Christendom?</td><td>Barbara Tuchman, <em>A Distant Mirror</em>; Umberto Eco, <em>The Name of the Rose</em> (fiction with substance)</td></tr>
+        <tr><td><strong>Stage 3: Early Modern Transformation</strong></td><td>Renaissance, Reformation, state-building, exploration, Scientific Revolution, Enlightenment</td><td>How did Christendom become modern Europe?</td><td>Diarmaid MacCulloch, <em>The Reformation</em>; Jonathan Israel, <em>Radical Enlightenment</em></td></tr>
+        <tr><td><strong>Stage 4: Revolutionary and Industrial</strong></td><td>French Revolution, Napoleon, Industrial Revolution, ideologies, nationalism</td><td>How did modern political and economic life emerge?</td><td>Simon Schama, <em>Citizens</em>; Eric Hobsbawm, <em>The Age of Revolution</em></td></tr>
+        <tr><td><strong>Stage 5: Europe and the World</strong></td><td>Imperialism, colonialism, slavery, world wars, decolonization</td><td>How did Europe dominate the world, and what were the consequences?</td><td>Frantz Fanon, <em>The Wretched of the Earth</em>; Adam Hochschild, <em>King Leopold's Ghost</em></td></tr>
+        <tr><td><strong>Stage 6: Contemporary Europe</strong></td><td>Cold War, European Union, immigration, secularization, populism, Russia</td><td>What is Europe after empire, war, and Christendom?</td><td>Tony Judt, <em>Postwar</em>; Ivan Krastev, <em>Is It Tomorrow Yet?</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ SECTION 37: ESSENTIAL QUESTIONS ═══ -->
+<section id="s37" class="major-section" data-era="thematic">
+  <div class="section-eyebrow">
+    <span class="era-badge thematic">Thematic</span>
+    <span class="section-num">Section XXXVII</span>
+  </div>
+  <h2>Essential Questions for Reflection</h2>
+  <p>These questions are not meant to have easy answers. They are designed to generate sustained inquiry — the kind that makes you think harder the more you study. Engaging with them is more valuable than memorizing dates.</p>
+
+  <ol class="questions-list">
+    <li><span>Is Europe best understood as Greek, Roman, Christian, modern, or post-Christian? Or is it precisely the tension among these self-understandings that defines it?</span></li>
+    <li><span>Why did Europe become and remain politically fragmented while China repeatedly returned to imperial unity? What were the consequences of each pattern?</span></li>
+    <li><span>Did Europe's political fragmentation encourage innovation and competition, or did it mainly produce endemic war? Can both be true?</span></li>
+    <li><span>How did Christianity shape European ideas of personhood, dignity, guilt, redemption, and moral responsibility — including in societies that have abandoned explicit Christian belief?</span></li>
+    <li><span>Why did modern experimental science emerge so powerfully in Europe in the 16th–17th centuries, rather than in China, the Islamic world, or India — all of which had more sophisticated science in earlier centuries?</span></li>
+    <li><span>How did capitalism and colonialism develop together? Can European economic development be understood separately from colonial extraction and slave labor?</span></li>
+    <li><span>Can Enlightenment universalism — the claim that all humans share reason and dignity — be separated from the European imperialism that simultaneously denied it to colonized peoples?</span></li>
+    <li><span>Why did nationalism become so powerful that it could motivate men to die in millions, when it is essentially a political fiction (the "imagined community" — Benedict Anderson's phrase)?</span></li>
+    <li><span>How did Europe produce both the modern human rights tradition and total war, the Holocaust, and colonial genocide — not in different centuries, but often by the same societies?</span></li>
+    <li><span>Is the European Union a new and durable civilizational form, or a fragile postwar arrangement that nationalism and geopolitics will eventually dissolve?</span></li>
+    <li><span>What remains of Europe's Christian inheritance in secular societies? Is "post-Christian" a better description than "secular" — and does the difference matter?</span></li>
+    <li><span>Can Europe build shared political identity without empire, established religion, or ethnic nationalism? What would "European identity" mean for a Muslim woman in France, a Polish Catholic farmer, and a Swedish secular atheist simultaneously?</span></li>
+  </ol>
+</section>
+
+</article>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">&copy; 2026 Yasir Bilgin Editorial. All rights reserved.</span>
+</footer>
+
+<script>
+// ─── PROGRESS BAR ───
+const bar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  if (docH > 0) bar.style.width = (window.scrollY / docH * 100) + '%';
+}, { passive: true });
+
+// ─── SEARCH + FILTER ───
+const searchInput = document.getElementById('searchInput');
+const sectionCount = document.getElementById('sectionCount');
+const noResults = document.getElementById('noResults');
+const allSections = Array.from(document.querySelectorAll('.major-section'));
+let activeEra = 'all';
+let searchTerm = '';
+
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function clearHighlights(el) {
+  el.querySelectorAll('mark').forEach(m => {
+    const parent = m.parentNode;
+    parent.replaceChild(document.createTextNode(m.textContent), m);
+    parent.normalize();
+  });
+}
+
+function highlightText(el, term) {
+  if (!term) return;
+  const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+  const nodes = [];
+  let node;
+  while ((node = walker.nextNode())) {
+    if (node.nodeValue.trim() && !['SCRIPT','STYLE'].includes(node.parentNode.tagName)) {
+      nodes.push(node);
+    }
+  }
+  nodes.forEach(n => {
+    if (regex.test(n.nodeValue)) {
+      const frag = document.createDocumentFragment();
+      n.nodeValue.split(regex).forEach((part, i) => {
+        if (i % 2 === 1) {
+          const mark = document.createElement('mark');
+          mark.textContent = part;
+          frag.appendChild(mark);
+        } else {
+          frag.appendChild(document.createTextNode(part));
+        }
+      });
+      n.parentNode.replaceChild(frag, n);
+    }
+  });
+}
+
+function applyFilters() {
+  let visible = 0;
+  allSections.forEach(sec => {
+    clearHighlights(sec);
+    const eraMatch = activeEra === 'all' || sec.dataset.era === activeEra;
+    const text = sec.textContent.toLowerCase();
+    const termMatch = !searchTerm || text.includes(searchTerm.toLowerCase());
+    if (eraMatch && termMatch) {
+      sec.style.display = '';
+      if (searchTerm) highlightText(sec, searchTerm);
+      visible++;
+    } else {
+      sec.style.display = 'none';
+    }
+  });
+  sectionCount.textContent = visible + ' of ' + allSections.length + ' sections';
+  noResults.style.display = visible === 0 ? 'block' : 'none';
+}
+
+// Era pill clicks
+document.querySelectorAll('.era-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.era-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    activeEra = pill.dataset.era;
+    applyFilters();
+  });
+});
+
+// Search input
+searchInput.addEventListener('input', e => {
+  searchTerm = e.target.value.trim();
+  applyFilters();
+});
+
+// Init
+applyFilters();
+</script>
+</body>
+</html>
