@@ -104,6 +104,15 @@
     ]
   },
   {
+    "url": "https://yasirbilgin.com/atlas/global-history/european-history-civilization.html",
+    "section": "Atlas",
+    "subsec": "Global History",
+    "title": "European History &amp; Civilization",
+    "desc": "A comprehensive guide to European history and civilization — from Ancient Greece and Rome through medieval Christendom, Renaissance, Reformation, revolutions, world wars, and the European Union.",
+    "date": "",
+    "tags": []
+  },
+  {
     "url": "https://yasirbilgin.com/atlas/global-history/global-history.html",
     "section": "Atlas",
     "subsec": "Global History",
@@ -127,6 +136,19 @@
       "history",
       "patterns",
       "civilizational cycles"
+    ]
+  },
+  {
+    "url": "https://yasirbilgin.com/atlas/global-history/islamic-history-civilization.html",
+    "section": "Atlas",
+    "subsec": "Global History",
+    "title": "Islamic History &amp; Civilization",
+    "desc": "A comprehensive guide to Islamic history and civilization — from the Qur",
+    "date": "2026-06-11",
+    "tags": [
+      "Islamic civilization",
+      "Islamic history",
+      "Muslim world"
     ]
   },
   {
