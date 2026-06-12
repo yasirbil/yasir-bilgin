@@ -489,6 +489,59 @@ mark {
   html { scroll-behavior: auto !important; }
 }
 
+
+/* ── Category colour palette ─────────────────────────────── */
+:root {
+  --cat-cognitive-bg:   rgba(59,130,246,0.10); --cat-cognitive-t:  #3b82f6;
+  --cat-emotional-bg:   rgba(239,68,68,0.10);  --cat-emotional-t:  #ef4444;
+  --cat-egoic-bg:       rgba(139,92,246,0.10); --cat-egoic-t:      #8b5cf6;
+  --cat-carnal-bg:      rgba(245,158,11,0.10); --cat-carnal-t:     #d97706;
+  --cat-trauma-bg:      rgba(20,184,166,0.10); --cat-trauma-t:     #0d9488;
+  --cat-moral-bg:       rgba(34,197,94,0.10);  --cat-moral-t:      #16a34a;
+  --cat-social-bg:      rgba(99,102,241,0.10); --cat-social-t:     #6366f1;
+  --cat-spiritual-bg:   rgba(234,179,8,0.10);  --cat-spiritual-t:  #ca8a04;
+  --cat-bodily-bg:      rgba(249,115,22,0.10); --cat-bodily-t:     #ea580c;
+  --cat-time-bg:        rgba(148,163,184,0.10);--cat-time-t:       #64748b;
+  --cat-epistemic-bg:   rgba(45,212,191,0.10); --cat-epistemic-t:  #0891b2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cat-cognitive-bg:  rgba(59,130,246,0.18);  --cat-cognitive-t:  #60a5fa;
+    --cat-emotional-bg:  rgba(239,68,68,0.18);   --cat-emotional-t:  #f87171;
+    --cat-egoic-bg:      rgba(139,92,246,0.18);  --cat-egoic-t:      #a78bfa;
+    --cat-carnal-bg:     rgba(245,158,11,0.18);  --cat-carnal-t:     #fbbf24;
+    --cat-trauma-bg:     rgba(20,184,166,0.18);  --cat-trauma-t:     #2dd4bf;
+    --cat-moral-bg:      rgba(34,197,94,0.18);   --cat-moral-t:      #4ade80;
+    --cat-social-bg:     rgba(99,102,241,0.18);  --cat-social-t:     #818cf8;
+    --cat-spiritual-bg:  rgba(234,179,8,0.18);   --cat-spiritual-t:  #fcd34d;
+    --cat-bodily-bg:     rgba(249,115,22,0.18);  --cat-bodily-t:     #fb923c;
+    --cat-time-bg:       rgba(148,163,184,0.16); --cat-time-t:       #94a3b8;
+    --cat-epistemic-bg:  rgba(45,212,191,0.18);  --cat-epistemic-t:  #22d3ee;
+  }
+}
+.mini-card[data-cat="Cognitive"],      .veil-card[data-cat="Cognitive"]      { background:var(--cat-cognitive-bg); border-color:rgba(59,130,246,0.25); }
+.mini-card[data-cat="Emotional"],      .veil-card[data-cat="Emotional"]      { background:var(--cat-emotional-bg); border-color:rgba(239,68,68,0.25); }
+.mini-card[data-cat="Egoic"],          .veil-card[data-cat="Egoic"]          { background:var(--cat-egoic-bg);     border-color:rgba(139,92,246,0.25); }
+.mini-card[data-cat="Carnal / Nafs"],  .veil-card[data-cat="Carnal / Nafs"]  { background:var(--cat-carnal-bg);    border-color:rgba(245,158,11,0.25); }
+.mini-card[data-cat="Trauma-Based"],   .veil-card[data-cat="Trauma-Based"]   { background:var(--cat-trauma-bg);    border-color:rgba(20,184,166,0.25); }
+.mini-card[data-cat="Moral / Akhlaq"], .veil-card[data-cat="Moral / Akhlaq"] { background:var(--cat-moral-bg);     border-color:rgba(34,197,94,0.25); }
+.mini-card[data-cat="Social & Cultural"],.veil-card[data-cat="Social & Cultural"]{ background:var(--cat-social-bg); border-color:rgba(99,102,241,0.25); }
+.mini-card[data-cat="Spiritual"],      .veil-card[data-cat="Spiritual"]      { background:var(--cat-spiritual-bg); border-color:rgba(234,179,8,0.25); }
+.mini-card[data-cat="Bodily / Somatic"],.veil-card[data-cat="Bodily / Somatic"]{ background:var(--cat-bodily-bg);  border-color:rgba(249,115,22,0.25); }
+.mini-card[data-cat="Time-Based"],     .veil-card[data-cat="Time-Based"]     { background:var(--cat-time-bg);      border-color:rgba(148,163,184,0.25); }
+.mini-card[data-cat="Epistemic"],      .veil-card[data-cat="Epistemic"]      { background:var(--cat-epistemic-bg); border-color:rgba(45,212,191,0.25); }
+.mini-card[data-cat] b { color: inherit; }
+.badge[data-cat="Cognitive"]     { color:var(--cat-cognitive-t); background:var(--cat-cognitive-bg); border-color:rgba(59,130,246,0.3); }
+.badge[data-cat="Emotional"]     { color:var(--cat-emotional-t); background:var(--cat-emotional-bg); border-color:rgba(239,68,68,0.3); }
+.badge[data-cat="Egoic"]         { color:var(--cat-egoic-t);     background:var(--cat-egoic-bg);     border-color:rgba(139,92,246,0.3); }
+.badge[data-cat="Carnal / Nafs"] { color:var(--cat-carnal-t);    background:var(--cat-carnal-bg);    border-color:rgba(245,158,11,0.3); }
+.badge[data-cat="Trauma-Based"]  { color:var(--cat-trauma-t);    background:var(--cat-trauma-bg);    border-color:rgba(20,184,166,0.3); }
+.badge[data-cat="Moral / Akhlaq"]{ color:var(--cat-moral-t);     background:var(--cat-moral-bg);     border-color:rgba(34,197,94,0.3); }
+.badge[data-cat="Social & Cultural"]{ color:var(--cat-social-t); background:var(--cat-social-bg);    border-color:rgba(99,102,241,0.3); }
+.badge[data-cat="Spiritual"]     { color:var(--cat-spiritual-t); background:var(--cat-spiritual-bg); border-color:rgba(234,179,8,0.3); }
+.badge[data-cat="Bodily / Somatic"]{ color:var(--cat-bodily-t);  background:var(--cat-bodily-bg);    border-color:rgba(249,115,22,0.3); }
+.badge[data-cat="Time-Based"]    { color:var(--cat-time-t);      background:var(--cat-time-bg);      border-color:rgba(148,163,184,0.3); }
+.badge[data-cat="Epistemic"]     { color:var(--cat-epistemic-t); background:var(--cat-epistemic-bg); border-color:rgba(45,212,191,0.3); }
   </style>
 </head>
 <body>
@@ -568,17 +621,17 @@ mark {
         <h2>A taxonomy of <em>veils</em></h2>
         <p>The framework below organizes 96 veils into eleven families. The goal is not self-condemnation, but discernment: “What is filtering my seeing, hearing, choosing, and acting right now?”</p>
         <div class="pill-grid">
-          <div class="mini-card"><b>Cognitive</b><br>Thought distortions and narrow frames.</div>
-          <div class="mini-card"><b>Emotional</b><br>Feelings that dominate perception.</div>
-          <div class="mini-card"><b>Egoic</b><br>Defended identities and image protection.</div>
-          <div class="mini-card"><b>Carnal / Nafs</b><br>Impulse, appetite, comfort, and mood tyranny.</div>
-          <div class="mini-card"><b>Trauma-Based</b><br>Protective patterns formed through pain.</div>
-          <div class="mini-card"><b>Moral / Akhlaq</b><br>Character distortions that darken perception.</div>
-          <div class="mini-card"><b>Social & Cultural</b><br>Collective pressures that redirect attention.</div>
-          <div class="mini-card"><b>Spiritual</b><br>Distortions inside worship, service, and knowledge.</div>
-          <div class="mini-card"><b>Bodily / Somatic</b><br>Exhaustion, rhythm, and nervous-system signals.</div>
-          <div class="mini-card"><b>Time-Based</b><br>Past and future stealing the present assignment.</div>
-          <div class="mini-card"><b>Epistemic</b><br>Unbalanced ways of deciding what is true.</div>
+          <div class="mini-card" data-cat="Cognitive"><b>Cognitive</b><br>Thought distortions and narrow frames.</div>
+          <div class="mini-card" data-cat="Emotional"><b>Emotional</b><br>Feelings that dominate perception.</div>
+          <div class="mini-card" data-cat="Egoic"><b>Egoic</b><br>Defended identities and image protection.</div>
+          <div class="mini-card" data-cat="Carnal / Nafs"><b>Carnal / Nafs</b><br>Impulse, appetite, comfort, and mood tyranny.</div>
+          <div class="mini-card" data-cat="Trauma-Based"><b>Trauma-Based</b><br>Protective patterns formed through pain.</div>
+          <div class="mini-card" data-cat="Moral / Akhlaq"><b>Moral / Akhlaq</b><br>Character distortions that darken perception.</div>
+          <div class="mini-card" data-cat="Social & Cultural"><b>Social & Cultural</b><br>Collective pressures that redirect attention.</div>
+          <div class="mini-card" data-cat="Spiritual"><b>Spiritual</b><br>Distortions inside worship, service, and knowledge.</div>
+          <div class="mini-card" data-cat="Bodily / Somatic"><b>Bodily / Somatic</b><br>Exhaustion, rhythm, and nervous-system signals.</div>
+          <div class="mini-card" data-cat="Time-Based"><b>Time-Based</b><br>Past and future stealing the present assignment.</div>
+          <div class="mini-card" data-cat="Epistemic"><b>Epistemic</b><br>Unbalanced ways of deciding what is true.</div>
         </div>
       </section>
 
@@ -829,13 +882,13 @@ mark {
       const q = input.value.trim();
       const visible = veilData.filter(card => matches(card, q));
       grid.innerHTML = visible.map(card => `
-        <article class="veil-card">
+        <article class="veil-card" data-cat="${escapeHTML(card.category)}">
           <div class="topline">
             <div>
               <div class="num">Veil ${card.id}</div>
               <h3>${highlight(card.name, q)}</h3>
             </div>
-            <span class="badge">${escapeHTML(card.category)}</span>
+            <span class="badge" data-cat="${escapeHTML(card.category)}">${escapeHTML(card.category)}</span>
           </div>
           <div class="card-summary">${highlight(card.summary, q)}</div>
           ${card.example ? `<div class="card-example"><b>Example:</b> ${highlight(card.example, q)}</div>` : ''}
