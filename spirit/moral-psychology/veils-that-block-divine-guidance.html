@@ -320,55 +320,73 @@ p { margin: 0 0 1.05rem; }
   background: var(--paper);
 }
 .mini-card b { color: var(--accent-2); }
-.search-panel {
-  position: sticky;
-  top: 72px;
-  z-index: 50;
-  margin: 2rem 0;
-  padding: 1rem;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(12px);
-}
-.search-row {
+/* ── Side-filter explorer layout ────────────────────────── */
+.veil-explorer {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.75rem;
-  align-items: center;
+  grid-template-columns: 210px 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+.veil-sidebar {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sidebar-search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 #veilSearch {
-  min-height: 48px;
   width: 100%;
-  border-radius: 999px;
+  min-height: 42px;
+  border-radius: 12px;
   border: 1px solid var(--line);
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.85rem;
   background: var(--bg);
   color: var(--ink);
   font: inherit;
+  font-size: 0.9rem;
+}
+.clear-btn {
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.75rem;
+  width: 100%;
 }
 .filter-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 0.8rem;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 .filter-btn {
-  min-height: 38px;
-  padding: 0.42rem 0.75rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.45rem 0.75rem;
   font-size: 0.82rem;
   color: var(--muted);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
 }
+.filter-btn:hover { background: var(--accent-soft); color: var(--ink); }
 .filter-btn.active {
   background: var(--accent);
   color: #fffaf2;
   border-color: var(--accent);
 }
 .result-count {
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   color: var(--faint);
-  font-size: 0.86rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  padding: 0 0.2rem;
 }
 .cards-grid {
   display: grid;
@@ -476,8 +494,10 @@ mark {
   .article-header { padding: 0.75rem 1.3rem; }
   .article-body { padding: 3rem 1.25rem 5rem; }
   .grid-2 { grid-template-columns: 1fr; }
-  .search-panel { position: static; }
-  .search-row { grid-template-columns: 1fr; }
+  .veil-explorer { grid-template-columns: 1fr; }
+  .veil-sidebar { position: static; }
+  .filter-row { flex-direction: row; flex-wrap: wrap; }
+  .filter-btn { width: auto; }
   .cards-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -639,18 +659,30 @@ mark {
         <span class="section-label">Section IV</span>
         <h2>Searchable <em>veil atlas</em></h2>
         <p>Search by word, category, example, or practice. Try terms like <em>fear</em>, <em>pride</em>, <em>tawakkul</em>, <em>trauma</em>, <em>body</em>, <em>certainty</em>, <em>mercy</em>, or <em>control</em>.</p>
-        <div class="search-panel" aria-label="Veil search and filters">
-          <div class="search-row">
-            <input id="veilSearch" type="search" placeholder="Search 96 veils…" aria-label="Search veils">
-            <button class="clear-btn" id="clearSearch">Clear</button>
-          </div>
-          <div class="filter-row" id="filterRow">
-            <button class="filter-btn active" data-filter="all">All (96)</button>
-            <button class="filter-btn" data-filter="Cognitive">Cognitive <span>(10)</span></button><button class="filter-btn" data-filter="Emotional">Emotional <span>(10)</span></button><button class="filter-btn" data-filter="Egoic">Egoic <span>(10)</span></button><button class="filter-btn" data-filter="Carnal / Nafs">Carnal / Nafs <span>(10)</span></button><button class="filter-btn" data-filter="Trauma-Based">Trauma-Based <span>(10)</span></button><button class="filter-btn" data-filter="Moral / Akhlaq">Moral / Akhlaq <span>(10)</span></button><button class="filter-btn" data-filter="Social &amp; Cultural">Social &amp; Cultural <span>(10)</span></button><button class="filter-btn" data-filter="Spiritual">Spiritual <span>(10)</span></button><button class="filter-btn" data-filter="Bodily / Somatic">Bodily / Somatic <span>(5)</span></button><button class="filter-btn" data-filter="Time-Based">Time-Based <span>(5)</span></button><button class="filter-btn" data-filter="Epistemic">Epistemic <span>(6)</span></button>
-          </div>
-          <div class="result-count" id="resultCount">Showing all 96 veils.</div>
+        <div class="veil-explorer">
+          <aside class="veil-sidebar" aria-label="Veil search and filters">
+            <div class="sidebar-search">
+              <input id="veilSearch" type="search" placeholder="Search veils…" aria-label="Search veils">
+              <button class="clear-btn" id="clearSearch">Clear</button>
+            </div>
+            <div class="filter-row" id="filterRow">
+              <button class="filter-btn active" data-filter="all">All (96)</button>
+              <button class="filter-btn" data-filter="Cognitive">Cognitive (10)</button>
+              <button class="filter-btn" data-filter="Emotional">Emotional (10)</button>
+              <button class="filter-btn" data-filter="Egoic">Egoic (10)</button>
+              <button class="filter-btn" data-filter="Carnal / Nafs">Carnal / Nafs (10)</button>
+              <button class="filter-btn" data-filter="Trauma-Based">Trauma-Based (10)</button>
+              <button class="filter-btn" data-filter="Moral / Akhlaq">Moral / Akhlaq (10)</button>
+              <button class="filter-btn" data-filter="Social &amp; Cultural">Social &amp; Cultural (10)</button>
+              <button class="filter-btn" data-filter="Spiritual">Spiritual (10)</button>
+              <button class="filter-btn" data-filter="Bodily / Somatic">Bodily / Somatic (5)</button>
+              <button class="filter-btn" data-filter="Time-Based">Time-Based (5)</button>
+              <button class="filter-btn" data-filter="Epistemic">Epistemic (6)</button>
+            </div>
+            <div class="result-count" id="resultCount">Showing all 96 veils.</div>
+          </aside>
+          <div class="cards-grid" id="cardsGrid"></div>
         </div>
-        <div class="cards-grid" id="cardsGrid"></div>
       </section>
 
       <section id="s5" class="major-section">
