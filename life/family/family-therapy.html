@@ -30,7 +30,7 @@
 /* ── CSS variables (adjusted by JS once external nav height is known) ─── */
 :root {
   --ext-nav-h:  0px;   /* yasirbilgin.com fixed nav height  */
-  --topbar-h:   52px;  /* internal parts-menu bar           */
+  --topbar-h:   0px;   /* topbar removed — part nav in sidebar */
   --searchbar-h:44px;  /* search bar                        */
   --header-h: calc(var(--ext-nav-h) + var(--topbar-h) + var(--searchbar-h));
 }
@@ -47,6 +47,7 @@ body {
 
 /* ── Top bar — fixed so it stays through any nav.js layout changes ───── */
 #topbar {
+  display: none;
   position: fixed;
   top: var(--ext-nav-h);
   left: 0; right: 0;
@@ -225,6 +226,31 @@ body {
   gap: 6px;
   margin-top: 8px;
 }
+#part-switcher-wrap {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+#part-switcher-wrap label {
+  display: block;
+  font-size: .65rem;
+  color: #8faab5;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+#part-select {
+  width: 100%;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid #3a6070;
+  background: #1a3a4a;
+  color: #e8d5a0;
+  font-size: .75rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+#part-select:focus { outline: 2px solid #7ecfcf; }
 .filter-action-btn {
   font-size: .68rem;
   padding: 3px 8px;
@@ -776,6 +802,24 @@ mark { background: #ffe88a; border-radius: 2px; padding: 0 1px; }
         <button class="filter-action-btn" onclick="clearAllFilters()">Clear all</button>
         <button class="filter-action-btn" onclick="expandAllGroups()">Expand all</button>
         <button class="filter-action-btn" onclick="collapseAllGroups()">Collapse all</button>
+      </div>
+      <div id="part-switcher-wrap">
+        <label for="part-select">Jump to part:</label>
+        <select id="part-select" onchange="showPart(parseInt(this.value))">
+          <option value="1">Part I — Foundations</option>
+          <option value="2">Part II — Theories &amp; Schools</option>
+          <option value="3">Part III — Assessment</option>
+          <option value="4">Part IV — Core Clinical Skills</option>
+          <option value="5">Part V — Populations &amp; Problems</option>
+          <option value="6">Part VI — Culture &amp; Diversity</option>
+          <option value="7">Part VII — Ethics &amp; Law</option>
+          <option value="8">Part VIII — Practice Methods</option>
+          <option value="9">Part IX — Clinical Skills (Extended)</option>
+          <option value="10">Part X — Advanced Topics</option>
+          <option value="11">Part XI — Case Studies</option>
+          <option value="12">Part XII — Teaching &amp; Training</option>
+          <option value="13">Part XIII — Appendices</option>
+        </select>
       </div>
     </div>
     
@@ -25530,6 +25574,8 @@ function updateMenuActive(n) {
   document.querySelectorAll('.top-menu-item').forEach(el => {
     el.classList.toggle('active', parseInt(el.dataset.part) === n);
   });
+  const sel = document.getElementById('part-select');
+  if (sel) sel.value = n;
 }
 
 // ── Search ─────────────────────────────────────────────────────────────────
