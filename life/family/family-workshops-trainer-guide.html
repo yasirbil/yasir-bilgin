@@ -650,6 +650,19 @@ body.show-all-mode .part-section { display: block; }
         <button class="filter-action-btn" onclick="clearAllFilters()">Clear all</button>
         <button class="filter-action-btn" onclick="expandAllGroups()">Expand all</button>
         <button class="filter-action-btn" onclick="collapseAllGroups()">Collapse all</button>
+      <div id="session-switcher-wrap">
+        <label for="session-select">Jump to session:</label>
+        <select id="session-select" onchange="showPart(parseInt(this.value))">
+          <option value="1">Session 1 — Opening &amp; Ground Rules</option>
+          <option value="2">Session 2 — Family Life Cycle</option>
+          <option value="3">Session 3 — The Mature Person</option>
+          <option value="4">Session 4 — Personality &amp; MBTI</option>
+          <option value="5">Session 5 — Expectations</option>
+          <option value="6">Session 6 — Family of Origin</option>
+          <option value="7">Session 7 — Communication &amp; Finance</option>
+          <option value="8">Session 8 — Group-Specific Modules</option>
+          <option value="9">Session 9 — Spiritual &amp; Closing</option>
+        </select>
       </div>
     </div>
 
