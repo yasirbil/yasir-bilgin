@@ -5,7 +5,7 @@
     "subsec": "Aesthetics",
     "title": "Global Home Design Philosophies",
     "desc": "Fifteen Traditions Every enduring home design philosophy is an answer to a specific question — about climate, community, spirituality, or the land. These…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "home design",
       "aesthetics",
@@ -18,7 +18,7 @@
     "subsec": "Craft",
     "title": "The Four Arts — A Mastery Guide",
     "desc": "&quot;You don",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "mastery",
       "craft",
@@ -31,7 +31,7 @@
     "subsec": "Food",
     "title": "The Mechanics of Cooking",
     "desc": "// the primary variable in nearly every",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "cooking",
       "food science",
@@ -43,7 +43,7 @@
     "section": "Arts",
     "subsec": "Islamic Arts",
     "title": "Arabic Calligraphy Generator",
-    "desc": "Arabic Calligraphy Generator",
+    "desc": "An interactive Arabic calligraphy generator — explore classical scripts, letter forms, and Islamic typographic art.",
     "date": "",
     "tags": [
       "calligraphy",
@@ -57,7 +57,7 @@
     "subsec": "Music",
     "title": "Usüller Bendir",
     "desc": "An interactive reference guide to usül rhythmic patterns for the bendir — the frame drum at the heart of Turkish Sufi music and devotional practice.",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "bendir",
       "Turkish music",
@@ -69,7 +69,7 @@
     "section": "Arts",
     "subsec": "Music",
     "title": "Suno Structure Extractor",
-    "desc": "Suno Structure Extractor",
+    "desc": "A tool for extracting and analysing structural patterns from Suno-generated music tracks.",
     "date": "",
     "tags": [
       "music AI",
@@ -83,7 +83,7 @@
     "subsec": "Big Questions",
     "title": "The Big Questions — Perspectives from Said Nursi",
     "desc": "Plato, Thomas Hobbes, Gilbert Ryle, Albert Camus, Jean-Paul Sartre, Georg W.F.",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Said Nursi",
       "philosophy",
@@ -161,7 +161,7 @@
     "subsec": "Mental Models",
     "title": "From Problem to Value",
     "desc": "A practical framework for solution design — mapping the eight types of problems people face, the human needs beneath them, and how great solutions close…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "decision making",
       "mental models",
@@ -200,7 +200,7 @@
     "subsec": "Mental Models",
     "title": "Why Humans Make Bad Decisions",
     "desc": "A comprehensive taxonomy of decision errors — spanning knowledge gaps, cognitive biases, psychological forces, social pressures, and the systems we…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "cognitive bias",
       "decision making",
@@ -213,7 +213,7 @@
     "subsec": "Reference Guides",
     "title": "500 Facts for the Curious Mind",
     "desc": "Foundational knowledge across physics, biology, history, economics, mathematics, philosophy, psychology, linguistics, technology, and geopolitics —…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "facts",
       "reference",
@@ -226,7 +226,7 @@
     "subsec": "Reference Guides",
     "title": "Essential Books",
     "desc": "187 essential works spanning anthropology, history, philosophy, politics, economics, and",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "books",
       "reading list",
@@ -252,7 +252,7 @@
     "subsec": "Science & Mathematics",
     "title": "Consciousness-First Physics: A Paradigm Map",
     "desc": "Can physics be reinterpreted so that consciousness — not matter — is ontologically fundamental? A structured guide to the question, its major answers, and…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "consciousness",
       "physics",
@@ -265,7 +265,7 @@
     "subsec": "Science & Mathematics",
     "title": "Mathematics as a Language",
     "desc": "Most people think math is about numbers. It isn",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "mathematics",
       "language",
@@ -278,7 +278,7 @@
     "subsec": "Science & Mathematics",
     "title": "Thermodynamics Reference",
     "desc": "A comprehensive interactive reference covering the laws, concepts, processes, cycles, and formulas of",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "thermodynamics",
       "physics",
@@ -291,7 +291,7 @@
     "subsec": "Universal Principles",
     "title": "100 Universal Principles",
     "desc": "One hundred principles distilled from over 1,620 book summaries spanning cognitive science, philosophy, neuroscience, leadership, economics, ethics, and…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "universal principles",
       "frameworks",
@@ -304,7 +304,7 @@
     "subsec": "Civilizations",
     "title": "Atlas of Melody in the Muslim World",
     "desc": "How local cultures across fourteen centuries and five continents shaped, inflected, and transformed Islamic devotional sound — from Ottoman makam to South…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "music",
       "Muslim world",
@@ -317,7 +317,7 @@
     "subsec": "Civilizations",
     "title": "Typologies of Societies",
     "desc": "A society",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "sociology",
       "civilizations",
@@ -330,7 +330,7 @@
     "subsec": "Geopolitics",
     "title": "Cultural & Religious Conflict Zones",
     "desc": "Throughout history, conflict has rarely emerged randomly. It tends to arise at predictable pressure points — moments when identities, power structures,…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "conflict zones",
       "geopolitics",
@@ -369,7 +369,7 @@
     "subsec": "Geopolitics",
     "title": "International Governance — A Systems Guide",
     "desc": "The world without a world government — how order is created through power, institutions, law, markets, norms, resources, and",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "international relations",
       "governance",
@@ -382,7 +382,7 @@
     "subsec": "Social Movements",
     "title": "Lifecycle of Social & Religious Movements",
     "desc": "A synthesized framework — drawing on Weber, Ibn Khaldun, Troeltsch, Toynbee, and Berger — for understanding how movements are born, institutionalize,…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "social movements",
       "religion",
@@ -395,7 +395,7 @@
     "subsec": "World Cultures",
     "title": "World Influence Spheres — Master Guide",
     "desc": "Colonial roots · Lingua Franca · Cultural Values · MBTI Type · Religious Core · Time · Authority · Individual vs Collective · Outsider Stance · Failure…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "cultural influence",
       "world cultures",
@@ -408,7 +408,7 @@
     "subsec": "World Cultures",
     "title": "Japan — A Cultural Guide",
     "desc": "Arts · Food · Seasons · Brands — a structured map to explore Japanese",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Japan",
       "culture",
@@ -421,7 +421,7 @@
     "subsec": "World Cultures",
     "title": "Japan — Fact Sheet",
     "desc": "Japan is an island nation in East Asia, situated in the Pacific Ocean to the east of the Korean Peninsula and China. An archipelago of over 14,000…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Japan",
       "facts",
@@ -447,7 +447,7 @@
     "subsec": "World Cultures",
     "title": "The Japanese Mind — A Global Map of Concepts",
     "desc": "A deep map of Japanese concepts that shaped global culture — from philosophy and aesthetics to business, food, and daily",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Japanese philosophy",
       "concepts",
@@ -460,7 +460,7 @@
     "subsec": "World Cultures",
     "title": "The Japanese Design Mindset — A Guide",
     "desc": "Japanese product design is widely recognised for its exceptional attention to detail, quiet efficiency, and long-term durability. This guide explores the…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Japanese design",
       "aesthetics",
@@ -473,7 +473,7 @@
     "subsec": "World Cultures",
     "title": "Spiritual Japan — A Study Guide",
     "desc": "A Field Study Guide to Shinto · Buddhism ·",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Japan",
       "spirituality",
@@ -486,7 +486,7 @@
     "subsec": "Comparative Religion",
     "title": "Two Centres, Two Skies — Anthropocentrism in Islamic and Western Thought",
     "desc": "Anthropocentrism in Islamic and Western thought — and what happens when the boundary between God and human",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "anthropocentrism",
       "Islamic thought",
@@ -498,7 +498,7 @@
     "section": "Faith",
     "subsec": "Comparative Religion",
     "title": "Bridging the Sects — Yasir Bilgin",
-    "desc": "Islam",
+    "desc": "A comparative study of Islamic sectarian traditions — exploring theological differences, shared foundations, and paths toward unity.",
     "date": "2026-02-01",
     "tags": [
       "Islamic unity",
@@ -512,7 +512,7 @@
     "subsec": "Comparative Religion",
     "title": "The Chaplaincy Guide",
     "desc": "A professional reference for chaplains across all contexts, with dedicated attention to Islamic",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "chaplaincy",
       "pastoral care",
@@ -525,7 +525,7 @@
     "subsec": "Comparative Religion",
     "title": "The Sacred — Holiness Across Traditions",
     "desc": "From the Hebrew qadosh to the Sanskrit pavitra — humanity",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "holiness",
       "comparative religion",
@@ -537,7 +537,7 @@
     "section": "Faith",
     "subsec": "Comparative Religion",
     "title": "World Religions — Historical Timeline",
-    "desc": "World Religions — Historical Timeline",
+    "desc": "A visual historical timeline tracing the origins, developments, and interactions of the world",
     "date": "",
     "tags": [
       "world religions",
@@ -551,7 +551,7 @@
     "subsec": "Comparative Religion",
     "title": "Faiths of the World — Shared Themes, Roles & Rituals Across Religions",
     "desc": "Shared themes, roles & rituals woven through the world",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "comparative religion",
       "shared values",
@@ -564,7 +564,7 @@
     "subsec": "Comparative Religion",
     "title": "The Tension Between Theology and Governance",
     "desc": "Theology asks what is right. Governance asks what is possible. These are not the same question — and that tension is exactly where the work",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "theology",
       "politics",
@@ -590,7 +590,7 @@
     "subsec": "Islamic Intellectual History",
     "title": "The Mujtahid's Path — A Comprehensive Formation Guide",
     "desc": "A Comprehensive Formation Guide for Sacred Reasoning, Ethical Judgment & Spiritual",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ijtihad",
       "Islamic scholarship",
@@ -616,7 +616,7 @@
     "subsec": "Islamic Studies",
     "title": "Essential Books of the Islamic Tradition",
     "desc": "200 foundational works spanning theology, jurisprudence, philosophy, science, history, literature, and social thought — the intellectual heritage that…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Islamic books",
       "reading list",
@@ -629,7 +629,7 @@
     "subsec": "Islamic Studies",
     "title": "Islam in China: Civilization, Synthesis, and Mutual Influence",
     "desc": "From Silk Road merchants to Han Kitāb philosophers, from Sīnī calligraphy to Uyghur muqam — how two great civilizations have shaped each other across…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Islam",
       "China",
@@ -642,7 +642,7 @@
     "subsec": "Islamic Studies",
     "title": "Medrese Kitapları",
     "desc": "A structured guide to the classical madrasa curriculum — the foundational texts in Arabic grammar, logic, theology, jurisprudence, and Islamic sciences.",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "madrasa",
       "Islamic education",
@@ -655,7 +655,7 @@
     "subsec": "Islamic Studies",
     "title": "The Science of the Heart: A Complete Methodology of Sufism | Religious Sciences",
     "desc": "Taṣawwuf is Islam",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "tasawwuf",
       "Sufism",
@@ -694,7 +694,7 @@
     "subsec": "Islamic Studies",
     "title": "The Architecture of the Law: A Complete Methodology of Uṣūl al-Fiqh | Fikir Defteri",
     "desc": "Before a jurist can rule, she must ask: by what right, from what source, through what reasoning? Uṣūl al-Fiqh is the discipline that answers those prior…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "usul al-fiqh",
       "Islamic law",
@@ -707,7 +707,7 @@
     "subsec": "Islamic Studies",
     "title": "The Custodians of the Word: A Complete Methodology of ʿUlūm al-Ḥadīth | Religious Sciences",
     "desc": "Before a prophetic tradition can guide a life or ground a legal ruling, it must be verified. ʿUlūm al-Ḥadīth is the Islamic science that makes…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "hadith sciences",
       "Islamic tradition",
@@ -772,7 +772,7 @@
     "subsec": "Hizmet Vision & Resources",
     "title": "Hizmet Movement Research Library",
     "desc": "A curated research library on the Hizmet movement: academic papers, reports, and scholarly resources on education, civil society, and interfaith dialogue.",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Hizmet",
       "research",
@@ -785,7 +785,7 @@
     "subsec": "Hizmet Vision & Resources",
     "title": "Hizmet Community — Resources & Toolbox Guide",
     "desc": "A grassroots volunteer platform developing tools and resources with a critical eye for the Hizmet community — organized by 15 life domains, open to…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Hizmet",
       "community resources",
@@ -798,7 +798,7 @@
     "subsec": "Languages",
     "title": "Arabic Balāghah: A Complete Guide",
     "desc": "The science of eloquence — how Arabic achieves precision, beauty, and contextual power across three interlocking disciplines: Maʿānī, Bayān, and",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Arabic rhetoric",
       "balaghah",
@@ -811,7 +811,7 @@
     "subsec": "Languages",
     "title": "Learn Japanese — A Complete Guide",
     "desc": "From zero to conversation — a structured guide covering writing systems, grammar, vocabulary, and the mindset to stay",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Japanese",
       "language learning",
@@ -824,7 +824,7 @@
     "subsec": "Languages",
     "title": "Japanese Survival Language",
     "desc": "Essential phrases for travellers",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Japanese",
       "phrases",
@@ -837,7 +837,7 @@
     "subsec": "Languages",
     "title": "World Languages — A Multidimensional Guide",
     "desc": "Language Families Languages descend from common ancestors, forming family trees that stretch back thousands of years. A family is a group of languages…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "world languages",
       "linguistics",
@@ -863,7 +863,7 @@
     "subsec": "Family",
     "title": "Family Therapy — Complete Clinical Guide",
     "desc": "Family therapy begins with a shift in vision. Instead of seeing human problems only as internal defects within individuals, family therapy asks how…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "family therapy",
       "counseling",
@@ -928,7 +928,7 @@
     "subsec": "Ahlak & Virtue",
     "title": "The Moral Distortion Framework",
     "desc": "How scarcity and abundance both corrupt the soul — and what healthy civilizations do",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "moral psychology",
       "virtue",
@@ -941,7 +941,7 @@
     "subsec": "Ahlak & Virtue",
     "title": "Noble Character — A Field Guide",
     "desc": "Record observations of akhlaq-hasanah in daily life. The trained eye begins to see moral beauty",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "character",
       "virtue ethics",
@@ -954,7 +954,7 @@
     "subsec": "Ahlak & Virtue",
     "title": "Signs of Spiritual Health Across Traditions",
     "desc": "What does spiritual progress actually look like? Fifteen indicators — drawn from Islam, Christianity, Buddhism, Hinduism, Judaism, Daoism, Confucianism,…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "spiritual health",
       "virtue",
@@ -1019,7 +1019,7 @@
     "subsec": "Ramadan & Practice",
     "title": "Ramadan for the Mind — A Cognitive Fasting Guide",
     "desc": "How Ramadan purifies more than the body — a guide to physical, spiritual, and cognitive fasting for all sixteen personality",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Ramadan",
       "cognitive fasting",
@@ -1032,7 +1032,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENFJ Ramadan Guide",
     "desc": "A Ramadan guide for the ENFJ — on fasting from the need to be needed, the performance of goodness, and the gentle but persistent steering of others toward…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ENFJ",
       "Ramadan",
@@ -1045,7 +1045,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENFP Ramadan Guide — Fasting the Inspirer's Mind",
     "desc": "A Ramadan guide for the ENFP — on fasting from the endless generation of possibility, the overextension of self, and the fear that commitment means…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ENFP",
       "Ramadan",
@@ -1058,7 +1058,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENTJ Ramadan Guide — Fasting the Commander's Will",
     "desc": "A Ramadan guide for the ENTJ — on fasting from the need to control outcomes, dominate environments, and measure every person by what they",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ENTJ",
       "Ramadan",
@@ -1071,7 +1071,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ENTP Ramadan Guide",
     "desc": "A Ramadan guide for the ENTP — on fasting from the thrill of argument, the restlessness that passes for curiosity, and the particular brilliance of always…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ENTP",
       "Ramadan",
@@ -1084,7 +1084,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESFJ Ramadan Guide",
     "desc": "A Ramadan guide for the ESFJ — on fasting from the need for approval, the gossip that bonds the group, and the particular discipline of speaking something…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ESFJ",
       "Ramadan",
@@ -1097,7 +1097,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESFP Ramadan Guide — Fasting the Performer's Heart",
     "desc": "A Ramadan guide for the ESFP — on fasting from stimulation, emotional reactivity, and the beautiful, exhausting work of filling every silence before it…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ESFP",
       "Ramadan",
@@ -1110,7 +1110,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESTJ Ramadan Guide",
     "desc": "A Ramadan guide for the ESTJ — on fasting from the measure of productivity, the management of others toward correct outcomes, and the quiet belief that…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ESTJ",
       "Ramadan",
@@ -1123,7 +1123,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ESTP Ramadan Guide — Fasting the Dynamo's Mind",
     "desc": "A Ramadan guide for the ESTP — on fasting from thrill-seeking, cutting critique, and the particular difficulty of letting a moment be quiet without…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ESTP",
       "Ramadan",
@@ -1136,7 +1136,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The INFJ Ramadan Guide",
     "desc": "A Ramadan guide for the INFJ — on fasting from the certainty of insight, the weight of others",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "INFJ",
       "Ramadan",
@@ -1149,7 +1149,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The INFP Ramadan Guide — Fasting the Idealist's Heart",
     "desc": "A Ramadan guide for the INFP — on fasting from feeling as truth, fantasy loops, and the beautiful but costly habit of living more fully inside the inner…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "INFP",
       "Ramadan",
@@ -1162,7 +1162,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The INTJ Ramadan Guide — Fasting the Strategist's Mind",
     "desc": "A Ramadan guide for the INTJ — on fasting from certainty, efficiency, and the quiet pride of always seeing further than",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "INTJ",
       "Ramadan",
@@ -1175,7 +1175,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The INTP Ramadan Guide",
     "desc": "A Ramadan guide for the INTP — on fasting from the clean refuge of logic, the infinite deferral of commitment, and the quiet belief that precision is the…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "INTP",
       "Ramadan",
@@ -1188,7 +1188,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISFJ Ramadan Guide",
     "desc": "A Ramadan guide for the ISFJ — on fasting from self-erasure, the quiet loans of care that were never acknowledged as loans, and the particular discipline…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ISFJ",
       "Ramadan",
@@ -1201,7 +1201,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISFP Ramadan Guide — Fasting the Artist's Heart",
     "desc": "A Ramadan guide for the ISFP — on fasting from emotional withdrawal, impulse reaction, and the habit of retreating into inner silence when the world asks…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ISFP",
       "Ramadan",
@@ -1214,7 +1214,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISTJ Ramadan Guide",
     "desc": "A Ramadan guide for the ISTJ — on fasting from the certainty that familiarity proves correctness, the silent accumulation of grievance, and the particular…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ISTJ",
       "Ramadan",
@@ -1227,7 +1227,7 @@
     "subsec": "Ramadan & Practice",
     "title": "The ISTP Ramadan Guide — Fasting the Craftsman's Mind",
     "desc": "A Ramadan guide for the ISTP — on fasting from emotional withdrawal, stimulation-driven risk, and the habit of disappearing precisely when presence is…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "ISTP",
       "Ramadan",
@@ -1240,7 +1240,7 @@
     "subsec": "Ramadan & Practice",
     "title": "Ramadan as a Universal Calibrator",
     "desc": "What if fasting was not a ritual of deprivation, but a precision instrument for resetting everything that",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Ramadan",
       "universal",
@@ -1266,7 +1266,7 @@
     "subsec": "Spiritual Growth",
     "title": "Foci of Transformation",
     "desc": "Instead of comparing religions by doctrine, ask a different question: what does each tradition tell you to focus on in order to awaken? Seven answers —…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "transformation",
       "spiritual growth",
@@ -1305,7 +1305,7 @@
     "subsec": "Spiritual Growth",
     "title": "How to Turn Your Home Into a Corner from Heaven",
     "desc": "Ten principles from the Risale-i Nur for building a sacred life within ordinary",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "home",
       "spiritual environment",
@@ -1383,7 +1383,7 @@
     "subsec": "Spiritual Growth",
     "title": "Stages of the Spiritual Journey",
     "desc": "How mystics across seven traditions have mapped the path from ordinary consciousness to liberation, union, or enlightenment — and where these maps",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "maqamat",
       "spiritual stages",
@@ -1396,7 +1396,7 @@
     "subsec": "Spiritual Therapy",
     "title": "Spiritual Therapy &mdash; Complete Guide",
     "desc": "This part establishes the foundation of Spiritual Therapy as a disciplined guide for spiritual development. It defines the field, distinguishes it from…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "spiritual therapy",
       "healing",
@@ -1409,7 +1409,7 @@
     "subsec": "Sufism",
     "title": "Insan-ı Kâmil — The Complete Human",
     "desc": "Not a personality type — but a path of integration. Eight cognitive functions. Eight stations of the",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "insan-i kamil",
       "Sufism",
@@ -1422,7 +1422,7 @@
     "subsec": "Sufism",
     "title": "Maqāmāt — Stages of the Sufi Path",
     "desc": "How the great Sufi masters — from Khorasan to Andalusia — mapped the inner journey from repentance to annihilation, and where their maps converge and…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "maqamat",
       "Sufism",
@@ -1435,7 +1435,7 @@
     "subsec": "Ai & Mlops",
     "title": "The AI Practitioner's Field Guide",
     "desc": "A comprehensive reference for understanding, building with, and deploying modern AI systems — from prompt fundamentals to autonomous agentic",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "AI",
       "machine learning",
@@ -1461,7 +1461,7 @@
     "subsec": "Devops",
     "title": "Ansible Cheat Sheet",
     "desc": "A concise Ansible cheat sheet covering playbooks, roles, inventory, modules, and automation patterns for infrastructure configuration and deployment.",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Ansible",
       "DevOps",
@@ -1474,7 +1474,7 @@
     "subsec": "Devops",
     "title": "Datacenter Cage Engineering Guide",
     "desc": "A datacenter cage is a locked, dedicated enclosure within a larger multi-tenant colocation facility. Colocation (colo) providers sell space, power, and…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "datacenter",
       "colocation",
@@ -1487,7 +1487,7 @@
     "subsec": "Devops",
     "title": "DevOps Reference",
     "desc": "A practical DevOps reference covering CI/CD pipelines, containerisation, infrastructure as code, and platform engineering best practices.",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "DevOps",
       "reference",
@@ -1513,7 +1513,7 @@
     "subsec": "Devops",
     "title": "DevOps Roles & Responsibilities",
     "desc": "Ten disciplines that define modern DevOps — each with a clear objective, what good looks like, the tools teams actually use, and the bottlenecks that…",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "DevOps",
       "team roles",
@@ -1526,7 +1526,7 @@
     "subsec": "Observability",
     "title": "Datadog — Complete Reference Guide",
     "desc": "A comprehensive guide to Datadog",
-    "date": "2026-01-01",
+    "date": "2026-05-23",
     "tags": [
       "Datadog",
       "observability",
