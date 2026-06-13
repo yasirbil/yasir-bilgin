@@ -71,7 +71,7 @@
 /* ── CSS custom properties ───────────────────────────────── */
 :root {
   --nav-h: 62px;          /* global nav.js bar height            */
-  --topbar-h:  52px;      /* app topbar below global nav         */
+  --topbar-h:  0px;       /* topbar removed — session nav in sidebar */
   --searchbar-h: 44px;    /* app searchbar below topbar          */
   --app-header-h: calc(var(--topbar-h) + var(--searchbar-h));
 }
@@ -89,6 +89,7 @@ body {
 /* Sits below the global nav.js bar (top: var(--nav-h)).
    z-index must be well below nav.js (2147483646) — use 200. */
 #topbar {
+  display: none !important;
   position: fixed;
   top: var(--nav-h);       /* flush below the global nav */
   left: 0;
@@ -96,7 +97,6 @@ body {
   z-index: 200;            /* well below nav.js */
   background: #1a3a4a;
   color: #fff;
-  display: flex;
   align-items: stretch;
   gap: 0;
   min-height: var(--topbar-h);
@@ -319,7 +319,7 @@ mark { background: #ffe88a; border-radius: 2px; padding: 0 1px; }
   color: #fff;
   padding: 12px 14px 8px;
   position: sticky;
-  top: 62px;
+  top: 0;
   z-index: 10;
 }
 #sidebar-header h3 { font-size: .82rem; font-weight: bold; letter-spacing: .04em; color: #e8d5a0; margin-bottom: 2px; }
@@ -508,7 +508,7 @@ body.show-all-mode .part-section { display: block; }
 /* ── Scroll context bar ──────────────────────────────────── */
 #scroll-context-bar {
   position: sticky;
-  top: 62px;
+  top: 0;
   z-index: 20;
   background: #1a3a4a;
   color: #e8d5a0;
@@ -1708,12 +1708,18 @@ function showPart(n) {
   ca.scrollTop = 0;
   window.scrollTo(0,0);
   updateMenuActive(n);
+  const scbPart = document.getElementById('scb-part-label');
+  const scbSec  = document.getElementById('scb-section-heading');
+  if (scbPart) scbPart.textContent = 'Session ' + n;
+  if (scbSec)  scbSec.textContent  = '';
 }
 
 function updateMenuActive(n) {
   document.querySelectorAll('.top-menu-item').forEach(el => {
     el.classList.toggle('active', parseInt(el.dataset.part) === n);
   });
+  const sel = document.getElementById('session-select');
+  if (sel) sel.value = n;
 }
 
 let searchTimer = null;
@@ -1895,7 +1901,7 @@ function getScrollY() { return contentArea.scrollTop > 0 ? contentArea.scrollTop
 function onScroll() {
   const scrollY = getScrollY();
   backToTop.classList.toggle('visible', scrollY > 150);
-  const allSections = document.querySelectorAll('.section');
+  const allSections = document.querySelectorAll('.part-section.visible .section');
   let topSection = null;
   for (const sec of allSections) {
     const rect = sec.getBoundingClientRect();
