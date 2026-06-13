@@ -29,7 +29,7 @@
 <style>
 /* ── CSS variables (adjusted by JS once external nav height is known) ─── */
 :root {
-  --ext-nav-h:  0px;   /* yasirbilgin.com fixed nav height  */
+  --ext-nav-h:  62px;  /* yasirbilgin.com fixed nav height  */
   --topbar-h:   0px;   /* topbar removed — part nav in sidebar */
   --searchbar-h:44px;  /* search bar                        */
   --header-h: calc(var(--ext-nav-h) + var(--topbar-h) + var(--searchbar-h));
@@ -47,14 +47,13 @@ body {
 
 /* ── Top bar — fixed so it stays through any nav.js layout changes ───── */
 #topbar {
-  display: none;
+  display: none !important;
   position: fixed;
   top: var(--ext-nav-h);
   left: 0; right: 0;
   z-index: 200;
   background: #1a3a4a;
   color: #fff;
-  display: flex;
   align-items: stretch;
   gap: 0;
   min-height: var(--topbar-h);
