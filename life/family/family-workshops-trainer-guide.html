@@ -320,6 +320,7 @@ mark { background: #ffe88a; border-radius: 2px; padding: 0 1px; }
   padding: 12px 14px 8px;
   position: sticky;
   top: 0;
+  display: block;
   z-index: 10;
 }
 #sidebar-header h3 { font-size: .82rem; font-weight: bold; letter-spacing: .04em; color: #e8d5a0; margin-bottom: 2px; }
@@ -371,7 +372,7 @@ mark { background: #ffe88a; border-radius: 2px; padding: 0 1px; }
   padding: 5px 14px 5px 20px;
   cursor: pointer;
   font-size: .75rem;
-  color: #4a5a60;
+  color: #1e2d35;
   transition: background .1s;
   line-height: 1.3;
   min-height: 44px;
@@ -650,6 +651,7 @@ body.show-all-mode .part-section { display: block; }
         <button class="filter-action-btn" onclick="clearAllFilters()">Clear all</button>
         <button class="filter-action-btn" onclick="expandAllGroups()">Expand all</button>
         <button class="filter-action-btn" onclick="collapseAllGroups()">Collapse all</button>
+      </div>
       <div id="session-switcher-wrap">
         <label for="session-select">Jump to session:</label>
         <select id="session-select" onchange="showPart(parseInt(this.value))">
