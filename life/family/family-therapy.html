@@ -25519,6 +25519,11 @@ function showPart(n) {
   ca.scrollTop = 0;
   window.scrollTo(0, 0);
   updateMenuActive(n);
+  // Reset context bar immediately so it always matches the selected part
+  const scbPart = document.getElementById('scb-part-label');
+  const scbSec  = document.getElementById('scb-section-heading');
+  if (scbPart) scbPart.textContent = PART_SHORT[n] || ('Part ' + n);
+  if (scbSec)  scbSec.textContent  = '';
 }
 
 function updateMenuActive(n) {
@@ -25781,7 +25786,7 @@ function onScroll() {
   backToTop.classList.toggle('visible', scrollY > 150);
 
   // Update context bar with current section
-  const allSections = document.querySelectorAll('.section');
+  const allSections = document.querySelectorAll('.part-section.visible .section');
   let topSection = null;
   for (const sec of allSections) {
     const rect = sec.getBoundingClientRect();
