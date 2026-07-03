@@ -4,7 +4,7 @@
    visits and works offline for previously visited pages.
    ============================================================ */
 
-const CACHE = 'ynb-v38';
+const CACHE = 'ynb-v39';
 const SHELL = [
   '/',
   '/index.html',

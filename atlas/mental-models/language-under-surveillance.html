@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When Language Learns to Hide: How Surveillance Reshapes Speech | Yasir Bilgin</title>
+
+  <meta name="description" content="How sustained pressure—surveillance, censorship, exile—transforms not just what people say but how they think: the linguistics of fear, coded speech, and internalized silence.">
+  <meta name="keywords" content="linguistics, censorship, political language">
+
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/Mental-Models/language-under-surveillance.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="When Language Learns to Hide: How Surveillance Reshapes Speech">
+  <meta property="og:description" content="How sustained pressure—surveillance, censorship, exile—transforms not just what people say but how they think: the linguistics of fear, coded speech, and internalized silence.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Mental-Models/language-under-surveillance.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="When Language Learns to Hide: How Surveillance Reshapes Speech">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="When Language Learns to Hide: How Surveillance Reshapes Speech">
+  <meta name="twitter:description" content="How sustained pressure—surveillance, censorship, exile—transforms not just what people say but how they think: the linguistics of fear, coded speech, and internalized silence.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "When Language Learns to Hide: How Surveillance Reshapes Speech",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-06-27",
+    "dateModified": "2026-06-27",
+    "description": "How sustained pressure—surveillance, censorship, exile—transforms not just what people say but how they think: the linguistics of fear, coded speech, and internalized silence.",
+    "url": "https://yasirbilgin.com/atlas/Mental-Models/language-under-surveillance.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas",        "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "When Language Learns to Hide", "item": "https://yasirbilgin.com/atlas/Mental-Models/language-under-surveillance.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Tokens & base ─────────────────────────────────────────── */
+    :root {
+      --accent:       #c9a84c;
+      --accent-dim:   #a8873c;
+      --ink:          #1c1714;
+      --paper:        #f7f3ec;
+      --muted:        #6b5f50;
+      --faint:        #6e5f4e;
+      --rule:         rgba(107,93,79,0.18);
+      --nav-h:        62px;
+      --content-w:    780px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:   #ede8df;
+        --paper: #131310;
+        --muted: #a8a4a0;
+        --faint: #6b6864;
+        --rule:  rgba(255,255,255,0.1);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    /* ── Progress bar ──────────────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay ───────────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--paper);
+      width: min(360px, 92vw);
+      height: 100vh;
+      padding: 2rem 1.8rem;
+      overflow-y: auto;
+      border-left: 1px solid var(--rule);
+    }
+    .toc-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 1.4rem;
+      line-height: 1;
+      padding: 0.25rem;
+      margin-bottom: 1.5rem;
+      display: block;
+      min-height: 44px;
+    }
+    .toc-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-panel h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 1.4rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--rule); }
+    .toc-list a {
+      display: block;
+      padding: 0.75rem 0;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.92rem;
+      min-height: 44px;
+      line-height: 1.5;
+    }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-list a.toc-main { font-weight: 600; }
+    .toc-list a.toc-sub  { padding-left: 1rem; font-size: 0.84rem; color: var(--muted); }
+
+    /* ── Eyebrow pill ──────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint);
+      }
+    }
+
+    /* ── Hero ──────────────────────────────────────────────────── */
+    .hero {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .byline-name { display: block; font-weight: 600; font-size: 0.9rem; }
+    .byline-meta { display: block; font-size: 0.8rem; color: var(--faint); }
+
+    /* ── Hero rule ─────────────────────────────────────────────── */
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 0;
+    }
+
+    /* ── Article header (static, after hr) ─────────────────────── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 0.75rem 2.5rem;
+      max-width: var(--content-w);
+      margin: 0 auto;
+    }
+    .read-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+      letter-spacing: 0.04em;
+    }
+    .toc-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      color: var(--ink);
+      min-height: 44px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Article body ──────────────────────────────────────────── */
+    .article-body {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 4rem 2.5rem 8rem;
+    }
+    @media (max-width: 720px) {
+      .article-body { padding: 3rem 1.4rem 5rem; }
+      body { font-size: 17px; }
+    }
+
+    .major-section { margin-bottom: 4rem; }
+    .major-section + .major-section { border-top: 1px solid var(--rule); padding-top: 3.5rem; }
+
+    .section-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 1.4rem;
+    }
+    h2 em { font-style: italic; }
+
+    h3.sub-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 2.4rem 0 1rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .sh-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 1.4rem; }
+    p:last-child { margin-bottom: 0; }
+
+    strong { font-weight: 700; }
+    em { font-style: italic; }
+
+    /* ── Pull quote ────────────────────────────────────────────── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2rem;
+      padding: 1.4rem 1.6rem 1.4rem 2rem;
+      border-left: 3px solid var(--accent);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      line-height: 1.55;
+      font-style: italic;
+      color: var(--muted);
+    }
+    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
+
+    /* ── Example block ─────────────────────────────────────────── */
+    .example-block {
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.8rem 0;
+    }
+    .example-block .ex-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.67rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+    .example-block p { margin-bottom: 0.7rem; }
+    .example-block p:last-child { margin-bottom: 0; }
+
+    /* ── Comparison table ──────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin: 2rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    th {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+      border-bottom: 2px solid var(--rule);
+      padding: 0.6rem 0.9rem;
+      text-align: left;
+    }
+    td {
+      padding: 0.75rem 0.9rem;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    /* ── Scholar note ──────────────────────────────────────────── */
+    .scholar-note {
+      margin: 2rem 0;
+      padding: 1rem 1.4rem;
+      border-left: 2px solid var(--rule);
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .scholar-note cite {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ── Flow model ─────────────────────────────────────────────── */
+    .flow-model {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 1.6rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .flow-model .fm-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .flow-step:last-child { border-bottom: none; }
+    .flow-arrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      padding-top: 0.15rem;
+    }
+    .flow-text { font-size: 0.93rem; line-height: 1.55; }
+    .flow-text strong { color: var(--ink); }
+    .flow-text span { color: var(--muted); font-size: 0.85rem; }
+
+    /* ── Footer ────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      max-width: var(--content-w);
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .footer-copy { font-size: 0.8rem; color: var(--faint); margin-left: auto; }
+
+    /* ── Reduced motion ────────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main-content">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close"
+              onclick="document.getElementById('tocOverlay').classList.remove('open')"
+              aria-label="Close table of contents">✕</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-main">I. Language as Safety Technology</a></li>
+        <li><a href="#s2" class="toc-main">II. De-agentivization</a></li>
+        <li><a href="#s2-1" class="toc-sub">2.1 Passive Voice as Shield</a></li>
+        <li><a href="#s2-2" class="toc-sub">2.2 Across Languages</a></li>
+        <li><a href="#s3" class="toc-main">III. Sterile and Coded Vocabulary</a></li>
+        <li><a href="#s3-1" class="toc-sub">3.1 Euphemism Under Pressure</a></li>
+        <li><a href="#s3-2" class="toc-sub">3.2 In-Group Signals</a></li>
+        <li><a href="#s4" class="toc-main">IV. High-Context Communication</a></li>
+        <li><a href="#s5" class="toc-main">V. Hedging and Epistemic Buffers</a></li>
+        <li><a href="#s6" class="toc-main">VI. The Public Secret</a></li>
+        <li><a href="#s7" class="toc-main">VII. Layered Discourse</a></li>
+        <li><a href="#s8" class="toc-main">VIII. Internalized Censorship</a></li>
+        <li><a href="#s9" class="toc-main">IX. Intergenerational Transmission</a></li>
+        <li><a href="#s10" class="toc-main">X. Historical Parallels</a></li>
+        <li><a href="#s11" class="toc-main">XI. Fear vs. Wisdom</a></li>
+        <li><a href="#s12" class="toc-main">XII. The Cascade Model</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Atlas · Mental Models</div>
+    <h1>When Language <em>Learns to Hide</em></h1>
+    <p class="hero-sub">How sustained pressure — surveillance, censorship, exile, punishment — transforms not just what people say, but the architecture of how they think.</p>
+    <div class="byline-row">
+      <div class="avatar" aria-hidden="true">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">June 27, 2026 · Atlas</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <header class="article-header">
+    <span class="read-time">22 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')"
+            aria-expanded="false"
+            aria-controls="tocOverlay">
+      Contents
+    </button>
+  </header>
+
+  <article class="article-body">
+
+    <!-- SECTION 1 -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>Language as <em>Safety Technology</em></h2>
+
+      <p>Language normally serves four functions: it transfers information, builds relationships, expresses inner states, and persuades. In stable, open societies, speakers move between these functions fluidly, choosing words for clarity, beauty, or effect.</p>
+
+      <p>Under sustained surveillance or the credible threat of punishment, a fifth function is added — and it colonizes all the others: <strong>self-protection</strong>. Language becomes a defensive technology. The question is no longer only <em>What do I mean?</em> but simultaneously: <em>Can this sentence be used against me?</em></p>
+
+      <p>This shift is not dramatic or sudden. It infiltrates speech incrementally, word by word, pause by pause, until the speaker can no longer clearly distinguish between communicating and surviving. The linguist Michael Silverstein described this as "indexical regimentation" — the social environment conditions which forms of speech are available, thinkable, and safe, independent of the speaker's conscious intentions.</p>
+
+      <p>The result is that a single utterance becomes multifunctional in a new way. It must simultaneously:</p>
+
+      <div class="example-block">
+        <div class="ex-label">The Quadruple Demand on Speech Under Pressure</div>
+        <p><strong>Camouflage</strong> — conceal the intended meaning from hostile observers.</p>
+        <p><strong>Plausible deniability</strong> — if intercepted, offer an innocent interpretation.</p>
+        <p><strong>Loyalty signaling</strong> — confirm membership in a trusted in-group.</p>
+        <p><strong>Threat detection</strong> — read the listener for signs of surveillance or entrapment.</p>
+      </div>
+
+      <p>What follows is a systematic account of how each layer of language — morphology, syntax, semantics, pragmatics, discourse — deforms under this pressure, and what that deformation reveals about the relationship between power and meaning.</p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2><em>De-agentivization</em>: Erasing the Actor</h2>
+
+      <p>The most grammatically traceable signature of speech under pressure is the systematic removal of human agents from sentences. Linguists call this <strong>de-agentivization</strong>: the agent who performs an action is suppressed, backgrounded, or deleted entirely.</p>
+
+      <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>Passive Voice as Shield</h3>
+
+      <p>In open discourse, attribution is direct: <em>The director ordered the arrests</em>; <em>The ministry rejected the application</em>. These sentences name actors and assign responsibility.</p>
+
+      <p>Under pressure, the same realities are rendered differently:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Open expression</th>
+              <th>De-agentivized form</th>
+              <th>What disappears</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The state arrested him.</td>
+              <td>He was arrested.</td>
+              <td>Responsible actor</td>
+            </tr>
+            <tr>
+              <td>The director decided this.</td>
+              <td>This decision was reached.</td>
+              <td>Human agency</td>
+            </tr>
+            <tr>
+              <td>They fired her for her views.</td>
+              <td>There were personnel changes.</td>
+              <td>Motive and victim</td>
+            </tr>
+            <tr>
+              <td>The government banned the book.</td>
+              <td>The book became unavailable.</td>
+              <td>Action and actor both</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The passive voice is not inherently evasive — it has legitimate scientific, journalistic, and stylistic uses. But the <em>pattern</em> of persistent passivization, especially when applied to sensitive topics while direct constructions remain available for neutral ones, is a measurable linguistic fingerprint of self-censorship.</p>
+
+      <div class="scholar-note">
+        <cite>Ruth Wodak</cite>, in her foundational work <em>Disorder of Discourse</em> (1996), identified systematic nominalization and passive construction as key features of what she called "the language of exclusion" — bureaucratic speech designed to obscure responsibility for discriminatory outcomes. Totalitarian speech, she argued, borrowed and amplified the same techniques.
+      </div>
+
+      <h3 id="s2-2" class="sub-heading"><span class="sh-num">2.2</span>Across Languages</h3>
+
+      <p>De-agentivization takes different grammatical routes depending on the language:</p>
+
+      <p>In <strong>Turkish</strong>, agentless passives are formed with <em>-ıldı / -ildi</em> suffixes: <em>"Karar alındı"</em> ("A decision was taken" — by whom, unspecified). The past evidential <em>-mış</em> suffix is also recruited: <em>"Öyle olmuş"</em> — "It apparently turned out that way," with the speaker positioning themselves as mere witness to events they did not initiate or know about directly.</p>
+
+      <p>In <strong>Russian</strong>, Soviet-era writers mastered the impersonal construction with <em>нельзя</em> (one cannot) and third-person plural without a subject: <em>"Говорят, что…"</em> ("They say that…") — attributing claims to an anonymous, unlocatable source. Mikhail Bulgakov and Mikhail Zoshchenko both exploited these constructions in fiction to protect ironic meaning.</p>
+
+      <p>In <strong>Arabic</strong>, the <em>mabni lil-majhul</em> (built for the unknown) passive form performs a similar function: <em>"Quttila"</em> ("He was killed") with no mention of who killed him — a construction common in state media and cautious political commentary across the Arab world.</p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>Sterile and <em>Coded Vocabulary</em></h2>
+
+      <p>Lexical choice is the most immediately observable site of linguistic adaptation. When specific words carry risk — because they name taboo actors, forbidden ideas, or outlawed organizations — speakers develop two parallel strategies: <strong>sterilization</strong> and <strong>encoding</strong>.</p>
+
+      <h3 id="s3-1" class="sub-heading"><span class="sh-num">3.1</span>Euphemism Under Pressure</h3>
+
+      <p>Sterilization replaces charged words with neutral, bureaucratic, or vague equivalents. The referent is the same; the semantic temperature is cooled.</p>
+
+      <div class="example-block">
+        <div class="ex-label">Vocabulary Substitution Patterns</div>
+        <p><strong>Suppression → "security measures" or "a sensitive period"</strong></p>
+        <p><strong>Injustice → "difficulties" or "challenges"</strong></p>
+        <p><strong>Torture → "enhanced interrogation" or "special procedures"</strong></p>
+        <p><strong>Exile → "reassignment" or "voluntary departure"</strong></p>
+        <p><strong>Persecution → "the situation we know" or "that matter"</strong></p>
+      </div>
+
+      <p>George Orwell identified this pattern as early as 1946 in "Politics and the English Language": "Defenceless villages are bombarded from the air, the inhabitants driven out into the countryside, the cattle machine-gunned, the huts set on fire with incendiary bullets: this is called <em>pacification</em>." The political utility of sterile language — then and now — is that it makes the speaker harder to prosecute and easier to live with.</p>
+
+      <p>Victor Klemperer's <em>LTI: Lingua Tertii Imperii</em> ("The Language of the Third Reich"), his extraordinary philological diary kept secretly throughout the Nazi period, documented how German itself was systematically sterilized: <em>Sonderbehandlung</em> ("special treatment") for execution, <em>Umsiedlung</em> ("resettlement") for deportation. The words did not merely describe a sanitized version of reality — they helped create it by making certain thoughts unthinkable in their original form.</p>
+
+      <h3 id="s3-2" class="sub-heading"><span class="sh-num">3.2</span>In-Group Encoding</h3>
+
+      <p>Where sterilization aims at outside observers, encoding aims at insiders. Here the substitution is not neutral but <em>oblique</em> — chosen for its double function: opaque to the hostile outsider, transparent to the knowledgeable insider.</p>
+
+      <p>Classical Islamic rhetoric distinguishes between <em>taṣrīḥ</em> (explicit declaration) and <em>tawriya</em> (concealment by double meaning) and <em>kināya</em> (allusion). Medieval Sufi writers routinely employed these devices not merely as aesthetic ornament but as protective cover: wine, the tavern, and the beloved in Hafez are not simply erotic or bacchanalian images — they operate simultaneously in a spiritual register legible to initiates and deniable before hostile religious authorities.</p>
+
+      <p>Modern examples are structurally identical. Chinese internet users under censorship developed <em>Caonima</em> ("grass mud horse") as a phonetically similar but technically innocent substitute for a profanity aimed at censors — creating an entire mythos around an invented creature whose cultural life was one long act of resistance. Soviet dissidents used the phrase <em>"speaking Aesopian language"</em> — after Aesop's fables, whose animal characters were understood to stand for human social types — as a self-conscious description of their own literary practice.</p>
+
+      <div class="pull-quote">
+        "The allegorical mode was not evasion. It was exactitude achieved by indirection — the only kind of exactitude available."
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2><em>High-Context</em> Communication</h2>
+
+      <p>Anthropologist Edward T. Hall introduced the distinction between <strong>low-context</strong> cultures — where meaning is encoded explicitly in words — and <strong>high-context</strong> cultures — where meaning is embedded in shared history, relationship, and unspoken assumptions. Under sustained pressure, even naturally low-context speech communities shift toward high-context modes as a survival mechanism.</p>
+
+      <p>When explicit statement is dangerous, communication migrates into the space between words: tone, timing, reference, gesture, absence. The surface content of a conversation becomes almost irrelevant; what matters is the layer of shared understanding beneath it.</p>
+
+      <div class="example-block">
+        <div class="ex-label">High-Context Markers in Pressure Environments</div>
+        <p><strong>"Those who understand, understand" (<em>Anlayan anlar</em>)</strong> — a Turkish expression that functions as a permission slip for those in the know to interpret correctly, while offering deniability ("I was speaking generally").</p>
+        <p><strong>"You know the matter" (<em>bilirsiniz o meseleyi</em>)</strong> — invoking shared knowledge without naming it.</p>
+        <p><strong>"In the times we live in…"</strong> — a context marker that alerts the listener to interpret carefully without alerting observers to anything specific.</p>
+        <p><strong>Significant silence</strong> — the pointed pause that says more than the words surrounding it.</p>
+      </div>
+
+      <p>This shift to high-context communication has a paradoxical effect: it <em>deepens</em> in-group cohesion while rendering the group opaque to outsiders. Researchers studying political dissent in closed societies often note that transcripts of dissident conversations appear innocuous or even confusing to outside analysts — the meaning was never primarily in the words.</p>
+
+      <p>The cost is communicative efficiency. High-context communication is inherently slow, prone to misreading, and dependent on shared history that must be maintained and renewed. As James C. Scott noted in <em>Domination and the Arts of Resistance</em> (1990), the hidden transcript is not freely available to all — it requires initiation, trust, and sustained membership in the community of interpretation.</p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>Hedging and <em>Epistemic Buffers</em></h2>
+
+      <p>Linguistic hedges are epistemic softeners: words and phrases that qualify a claim, reduce the speaker's commitment to it, or signal uncertainty. In normal discourse, hedges perform legitimate functions — expressing genuine uncertainty, academic caution, or politeness. Under pressure, they are recruited as <strong>liability shields</strong>.</p>
+
+      <p>The vocabulary of epistemic distancing expands rapidly:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Hedge type</th>
+              <th>Examples</th>
+              <th>Protective function</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Approximators</td>
+              <td><em>perhaps, maybe, sort of, roughly</em></td>
+              <td>"I did not assert this definitively."</td>
+            </tr>
+            <tr>
+              <td>Attribution shields</td>
+              <td><em>some say, it is reported, there are those who claim</em></td>
+              <td>"I am merely conveying; I do not endorse."</td>
+            </tr>
+            <tr>
+              <td>Self-correction preempts</td>
+              <td><em>I could be wrong, but…; correct me if I'm mistaken…</em></td>
+              <td>"I am open to revision — not a committed actor."</td>
+            </tr>
+            <tr>
+              <td>Conditional framings</td>
+              <td><em>if what is said is true…; assuming these reports are accurate…</em></td>
+              <td>"My claim is contingent — I have not verified."</td>
+            </tr>
+            <tr>
+              <td>Universal deflections</td>
+              <td><em>these things happen everywhere; it's complicated</em></td>
+              <td>Dissolves the specific into the general.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Corpus linguists studying speech in authoritarian contexts have found hedge density to be a statistically reliable marker of topic sensitivity. In a 2008 study of Egyptian newspaper editorial language, linguist Magda Madkour found that political commentary on the Mubarak government used hedging constructions at nearly three times the rate of cultural coverage — even in private academic discourse.</p>
+
+      <p>The epistemic hedge creates a protective gap between speaker and statement. If the statement is challenged — politically, legally, socially — the speaker can retreat into that gap: <em>I was only speculating. I wasn't certain. I was reporting what others said.</em> The hedge transforms assertion into suggestion, conviction into tentative hypothesis.</p>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>The <em>Public Secret</em></h2>
+
+      <p>Sociologist Michael Taussig introduced the concept of the <strong>public secret</strong> to describe a social phenomenon as counterintuitive as it is common: the thing that is known by everyone, spoken about by no one, and whose collective non-naming is itself a form of power. The public secret is not ignorance — it is organized silence.</p>
+
+      <p>The structure is distinctive:</p>
+
+      <div class="example-block">
+        <div class="ex-label">The Anatomy of a Public Secret</div>
+        <p>1. Everyone knows X.</p>
+        <p>2. Everyone knows that everyone else knows X.</p>
+        <p>3. No one names X in explicit public discourse.</p>
+        <p>4. The unspoken knowing is acknowledged only through oblique references, silences, and meaningful looks.</p>
+        <p>5. To name X explicitly violates the tacit agreement — and may be punished.</p>
+      </div>
+
+      <p>The public secret operates as a collective survival mechanism. By maintaining the fiction of ignorance — not lying, exactly, but collectively refusing to articulate known truths — communities protect themselves from the formal consequences of acknowledged knowledge. If no one has officially stated that the emperor is naked, no one has committed the offense of saying so.</p>
+
+      <p>Historical examples are abundant. In the Soviet Union, the scale of Stalin's purges was a public secret through the 1930s and 40s: known broadly, discussed privately, never named in public. In apartheid South Africa, the systematic nature of state torture was a public secret acknowledged in whispers but absent from official discourse for decades. In present-day authoritarian states, the gap between what is known and what can be said constitutes a significant portion of actual political life.</p>
+
+      <div class="scholar-note">
+        <cite>James C. Scott</cite> in <em>Domination and the Arts of Resistance</em> describes this as the gap between the "public transcript" — the official, performed version of social reality — and the "hidden transcript" — what subordinates say among themselves when the powerful are not watching. The public transcript is not believed by those who perform it; it is a form of compelled theater, and both actors and audience know it.
+      </div>
+
+      <p>The public secret produces a distinctive cognitive double life. Citizens learn to hold two incompatible beliefs simultaneously: the official version they perform in public, and the experiential reality they inhabit in private. Václav Havel, in his 1978 essay "The Power of the Powerless," described this as "living within the lie" — not active deception of others, but the daily performance of believing what one does not believe, saying what one does not mean.</p>
+    </section>
+
+
+    <!-- SECTION 7 -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Section VII</span>
+      <h2><em>Layered Discourse</em>: Speaking to Multiple Audiences</h2>
+
+      <p>One of the most sophisticated adaptations under pressure is the development of discourse that <em>simultaneously addresses multiple audiences</em> with different levels of access to meaning. A single text or utterance carries:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Layer</th>
+              <th>Audience</th>
+              <th>Content</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Surface</td>
+              <td>Any observer, including hostile ones</td>
+              <td>Innocent, plausible, deniable</td>
+            </tr>
+            <tr>
+              <td>Middle</td>
+              <td>In-group members with shared context</td>
+              <td>True intent, coded references, real assessments</td>
+            </tr>
+            <tr>
+              <td>Deep</td>
+              <td>Intimates with full shared history</td>
+              <td>Emotional reality, unspoken grief, solidarity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>This structure appears in literary traditions under censorship with extraordinary consistency. Dante's <em>Letter to Can Grande</em> describes his <em>Commedia</em> as having four simultaneous levels of meaning: literal, allegorical, moral, and anagogical — a structure borrowed from medieval scriptural interpretation, but which also served the practical purpose of making the poem's political criticisms legible only to those prepared to read them.</p>
+
+      <p>In the Persianate tradition, the <em>ghazal</em> form became a laboratory for layered meaning. Hafez (1325–1390) wrote verses that could be read as love poetry, wine poetry, or Sufi metaphysics — and the political commentary embedded in references to tyrannical rulers was accessible only to those who knew which contemporary events the images pointed toward. Leo Strauss argued in <em>Persecution and the Art of Writing</em> (1952) that this was not accidental ornament but a systematic practice across cultures: thinkers under threat communicate their genuine views through careful literary structure, to the few capable of reading between the lines, while maintaining plausible orthodoxy for authorities.</p>
+
+      <div class="scholar-note">
+        <cite>Leo Strauss</cite>, <em>Persecution and the Art of Writing</em> (1952): "An able writer of such expositions will write between the lines. That is, he will write in such a way that only those who read slowly… will be able to discover what he has not said… and will find a message which is not on the surface."
+      </div>
+
+      <p>Contemporary examples range from Chinese internet culture to the humor of late Soviet society. Soviet political jokes (<em>anekdoty</em>) were perhaps the most efficient delivery system for layered discourse ever developed: their surface form — humor — provided protection (can you really arrest someone for a joke?), while their content communicated devastating social critique to everyone who shared the interpretive context.</p>
+
+      <div class="example-block">
+        <div class="ex-label">A Classic Soviet Anekdot (Political Joke)</div>
+        <p>"A man is arrested in Red Square shouting 'Khrushchev is an idiot!' He is sentenced to twenty-three years: three for insulting the leader, and twenty for revealing state secrets."</p>
+        <p style="margin-top:0.6rem; font-size:0.88rem; color:var(--muted);">The joke's surface is absurdist humor. Its middle layer communicates that the charge of "state secrets" confirms what no one could say directly: the leadership's incompetence was an open truth. Its deep layer is solidarity — the sharing of a forbidden perception makes the sharer complicit, and therefore safe with each other.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section id="s8" class="major-section">
+      <span class="section-label">Section VIII</span>
+      <h2><em>Internalized Censorship</em>: When the Guard Moves Inside</h2>
+
+      <p>The most profound — and most difficult to study — effect of sustained linguistic pressure is its migration from external constraint to internal architecture. The censor moves from outside to inside.</p>
+
+      <p>This process has a recognizable trajectory:</p>
+
+      <p><strong>Stage 1 — Strategic adaptation.</strong> The speaker consciously and deliberately modifies speech for self-protection. This is tactical: the speaker knows what they truly think, knows they are modifying it, and maintains the distinction between inner truth and outer speech.</p>
+
+      <p><strong>Stage 2 — Automatization.</strong> The strategic modifications become habitual — reflexive rather than deliberate. The speaker no longer consciously chooses to hedge; hedging is simply how the sentence comes out. The censor has been internalized but is still, at some level, recognizable as an external imposition now automated.</p>
+
+      <p><strong>Stage 3 — Colonization of thought.</strong> The most severe and most contested stage: the censored vocabulary and the forbidden framings become unavailable not just in speech but in conscious thought. The speaker can no longer fully articulate — even to themselves — what they actually think, because the conceptual vocabulary for doing so has been worn away.</p>
+
+      <p>Orwell's "Newspeak" in <em>Nineteen Eighty-Four</em> was a literary formalization of Stage 3: a language deliberately impoverished so that the concept of political rebellion becomes literally <em>unthinkable</em>, because the words for thinking it have been removed. Whether such complete colonization is achievable in practice remains debated among cognitive linguists — the Sapir-Whorf hypothesis (that language shapes the limits of thought) has a weak form that is broadly accepted and a strong form that is contested. But partial colonization — the gradual inaccessibility of certain concepts due to years of avoiding them — is widely documented.</p>
+
+      <div class="example-block">
+        <div class="ex-label">Internalized Censorship in Self-Description</div>
+        <p>A speaker who has lived for years under surveillance may notice that even in private, when writing in a personal journal or speaking to a fully trusted intimate, they still reach automatically for:</p>
+        <p><strong>"I am being cautious"</strong> rather than <em>"I am afraid."</em></p>
+        <p><strong>"I am being realistic"</strong> rather than <em>"I have given up."</em></p>
+        <p><strong>"I prefer not to engage with that topic"</strong> rather than <em>"That subject terrifies me."</em></p>
+        <p>The substitutions protect not from an external observer but from the speaker's own recognition of their condition. This is Stage 3: self-censorship in the service of self-ignorance.</p>
+      </div>
+
+      <div class="scholar-note">
+        <cite>Bruno Bettelheim</cite>, in <em>The Informed Heart</em> (1960), described a related process among concentration camp prisoners: the gradual adoption of guard language and guard categories as a psychological survival mechanism — not mere compliance, but genuine cognitive restructuring under extreme duress. Bettelheim called this identification with the aggressor; its linguistic dimension is that the aggressor's vocabulary replaces the victim's own.
+      </div>
+
+      <p>Foucault's concept of <strong>disciplinary power</strong> in <em>Discipline and Punish</em> (1975) provides the theoretical frame: power that must be exercised constantly by an external agent is inefficient. Power that induces the subject to exercise it upon themselves is far more economical and totalizing. The panopticon — the prison designed so that inmates cannot tell when they are being watched, and therefore must behave as if always watched — is a spatial metaphor for what internalized censorship does to language. The speaker becomes their own perpetual observer, their own permanent guard.</p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section id="s9" class="major-section">
+      <span class="section-label">Section IX</span>
+      <h2><em>Intergenerational</em> Transmission</h2>
+
+      <p>One of the most striking — and practically consequential — findings in the study of language under pressure is that its effects do not end when the pressure does. Linguistic survival strategies can persist across generations long after the original threat has passed.</p>
+
+      <p>Pierre Bourdieu's concept of <strong>habitus</strong> is the relevant frame: the durable dispositions acquired through lived experience, which become embedded in the body and the habits of perception, thought, and action — below the level of conscious choice. Linguistic habitus is the set of ways of speaking that feel natural, appropriate, and competent to a person raised in a particular social environment. When that environment is defined by threat, the habitus incorporates threat-adapted communication as its baseline.</p>
+
+      <p>Second-generation members of communities that survived censorship, exile, or persecution frequently report:</p>
+
+      <div class="example-block">
+        <div class="ex-label">Inherited Linguistic Patterns</div>
+        <p><strong>Aversion to explicit statement</strong> — a cultural valuation of indirectness and reading between lines, experienced as sophistication rather than fear.</p>
+        <p><strong>Hypervigilance in interpretation</strong> — a trained tendency to search for hidden meaning, unstated agendas, and double messages in otherwise direct communication.</p>
+        <p><strong>Distrust of explicit commitment</strong> — reluctance to go on record; preference for verbal formulations that preserve options and resist quotation.</p>
+        <p><strong>Treating obliqueness as "maturity"</strong> — internalizing the value judgment that people who speak directly are naive, while those who speak obliquely are wise.</p>
+      </div>
+
+      <p>This last point is particularly important: when a survival strategy is reframed as a cultural virtue — wisdom, sophistication, prudence — it is no longer experienced as an adaptation to threat. It becomes invisible as a strategy and becomes simply <em>how one speaks</em>. The pressure that originally produced it is no longer necessary to maintain it.</p>
+
+      <p>Sociolinguists working with diaspora communities have documented this extensively. Studies of third-generation Armenian Americans, second-generation Vietnamese Americans, and post-Soviet émigré communities all find measurable communication patterns — particularly around silence, indirection, and authority — that trace to the pressured environments their ancestors inhabited, even when the speakers themselves have lived entirely in open societies.</p>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section id="s10" class="major-section">
+      <span class="section-label">Section X</span>
+      <h2>Historical <em>Parallels</em></h2>
+
+      <p>The linguistic patterns described here are not specific to any single cultural tradition or historical moment. They emerge wherever sustained pressure meets the human need to communicate, and they take structurally similar forms across radically different contexts.</p>
+
+      <p>The communities most studied for the development of sophisticated survival language include:</p>
+
+      <p><strong>Jewish diaspora communities</strong> across two millennia developed a remarkable array of pressure-adapted communication forms. Yiddish itself carries the traces of its origins as an in-group language of an embattled community: its rich lexicon of irony, its distinctive use of intonation to reverse explicit meaning, its elaborate vocabulary for varieties of misfortune and for the absurdity of survival. Judeo-Arabic and Ladino (Judeo-Spanish) similarly developed internal vocabularies inaccessible to hostile outsiders. The <em>leshon nekiya</em> (pure tongue) rabbinic tradition of avoiding dangerous references in writing produced elaborate systems of circumlocution that became aesthetically valued even after their protective function faded.</p>
+
+      <p><strong>Ṣūfī writing traditions</strong> in the medieval Islamic world — Persian, Arabic, Turkish — developed the symbolic vocabulary of wine, tavern, and the beloved as a deliberate double language. The protective function was real: mystics like al-Ḥallāj were executed for their theology, and subsequent writers learned to veil theirs. But the aesthetic tradition thereby developed — poetry of exceptional subtlety and layered depth — outlasted the specific threats that produced it and became the dominant mode of serious lyrical expression in the Persianate world for centuries.</p>
+
+      <p><strong>Soviet and Eastern European intelligentsia</strong> under Communist rule developed what Czesław Miłosz called, in <em>The Captive Mind</em> (1953), <em>Ketman</em> — a term he borrowed from Persian, originally denoting the Shia practice of religious concealment under Sunni pressure. Miłosz described how Polish intellectuals had developed an entire inner life hidden beneath external conformity, and how this double existence ultimately deformed both the inner and the outer self. The linguistic register of <em>Ketman</em> — cooperative on the surface, corrosive underneath — was recognizable to any educated Eastern European of the period.</p>
+
+      <p><strong>Contemporary digital environments</strong> under censorship have produced some of the most creative modern examples. Chinese internet users developed entire parallel vocabularies: <em>héxiè</em> (river crab) as a homophone for "harmony" (the CCP slogan), used to mock censorship; <em>wǔmáo</em> (fifty cents) for paid government commenters. These coinages spread faster than censors could suppress them, exploiting the gap between the speed of language change and the speed of bureaucratic response.</p>
+
+      <div class="pull-quote">
+        "The poetry of survival is not an exception to the tradition — it <em>is</em> the tradition, wherever the tradition lived under threat long enough."
+      </div>
+    </section>
+
+    <!-- SECTION 11 -->
+    <section id="s11" class="major-section">
+      <span class="section-label">Section XI</span>
+      <h2>Fear vs. <em>Wisdom</em>: A Critical Distinction</h2>
+
+      <p>The analysis thus far may suggest that all indirection under pressure is pathological — a symptom of damaged speech. But there is an important distinction that the evidence supports and that the affected communities themselves often insist on:</p>
+
+      <p><strong>Caution born of fear</strong> is reactive, compelled, and corrosive. The speaker says less than they know, obscures what they believe, and experiences this concealment as loss. The primary driver is avoidance of punishment. The linguistic result is impoverishment: reduced vocabulary, contracted expression, degraded precision.</p>
+
+      <p><strong>Caution born of wisdom</strong> (<em>ḥikma</em>, <em>iḥtiyāṭ</em>) is principled, chosen, and generative. The speaker calibrates disclosure not merely to avoid harm but to maximize the effectiveness of communication: saying the right thing to the right person at the right time, in the form most likely to be heard. The linguistic result can be enrichment: greater attention to register, audience, context, and the precise work each word does.</p>
+
+      <p>The Islamic intellectual tradition developed this distinction carefully. The Qur'anic concept of <em>tawriya</em> (concealment of truth from those unworthy or unprepared to receive it) is validated as distinct from <em>kadhib</em> (lying). The Prophet's practice of <em>mujāmalah</em> — speaking pleasantly to those one disagrees with — is presented as social grace, not deception. The rule of <em>taqiyya</em> (permissible religious concealment under direct threat) is carefully bounded: it protects life, not convenience; it does not extend to active false witness against the innocent.</p>
+
+      <p>The distinction maps onto a psychological one documented in trauma research. <strong>Hypervigilance</strong> — the continuous scanning for threat even in safe environments — is a trauma response that degrades quality of life and relationships. <strong>Wisdom and discernment</strong> — the accurate reading of which environments are safe and which require care — is an adaptive skill that enhances them. The challenge for individuals and communities that have lived under pressure is to retain the second capacity while recovering from the first.</p>
+
+      <div class="scholar-note">
+        <cite>Al-Ghazālī</cite> in <em>Iḥyāʾ ʿUlūm al-Dīn</em> addresses this tension directly in his chapter on the etiquette of speech (<em>ādāb al-ṣamt wa'l-kalām</em>): silence at the right moment is among the highest expressions of intelligence; speech at the wrong moment, even true speech, can be a form of foolishness. The discipline is knowing which moment you are in.
+      </div>
+    </section>
+
+    <!-- SECTION 12 -->
+    <section id="s12" class="major-section">
+      <span class="section-label">Section XII</span>
+      <h2>The <em>Cascade Model</em></h2>
+
+      <p>Drawing the analysis together, the transformation of language under sustained pressure follows a recognizable cascade. Each stage is both a response to the previous stage and a cause of the next:</p>
+
+      <div class="flow-model">
+        <div class="fm-title">How Pressure Restructures Language</div>
+
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>External pressure increases</strong>
+            <span> (surveillance, censorship, punishment, social exclusion)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Explicit statement becomes costly</strong>
+            <span> (direct claims carry legal, social, or physical risk)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Agents are suppressed</strong>
+            <span> (passive constructions, nominalization, impersonal forms increase)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Vocabulary is sterilized or encoded</strong>
+            <span> (dangerous words replaced by euphemisms or in-group code)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Context carries more weight than content</strong>
+            <span> (high-context communication; shared history does the work of words)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Hedges proliferate</strong>
+            <span> (epistemic softeners create gap between speaker and claim)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Silence becomes meaningful</strong>
+            <span> (public secrets; what is not said carries as much information as what is)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Layered discourse emerges</strong>
+            <span> (texts address multiple audiences simultaneously at different depths)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Strategies automatize</strong>
+            <span> (conscious tactics become unconscious habits — habitus)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Thought is colonized</strong>
+            <span> (the censor moves inside; forbidden framings become hard to think)</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-arrow">→</div>
+          <div class="flow-text">
+            <strong>Patterns transmit across generations</strong>
+            <span> (habitus passes to children as cultural style, long after the original threat ends)</span>
+          </div>
+        </div>
+      </div>
+
+      <p>The final observation is perhaps the most sobering. Language transformed by pressure does not automatically recover when the pressure is removed. The habits of indirection, the vocabulary of concealment, the reflexive hedging — these become part of a community's communicative identity. Recovery, where it happens, requires active and deliberate work: the cultivation of new habits of speech, new permissions to be explicit, new practices of naming.</p>
+
+      <p>The most powerful antidote is usually a combination of safety (actual, not merely formal) and models: people who demonstrate that direct speech is possible and survivable, and whose directness creates permission for others to follow. Language, in the end, is a collective practice. It is damaged collectively, and it is healed collectively — slowly, unevenly, and never entirely.</p>
+
+    </section>
+
+  </article>
+
+</main>
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      if (docH > 0) bar.style.width = (scrollTop / docH * 100) + '%';
+    }, { passive: true });
+  }
+
+  // TOC: close on anchor click
+  document.querySelectorAll('.toc-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('tocOverlay').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
