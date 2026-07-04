@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Map of the Disciplines: Every Field's Deepest Question | Yasir Bilgin</title>
+
+  <meta name="description" content="A fact-checked map of the deepest questions driving philosophy, science, and every field between them — organized, cross-referenced, and filterable by theme.">
+  <meta name="keywords" content="big questions, philosophy of science, interdisciplinary studies">
+
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/Big-Questions/map-of-the-disciplines.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="The Map of the Disciplines: Every Field's Deepest Question">
+  <meta property="og:description" content="A fact-checked map of the deepest questions driving philosophy, science, and every field between them — organized, cross-referenced, and filterable by theme.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Big-Questions/map-of-the-disciplines.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="The Map of the Disciplines: Every Field's Deepest Question">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="The Map of the Disciplines: Every Field's Deepest Question">
+  <meta name="twitter:description" content="A fact-checked map of the deepest questions driving philosophy, science, and every field between them — organized, cross-referenced, and filterable by theme.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Map of the Disciplines: Every Field's Deepest Question",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-07-04",
+    "dateModified": "2026-07-04",
+    "description": "A fact-checked map of the deepest questions driving philosophy, science, and every field between them — organized, cross-referenced, and filterable by theme.",
+    "url": "https://yasirbilgin.com/atlas/Big-Questions/map-of-the-disciplines.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "The Map of the Disciplines: Every Field's Deepest Question", "item": "https://yasirbilgin.com/atlas/Big-Questions/map-of-the-disciplines.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --bg-raised: #fffaf2;
+      --ink: #221d15;
+      --ink-soft: #3c3327;
+      --faint: #6e5f4e;
+      --rule: rgba(107,93,79,0.22);
+      --card-border: rgba(107,93,79,0.20);
+      --accent: #a8752e;
+      --accent-deep: #7c5920;
+      --accent-soft: rgba(168,117,46,0.12);
+      --hum: #8a4a3c;
+      --soc: #3c6e5c;
+      --pos: #3b5878;
+      --nav-h: 62px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #131310;
+        --bg-raised: #1c1911;
+        --ink: #ece7de;
+        --ink-soft: #d8d1c4;
+        --faint: #a8a4a0;
+        --rule: rgba(255,255,255,0.14);
+        --card-border: rgba(255,255,255,0.14);
+        --accent: #cd9a4d;
+        --accent-deep: #e0b06a;
+        --accent-soft: rgba(205,154,77,0.14);
+        --hum: #cf8a78;
+        --soc: #7fbfa5;
+        --pos: #8caed6;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink-soft);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; color: var(--ink); font-weight: 600; }
+    em { font-style: italic; color: var(--accent-deep); }
+    a { color: var(--accent-deep); }
+    .ui { font-family: 'DM Sans', sans-serif; }
+
+    /* Progress bar */
+    .progress-bar { position: fixed; top: 62px; left: 0; height: 3px; background: var(--accent); width: 0%; z-index: 100; transition: width .1s linear; }
+
+    /* TOC overlay */
+    .toc-overlay { display: none; position: fixed; inset: 0; z-index: 9000; background: rgba(24,20,14,0.55); }
+    .toc-overlay.open { display: flex; align-items: flex-start; justify-content: flex-end; backdrop-filter: blur(4px); }
+    .toc-panel { background: var(--bg-raised); width: min(360px, 88vw); height: 100%; padding: 2rem 1.6rem; overflow-y: auto; box-shadow: -8px 0 30px rgba(0,0,0,0.25); }
+    .toc-panel h3 { font-size: 1.3rem; margin: 0 0 1.2rem; }
+    .toc-panel button.close-toc { background: none; border: 1px solid var(--rule); border-radius: 999px; width: 36px; height: 36px; font-size: 1rem; color: var(--ink); cursor: pointer; float: right; min-height: 44px; min-width: 44px; }
+    .toc-panel button.close-toc:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-list { list-style: none; margin: 3.2rem 0 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a { display: block; padding: 0.7rem 0.3rem; text-decoration: none; color: var(--ink-soft); border-bottom: 1px solid var(--rule); font-family: 'DM Sans', sans-serif; font-size: 0.92rem; min-height: 44px; }
+    .toc-list a.toc-main { font-weight: 600; color: var(--ink); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.06em; padding-top: 1.1rem; }
+    .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .toc-list a:hover { color: var(--accent-deep); }
+
+    /* Eyebrow */
+    .eyebrow {
+      display: inline-flex; align-items: center; margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem; border: 1px solid rgba(107,93,79,0.22); border-radius: 999px;
+      color: var(--faint); font-size: 0.72rem; font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em; text-transform: uppercase; background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow { border-color: rgba(255,255,255,0.14); background: rgba(30,27,23,0.7); color: var(--faint); }
+    }
+
+    /* Hero */
+    .hero { max-width: 880px; margin: 0 auto; padding: 3.4rem 2.5rem 0; text-align: left; }
+    .hero h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.05; margin: 0 0 1.1rem; }
+    .hero-sub { font-size: clamp(1.05rem, 2vw, 1.28rem); color: var(--faint); max-width: 640px; margin: 0 0 2rem; line-height: 1.6; }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 2.4rem; }
+    .avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; flex-shrink: 0; }
+    .byline-text { display: flex; flex-direction: column; font-family: 'DM Sans', sans-serif; }
+    .byline-name { font-weight: 600; color: var(--ink); font-size: 0.92rem; }
+    .byline-meta { color: var(--faint); font-size: 0.8rem; }
+    hr.hero-rule { border: none; border-top: 1px solid var(--rule); max-width: 880px; margin: 0 auto; }
+
+    /* Article header (static, per spec) */
+    .article-header {
+      display: flex; align-items: center; justify-content: flex-end; gap: 1rem;
+      max-width: 880px; margin: 0 auto; padding: 0.9rem 2.5rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .read-time { color: var(--faint); font-size: 0.85rem; }
+    .toc-btn {
+      background: var(--bg-raised); border: 1px solid var(--rule); color: var(--ink);
+      padding: 0.55rem 1.1rem; border-radius: 999px; font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; cursor: pointer; min-height: 44px;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--accent-deep); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .article-body { max-width: 1120px; margin: 0 auto; padding: 1rem 2.5rem 8rem; }
+    .prose { max-width: 780px; }
+    .major-section { padding: 3.2rem 0; border-top: 1px solid var(--rule); scroll-margin-top: 80px; }
+    .major-section:first-child { border-top: none; }
+    .section-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 0.6rem; }
+    h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); margin: 0 0 1rem; }
+    h3.sub-heading { font-size: 1.35rem; margin: 2rem 0 0.8rem; }
+    .sh-num { color: var(--accent); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; margin-right: 0.5rem; }
+    p { margin: 0 0 1.2rem; }
+
+    /* Compass / signature diagram */
+    .compass-wrap { max-width: 880px; margin: 1rem auto 0; padding: 0 2.5rem; }
+    .compass-fig { background: var(--bg-raised); border: 1px solid var(--card-border); border-radius: 18px; padding: 1.6rem; }
+    .compass-fig svg { width: 100%; height: auto; display: block; }
+    .compass-cap { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--faint); text-align: center; margin-top: 0.9rem; padding: 0 0.5rem; }
+
+    /* Shared-questions table */
+    .table-wrap { overflow-x: auto; border: 1px solid var(--card-border); border-radius: 12px; }
+    table.q-table { width: 100%; border-collapse: collapse; font-size: 0.94rem; min-width: 480px; }
+    table.q-table th, table.q-table td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    table.q-table th { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); background: var(--accent-soft); }
+    table.q-table tr:last-child td { border-bottom: none; }
+    table.q-table td:first-child { font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--ink); font-size: 1.05rem; white-space: nowrap; }
+
+    /* Pull quote / deepest question */
+    .deepest-q {
+      margin: 1.4rem 0 0; padding: 1rem 1.3rem; border-left: 3px solid var(--accent);
+      background: var(--accent-soft); border-radius: 0 10px 10px 0; font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-style: italic; color: var(--ink);
+    }
+    .deepest-q b { font-style: normal; font-family: 'DM Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); display: block; margin-bottom: 0.4rem; }
+
+    /* Filter layout — side filter + content */
+    .filter-layout { display: grid; grid-template-columns: 250px 1fr; gap: 2.4rem; margin-top: 1.8rem; align-items: start; }
+    .filter-sidebar {
+      position: sticky; top: calc(var(--nav-h) + 24px);
+      background: var(--bg-raised); border: 1px solid var(--card-border); border-radius: 16px;
+      padding: 1.4rem 1.3rem; font-family: 'DM Sans', sans-serif;
+    }
+    .sidebar-block { margin-bottom: 1.3rem; }
+    .sidebar-block:last-of-type { margin-bottom: 0; }
+    .filter-row-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint); margin-bottom: 0.55rem; }
+    .chip-stack { display: flex; flex-direction: column; gap: 0.4rem; }
+    .search-input {
+      width: 100%; font-family: 'DM Sans', sans-serif; font-size: 0.86rem; padding: 0.6rem 0.9rem;
+      border-radius: 10px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink);
+      min-height: 44px;
+    }
+    .search-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .chip {
+      font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 0.55rem 0.8rem;
+      border-radius: 10px; border: 1px solid var(--rule); background: var(--bg);
+      color: var(--ink-soft); cursor: pointer; min-height: 40px; text-align: left;
+      display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+      transition: background .15s, color .15s, border-color .15s; width: 100%;
+    }
+    .chip:hover { border-color: var(--accent); }
+    .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .chip.active .chip-count { opacity: 0.85; }
+    .chip.active.dom-humanities { background: var(--hum); border-color: var(--hum); }
+    .chip.active.dom-social { background: var(--soc); border-color: var(--soc); }
+    .chip.active.dom-positive { background: var(--pos); border-color: var(--pos); }
+    .chip-count { font-size: 0.68rem; opacity: 0.6; }
+    .clear-btn {
+      width: 100%; margin-top: 1rem; background: none; border: 1px solid var(--rule); border-radius: 999px;
+      padding: 0.55rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--faint);
+      cursor: pointer; min-height: 40px;
+    }
+    .clear-btn:hover { border-color: var(--accent); color: var(--accent-deep); }
+    .clear-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .result-count { font-family: 'DM Sans', sans-serif; font-size: 0.76rem; color: var(--faint); text-align: center; margin: 0.9rem 0 0; }
+
+    /* Discipline cards */
+    .card-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1.4rem; }
+    .discipline-card { border: 1px solid var(--card-border); border-radius: 14px; background: var(--bg-raised); overflow: hidden; }
+    .discipline-card.is-hidden { display: none; }
+    .card-toggle {
+      width: 100%; display: flex; align-items: center; gap: 0.9rem; text-align: left;
+      background: none; border: none; padding: 1.1rem 1.3rem; cursor: pointer; min-height: 44px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .card-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .card-num { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 700; color: #fff; background: var(--accent); border-radius: 999px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .card-num.hum { background: var(--hum); }
+    .card-num.soc { background: var(--soc); }
+    .card-num.pos { background: var(--pos); }
+    .card-title-wrap { flex: 1; }
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--ink); font-weight: 600; display: block; }
+    .card-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.3rem; }
+    .tag-pill { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.18rem 0.55rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); }
+    .card-chevron { font-size: 1.1rem; color: var(--faint); transition: transform .2s; flex-shrink: 0; }
+    .discipline-card.open .card-chevron { transform: rotate(180deg); }
+    .card-body { padding: 0 1.3rem 1.4rem; }
+    .card-body[hidden] { display: none; }
+    .example-note { margin: 1.1rem 0 0; padding: 0.9rem 1.1rem; background: rgba(107,93,79,0.06); border-radius: 10px; font-size: 0.96rem; }
+    .example-note strong { font-family: 'DM Sans', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); display: block; margin-bottom: 0.4rem; }
+    .no-results { display: none; padding: 2.4rem 1rem; text-align: center; color: var(--faint); font-family: 'DM Sans', sans-serif; }
+    .no-results.show { display: block; }
+
+    /* Domain divider */
+    .domain-block { scroll-margin-top: 100px; margin-top: 2.6rem; }
+    .domain-block:first-child { margin-top: 0; }
+    .domain-divider { display: flex; align-items: center; gap: 1rem; margin: 0 0 0.4rem; }
+    .domain-divider .dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .domain-divider.hum .dot { background: var(--hum); }
+    .domain-divider.soc .dot { background: var(--soc); }
+    .domain-divider.pos .dot { background: var(--pos); }
+    .domain-divider h3 { margin: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
+    .domain-intro { color: var(--faint); font-size: 1rem; margin: 0.6rem 0 0; }
+
+    /* Compact map table */
+    table.map-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 640px; }
+    table.map-table th, table.map-table td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--rule); }
+    table.map-table th { font-family: 'DM Sans', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--faint); background: var(--accent-soft); }
+    table.map-table td:nth-child(1) { font-weight: 600; color: var(--ink); }
+
+    /* Synthesis cards */
+    .synth-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.6rem; }
+    .synth-card { border: 1px solid var(--card-border); background: var(--bg-raised); border-radius: 14px; padding: 1.4rem; }
+    .synth-card .num { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; color: var(--accent-deep); letter-spacing: 0.1em; text-transform: uppercase; }
+    .synth-card h3 { margin: 0.5rem 0 0.5rem; font-size: 1.3rem; }
+    .synth-card p { font-size: 0.94rem; margin-bottom: 0.5rem; }
+    .synth-card .studied-by { font-family: 'DM Sans', sans-serif; font-size: 0.76rem; color: var(--faint); }
+
+    .caveat { font-size: 0.9rem; color: var(--faint); border-left: 2px solid var(--rule); padding-left: 0.9rem; margin: 1rem 0; }
+
+    footer { text-align: center; padding: 3rem 1.5rem 4rem; font-family: 'DM Sans', sans-serif; }
+    .footer-logo { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 0.4rem; }
+    .footer-copy { color: var(--faint); font-size: 0.8rem; }
+
+    @media (max-width: 860px) {
+      .filter-layout { grid-template-columns: 1fr; }
+      .filter-sidebar { position: static; }
+    }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 2.4rem 1.4rem 0; }
+      .article-body { padding: 1rem 1.4rem 5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .compass-wrap { padding: 0 1.4rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+<main id="main-content">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="toc-overlay" id="tocOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="close-toc" onclick="document.getElementById('tocOverlay').classList.remove('open')" aria-label="Close table of contents">✕</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-main">I. The Shared Questions</a></li>
+        <li><a href="#s2" class="toc-main">II. The Humanities</a></li>
+        <li><a href="#s3" class="toc-main">III. The Social Sciences</a></li>
+        <li><a href="#s4" class="toc-main">IV. The Positive Sciences</a></li>
+        <li><a href="#s5" class="toc-main">V. The Compact Master Map</a></li>
+        <li><a href="#s6" class="toc-main">VI. The Civilization-Level Synthesis</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow">Atlas · Big Questions</div>
+    <h1>The Map of the <em>Disciplines</em></h1>
+    <p class="hero-sub">Every field of human inquiry — from metaphysics to machine learning — is quietly trying to answer one or two questions that outlast every textbook edition. This is a searchable field guide to those questions: 32 disciplines, organized by domain, cross-referenced by theme, and grounded in named scholars and real examples rather than abstractions.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">Yasir Bilgin · July 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <header class="article-header">
+    <span class="read-time">42 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+  </header>
+
+  <div class="compass-wrap">
+    <figure class="compass-fig">
+      <svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="compassTitle compassDesc">
+        <title id="compassTitle">The twelve shared questions</title>
+        <desc id="compassDesc">A compass diagram showing twelve core questions — reality, life, the human being, truth, good, beauty, society, meaning, power, knowledge, order, and change — arranged around a central hub reading "every discipline."</desc>
+        <circle cx="320" cy="320" r="230" fill="none" stroke="var(--rule)" stroke-width="1"/>
+        <circle cx="320" cy="320" r="160" fill="none" stroke="var(--rule)" stroke-width="1"/>
+        <circle cx="320" cy="320" r="86" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="320" y="313" text-anchor="middle" font-family="Cormorant Garamond, serif" font-weight="600" font-size="21" fill="var(--ink)">Every</text>
+        <text x="320" y="336" text-anchor="middle" font-family="Cormorant Garamond, serif" font-weight="600" font-size="21" fill="var(--ink)">Discipline</text>
+        <g font-family="DM Sans, sans-serif" font-size="13.5" fill="var(--ink-soft)">
+          <g><line x1="320" y1="234" x2="320" y2="90" stroke="var(--rule)"/><text x="320" y="78" text-anchor="middle">Reality</text></g>
+          <g><line x1="374" y1="248" x2="466" y2="122" stroke="var(--rule)"/><text x="486" y="112" text-anchor="middle">Truth</text></g>
+          <g><line x1="410" y1="284" x2="558" y2="192" stroke="var(--rule)"/><text x="586" y="188" text-anchor="middle">Order</text></g>
+          <g><line x1="406" y1="320" x2="576" y2="320" stroke="var(--rule)"/><text x="600" y="325" text-anchor="middle">Society</text></g>
+          <g><line x1="410" y1="356" x2="558" y2="448" stroke="var(--rule)"/><text x="584" y="466" text-anchor="middle">Power</text></g>
+          <g><line x1="374" y1="392" x2="466" y2="518" stroke="var(--rule)"/><text x="480" y="540" text-anchor="middle">Change</text></g>
+          <g><line x1="320" y1="406" x2="320" y2="550" stroke="var(--rule)"/><text x="320" y="572" text-anchor="middle">Good</text></g>
+          <g><line x1="266" y1="392" x2="174" y2="518" stroke="var(--rule)"/><text x="160" y="540" text-anchor="middle">Beauty</text></g>
+          <g><line x1="230" y1="356" x2="82" y2="448" stroke="var(--rule)"/><text x="56" y="466" text-anchor="middle">Meaning</text></g>
+          <g><line x1="234" y1="320" x2="64" y2="320" stroke="var(--rule)"/><text x="40" y="325" text-anchor="middle">Knowledge</text></g>
+          <g><line x1="230" y1="284" x2="82" y2="192" stroke="var(--rule)"/><text x="52" y="188" text-anchor="middle">Life</text></g>
+          <g><line x1="266" y1="248" x2="174" y2="122" stroke="var(--rule)"/><text x="150" y="106" text-anchor="middle">Human Being</text></g>
+        </g>
+      </svg>
+      <figcaption class="compass-cap">The twelve questions that recur across nearly every field below — a shorthand for what each discipline is really orbiting.</figcaption>
+    </figure>
+  </div>
+
+  <article class="article-body">
+
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>The Shared Questions</h2>
+      <div class="prose">
+        <p>Every discipline eventually collides with a small set of questions it did not invent and cannot fully close. Physics and theology both ask what reality is, just with different instruments. Law and ethics both ask what is good, just with different enforcement mechanisms. The table below is the shorthand key for the rest of this page — each discipline card further down is tagged against one or two of these twelve.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="q-table">
+          <thead><tr><th>Core question</th><th>Disciplines that approach it</th></tr></thead>
+          <tbody>
+            <tr><td>What is reality?</td><td>Philosophy, physics, cosmology, metaphysics</td></tr>
+            <tr><td>What is life?</td><td>Biology, medicine, ecology</td></tr>
+            <tr><td>What is the human being?</td><td>Psychology, anthropology, theology, neuroscience</td></tr>
+            <tr><td>What is truth?</td><td>Philosophy, logic, science, history, law</td></tr>
+            <tr><td>What is good?</td><td>Ethics, religion, political theory, law</td></tr>
+            <tr><td>What is beauty?</td><td>Art, literature, aesthetics, architecture</td></tr>
+            <tr><td>What is society?</td><td>Sociology, political science, economics, anthropology</td></tr>
+            <tr><td>What is meaning?</td><td>Religion, philosophy, literature, psychology</td></tr>
+            <tr><td>What is power?</td><td>Politics, history, sociology, economics</td></tr>
+            <tr><td>What is knowledge?</td><td>Epistemology, education, cognitive science, AI</td></tr>
+            <tr><td>What is order?</td><td>Mathematics, physics, systems theory, law, governance</td></tr>
+            <tr><td>What is change?</td><td>History, evolution, economics, geology, sociology</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose" style="margin-top:1.6rem;">
+        <p>This page groups 32 disciplines into three traditional domains of inquiry:</p>
+      </div>
+      <div class="table-wrap">
+        <table class="q-table">
+          <thead><tr><th>Domain</th><th>What it asks</th></tr></thead>
+          <tbody>
+            <tr><td>Humanities</td><td>What does it mean to be human, to interpret meaning, to inherit memory, and to live wisely?</td></tr>
+            <tr><td>Social sciences</td><td>How do human beings behave, organize, cooperate, compete, and govern?</td></tr>
+            <tr><td>Positive sciences</td><td>What is, and how does it work — tested through observation, measurement, and experiment?</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="caveat">A note on "positive sciences": the phrase comes from Auguste Comte's 19th-century positivism, which had a specific three-stage theory of knowledge in mind. This page uses the term more loosely, in its common contemporary sense — natural, formal, and applied sciences grounded in observation and testable prediction — not Comte's original philosophical system.</p>
+    </section>
+
+    <section class="major-section">
+      <span class="section-label">Sections II – IV</span>
+      <h2>Browse the Thirty-Two Disciplines</h2>
+      <div class="prose">
+        <p>Filter by domain or by shared question in the sidebar, or search directly for a scholar, term, or field. Every card expands into the discipline's full set of sub-questions, its deepest question, and one grounded, fact-checked example.</p>
+      </div>
+
+      <div class="filter-layout">
+        <aside class="filter-sidebar" aria-label="Filter disciplines">
+          <div class="sidebar-block">
+            <label class="filter-row-label" for="disciplineSearch">Search</label>
+            <input type="text" class="search-input" id="disciplineSearch" placeholder="Scholar, term, or field…" aria-label="Search disciplines">
+          </div>
+          <div class="sidebar-block">
+            <span class="filter-row-label">Domain</span>
+            <div class="chip-stack" role="group" aria-label="Filter by domain">
+              <button class="chip active" data-filter-domain="all">All disciplines <span class="chip-count">32</span></button>
+              <button class="chip" data-filter-domain="humanities">Humanities <span class="chip-count">9</span></button>
+              <button class="chip" data-filter-domain="social">Social Sciences <span class="chip-count">10</span></button>
+              <button class="chip" data-filter-domain="positive">Positive Sciences <span class="chip-count">13</span></button>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <span class="filter-row-label">Shared question</span>
+            <div class="chip-stack" role="group" aria-label="Filter by shared question">
+              <button class="chip active" data-filter-theme="all">All themes</button>
+              <button class="chip" data-filter-theme="reality">Reality</button>
+              <button class="chip" data-filter-theme="life">Life</button>
+              <button class="chip" data-filter-theme="human">Human Being</button>
+              <button class="chip" data-filter-theme="truth">Truth</button>
+              <button class="chip" data-filter-theme="good">Good</button>
+              <button class="chip" data-filter-theme="beauty">Beauty</button>
+              <button class="chip" data-filter-theme="society">Society</button>
+              <button class="chip" data-filter-theme="meaning">Meaning</button>
+              <button class="chip" data-filter-theme="power">Power</button>
+              <button class="chip" data-filter-theme="knowledge">Knowledge</button>
+              <button class="chip" data-filter-theme="order">Order</button>
+              <button class="chip" data-filter-theme="change">Change</button>
+            </div>
+          </div>
+          <button class="clear-btn" id="clearFilters">Clear all filters</button>
+          <p class="result-count" id="resultCount">32 of 32 shown</p>
+        </aside>
+
+        <div class="filter-main">
+          <div id="s2" class="domain-block">
+            <div class="domain-divider hum"><span class="dot"></span><h3>The Humanities</h3></div>
+            <p class="domain-intro">Nine disciplines asking what it means to be human, to interpret meaning, to inherit memory, and to live wisely.</p>
+
+            <div class="card-grid" id="grid-humanities">
+
+              <div class="discipline-card" data-domain="humanities" data-themes="truth reality" data-search="philosophy metaphysics epistemology ethics logic aesthetics descartes ibn sina avicenna floating man">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H1</span>
+                  <span class="card-title-wrap"><span class="card-title">Philosophy</span>
+                    <span class="card-tags"><span class="tag-pill">Truth</span><span class="tag-pill">Reality</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Branch</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Metaphysics</td><td>What exists? Is reality material, mental, spiritual, or layered?</td></tr>
+                    <tr><td>Epistemology</td><td>What can we know, and how do we distinguish truth from illusion?</td></tr>
+                    <tr><td>Ethics</td><td>What is the good life? What makes an action right or wrong?</td></tr>
+                    <tr><td>Logic</td><td>What is valid reasoning, and how do we avoid contradiction and fallacy?</td></tr>
+                    <tr><td>Aesthetics</td><td>Is beauty subjective, objective, or relational?</td></tr>
+                    <tr><td>Philosophy of mind</td><td>What is consciousness? Is the mind reducible to the brain?</td></tr>
+                    <tr><td>Political philosophy</td><td>What is justice? What gives authority legitimacy?</td></tr>
+                    <tr><td>Philosophy of religion</td><td>Does God exist? How do faith and reason relate?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Descartes's <em>cogito ergo sum</em> (1637) tried to doubt everything except the fact of doubting itself. Four centuries earlier, the Persian polymath Ibn Sina (Avicenna) reached a strikingly similar conclusion about self-awareness through his "Floating Man" thought experiment — a reminder that these are recurring human problems, not any one civilization's invention.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How should a human being understand reality and live accordingly?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="meaning reality" data-search="religion theology god creation revelation worship evil salvation ritual eschatology ghazali averroes ibn rushd">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H2</span>
+                  <span class="card-title-wrap"><span class="card-title">Religion &amp; Theology</span>
+                    <span class="card-tags"><span class="tag-pill">Meaning</span><span class="tag-pill">Reality</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>God</td><td>Who or what is ultimate reality?</td></tr>
+                    <tr><td>Creation</td><td>Why does the universe exist at all?</td></tr>
+                    <tr><td>Revelation</td><td>Does the divine communicate with humanity?</td></tr>
+                    <tr><td>Worship</td><td>What is the right relationship between human beings and the sacred?</td></tr>
+                    <tr><td>Evil</td><td>Why is there suffering, injustice, and death?</td></tr>
+                    <tr><td>Salvation</td><td>What does it mean to be saved, purified, liberated, or fulfilled?</td></tr>
+                    <tr><td>Ritual</td><td>How do repeated practices shape the soul and community?</td></tr>
+                    <tr><td>Eschatology</td><td>What is the final destiny of the human being and the cosmos?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>al-Ghazali's <em>Tahafut al-Falasifa</em> ("The Incoherence of the Philosophers," c. 1095) accused the Muslim Peripatetic philosophers of overreaching reason on matters like the eternity of the world. Ibn Rushd (Averroes) answered a generation later with <em>Tahafut al-Tahafut</em> ("The Incoherence of the Incoherence") — one of history's most sustained faith-reason exchanges, and a direct ancestor of debates still running in philosophy of religion today.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What is the human being in relation to the Absolute?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="change power" data-search="history causality memory power agency progress method ibn khaldun asabiyyah fukuyama end of history toynbee">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H3</span>
+                  <span class="card-title-wrap"><span class="card-title">History</span>
+                    <span class="card-tags"><span class="tag-pill">Change</span><span class="tag-pill">Power</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Causality</td><td>Why do civilizations rise and fall?</td></tr>
+                    <tr><td>Memory</td><td>How do societies remember and forget?</td></tr>
+                    <tr><td>Power</td><td>Who controls historical narratives?</td></tr>
+                    <tr><td>Change</td><td>What causes revolutions, reforms, collapses, and renewals?</td></tr>
+                    <tr><td>Agency</td><td>Do individuals make history, or do structures shape individuals?</td></tr>
+                    <tr><td>Progress</td><td>Is history moving toward improvement, decline, cycles, or judgment?</td></tr>
+                    <tr><td>Method</td><td>Can we know the past objectively?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Ibn Khaldun's <em>Muqaddimah</em> (1377) proposed that civilizations rise and fall in cycles driven by <em>asabiyyah</em> — group solidarity — that hardens into cohesion in adversity and dissolves into luxury and factionalism once in power, prefiguring later cyclical theories by Spengler and Toynbee by roughly five centuries. Compare that to Francis Fukuyama's far more contested 1992 "end of history" thesis, which argued liberal democracy was humanity's terminal form of government — a claim many historians consider empirically premature.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How did we become what we are?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="meaning human" data-search="literature tragedy desire language narrative imagination identity aristotle poetics hamartia catharsis">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H4</span>
+                  <span class="card-title-wrap"><span class="card-title">Literature</span>
+                    <span class="card-tags"><span class="tag-pill">Meaning</span><span class="tag-pill">Human Being</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Human experience</td><td>What does it feel like to be human?</td></tr>
+                    <tr><td>Tragedy</td><td>Why do noble people fall?</td></tr>
+                    <tr><td>Desire</td><td>What do humans seek, and why are they restless?</td></tr>
+                    <tr><td>Language</td><td>How does language create worlds of meaning?</td></tr>
+                    <tr><td>Narrative</td><td>Why do humans understand life through stories?</td></tr>
+                    <tr><td>Imagination</td><td>Can fiction reveal truth better than factual description?</td></tr>
+                    <tr><td>Identity</td><td>How do memory, love, loss, exile, and longing shape the self?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Aristotle's <em>Poetics</em> (c. 335 BCE) formalized tragedy as a noble character's downfall through <em>hamartia</em> — a fatal error, not necessarily a moral vice — producing <em>catharsis</em>, a purging of pity and fear in the audience. The same mechanism still explains why <em>King Lear</em> and <em>Death of a Salesman</em>, written two thousand years apart, work on an audience the same way.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What truths about human existence can only be shown through story, metaphor, and voice?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="knowledge human" data-search="linguistics philology chomsky universal grammar pirahã everett sapir whorf translation">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H5</span>
+                  <span class="card-title-wrap"><span class="card-title">Linguistics &amp; Philology</span>
+                    <span class="card-tags"><span class="tag-pill">Knowledge</span><span class="tag-pill">Human Being</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Language origin</td><td>How did language emerge?</td></tr>
+                    <tr><td>Meaning</td><td>How do words carry meaning?</td></tr>
+                    <tr><td>Grammar</td><td>Are there universal structures beneath all languages?</td></tr>
+                    <tr><td>Change</td><td>Why do languages evolve?</td></tr>
+                    <tr><td>Translation</td><td>Can meaning truly move from one language to another?</td></tr>
+                    <tr><td>Power</td><td>How does language include, exclude, manipulate, or liberate?</td></tr>
+                    <tr><td>Sacred language</td><td>What happens when revelation, law, or identity depends on precise wording?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Noam Chomsky's "universal grammar" hypothesis (from 1957 onward) holds that every human language shares a deep, innate structural blueprint. It remains genuinely contested: linguist Daniel Everett's fieldwork on the Amazonian Pirahã language argued the tribe's grammar lacks recursion and number words altogether, challenging the idea that any single structure is universal. Both camps still publish against each other.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does language shape thought, culture, memory, and reality?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="beauty" data-search="art art history plato mimesis aristotle representation kant critique of judgment">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H6</span>
+                  <span class="card-title-wrap"><span class="card-title">Art &amp; Art History</span>
+                    <span class="card-tags"><span class="tag-pill">Beauty</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Beauty</td><td>What makes something beautiful?</td></tr>
+                    <tr><td>Representation</td><td>Should art imitate reality, reveal reality, or transform it?</td></tr>
+                    <tr><td>Symbol</td><td>How do images carry spiritual, political, or emotional meaning?</td></tr>
+                    <tr><td>Creativity</td><td>Where does creativity come from?</td></tr>
+                    <tr><td>Culture</td><td>How does art express the soul of a civilization?</td></tr>
+                    <tr><td>Power</td><td>Who funds, displays, censors, or canonizes art?</td></tr>
+                    <tr><td>Modernity</td><td>What happens when art breaks from tradition?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Plato distrusted mimetic art as a copy of a copy of the true Forms (<em>Republic</em>, Book X); his student Aristotle rehabilitated imitation in the <em>Poetics</em> as a source of understanding and pleasure rather than deception. That same disagreement — is representation a distraction from truth or a route to it? — resurfaces today in debates over whether an AI-generated image can be "art" at all.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How do human beings make the invisible visible?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="change meaning" data-search="classics ancient studies bayt al hikma house of wisdom translation movement baghdad toledo renaissance">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H7</span>
+                  <span class="card-title-wrap"><span class="card-title">Classics &amp; Ancient Studies</span>
+                    <span class="card-tags"><span class="tag-pill">Change</span><span class="tag-pill">Meaning</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Origins</td><td>What did early civilizations believe, build, fear, and hope for?</td></tr>
+                    <tr><td>Transmission</td><td>How did ancient texts shape later religions, laws, philosophies, and empires?</td></tr>
+                    <tr><td>Myth</td><td>What truths are encoded in mythic narratives?</td></tr>
+                    <tr><td>Continuity</td><td>What still lives in us from ancient worlds?</td></tr>
+                    <tr><td>Comparison</td><td>What patterns recur across Greek, Roman, Mesopotamian, Egyptian, Persian, Indian, Chinese, and Abrahamic traditions?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>the Bayt al-Hikma ("House of Wisdom") in Abbasid Baghdad organized a centuries-long translation movement rendering Greek works — Aristotle, Galen, Ptolemy — into Arabic, where they were preserved, studied, and extended. That corpus later moved into Latin Europe largely through Toledo's translation schools, feeding directly into the Renaissance's classical revival. Without that transmission chain, Europe would have had far less classical material to "revive."</div>
+                  <p class="deepest-q"><b>Deepest question</b>What foundations of human civilization were laid before modernity?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="society power" data-search="cultural studies stuart hall encoding decoding foucault media identity">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H8</span>
+                  <span class="card-title-wrap"><span class="card-title">Cultural Studies</span>
+                    <span class="card-tags"><span class="tag-pill">Society</span><span class="tag-pill">Power</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Meaning</td><td>How do people produce shared meanings?</td></tr>
+                    <tr><td>Identity</td><td>How are gender, class, race, religion, nation, and lifestyle constructed?</td></tr>
+                    <tr><td>Media</td><td>How do films, music, fashion, platforms, and images shape consciousness?</td></tr>
+                    <tr><td>Power</td><td>Who defines what is normal, civilized, backward, modern, or desirable?</td></tr>
+                    <tr><td>Resistance</td><td>How do marginal voices challenge dominant narratives?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Stuart Hall's "encoding/decoding" model (1973) argued audiences don't passively absorb a media message the way a producer intended — they negotiate it, or read it in outright opposition, depending on their own social position. It remains a standard tool for explaining why the same news broadcast lands so differently across different audiences.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does culture manufacture the world people experience as normal?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="humanities" data-themes="good order" data-search="law jurisprudence hart fuller legal positivism natural law usul al fiqh maqasid rawls justice">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num hum">H9</span>
+                  <span class="card-title-wrap"><span class="card-title">Law &amp; Jurisprudence</span>
+                    <span class="card-tags"><span class="tag-pill">Good</span><span class="tag-pill">Order</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Justice</td><td>What is justice?</td></tr>
+                    <tr><td>Authority</td><td>Why should law be obeyed?</td></tr>
+                    <tr><td>Rights</td><td>What rights belong to human beings?</td></tr>
+                    <tr><td>Punishment</td><td>What justifies punishment?</td></tr>
+                    <tr><td>Interpretation</td><td>How should laws and sacred/legal texts be interpreted?</td></tr>
+                    <tr><td>Order</td><td>How can law balance freedom, order, mercy, and accountability?</td></tr>
+                    <tr><td>Custom</td><td>What is the relationship between law, morality, religion, and society?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>the 1958 Hart–Fuller exchange in the <em>Harvard Law Review</em> crystallized a split still taught in every first-year law course: H.L.A. Hart's legal positivism held that a law's validity has nothing to do with whether it is moral, while Lon Fuller argued a system needs an "inner morality" — consistency, publicity, non-retroactivity — to count as law at all. Islamic <em>usul al-fiqh</em> runs a structurally similar debate between textual literalism (<em>zahir</em>) and reasoning from higher objectives (<em>maqasid al-shari'ah</em>).</div>
+                  <p class="deepest-q"><b>Deepest question</b>How should human conduct be ordered justly?</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="s3" class="domain-block">
+            <div class="domain-divider soc"><span class="dot"></span><h3>The Social Sciences</h3></div>
+            <p class="domain-intro">Ten disciplines asking how human beings behave, organize, cooperate, compete, govern, and exchange.</p>
+
+            <div class="card-grid" id="grid-social">
+
+              <div class="discipline-card" data-domain="social" data-themes="human" data-search="psychology mind self emotion development personality trauma kahneman tversky prospect theory nobel">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S1</span>
+                  <span class="card-title-wrap"><span class="card-title">Psychology</span>
+                    <span class="card-tags"><span class="tag-pill">Human Being</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Mind</td><td>How does the mind work?</td></tr>
+                    <tr><td>Self</td><td>What is the self?</td></tr>
+                    <tr><td>Emotion</td><td>Why do we feel what we feel?</td></tr>
+                    <tr><td>Development</td><td>How do children become adults?</td></tr>
+                    <tr><td>Personality</td><td>Why are people different from one another?</td></tr>
+                    <tr><td>Trauma</td><td>How do wounds shape perception and behavior?</td></tr>
+                    <tr><td>Motivation</td><td>Why do people pursue meaning, pleasure, status, love, or transcendence?</td></tr>
+                    <tr><td>Healing</td><td>What helps human beings become whole?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Daniel Kahneman and Amos Tversky's prospect theory (1979) showed people weigh losses roughly twice as heavily as equivalent gains, systematically breaking the predictions of classical rational-choice models. The work won Kahneman the 2002 Nobel Memorial Prize in Economic Sciences; Tversky, who died in 1996, could not share it, since the prize is never awarded posthumously.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What shapes the inner life of the human being?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="society" data-search="sociology durkheim suicide institutions norms modernity religion social change weber marx">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S2</span>
+                  <span class="card-title-wrap"><span class="card-title">Sociology</span>
+                    <span class="card-tags"><span class="tag-pill">Society</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Society</td><td>What holds society together?</td></tr>
+                    <tr><td>Institutions</td><td>How do family, school, religion, state, and economy shape people?</td></tr>
+                    <tr><td>Inequality</td><td>Why do hierarchies emerge?</td></tr>
+                    <tr><td>Norms</td><td>How do societies define normal and deviant?</td></tr>
+                    <tr><td>Modernity</td><td>What happens when traditional bonds weaken?</td></tr>
+                    <tr><td>Religion</td><td>Why does religion persist, decline, or transform?</td></tr>
+                    <tr><td>Social change</td><td>How do movements, revolutions, and reforms happen?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Émile Durkheim's <em>Suicide</em> (1897) compared suicide rates across regions, religions, and marital-status groups to argue that even this most private act is patterned by how tightly (or loosely) a person is integrated into society. It's one of the founding demonstrations that social life can be studied with statistics, not only philosophy.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does society shape the individual, and how do individuals reshape society?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="human society" data-search="anthropology geertz thick description culture ritual kinship myth otherness evolution boas">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S3</span>
+                  <span class="card-title-wrap"><span class="card-title">Anthropology</span>
+                    <span class="card-tags"><span class="tag-pill">Human Being</span><span class="tag-pill">Society</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Human nature</td><td>What is universal across humanity?</td></tr>
+                    <tr><td>Culture</td><td>Why do humans live in such different symbolic worlds?</td></tr>
+                    <tr><td>Ritual</td><td>What do rituals do for individuals and groups?</td></tr>
+                    <tr><td>Kinship</td><td>How do family and lineage organize society?</td></tr>
+                    <tr><td>Myth</td><td>How do myths encode social and cosmic order?</td></tr>
+                    <tr><td>Otherness</td><td>How can we understand people radically different from ourselves?</td></tr>
+                    <tr><td>Evolution</td><td>How did humans become cultural beings?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Clifford Geertz's concept of "thick description" (<em>The Interpretation of Cultures</em>, 1973) observed that a wink and an involuntary twitch look identical from the outside — anthropology's task is recovering the layered meaning a culture's own members would read into the gesture, not just cataloguing behavior.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What does it mean to be human across all cultures and times?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="order society" data-search="economics ibn khaldun laffer curve adam smith scarcity incentives markets labor growth ethics">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S4</span>
+                  <span class="card-title-wrap"><span class="card-title">Economics</span>
+                    <span class="card-tags"><span class="tag-pill">Order</span><span class="tag-pill">Society</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Scarcity</td><td>How should limited resources be allocated?</td></tr>
+                    <tr><td>Value</td><td>What gives something economic value?</td></tr>
+                    <tr><td>Incentives</td><td>How do incentives shape behavior?</td></tr>
+                    <tr><td>Markets</td><td>When do markets create prosperity, and when do they fail?</td></tr>
+                    <tr><td>Inequality</td><td>Why are some people and nations rich while others are poor?</td></tr>
+                    <tr><td>Labor</td><td>What is the meaning and value of work?</td></tr>
+                    <tr><td>Growth</td><td>What causes economic development?</td></tr>
+                    <tr><td>Ethics</td><td>What should not be bought and sold?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Ibn Khaldun's <em>Muqaddimah</em> observed that tax revenue can fall when tax rates climb too high, because heavy taxation discourages the economic activity being taxed — an insight that anticipates what economist Arthur Laffer popularized in the 1970s as the "Laffer Curve," roughly six centuries later and independently of Adam Smith's 1776 <em>Wealth of Nations</em>.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How do human beings organize material life under conditions of scarcity, desire, and interdependence?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="power order" data-search="political science hobbes locke rousseau state of nature social contract democracy authoritarianism conflict global order">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S5</span>
+                  <span class="card-title-wrap"><span class="card-title">Political Science</span>
+                    <span class="card-tags"><span class="tag-pill">Power</span><span class="tag-pill">Order</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Power</td><td>Who gets power, and how is it maintained?</td></tr>
+                    <tr><td>State</td><td>Why do states exist?</td></tr>
+                    <tr><td>Legitimacy</td><td>What makes rule legitimate?</td></tr>
+                    <tr><td>Democracy</td><td>Why do democracies survive or collapse?</td></tr>
+                    <tr><td>Authoritarianism</td><td>Why do people obey unjust power?</td></tr>
+                    <tr><td>Conflict</td><td>Why do groups fight?</td></tr>
+                    <tr><td>Institutions</td><td>Which institutions create stability, freedom, and accountability?</td></tr>
+                    <tr><td>Global order</td><td>Can there be justice between nations?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Hobbes, Locke, and Rousseau each imagined a pre-political "state of nature" to justify their political theory — and reached three incompatible destinations from the same fictional starting point: Hobbes toward an all-powerful sovereign to escape a "war of all against all," Locke toward limited government protecting natural rights, Rousseau toward collective self-rule through the "general will."</div>
+                  <p class="deepest-q"><b>Deepest question</b>How should power be organized, limited, justified, and held accountable?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="knowledge human" data-search="education dewey freire pedagogy of the oppressed banking model curriculum learning civilization">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S6</span>
+                  <span class="card-title-wrap"><span class="card-title">Education</span>
+                    <span class="card-tags"><span class="tag-pill">Knowledge</span><span class="tag-pill">Human Being</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Learning</td><td>How do people learn?</td></tr>
+                    <tr><td>Formation</td><td>Is education mainly about skill, character, citizenship, wisdom, or economic productivity?</td></tr>
+                    <tr><td>Curriculum</td><td>What knowledge is most worth teaching?</td></tr>
+                    <tr><td>Inequality</td><td>Why do schools reproduce or reduce social inequality?</td></tr>
+                    <tr><td>Pedagogy</td><td>What teaching methods actually transform learners?</td></tr>
+                    <tr><td>Technology</td><td>How does AI change learning, attention, and expertise?</td></tr>
+                    <tr><td>Civilization</td><td>How does education transmit a tradition?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Paulo Freire's <em>Pedagogy of the Oppressed</em> (1970) criticized what he called the "banking" model of education — depositing facts into passive students — as a method that reproduces existing power structures, and proposed dialogue-based learning as an alternative. The tension he named still runs underneath debates over rote memorization versus inquiry-based curricula.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How should human beings be formed?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="society truth" data-search="communication media studies mcluhan medium is the message propaganda chomsky herman manufacturing consent misunderstanding">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S7</span>
+                  <span class="card-title-wrap"><span class="card-title">Communication &amp; Media Studies</span>
+                    <span class="card-tags"><span class="tag-pill">Society</span><span class="tag-pill">Truth</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Meaning</td><td>How is meaning transmitted?</td></tr>
+                    <tr><td>Persuasion</td><td>How do messages influence belief and behavior?</td></tr>
+                    <tr><td>Media</td><td>How does each medium reshape human perception?</td></tr>
+                    <tr><td>Public sphere</td><td>How do societies deliberate collectively?</td></tr>
+                    <tr><td>Propaganda</td><td>How are consent, fear, desire, and identity manufactured?</td></tr>
+                    <tr><td>Digital life</td><td>How do algorithms shape attention and reality?</td></tr>
+                    <tr><td>Misunderstanding</td><td>Why do people fail to understand one another?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Marshall McLuhan's claim that "the medium is the message" (1964) argued a technology's form reshapes cognition and society regardless of its content. Edward Herman and Noam Chomsky's later "propaganda model" (<em>Manufacturing Consent</em>, 1988) narrowed the focus to ownership structures and advertising dependence as filters that quietly shape which stories mass media tells.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How do messages shape minds, relationships, and societies?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="order change" data-search="geography jared diamond guns germs and steel environmental determinism borders migration cities spatial inequality">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S8</span>
+                  <span class="card-title-wrap"><span class="card-title">Geography</span>
+                    <span class="card-tags"><span class="tag-pill">Order</span><span class="tag-pill">Change</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Place</td><td>How does place shape life?</td></tr>
+                    <tr><td>Environment</td><td>How do climate, terrain, water, and resources influence civilization?</td></tr>
+                    <tr><td>Borders</td><td>Why are boundaries drawn where they are?</td></tr>
+                    <tr><td>Cities</td><td>Why do cities emerge, grow, decay, or renew?</td></tr>
+                    <tr><td>Migration</td><td>Why do people move?</td></tr>
+                    <tr><td>Spatial inequality</td><td>Why are opportunities distributed unevenly across space?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Jared Diamond's <em>Guns, Germs, and Steel</em> (1997) argued that geographic and biogeographic accident — not innate group differences — explains why some societies industrialized first. It's a widely read thesis, but historians and geographers have also pushed back on it as overly deterministic, underweighting political choice, institutions, and contingency in favor of environment alone.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does space shape human destiny?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="power order" data-search="international relations realism waltz constructivism wendt anarchy war peace empire globalization">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S9</span>
+                  <span class="card-title-wrap"><span class="card-title">International Relations</span>
+                    <span class="card-tags"><span class="tag-pill">Power</span><span class="tag-pill">Order</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>War</td><td>Why do wars happen?</td></tr>
+                    <tr><td>Peace</td><td>How can peace be sustained?</td></tr>
+                    <tr><td>Order</td><td>Is the international system anarchic or governable?</td></tr>
+                    <tr><td>Power</td><td>Do great powers inevitably dominate smaller ones?</td></tr>
+                    <tr><td>Law</td><td>Can international law restrain states?</td></tr>
+                    <tr><td>Empire</td><td>How do empires rise, govern, and decline?</td></tr>
+                    <tr><td>Globalization</td><td>Does interdependence create cooperation or vulnerability?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Kenneth Waltz's structural realism (<em>Theory of International Politics</em>, 1979) holds that states pursue security in an anarchic system regardless of ideology or leadership. Alexander Wendt's constructivist reply — "anarchy is what states make of it" (1992) — argued the system's meaning is built from shared ideas and could, in principle, be built differently. Same starting condition, opposite theories of change.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How can order exist among competing powers without a world government?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="social" data-themes="good order" data-search="criminology beccaria deterrence foucault discipline and punish restorative justice punishment institutions">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num soc">S10</span>
+                  <span class="card-title-wrap"><span class="card-title">Criminology</span>
+                    <span class="card-tags"><span class="tag-pill">Good</span><span class="tag-pill">Order</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Crime</td><td>Why do people commit crimes?</td></tr>
+                    <tr><td>Punishment</td><td>Does punishment deter, reform, avenge, or protect?</td></tr>
+                    <tr><td>Deviance</td><td>Who defines deviance?</td></tr>
+                    <tr><td>Institutions</td><td>Why do some societies have more crime than others?</td></tr>
+                    <tr><td>Policing</td><td>How should force be used legitimately?</td></tr>
+                    <tr><td>Rehabilitation</td><td>Can people be restored after wrongdoing?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Cesare Beccaria's <em>On Crimes and Punishments</em> (1764) argued punishment should be swift, certain, and proportionate rather than severe — the founding text of deterrence theory. Two centuries later, Michel Foucault's <em>Discipline and Punish</em> (1975) argued the historical shift away from public torture toward the modern prison was less about mercy than about building a more efficient, internalized form of social control.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How should society understand, prevent, judge, and repair wrongdoing?</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div id="s4" class="domain-block">
+            <div class="domain-divider pos"><span class="dot"></span><h3>The Positive Sciences</h3></div>
+            <p class="domain-intro">Thirteen disciplines asking what is, and how it works — tested through observation, measurement, and experiment.</p>
+
+            <div class="card-grid" id="grid-positive">
+
+              <div class="discipline-card" data-domain="positive" data-themes="order truth" data-search="mathematics number structure proof infinity geometry probability computation godel incompleteness theorem hilbert program">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P1</span>
+                  <span class="card-title-wrap"><span class="card-title">Mathematics</span>
+                    <span class="card-tags"><span class="tag-pill">Order</span><span class="tag-pill">Truth</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Number</td><td>What are numbers? Are they discovered or invented?</td></tr>
+                    <tr><td>Structure</td><td>What patterns underlie reality?</td></tr>
+                    <tr><td>Proof</td><td>What counts as certainty?</td></tr>
+                    <tr><td>Infinity</td><td>What is infinity?</td></tr>
+                    <tr><td>Geometry</td><td>What is space?</td></tr>
+                    <tr><td>Probability</td><td>How can uncertainty be measured?</td></tr>
+                    <tr><td>Computation</td><td>What can be calculated, and what cannot?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>David Hilbert's early-20th-century program sought a complete, consistent set of axioms for all of mathematics. Kurt Gödel's incompleteness theorems (1931) proved this was impossible in principle: any formal system powerful enough to describe arithmetic contains true statements it cannot prove from within itself.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What is the language of pure structure and necessary order?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="reality order" data-search="physics matter energy space-time forces quantum reality cosmology unification measurement standard model general relativity einstein string theory">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P2</span>
+                  <span class="card-title-wrap"><span class="card-title">Physics</span>
+                    <span class="card-tags"><span class="tag-pill">Reality</span><span class="tag-pill">Order</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Matter</td><td>What is matter made of?</td></tr>
+                    <tr><td>Energy</td><td>What is energy?</td></tr>
+                    <tr><td>Space-time</td><td>What are space and time?</td></tr>
+                    <tr><td>Forces</td><td>Why are there fundamental forces?</td></tr>
+                    <tr><td>Quantum reality</td><td>What does quantum mechanics actually mean?</td></tr>
+                    <tr><td>Cosmology</td><td>How did the universe begin, and where is it going?</td></tr>
+                    <tr><td>Unification</td><td>Can all physical laws be unified?</td></tr>
+                    <tr><td>Measurement</td><td>What is the role of observation?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>the Standard Model unifies the electromagnetic, weak, and strong forces with extraordinary experimental precision, while Einstein's general relativity (1915) separately describes gravity as curved spacetime with equal precision. The two theories are individually confirmed yet mathematically incompatible at extremes like black-hole singularities — the open problem that motivates candidate unifications like string theory and loop quantum gravity, none yet experimentally confirmed.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What are the most fundamental laws of the physical universe?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="reality change" data-search="chemistry matter transformation bonding complexity life design mendeleev periodic table gallium germanium drug design">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P3</span>
+                  <span class="card-title-wrap"><span class="card-title">Chemistry</span>
+                    <span class="card-tags"><span class="tag-pill">Reality</span><span class="tag-pill">Change</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Matter</td><td>How do atoms combine to form substances?</td></tr>
+                    <tr><td>Transformation</td><td>Why do reactions happen?</td></tr>
+                    <tr><td>Bonding</td><td>What holds matter together?</td></tr>
+                    <tr><td>Complexity</td><td>How do simple elements produce complex materials?</td></tr>
+                    <tr><td>Life</td><td>How did chemistry become biology?</td></tr>
+                    <tr><td>Design</td><td>Can we create new materials, medicines, and energy systems?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Dmitri Mendeleev's 1869 periodic table left deliberate gaps for elements not yet discovered and predicted their approximate atomic weights and properties from the surrounding pattern. Gallium (found 1875) and germanium (found 1886) matched his predictions closely — one of the most striking predictive successes in the history of science. Modern computational drug design, which screens millions of candidate molecules before a single one is synthesized in a lab, is the direct descendant of that same predictive logic — applied now to designing new matter rather than only classifying what already exists.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does matter transform into the substances and systems we experience?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="life change" data-search="biology life evolution genetics cells organisms adaptation death darwin natural selection mendel modern synthesis wallace">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P4</span>
+                  <span class="card-title-wrap"><span class="card-title">Biology</span>
+                    <span class="card-tags"><span class="tag-pill">Life</span><span class="tag-pill">Change</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Life</td><td>What is life?</td></tr>
+                    <tr><td>Evolution</td><td>How do living forms change over time?</td></tr>
+                    <tr><td>Genetics</td><td>How is information stored and transmitted?</td></tr>
+                    <tr><td>Cells</td><td>How do cells organize themselves?</td></tr>
+                    <tr><td>Organisms</td><td>How do parts become a living whole?</td></tr>
+                    <tr><td>Adaptation</td><td>How do organisms fit their environments?</td></tr>
+                    <tr><td>Death</td><td>Why do organisms age and die?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Charles Darwin and Alfred Russel Wallace jointly presented natural selection in 1858; Gregor Mendel independently worked out the statistical laws of heredity from pea-plant crosses in 1866. The two discoveries were not combined into a single coherent framework — the "modern synthesis" — until the 1930s and 40s, decades after both men were dead.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does living order emerge, persist, adapt, reproduce, and die?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="life good" data-search="medicine health disease diagnosis treatment prevention mind-body ethics randomized controlled trial streptomycin bradford hill evidence based">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P5</span>
+                  <span class="card-title-wrap"><span class="card-title">Medicine</span>
+                    <span class="card-tags"><span class="tag-pill">Life</span><span class="tag-pill">Good</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Health</td><td>What is health?</td></tr>
+                    <tr><td>Disease</td><td>Why does the body malfunction?</td></tr>
+                    <tr><td>Diagnosis</td><td>How can hidden causes be detected?</td></tr>
+                    <tr><td>Treatment</td><td>How can disease be cured or managed?</td></tr>
+                    <tr><td>Prevention</td><td>How can suffering be prevented before it begins?</td></tr>
+                    <tr><td>Mind-body</td><td>How do mental, social, and biological factors interact?</td></tr>
+                    <tr><td>Ethics</td><td>What should medicine do when cure is impossible?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>the UK Medical Research Council's 1948 streptomycin trial for tuberculosis, designed with statistician Austin Bradford Hill, is widely cited as the first modern randomized controlled trial — using genuine randomization to separate a drug's real effect from coincidence. It set the evidentiary bar that still defines evidence-based medicine.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How can human life be preserved, healed, and dignified?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="human reality" data-search="neuroscience brain consciousness memory emotion decision self-control disorder chalmers hard problem libet free will readiness potential">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P6</span>
+                  <span class="card-title-wrap"><span class="card-title">Neuroscience</span>
+                    <span class="card-tags"><span class="tag-pill">Human Being</span><span class="tag-pill">Reality</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Brain</td><td>How does the brain work?</td></tr>
+                    <tr><td>Consciousness</td><td>How does subjective experience arise?</td></tr>
+                    <tr><td>Memory</td><td>How are memories stored and retrieved?</td></tr>
+                    <tr><td>Emotion</td><td>How do brain and body produce feeling?</td></tr>
+                    <tr><td>Decision</td><td>How does the brain choose?</td></tr>
+                    <tr><td>Self-control</td><td>How do attention, inhibition, and planning work?</td></tr>
+                    <tr><td>Disorder</td><td>What happens when neural systems break down?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>philosopher David Chalmers named the "hard problem of consciousness" (1995) to separate the "easy problems" — explaining specific cognitive functions — from the puzzle of why any of it is accompanied by subjective experience at all. Decades earlier, Benjamin Libet's experiments (1980s) found measurable brain activity, the "readiness potential," several hundred milliseconds before subjects reported consciously deciding to act — a finding still debated for what, if anything, it proves about free will.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does biological tissue give rise to perception, memory, agency, and consciousness?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="reality change" data-search="astronomy cosmology origin stars galaxies planets life dark matter dark energy fate big bang penzias wilson planck">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P7</span>
+                  <span class="card-title-wrap"><span class="card-title">Astronomy &amp; Cosmology</span>
+                    <span class="card-tags"><span class="tag-pill">Reality</span><span class="tag-pill">Change</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Origin</td><td>How did the universe begin?</td></tr>
+                    <tr><td>Stars</td><td>How are stars born and destroyed?</td></tr>
+                    <tr><td>Galaxies</td><td>How did cosmic structure form?</td></tr>
+                    <tr><td>Planets</td><td>How common are habitable worlds?</td></tr>
+                    <tr><td>Life</td><td>Are we alone in the universe?</td></tr>
+                    <tr><td>Dark matter/energy</td><td>What makes up most of the cosmos?</td></tr>
+                    <tr><td>Fate</td><td>What is the ultimate destiny of the universe?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Arno Penzias and Robert Wilson's accidental 1965 discovery of the cosmic microwave background — a faint radio hiss coming uniformly from every direction — confirmed the Big Bang model over the rival steady-state theory. Current estimates from missions like Planck put ordinary matter at only around 5% of the universe's total mass-energy, with roughly 27% dark matter and 68% dark energy — both inferred indirectly from gravitational and expansion effects, neither ever observed directly.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What is humanity's place in the cosmos?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="change reality" data-search="geology earth science earth time plate tectonics climate catastrophe resources human impact wegener continental drift seafloor spreading deep time">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P8</span>
+                  <span class="card-title-wrap"><span class="card-title">Geology &amp; Earth Science</span>
+                    <span class="card-tags"><span class="tag-pill">Change</span><span class="tag-pill">Reality</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Earth</td><td>How did Earth form?</td></tr>
+                    <tr><td>Time</td><td>How has Earth changed over deep time?</td></tr>
+                    <tr><td>Plate tectonics</td><td>Why do continents move?</td></tr>
+                    <tr><td>Climate</td><td>How does Earth regulate temperature and atmosphere?</td></tr>
+                    <tr><td>Catastrophe</td><td>How do earthquakes, volcanoes, floods, and extinctions happen?</td></tr>
+                    <tr><td>Resources</td><td>How are minerals, water, and energy formed and distributed?</td></tr>
+                    <tr><td>Human impact</td><td>How are humans changing Earth systems?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Alfred Wegener proposed continental drift in 1912 based on matching coastlines, rock strata, and fossil distributions across oceans — and was largely dismissed for decades because he couldn't supply a physical mechanism. Plate tectonics, confirmed in the 1960s through seafloor-spreading and magnetic-striping evidence, finally supplied that mechanism and vindicated him after his death.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How does the Earth system evolve and sustain life?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="life order" data-search="ecology environmental science interdependence ecosystems biodiversity human impact climate sustainability rachel carson silent spring ddt">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P9</span>
+                  <span class="card-title-wrap"><span class="card-title">Ecology &amp; Environmental Science</span>
+                    <span class="card-tags"><span class="tag-pill">Life</span><span class="tag-pill">Order</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Interdependence</td><td>How are organisms connected?</td></tr>
+                    <tr><td>Ecosystems</td><td>How do ecosystems remain stable or collapse?</td></tr>
+                    <tr><td>Biodiversity</td><td>Why does diversity matter?</td></tr>
+                    <tr><td>Human impact</td><td>How do humans disrupt or restore ecological balance?</td></tr>
+                    <tr><td>Climate</td><td>How are living systems affected by climate change?</td></tr>
+                    <tr><td>Sustainability</td><td>How can human civilization live within ecological limits?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Rachel Carson's <em>Silent Spring</em> (1962) traced how the pesticide DDT accumulated up the food chain, thinning the eggshells of birds of prey. It's widely credited with catalyzing the modern environmental movement and contributed directly to the U.S. banning DDT for agricultural use in 1972.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How can life systems remain balanced amid change and human pressure?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="knowledge order" data-search="computer science computation algorithms information complexity ai security human-computer relation turing halting problem">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P10</span>
+                  <span class="card-title-wrap"><span class="card-title">Computer Science</span>
+                    <span class="card-tags"><span class="tag-pill">Knowledge</span><span class="tag-pill">Order</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Computation</td><td>What can be computed?</td></tr>
+                    <tr><td>Algorithms</td><td>What is the most efficient way to solve a problem?</td></tr>
+                    <tr><td>Information</td><td>How is information represented, stored, transmitted, and protected?</td></tr>
+                    <tr><td>Complexity</td><td>Why are some problems hard?</td></tr>
+                    <tr><td>AI</td><td>Can machines reason, learn, create, or understand?</td></tr>
+                    <tr><td>Security</td><td>How can systems remain trustworthy under attack?</td></tr>
+                    <tr><td>Human-computer relation</td><td>How should humans and machines cooperate?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Alan Turing's 1936 proof of the undecidability of the "halting problem" showed there are precisely defined questions — will this program ever stop running? — that no algorithm can answer correctly for every possible input. It's a hard limit on computation discovered on paper, before any electronic computer existed to run into it.</div>
+                  <p class="deepest-q"><b>Deepest question</b>What can be automated, represented, simulated, or intelligently processed?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="knowledge human" data-search="artificial intelligence cognitive science intelligence learning representation reasoning language alignment consciousness turing test large language models">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P11</span>
+                  <span class="card-title-wrap"><span class="card-title">AI &amp; Cognitive Science</span>
+                    <span class="card-tags"><span class="tag-pill">Knowledge</span><span class="tag-pill">Human Being</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Intelligence</td><td>What is intelligence?</td></tr>
+                    <tr><td>Learning</td><td>How do systems learn from data and experience?</td></tr>
+                    <tr><td>Representation</td><td>How is knowledge structured internally?</td></tr>
+                    <tr><td>Reasoning</td><td>Can machines reason like humans?</td></tr>
+                    <tr><td>Language</td><td>Do language models understand, or only predict?</td></tr>
+                    <tr><td>Alignment</td><td>How can AI systems serve human values safely?</td></tr>
+                    <tr><td>Consciousness</td><td>Could artificial systems become conscious?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>Alan Turing's 1950 "imitation game" proposed behavioral indistinguishability in conversation as a pragmatic stand-in for the harder, arguably unanswerable question of machine "understanding." Modern large language models hold fluent conversations routinely, which has mostly revealed that fluency doesn't settle the original question — it just makes clearer how hard "understanding" was to define in the first place.</div>
+                  <p class="deepest-q"><b>Deepest question</b>Can intelligence be formalized, reproduced, extended, and aligned?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="order good" data-search="engineering design constraint failure scale safety maintenance challenger disaster o-ring safety factor systems engineering">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P12</span>
+                  <span class="card-title-wrap"><span class="card-title">Engineering</span>
+                    <span class="card-tags"><span class="tag-pill">Order</span><span class="tag-pill">Good</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Design</td><td>How can knowledge be turned into reliable systems?</td></tr>
+                    <tr><td>Constraint</td><td>How do we optimize under limits of cost, safety, time, energy, and materials?</td></tr>
+                    <tr><td>Failure</td><td>Why do systems fail?</td></tr>
+                    <tr><td>Scale</td><td>How do small designs become large infrastructures?</td></tr>
+                    <tr><td>Safety</td><td>How do we build systems that do not harm people?</td></tr>
+                    <tr><td>Maintenance</td><td>How do systems survive real-world complexity?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>the 1986 Space Shuttle <em>Challenger</em> disaster was traced to an O-ring seal that engineers had explicitly warned would fail in cold weather the night before launch, a warning managers overrode. It's now a standard case study in engineering ethics classes on what happens when organizational pressure overrides a documented safety margin.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How can human intention become stable, useful, scalable reality?</p>
+                </div>
+              </div>
+
+              <div class="discipline-card" data-domain="positive" data-themes="truth knowledge" data-search="statistics data science uncertainty evidence causality prediction bias decision replication crisis p-hacking bayesian frequentist open science collaboration">
+                <button class="card-toggle" aria-expanded="false">
+                  <span class="card-num pos">P13</span>
+                  <span class="card-title-wrap"><span class="card-title">Statistics &amp; Data Science</span>
+                    <span class="card-tags"><span class="tag-pill">Truth</span><span class="tag-pill">Knowledge</span></span>
+                  </span>
+                  <span class="card-chevron">⌄</span>
+                </button>
+                <div class="card-body" hidden>
+                  <div class="table-wrap"><table class="q-table"><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>
+                    <tr><td>Uncertainty</td><td>How do we reason with incomplete information?</td></tr>
+                    <tr><td>Evidence</td><td>What does data actually show?</td></tr>
+                    <tr><td>Causality</td><td>Does X cause Y, or merely correlate with it?</td></tr>
+                    <tr><td>Prediction</td><td>How can future outcomes be estimated?</td></tr>
+                    <tr><td>Bias</td><td>How do measurement and sampling distort reality?</td></tr>
+                    <tr><td>Decision</td><td>How should decisions be made under uncertainty?</td></tr>
+                  </tbody></table></div>
+                  <div class="example-note"><strong>In practice</strong>the 2015 Open Science Collaboration project attempted to replicate 100 published psychology studies and succeeded in reproducing the original result for well under half of them — a landmark moment in what's now called the "replication crisis," and a driver of stricter standards around statistical power and pre-registration across biomedical and social science research.</div>
+                  <p class="deepest-q"><b>Deepest question</b>How can we extract reliable knowledge from noisy reality?</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <p class="no-results" id="noResults">No disciplines match that combination. Try clearing a filter or the search box.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>The Compact Master Map</h2>
+      <div class="prose">
+        <p>A condensed cross-reference of every discipline covered above, with its central object of study and the one question it keeps returning to.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="map-table">
+          <thead><tr><th>Domain</th><th>Central object</th><th>Big question</th></tr></thead>
+          <tbody>
+            <tr><td>Philosophy</td><td>Being, truth, value</td><td>What is real, true, and good?</td></tr>
+            <tr><td>Religion &amp; Theology</td><td>God, creation, salvation</td><td>What is the human relation to the Absolute?</td></tr>
+            <tr><td>History</td><td>Time, memory, change</td><td>How did we become what we are?</td></tr>
+            <tr><td>Literature</td><td>Experience, story, language</td><td>What does human life mean from the inside?</td></tr>
+            <tr><td>Linguistics</td><td>Language, meaning, grammar</td><td>How does language shape thought?</td></tr>
+            <tr><td>Art</td><td>Beauty, image, symbol</td><td>How is the invisible made visible?</td></tr>
+            <tr><td>Classics</td><td>Origin, transmission, myth</td><td>What foundations were laid before modernity?</td></tr>
+            <tr><td>Cultural Studies</td><td>Meaning, identity, media</td><td>What manufactures the "normal"?</td></tr>
+            <tr><td>Law</td><td>Justice, order, authority</td><td>How should conduct be ordered?</td></tr>
+            <tr><td>Psychology</td><td>Mind, self, emotion</td><td>What shapes inner life?</td></tr>
+            <tr><td>Sociology</td><td>Society, institutions, norms</td><td>How does society shape people?</td></tr>
+            <tr><td>Anthropology</td><td>Culture, ritual, humanity</td><td>What is human across cultures?</td></tr>
+            <tr><td>Economics</td><td>Scarcity, value, exchange</td><td>How do humans organize material life?</td></tr>
+            <tr><td>Political Science</td><td>Power, legitimacy, state</td><td>How should power be governed?</td></tr>
+            <tr><td>Education</td><td>Learning, formation, transmission</td><td>How should humans be formed?</td></tr>
+            <tr><td>Communication</td><td>Persuasion, media, meaning</td><td>How do messages shape societies?</td></tr>
+            <tr><td>Geography</td><td>Place, environment, space</td><td>How does space shape destiny?</td></tr>
+            <tr><td>International Relations</td><td>War, peace, order</td><td>Can order exist without a world government?</td></tr>
+            <tr><td>Criminology</td><td>Crime, punishment, deviance</td><td>How should wrongdoing be judged and repaired?</td></tr>
+            <tr><td>Mathematics</td><td>Pattern, structure, proof</td><td>What is necessary order?</td></tr>
+            <tr><td>Physics</td><td>Matter, energy, space-time</td><td>What are the laws of the universe?</td></tr>
+            <tr><td>Chemistry</td><td>Substances, reactions, bonds</td><td>How does matter transform?</td></tr>
+            <tr><td>Biology</td><td>Life, evolution, organisms</td><td>What is living order?</td></tr>
+            <tr><td>Medicine</td><td>Health, disease, healing</td><td>How can life be preserved and restored?</td></tr>
+            <tr><td>Neuroscience</td><td>Brain, consciousness, behavior</td><td>How does the brain produce experience?</td></tr>
+            <tr><td>Astronomy</td><td>Origin, structure, fate</td><td>What is humanity's place in the cosmos?</td></tr>
+            <tr><td>Geology</td><td>Earth, deep time, tectonics</td><td>How does the Earth system evolve?</td></tr>
+            <tr><td>Ecology</td><td>Interdependence, environment</td><td>How do life systems stay balanced?</td></tr>
+            <tr><td>Computer Science</td><td>Computation, information</td><td>What can be computed?</td></tr>
+            <tr><td>AI &amp; Cognitive Science</td><td>Intelligence, learning, alignment</td><td>Can intelligence be reproduced and guided?</td></tr>
+            <tr><td>Engineering</td><td>Design, function, reliability</td><td>How can knowledge become working systems?</td></tr>
+            <tr><td>Statistics</td><td>Uncertainty, evidence, inference</td><td>How do we extract reliable knowledge from noise?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>The Civilization-Level <em>Synthesis</em></h2>
+      <div class="prose">
+        <p>Zoom out far enough and the 32 disciplines above collapse into six questions a whole civilization has to answer, together, to function.</p>
+      </div>
+
+      <div class="synth-grid">
+        <div class="synth-card">
+          <span class="num">01</span>
+          <h3>Reality</h3>
+          <p>What exists — the laws, structures, causes, and patterns underneath everything else?</p>
+          <span class="studied-by">Physics · metaphysics · mathematics · cosmology · theology</span>
+        </div>
+        <div class="synth-card">
+          <span class="num">02</span>
+          <h3>Life</h3>
+          <p>What is life, and how does it emerge, grow, adapt, suffer, heal, and die?</p>
+          <span class="studied-by">Biology · medicine · ecology · neuroscience</span>
+        </div>
+        <div class="synth-card">
+          <span class="num">03</span>
+          <h3>Human Being</h3>
+          <p>What is the human being — body, mind, soul, language, memory, desire, conscience, and destiny?</p>
+          <span class="studied-by">Psychology · anthropology · religion · literature · philosophy</span>
+        </div>
+        <div class="synth-card">
+          <span class="num">04</span>
+          <h3>Society</h3>
+          <p>How do humans live together — family, economy, state, law, education, conflict, cooperation?</p>
+          <span class="studied-by">Sociology · economics · political science · law · history</span>
+        </div>
+        <div class="synth-card">
+          <span class="num">05</span>
+          <h3>Meaning</h3>
+          <p>Why does any of this matter? What is truth, goodness, beauty, justice, and transcendence?</p>
+          <span class="studied-by">Religion · philosophy · literature · art · ethics</span>
+        </div>
+        <div class="synth-card">
+          <span class="num">06</span>
+          <h3>Action</h3>
+          <p>What should we do — how should we build, govern, heal, teach, and preserve?</p>
+          <span class="studied-by">Engineering · medicine · law · education · politics · AI</span>
+        </div>
+      </div>
+
+      <p class="deepest-q" style="margin-top:2rem; font-size:1.05rem;"><b>The one-sentence version</b>The positive sciences ask what is and how it works. The social sciences ask how humans behave together. The humanities ask what it means and how we should live. A complete civilization needs all three — and none of them finishes the conversation alone.</p>
+    </section>
+
+  </article>
+
+</main><!-- /main#main-content -->
+
+<footer>
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+</footer>
+
+<script>
+  // Progress bar
+  (function () {
+    const bar = document.getElementById('progressBar');
+    if (!bar) return;
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docH > 0 ? (scrollTop / docH * 100) : 0) + '%';
+    }, { passive: true });
+  })();
+
+  // Card expand/collapse
+  document.querySelectorAll('.card-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.discipline-card');
+      const body = card.querySelector('.card-body');
+      const isOpen = card.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) { body.removeAttribute('hidden'); } else { body.setAttribute('hidden', ''); }
+    });
+  });
+
+  // Filtering
+  (function () {
+    const cards = Array.from(document.querySelectorAll('.discipline-card'));
+    const domainChips = Array.from(document.querySelectorAll('[data-filter-domain]'));
+    const themeChips = Array.from(document.querySelectorAll('[data-filter-theme]'));
+    const searchInput = document.getElementById('disciplineSearch');
+    const resultCount = document.getElementById('resultCount');
+    const noResults = document.getElementById('noResults');
+    const clearBtn = document.getElementById('clearFilters');
+    const domainBlocks = ['s2', 's3', 's4'].map(id => document.getElementById(id));
+
+    let activeDomain = 'all';
+    let activeTheme = 'all';
+
+    function domainClassFor(val) {
+      if (val === 'humanities') return 'dom-humanities';
+      if (val === 'social') return 'dom-social';
+      if (val === 'positive') return 'dom-positive';
+      return '';
+    }
+
+    function setActiveDomainChip(val) {
+      domainChips.forEach(c => { c.classList.remove('active','dom-humanities','dom-social','dom-positive'); });
+      const chip = domainChips.find(c => c.getAttribute('data-filter-domain') === val);
+      if (chip) {
+        chip.classList.add('active');
+        const cls = domainClassFor(val);
+        if (cls) chip.classList.add(cls);
+      }
+      activeDomain = val;
+    }
+
+    function setActiveThemeChip(val) {
+      themeChips.forEach(c => c.classList.remove('active'));
+      const chip = themeChips.find(c => c.getAttribute('data-filter-theme') === val);
+      if (chip) chip.classList.add('active');
+      activeTheme = val;
+    }
+
+    function applyFilters() {
+      const q = (searchInput.value || '').trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const domain = card.getAttribute('data-domain');
+        const themes = (card.getAttribute('data-themes') || '').split(' ');
+        const searchBlob = (card.getAttribute('data-search') || '') + ' ' + card.querySelector('.card-title').textContent.toLowerCase();
+        const domainMatch = activeDomain === 'all' || domain === activeDomain;
+        const themeMatch = activeTheme === 'all' || themes.includes(activeTheme);
+        const searchMatch = !q || searchBlob.toLowerCase().includes(q);
+        const show = domainMatch && themeMatch && searchMatch;
+        card.classList.toggle('is-hidden', !show);
+        if (show) visible++;
+      });
+      resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+      noResults.classList.toggle('show', visible === 0);
+      domainBlocks.forEach(block => {
+        if (!block) return;
+        const anyVisible = block.querySelectorAll('.discipline-card:not(.is-hidden)').length > 0;
+        block.style.display = anyVisible ? '' : 'none';
+      });
+    }
+
+    domainChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        setActiveDomainChip(chip.getAttribute('data-filter-domain'));
+        applyFilters();
+      });
+    });
+
+    themeChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        setActiveThemeChip(chip.getAttribute('data-filter-theme'));
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilters);
+
+    clearBtn.addEventListener('click', () => {
+      setActiveDomainChip('all');
+      setActiveThemeChip('all');
+      searchInput.value = '';
+      applyFilters();
+    });
+
+    applyFilters();
+  })();
+</script>
+</body>
+</html>
