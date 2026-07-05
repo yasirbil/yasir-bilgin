@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inner Observability Dashboard | Yasir Bilgin</title>
+
+  <!-- Unique 150–160 char description -->
+  <meta name="description" content="A yogic framework for self-awareness rebuilt as an SRE dashboard: eleven inner panels, three alert states, and a five-step runbook for observing the self.">
+
+  <!-- Keywords — powers site search pills -->
+  <meta name="keywords" content="Yoga Sutras, witnessing awareness, self-observation">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yasirbilgin.com/spirit/Moral-Psychology/inner-observability-dashboard.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Inner Observability Dashboard">
+  <meta property="og:description" content="A yogic framework for self-awareness rebuilt as an SRE dashboard: eleven inner panels, three alert states, and a five-step runbook for observing the self.">
+  <meta property="og:url"         content="https://yasirbilgin.com/spirit/Moral-Psychology/inner-observability-dashboard.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="Inner Observability Dashboard">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Inner Observability Dashboard">
+  <meta name="twitter:description" content="A yogic framework for self-awareness rebuilt as an SRE dashboard: eleven inner panels, three alert states, and a five-step runbook for observing the self.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <!-- Global nav — always first script -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Inner Observability Dashboard",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-07-05",
+    "dateModified": "2026-07-05",
+    "description": "A yogic framework for self-awareness rebuilt as an SRE dashboard: eleven inner panels, three alert states, and a five-step runbook for observing the self.",
+    "url": "https://yasirbilgin.com/spirit/Moral-Psychology/inner-observability-dashboard.html"
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",                          "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Spirit",                        "item": "https://yasirbilgin.com/spirit/" },
+      { "@type": "ListItem", "position": 3, "name": "Moral Psychology",              "item": "https://yasirbilgin.com/spirit/Moral-Psychology/" },
+      { "@type": "ListItem", "position": 4, "name": "Inner Observability Dashboard", "item": "https://yasirbilgin.com/spirit/Moral-Psychology/inner-observability-dashboard.html" }
+    ]
+  }
+  </script>
+
+  <!-- Fonts + design tokens -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Local dark dashboard theme (deliberate, not OS-linked) ─────── */
+    :root {
+      --bg:          #0a0d12;
+      --bg-raised:   #10151d;
+      --bg-raised-2: #141b25;
+      --border:      #1f2732;
+      --border-soft: #182029;
+      --text:        #e8edf3;
+      --text-muted:  #9aa7b5;
+      --text-faint:  #808c99;
+      --accent:      #4fd1c5;
+      --accent-dim:  rgba(79,209,197,0.12);
+      --ok:          #3fb950;
+      --ok-bg:       rgba(63,185,80,0.10);
+      --warn:        #d9a441;
+      --warn-bg:     rgba(217,164,65,0.10);
+      --crit:        #f85149;
+      --crit-bg:     rgba(248,81,73,0.10);
+      --witness:     #b98ee8;
+      --witness-bg:  rgba(185,142,232,0.10);
+      --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); }
+
+    /* ── Eyebrow pill (dark variant, explicit hex per house rule) ──── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid #2a3441;
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: #10151d;
+    }
+
+    /* ── Progress bar — below nav ────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    /* ── TOC overlay — backdrop-filter only on .open ─────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(4,6,9,0.7);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      width: min(360px, 88vw);
+      height: 100%;
+      background: #0d1219;
+      border-left: 1px solid var(--border);
+      padding: 1.75rem 1.5rem;
+      overflow-y: auto;
+    }
+    .toc-panel h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-faint);
+      margin: 0 0 1rem;
+    }
+    .toc-panel button {
+      float: right;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: 6px;
+      width: 32px; height: 32px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .toc-panel button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-list { list-style: none; margin: 0.5rem 0 0; padding: 0; clear: both; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block;
+      padding: 0.6rem 0.4rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .toc-list a.toc-main { color: var(--text); font-weight: 600; }
+    .toc-list a.toc-sub { padding-left: 1.3rem; font-size: 0.82rem; }
+    .toc-list a:hover, .toc-list a:focus-visible { color: var(--accent); }
+    .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+    /* ── Hero ─────────────────────────────────────────────────────── */
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3.5rem 2.5rem 2rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      line-height: 1.08;
+      margin: 0 0 1rem;
+      color: var(--text);
+    }
+    h1 em { color: var(--accent); font-style: italic; }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 0 2rem;
+      line-height: 1.6;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--accent-dim);
+      color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.9rem;
+      border: 1px solid var(--border);
+    }
+    .byline-text { display: flex; flex-direction: column; }
+    .byline-name { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.92rem; }
+    .byline-meta { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--text-faint); }
+
+    /* ── Header stat strip — the "system status" readout ────────── */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 2rem 0 0.5rem;
+    }
+    .stat-cell {
+      background: var(--bg-raised);
+      padding: 1rem 1rem 1.1rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: var(--mono);
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      color: var(--accent);
+      display: block;
+    }
+    .stat-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-top: 0.3rem;
+      display: block;
+    }
+    @media (max-width: 620px) {
+      .stat-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    hr.hero-rule { border: none; border-top: 1px solid var(--border); max-width: 900px; margin: 2.5rem auto 0; }
+
+    /* ── Article meta-bar — static, after the hr ─────────────────── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.9rem 2.5rem;
+      /* NO position: sticky, NO top:, NO z-index: */
+    }
+    .read-time { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--text-faint); }
+    .toc-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      background: var(--bg-raised);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      min-height: 44px;
+      cursor: pointer;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Article body ─────────────────────────────────────────────── */
+    .article-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem 2.5rem 8rem;
+    }
+    .major-section { margin: 3.5rem 0; scroll-margin-top: 90px; }
+    .section-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      margin: 0 0 1.1rem;
+      color: var(--text);
+    }
+    h2 em { color: var(--accent); font-style: italic; }
+    p { color: #cdd6e0; margin: 0 0 1.1rem; }
+    .lede { font-size: 1.08rem; color: var(--text); }
+    blockquote.callout {
+      margin: 1.6rem 0;
+      padding: 1rem 1.4rem;
+      border-left: 3px solid var(--accent);
+      background: var(--bg-raised);
+      border-radius: 0 8px 8px 0;
+      color: var(--text);
+      font-style: italic;
+    }
+    .log-line {
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      background: #0d1219;
+      border: 1px solid var(--border-soft);
+      border-radius: 6px;
+      padding: 0.15rem 0.5rem;
+      display: inline-block;
+    }
+    ul.plain { padding-left: 1.3rem; }
+    ul.plain li { margin-bottom: 0.4rem; color: #cdd6e0; }
+
+    /* ── Alert legend ─────────────────────────────────────────────── */
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .legend-card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.2rem;
+      border-top: 3px solid var(--c, var(--text-faint));
+    }
+    .legend-card .badge { margin-bottom: 0.6rem; }
+    .legend-card p { font-size: 0.92rem; margin: 0; color: var(--text-muted); }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+    }
+    .badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .badge-ok    { color: var(--ok);    background: var(--ok-bg); }
+    .badge-warn  { color: var(--warn);  background: var(--warn-bg); }
+    .badge-crit  { color: var(--crit);  background: var(--crit-bg); }
+    .badge-info  { color: var(--witness); background: var(--witness-bg); }
+
+    /* ── Runbook pipeline ─────────────────────────────────────────── */
+    .runbook-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.9rem;
+      margin: 1.8rem 0;
+    }
+    .runbook-step {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1rem;
+      position: relative;
+    }
+    .runbook-step .rn {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .runbook-step h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.98rem;
+      margin: 0 0 0.4rem;
+      color: var(--text);
+    }
+    .runbook-step p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+    .runbook-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -1.05rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-faint);
+      font-size: 1rem;
+    }
+    @media (max-width: 900px) {
+      .runbook-flow { grid-template-columns: repeat(2, 1fr); }
+      .runbook-step:nth-child(2n)::after { display: none; }
+    }
+    @media (max-width: 560px) {
+      .runbook-flow { grid-template-columns: 1fr; }
+      .runbook-step::after { display: none !important; }
+    }
+
+    /* ── Dashboard panel cards ────────────────────────────────────── */
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .panel {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.5rem 1.6rem;
+      scroll-margin-top: 90px;
+    }
+    .panel-head { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.8rem; }
+    .panel-num {
+      font-family: var(--mono);
+      color: var(--text-faint);
+      font-size: 0.85rem;
+    }
+    h3.panel-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+    }
+    .panel-what {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px dashed var(--border-soft);
+    }
+    .panel-what strong { color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 600; }
+    .state-row { margin-bottom: 0.85rem; }
+    .state-row p { font-size: 0.88rem; margin: 0.35rem 0 0; color: #cdd6e0; }
+    .runbook-mini {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-soft);
+    }
+    .runbook-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+    .runbook-mini p { font-size: 0.88rem; color: var(--text-muted); margin: 0; }
+
+    /* ── Witness / final section ──────────────────────────────────── */
+    .witness-box {
+      background: linear-gradient(180deg, var(--witness-bg), transparent);
+      border: 1px solid #3a2f4a;
+      border-radius: 14px;
+      padding: 2rem;
+      margin: 1.5rem 0;
+    }
+    .witness-list {
+      columns: 2;
+      column-gap: 2rem;
+      padding-left: 1.2rem;
+      margin: 1rem 0 1.4rem;
+    }
+    .witness-list li { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 0.4rem; break-inside: avoid; }
+    @media (max-width: 560px) { .witness-list { columns: 1; } }
+
+    .final-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+      color: var(--witness);
+      text-align: center;
+      max-width: 640px;
+      margin: 2rem auto;
+      line-height: 1.5;
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .footer-logo { color: var(--text-muted); }
+
+    /* ── Focus visibility everywhere ──────────────────────────────── */
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Mobile ───────────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 2.5rem 1.4rem 1.5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .article-body { padding: 1rem 1.4rem 5rem; }
+    }
+
+    /* ── Reduced motion — always last ─────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- main#main-content required — skip-link target injected by nav.js -->
+  <main id="main-content">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button onclick="document.getElementById('tocOverlay').classList.remove('open')" aria-label="Close contents">✕</button>
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-main">I. Introduction</a></li>
+        <li><a href="#s2" class="toc-main">II. Alert Legend</a></li>
+        <li><a href="#s3" class="toc-main">III. Global Incident Response Runbook</a></li>
+        <li><a href="#s4" class="toc-main">IV. Dashboard Panels</a></li>
+        <li><a href="#p1"  class="toc-sub">4.1 Body</a></li>
+        <li><a href="#p2"  class="toc-sub">4.2 Emotions</a></li>
+        <li><a href="#p3"  class="toc-sub">4.3 Thoughts</a></li>
+        <li><a href="#p4"  class="toc-sub">4.4 Memories</a></li>
+        <li><a href="#p5"  class="toc-sub">4.5 Personality</a></li>
+        <li><a href="#p6"  class="toc-sub">4.6 Duties</a></li>
+        <li><a href="#p7"  class="toc-sub">4.7 Family</a></li>
+        <li><a href="#p8"  class="toc-sub">4.8 Work</a></li>
+        <li><a href="#p9"  class="toc-sub">4.9 Pain</a></li>
+        <li><a href="#p10" class="toc-sub">4.10 Pleasure</a></li>
+        <li><a href="#p11" class="toc-sub">4.11 Spiritual Experiences</a></li>
+        <li><a href="#s5" class="toc-main">V. The Witness Is Not Another Panel</a></li>
+        <li><a href="#s6" class="toc-main">VI. Overall Message</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Spirit · Moral Psychology</div>
+    <h1>Inner Observability <em>Dashboard</em></h1>
+    <p class="hero-sub">The Yoga Sutras rebuilt as a monitoring system: the body-mind-personality system as a production environment, watched, labeled, stabilized, and answered from clarity — not from panic.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">Yasir Bilgin · July 2026</span>
+      </div>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat-cell"><span class="stat-num">11</span><span class="stat-label">Inner panels</span></div>
+      <div class="stat-cell"><span class="stat-num">3</span><span class="stat-label">Alert levels</span></div>
+      <div class="stat-cell"><span class="stat-num">1</span><span class="stat-label">Witnessing awareness</span></div>
+      <div class="stat-cell"><span class="stat-num">∞</span><span class="stat-label">Practice cycles</span></div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <header class="article-header">
+    <span class="read-time">16 min read</span>
+    <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+  </header>
+
+  <article class="article-body">
+
+    <!-- I. Introduction -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>Introduction</h2>
+      <p class="lede">An SRE watches dashboards to understand the health of a production environment — not to judge the system, but to see it clearly enough to act well. This page treats the human body-mind-personality system the same way: as something observable, interpretable, stabilizable, and answerable, rather than as a chaotic stream of emotions, thoughts, reactions, and identities you are simply swept along by.</p>
+      <p>This is not a teaching about detachment as numbness or passivity. It is a way of staying fully engaged with life while no longer being unconsciously controlled by every internal alert. In simple terms:</p>
+      <blockquote class="callout">You still have body, emotions, thoughts, memories, personality, duties, family, work, pain, pleasure, and spiritual experiences. But you do not have to become completely identified with them. You can observe them, understand them, and respond from clarity.</blockquote>
+      <p>The deeper point is a yogic one: everything in this system is <em>observable</em>. And whatever is observable cannot be the observer itself. This is the seed of the Yoga Sutras' central distinction — between the ever-changing mind-field (<em>citta</em>) and the witnessing awareness (<em>purusha</em>) that watches it.</p>
+
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--text); margin-top:2rem;">From identification to observation</h3>
+      <p>In ordinary life, an internal signal appears and the person immediately fuses with it:</p>
+      <p><span class="log-line">"I am angry."</span> &nbsp; <span class="log-line">"I am anxious."</span> &nbsp; <span class="log-line">"I am failing."</span> &nbsp; <span class="log-line">"I am my pain."</span></p>
+      <p>The shift this page invites is small in wording and large in consequence:</p>
+      <p><span class="log-line">"Anger is arising."</span> &nbsp; <span class="log-line">"Anxiety is firing."</span> &nbsp; <span class="log-line">"An ego-threat alert is triggered."</span> &nbsp; <span class="log-line">"A spiritual experience is present, but I should not identify with it."</span></p>
+      <p>This shift creates space between awareness and reaction — and that space is where wisdom becomes possible. The point is never to suppress the alert. The point is to stop confusing yourself with it.</p>
+    </section>
+
+    <!-- II. Alert Legend -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>Alert Legend</h2>
+      <p>Every panel below is read against the same four-state legend.</p>
+      <div class="legend-grid">
+        <div class="legend-card" style="--c:var(--ok)">
+          <span class="badge badge-ok">Normal</span>
+          <p>The signal is present and integrated — part of life, but not controlling behavior. <em>Example: a person feels tired, notices it, and adjusts their pace.</em></p>
+        </div>
+        <div class="legend-card" style="--c:var(--warn)">
+          <span class="badge badge-warn">Warning</span>
+          <p>The signal is rising and needs attention. <em>Example: noticing irritability, shallow breathing, or repetitive thoughts before they become reactive.</em></p>
+        </div>
+        <div class="legend-card" style="--c:var(--crit)">
+          <span class="badge badge-crit">Critical</span>
+          <p>The signal is driving behavior and identity. <em>Example: anger becomes "I must attack"; fear becomes "I am unsafe"; pain becomes "This is all I am."</em></p>
+        </div>
+        <div class="legend-card" style="--c:var(--witness)">
+          <span class="badge badge-info">Instruction</span>
+          <p>The runbook response for returning to clarity: <em>pause, observe, stabilize, and respond.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- III. Global Runbook -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>Global Incident Response Runbook</h2>
+      <p>Before the individual panels, one universal five-step response model applies to any alert, from any panel.</p>
+      <div class="runbook-flow">
+        <div class="runbook-step">
+          <span class="rn">01</span>
+          <h4>Detect</h4>
+          <p>Notice that something is firing inside the system before acting from it: <em>"Something is happening inside me."</em></p>
+        </div>
+        <div class="runbook-step">
+          <span class="rn">02</span>
+          <h4>Label</h4>
+          <p>Name the signal — anger, fear, fatigue, craving, ego-threat, grief, shame, pressure. A named state is easier to observe than an unnamed storm.</p>
+        </div>
+        <div class="runbook-step">
+          <span class="rn">03</span>
+          <h4>Separate</h4>
+          <p>Create space between awareness and the state: <em>"This is arising in awareness, but it is not my whole identity."</em></p>
+        </div>
+        <div class="runbook-step">
+          <span class="rn">04</span>
+          <h4>Stabilize</h4>
+          <p>Reduce intensity before solving the whole problem — breathe, slow down, walk, pray, sit quietly, delay a response.</p>
+        </div>
+        <div class="runbook-step">
+          <span class="rn">05</span>
+          <h4>Respond</h4>
+          <p>Choose the next right action from clarity, not from panic, pride, fear, shame, or compulsion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IV. Dashboard Panels -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>Dashboard Panels</h2>
+      <p>Eleven panels, each covering one area of human experience that continues to exist even after a person becomes more observant and spiritually mature. The goal is never to eliminate these areas — only to monitor them wisely.</p>
+
+      <div class="panel-grid">
+
+        <!-- 1. Body -->
+        <article class="panel" id="p1">
+          <div class="panel-head"><span class="panel-num">01</span><h3 class="panel-title">Body</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> energy, fatigue, breath, heart rate, muscle tension, sleep quality, hunger, posture, stomach tightness, nervous-system load.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>The breath is steady, the body feels usable, and tension is noticeable but not dominant.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>Tight jaw, raised shoulders, shallow breathing, fatigue, restlessness, headache, stomach discomfort.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>The body begins driving the mind — exhaustion becomes pessimism, hunger becomes anger, tension becomes reactivity.</p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Pause and scan the body. Regulate the body before solving the story — drink water, eat, stretch, walk, breathe slowly, or sleep. Delay major decisions while the body is in a critical state.</p></div>
+        </article>
+
+        <!-- 2. Emotions -->
+        <article class="panel" id="p2">
+          <div class="panel-head"><span class="panel-num">02</span><h3 class="panel-title">Emotions</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> anger, sadness, fear, shame, joy, grief, excitement, tenderness, jealousy, resentment.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Emotion is present, named, and allowed without taking over the whole system.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>The emotion becomes sticky, repetitive, intense, and demanding.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>The emotion becomes identity: <span class="log-line">"I am rage."</span> <span class="log-line">"I am unsafe."</span></p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Name the emotion, locate it in the body, ask what it is trying to protect, and treat it as data rather than as the commander.</p></div>
+        </article>
+
+        <!-- 3. Thoughts -->
+        <article class="panel" id="p3">
+          <div class="panel-head"><span class="panel-num">03</span><h3 class="panel-title">Thoughts</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> inner speech, interpretations, predictions, judgments, planning loops, worries, comparisons, explanations.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Thoughts arise and pass, helping interpretation and action without becoming obsessive.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>The mind begins looping — replaying conversations, predicting disaster, proving itself, solving imaginary arguments.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>The mind treats thoughts as facts and acts before verifying them.</p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Write the thought as a log line — <span class="log-line">"The mind is saying…"</span> — then ask: is this fact, interpretation, memory, fear, or prediction? Verify before believing, then return attention to the next concrete action.</p></div>
+        </article>
+
+        <!-- 4. Memories -->
+        <article class="panel" id="p4">
+          <div class="panel-head"><span class="panel-num">04</span><h3 class="panel-title">Memories</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> old experiences, wounds, successes, failures, humiliations, attachments, learned expectations, repeated storylines.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Memory informs the present without replacing the present.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>A current event feels larger than it is because it resembles an old experience.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>The past becomes the lens for everything: <span class="log-line">"This always happens."</span> <span class="log-line">"I already know how this ends."</span></p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Ask, "How old does this feeling feel?" Separate the present event from the historical pattern, look for what's different this time, and respond to current reality rather than only the old wound.</p></div>
+        </article>
+
+        <!-- 5. Personality -->
+        <article class="panel" id="p5">
+          <div class="panel-head"><span class="panel-num">05</span><h3 class="panel-title">Personality</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> analysis, planning, spontaneity, sensitivity, control, abstraction, practicality, intensity, sociability, withdrawal.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Personality serves wisdom — strengths are used flexibly and consciously.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>A strength becomes rigid: analysis becomes paralysis, empathy becomes overburden, discipline becomes harshness.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>Personality claims total authority: <span class="log-line">"This is just who I am."</span> — a prison rather than a tool.</p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Name the default mode currently active. Ask whether that strength is serving the situation or dominating it. Choose the missing opposite: action, patience, softness, structure, courage, or rest.</p></div>
+        </article>
+
+        <!-- 6. Duties -->
+        <article class="panel" id="p6">
+          <div class="panel-head"><span class="panel-num">06</span><h3 class="panel-title">Duties</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> promises, moral duties, deadlines, worship, household tasks, commitments, unfinished work.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Duties are clear, prioritized, and carried with dignity.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>The queue feels crowded — avoidance, guilt, resentment, or perfectionism begins rising.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>Duties become identity-threatening: <span class="log-line">"If I cannot do all of this, I am failing."</span></p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>List duties outside the mind. Separate urgent, important, delegated, delayed, and unnecessary tasks. Choose one next faithful action, and don't confuse limited capacity with moral failure.</p></div>
+        </article>
+
+        <!-- 7. Family -->
+        <article class="panel" id="p7">
+          <div class="panel-head"><span class="panel-num">07</span><h3 class="panel-title">Family</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> connection, protection, affection, irritation, role pressure, expectations, communication patterns, emotional availability.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Presence, responsibility, affection, boundaries, and repair are all available.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>Irritation, withdrawal, control, impatience, or emotional distance starts increasing.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>The relationship becomes a battlefield for ego, fatigue, fear, or unmet needs.</p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Stabilize tone before explaining content. Ask what the other person needs right now. Repair quickly after overreaction, and protect the relationship from the temporary storm.</p></div>
+        </article>
+
+        <!-- 8. Work -->
+        <article class="panel" id="p8">
+          <div class="panel-head"><span class="panel-num">08</span><h3 class="panel-title">Work</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> performance pressure, focus, career identity, productivity, problem-solving, collaboration, status concerns, stress load.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Work is meaningful action and service, not the whole measure of the self.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>Stress, comparison, urgency, overwork, avoidance, or fear of judgment increases.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>Work status becomes self-worth: <span class="log-line">"If this fails, I am nothing."</span></p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Define the actual problem, not the identity story around it. Break it into mitigation, stabilization, root cause, and prevention. Ask for help when needed and keep self-worth outside the incident.</p></div>
+        </article>
+
+        <!-- 9. Pain -->
+        <article class="panel" id="p9">
+          <div class="panel-head"><span class="panel-num">09</span><h3 class="panel-title">Pain</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> physical pain, emotional pain, grief, disappointment, rejection, fear, loss, shame, existential discomfort.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Pain is recognized as a signal requiring care, truth, patience, or boundary adjustment.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>Avoidance, numbing, blaming, catastrophizing, or self-pity begins.</p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>Pain becomes total identity: <span class="log-line">"This pain is all I am."</span></p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Don't deny the pain — acknowledge it directly and ask what kind of care is needed: medical, emotional, relational, spiritual, or practical. Work to reduce the secondary suffering added on top of the pain itself.</p></div>
+        </article>
+
+        <!-- 10. Pleasure -->
+        <article class="panel" id="p10">
+          <div class="panel-head"><span class="panel-num">10</span><h3 class="panel-title">Pleasure</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> comfort, food, praise, success, entertainment, beauty, affection, achievement, satisfaction.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>Pleasure is received with gratitude, without compulsive grasping.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>The mind starts saying: <span class="log-line">"More." "Again." "Now."</span></p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>Pleasure becomes bondage — craving overrides judgment, duty, health, relationship, or conscience.</p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Enjoy consciously rather than consume unconsciously. Ask, "Is this nourishing or numbing?" Practice stopping before compulsion begins, and return pleasure to gratitude rather than addiction.</p></div>
+        </article>
+
+        <!-- 11. Spiritual Experiences -->
+        <article class="panel" id="p11">
+          <div class="panel-head"><span class="panel-num">11</span><h3 class="panel-title">Spiritual Experiences</h3></div>
+          <p class="panel-what"><strong>Monitors:</strong> peace, awe, insight, devotion, surrender, expansion, subtle joy, clarity, presence, spiritual pride.</p>
+          <div class="state-row"><span class="badge badge-ok">Normal</span><p>The experience deepens humility, truthfulness, compassion, discipline, and service.</p></div>
+          <div class="state-row"><span class="badge badge-warn">Warning</span><p>Attachment appears: <span class="log-line">"I want that state again."</span> <span class="log-line">"This proves I am advanced."</span></p></div>
+          <div class="state-row"><span class="badge badge-crit">Critical</span><p>The ego captures spirituality — superiority, fantasy, spiritual display, avoidance of duties, contempt for others, attachment to special experiences.</p></div>
+          <div class="runbook-mini"><span class="runbook-label">Runbook</span><p>Receive the experience with gratitude, not ownership. Check its fruits: humility, patience, compassion, truth, service. Don't chase the state — return to practice and duty. Even subtle spiritual experience is observable, so it is not the final self.</p></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- V. The Witness -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>The Witness Is Not Another <em>Panel</em></h2>
+      <p>Every panel above is observable:</p>
+      <div class="witness-box">
+        <ul class="witness-list">
+          <li>the body can be observed,</li>
+          <li>emotions can be observed,</li>
+          <li>thoughts can be observed,</li>
+          <li>memories can be observed,</li>
+          <li>duties can be observed,</li>
+          <li>family reactions can be observed,</li>
+          <li>work stress can be observed,</li>
+          <li>pain can be observed,</li>
+          <li>pleasure can be observed,</li>
+          <li>spiritual experiences can be observed.</li>
+        </ul>
+        <p>Because all of these are observable, they belong to the field of experience. The observing awareness is not simply one more metric inside the system — it is the field in which the whole system appears. This is where the page connects most directly to the Yoga Sutras.</p>
+        <p class="final-quote">Yoga begins as inner incident response: observe, label, stabilize, and respond. It matures into wisdom: I am not merely this system. I am the awareness to whom this system is appearing.</p>
+      </div>
+    </section>
+
+    <!-- VI. Overall Message -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>Overall Message</h2>
+      <p>Spiritual maturity does not mean escaping life. You still have body, emotions, thoughts, memories, personality, duties, family, work, pain, pleasure, and spiritual experiences — but you learn to relate to them differently. You stop being unconsciously owned by them. You stop mistaking every temporary state for your deepest self. You learn to monitor, interpret, stabilize, and respond.</p>
+      <ul class="plain">
+        <li><strong style="color:var(--text)">Practical goal:</strong> better self-regulation.</li>
+        <li><strong style="color:var(--text)">Psychological goal:</strong> less identification.</li>
+        <li><strong style="color:var(--text)">Ethical goal:</strong> cleaner action.</li>
+        <li><strong style="color:var(--text)">Spiritual goal:</strong> recognizing the witnessing awareness beyond all changing states.</li>
+      </ul>
+      <blockquote class="callout">The Inner Observability Dashboard is a modern SRE-style visualization of yogic self-awareness — showing how the human inner system can be monitored without confusing the observer with the system being observed.</blockquote>
+    </section>
+
+  </article>
+
+  </main><!-- /main#main-content -->
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  </footer>
+
+  <script>
+    const bar = document.getElementById('progressBar');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docH > 0 ? (scrollTop / docH * 100) : 0) + '%';
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
