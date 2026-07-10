@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Guide to the Turkic World | Yasir Bilgin</title>
+
+  <!-- ① Unique 150–160 char description -->
+  <meta name="description" content="A guide to the Turkic world: its six language branches, six independent states, and dozens of minority and diaspora peoples from the Balkans to Siberia and China.">
+
+  <!-- Article tags — exactly 3 -->
+  <meta name="keywords" content="Turkic peoples, Turkic languages, Central Asia">
+
+  <!-- ② Canonical URL -->
+  <link rel="canonical" href="https://yasirbilgin.com/civilization/World-Cultures/guide-to-the-turkic-world.html">
+
+  <!-- ③ Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="A Guide to the Turkic World">
+  <meta property="og:description" content="A guide to the Turkic world: its six language branches, six independent states, and dozens of minority and diaspora peoples from the Balkans to Siberia and China.">
+  <meta property="og:url"         content="https://yasirbilgin.com/civilization/World-Cultures/guide-to-the-turkic-world.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="A Guide to the Turkic World">
+
+  <!-- ④ Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="A Guide to the Turkic World">
+  <meta name="twitter:description" content="A guide to the Turkic world: its six language branches, six independent states, and dozens of minority and diaspora peoples from the Balkans to Siberia and China.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <!-- ⑤ Global nav — always first script -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <!-- ⑥ Favicons -->
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <!-- ⑦ Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "A Guide to the Turkic World",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-07-09",
+    "dateModified": "2026-07-09",
+    "description": "A guide to the Turkic world: its six language branches, six independent states, and dozens of minority and diaspora peoples from the Balkans to Siberia and China.",
+    "url": "https://yasirbilgin.com/civilization/World-Cultures/guide-to-the-turkic-world.html"
+  }
+  </script>
+
+  <!-- ⑧ BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",                    "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Civilization",            "item": "https://yasirbilgin.com/civilization/" },
+      { "@type": "ListItem", "position": 3, "name": "World Cultures",          "item": "https://yasirbilgin.com/civilization/World-Cultures/" },
+      { "@type": "ListItem", "position": 4, "name": "A Guide to the Turkic World", "item": "https://yasirbilgin.com/civilization/World-Cultures/guide-to-the-turkic-world.html" }
+    ]
+  }
+  </script>
+
+  <!-- ⑨ Fonts + design tokens -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ────────────────────────────────────────────────────────────
+       Local palette — warm parchment + "gök" (Turkic sky-blue) accent.
+       Branch colours encode the linguistic family, not decoration.
+       ──────────────────────────────────────────────────────────── */
+    :root {
+      --bg:        #f4efe6;
+      --surface:   #fbf8f1;
+      --surface-2: #efe8db;
+      --ink:       #211d17;
+      --text:      #35302a;
+      --muted:     #6e5f4e;   /* 5.6:1 on parchment — AA */
+      --faint:     #6e5f4e;
+      --line:      rgba(60,50,38,0.14);
+      --line-2:    rgba(60,50,38,0.09);
+      --accent:    #147a72;   /* gök turquoise-teal */
+      --accent-ink:#0e5952;
+      --accent-soft: rgba(20,122,114,0.10);
+
+      /* Language-branch colours */
+      --b-oghuz:   #0f7d78;   /* teal — the western/Anatolian core */
+      --b-kipchak: #a9741a;   /* amber — the steppe */
+      --b-karluk:  #6a4c93;   /* indigo — Silk-Road oasis, Persianate */
+      --b-siberia: #3a7a56;   /* taiga green */
+      --b-oghur:   #a8552f;   /* copper — ancient, divergent */
+      --b-khalaj:  #8f4f74;   /* plum — small, archaic */
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --nav-h: 62px;
+      --content-w: 860px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:        #14120e;
+        --surface:   #1c1913;
+        --surface-2: #24201a;
+        --ink:       #f2ede3;
+        --text:      #e3ddd0;
+        --muted:     #a89e8c;   /* light enough for AA on dark */
+        --faint:     #a89e8c;
+        --line:      rgba(255,255,255,0.10);
+        --line-2:    rgba(255,255,255,0.06);
+        --accent:    #2fbdae;
+        --accent-ink:#7fe0d5;
+        --accent-soft: rgba(47,189,174,0.12);
+
+        --b-oghuz:   #38c1b8;
+        --b-kipchak: #d8a94e;
+        --b-karluk:  #a98ad4;
+        --b-siberia: #6fb98d;
+        --b-oghur:   #d98a5f;
+        --b-khalaj:  #cf8bb2;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      font-size: 19px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection { background: var(--accent-soft); }
+
+    /* ── Progress bar ─────────────────────────────────────────── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+    }
+
+    /* ── Hero ─────────────────────────────────────────────────── */
+    .hero {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 3.5rem 2.5rem 0;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint);
+      }
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.04;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0 0 1.2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent-ink); }
+    .hero-sub {
+      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 40ch;
+      margin: 0 0 2.2rem;
+      font-weight: 400;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--b-karluk));
+      color: #fff; display: grid; place-items: center;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em;
+    }
+    .byline-text { display: flex; flex-direction: column; line-height: 1.35; }
+    .byline-name {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 600; font-size: 0.92rem; color: var(--ink);
+    }
+    .byline-meta {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.78rem; color: var(--faint); letter-spacing: 0.02em;
+    }
+    .hero-rule {
+      max-width: var(--content-w);
+      margin: 2.6rem auto 0;
+      border: none;
+      border-top: 1px solid var(--line);
+    }
+
+    /* ── Meta-bar (static) ────────────────────────────────────── */
+    .article-header {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 0.75rem 2.5rem;
+    }
+    .read-time {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.78rem; color: var(--faint);
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .toc-btn {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      cursor: pointer;
+      min-height: 44px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .toc-btn:hover { background: var(--surface-2); border-color: var(--accent); }
+    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* ── Article body ─────────────────────────────────────────── */
+    .article-body {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 2.5rem 2.5rem 8rem;
+    }
+    .major-section { margin: 4rem 0 0; scroll-margin-top: 84px; }
+    .major-section:first-child { margin-top: 1rem; }
+    .section-label {
+      display: block;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin: 0 0 1.2rem;
+      letter-spacing: -0.005em;
+    }
+    .article-body h2 em { font-style: italic; color: var(--accent-ink); }
+    .sub-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      color: var(--ink);
+      margin: 2.6rem 0 0.8rem;
+      scroll-margin-top: 84px;
+      display: flex; align-items: baseline; gap: 0.6rem;
+    }
+    .sh-num {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--accent); letter-spacing: 0.04em;
+    }
+    .article-body p { margin: 0 0 1.3rem; }
+    .article-body a {
+      color: var(--accent-ink);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: rgba(20,122,114,0.35);
+    }
+    .article-body a:hover { text-decoration-color: var(--accent); }
+    .lead {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+    strong { color: var(--ink); font-weight: 600; }
+    em.term { font-style: italic; color: var(--accent-ink); }
+    .foreign { font-style: italic; }
+
+    /* ── Pull quote ───────────────────────────────────────────── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2rem;
+      padding: 0.4rem 0 0.4rem 2rem;
+      border-left: 3px solid var(--accent);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+      line-height: 1.32;
+      font-style: italic;
+      color: var(--ink);
+    }
+    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
+
+    /* ── Callout ──────────────────────────────────────────────── */
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius-md);
+      padding: 1.3rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .callout .callout-title {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); display: block; margin-bottom: 0.4rem;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* ── Branch cards (s2) ────────────────────────────────────── */
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.1rem;
+      margin: 2rem 0;
+    }
+    .branch-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--bc, var(--accent));
+      border-radius: var(--radius-md);
+      padding: 1.3rem 1.4rem 1.4rem;
+    }
+    .branch-card h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 600;
+      color: var(--ink); margin: 0 0 0.15rem;
+    }
+    .branch-card .bc-tag {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--bc, var(--accent)); display: block; margin-bottom: 0.7rem;
+    }
+    .branch-card p { font-size: 0.92rem; line-height: 1.6; margin: 0 0 0.7rem; color: var(--text); }
+    .branch-card .bc-langs {
+      font-size: 0.85rem; color: var(--muted); line-height: 1.5;
+      border-top: 1px solid var(--line-2); padding-top: 0.7rem; margin-top: 0.2rem;
+    }
+    .branch-card .bc-langs b {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--faint); font-weight: 600; display: block; margin-bottom: 0.2rem;
+    }
+
+    /* ── Directory (s3) — search + side filters + cards ───────── */
+    .directory {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      margin: 2rem 0;
+    }
+    .dir-searchbar { position: relative; margin-bottom: 1rem; }
+    .dir-search {
+      width: 100%;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1rem;
+      color: var(--ink);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.85rem 2.6rem 0.85rem 2.7rem;
+      min-height: 44px;
+    }
+    .dir-search::placeholder { color: var(--faint); }
+    .dir-search:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+    .dir-search-icon {
+      position: absolute; left: 1rem; top: 50%; transform: translateY(-50%);
+      width: 18px; height: 18px; color: var(--faint); pointer-events: none;
+    }
+    .dir-clear-search {
+      position: absolute; right: 0.7rem; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer; color: var(--faint);
+      font-size: 1.3rem; line-height: 1; padding: 0.3rem; display: none;
+    }
+    .dir-clear-search:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+    .dir-layout { display: grid; grid-template-columns: 236px 1fr; gap: 1.4rem; align-items: start; }
+
+    /* Filter sidebar */
+    .dir-filters {
+      position: sticky; top: 78px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+    }
+    .dir-filter-toggle { display: none; }
+    .filter-group { margin-bottom: 1.3rem; }
+    .filter-group h4 {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--faint); margin: 0 0 0.6rem;
+    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.78rem; font-weight: 500;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      line-height: 1.3;
+    }
+    .chip:hover { border-color: var(--accent); }
+    .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .chip .chip-count {
+      font-size: 0.68rem; color: var(--faint);
+      font-variant-numeric: tabular-nums;
+    }
+    .chip[aria-pressed="true"] {
+      background: var(--accent); border-color: var(--accent); color: #fff;
+    }
+    .chip[aria-pressed="true"] .chip-count { color: rgba(255,255,255,0.8); }
+    .chip[data-count="0"] { opacity: 0.4; }
+    /* branch chips carry a colour dot */
+    .chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--accent)); flex: none; }
+    .chip[aria-pressed="true"] .dot { background: #fff; }
+
+    .dir-clear-all {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.75rem; font-weight: 500;
+      color: var(--accent-ink); background: none; border: none;
+      cursor: pointer; padding: 0.3rem 0; text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .dir-clear-all:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* Results */
+    .dir-results-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: 0.9rem; gap: 1rem;
+    }
+    .dir-count {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.82rem; color: var(--muted);
+    }
+    .dir-count b { color: var(--ink); font-variant-numeric: tabular-nums; }
+    .dir-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.9rem; }
+
+    .dir-card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--bc, var(--accent));
+      border-radius: var(--radius-md);
+      padding: 1rem 1.1rem 1.1rem;
+      display: flex; flex-direction: column;
+    }
+    .dir-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+    .dir-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.32rem; font-weight: 600; line-height: 1.12;
+      color: var(--ink); margin: 0;
+    }
+    .dir-status {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.2rem 0.45rem; border-radius: 4px; flex: none;
+      white-space: nowrap; margin-top: 0.15rem;
+    }
+    .st-state      { background: rgba(20,122,114,0.14);  color: var(--accent-ink); }
+    .st-autonomous { background: rgba(106,76,147,0.16);  color: var(--b-karluk); }
+    .st-indigenous { background: rgba(168,85,47,0.15);   color: var(--b-oghur); }
+    .st-minority   { background: rgba(60,50,38,0.10);    color: var(--muted); }
+    @media (prefers-color-scheme: dark) {
+      .st-state      { background: rgba(47,189,174,0.18); }
+      .st-autonomous { background: rgba(169,138,212,0.20); }
+      .st-indigenous { background: rgba(217,138,95,0.18); }
+      .st-minority   { background: rgba(255,255,255,0.08); }
+    }
+    .dir-meta {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.7rem; color: var(--muted);
+      margin: 0.5rem 0 0.65rem; line-height: 1.4;
+      display: flex; flex-wrap: wrap; gap: 0.3rem 0.55rem;
+    }
+    .dir-meta .m { display: inline-flex; align-items: center; gap: 0.28rem; }
+    .dir-meta .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bc, var(--accent)); flex: none; }
+    .dir-desc { font-size: 0.86rem; line-height: 1.55; color: var(--text); margin: 0 0 0.55rem; }
+    .dir-figs {
+      font-size: 0.76rem; line-height: 1.45; color: var(--muted);
+      border-top: 1px solid var(--line-2); padding-top: 0.5rem; margin-top: auto;
+    }
+    .dir-figs b {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--faint); font-weight: 600;
+    }
+    .dir-card.hidden { display: none; }
+    mark {
+      background: rgba(20,122,114,0.22);
+      color: inherit; border-radius: 2px; padding: 0 1px;
+    }
+    @media (prefers-color-scheme: dark) { mark { background: rgba(47,189,174,0.28); } }
+    .dir-empty {
+      grid-column: 1 / -1; text-align: center; padding: 2.5rem 1rem;
+      color: var(--muted); font-style: italic; display: none;
+    }
+    .dir-empty.show { display: block; }
+
+    /* ── Comparison table (s4) ────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin: 2rem 0; border: 1px solid var(--line); border-radius: var(--radius-md); }
+    table.compare {
+      width: 100%; border-collapse: collapse;
+      font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.9rem;
+      min-width: 620px;
+    }
+    table.compare th, table.compare td {
+      padding: 0.7rem 0.9rem; text-align: left;
+      border-bottom: 1px solid var(--line-2);
+    }
+    table.compare thead th {
+      background: var(--surface-2); color: var(--ink);
+      font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+      font-weight: 600; white-space: nowrap;
+    }
+    table.compare tbody th {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 600; color: var(--ink); font-size: 0.95rem;
+    }
+    table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { border-bottom: none; }
+    table.compare tbody tr:hover { background: var(--surface); }
+    .table-note { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 0.6rem; }
+
+    /* ── Cultural families (s5) ───────────────────────────────── */
+    .family-list { display: grid; gap: 1rem; margin: 2rem 0; }
+    .family {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius-md); padding: 1.2rem 1.4rem;
+      display: grid; grid-template-columns: 200px 1fr; gap: 0.4rem 1.4rem; align-items: start;
+    }
+    .family h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem; font-weight: 600; color: var(--ink); margin: 0;
+    }
+    .family .fam-peoples { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+    .family .fam-sym {
+      font-size: 0.9rem; line-height: 1.55;
+    }
+    .family .fam-sym b {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600; display: block; margin-bottom: 0.2rem;
+    }
+    @media (max-width: 620px) { .family { grid-template-columns: 1fr; } }
+
+    /* ── Canon of figures (s6) ────────────────────────────────── */
+    .canon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap: 1rem; margin: 2rem 0; }
+    .canon-card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius-md); padding: 1.1rem 1.3rem;
+    }
+    .canon-card h3 {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 0.6rem;
+    }
+    .canon-card p { font-size: 0.9rem; line-height: 1.6; margin: 0; color: var(--text); }
+
+    /* ── Layer model (s7) ─────────────────────────────────────── */
+    .layers { display: grid; gap: 0.8rem; margin: 1.8rem 0; }
+    .layer {
+      display: grid; grid-template-columns: 44px 1fr; gap: 1rem; align-items: start;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius-md); padding: 1.1rem 1.3rem;
+    }
+    .layer-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem; font-weight: 600; color: var(--accent); line-height: 1;
+    }
+    .layer h3 {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.95rem; font-weight: 600; color: var(--ink); margin: 0 0 0.25rem;
+    }
+    .layer p { font-size: 0.9rem; line-height: 1.55; margin: 0; color: var(--text); }
+    .worked {
+      background: var(--surface-2); border-radius: var(--radius-md);
+      padding: 1.2rem 1.4rem; margin: 1.6rem 0; font-size: 0.92rem; line-height: 1.7;
+    }
+    .worked .w-item { margin-bottom: 0.55rem; }
+    .worked .w-item:last-child { margin-bottom: 0; }
+    .worked b { color: var(--ink); }
+
+    /* ── TOC overlay ──────────────────────────────────────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex; align-items: flex-start; justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--bg);
+      width: min(400px, 90vw); height: 100%;
+      padding: 2rem 1.8rem; overflow-y: auto;
+      box-shadow: -8px 0 40px rgba(0,0,0,0.25);
+    }
+    .toc-panel h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.6rem; color: var(--ink); margin: 0 0 1.2rem;
+    }
+    .toc-close {
+      position: absolute; top: 1.4rem; right: 1.4rem;
+      background: none; border: none; font-size: 1.4rem; cursor: pointer;
+      color: var(--muted); line-height: 1; padding: 0.3rem;
+    }
+    .toc-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .toc-list { list-style: none; padding: 0; margin: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.55rem 0;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--text); text-decoration: none;
+      border-bottom: 1px solid var(--line-2); font-size: 0.92rem;
+    }
+    .toc-list a.toc-main { font-weight: 600; color: var(--ink); }
+    .toc-list a.toc-sub { padding-left: 1.1rem; font-size: 0.85rem; color: var(--muted); }
+    .toc-list a:hover { color: var(--accent); }
+    .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+    /* ── Footer ───────────────────────────────────────────────── */
+    footer {
+      max-width: var(--content-w); margin: 0 auto;
+      padding: 2.5rem 2.5rem 4rem;
+      border-top: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem; font-weight: 600; color: var(--ink);
+    }
+    .footer-copy {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.8rem; color: var(--faint);
+    }
+
+    /* ── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 820px) {
+      .dir-layout { grid-template-columns: 1fr; }
+      .dir-filters {
+        position: static;
+        border: 1px solid var(--line); border-radius: var(--radius-md);
+        padding: 0; margin-bottom: 1rem; overflow: hidden;
+      }
+      .dir-filter-toggle {
+        display: flex; width: 100%; align-items: center; justify-content: space-between;
+        font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600;
+        color: var(--ink); background: var(--bg); border: none;
+        padding: 0.9rem 1.1rem; cursor: pointer; min-height: 44px;
+      }
+      .dir-filter-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+      .dir-filter-body { padding: 0 1.1rem 1.1rem; display: none; }
+      .dir-filters.open .dir-filter-body { display: block; }
+      .dir-filter-toggle .arr { transition: transform 0.2s; }
+      .dir-filters.open .dir-filter-toggle .arr { transform: rotate(180deg); }
+    }
+    @media (min-width: 821px) {
+      .dir-filter-body { display: block !important; }
+    }
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 2.5rem 1.4rem 0; }
+      .article-body { padding: 2rem 1.4rem 5rem; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .hero-rule { margin-top: 2rem; }
+      footer { padding: 2rem 1.4rem 3rem; }
+      .family { padding: 1.1rem; }
+    }
+
+    /* ── Reduced motion ───────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <main id="main-content">
+
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close" aria-label="Close contents"
+              onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+      <h3>Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-main">I. What “Turkic” Means</a></li>
+        <li><a href="#s1-1" class="toc-sub">Turkish vs Turkic</a></li>
+        <li><a href="#s2" class="toc-main">II. The Six Language Branches</a></li>
+        <li><a href="#s3" class="toc-main">III. The Directory — Peoples of the Turkic World</a></li>
+        <li><a href="#s4" class="toc-main">IV. How Different Are They?</a></li>
+        <li><a href="#s5" class="toc-main">V. Six Cultural Families</a></li>
+        <li><a href="#s6" class="toc-main">VI. A Canon of Figures</a></li>
+        <li><a href="#s7" class="toc-main">VII. How to Study It Without Flattening</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Civilization · World Cultures</div>
+    <h1>A Guide to the <em>Turkic</em> World</h1>
+    <p class="hero-sub">Not one race, one culture, or one bloc — a family of peoples spread from the Balkans to Siberia and western China, connected by related languages and many different histories.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">Reference guide · World Cultures</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar -->
+  <header class="article-header">
+    <span class="read-time">24 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+  </header>
+
+  <!-- Article body -->
+  <article class="article-body">
+
+    <!-- ── s1 ──────────────────────────────────────────────── -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>What <em>“Turkic”</em> Means</h2>
+
+      <p class="lead">The Turkic world is best understood as a wide civilizational-linguistic belt stretching from the Balkans and Anatolia through the Caucasus, Iran, Iraq, Central Asia, Siberia, Afghanistan, Mongolia, and western China. It is <strong>not one race, one culture, or one political bloc.</strong> It is a family of peoples connected by related languages, by steppe and oasis histories, by layers of Islamic, Buddhist, Christian, shamanic and Soviet experience, and by many different state fates.</p>
+
+      <p>Politically, the formal core today is the <strong>Organization of Turkic States</strong> (OTS). Its five members are Türkiye, Azerbaijan, Kazakhstan, Kyrgyzstan and Uzbekistan; its observers are Hungary (since 2018), Turkmenistan (2021), the Turkish Republic of Northern Cyprus (2022, recognised only by Türkiye) and — a recent addition worth noting — the Economic Cooperation Organization (2023). Together, OTS members and observers represent well over 160&nbsp;million people. But the OTS is only the political tip: tens of millions of additional Turkic people live as minorities and diasporas across Eurasia, entirely outside its membership.</p>
+
+      <p>Linguistically, <em class="term">Turkic</em> is a full language family. Modern Turkology usually sorts its living languages into six main branches — <strong>Oghuz, Kipchak, Karluk, Siberian, Oghur/Bulghar, and Khalaj/Arghu</strong> — which is the scaffold this guide is built around.</p>
+
+      <div class="callout">
+        <span class="callout-title">The three-layer model</span>
+        <p>A good way to avoid flattening is to hold three questions apart for every people: <b>which language branch</b> do they speak; <b>which civilizational layers</b> shaped them (steppe, oasis, Ottoman, Persianate, Russian/Soviet, Chinese, Islamic, Christian, Buddhist, shamanic); and <b>what political condition</b> they live in (independent state, autonomous republic, indigenous people, minority, diaspora). The interactive directory in Section III lets you slice the whole family along exactly these axes.</p>
+      </div>
+
+      <h3 id="s1-1" class="sub-heading"><span class="sh-num">1.1</span>Turkish vs Turkic</h3>
+      <p><strong>Turkish</strong> usually means the language and people of Türkiye. <strong>Turkic</strong> means the whole family: Turks, Azerbaijanis, Kazakhs, Uzbeks, Uyghurs, Tatars, Kyrgyz, Turkmens, Bashkirs, Chuvash, Sakha/Yakuts, Tuvans, Gagauz, Iraqi and Syrian Turkmen, Qashqai, Karakalpaks, Crimean Tatars, and many more.</p>
+      <p>A Turkish speaker can often recognise words and grammatical patterns across the family — but mutual intelligibility drops sharply outside the Oghuz branch. Turkish and Azerbaijani are close; Turkish and Uzbek more distant; Turkish and Kazakh or Kyrgyz farther still; Turkish and Sakha or Chuvash are, for practical purposes, separate worlds. Section IV lays this out word by word.</p>
+
+      <p class="pull-quote">The Turkic world is a family-resemblance system: shared deep grammar and historical memory, but many different civilizations.</p>
+    </section>
+
+    <!-- ── s2 ──────────────────────────────────────────────── -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>The Six Language <em>Branches</em></h2>
+      <p>Most Turkic languages are agglutinative: they build words with strings of suffixes, tend to use vowel harmony, generally prefer subject–object–verb order, and lack grammatical gender. But each branch evolved under different contact pressures — Persian in Iran and Central Asia, Arabic in Iraq and Syria, Russian across the former Soviet lands, Chinese in Xinjiang, Mongolic in Siberia, and Balkan Slavic in Gagauzia. The colours below carry through the whole guide.</p>
+
+      <div class="branch-grid">
+        <div class="branch-card" style="--bc:var(--b-oghuz)">
+          <span class="bc-tag">● Oghuz / Southwestern</span>
+          <h3>Oghuz</h3>
+          <p>The western core, closest to modern Turkish. Azerbaijani and Iraqi Turkmen feel very familiar to a Turkish speaker, though shaped by Persian, Arabic, Kurdish or Russian contact depending on region.</p>
+          <p class="bc-langs"><b>Main languages</b>Turkish · Azerbaijani · Turkmen · Gagauz · Qashqai · Khorasani Turkic · Iraqi &amp; Syrian Turkmen</p>
+        </div>
+
+        <div class="branch-card" style="--bc:var(--b-kipchak)">
+          <span class="bc-tag">● Kipchak / Northwestern</span>
+          <h3>Kipchak</h3>
+          <p>The steppe branch, with a strong nomadic heritage and heavy Russian/Cyrillic contact. Kazakh and Kyrgyz share many features but are not simply “dialects of Turkish.”</p>
+          <p class="bc-langs"><b>Main languages</b>Kazakh · Kyrgyz · Tatar · Bashkir · Karakalpak · Nogai · Kumyk · Karachay-Balkar · Crimean Tatar</p>
+        </div>
+
+        <div class="branch-card" style="--bc:var(--b-karluk)">
+          <span class="bc-tag">● Karluk / Southeastern</span>
+          <h3>Karluk</h3>
+          <p>Heir to the Chagatai literary world of the Silk Road oasis cities. Strongly Persianate urban culture; Uzbek carries heavy Persian/Tajik influence, Uyghur preserves a rich oasis Islamic culture.</p>
+          <p class="bc-langs"><b>Main languages</b>Uzbek · Uyghur</p>
+        </div>
+
+        <div class="branch-card" style="--bc:var(--b-siberia)">
+          <span class="bc-tag">● Siberian / Northeastern</span>
+          <h3>Siberian</h3>
+          <p>The most distant from Turkish, culturally and linguistically, with strong shamanic, Buddhist, Orthodox, Mongolic and Russian layers and many endangered languages.</p>
+          <p class="bc-langs"><b>Main languages</b>Sakha/Yakut · Tuvan · Altai · Khakas · Shor · Tofa · Dolgan</p>
+        </div>
+
+        <div class="branch-card" style="--bc:var(--b-oghur)">
+          <span class="bc-tag">● Oghur / Bulghar</span>
+          <h3>Oghur</h3>
+          <p>Chuvash is the sole surviving Oghur (Bulghar) Turkic language, and it is highly divergent from all the “Common Turkic” languages — so much so that it is the key to reconstructing early Turkic.</p>
+          <p class="bc-langs"><b>Main language</b>Chuvash</p>
+        </div>
+
+        <div class="branch-card" style="--bc:var(--b-khalaj)">
+          <span class="bc-tag">● Khalaj / Arghu</span>
+          <h3>Khalaj</h3>
+          <p>A small, endangered branch spoken in central Iran, linguistically precious because it preserves archaic Turkic features lost elsewhere in the family.</p>
+          <p class="bc-langs"><b>Main language</b>Khalaj (Iran)</p>
+        </div>
+      </div>
+    </section>
+    <!-- ── s3 : THE DIRECTORY ──────────────────────────────── -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>The Directory — <em>Peoples</em> of the Turkic World</h2>
+      <p>Thirty-three peoples and communities, from independent states to scattered diasporas. Search by name or keyword, or use the filters to slice the family by language branch, region, political condition, or predominant religious tradition. Filters combine — pick “Oghuz” and “Iran” to see only the Oghuz-speaking peoples of Iran. The religion column marks a <em>predominant</em> tradition, not a uniform one; many of these communities are internally plural.</p>
+
+      <div class="directory">
+        <!-- Search -->
+        <div class="dir-searchbar">
+          <svg class="dir-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="dir-search" id="dirSearch"
+                 placeholder="Search peoples, places, figures…" aria-label="Search the directory">
+          <button class="dir-clear-search" id="dirClearSearch" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="dir-layout">
+          <!-- Filters -->
+          <aside class="dir-filters" id="dirFilters">
+            <button class="dir-filter-toggle" id="dirFilterToggle" aria-expanded="false">
+              Filters <span class="arr">▾</span>
+            </button>
+            <div class="dir-filter-body">
+
+              <div class="filter-group">
+                <h4>Language branch</h4>
+                <div class="chip-row">
+                  <button class="chip" data-group="branch" data-value="oghuz"    aria-pressed="false"><span class="dot" style="--dot:var(--b-oghuz)"></span>Oghuz <span class="chip-count"></span></button>
+                  <button class="chip" data-group="branch" data-value="kipchak"  aria-pressed="false"><span class="dot" style="--dot:var(--b-kipchak)"></span>Kipchak <span class="chip-count"></span></button>
+                  <button class="chip" data-group="branch" data-value="karluk"   aria-pressed="false"><span class="dot" style="--dot:var(--b-karluk)"></span>Karluk <span class="chip-count"></span></button>
+                  <button class="chip" data-group="branch" data-value="siberian" aria-pressed="false"><span class="dot" style="--dot:var(--b-siberia)"></span>Siberian <span class="chip-count"></span></button>
+                  <button class="chip" data-group="branch" data-value="oghur"    aria-pressed="false"><span class="dot" style="--dot:var(--b-oghur)"></span>Oghur <span class="chip-count"></span></button>
+                  <button class="chip" data-group="branch" data-value="khalaj"   aria-pressed="false"><span class="dot" style="--dot:var(--b-khalaj)"></span>Khalaj <span class="chip-count"></span></button>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h4>Region</h4>
+                <div class="chip-row">
+                  <button class="chip" data-group="region" data-value="anatolia" aria-pressed="false">Anatolia · Balkans · Crimea <span class="chip-count"></span></button>
+                  <button class="chip" data-group="region" data-value="caucasus" aria-pressed="false">Caucasus <span class="chip-count"></span></button>
+                  <button class="chip" data-group="region" data-value="iran"     aria-pressed="false">Iran <span class="chip-count"></span></button>
+                  <button class="chip" data-group="region" data-value="central"  aria-pressed="false">Central &amp; Inner Asia <span class="chip-count"></span></button>
+                  <button class="chip" data-group="region" data-value="china"    aria-pressed="false">China · East Turkestan <span class="chip-count"></span></button>
+                  <button class="chip" data-group="region" data-value="russia"   aria-pressed="false">Volga–Ural &amp; Siberia <span class="chip-count"></span></button>
+                  <button class="chip" data-group="region" data-value="mideast"  aria-pressed="false">Iraq &amp; Syria <span class="chip-count"></span></button>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h4>Political condition</h4>
+                <div class="chip-row">
+                  <button class="chip" data-group="status" data-value="state"      aria-pressed="false">Independent state <span class="chip-count"></span></button>
+                  <button class="chip" data-group="status" data-value="autonomous" aria-pressed="false">Autonomous region <span class="chip-count"></span></button>
+                  <button class="chip" data-group="status" data-value="indigenous" aria-pressed="false">Indigenous people <span class="chip-count"></span></button>
+                  <button class="chip" data-group="status" data-value="minority"   aria-pressed="false">Minority · diaspora <span class="chip-count"></span></button>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h4>Predominant tradition</h4>
+                <div class="chip-row">
+                  <button class="chip" data-group="religion" data-value="sunni"     aria-pressed="false">Sunni Islam <span class="chip-count"></span></button>
+                  <button class="chip" data-group="religion" data-value="shia"      aria-pressed="false">Shiʿi Islam <span class="chip-count"></span></button>
+                  <button class="chip" data-group="religion" data-value="christian" aria-pressed="false">Orthodox Christian <span class="chip-count"></span></button>
+                  <button class="chip" data-group="religion" data-value="buddhist"  aria-pressed="false">Buddhist &amp; shamanic <span class="chip-count"></span></button>
+                  <button class="chip" data-group="religion" data-value="mixed"     aria-pressed="false">Mixed traditions <span class="chip-count"></span></button>
+                </div>
+              </div>
+
+              <button class="dir-clear-all" id="dirClearAll">Clear all filters</button>
+            </div>
+          </aside>
+
+          <!-- Results -->
+          <div class="dir-main">
+            <div class="dir-results-head">
+              <span class="dir-count" id="dirCount"><b>33</b> of 33 peoples</span>
+            </div>
+            <div class="dir-grid" id="dirGrid">
+              <!-- 1 -->
+              <article class="dir-card" data-branch="oghuz" data-region="anatolia" data-status="state" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Türkiye</h3><span class="dir-status st-state">State</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Anatolia</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">The largest Turkish-speaking state and main heir to Ottoman, Anatolian Seljuk, Balkan and Mediterranean traditions. Modern standard Turkish uses the Latin script after sweeping 20th-century reforms.</p>
+                <p class="dir-figs"><b>Figures</b> Yunus Emre · Mimar Sinan · Evliya Çelebi · Mustafa Kemal Atatürk · Mehmet Akif Ersoy</p>
+              </article>
+
+              <!-- 2 -->
+              <article class="dir-card" data-branch="oghuz" data-region="caucasus" data-status="state" data-religion="shia" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Azerbaijan</h3><span class="dir-status st-state">State</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">South Caucasus</span><span class="m">Shiʿi Islam</span></p>
+                <p class="dir-desc">Bridges Anatolia, Iran, the Caucasus and the Caspian. Oghuz Turkic but deeply shaped by Persianate high culture and Shiʿi Islam — the homeland of mugham music and ashiq poetry.</p>
+                <p class="dir-figs"><b>Figures</b> Shah Ismail Khatai · Fuzuli · Uzeyir Hajibeyov · Mammad Amin Rasulzade</p>
+              </article>
+
+              <!-- 3 -->
+              <article class="dir-card" data-branch="kipchak" data-region="central" data-status="state" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Kazakhstan</h3><span class="dir-status st-state">State</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">Central Asian steppe</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">The great Eurasian steppe: nomadic pastoralism, dombra music, aitys poetic contests and jüz clan memory, with Islamic and shamanic layers and a modern bilingual Kazakh–Russian state.</p>
+                <p class="dir-figs"><b>Figures</b> Abay Qunanbayuly · Shokan Walikhanov · Kenesary Khan · Alikhan Bokeikhan</p>
+              </article>
+
+              <!-- 4 -->
+              <article class="dir-card" data-branch="kipchak" data-region="central" data-status="state" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Kyrgyzstan</h3><span class="dir-status st-state">State</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">Tian Shan</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">A mountain pastoral world organised around the vast epic of Manas, clan structures, komuz music, eagle hunting and jailoo summer pastures.</p>
+                <p class="dir-figs"><b>Figures</b> Manas (epic hero) · Kurmanjan Datka · Jusup Balasagyn · Chinghiz Aitmatov</p>
+              </article>
+
+              <!-- 5 -->
+              <article class="dir-card" data-branch="karluk" data-region="central" data-status="state" data-religion="sunni" style="--bc:var(--b-karluk)">
+                <div class="dir-card-top"><h3 class="dir-name">Uzbekistan</h3><span class="dir-status st-state">State</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Karluk</span><span class="m">Transoxiana</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">Heartland of the Silk Road cities — Samarkand, Bukhara, Khiva, Kokand. A Turkic language over a Persianate urban culture and Timurid heritage; vowel harmony weakened by heavy Persian/Tajik contact.</p>
+                <p class="dir-figs"><b>Figures</b> Alisher Navoiy · Babur · Ulugh Beg · Abdulla Qodiriy · Cho‘lpon</p>
+              </article>
+
+              <!-- 6 -->
+              <article class="dir-card" data-branch="oghuz" data-region="central" data-status="state" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Turkmenistan</h3><span class="dir-status st-state">State</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Karakum</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">An eastern Oghuz desert-oasis world of tribal confederations (Teke, Yomut, Ersary), carpets and Akhal-Teke horses. Turkmen preserves archaic traits such as phonemic vowel length more strongly than other Oghuz languages.</p>
+                <p class="dir-figs"><b>Figures</b> Magtymguly Pyragy · Alp Arslan · Sultan Sanjar · Oguz Khan (legendary)</p>
+              </article>
+
+              <!-- 7 -->
+              <article class="dir-card" data-branch="oghuz" data-region="mideast" data-status="minority" data-religion="mixed" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Iraqi Turkmen</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">N. Iraq · Turkmeneli</span><span class="m">Mixed (Sunni / Shiʿi)</span></p>
+                <p class="dir-desc">The historic Turkmeneli belt — Tal Afar, Mosul, Kirkuk, Tuz Khurmatu. Estimates range from ~600,000 to 2 million. Speech sits between Anatolian Turkish and Azerbaijani; roughly 60% Sunni, the rest Shiʿi. Scarred by Baʿathist Arabization and post-2003 violence.</p>
+                <p class="dir-figs"><b>Figures</b> Fuzuli · Ata Terzibaşı (Kirkuk literary historian) · Abdüllatif Benderoğlu</p>
+              </article>
+
+              <!-- 8 -->
+              <article class="dir-card" data-branch="oghuz" data-region="mideast" data-status="minority" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Syrian Turkmen</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">N. &amp; coastal Syria</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">Northern and western Syria — Aleppo, Jarabulus, al-Bab and the Bayırbucak/Turkmen Mountain near Latakia. Oghuz dialects close to those of southern Anatolia; mostly Sunni, with strong kinship to Türkiye. Made politically visible — and vulnerable — by the civil war.</p>
+              </article>
+
+              <!-- 9 -->
+              <article class="dir-card" data-branch="oghuz" data-region="iran" data-status="minority" data-religion="shia" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Iranian Azerbaijanis</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">NW Iran</span><span class="m">Shiʿi Islam</span></p>
+                <p class="dir-desc">Iran's largest Turkic population — roughly 16% of the country — centred on Tabriz, Urmia, Ardabil and Zanjan. Mostly Shiʿi; their Southern Azerbaijani is written in Perso-Arabic script with heavy Persian influence.</p>
+                <p class="dir-figs"><b>Figures</b> Sattar Khan · Bagher Khan · Mohammad-Hossein Shahriar · Samad Behrangi</p>
+              </article>
+
+              <!-- 10 -->
+              <article class="dir-card" data-branch="oghuz" data-region="iran" data-status="minority" data-religion="shia" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Qashqai</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Fars, Iran</span><span class="m">Shiʿi Islam</span></p>
+                <p class="dir-desc">An Oghuz-speaking tribal confederation historically centred in Fars, famed for nomadic life, carpets, oral poetry and a long history of resistance to centralising states.</p>
+                <p class="dir-figs"><b>Figures</b> Nasir Khan Qashqai · Mohammad Bahmanbeigi</p>
+              </article>
+
+              <!-- 11 -->
+              <article class="dir-card" data-branch="oghuz" data-region="iran" data-status="minority" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Iranian Turkmen</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Golestan, Iran</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">Concentrated in Golestan and North Khorasan and related to Turkmenistan's Turkmens; usually Sunni, with horse and carpet culture. Nearby live other Oghuz-related Iranian groups — Afshar, Khorasani Turks and Shahsevan.</p>
+              </article>
+
+              <!-- 12 -->
+              <article class="dir-card" data-branch="khalaj" data-region="iran" data-status="minority" data-religion="shia" style="--bc:var(--b-khalaj)">
+                <div class="dir-card-top"><h3 class="dir-name">Khalaj</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Khalaj</span><span class="m">Central Iran</span><span class="m">Shiʿi Islam</span></p>
+                <p class="dir-desc">A small Turkic-speaking community in central Iran and linguistically precious: Khalaj preserves archaic Turkic features that vanished elsewhere in the family, forming a branch of its own.</p>
+              </article>
+
+              <!-- 13 -->
+              <article class="dir-card" data-branch="karluk" data-region="china" data-status="minority" data-religion="sunni" style="--bc:var(--b-karluk)">
+                <div class="dir-card-top"><h3 class="dir-name">Uyghurs</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Karluk</span><span class="m">Xinjiang</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">Karluk-speaking Sunni Muslims of the Xinjiang oasis cities — Kashgar, Hotan, Turfan — and home of the Twelve Muqam and meshrep gatherings. China's disputed 2020 census put them at roughly 11.6 million. One of the most politically sensitive Turkic regions, under state assimilation, surveillance and detention that China disputes.</p>
+                <p class="dir-figs"><b>Figures</b> Mahmud al-Kashgari · Yusuf Khass Hajib · Abdurehim Ötkür · Rebiya Kadeer</p>
+              </article>
+
+              <!-- 14 -->
+              <article class="dir-card" data-branch="kipchak" data-region="china" data-status="minority" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Kazakhs of China</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">N. Xinjiang</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">Concentrated in Ili, Altay and Tacheng in northern Xinjiang, with Kyrgyz communities in Kizilsu to the west. Kipchak-speaking, Muslim, and closely tied to Kazakhstan across the border.</p>
+              </article>
+
+              <!-- 15 -->
+              <article class="dir-card" data-branch="oghuz" data-region="china" data-status="minority" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Salar</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Qinghai–Gansu</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">A small Muslim people of Qinghai and Gansu with Oghuz origins but strong Chinese and Tibetan contact — an unusual far-eastern outlier of the Oghuz branch.</p>
+              </article>
+
+              <!-- 16 -->
+              <article class="dir-card" data-branch="siberian" data-region="china" data-status="minority" data-religion="buddhist" style="--bc:var(--b-siberia)">
+                <div class="dir-card-top"><h3 class="dir-name">Western Yugur</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Siberian type</span><span class="m">Gansu</span><span class="m">Buddhist &amp; shamanic</span></p>
+                <p class="dir-desc">The Sariq Yugur of Gansu — a tiny Turkic group with Buddhist and Mongolic/Tibetan cultural layers, and living proof that not every Turkic people is Muslim.</p>
+              </article>
+
+              <!-- 17 -->
+              <article class="dir-card" data-branch="kipchak" data-region="russia" data-status="autonomous" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Tatars</h3><span class="dir-status st-autonomous">Autonomous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">Volga–Ural</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">The Volga-Ural Muslim people of Tatarstan and Bashkortostan, carrying a rich Kazan literary culture and the Jadid movement of modernist education and Islamic printing.</p>
+                <p class="dir-figs"><b>Figures</b> Qol Şärif · Gabdulla Tukay · Musa Bigiev · Sadri Maksudi Arsal</p>
+              </article>
+
+              <!-- 18 -->
+              <article class="dir-card" data-branch="kipchak" data-region="russia" data-status="autonomous" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Bashkirs</h3><span class="dir-status st-autonomous">Autonomous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">Bashkortostan</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">A Kipchak-related Muslim people of Bashkortostan with a steppe-forest culture and strong epic traditions.</p>
+                <p class="dir-figs"><b>Figures</b> Salawat Yulayev · Zeki Velidi Togan</p>
+              </article>
+
+              <!-- 19 -->
+              <article class="dir-card" data-branch="oghur" data-region="russia" data-status="autonomous" data-religion="christian" style="--bc:var(--b-oghur)">
+                <div class="dir-card-top"><h3 class="dir-name">Chuvash</h3><span class="dir-status st-autonomous">Autonomous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghur</span><span class="m">Middle Volga</span><span class="m">Orthodox Christian</span></p>
+                <p class="dir-desc">Speakers of the only surviving Oghur/Bulghar Turkic language — so divergent it is the key to reconstructing early Turkic. Many Chuvash are Orthodox Christian atop pre-Christian folk layers.</p>
+                <p class="dir-figs"><b>Figures</b> Ivan Yakovlev · Konstantin Ivanov</p>
+              </article>
+
+              <!-- 20 -->
+              <article class="dir-card" data-branch="siberian" data-region="russia" data-status="autonomous" data-religion="mixed" style="--bc:var(--b-siberia)">
+                <div class="dir-card-top"><h3 class="dir-name">Sakha / Yakuts</h3><span class="dir-status st-autonomous">Autonomous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Siberian</span><span class="m">Sakha, Siberia</span><span class="m">Orthodox &amp; shamanic</span></p>
+                <p class="dir-desc">A Northeastern Turkic people of the Sakha Republic, speaking a language very distant from Turkish. A strong horse-and-cattle culture adapted to Arctic conditions, with shamanic heritage and Russian Orthodox influence.</p>
+              </article>
+
+              <!-- 21 -->
+              <article class="dir-card" data-branch="siberian" data-region="russia" data-status="autonomous" data-religion="buddhist" style="--bc:var(--b-siberia)">
+                <div class="dir-card-top"><h3 class="dir-name">Tuvans</h3><span class="dir-status st-autonomous">Autonomous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Siberian</span><span class="m">Tuva, S. Siberia</span><span class="m">Buddhist &amp; shamanic</span></p>
+                <p class="dir-desc">A Siberian Turkic people of Tuva, famous for throat singing (khöömei), with intertwined Tibetan Buddhist and shamanic traditions.</p>
+              </article>
+
+              <!-- 22 -->
+              <article class="dir-card" data-branch="siberian" data-region="russia" data-status="minority" data-religion="buddhist" style="--bc:var(--b-siberia)">
+                <div class="dir-card-top"><h3 class="dir-name">Altai–Sayan peoples</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Siberian</span><span class="m">Altai–Sayan</span><span class="m">Buddhist &amp; shamanic</span></p>
+                <p class="dir-desc">The Altai, Khakas, Shor, Tofa and Dolgan — smaller Siberian Turkic peoples with endangered languages and deep Altai-Sayan shamanic and Buddhist cultural layers.</p>
+              </article>
+
+              <!-- 23 -->
+              <article class="dir-card" data-branch="kipchak" data-region="caucasus" data-status="minority" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Kumyks, Nogais &amp; Karachay-Balkars</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">N. Caucasus</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">North Caucasus Kipchak peoples within the Russian Federation, shaped by Islam and by mountain and steppe life under Russian imperial and Soviet rule.</p>
+              </article>
+
+              <!-- 24 -->
+              <article class="dir-card" data-branch="kipchak" data-region="anatolia" data-status="indigenous" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Crimean Tatars</h3><span class="dir-status st-indigenous">Indigenous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak–Oghuz</span><span class="m">Crimea</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">An indigenous people of Crimea speaking a mixed Kipchak-Oghuz language, carrying the memory of the Crimean Khanate and Bakhchisaray. Marked by Stalin's 1944 deportation and post-2014 repression; Ukraine recognises them as an indigenous people.</p>
+                <p class="dir-figs"><b>Figures</b> İsmail Gasprinski · Noman Çelebicihan · Mustafa Dzhemilev · Bekir Çoban-zade</p>
+              </article>
+
+              <!-- 25 -->
+              <article class="dir-card" data-branch="oghuz" data-region="anatolia" data-status="autonomous" data-religion="christian" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Gagauz</h3><span class="dir-status st-autonomous">Autonomous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Moldova · Gagauzia</span><span class="m">Orthodox Christian</span></p>
+                <p class="dir-desc">An Oghuz Turkic-speaking, mostly Orthodox Christian people of southern Moldova's autonomous Gagauzia and parts of Ukraine — a rare Christian Oghuz tradition. The 2014 census recorded 126,010 Gagauz; their language is close to Turkish with heavy Balkan and Russian contact.</p>
+                <p class="dir-figs"><b>Figures</b> Mihail Çakir · Dionis Tanasoglu</p>
+              </article>
+
+              <!-- 26 -->
+              <article class="dir-card" data-branch="kipchak" data-region="central" data-status="autonomous" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Karakalpaks</h3><span class="dir-status st-autonomous">Autonomous</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">Aral Sea · Uzbekistan</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">A Kipchak people of the autonomous Republic of Karakalpakstan around the southern Aral Sea — linguistically closer to Kazakh than to Uzbek, and carrying the environmental trauma of the Aral Sea disaster.</p>
+                <p class="dir-figs"><b>Figures</b> Ajiniyaz · Berdakh · Ibrayim Yusupov</p>
+              </article>
+
+              <!-- 27 -->
+              <article class="dir-card" data-branch="karluk" data-region="central" data-status="minority" data-religion="sunni" style="--bc:var(--b-karluk)">
+                <div class="dir-card-top"><h3 class="dir-name">Afghan Uzbeks</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Karluk</span><span class="m">N. Afghanistan</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">A major Turkic minority of northern Afghanistan — Uzbek-speaking Sunni Muslims (older estimates near 9% of the country) with strong links to Central Asian Uzbek culture but shaped by Afghan politics.</p>
+                <p class="dir-figs"><b>Figures</b> Abdul Rashid Dostum</p>
+              </article>
+
+              <!-- 28 -->
+              <article class="dir-card" data-branch="oghuz" data-region="central" data-status="minority" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Afghan Turkmens</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">N. Afghanistan</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">Oghuz-speaking Sunni Muslims of northern Afghanistan (older estimates near 3%), famed for carpets and animal husbandry, tied to Turkmenistan across the border.</p>
+              </article>
+
+              <!-- 29 -->
+              <article class="dir-card" data-branch="oghuz" data-region="anatolia" data-status="minority" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Bulgarian Turks</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Bulgaria</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">One of the largest old Ottoman Turkish communities in the Balkans, in southern Bulgaria's Arda basin and northeastern Dobrudja (8.8% of those declaring ethnicity in 2011). Scarred by the 1980s forced name-changing campaign and mass emigration to Türkiye.</p>
+              </article>
+
+              <!-- 30 -->
+              <article class="dir-card" data-branch="oghuz" data-region="anatolia" data-status="minority" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Western Thrace Turks</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">W. Thrace, Greece</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">A historic Muslim/Turkish minority of northeastern Greece around Komotini and Xanthi — around 150,000 by Turkish estimates — protected under the Lausanne framework. Their self-identification as Turkish remains politically contested in Greece.</p>
+              </article>
+
+              <!-- 31 -->
+              <article class="dir-card" data-branch="oghuz" data-region="caucasus" data-status="minority" data-religion="sunni" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Meskhetian (Ahıska) Turks</h3><span class="dir-status st-minority">Diaspora</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">dispersed · from Georgia</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">Turkish-speaking people originally from Meskheti/Samtskhe in present-day Georgia, deported by Stalin in 1944 and now scattered across Central Asia, Azerbaijan, Türkiye, Russia, Ukraine and the United States. Return to the homeland remains politically difficult.</p>
+              </article>
+
+              <!-- 32 -->
+              <article class="dir-card" data-branch="oghuz" data-region="caucasus" data-status="minority" data-religion="mixed" style="--bc:var(--b-oghuz)">
+                <div class="dir-card-top"><h3 class="dir-name">Azerbaijanis of Georgia</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Oghuz</span><span class="m">Kvemo Kartli, Georgia</span><span class="m">Shiʿi &amp; Sunni</span></p>
+                <p class="dir-desc">A major Turkic minority of Georgia — 6.3% of the population in 2014, heavily concentrated in Kvemo Kartli — with related communities in Dagestan's Derbent. Shiʿi and Sunni, with ashiq music and strong kinship to Azerbaijan and Iranian Azerbaijan.</p>
+              </article>
+
+              <!-- 33 -->
+              <article class="dir-card" data-branch="kipchak" data-region="central" data-status="minority" data-religion="sunni" style="--bc:var(--b-kipchak)">
+                <div class="dir-card-top"><h3 class="dir-name">Kazakhs of Mongolia</h3><span class="dir-status st-minority">Minority</span></div>
+                <p class="dir-meta"><span class="m"><span class="dot"></span>Kipchak</span><span class="m">Bayan-Ölgii, Mongolia</span><span class="m">Sunni Islam</span></p>
+                <p class="dir-desc">The Kazakh cultural island of Mongolia's Bayan-Ölgii, preserving eagle hunting, dombra, embroidery and Islamic traditions while fully part of Mongolian civic life.</p>
+              </article>
+
+              <p class="dir-empty" id="dirEmpty">No peoples match these filters. Try clearing one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ── s4 ──────────────────────────────────────────────── -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>How <em>Different</em> Are They?</h2>
+      <p>A rough learner's intuition, one word at a time. The table is only illustrative — tense and aspect do not line up perfectly across languages — but it shows the pattern: some roots stay recognisable while sound changes and grammar make full conversation hard.</p>
+
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th>Meaning</th><th>Turkish</th><th>Azerbaijani</th><th>Turkmen</th>
+              <th>Kazakh</th><th>Uzbek</th><th>Uyghur</th><th>Tatar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>I</th><td>ben</td><td>mən</td><td>men</td><td>men</td><td>men</td><td>men</td><td>min</td></tr>
+            <tr><th>water</th><td>su</td><td>su</td><td>suw</td><td>su</td><td>suv</td><td>su</td><td>su</td></tr>
+            <tr><th>house</th><td>ev</td><td>ev</td><td>öý</td><td>üy</td><td>uy</td><td>öy / uy</td><td>öy / yort</td></tr>
+            <tr><th>I am coming</th><td>geliyorum</td><td>gəlirəm</td><td>gelýärin</td><td>kelemin</td><td>kelyapman</td><td>keliwatimen</td><td>kiläm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Illustrative only — the “I am coming” forms use different tense/aspect systems, so they are not exact equivalents.</p>
+
+      <p>A Turkish speaker usually finds <strong>Azerbaijani, Gagauz, Iraqi and Syrian Turkmen, and Turkmen</strong> the most familiar. <strong>Uzbek and Uyghur</strong> feel recognisable in structure but harder in vocabulary and sound. <strong>Kazakh, Kyrgyz, Tatar and Bashkir</strong> feel much farther away. And <strong>Sakha/Yakut and Chuvash</strong> are, for an ordinary Turkish speaker, essentially separate worlds.</p>
+    </section>
+
+    <!-- ── s5 ──────────────────────────────────────────────── -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>Six Cultural <em>Families</em></h2>
+      <p>Language branches are not the only way to group the Turkic world. Cutting across them are broad cultural families — shared ecologies, symbols and historical layers that a purely linguistic map would miss.</p>
+
+      <div class="family-list">
+        <div class="family">
+          <h3>Steppe Turkic</h3>
+          <div>
+            <p class="fam-peoples">Kazakh · Kyrgyz · Nogai · Karakalpak · Bashkir · some Tatar and Siberian groups</p>
+            <p class="fam-sym"><b>Symbols</b> Horse, yurt, epic, clan genealogy, pastoral mobility, dombra and komuz, felt.</p>
+          </div>
+        </div>
+        <div class="family">
+          <h3>Oasis · Silk-Road Turkic</h3>
+          <div>
+            <p class="fam-peoples">Uzbek · Uyghur</p>
+            <p class="fam-sym"><b>Symbols</b> Madrasa, bazaar, urban craft, maqom and muqam music, Persianate literature, irrigation agriculture, the Chagatai legacy.</p>
+          </div>
+        </div>
+        <div class="family">
+          <h3>Oghuz · Western Turkic</h3>
+          <div>
+            <p class="fam-peoples">Türkiye · Azerbaijan · Turkmenistan · Iraqi &amp; Syrian Turkmen · Qashqai · Gagauz</p>
+            <p class="fam-sym"><b>Symbols</b> Dede Qorqud / Oğuzname memory, ashiq tradition, carpets, Ottoman/Safavid/Seljuk layers, strong oral poetry.</p>
+          </div>
+        </div>
+        <div class="family">
+          <h3>Volga–Ural Turkic</h3>
+          <div>
+            <p class="fam-peoples">Tatars · Bashkirs · Chuvash</p>
+            <p class="fam-sym"><b>Symbols</b> Kazan, Jadidism, Islamic printing, Russian imperial contact, the Orthodox Chuvash tradition, mixed forest-steppe life.</p>
+          </div>
+        </div>
+        <div class="family">
+          <h3>Siberian Turkic</h3>
+          <div>
+            <p class="fam-peoples">Sakha · Tuvan · Altai · Khakas · Shor · Tofa · Dolgan</p>
+            <p class="fam-sym"><b>Symbols</b> Shamanism, throat singing, Arctic and taiga ecology, Mongolic and Russian contact, endangered languages.</p>
+          </div>
+        </div>
+        <div class="family">
+          <h3>Balkan · Christian Turkic</h3>
+          <div>
+            <p class="fam-peoples">Gagauz · some Balkan Turkish communities</p>
+            <p class="fam-sym"><b>Symbols</b> Orthodox Christianity among the Gagauz, Slavic/Romanian/Russian influence, Ottoman-Balkan memory.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── s6 ──────────────────────────────────────────────── -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>A Canon of <em>Figures</em></h2>
+      <p>A short, deliberately incomplete canon — enough names to give the Turkic world a human shape across fifteen centuries.</p>
+
+      <div class="canon-grid">
+        <div class="canon-card">
+          <h3>Foundational · early Turkic</h3>
+          <p>Bumin Qaghan · Istemi Yabghu · Bilge Qaghan · Kül Tigin · Tonyukuk — the Göktürk rulers and statesmen of the Orkhon inscriptions.</p>
+        </div>
+        <div class="canon-card">
+          <h3>Language &amp; literature</h3>
+          <p>Mahmud al-Kashgari · Yusuf Khass Hajib · Ahmad Yasawi · Alisher Navoiy · Fuzuli · Nasimi · Yunus Emre · Magtymguly Pyragy · Gabdulla Tukay · Abay Qunanbayuly · Chinghiz Aitmatov.</p>
+        </div>
+        <div class="canon-card">
+          <h3>State-builders &amp; rulers</h3>
+          <p>Alp Arslan · Malik Shah · Osman I · Fatih Sultan Mehmed · Shah Ismail Khatai · Babur · Amir Timur · Kenesary Khan · Mustafa Kemal Atatürk.</p>
+        </div>
+        <div class="canon-card">
+          <h3>Modern reformers &amp; intellectuals</h3>
+          <p>İsmail Gasprinski · Ziya Gökalp · Alikhan Bokeikhan · Zeki Velidi Togan · Mammad Amin Rasulzade · Sadri Maksudi Arsal · Musa Bigiev.</p>
+        </div>
+        <div class="canon-card">
+          <h3>Minority-world figures</h3>
+          <p>Ata Terzibaşı (Iraqi Turkmen) · Mustafa Dzhemilev (Crimean Tatar) · Mihail Çakir (Gagauz) · Mohammad-Hossein Shahriar (Iranian Azerbaijani).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── s7 ──────────────────────────────────────────────── -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Section VII</span>
+      <h2>How to Study It <em>Without Flattening</em></h2>
+      <p>The common mistake is to treat “Turkic” as if it meant “basically Turkish.” It does not. The most reliable antidote is to hold three independent layers apart for every people you look at.</p>
+
+      <div class="layers">
+        <div class="layer">
+          <span class="layer-num">1</span>
+          <div>
+            <h3>Language family</h3>
+            <p>Which branch do they speak? Oghuz, Kipchak, Karluk, Siberian, Chuvash/Oghur, or Khalaj.</p>
+          </div>
+        </div>
+        <div class="layer">
+          <span class="layer-num">2</span>
+          <div>
+            <h3>Civilizational layer</h3>
+            <p>Which worlds shaped them? Steppe, oasis, Ottoman, Persianate, Russian/Soviet, Chinese — and Islamic, Christian, Buddhist or shamanic.</p>
+          </div>
+        </div>
+        <div class="layer">
+          <span class="layer-num">3</span>
+          <div>
+            <h3>Political condition</h3>
+            <p>How do they live now? Independent state, autonomous republic, indigenous people, diaspora, contested minority, or assimilated borderland group.</p>
+          </div>
+        </div>
+      </div>
+
+      <p>Run five peoples through those three layers and the family's real texture appears:</p>
+
+      <div class="worked">
+        <p class="w-item"><b>Iraqi Turkmen</b> — Oghuz · Middle Eastern, Ottoman-Iraqi · Arabic/Kurdish-contact · politically vulnerable.</p>
+        <p class="w-item"><b>Gagauz</b> — Oghuz · Balkan, Orthodox Christian · Moldovan/Russian-contact · autonomous.</p>
+        <p class="w-item"><b>Uyghurs</b> — Karluk · oasis Silk-Road, Muslim · Chinese-state context · politically repressed.</p>
+        <p class="w-item"><b>Chuvash</b> — Oghur · Volga, often Orthodox Christian · Russian-state context · linguistically very divergent.</p>
+        <p class="w-item"><b>Kazakhs</b> — Kipchak · steppe, Muslim with a Soviet legacy · an independent state plus diasporas in China, Mongolia, Russia and Uzbekistan.</p>
+      </div>
+
+      <p>That layered reading is what keeps the Turkic world what it actually is: a family-resemblance system — shared deep grammar and historical memory, but many different civilizations.</p>
+    </section>
+
+  </article>
+  </main><!-- /main#main-content -->
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  </footer>
+
+  <script>
+    /* Progress bar */
+    (function(){
+      const bar = document.getElementById('progressBar');
+      if(!bar) return;
+      window.addEventListener('scroll', () => {
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docH > 0 ? (window.scrollY / docH * 100) : 0) + '%';
+      }, { passive: true });
+    })();
+
+    /* Directory — search, faceted filters, live counts */
+    (function(){
+      const grid = document.getElementById('dirGrid');
+      if(!grid) return;
+      const cards        = Array.from(grid.querySelectorAll('.dir-card'));
+      const search       = document.getElementById('dirSearch');
+      const clearSearch  = document.getElementById('dirClearSearch');
+      const clearAll     = document.getElementById('dirClearAll');
+      const countEl      = document.getElementById('dirCount');
+      const emptyEl      = document.getElementById('dirEmpty');
+      const chips        = Array.from(document.querySelectorAll('.chip'));
+      const filterToggle = document.getElementById('dirFilterToggle');
+      const filtersAside = document.getElementById('dirFilters');
+
+      const GROUPS = ['branch','region','status','religion'];
+      const active = { branch:new Set(), region:new Set(), status:new Set(), religion:new Set() };
+      let term = '';
+
+      const parts = cards.map(card => {
+        const els = [
+          card.querySelector('.dir-name'),
+          card.querySelector('.dir-desc'),
+          card.querySelector('.dir-figs')
+        ].filter(Boolean);
+        return {
+          card,
+          data: {
+            branch:   card.dataset.branch,
+            region:   card.dataset.region,
+            status:   card.dataset.status,
+            religion: card.dataset.religion
+          },
+          searchText: card.textContent.toLowerCase(),
+          els,
+          orig: els.map(el => el.textContent)
+        };
+      });
+
+      const escapeRe   = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const escapeHtml = s => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+      function highlight(el, text, t){
+        if(!t){ el.textContent = text; return; }
+        const re = new RegExp('(' + escapeRe(t) + ')', 'gi');
+        let out = '', last = 0, m;
+        while((m = re.exec(text))){
+          out += escapeHtml(text.slice(last, m.index)) + '<mark>' + escapeHtml(m[0]) + '</mark>';
+          last = m.index + m[0].length;
+          if(m.index === re.lastIndex) re.lastIndex++;
+        }
+        out += escapeHtml(text.slice(last));
+        el.innerHTML = out;
+      }
+
+      function matches(p){
+        if(term && p.searchText.indexOf(term) === -1) return false;
+        for(const g of GROUPS){
+          if(active[g].size && !active[g].has(p.data[g])) return false;
+        }
+        return true;
+      }
+
+      function countFor(group, value){
+        let n = 0;
+        for(const p of parts){
+          if(term && p.searchText.indexOf(term) === -1) continue;
+          let ok = true;
+          for(const g of GROUPS){
+            if(g === group) continue;
+            if(active[g].size && !active[g].has(p.data[g])){ ok = false; break; }
+          }
+          if(ok && p.data[group] === value) n++;
+        }
+        return n;
+      }
+
+      function updateChipCounts(){
+        chips.forEach(chip => {
+          const n = countFor(chip.dataset.group, chip.dataset.value);
+          const c = chip.querySelector('.chip-count');
+          if(c) c.textContent = n;
+          chip.dataset.count = n;
+        });
+      }
+
+      function render(){
+        let visible = 0;
+        parts.forEach(p => {
+          const ok = matches(p);
+          p.card.classList.toggle('hidden', !ok);
+          if(ok){
+            visible++;
+            p.els.forEach((el, i) => highlight(el, p.orig[i], term));
+          } else {
+            p.els.forEach((el, i) => { el.textContent = p.orig[i]; });
+          }
+        });
+        countEl.innerHTML = '<b>' + visible + '</b> of ' + parts.length + ' peoples';
+        emptyEl.classList.toggle('show', visible === 0);
+        updateChipCounts();
+      }
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const g = chip.dataset.group, v = chip.dataset.value;
+          const pressed = chip.getAttribute('aria-pressed') === 'true';
+          chip.setAttribute('aria-pressed', String(!pressed));
+          if(pressed) active[g].delete(v); else active[g].add(v);
+          render();
+        });
+      });
+
+      search.addEventListener('input', () => {
+        term = search.value.trim().toLowerCase();
+        clearSearch.style.display = term ? 'block' : 'none';
+        render();
+      });
+      clearSearch.addEventListener('click', () => {
+        search.value = ''; term = '';
+        clearSearch.style.display = 'none';
+        search.focus(); render();
+      });
+
+      clearAll.addEventListener('click', () => {
+        GROUPS.forEach(g => active[g].clear());
+        chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+        search.value = ''; term = '';
+        clearSearch.style.display = 'none';
+        render();
+      });
+
+      if(filterToggle){
+        filterToggle.addEventListener('click', () => {
+          const open = filtersAside.classList.toggle('open');
+          filterToggle.setAttribute('aria-expanded', String(open));
+        });
+      }
+
+      render();
+    })();
+  </script>
+</body>
+</html>
