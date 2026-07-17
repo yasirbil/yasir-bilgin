@@ -1,2008 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Which Sūrah for Which Condition | Yasir Bilgin</title>
+<meta charset="UTF-8">
+  <meta name="keywords" content="Quran, study, Islamic sciences">
+  <meta property="og:title"       content="Pages — Study Qur'an" />
+  <meta property="og:description" content="A curated collection of Qur" />
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://yasirbilgin.com/faith/quran-and-hadith/resources.html" />
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <meta property="og:image:alt" content="Pages — Study Qur" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title" content="Pages — Study Qur">
+  <meta name="twitter:description" content="A curated collection of Qur">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg" />
+  <link rel="canonical"           href="https://yasirbilgin.com/faith/quran-and-hadith/resources.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yasir Bilgin" />
+  
+<title>Pages — Study Qur'an | Yasir Bilgin</title>
+<script src="https://yasirbilgin.com/nav.js"></script> 
+<link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
 
-  <meta name="description" content="A filterable map of 24 human conditions and the Qurʾānic sūrahs read for them — each entry graded by its evidence: authentic hadith, occasion, or theme.">
-  <meta name="keywords" content="Quran, surah guide, spiritual guidance">
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#BA7517;--gold-l:#FAEEDA;--gold-m:#EF9F27;
+  --teal:#0F6E56;--teal-l:#E1F5EE;--teal-m:#1D9E75;
+  --ink:#1a1a18;--inkm:#444441;--inkl:#888780;
+  --sur:#fff;--bg2:#F7F6F1;--bg3:#EFEDE6;
+  --bdr:rgba(0,0,0,.12);--bdrm:rgba(0,0,0,.2);
+  --serif:'Lora',Georgia,serif;
+  --arabic:'Scheherazade New',serif;
+  --mono:'IBM Plex Mono',monospace;
+}
 
-  <link rel="canonical" href="https://yasirbilgin.com/faith/Quran-and-Hadith/which-surah-for-which-condition.html">
+body{
+  font-family:var(--serif);
+  background:var(--bg3);
+  color:var(--ink);
+  min-height:100vh;
+  padding:0 0 4rem;
+}
 
-  <meta property="og:type"        content="article">
-  <meta property="og:title"       content="Which Sūrah for Which Condition">
-  <meta property="og:description" content="A filterable map of 24 human conditions and the Qurʾānic sūrahs read for them — each entry graded by its evidence: authentic hadith, occasion, or theme.">
-  <meta property="og:url"         content="https://yasirbilgin.com/faith/Quran-and-Hadith/which-surah-for-which-condition.html">
-  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
-  <meta property="og:image:alt"   content="Which Sūrah for Which Condition">
+/* ── Header ── */
+.header{
+  background:var(--sur);
+  border-bottom:1px solid var(--bdrm);
+  padding:1.25rem 2rem;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  max-width:900px;
+  margin:0 auto;
+}
+.header-basmala{
+  font-family:var(--arabic);
+  font-size:22px;
+  color:var(--gold);
+  line-height:1;
+}
+.header-title{
+  font-family:var(--mono);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--inkl);
+}
 
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Which Sūrah for Which Condition">
-  <meta name="twitter:description" content="A filterable map of 24 human conditions and the Qurʾānic sūrahs read for them — each entry graded by its evidence: authentic hadith, occasion, or theme.">
-  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+/* ── Page wrapper ── */
+.page{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--sur);
+  border-left:.5px solid var(--bdrm);
+  border-right:.5px solid var(--bdrm);
+  padding:2.5rem 3rem 3rem;
+}
 
-  <!-- Global nav — always first script -->
-  <script src="https://yasirbilgin.com/nav.js"></script>
+/* ── Section header ── */
+.section-hdr{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:1.75rem;
+  padding-bottom:1rem;
+  border-bottom:1px solid var(--bdrm);
+}
+.section-basmala{
+  font-family:var(--arabic);
+  font-size:28px;
+  color:var(--gold);
+  line-height:1.6;
+}
+.section-titles h1{
+  font-size: clamp(1.8rem, 6vw, 1.12rem);
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:2px;
+}
+.section-titles p{
+  font-family:var(--mono);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--inkl);
+}
 
-  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
-  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
+/* ── Grid ── */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+  gap:10px;
+}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Which Sūrah for Which Condition",
-    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
-    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
-    "datePublished": "2026-07-15",
-    "dateModified": "2026-07-15",
-    "description": "A filterable map of 24 human conditions and the Qurʾānic sūrahs read for them — each entry graded by its evidence: authentic hadith, occasion, or theme.",
-    "url": "https://yasirbilgin.com/faith/Quran-and-Hadith/which-surah-for-which-condition.html"
+/* ── Card ── */
+.card{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  border:.5px solid var(--bdrm);
+  border-radius:6px;
+  background:var(--bg2);
+  text-decoration:none;
+  transition:border-color .15s, background .15s, transform .1s;
+  overflow:hidden;
+}
+.card:hover{
+  border-color:var(--teal-m);
+  background:var(--teal-l);
+  transform:translateY(-1px);
+}
+.card-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:56px;
+  background:var(--sur);
+  border-bottom:.5px solid var(--bdr);
+  font-size:22px;
+  flex-shrink:0;
+}
+.card-body{
+  padding:.75rem 1rem .85rem;
+}
+.card-name{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:500;
+  color:var(--teal);
+  letter-spacing:.03em;
+  margin-bottom:3px;
+}
+.card-desc{
+  font-size:11.5px;
+  color:var(--inkl);
+  font-style:italic;
+  line-height:1.45;
+}
+
+/* ── Category label ── */
+.cat-label{
+  font-family:var(--mono);
+  font-size:9.5px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--inkl);
+  margin:1.75rem 0 .75rem;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.cat-label::after{
+  content:'';
+  flex:1;
+  height:.5px;
+  background:var(--bdr);
+}
+
+/* ── Divider ── */
+.div-line{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:2rem 0;
+}
+.div-line::before,.div-line::after{
+  content:'';flex:1;height:.5px;background:var(--bdr);
+}
+.div-star{
+  font-family:var(--arabic);
+  font-size:14px;
+  color:var(--gold-m);
+}
+
+/* ── Internal card (darker border for own pages) ── */
+.card.internal{
+  border-color:rgba(186,117,23,.3);
+}
+.card.internal:hover{
+  border-color:var(--gold);
+  background:var(--gold-l);
+}
+.card.internal .card-name{
+  color:var(--gold);
+}
+
+
+  @media (max-width: 720px) {
+    /* baseline mobile styles */
+    body { font-size: 17px; }
+    h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+    h2 { font-size: clamp(1.3rem, 4vw, 1.8rem); }
+    img, video, iframe, pre, code { max-width: 100%; }
+    [class*="grid"] { grid-template-columns: 1fr !important; }
   }
+
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pages — Study Qur'an",
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Yasir Bilgin",
+    "url": "https://yasirbilgin.com"
+  },
+  "datePublished": "2011-05-13",
+    "dateModified": "2011-05-13",
+  "url": "https://yasirbilgin.com/faith/quran-and-hadith/resources.html",
+  "description": "A curated collection of Qur'anic study resources: tafseer references, recitation tools, and scholarly guides for deep engagement with the Qur'an."
+}
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://yasirbilgin.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Faith",    "item": "https://yasirbilgin.com/faith/" },
-      { "@type": "ListItem", "position": 3, "name": "Qurʾān & Hadith", "item": "https://yasirbilgin.com/faith/Quran-and-Hadith/" },
-      { "@type": "ListItem", "position": 4, "name": "Which Sūrah for Which Condition", "item": "https://yasirbilgin.com/faith/Quran-and-Hadith/which-surah-for-which-condition.html" }
-    ]
-  }
-  </script>
+  <meta name="description" content="A curated collection of Qur'anic study resources: tafseer references, recitation tools, and scholarly guides for deep engagement with the Qur'an." />
 
-  <link rel="stylesheet" href="/assets/fonts.css">
-
-  <style>
-    /* ══ Local palette ══════════════════════════════════════════
-       Grounded in the manuscript codex: lamp-black ink, verdigris
-       medallions, gilt āyah markers. Four evidence tiers each carry
-       their own ink colour throughout the page.                    */
-    :root {
-      --qf-verdigris: #1f5d57;   /* tier 1 — prophetic hadith      */
-      --qf-gilt:      #866017;   /* tier 2 — occasion of revelation */
-      --qf-slate:     #4a5563;   /* tier 3 — thematic content       */
-      --qf-plum:      #74405a;   /* tier 4 — later practice         */
-      --qf-rule:      #ded5c6;   /* decorative hairlines */
-      --qf-border:    #8d8779;   /* control borders — 3.5:1 on surface, 3.1:1 on surface-2 */
-      --qf-surface:   #fffdf8;   /* opaque — cards must not let the page show through */
-      --qf-surface-2: #f4efe4;
-      --qf-ink:       #241f18;   /* primary card text     — 12.6:1 */
-      --qf-ink-2:     #4a4137;   /* secondary card text   —  9.8:1 */
-      --qf-ink-3:     #5f564a;   /* labels, meta          —  7.1:1 */
-      --qf-mark-bg:   #f9e4a6;
-      --qf-mark-fg:   #241f18;
-      --qf-tint:      #eef4f3;   /* pressed chip fill */
-      --accent:       var(--qf-verdigris);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --qf-verdigris: #6fb3aa;
-        --qf-gilt:      #d4ab4e;
-        --qf-slate:     #97a3b2;
-        --qf-plum:      #c98aa6;
-        --qf-rule:      #38332b;
-        --qf-border:    #787061;   /* 3.6:1 on surface, 3.3:1 on surface-2 */
-        --qf-surface:   #1c1a16;   /* opaque, hardcoded — never var() in dark UI */
-        --qf-surface-2: #23201a;
-        --qf-ink:       #ece7dd;   /* 13.1:1 */
-        --qf-ink-2:     #c0b8ab;   /*  8.8:1 */
-        --qf-ink-3:     #9d9487;   /*  5.8:1 */
-        --qf-mark-bg:   #5c4a1c;
-        --qf-mark-fg:   #f6efe0;
-        --qf-tint:      #1a2624;
-      }
-    }
-
-    /* ── Eyebrow pill ─────────────────────────────────────────── */
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      padding: 0.35rem 0.9rem;
-      border: 1px solid rgba(107,93,79,0.22);
-      border-radius: 999px;
-      color: var(--faint, #6e5f4e);
-      font-size: 0.72rem;
-      font-family: 'Source Serif 4', Georgia, serif;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      background: rgba(255,250,242,0.6);
-    }
-    @media (prefers-color-scheme: dark) {
-      .eyebrow {
-        border-color: rgba(255,255,255,0.14);
-        background: rgba(30,27,23,0.7);
-        color: var(--faint, #5a5750);
-      }
-    }
-
-    /* ── Progress bar — sits below the fixed nav ──────────────── */
-    .progress-bar {
-      position: fixed;
-      top: 62px;
-      left: 0;
-      height: 3px;
-      background: var(--accent);
-      width: 0%;
-      z-index: 100;
-    }
-
-    /* ── TOC overlay — backdrop-filter ONLY on .open ──────────── */
-    .toc-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9000;
-      background: rgba(24,20,14,0.55);
-    }
-    .toc-overlay.open {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-      backdrop-filter: blur(4px);
-    }
-    .toc-panel {
-      width: min(380px, 88vw);
-      height: 100%;
-      overflow-y: auto;
-      padding: 2rem 1.6rem 4rem;
-      background: var(--paper, #f7f3ec);
-      border-left: 1px solid var(--qf-rule);
-    }
-    @media (prefers-color-scheme: dark) {
-      .toc-panel { background: #14120f; }
-    }
-    .toc-close {
-      float: right;
-      min-height: 44px;
-      min-width: 44px;
-      border: 1px solid var(--qf-border);
-      border-radius: 999px;
-      background: transparent;
-      color: inherit;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    .toc-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .toc-panel h3 {
-      margin: 0 0 1.4rem;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-    .toc-list { list-style: none; margin: 0; padding: 0; }
-    .toc-list li { border-bottom: 1px solid var(--qf-rule); }
-    .toc-list a {
-      display: block;
-      min-height: 44px;
-      padding: 0.8rem 0.2rem;
-      color: var(--qf-ink);
-      text-decoration: none;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-    .toc-list a:hover { color: var(--accent); }
-    .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-    .toc-list .toc-main { font-weight: 600; }
-    .toc-list .toc-sub  { padding-left: 1.4rem; font-size: 0.86rem; color: var(--qf-ink-2); }
-
-    /* ── Hero ─────────────────────────────────────────────────── */
-    .hero { max-width: 900px; margin: 0 auto; padding: 4rem 2.5rem 0; }
-    h1 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 6vw, 4.4rem);
-      font-weight: 600;
-      line-height: 1.08;
-      letter-spacing: -0.015em;
-      margin: 0 0 1.2rem;
-    }
-    h1 em { font-style: italic; color: var(--accent); }
-    .hero-sub {
-      max-width: 42em;
-      margin: 0 0 2.4rem;
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-      line-height: 1.65;
-      color: var(--muted, #5d5346);
-    }
-    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
-    .avatar {
-      display: grid;
-      place-items: center;
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fdfaf3;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-    .byline-text { display: flex; flex-direction: column; }
-    .byline-name {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.86rem;
-      font-weight: 600;
-    }
-    .byline-meta {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.76rem;
-      color: var(--faint, #6e5f4e);
-    }
-    .hero-rule {
-      max-width: 900px;
-      margin: 3rem auto 0;
-      border: 0;
-      border-top: 1px solid var(--qf-rule);
-    }
-
-    /* ── Meta-bar — static, after the hero rule ───────────────── */
-    .article-header {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0.75rem 2.5rem;
-      /* NO position: sticky, NO top:, NO z-index: */
-    }
-    .read-time {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.76rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
-    }
-    .toc-btn {
-      min-height: 44px;
-      padding: 0.6rem 1.2rem;
-      border: 1px solid var(--qf-border);
-      border-radius: 999px;
-      background: transparent;
-      color: inherit;
-      cursor: pointer;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.06em;
-      transition: border-color var(--duration-normal, 0.2s) var(--ease, ease);
-    }
-    .toc-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .toc-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  </style>
-  <style>
-    /* ── Article body ─────────────────────────────────────────── */
-    .article-body {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 4rem 2.5rem 8rem;
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 1.06rem;
-      line-height: 1.78;
-    }
-    .article-body > section[id] { scroll-margin-top: 90px; }
-    .major-section { margin-bottom: 5rem; }
-    .section-label {
-      display: block;
-      margin-bottom: 0.7rem;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.76rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--qf-ink-3);
-    }
-    h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
-      font-weight: 600;
-      line-height: 1.15;
-      margin: 0 0 1.4rem;
-    }
-    h2 em { font-style: italic; color: var(--accent); }
-    h3.sub-heading {
-      display: flex;
-      gap: 0.7rem;
-      align-items: baseline;
-      margin: 3rem 0 1rem;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      scroll-margin-top: 90px;
-    }
-    .sh-num {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-    }
-    .mini-label {
-      margin: 2rem 0 0.6rem;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-      color: var(--qf-ink-3);
-    }
-    .article-body ul:not(.tier-legend):not(.toc-list):not(.verses):not(.srcs) {
-      margin: 0 0 1.3rem;
-      padding-left: 1.2rem;
-    }
-    .article-body ul:not(.tier-legend):not(.toc-list):not(.verses):not(.srcs) li {
-      margin-bottom: 0.7rem;
-    }
-    .article-body p { margin: 0 0 1.3rem; }
-    .lead { font-size: 1.15rem; line-height: 1.7; }
-    .article-body a { color: var(--accent); text-underline-offset: 3px; }
-    .article-body a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .ar { font-size: 1.25em; line-height: 2; }
-
-    /* ── Pull quote ───────────────────────────────────────────── */
-    .pull-quote {
-      margin: 3rem 0 3rem -2rem;
-      padding-left: 2rem;
-      border-left: 3px solid var(--accent);
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem;
-      font-style: italic;
-      line-height: 1.4;
-    }
-    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
-
-    /* ── Tier legend ──────────────────────────────────────────── */
-    .tier-legend {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0 2.5rem;
-      padding: 0;
-      list-style: none;
-    }
-    .tier-legend li {
-      padding: 1rem 1.1rem;
-      border: 1px solid var(--qf-rule);
-      border-left-width: 4px;
-      border-radius: var(--radius-md, 8px);
-      background: var(--qf-surface-2);
-      color: var(--qf-ink-2);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    .tier-legend li b {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    li.t-hadith   { border-left-color: var(--qf-verdigris); }
-    li.t-hadith b { color: var(--qf-verdigris); }
-    li.t-asbab    { border-left-color: var(--qf-gilt); }
-    li.t-asbab b  { color: var(--qf-gilt); }
-    li.t-theme    { border-left-color: var(--qf-slate); }
-    li.t-theme b  { color: var(--qf-slate); }
-    li.t-practice { border-left-color: var(--qf-plum); }
-    li.t-practice b { color: var(--qf-plum); }
-
-    /* ── Directory: search + layout ───────────────────────────── */
-    .finder { margin-top: 2rem; }
-    .search-wrap { position: relative; margin-bottom: 1.6rem; }
-    .search-input {
-      width: 100%;
-      min-height: 52px;
-      padding: 0.9rem 3rem 0.9rem 1.1rem;
-      border: 1px solid var(--qf-border);
-      border-radius: var(--radius-md, 8px);
-      background: var(--qf-surface);
-      color: var(--qf-ink);
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 1.05rem;
-    }
-    .search-input::placeholder { color: var(--qf-ink-3); opacity: 1; }
-    .search-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-    .search-clear {
-      position: absolute;
-      top: 50%; right: 0.5rem;
-      transform: translateY(-50%);
-      display: none;
-      min-height: 44px; min-width: 44px;
-      border: 0;
-      border-radius: 999px;
-      background: transparent;
-      color: var(--faint, #6e5f4e);
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    .search-clear.show { display: block; }
-    .search-clear:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-    .finder-grid {
-      display: grid;
-      grid-template-columns: 232px 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    /* ── Filter sidebar ───────────────────────────────────────── */
-    .filter-bar {
-      position: sticky;
-      top: calc(62px + 1rem);   /* 62px global nav + breathing room */
-      z-index: 40;
-      max-height: calc(100vh - 62px - 2rem);
-      overflow-y: auto;
-      padding: 1.2rem 1.1rem 1.4rem;
-      border: 1px solid var(--qf-rule);
-      border-radius: var(--radius-md, 8px);
-      background: var(--qf-surface);
-      box-shadow: 0 1px 2px rgba(60,48,30,0.04), 0 4px 14px rgba(60,48,30,0.05);
-      font-family: 'DM Sans', system-ui, sans-serif;
-    }
-    @media (prefers-color-scheme: dark) { .filter-bar { box-shadow: none; } }
-    .filter-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.6rem;
-      margin-bottom: 1rem;
-    }
-    .filter-head h3 {
-      margin: 0;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--qf-ink-3);
-    }
-    .reset-btn {
-      padding: 0.2rem 0;
-      border: 0;
-      background: transparent;
-      color: var(--accent);
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 0.78rem;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .reset-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .facet { margin-bottom: 1.5rem; }
-    .facet:last-child { margin-bottom: 0; }
-    .facet-title {
-      margin: 0 0 0.7rem;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--qf-ink-3);
-    }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.48rem 0.8rem;
-      border: 1px solid var(--qf-border);
-      border-radius: 999px;
-      background: var(--qf-surface-2);
-      color: var(--qf-ink-2);
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 0.8rem;
-      line-height: 1.35;
-      text-align: left;
-      transition: border-color var(--duration-fast, 0.12s) var(--ease, ease),
-                  background var(--duration-fast, 0.12s) var(--ease, ease);
-    }
-    .chip:hover { border-color: var(--accent); }
-    .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    /* Pressed state uses solid tints — these resolve reliably in both schemes */
-    .chip[aria-pressed="true"] {
-      border-color: var(--qf-verdigris);
-      background: var(--qf-tint);
-      color: var(--qf-verdigris);
-      font-weight: 600;
-    }
-    .chip .n {
-      font-size: 0.72rem;
-      font-variant-numeric: tabular-nums;
-      color: var(--qf-ink-3);
-    }
-    .chip[aria-pressed="true"] .n { color: inherit; }
-    .chip.zero { opacity: 0.5; }
-    .chip.t-hadith[aria-pressed="true"]   { border-color: var(--qf-verdigris); color: var(--qf-verdigris); }
-    .chip.t-asbab[aria-pressed="true"]    { border-color: var(--qf-gilt);      color: var(--qf-gilt); }
-    .chip.t-theme[aria-pressed="true"]    { border-color: var(--qf-slate);     color: var(--qf-slate); }
-    .chip.t-practice[aria-pressed="true"] { border-color: var(--qf-plum);      color: var(--qf-plum); }
-
-    .filter-toggle { display: none; }
-
-    .result-count {
-      margin: 0 0 1rem;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--qf-ink-3);
-    }
-
-    /* ── Condition cards ──────────────────────────────────────── */
-    .card-list { display: flex; flex-direction: column; gap: 1.2rem; }
-    .cond-card {
-      position: relative;
-      padding: 1.7rem 1.8rem 1.8rem;
-      border: 1px solid var(--qf-rule);
-      border-left: 5px solid var(--qf-slate);
-      border-radius: var(--radius-md, 8px);
-      background: var(--qf-surface);
-      box-shadow: 0 1px 2px rgba(60,48,30,0.04), 0 4px 14px rgba(60,48,30,0.05);
-      color: var(--qf-ink);
-      scroll-margin-top: 80px;
-    }
-    @media (prefers-color-scheme: dark) {
-      .cond-card { box-shadow: none; }
-    }
-    .cond-card[data-spine="hadith"]   { border-left-color: var(--qf-verdigris); }
-    .cond-card[data-spine="asbab"]    { border-left-color: var(--qf-gilt); }
-    .cond-card[data-spine="theme"]    { border-left-color: var(--qf-slate); }
-    .cond-card[data-spine="practice"] { border-left-color: var(--qf-plum); }
-    .cond-card.hidden { display: none; }
-
-    .card-top {
-      display: flex;
-      align-items: baseline;
-      gap: 0.7rem;
-      margin-bottom: 0.9rem;
-    }
-    .card-num {
-      flex: none;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.74rem;
-      font-variant-numeric: tabular-nums;
-      letter-spacing: 0.1em;
-      color: var(--qf-ink-3);
-    }
-    .cond-card h3.card-title {
-      margin: 0;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.6rem;
-      font-weight: 600;
-      letter-spacing: 0;
-      line-height: 1.25;
-      text-transform: none;
-      color: inherit;
-    }
-    .when {
-      margin: 0 0 1.2rem;
-      font-size: 1rem;
-      line-height: 1.65;
-      color: var(--qf-ink-2);
-    }
-    .when b {
-      display: inline-block;
-      margin-bottom: 0.25rem;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--qf-ink-3);
-    }
-
-    /* Sūrah roundel — the illuminated āyah marker of the codex */
-    .surah-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-bottom: 1.1rem;
-    }
-    .surah {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.45rem 0.9rem 0.45rem 0.45rem;
-      border: 1px solid var(--qf-rule);
-      border-radius: 999px;
-      background: var(--qf-surface-2);
-    }
-    .roundel {
-      display: grid;
-      place-items: center;
-      flex: none;
-      width: 30px; height: 30px;
-      border: 1.5px solid var(--qf-gilt);
-      border-radius: 50%;
-      box-shadow: inset 0 0 0 2px var(--qf-surface);
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.76rem;
-      font-weight: 700;
-      font-variant-numeric: tabular-nums;
-      color: var(--qf-gilt);
-    }
-    .roundel.dash { font-size: 0.9rem; }
-    .surah-txt { display: flex; flex-direction: column; line-height: 1.15; }
-    .surah-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.16rem;
-      font-weight: 600;
-      line-height: 1.2;
-      color: var(--qf-ink);
-    }
-    .surah-eng {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.74rem;
-      color: var(--qf-ink-3);
-    }
-    .surah.secondary .surah-name { font-weight: 400; font-style: italic; }
-
-    .why { margin: 0 0 1.2rem; font-size: 1.02rem; line-height: 1.72; color: var(--qf-ink); }
-
-    /* Verse strip */
-    .verses { margin: 0 0 1.1rem; padding: 0; list-style: none; }
-    .verses li {
-      display: grid;
-      grid-template-columns: 4.6rem 1fr;
-      gap: 0.8rem;
-      padding: 0.7rem 0;
-      border-top: 1px solid var(--qf-rule);
-      font-size: 1rem;
-      line-height: 1.65;
-    }
-    .verses li:last-child { border-bottom: 1px solid var(--qf-rule); }
-    .vref {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      font-variant-numeric: tabular-nums;
-      letter-spacing: 0.03em;
-      color: var(--qf-verdigris);
-      padding-top: 0.22rem;
-    }
-    .vtext { font-style: italic; color: var(--qf-ink); }
-
-    /* Tier badges */
-    .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.3rem 0.65rem;
-      border: 1px solid currentColor;
-      border-radius: var(--radius-sm, 4px);
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .badge::before {
-      content: "";
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: currentColor;
-    }
-    .badge.t-hadith   { color: var(--qf-verdigris); }
-    .badge.t-asbab    { color: var(--qf-gilt); }
-    .badge.t-theme    { color: var(--qf-slate); }
-    .badge.t-practice { color: var(--qf-plum); }
-    .badge.period {
-      color: var(--qf-ink-3);
-      border-style: dashed;
-    }
-    .badge.period::before { display: none; }
-
-    /* Source note — the chain of transmission */
-    .srcs { margin: 1.1rem 0 0; padding: 0; list-style: none; }
-    .srcs li {
-      padding-left: 1rem;
-      text-indent: -1rem;
-      font-family: 'DM Sans', system-ui, sans-serif;  /* sans: bigger x-height at small sizes */
-      font-size: 0.88rem;
-      line-height: 1.65;
-      color: var(--qf-ink-2);
-    }
-    .srcs li + li { margin-top: 0.6rem; }
-    .srcs .tag {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .srcs .tag.ok    { color: var(--qf-verdigris); }
-    .srcs .tag.warn  { color: var(--qf-plum); }
-    .srcs .tag.note  { color: var(--qf-gilt); }
-
-    mark {
-      padding: 0.05em 0.18em;
-      border-radius: 2px;
-      background: var(--qf-mark-bg);
-      color: var(--qf-mark-fg);
-      font-weight: 600;
-    }
-
-    .no-results {
-      display: none;
-      padding: 2.5rem 1.6rem;
-      border: 1px dashed var(--qf-rule);
-      border-radius: var(--radius-md, 8px);
-      text-align: center;
-    }
-    .no-results.show { display: block; }
-    .no-results p { margin: 0 0 1rem; font-size: 1.02rem; color: var(--qf-ink-2); }
-
-    /* ── Archetype table ──────────────────────────────────────── */
-    .table-wrap {
-      overflow-x: auto;
-      margin: 2rem 0;
-      border: 1px solid var(--qf-rule);
-      border-radius: var(--radius-md, 8px);
-    }
-    table { width: 100%; border-collapse: collapse; font-size: 0.96rem; background: var(--qf-surface); }
-    th, td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--qf-rule); color: var(--qf-ink-2); }
-    thead th {
-      background: var(--qf-surface-2);
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--qf-ink-3);
-      white-space: nowrap;
-    }
-    tbody tr:nth-child(even) td { background: var(--qf-surface-2); }
-    tbody tr:last-child td { border-bottom: 0; }
-    td.surah-cell {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.18rem;
-      font-weight: 600;
-      color: var(--qf-ink);
-    }
-
-    /* ── Duo panel: Makkan / Madinan ──────────────────────────── */
-    .duo-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin: 2rem 0; }
-    @media (max-width: 560px) { .duo-panel { grid-template-columns: 1fr; } }
-    .duo-panel > div {
-      padding: 1.5rem 1.6rem;
-      border: 1px solid var(--qf-rule);
-      border-radius: var(--radius-md, 8px);
-      background: var(--qf-surface-2);
-      color: var(--qf-ink-2);
-    }
-    .duo-panel p:last-child { margin-bottom: 0; }
-    .duo-panel .mini-label { margin-top: 0; }
-
-    /* ── Caution box ──────────────────────────────────────────── */
-    .caution {
-      margin: 2rem 0;
-      padding: 1.4rem 1.5rem;
-      border: 1px solid var(--qf-rule);
-      border-left: 5px solid var(--qf-plum);
-      border-radius: var(--radius-md, 8px);
-      background: var(--qf-surface-2);
-      color: var(--qf-ink-2);
-    }
-    .caution .mini-label { margin-top: 0; color: var(--qf-plum); }
-    .caution p:last-child { margin-bottom: 0; }
-
-    /* ── Footer ───────────────────────────────────────────────── */
-    footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem;
-      border-top: 1px solid var(--qf-rule);
-      font-family: 'DM Sans', system-ui, sans-serif;
-    }
-    .footer-logo { font-size: 0.9rem; font-weight: 600; }
-    .footer-copy { font-size: 0.76rem; color: var(--faint, #6e5f4e); }
-
-    /* ── Mobile ───────────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .finder-grid { grid-template-columns: 1fr; }
-      .filter-toggle {
-        display: block;
-        width: 100%;
-        min-height: 48px;
-        margin-bottom: 0.8rem;
-        padding: 0.7rem 1.2rem;
-        border: 1px solid var(--qf-border);
-        border-radius: var(--radius-md, 8px);
-        background: var(--qf-surface);
-        color: inherit;
-        cursor: pointer;
-        font-family: 'DM Sans', system-ui, sans-serif;
-        font-size: 0.8rem;
-        letter-spacing: 0.06em;
-      }
-      .filter-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-      .filter-bar { position: static; max-height: none; }
-      .filter-bar[hidden] { display: none; }
-    }
-    @media (max-width: 720px) {
-      body { font-size: 17px; }
-      .hero { padding: 2.5rem 1.4rem 0; }
-      .article-header { padding: 0.75rem 1.4rem; }
-      .article-body { padding: 3rem 1.4rem 5rem; }
-      footer { padding: 2rem 1.4rem; }
-      .cond-card { padding: 1.3rem 1.1rem 1.4rem; }
-      .verses li { grid-template-columns: 1fr; gap: 0.15rem; }
-    }
-
-    /* ── Reduced motion ───────────────────────────────────────── */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      html { scroll-behavior: auto !important; }
-    }
-  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirbilgin.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Faith",
+      "item": "https://yasirbilgin.com/faith/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pages — Study Qur'an",
+      "item": "https://yasirbilgin.com/faith/quran-and-hadith/resources.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
-
 <main id="main-content">
 
-  <div class="progress-bar" id="progressBar"></div>
 
-  <!-- TOC overlay -->
-  <div class="toc-overlay" id="tocOverlay"
-       onclick="if(event.target===this)this.classList.remove('open')">
-    <div class="toc-panel" role="dialog" aria-label="Table of contents">
-      <button class="toc-close" aria-label="Close contents"
-              onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
-      <h3>Table of Contents</h3>
-      <ul class="toc-list">
-        <li><a href="#s1" class="toc-main">I. When Does This Become My Verse?</a></li>
-        <li><a href="#s1-1" class="toc-sub">1.1 Four Kinds of Claim</a></li>
-        <li><a href="#s1-2" class="toc-sub">1.2 How to Read the Cards</a></li>
-        <li><a href="#s2" class="toc-main">II. The Directory — 24 Conditions</a></li>
-        <li><a href="#s3" class="toc-main">III. A Map of the Soul</a></li>
-        <li><a href="#s4" class="toc-main">IV. The Makkan–Madinan Arc</a></li>
-        <li><a href="#s4-1" class="toc-sub">4.1 Where the Pattern Breaks</a></li>
-        <li><a href="#s5" class="toc-main">V. Five Cautions</a></li>
-        <li><a href="#s6" class="toc-main">VI. Sources</a></li>
-      </ul>
+<article style="display:contents">
+
+<div style="background:var(--sur);border-bottom:.5px solid var(--bdrm);">
+  <div class="header">
+    <span class="header-basmala"><span lang="ar" dir="rtl">بِسْمِ اللَّهِ</span></span>
+    <div class="header-title">Study Qur'an &nbsp;·&nbsp; Pages</div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="section-hdr">
+    <span class="section-basmala">&#x0628;&#x0650;&#x0633;&#x0652;&#x0645;&#x0650; &#x0627;&#x0644;&#x0644;&#x0651;&#x064e;&#x0647;&#x0650;</span>
+    <div class="section-titles">
+      <h1>Resource Pages</h1>
+      <p>Islamic Studies &middot; Quranic Research</p>
     </div>
   </div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="eyebrow">Faith · Qurʾān &amp; Hadith</div>
-    <h1>Which Sūrah for Which <em>Condition</em></h1>
-    <p class="hero-sub">Twenty-four human conditions, and the chapters of the Qurʾān that Muslims have turned to in each — with every recommendation labelled by the kind of evidence behind it. Some rest on authentic prophetic ḥadīth. Some rest on the occasion of a revelation. Some rest on nothing more than the sūrah's own subject matter. The difference matters, so this guide shows it.</p>
-    <div class="byline-row">
-      <div class="avatar">YB</div>
-      <div class="byline-text">
-        <span class="byline-name">Yasir Bilgin</span>
-        <span class="byline-meta">Faith · Qurʾān &amp; Hadith</span>
+  <!-- Internal pages -->
+  <div class="cat-label">Internal pages</div>
+  <div class="grid">
+
+    <a href="https://quran.yasirbilgin.com/tafseer-template" class="card internal">
+      <div class="card-icon">&#x270F;&#xFE0F;</div>
+      <div class="card-body">
+        <div class="card-name">Tafseer Template</div>
+        <div class="card-desc">Structured Quranic exegesis writing tool</div>
       </div>
-    </div>
-  </section>
-  <hr class="hero-rule">
+    </a>
 
-  <!-- Meta-bar -->
-  <header class="article-header">
-    <span class="read-time">36 min read</span>
-    <button class="toc-btn"
-            onclick="document.getElementById('tocOverlay').classList.add('open')">
-      Contents
-    </button>
-  </header>
-  <article class="article-body">
-
-    <!-- ══ SECTION I ═══════════════════════════════════════════ -->
-    <section id="s1" class="major-section">
-      <span class="section-label">Section I</span>
-      <h2>When Does This Become <em>My</em> Verse?</h2>
-
-      <p class="lead">There is an old way of approaching the Qurʾān that asks two questions instead of one. The first is the familiar one: <em>what does this verse mean?</em> The second is stranger and more personal: <em>when does this verse become mine?</em></p>
-
-      <p>The Companions lived the second question before anyone thought to name it. Revelation arrived into specific crises — a slander, a defeat, a silence — and they learned the Qurʾān as the answer to a situation they were standing inside. Later generations, cut off from those particular crises but not from crisis itself, noticed that the same passages kept arriving on time. A man who has lost a child finds that Sūrat Yūsuf was, in some sense, waiting for him.</p>
-
-      <p>This is a real tradition and a fruitful one. It is also the exact place where devotional literature goes soft. A claim that begins as <em>this sūrah speaks beautifully to grief</em> gets repeated until it becomes <em>the Prophet ﷺ prescribed this sūrah for grief</em> — which is a different claim entirely, and usually false. The remedy is not to abandon the practice. It is to keep track of what kind of thing you are saying.</p>
-
-      <h3 id="s1-1" class="sub-heading"><span class="sh-num">1.1</span>Four kinds of claim</h3>
-
-      <p>Every recommendation in this guide is tagged with one or more of the following. They are not ranked by spiritual value — a thematic reading of Sūrat Yūsuf may console you more than any narration will. They are ranked by <em>what you are entitled to assert</em>.</p>
-
-      <ul class="tier-legend">
-        <li class="t-hadith">
-          <b>Prophetic ḥadīth</b>
-          The Prophet ﷺ himself recommended this recitation for this situation, in a narration that reaches at least the grade of <em>ḥasan</em>. You may say "the Sunnah teaches."
-        </li>
-        <li class="t-asbab">
-          <b>Occasion of revelation</b>
-          The passage was revealed into a documented situation resembling yours (<span lang="ar" dir="rtl">أسباب النزول</span>, <em>asbāb al-nuzūl</em>). You may say "this came down when…"
-        </li>
-        <li class="t-theme">
-          <b>Thematic content</b>
-          The sūrah simply is <em>about</em> this. No narration required; the text carries itself. You may say "this sūrah treats…"
-        </li>
-        <li class="t-practice">
-          <b>Later practice</b>
-          A custom of the scholars and the pious (<span lang="ar" dir="rtl">تجربة</span>, <em>tajriba</em> — tested experience), sometimes resting on a weak or contested narration. You may say "many have found…" — and no more.
-        </li>
-      </ul>
-
-      <p>The fourth tier is where the honest work is. Muslim scholarship has long tolerated weak narrations in matters of <em>faḍāʾil</em> — the virtues of good deeds — provided the weakness is not severe, the practice has an independent basis in established religion, and nobody believes it is firmly established while acting on it. Those are Ibn Ḥajar's conditions, and the third one is the one everybody drops. This guide keeps it by putting the grade on the face of the card.</p>
-
-      <blockquote class="pull-quote">Reciting a sūrah because it consoles you is worship. Reciting it because you believe a promise the Prophet ﷺ never made is something else.</blockquote>
-
-      <h3 id="s1-2" class="sub-heading"><span class="sh-num">1.2</span>How to read the cards</h3>
-
-      <p>Each of the twenty-four cards below carries a coloured spine on its left edge showing its <em>strongest</em> claim, a set of badges showing every claim it makes, and a sources block listing the narrations with their gradings — including the ones that fail. The circles beside each sūrah name are its number in the muṣḥaf, set in the form of the gilt roundel that marks every tenth verse in a manuscript codex.</p>
-
-      <p>Filter by the life-domain you are actually in, by the strength of evidence you want to rely on, or by the period of revelation. Or search — the box matches condition names, sūrah names, verse references, and the body of every card.</p>
-    </section>
-
-    <!-- ══ SECTION II ══════════════════════════════════════════ -->
-    <section id="s2" class="major-section">
-      <span class="section-label">Section II</span>
-      <h2>The <em>Directory</em></h2>
-
-      <p>Twenty-four conditions. Nothing here is a prescription in the medical sense, and nothing here is exclusive: the whole Qurʾān is for the whole of you. This is a starting point for a reader who has opened the muṣḥaf and does not know where to put their thumb.</p>
-
-      <div class="finder">
-        <div class="search-wrap">
-          <label class="visually-hidden" for="condSearch" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">Search conditions, sūrahs, and verses</label>
-          <input type="search" id="condSearch" class="search-input" autocomplete="off"
-                 placeholder="Search — try “grief”, “Yūsuf”, “65:2”, “Dajjāl”…">
-          <button type="button" class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
-        </div>
-
-        <button type="button" class="filter-toggle" id="filterToggle"
-                aria-expanded="false" aria-controls="filterBar">Show filters</button>
-
-        <div class="finder-grid">
-
-          <!-- Filter sidebar -->
-          <aside class="filter-bar" id="filterBar" aria-label="Filter conditions">
-            <div class="filter-head">
-              <h3>Filters</h3>
-              <button type="button" class="reset-btn" id="resetBtn">Reset</button>
-            </div>
-
-            <div class="facet" data-group="domain">
-              <p class="facet-title">Where you are</p>
-              <div class="chips">
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="grief">Grief &amp; loss <span class="n">1</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="fear">Fear &amp; anxiety <span class="n">4</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="isolation">Isolation &amp; opposition <span class="n">1</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="provision">Provision &amp; work <span class="n">1</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="sin">Sin &amp; repentance <span class="n">2</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="temptation">Temptation &amp; self-mastery <span class="n">1</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="leadership">Leadership &amp; action <span class="n">5</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="purpose">Purpose &amp; meaning <span class="n">3</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="death">Death &amp; the hereafter <span class="n">1</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="community">Community &amp; society <span class="n">3</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="domain" data-value="practice">Daily practice <span class="n">4</span></button>
-              </div>
-            </div>
-
-            <div class="facet" data-group="tier">
-              <p class="facet-title">Strength of evidence</p>
-              <div class="chips">
-                <button type="button" class="chip t-hadith" aria-pressed="false" data-group="tier" data-value="hadith">Prophetic ḥadīth <span class="n">11</span></button>
-                <button type="button" class="chip t-asbab" aria-pressed="false" data-group="tier" data-value="asbab">Occasion of revelation <span class="n">9</span></button>
-                <button type="button" class="chip t-theme" aria-pressed="false" data-group="tier" data-value="theme">Thematic content <span class="n">22</span></button>
-                <button type="button" class="chip t-practice" aria-pressed="false" data-group="tier" data-value="practice">Later practice <span class="n">2</span></button>
-              </div>
-            </div>
-
-            <div class="facet" data-group="period">
-              <p class="facet-title">Period of revelation</p>
-              <div class="chips">
-                <button type="button" class="chip" aria-pressed="false" data-group="period" data-value="makkan">Makkan <span class="n">13</span></button>
-                <button type="button" class="chip" aria-pressed="false" data-group="period" data-value="madinan">Madinan <span class="n">14</span></button>
-              </div>
-            </div>
-          </aside>
-
-          <!-- Results -->
-          <div>
-            <p class="result-count" id="resultCount" aria-live="polite">Showing all 24 conditions</p>
-            <div class="card-list" id="cardList">
-              <!-- 01 -->
-              <article class="cond-card" data-spine="hadith" data-domain="grief" data-tier="hadith,asbab,theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">01</span>
-                  <h3 class="card-title">Grief, loss, bereavement</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>A death in the family. A person who left. A hope you had to bury. The specific ache of not knowing whether the loss was for anything.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">12</span><span class="surah-txt"><span class="surah-name">Yūsuf</span><span class="surah-eng">Joseph</span></span></span>
-                  <span class="surah secondary"><span class="roundel">93</span><span class="surah-txt"><span class="surah-name">aḍ-Ḍuḥā</span><span class="surah-eng">The Morning Light</span></span></span>
-                </div>
-                <p class="why">Sūrat Yūsuf is the Qurʾān's long study of loss that turns out to have been architecture. Yaʿqūb loses a son and then his eyesight; Yūsuf loses his family, his freedom, and his reputation, in that order. Neither of them is told why while it is happening. The sūrah's power is that it withholds the meaning for as long as the characters have to wait for it. Read alongside it aḍ-Ḍuḥā, which is the shorter and sharper medicine: it came down after revelation itself went quiet and the Prophet ﷺ feared he had been dropped.</p>
-                <ul class="verses">
-                  <li><span class="vref">12:18</span><span class="vtext">"So beautiful patience — and it is God whose help is sought against what you describe."</span></li>
-                  <li><span class="vref">12:86</span><span class="vtext">"I complain of my anguish and my grief only to God, and I know from God what you do not know."</span></li>
-                  <li><span class="vref">93:3</span><span class="vtext">"Your Lord has not forsaken you, nor has He turned against you."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 4950 (Jundub b. Sufyān): revelation paused, a woman taunted the Prophet ﷺ that his companion had abandoned him, and 93:1–3 came down. This is the strongest occasion-of-revelation report in the whole guide for a grief-adjacent state.</li>
-                  <li><span class="tag note">Note</span> — no authentic narration prescribes Sūrat Yūsuf for grief. Its fitness is thematic and it is overwhelming. Yaʿqūb's phrase <em>ṣabr jamīl</em> — patience without complaint to creatures — is the operative concept, not a recitation formula.</li>
-                </ul>
-              </article>
-
-              <!-- 02 -->
-              <article class="cond-card" data-spine="hadith" data-domain="isolation" data-tier="hadith,theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">02</span>
-                  <h3 class="card-title">Isolation, opposition, being mocked</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>The room has turned. People you respected think you are ridiculous. You are still right and it is not helping.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">11</span><span class="surah-txt"><span class="surah-name">Hūd</span><span class="surah-eng">Hūd</span></span></span>
-                  <span class="surah secondary"><span class="roundel">29</span><span class="surah-txt"><span class="surah-name">al-ʿAnkabūt</span><span class="surah-eng">The Spider</span></span></span>
-                </div>
-                <p class="why">Hūd is a procession of prophets who did everything correctly and were rejected anyway — Nūḥ for centuries, Hūd, Ṣāliḥ, Lūṭ, Shuʿayb. It does not promise that vindication arrives quickly; it reports that it arrives late, sometimes after the prophet's whole society is gone. Al-ʿAnkabūt supplies the frame: testing is not a malfunction of belief, it is the entry condition.</p>
-                <ul class="verses">
-                  <li><span class="vref">11:112</span><span class="vtext">"So stand firm as you have been commanded — you and whoever has turned back with you — and do not transgress. He sees what you do."</span></li>
-                  <li><span class="vref">29:2</span><span class="vtext">"Do people suppose they will be left to say 'we believe' and not be tested?"</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ḥasan gharīb</span> — al-Tirmidhī 3297 (Ibn ʿAbbās): Abū Bakr said "you have gone grey," and the Prophet ﷺ answered, <em>"Hūd, al-Wāqiʿah, al-Mursalāt, ʿAmma yatasāʾalūn and Idhā al-shamsu kuwwirat have made me grey."</em> Al-Tirmidhī graded it ḥasan gharīb and noted a mursal route.</li>
-                  <li><span class="tag warn">Correction</span> — this ḥadīth is routinely cited as proof that Hūd is the sūrah of steadfastness under persecution. Read the list: the other four are all about the Day of Judgement. Al-Qurṭubī and Ibn Kathīr both take the weight to be the terror of annihilation, not the difficulty of holding one's ground. The steadfastness reading of 11:112 is sound; it just is not what this ḥadīth is about. A separate report attaching the greying specifically to 11:112 circulates but is weaker than the Tirmidhī text.</li>
-                </ul>
-              </article>
-
-              <!-- 03 -->
-              <article class="cond-card" data-spine="theme" data-domain="fear" data-tier="theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">03</span>
-                  <h3 class="card-title">Anxiety about the future</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>The decision is made and the outcome is not. You are running the same three scenarios at 3 a.m.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">65</span><span class="surah-txt"><span class="surah-name">aṭ-Ṭalāq</span><span class="surah-eng">Divorce</span></span></span>
-                </div>
-                <p class="why">A sūrah about the legal mechanics of divorce contains the Qurʾān's most concentrated statement about unknown futures — which is not a coincidence. Divorce is the paradigm case of a life whose next chapter is unwritten and whose provision is suddenly uncertain. The two verses arrive in the middle of waiting periods and maintenance rules, which is precisely their point: <em>God's way out is issued inside the paperwork, not instead of it.</em></p>
-                <ul class="verses">
-                  <li><span class="vref">65:2–3</span><span class="vtext">"…and whoever is mindful of God, He makes for him a way out, and provides for him from where he does not reckon. And whoever relies on God — He is enough for him. God will accomplish His purpose. He has set a measure for everything."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag note">Note</span> — no prescriptive narration. Some reports link 65:2–3 to the case of ʿAwf b. Mālik al-Ashjaʿī, whose son was captured; the chains are debated and the tafsīr tradition treats the passage's application as general regardless.</li>
-                </ul>
-              </article>
-
-              <!-- 04 -->
-              <article class="cond-card" data-spine="theme" data-domain="provision" data-tier="theme,practice" data-period="madinan,makkan">
-                <div class="card-top">
-                  <span class="card-num">04</span>
-                  <h3 class="card-title">Financial hardship</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>The income stopped. The debt did not. You are making decisions about your family from a position of scarcity.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">65</span><span class="surah-txt"><span class="surah-name">aṭ-Ṭalāq</span><span class="surah-eng">Divorce</span></span></span>
-                  <span class="surah secondary"><span class="roundel">56</span><span class="surah-txt"><span class="surah-name">al-Wāqiʿah</span><span class="surah-eng">The Inevitable</span></span></span>
-                </div>
-                <p class="why">Aṭ-Ṭalāq is the substantive text: provision from an unreckoned direction, tied explicitly to <em>taqwā</em> rather than to recitation. Al-Wāqiʿah is included because it is what people actually recite — and because what it actually does is dismantle the assumption underneath financial panic. It asks who made the seed sprout, who sent the water down, who lit the fire, and answers each time: not you. That is a real remedy for scarcity, and it is not the one the popular ḥadīth advertises.</p>
-                <ul class="verses">
-                  <li><span class="vref">65:2–3</span><span class="vtext">"…He provides for him from where he does not reckon."</span></li>
-                  <li><span class="vref">17:31</span><span class="vtext">"Do not kill your children fearing poverty. We provide for them and for you."</span></li>
-                  <li><span class="vref">2:245</span><span class="vtext">"Who will lend God a goodly loan, that He may multiply it for him many times over? God withholds and He grants abundance, and to Him you return."</span></li>
-                  <li><span class="vref">56:63–64</span><span class="vtext">"Have you considered what you sow? Do you make it grow, or are We the growers?"</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge t-practice">Later practice</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag warn">Ḍaʿīf</span> — <em>"Whoever recites Sūrat al-Wāqiʿah every night will never be afflicted by poverty"</em> (Ibn Masʿūd; al-Bayhaqī, <em>Shuʿab al-Īmān</em> 2/491; Ibn ʿAsākir). Graded weak by Aḥmad b. Ḥanbal, al-Dāraquṭnī, Ibn al-Jawzī, al-Bayhaqī himself, and al-Albānī (<em>al-Silsila al-Ḍaʿīfa</em> 289). Do not build an expectation of wealth on it.</li>
-                  <li><span class="tag note">Reading</span> — Ibn ʿAllān al-Bakrī, glossing the report as transmitted in al-Nawawī's <em>Adhkār</em>, takes the <em>ghinā</em> promised to be the self-sufficiency that comes from tawakkul, not a balance in an account. That reading survives the weak chain, because it is just what the sūrah says.</li>
-                  <li><span class="tag ok">Established</span> — the Qurʾān's own causes of provision are not recitation formulas: istighfār (71:10–12), taqwā (65:2–3), ṣila al-raḥim and honest work in the ḥadīth corpus.</li>
-                </ul>
-              </article>
-
-              <!-- 05 -->
-              <article class="cond-card" data-spine="hadith" data-domain="fear,practice" data-tier="hadith,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">05</span>
-                  <h3 class="card-title">Fear and the sense of being unprotected</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>Not anxiety about an outcome — the older thing. The dark. The house. The feeling that something is loose.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">2</span><span class="surah-txt"><span class="surah-name">Āyat al-Kursī</span><span class="surah-eng">al-Baqarah 255</span></span></span>
-                  <span class="surah"><span class="roundel dash">2</span><span class="surah-txt"><span class="surah-name">The last two verses</span><span class="surah-eng">al-Baqarah 285–286</span></span></span>
-                </div>
-                <p class="why">This is the one place where the popular practice and the authentic Sunnah line up exactly. Both texts are prescribed by name, for protection, in the two Ṣaḥīḥs. Note what they say rather than only that they are said: Āyat al-Kursī is a verse about God's wakefulness — <em>no drowsiness overtakes Him</em> — recited by a person about to be unconscious. The fear is answered by the content, not by the sound.</p>
-                <ul class="verses">
-                  <li><span class="vref">2:255</span><span class="vtext">"God — there is no god but He, the Living, the Sustainer. Neither drowsiness overtakes Him nor sleep."</span></li>
-                  <li><span class="vref">2:286</span><span class="vtext">"God does not burden a soul beyond its capacity."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 2311 (Abū Hurayrah, the thief at the charity store who turned out to be a devil): whoever recites Āyat al-Kursī on going to bed will have a guardian from God, and no devil will come near him until morning.</li>
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 5009 and Muslim 807 (Abū Masʿūd al-Anṣārī): whoever recites the last two verses of al-Baqarah at night, <em>kafatāh</em> — "they suffice him." The scholars differ over what they suffice him against; the ambiguity is in the text.</li>
-                </ul>
-              </article>
-
-              <!-- 06 -->
-              <article class="cond-card" data-spine="hadith" data-domain="sin" data-tier="hadith,asbab,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">06</span>
-                  <h3 class="card-title">Spiritual flatness, a hard heart</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>You have not stopped praying. You have stopped feeling it. The words go past you like traffic.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">57</span><span class="surah-txt"><span class="surah-name">al-Ḥadīd</span><span class="surah-eng">Iron</span></span></span>
-                </div>
-                <p class="why">One verse in this sūrah is aimed precisely at you, and its occasion of revelation is startling. Ibn Masʿūd reports that only four years separated the Companions' entry into Islam and God's rebuke of their hearts for going cold. <em>Four years.</em> If the first generation needed 57:16 within four years of Badr's horizon, the flatness you are describing is not evidence of a defect in you. It is the standard maintenance interval, and the sūrah names the mechanism: unaddressed time hardens hearts, as it hardened those of the communities before.</p>
-                <ul class="verses">
-                  <li><span class="vref">57:16</span><span class="vtext">"Has the time not come for those who believe — that their hearts should soften at the remembrance of God and what has come down of the truth? Let them not be like those given the Book before, for whom the age dragged on and their hearts hardened; and many of them are transgressors."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — Muslim 3027 (Ibn Masʿūd): "There was only four years between our becoming Muslims and God's admonishing us with this verse." Al-Nasāʾī also transmits it in his tafsīr of the verse.</li>
-                  <li><span class="tag note">Note</span> — al-Kalbī and Muqātil held the verse addressed the hypocrites; the majority, following the Ibn Masʿūd report, read it as addressed to believers. The second reading is the one that makes it useful to you.</li>
-                </ul>
-              </article>
-
-              <!-- 07 -->
-              <article class="cond-card" data-spine="asbab" data-domain="sin" data-tier="asbab,theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">07</span>
-                  <h3 class="card-title">After a serious sin</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>Not a slip. The thing you did that you cannot say out loud, and the suspicion that has followed it: that you have used up whatever you were allotted.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">39</span><span class="surah-txt"><span class="surah-name">az-Zumar</span><span class="surah-eng">The Throngs</span></span></span>
-                </div>
-                <p class="why">39:53 is the most extravagant verse in scripture and its wording is precise about who it is for. It does not say <em>those who slipped</em>. It says <em>those who transgressed against themselves</em> — <span lang="ar" dir="rtl">أسرفوا على أنفسهم</span>, who went to excess — and it forbids them despair not as consolation but as an error of belief. Despair is here a false statement about God's mercy, which is why the verse ends by naming Him <em>al-Ghafūr al-Raḥīm</em>: the correction is doctrinal.</p>
-                <ul class="verses">
-                  <li><span class="vref">39:53</span><span class="vtext">"Say: My servants who have gone to excess against yourselves — do not despair of God's mercy. God forgives all sins. He is the Forgiving, the Merciful."</span></li>
-                  <li><span class="vref">39:54</span><span class="vtext">"And turn back to your Lord and submit to Him before the punishment comes to you, when you will not be helped."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Reported</span> — the tafsīr tradition (al-Ṭabarī, Ibn Kathīr) records the verse coming down for people who had killed and sinned gravely and believed repentance was closed to them; several routes are given, including reports connected to Waḥshī, the killer of Ḥamzah. The routes vary in strength.</li>
-                  <li><span class="tag note">Note</span> — Ibn ʿAbbās's reading, that the verse addresses idolaters who fear no repentance will be received, is transmitted in the ḥadīth literature and is the stronger of the two. Either way it does not narrow to your case; it widens past it.</li>
-                </ul>
-              </article>
-
-              <!-- 08 -->
-              <article class="cond-card" data-spine="theme" data-domain="temptation" data-tier="theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">08</span>
-                  <h3 class="card-title">Temptation and desire</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>The opportunity is available, private, and deniable. Nobody would know.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">12</span><span class="surah-txt"><span class="surah-name">Yūsuf</span><span class="surah-eng">Joseph</span></span></span>
-                </div>
-                <p class="why">The scene in the house of the ʿAzīz is the Qurʾān's most exact anatomy of temptation, and its lesson is not willpower. Yūsuf does not out-muscle the moment; he reframes it (<em>"he is my master, he has made my stay good"</em>), he runs for the door, and he then tells God he would rather have the prison. And then — this is the part that gets left out — he says his own self is not to be trusted. The Qurʾān's model of self-mastery includes a formal statement of self-distrust.</p>
-                <ul class="verses">
-                  <li><span class="vref">12:23</span><span class="vtext">"…she bolted the doors and said: come. He said: God forbid — he is my master, he has made my stay good. The wrongdoers do not prosper."</span></li>
-                  <li><span class="vref">12:33</span><span class="vtext">"My Lord, prison is dearer to me than what they call me to."</span></li>
-                  <li><span class="vref">12:53</span><span class="vtext">"I do not absolve my own self. The self commands to evil, except one my Lord has mercy on."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag note">Note</span> — the "seven under God's shade" ḥadīth (al-Bukhārī 660, Muslim 1031) names the man who is invited by a woman of position and beauty and says "I fear God." The Yūsuf episode is its narrative form. That connection is the tradition's, not a recitation prescription.</li>
-                </ul>
-              </article>
-
-              <!-- 09 -->
-              <article class="cond-card" data-spine="asbab" data-domain="leadership" data-tier="asbab,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">09</span>
-                  <h3 class="card-title">Leadership and responsibility</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>People report to you. Your judgement has consequences for people who did not get to make it.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">3</span><span class="surah-txt"><span class="surah-name">Āl ʿImrān</span><span class="surah-eng">The Family of ʿImrān</span></span></span>
-                </div>
-                <p class="why">The Uḥud passage is the Qurʾān's leadership seminar, and it is unusual scripture: it is God's debrief of a battle His own community lost, conducted in public, in front of everyone who was there. It assigns blame, refuses to let the leader harden, and then — at the exact moment a commander whose orders were disobeyed would be entitled to centralise — instructs him to consult them anyway. The order of the clauses in 3:159 is the whole teaching: soften, pardon, ask forgiveness for them, consult them, then decide, then rely on God.</p>
-                <ul class="verses">
-                  <li><span class="vref">3:159</span><span class="vtext">"It was by a mercy from God that you were gentle with them. Had you been harsh, hard of heart, they would have scattered from around you. So pardon them, ask forgiveness for them, and consult them in the matter. Then when you have resolved, rely on God."</span></li>
-                  <li><span class="vref">3:152</span><span class="vtext">"…until you lost heart and disputed about the order and disobeyed, after He had shown you what you love."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Established</span> — the Uḥud passage (roughly 3:121–179) is connected to the battle by unanimous report and by the internal evidence of the text; the sīra and tafsīr traditions agree without dissent.</li>
-                </ul>
-              </article>
-
-              <!-- 10 -->
-              <article class="cond-card" data-spine="asbab" data-domain="leadership" data-tier="asbab,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">10</span>
-                  <h3 class="card-title">After failure</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>It went wrong and it was partly you. Seventy people are worse off. You are trying to work out whether to keep going.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">3</span><span class="surah-txt"><span class="surah-name">Āl ʿImrān</span><span class="surah-eng">The Family of ʿImrān</span></span></span>
-                </div>
-                <p class="why">Uḥud was a defeat with a named cause: archers left a hill. Seventy Muslims died, including Ḥamzah; a rumour spread that the Prophet ﷺ was dead. The Qurʾān's response is worth studying as a template for post-mortems. It does not minimise the loss. It does not excuse the error. It does not permit despair. And it inserts a sentence that reframes the whole category: <em>these days We alternate among people</em> — reversal is not a verdict on your project, it is a property of time.</p>
-                <ul class="verses">
-                  <li><span class="vref">3:139</span><span class="vtext">"Do not weaken, and do not grieve — you are the higher, if you are believers."</span></li>
-                  <li><span class="vref">3:140</span><span class="vtext">"If a wound has touched you, a like wound touched the other people. These are days We alternate among mankind."</span></li>
-                  <li><span class="vref">3:146</span><span class="vtext">"How many a prophet fought, and with him many devoted men — they did not lose heart at what struck them in God's path, nor weaken, nor submit."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Established</span> — same passage, same occasion as card 09. Read them together: 09 is what to do while leading, 10 is what to do after it fails.</li>
-                </ul>
-              </article>
-
-              <!-- 11 -->
-              <article class="cond-card" data-spine="hadith" data-domain="leadership" data-tier="hadith,asbab,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">11</span>
-                  <h3 class="card-title">In victory</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>It worked. The thing you built is being praised. You can feel the pull.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">110</span><span class="surah-txt"><span class="surah-name">an-Naṣr</span><span class="surah-eng">The Help</span></span></span>
-                </div>
-                <p class="why">Three verses, and they are the strangest response to triumph in religious literature. God's help has come, the conquest has arrived, the crowds are entering the religion — and the instruction is: <em>ask forgiveness</em>. Not celebrate. ʿUmar once asked the veterans of Badr what the sūrah meant; they gave the obvious answer. Ibn ʿAbbās, the youngest man in the room, said it was the announcement of the Prophet's death — the work is done, therefore prepare. ʿUmar said: I know of it only what you know. That exchange is the reason this card exists.</p>
-                <ul class="verses">
-                  <li><span class="vref">110:1–3</span><span class="vtext">"When God's help comes, and the conquest, and you see people entering God's religion in throngs — then glorify your Lord with praise, and ask His forgiveness. He is ever relenting."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 4970 (Ibn ʿAbbās): ʿUmar's question to the Badr veterans and Ibn ʿAbbās's reading of the sūrah as the notice of the Prophet's ﷺ approaching death.</li>
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 4967 and Muslim 484 (ʿĀʾishah): after the sūrah came down, the Prophet ﷺ frequently said in his bowing and prostration, <em>"Glory be to You, our God, and with Your praise; our God, forgive me"</em> — enacting the verse.</li>
-                </ul>
-              </article>
-
-              <!-- 12 -->
-              <article class="cond-card" data-spine="hadith" data-domain="leadership" data-tier="hadith,theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">12</span>
-                  <h3 class="card-title">Before a hard decision</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>Two roads, no clear signal, and a deadline. Both options are defensible, which is the problem.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">42</span><span class="surah-txt"><span class="surah-name">ash-Shūrā</span><span class="surah-eng">Consultation</span></span></span>
-                </div>
-                <p class="why">The sūrah takes its name from half a verse buried in a list of the believers' qualities, sitting between prayer and charity: <em>their affair is consultation among them</em>. The placement is the argument. Consultation is not a management technique the Qurʾān recommends; it is filed with the acts of worship. Then, having consulted, do what the Prophet ﷺ taught for exactly this moment — the istikhārah, which is not a request for a sign but a request that God choose and then reconcile you to the choice.</p>
-                <ul class="verses">
-                  <li><span class="vref">42:38</span><span class="vtext">"…and those who answer their Lord, and establish the prayer, and their affair is consultation among them, and they spend from what We have provided them."</span></li>
-                  <li><span class="vref">42:10</span><span class="vtext">"Whatever you differ about — its judgement rests with God."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 1162 (Jābir b. ʿAbdillāh): the Prophet ﷺ used to teach the Companions istikhārah in all their affairs as he taught them a sūrah of the Qurʾān. The duʿāʾ asks God to decree the matter <em>and make me content with it</em> — a request about the petitioner, not only the outcome.</li>
-                  <li><span class="tag note">Note</span> — istikhārah is a prayer, not a dream-request. The widespread expectation of a dream or a feeling has no basis in the ḥadīth; the classical position is that you consult, pray, then act on your best judgement.</li>
-                </ul>
-              </article>
-              <!-- 13 -->
-              <article class="cond-card" data-spine="hadith" data-domain="purpose" data-tier="hadith,theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">13</span>
-                  <h3 class="card-title">Feeling insignificant</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>Nothing you do registers. You are a small function in a large machine and the machine does not know your name.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">67</span><span class="surah-txt"><span class="surah-name">al-Mulk</span><span class="surah-eng">The Dominion</span></span></span>
-                </div>
-                <p class="why">Al-Mulk answers smallness by making you smaller and then telling you who is counting. It sends your eye out to the seven heavens twice and reports that it comes back exhausted and defeated — and then, having established the scale, says the whole apparatus was built to test <em>which of you is best in deed</em>. The insignificance is real. The conclusion you drew from it was wrong. Your act is the thing the scale was built around.</p>
-                <ul class="verses">
-                  <li><span class="vref">67:2</span><span class="vtext">"He who created death and life to test which of you is best in deed."</span></li>
-                  <li><span class="vref">67:3–4</span><span class="vtext">"…look again — do you see any flaw? Then look twice more: your sight returns to you humbled and worn out."</span></li>
-                  <li><span class="vref">67:15</span><span class="vtext">"It is He who made the earth tractable for you — so walk its shoulders and eat of His provision."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ḥasan</span> — al-Tirmidhī 2891, Abū Dāwūd 1400 (Abū Hurayrah): a sūrah of thirty verses interceded for a man until he was forgiven — <em>Tabāraka alladhī bi-yadihi al-mulk</em>. Graded ḥasan.</li>
-                  <li><span class="tag note">Note</span> — the ḥadīth establishes the sūrah's standing, not a prescription for this condition. The fit to insignificance is thematic and, in my judgement, the best in the guide.</li>
-                </ul>
-              </article>
-
-              <!-- 14 -->
-              <article class="cond-card" data-spine="theme" data-domain="death" data-tier="theme,practice" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">14</span>
-                  <h3 class="card-title">Fear of death</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>A diagnosis. A funeral. Or nothing at all — just the thought arriving at the wrong hour and refusing to leave.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">75</span><span class="surah-txt"><span class="surah-name">al-Qiyāmah</span><span class="surah-eng">The Rising</span></span></span>
-                  <span class="surah"><span class="roundel">56</span><span class="surah-txt"><span class="surah-name">al-Wāqiʿah</span><span class="surah-eng">The Inevitable</span></span></span>
-                  <span class="surah secondary"><span class="roundel">36</span><span class="surah-txt"><span class="surah-name">Yāsīn</span><span class="surah-eng">Yā Sīn</span></span></span>
-                </div>
-                <p class="why">These three work on certainty rather than comfort, which is the correct target: the fear of death is mostly a fear of annihilation, and the remedy for a doubt is not a soothing. Al-Qiyāmah takes the sceptic's own objection — <em>does he think We cannot reassemble his bones?</em> — and answers it at the level of the fingertips. Al-Wāqiʿah sorts humanity into three and stages the deathbed itself, the moment the soul reaches the throat and you are looking on. Yāsīn argues from the first creation to the second and ends on the man who has forgotten how he was made.</p>
-                <ul class="verses">
-                  <li><span class="vref">75:3–4</span><span class="vtext">"Does man suppose We will not gather his bones? Yes — We are able to reshape even his fingertips."</span></li>
-                  <li><span class="vref">56:83–85</span><span class="vtext">"Then why, when it reaches the throat, and you at that moment are looking on — and We are nearer to him than you are, but you do not see…"</span></li>
-                  <li><span class="vref">36:78–79</span><span class="vtext">"He puts a comparison to Us and forgets his own creation: who will give life to bones when they have crumbled? Say: He who made them the first time will give them life."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge t-practice">Later practice</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag warn">Contested</span> — <em>"Recite Yāsīn over your dying"</em> (Abū Dāwūd 3121, Ibn Mājah 1448, Aḥmad, from Maʿqil b. Yasār). Ibn Ḥibbān and al-Ḥākim declared it ṣaḥīḥ; al-Dāraquṭnī judged its chain disturbed (<em>muḍṭarib</em>), Ibn al-Qaṭṭān criticised it, and al-Albānī graded it ḍaʿīf. The practice is nearly universal and the evidence is genuinely disputed — both facts belong on the card.</li>
-                  <li><span class="tag warn">Ḍaʿīf</span> — <em>"Yāsīn is the heart of the Qurʾān"</em> (al-Tirmidhī 2887) is weak, as is the report that reciting it once equals ten completions. These are the two most-quoted virtues of the sūrah and neither carries weight.</li>
-                  <li><span class="tag note">Note</span> — none of that touches the sūrahs' thematic fitness, which rests on their own text.</li>
-                </ul>
-              </article>
-
-              <!-- 15 -->
-              <article class="cond-card" data-spine="theme" data-domain="purpose" data-tier="theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">15</span>
-                  <h3 class="card-title">Searching for purpose</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>Nothing is wrong. That is the problem. You are doing well at something you cannot justify.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">18</span><span class="surah-txt"><span class="surah-name">al-Kahf</span><span class="surah-eng">The Cave</span></span></span>
-                </div>
-                <p class="why">Four stories, four trials, and each one is a distinct way a life gets spent. The Sleepers face the trial of <em>faith</em> and pay for it with their society. The man with two gardens faces the trial of <em>wealth</em> and loses the argument to his poorer friend. Mūsā faces the trial of <em>knowledge</em> and discovers there is a servant of God who knows what he does not. Dhū al-Qarnayn faces the trial of <em>power</em> and, at the height of it, calls his own achievement a mercy from his Lord that will one day be levelled. Between the stories sits the verse that indexes them: what stays is not what you accumulated.</p>
-                <ul class="verses">
-                  <li><span class="vref">18:7</span><span class="vtext">"We made what is on the earth an ornament for it, to test which of them is best in deed."</span></li>
-                  <li><span class="vref">18:46</span><span class="vtext">"Wealth and children are the ornament of the life of this world; but the enduring good deeds are better with your Lord in reward, and better in hope."</span></li>
-                  <li><span class="vref">18:98</span><span class="vtext">"He said: this is a mercy from my Lord. When my Lord's promise comes, He will level it."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag note">Note</span> — the "four trials" scheme is a reading of the sūrah's coherence (<em>munāsabāt</em>), developed in the classical literature on sūrah unity and made popular by modern commentators. It is an interpretation, and a good one; it is not a narration. The four narratives and the ornament-verses are in the text and can be verified in a single sitting.</li>
-                </ul>
-              </article>
-
-              <!-- 16 -->
-              <article class="cond-card" data-spine="hadith" data-domain="purpose" data-tier="hadith,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">16</span>
-                  <h3 class="card-title">Intellectual confusion</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>The doubts are not emotional, they are structural. You want to know whether the whole thing hangs together.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">2</span><span class="surah-txt"><span class="surah-name">al-Baqarah</span><span class="surah-eng">The Cow</span></span></span>
-                </div>
-                <p class="why">286 verses, the longest chapter in the muṣḥaf, and the only text in the Qurʾān that attempts the entire worldview in one sweep: revelation and its reception, the three human postures toward it, sacred history from Ādam through the Children of Israel, law, war, debt, marriage, charity, prayer, and — at the exact centre of the sūrah, verse 143 of 286 — the change of the qibla. Read it as an argument rather than a devotional exercise. It answers structural doubt structurally: by showing you what the structure is.</p>
-                <ul class="verses">
-                  <li><span class="vref">2:2</span><span class="vtext">"This is the Book — no doubt in it — a guidance for the mindful."</span></li>
-                  <li><span class="vref">2:143</span><span class="vtext">"Thus We made you a middle community, that you might be witnesses over mankind."</span></li>
-                  <li><span class="vref">2:286</span><span class="vtext">"God does not burden a soul beyond its capacity. It has what it earned and against it what it deserved."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — Muslim 780 (Abū Hurayrah): "Do not make your houses graveyards. The devil flees from the house in which Sūrat al-Baqarah is recited."</li>
-                  <li><span class="tag note">Note</span> — that ḥadīth is about the house, not about doubt. The match to intellectual confusion is thematic: it is simply the most complete single statement of the worldview in the Book.</li>
-                </ul>
-              </article>
-
-              <!-- 17 -->
-              <article class="cond-card" data-spine="theme" data-domain="community" data-tier="theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">17</span>
-                  <h3 class="card-title">Social injustice</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>You are watching people be treated as less, and the arrangement is legal, and everyone has agreed not to see it.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">4</span><span class="surah-txt"><span class="surah-name">an-Nisāʾ</span><span class="surah-eng">The Women</span></span></span>
-                </div>
-                <p class="why">An-Nisāʾ is what happens when a moral principle is made to pay rent. It opens on the orphan's property and the estate, and it works down through inheritance shares, marriage, the treatment of dependants, and the conduct of judges. It contains the verse that made a case notorious — the Prophet ﷺ nearly ruled for a well-connected clan against a Jewish man on false evidence, and revelation came down against the Muslims. If your sense of injustice needs a text that will not flatter your side, it is this one.</p>
-                <ul class="verses">
-                  <li><span class="vref">4:58</span><span class="vtext">"God commands you to deliver trusts to those they belong to, and when you judge between people, to judge with justice."</span></li>
-                  <li><span class="vref">4:105</span><span class="vtext">"We sent down to you the Book with the truth, that you may judge between people by what God has shown you — do not be an advocate for the treacherous."</span></li>
-                  <li><span class="vref">4:135</span><span class="vtext">"Be upholders of justice, witnesses for God, even against yourselves, or your parents and kin — rich or poor, God is closer to both."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag note">Reported</span> — 4:105–113 is connected in the tafsīr and sīra literature to the theft attributed to Ṭuʿma b. Ubayriq and the attempt to frame a Jewish neighbour. Al-Tirmidhī transmits a version of the account; the chains vary. The verse's plain sense does not depend on the story.</li>
-                </ul>
-              </article>
-
-              <!-- 18 -->
-              <article class="cond-card" data-spine="asbab" data-domain="community" data-tier="asbab,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">18</span>
-                  <h3 class="card-title">Conflict inside the community</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>Two groups you belong to have stopped speaking. There is a rumour. Somebody's nickname has become a weapon.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">49</span><span class="surah-txt"><span class="surah-name">al-Ḥujurāt</span><span class="surah-eng">The Chambers</span></span></span>
-                  <span class="surah secondary"><span class="roundel">3</span><span class="surah-txt"><span class="surah-name">Āl ʿImrān</span><span class="surah-eng">The Family of ʿImrān</span></span></span>
-                </div>
-                <p class="why">Al-Ḥujurāt is eighteen verses of social protocol with the force of law, and almost every one of them has a documented occasion behind it. Verify before you forward. Reconcile the two factions, and if one refuses, restrain it — then reconcile with fairness. Do not mock; do not use nicknames; do not spy; do not backbite, which the sūrah images as eating your dead brother's flesh. Then the verse that dissolves the premise of most communal conflict: the tribes exist so you can recognise each other, not rank each other.</p>
-                <ul class="verses">
-                  <li><span class="vref">49:6</span><span class="vtext">"If a corrupt person brings you news, verify it — lest you strike a people in ignorance and become regretful over what you did."</span></li>
-                  <li><span class="vref">49:12</span><span class="vtext">"Avoid much suspicion — some suspicion is sin. Do not spy, and do not backbite one another."</span></li>
-                  <li><span class="vref">49:13</span><span class="vtext">"We made you peoples and tribes so that you may know one another. The noblest of you before God is the most mindful of Him."</span></li>
-                  <li><span class="vref">3:103</span><span class="vtext">"Hold fast, all of you, to God's rope, and do not scatter."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Reported</span> — 49:6 is widely connected to al-Walīd b. ʿUqba's false report about the Banū al-Muṣṭaliq; 3:103 to the Aws and Khazraj being provoked into recalling their pre-Islamic wars. Both accounts are standard in the tafsīr and sīra literature, with routes of varying strength.</li>
-                  <li><span class="tag note">Note</span> — the occasions are useful because they show the scale: these verses were revealed about a rumour and an argument, not about a war. That is the register they are for.</li>
-                </ul>
-              </article>
-
-              <!-- 19 -->
-              <article class="cond-card" data-spine="asbab" data-domain="community" data-tier="asbab,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">19</span>
-                  <h3 class="card-title">Hypocrisy around you</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>The people in the room are saying the right words and doing something else, and you can see it, and saying so would cost you.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">9</span><span class="surah-txt"><span class="surah-name">at-Tawbah</span><span class="surah-eng">Repentance</span></span></span>
-                  <span class="surah"><span class="roundel">63</span><span class="surah-txt"><span class="surah-name">al-Munāfiqūn</span><span class="surah-eng">The Hypocrites</span></span></span>
-                </div>
-                <p class="why">These two are the Qurʾān's clinical literature on a specific pathology, and they are best read together with a warning attached. At-Tawbah dissects the excuses made at Tabūk — the heat, the harvest, the mosque built as a base for division. Al-Munāfiqūn is shorter and colder: it opens on men who are handsome and speak well, and tells you to listen to them anyway. The warning: both sūrahs are addressed to a community that had a prophet to identify the hypocrites. You do not. Use them to audit yourself.</p>
-                <ul class="verses">
-                  <li><span class="vref">9:81</span><span class="vtext">"They said: do not march out in the heat. Say: the fire of Hell is hotter — if only they understood."</span></li>
-                  <li><span class="vref">63:4</span><span class="vtext">"When you see them, their forms please you; if they speak, you listen to their speech — as though they were propped-up timbers."</span></li>
-                  <li><span class="vref">9:105</span><span class="vtext">"Say: act — God will see your work, and His Messenger, and the believers."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 4900 (Zayd b. Arqam): Zayd reported ʿAbdullāh b. Ubayy's words, was disbelieved and distressed, and Sūrat al-Munāfiqūn came down confirming him.</li>
-                  <li><span class="tag ok">Established</span> — the bulk of at-Tawbah's hypocrisy passages are tied to the Tabūk expedition; the sīra and tafsīr traditions agree.</li>
-                  <li><span class="tag warn">Caution</span> — <em>nifāq</em> is a verdict about an inner state. The classical scholars declined to apply it to named individuals after the Prophet ﷺ. Using these sūrahs as a lens on your colleagues is a misuse of them.</li>
-                </ul>
-              </article>
-
-              <!-- 20 -->
-              <article class="cond-card" data-spine="asbab" data-domain="leadership" data-tier="asbab,theme" data-period="madinan">
-                <div class="card-top">
-                  <span class="card-num">20</span>
-                  <h3 class="card-title">Needing courage</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>You are outnumbered, under-resourced, and the thing still has to be done tomorrow morning.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">8</span><span class="surah-txt"><span class="surah-name">al-Anfāl</span><span class="surah-eng">The Spoils</span></span></span>
-                </div>
-                <p class="why">Badr: roughly three hundred against three times their number, and the Prophet ﷺ in the shelter pressing his Lord until his cloak fell. The sūrah's account of what produced the victory is not what you would expect from a battle narrative. It attributes it to reinforcement you cannot see, to sleep falling on frightened men as a security, to rain firming the sand under their feet, and to the discipline of not quarrelling. Then it removes the credit from the hero entirely: <em>you did not throw when you threw</em>. Courage in al-Anfāl is downstream of obedience and internal calm, not of temperament.</p>
-                <ul class="verses">
-                  <li><span class="vref">8:11</span><span class="vtext">"When He covered you with sleep as a security from Him, and sent down water from the sky to purify you… and to make firm your feet."</span></li>
-                  <li><span class="vref">8:17</span><span class="vtext">"You did not kill them — God killed them. You did not throw when you threw — God threw."</span></li>
-                  <li><span class="vref">8:46</span><span class="vtext">"Obey God and His Messenger, and do not dispute, or you will lose heart and your wind will go. Be patient — God is with the patient."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-asbab">Occasion of revelation</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Established</span> — al-Anfāl's connection to Badr is uncontested; the sūrah opens on the dispute over the spoils taken there. Muslim 1763 (ʿUmar) preserves the scene of the Prophet's ﷺ supplication in the shelter and the revelation of 8:9.</li>
-                </ul>
-              </article>
-
-              <!-- 21 -->
-              <article class="cond-card" data-spine="theme" data-domain="fear" data-tier="theme" data-period="makkan,madinan">
-                <div class="card-top">
-                  <span class="card-num">21</span>
-                  <h3 class="card-title">Building tawakkul</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>Not a crisis — a project. You want to be the kind of person who does not need to know the ending.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">11</span><span class="surah-txt"><span class="surah-name">Hūd</span><span class="surah-eng">Hūd</span></span></span>
-                  <span class="surah"><span class="roundel">12</span><span class="surah-txt"><span class="surah-name">Yūsuf</span><span class="surah-eng">Joseph</span></span></span>
-                  <span class="surah"><span class="roundel">65</span><span class="surah-txt"><span class="surah-name">aṭ-Ṭalāq</span><span class="surah-eng">Divorce</span></span></span>
-                </div>
-                <p class="why">Three sūrahs, three dimensions of the same faculty, and they are not interchangeable. Hūd teaches trust <em>through duration</em> — the prophets are vindicated, eventually, sometimes after everything is lost. Yūsuf teaches trust <em>in hidden design</em> — the pit, the price, the prison and the palace turn out to have been one movement. Aṭ-Ṭalāq teaches trust <em>under uncertainty</em> — do the right thing inside a situation whose next step you cannot see, and provision arrives from an unaudited direction. Grief needs the second. Persecution needs the first. A Tuesday needs the third.</p>
-                <ul class="verses">
-                  <li><span class="vref">11:56</span><span class="vtext">"I rely on God, my Lord and your Lord. There is no creature He does not hold by its forelock."</span></li>
-                  <li><span class="vref">12:67</span><span class="vtext">"Judgement belongs only to God. On Him I rely, and on Him let the reliant rely."</span></li>
-                  <li><span class="vref">65:3</span><span class="vtext">"Whoever relies on God — He is enough for him."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag note">Note</span> — 12:67 arrives as Yaʿqūb tells his sons to enter by separate gates, and immediately concedes it will avail them nothing against God's decree. Tawakkul in the Qurʾān always has the precaution attached. The camel gets tied.</li>
-                </ul>
-              </article>
-
-              <!-- 22 -->
-              <article class="cond-card" data-spine="hadith" data-domain="practice" data-tier="hadith" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">22</span>
-                  <h3 class="card-title">Daily protection — morning and evening</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>You want a floor. Something short, prescribed, and repeatable that does not depend on how you feel that day.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">112</span><span class="surah-txt"><span class="surah-name">al-Ikhlāṣ</span><span class="surah-eng">Sincerity</span></span></span>
-                  <span class="surah"><span class="roundel">113</span><span class="surah-txt"><span class="surah-name">al-Falaq</span><span class="surah-eng">The Daybreak</span></span></span>
-                  <span class="surah"><span class="roundel">114</span><span class="surah-txt"><span class="surah-name">an-Nās</span><span class="surah-eng">Mankind</span></span></span>
-                </div>
-                <p class="why">Three of them, three times each, morning and evening. The Prophet ﷺ named the number and the times, which puts this in a different category from almost everything else in this guide. The content is a sequence: al-Ikhlāṣ states who God is, al-Falaq seeks refuge from harms that come from outside, an-Nās from the one that whispers inside. Doctrine, then the world, then the self — in that order.</p>
-                <ul class="verses">
-                  <li><span class="vref">112:1–2</span><span class="vtext">"Say: He is God, One. God, the Everlasting Refuge."</span></li>
-                  <li><span class="vref">113:1</span><span class="vtext">"Say: I take refuge with the Lord of the daybreak."</span></li>
-                  <li><span class="vref">114:4–5</span><span class="vtext">"…from the evil of the slinking whisperer, who whispers into the breasts of people."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ḥasan ṣaḥīḥ</span> — Abū Dāwūd 5082, al-Tirmidhī 3575 (ʿAbdullāh b. Khubayb): recite the three, three times in the morning and evening — "they will suffice you against everything."</li>
-                  <li><span class="tag note">Note</span> — al-Ikhlāṣ, al-Falaq and an-Nās are usually classed as Makkan, though the last two are disputed and some hold them Madinan. The disagreement does not affect the practice.</li>
-                </ul>
-              </article>
-
-              <!-- 23 -->
-              <article class="cond-card" data-spine="hadith" data-domain="practice" data-tier="hadith,theme" data-period="makkan">
-                <div class="card-top">
-                  <span class="card-num">23</span>
-                  <h3 class="card-title">Every Friday</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>You want one weekly anchor. A thing that recurs, marks the week, and rewards you for the repetition.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">18</span><span class="surah-txt"><span class="surah-name">al-Kahf</span><span class="surah-eng">The Cave</span></span></span>
-                </div>
-                <p class="why">The weekly reading of al-Kahf is the most widely kept optional practice in the Muslim world, and its evidence is worth separating into two claims — because they are graded differently and only one of them is beyond dispute. The Dajjāl protection is in Ṣaḥīḥ Muslim. The light between the two Fridays is strong but sits a rung below. Both are worth keeping; only one is worth asserting flatly.</p>
-                <ul class="verses">
-                  <li><span class="vref">18:13</span><span class="vtext">"We relate their account to you in truth: they were young men who believed in their Lord, and We increased them in guidance."</span></li>
-                  <li><span class="vref">18:110</span><span class="vtext">"Whoever hopes to meet his Lord — let him do righteous work and associate no one in the worship of his Lord."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge t-theme">Thematic</span>
-                  <span class="badge period">Makkan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — Muslim 809 (Abū al-Dardāʾ): whoever memorises ten verses from the beginning of al-Kahf is protected from the Dajjāl. Another route in Muslim gives the last ten. This is the unshakeable claim.</li>
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — <em>"Whoever recites Sūrat al-Kahf on the day of Jumuʿah, a light shines for him between the two Fridays"</em> (Abū Saʿīd al-Khudrī; al-Ḥākim, <em>al-Mustadrak</em> 3392, who graded it ṣaḥīḥ; al-Albānī concurred in <em>Ṣaḥīḥ al-Targhīb</em> 736 and <em>Ṣaḥīḥ al-Jāmiʿ</em> 6470). Some critics hold the report <em>mawqūf</em> — a statement of Abū Saʿīd rather than of the Prophet ﷺ. Al-Nawawī and Ibn Qudāmah both record the recommendation as settled.</li>
-                  <li><span class="tag note">Note</span> — the wording varies between "the day of Jumuʿah" and "the night of Jumuʿah," which is why the practice runs from Thursday sunset to Friday sunset.</li>
-                </ul>
-              </article>
-
-              <!-- 24 -->
-              <article class="cond-card" data-spine="hadith" data-domain="practice,fear" data-tier="hadith" data-period="madinan,makkan">
-                <div class="card-top">
-                  <span class="card-num">24</span>
-                  <h3 class="card-title">At night, before sleep</h3>
-                </div>
-                <p class="when"><b>When this is you</b><br>The end of the day. The one moment that is reliably yours and reliably wasted.</p>
-                <div class="surah-row">
-                  <span class="surah"><span class="roundel">2</span><span class="surah-txt"><span class="surah-name">Āyat al-Kursī</span><span class="surah-eng">al-Baqarah 255</span></span></span>
-                  <span class="surah"><span class="roundel dash">2</span><span class="surah-txt"><span class="surah-name">The last two verses</span><span class="surah-eng">al-Baqarah 285–286</span></span></span>
-                  <span class="surah"><span class="roundel dash">3</span><span class="surah-txt"><span class="surah-name">The three quls</span><span class="surah-eng">112 · 113 · 114</span></span></span>
-                  <span class="surah secondary"><span class="roundel">67</span><span class="surah-txt"><span class="surah-name">al-Mulk</span><span class="surah-eng">The Dominion</span></span></span>
-                </div>
-                <p class="why">The bedtime sequence is the single best-evidenced devotional routine in this guide — every element below is in the Ṣaḥīḥs or graded ḥasan, and the whole thing takes four minutes. The method for the three quls is specific and often dropped: they are recited into the cupped hands, blown into, and then wiped over the body, beginning with the head and face, three times over.</p>
-                <ul class="verses">
-                  <li><span class="vref">2:255</span><span class="vtext">"Neither drowsiness overtakes Him nor sleep." — the verse for the moment you lose consciousness.</span></li>
-                  <li><span class="vref">2:285</span><span class="vtext">"We hear, and we obey. Your forgiveness, our Lord — and to You is the return."</span></li>
-                </ul>
-                <div class="badges">
-                  <span class="badge t-hadith">Prophetic ḥadīth</span>
-                  <span class="badge period">Madinan</span>
-                </div>
-                <ul class="srcs">
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 2311: Āyat al-Kursī before sleep — a guardian, and no devil approaches until morning.</li>
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 5009, Muslim 807: the last two verses of al-Baqarah at night — <em>kafatāh</em>.</li>
-                  <li><span class="tag ok">Ṣaḥīḥ</span> — al-Bukhārī 5017 (ʿĀʾishah): each night the Prophet ﷺ would gather his hands, recite the three quls into them, blow, and wipe over what he could of his body, starting with his head and face — three times.</li>
-                  <li><span class="tag ok">Ḥasan</span> — al-Tirmidhī 2892 (Jābir): he would not sleep until he had recited <em>Alif Lām Mīm Tanzīl</em> (32) and <em>Tabāraka</em> (67).</li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="no-results" id="noResults">
-              <p><b>Nothing matches those filters.</b></p>
-              <p>Try removing a filter, or search for a sūrah by name — <em>Yūsuf</em>, <em>al-Kahf</em>, <em>aṭ-Ṭalāq</em> — or by verse, like <em>65:2</em>.</p>
-              <button type="button" class="toc-btn" id="noResultsReset">Clear all filters</button>
-            </div>
-          </div>
-
-        </div>
+    <a href="https://quran.yasirbilgin.com/surah-content" class="card internal">
+      <div class="card-icon">&#x2604;</div>
+      <div class="card-body">
+        <div class="card-name">Surah Contents</div>
+        <div class="card-desc">114 surahs with topic summaries</div>
       </div>
-    </section>
-    <!-- ══ SECTION III ═════════════════════════════════════════ -->
-    <section id="s3" class="major-section">
-      <span class="section-label">Section III</span>
-      <h2>A Map of the <em>Soul</em></h2>
+    </a>
 
-      <p>Strip the directory down to its spine and you get something older than the directory: a list of recurring human states, each with a chapter of the Qurʾān standing opposite it. The Book keeps returning to the same archetypes because people keep arriving in the same conditions. Fourteen of them, and the "strongest claim" column is the honest one — note how few rows earn the top tier.</p>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Human condition</th>
-              <th scope="col">Qurʾānic companion</th>
-              <th scope="col">№</th>
-              <th scope="col">Period</th>
-              <th scope="col">Strongest claim</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Loss</td>                       <td class="surah-cell">Yūsuf</td>          <td>12</td>  <td>Makkan</td>  <td>Thematic</td></tr>
-            <tr><td>Loneliness in a mission</td>    <td class="surah-cell">Hūd</td>            <td>11</td>  <td>Makkan</td>  <td>Thematic</td></tr>
-            <tr><td>Feeling forgotten</td>          <td class="surah-cell">aḍ-Ḍuḥā</td>        <td>93</td>  <td>Makkan</td>  <td>Occasion of revelation</td></tr>
-            <tr><td>Anxiety about provision</td>    <td class="surah-cell">aṭ-Ṭalāq</td>       <td>65</td>  <td>Madinan</td> <td>Thematic</td></tr>
-            <tr><td>Fear</td>                       <td class="surah-cell">Āyat al-Kursī</td>  <td>2:255</td><td>Madinan</td> <td>Prophetic ḥadīth</td></tr>
-            <tr><td>Sin and regret</td>             <td class="surah-cell">az-Zumar</td>       <td>39</td>  <td>Makkan</td>  <td>Occasion of revelation</td></tr>
-            <tr><td>Moral temptation</td>           <td class="surah-cell">Yūsuf</td>          <td>12</td>  <td>Makkan</td>  <td>Thematic</td></tr>
-            <tr><td>Failure</td>                    <td class="surah-cell">Āl ʿImrān</td>      <td>3</td>   <td>Madinan</td> <td>Occasion of revelation</td></tr>
-            <tr><td>Success</td>                    <td class="surah-cell">an-Naṣr</td>        <td>110</td> <td>Madinan</td> <td>Prophetic ḥadīth</td></tr>
-            <tr><td>Need for purpose</td>           <td class="surah-cell">al-Kahf</td>        <td>18</td>  <td>Makkan</td>  <td>Thematic</td></tr>
-            <tr><td>Community tension</td>          <td class="surah-cell">al-Ḥujurāt</td>     <td>49</td>  <td>Madinan</td> <td>Occasion of revelation</td></tr>
-            <tr><td>Doubt about the worldview</td>  <td class="surah-cell">al-Baqarah</td>     <td>2</td>   <td>Madinan</td> <td>Thematic</td></tr>
-            <tr><td>Justice and social order</td>   <td class="surah-cell">an-Nisāʾ</td>       <td>4</td>   <td>Madinan</td> <td>Thematic</td></tr>
-            <tr><td>Standing firm under pressure</td><td class="surah-cell">al-ʿAnkabūt</td>   <td>29</td>  <td>Makkan</td>  <td>Thematic</td></tr>
-          </tbody>
-        </table>
+    <a href="https://quran.yasirbilgin.com/pages/reading-list" class="card internal">
+      <div class="card-icon">&#x1F4DA;</div>
+      <div class="card-body">
+        <div class="card-name">Reading List</div>
+        <div class="card-desc">Curated books and studies on the Qur'an</div>
       </div>
+    </a>
 
-      <p>Nine of fourteen rows rest on nothing but the text's own subject matter. That is not a weakness in the map — it is the map telling you what kind of thing it is. A sūrah does not need a narration to be about grief. It needs a narration only if you intend to claim the Prophet ﷺ said so.</p>
-    </section>
-
-    <!-- ══ SECTION IV ══════════════════════════════════════════ -->
-    <section id="s4" class="major-section">
-      <span class="section-label">Section IV</span>
-      <h2>The Makkan–Madinan <em>Arc</em></h2>
-
-      <p>Sort the directory by period and a shape appears. The Makkan sūrahs cluster around the interior: fear, grief, mockery, mortality, the vertigo of insignificance. The Madinan sūrahs cluster around the exterior: leadership, litigation, rumour, hypocrisy, inheritance, war. Thirteen of the twenty-four conditions above point to a Makkan chapter, eleven to a Madinan one, and the split is not random — it tracks the two jobs revelation had to do.</p>
-
-      <div class="duo-panel">
-        <div>
-          <p class="mini-label">Makkah · roughly 13 years</p>
-          <p>No state, no army, no law worth the name. A minority being mocked, boycotted, and tortured. Revelation's task is to build an interior that can survive without external support: certainty about God, certainty about resurrection, and the capacity to be laughed at without breaking.</p>
-          <p><b>Registers:</b> tawḥīd · resurrection · the fates of earlier nations · patience · the smallness of the world.</p>
-        </div>
-        <div>
-          <p class="mini-label">Madīnah · roughly 10 years</p>
-          <p>A community with obligations. Now there are orphans with estates, marriages that fail, treaties, battles, a treasury, and neighbours who say one thing and mean another. Revelation's task shifts to the exterior: how a body of believers holds together and treats people justly.</p>
-          <p><b>Registers:</b> law · governance · social protocol · warfare and its limits · hypocrisy · communal cohesion.</p>
-        </div>
+    <a href="https://quran.yasirbilgin.com/pages/chronology-prophet-muhammad" class="card internal">
+      <div class="card-icon">&#x2726;</div>
+      <div class="card-body">
+        <div class="card-name">Chronology: Prophet Muhammad</div>
+        <div class="card-desc">Timeline of the prophetic biography</div>
       </div>
+    </a>
 
-      <p>The pattern mirrors an individual life, which is why the map works at all. First the heart is made able to stand; then a life and a society get built on top of it. Reverse the order and you get an activist with no interior, or an interior with nothing to spend itself on.</p>
-
-      <h3 id="s4-1" class="sub-heading"><span class="sh-num">4.1</span>Where the pattern breaks</h3>
-
-      <p>State it as a law and it fails immediately, so state it as a tendency. Three counter-examples from this very directory:</p>
-
-      <ul>
-        <li><b>Aṭ-Ṭalāq is Madinan</b> — a chapter of family law — and it carries the Qurʾān's most quoted verse on trust under uncertainty (65:2–3). The most interior consolation in the guide is embedded in the most exterior legal material. That is the point of it.</li>
-        <li><b>Al-Ḥadīd is Madinan</b>, and 57:16 is the Book's sharpest diagnosis of a hard heart — addressed to a community at the height of its worldly success. The interior work does not conclude when the community succeeds; it becomes harder.</li>
-        <li><b>Al-Kahf is Makkan</b>, and it is the guide's chapter on wealth, power, and knowledge — the classic Madinan concerns — delivered to a persecuted minority who had none of the three. It was formation for a situation that had not arrived yet.</li>
-      </ul>
-
-      <p>So: the Makkan sūrahs tend toward the heart and the Madinan toward the community, and the exceptions are not noise. They are the tradition insisting that the two halves never actually separate.</p>
-    </section>
-
-    <!-- ══ SECTION V ═══════════════════════════════════════════ -->
-    <section id="s5" class="major-section">
-      <span class="section-label">Section V</span>
-      <h2>Five <em>Cautions</em></h2>
-
-      <p>This guide is only useful if it is used the way it is built. Five ways it goes wrong:</p>
-
-      <h3 id="s5-1" class="sub-heading"><span class="sh-num">5.1</span>Do not promote a claim up a tier</h3>
-      <p>The commonest failure in this whole genre. "Sūrat Yūsuf is beautiful for grief" is true. "The Prophet ﷺ recommended Sūrat Yūsuf for grief" is false. The distance between them is one careless sentence at a gathering, and once crossed it does not come back. If you pass on anything from this page, pass on the tier with it.</p>
-
-      <h3 id="s5-2" class="sub-heading"><span class="sh-num">5.2</span>Weak narrations have conditions</h3>
-      <p>The tolerance of ḍaʿīf ḥadīth in <em>faḍāʾil al-aʿmāl</em> is real and it is not a blank cheque. Ibn Ḥajar's three conditions, which the later scholars generally follow: the weakness must not be severe; the act must already have an established basis in the religion; and the person acting on it must not believe it is firmly established. The third is the one that fails in practice. A person reciting al-Wāqiʿah nightly and expecting money is not observing a weak virtue — they are believing a weak report.</p>
-
-      <div class="caution">
-        <p class="mini-label">The specific risk</p>
-        <p>Nothing in the Qurʾān or the authentic Sunnah promises wealth for recitation. If provision does not arrive, the person who was told it would arrive has been set up for a crisis of faith over a claim that was never Islam's. That is the real cost of tier inflation, and it is paid by the most sincere reader, not the most careless one.</p>
+    <a href="https://quran.yasirbilgin.com/pages/legal-chronology" class="card internal">
+      <div class="card-icon">&#x2696;&#xFE0F;</div>
+      <div class="card-body">
+        <div class="card-name">Legal Chronology</div>
+        <div class="card-desc">Chronological development of Islamic law</div>
       </div>
+    </a>
 
-      <h3 id="s5-3" class="sub-heading"><span class="sh-num">5.3</span>The Qurʾān is not a pharmacy, and it is not an oracle</h3>
-      <p>Two distinct errors sit either side of this guide. The first is treating sūrahs as pills — a dose per symptom, effect independent of comprehension. The second is <em>istikhāra bi'l-Muṣḥaf</em>, opening the Book at random for a verdict on a decision. The classical scholars overwhelmingly rejected the second as a form of divination with no basis in the Sunnah; the Prophet ﷺ taught a prayer for that need, not a page-flip. Both errors share a premise: that the words work without you.</p>
+    <a href="https://drive.google.com/drive/folders/18_n1fMMMCCy3LN-_Z2YqroeRe7I_wIRW?usp=sharing" class="card internal">
+      <div class="card-icon">&#x1F4C2;</div>
+      <div class="card-body">
+        <div class="card-name">Resources</div>
+        <div class="card-desc">Shared documents and study materials</div>
+      </div>
+    </a>
 
-      <h3 id="s5-4" class="sub-heading"><span class="sh-num">5.4</span>Recitation is not a substitute for the action the verse names</h3>
-      <p>Read 65:2–3 again and notice what the condition actually is. <em>Whoever is mindful of God</em> — not <em>whoever recites this verse</em>. The way out is promised to taqwā, and taqwā is a set of decisions, most of them inconvenient. The verse tells you what to do; reciting it while not doing it is a category error that the verse itself is warning you about.</p>
+  </div>
 
-      <h3 id="s5-5" class="sub-heading"><span class="sh-num">5.5</span>Read the rendering, then go past it</h3>
-      <p>Every verse on this page is my own rendering, made compact for scanning. A rendering is a report about the Qurʾān, not the Qurʾān. Where a card matters to you, take the sūrah to a tafsīr — al-Ṭabarī or Ibn Kathīr for the transmitted material, al-Rāzī or al-Zamakhsharī for the analytical, a modern coherence-focused commentary for the structure — and read the passage in its place. The cards are an index. The Book is the thing.</p>
-    </section>
+  <div class="div-line"><span class="div-star">&#x2736;</span></div>
 
-    <!-- ══ SECTION VI ══════════════════════════════════════════ -->
-    <section id="s6" class="major-section">
-      <span class="section-label">Section VI</span>
-      <h2><em>Sources</em></h2>
+  <!-- Quranic tools -->
+  <div class="cat-label">Quranic tools &amp; references</div>
+  <div class="grid">
 
-      <p class="mini-label">Ḥadīth collections</p>
-      <p>Ṣaḥīḥ al-Bukhārī · Ṣaḥīḥ Muslim · Sunan Abī Dāwūd · Jāmiʿ al-Tirmidhī · Sunan al-Nasāʾī · Sunan Ibn Mājah · Musnad Aḥmad · al-Bayhaqī, <em>Shuʿab al-Īmān</em> · al-Ḥākim, <em>al-Mustadrak</em>.</p>
+    <a href="https://quran.com/" target="_blank" class="card">
+      <div class="card-icon">&#x2602;</div>
+      <div class="card-body">
+        <div class="card-name">The Noble Qur'an</div>
+        <div class="card-desc">Quran.com — text, translations &amp; audio</div>
+      </div>
+    </a>
 
-      <p class="mini-label">Gradings and criticism</p>
-      <p>Al-Dāraquṭnī · Ibn al-Jawzī, <em>al-Mawḍūʿāt</em> · Ibn Ḥajar al-ʿAsqalānī (including the conditions for acting on weak reports in <em>faḍāʾil</em>) · al-Nawawī, <em>al-Adhkār</em>, with Ibn ʿAllān al-Bakrī's commentary · al-Albānī, <em>Silsilat al-Aḥādīth al-Ḍaʿīfa</em> and <em>Ṣaḥīḥ al-Targhīb wa'l-Tarhīb</em>.</p>
+    <a href="https://corpus.quran.com/" target="_blank" class="card">
+      <div class="card-icon">&#x2698;</div>
+      <div class="card-body">
+        <div class="card-name">Corpus Qur'an</div>
+        <div class="card-desc">Morphology, syntax &amp; grammar analysis</div>
+      </div>
+    </a>
 
-      <p class="mini-label">Tafsīr and occasions of revelation</p>
-      <p>Al-Ṭabarī, <em>Jāmiʿ al-Bayān</em> · al-Wāḥidī, <em>Asbāb al-Nuzūl</em> · al-Qurṭubī, <em>al-Jāmiʿ li-Aḥkām al-Qurʾān</em> · Ibn Kathīr, <em>Tafsīr al-Qurʾān al-ʿAẓīm</em>.</p>
+    <a href="https://ejtaal.net/aa/#hw4=1029,ll=2754,ls=32,la=4031,sg=936,ha=697,br=866,pr=140,aan=601,mgf=768,vi=338,kz=2394,mr=625,mn=1267,uqw=1473,umr=990,ums=826,umj=752,ulq=1542,uqa=385,uqq=354,bdw=h806,amr=h579,asb=h886,auh=h1462,dhq=h512,mht=h820,msb=h218,tla=h91,amj=h742,ens=h1,mis=h1" target="_blank" class="card">
+      <div class="card-icon">&#x1F56E;</div>
+      <div class="card-body">
+        <div class="card-name">Arabic Dictionary</div>
+        <div class="card-desc">Ejtaal — classical Arabic lexicons</div>
+      </div>
+    </a>
 
-      <p class="mini-label">A note on method</p>
-      <p>Where a grading is disputed I have said so on the card rather than picking a side and presenting it as settled — cards 14 and 23 are the two clearest cases. Where the tafsīr tradition offers an occasion of revelation through routes of varying strength, I have written "reported" rather than "ṣaḥīḥ." Corrections are welcome and will be made.</p>
-    </section>
+    <a href="https://en.wikipedia.org/wiki/List_of_characters_and_names_mentioned_in_the_Quran" target="_blank" class="card">
+      <div class="card-icon">&#x1F9D1;</div>
+      <div class="card-body">
+        <div class="card-name">Characters &amp; Names</div>
+        <div class="card-desc">People and names mentioned in the Qur'an</div>
+      </div>
+    </a>
 
-  </article>
+    <a href="https://www.webcitation.org/query?url=http://www.bombaxo.com/chronsurs.html&date=2011-05-13" target="_blank" class="card">
+      <div class="card-icon">&#x1F4C5;</div>
+      <div class="card-body">
+        <div class="card-name">Chronological Order</div>
+        <div class="card-desc">Surahs in order of revelation</div>
+      </div>
+    </a>
 
-</main><!-- /main#main-content -->
+    <a href="https://en.wikipedia.org/wiki/List_of_people_in_both_the_Bible_and_the_Quran" target="_blank" class="card">
+      <div class="card-icon">&#x2699;&#xFE0F;</div>
+      <div class="card-body">
+        <div class="card-name">Qur'anic vs Biblical Narratives</div>
+        <div class="card-desc">Shared figures across scriptures</div>
+      </div>
+    </a>
 
-<footer>
-  <span class="footer-logo">Yasir Bilgin</span>
-  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
-</footer>
+    <a href="https://www.islamreligion.com/category/77/summary-of-quranic-chapters/" target="_blank" class="card">
+      <div class="card-icon">&#x1F4CB;</div>
+      <div class="card-body">
+        <div class="card-name">Summary of Chapters</div>
+        <div class="card-desc">Chapter-by-chapter summaries</div>
+      </div>
+    </a>
 
-<script>
-  // ── Progress bar ────────────────────────────────────────────
-  (function () {
-    const bar = document.getElementById('progressBar');
-    if (!bar) return;
-    window.addEventListener('scroll', () => {
-      const docH = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.width = (docH > 0 ? (window.scrollY / docH * 100) : 0) + '%';
-    }, { passive: true });
-  })();
+    <a href="https://catholic-resources.org/Bible/Exegesis.htm" target="_blank" class="card">
+      <div class="card-icon">&#x2741;</div>
+      <div class="card-body">
+        <div class="card-name">Exegesis / Methodologies</div>
+        <div class="card-desc">Interpretive approaches and methods</div>
+      </div>
+    </a>
 
-  // ── Directory: faceted filter + live search ─────────────────
-  (function () {
-    const cards       = Array.from(document.querySelectorAll('.cond-card'));
-    const chips       = Array.from(document.querySelectorAll('.chip'));
-    const searchInput = document.getElementById('condSearch');
-    const searchClear = document.getElementById('searchClear');
-    const resultCount = document.getElementById('resultCount');
-    const noResults   = document.getElementById('noResults');
-    const resetBtn    = document.getElementById('resetBtn');
-    const noResReset  = document.getElementById('noResultsReset');
-    const filterBar   = document.getElementById('filterBar');
-    const filterTgl   = document.getElementById('filterToggle');
-    if (!cards.length) return;
+  </div>
 
-    // Cache each card's searchable text and its facet values.
-    const model = cards.map(card => {
-      const nodes = Array.from(card.querySelectorAll(
-        '.card-title, .when, .why, .surah-name, .surah-eng, .vref, .vtext, .srcs li'
-      ));
-      return {
-        el: card,
-        nodes: nodes,
-        text: nodes.map(n => n.textContent).join(' ').toLowerCase(),
-        domain: (card.dataset.domain || '').split(','),
-        tier:   (card.dataset.tier   || '').split(','),
-        period: (card.dataset.period || '').split(',')
-      };
-    });
+  <div class="div-line"><span class="div-star">&#x2736;</span></div>
 
-    const active = { domain: new Set(), tier: new Set(), period: new Set() };
+  <!-- Islamic resources -->
+  <div class="cat-label">Islamic libraries &amp; resources</div>
+  <div class="grid">
 
-    // Diacritic-insensitive: "surah" should find "sūrah", "Yusuf" → "Yūsuf".
-    const fold = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-    model.forEach(m => { m.folded = fold(m.text); });
+    <a href="https://www.erisale.com/#home" target="_blank" class="card">
+      <div class="card-icon">&#x2726;</div>
+      <div class="card-body">
+        <div class="card-name">Risale-i Nur</div>
+        <div class="card-desc">eRisale — Said Nursî's complete collection</div>
+      </div>
+    </a>
 
-    function matchesFacets(m) {
-      // AND across groups, OR within a group.
-      for (const g of ['domain', 'tier', 'period']) {
-        if (!active[g].size) continue;
-        if (!m[g].some(v => active[g].has(v))) return false;
-      }
-      return true;
-    }
+    <a href="https://mealler.org/" target="_blank" class="card">
+      <div class="card-icon">&#x262C;</div>
+      <div class="card-body">
+        <div class="card-name">Turkish Translations</div>
+        <div class="card-desc">Mealler — Quranic translations in Turkish</div>
+      </div>
+    </a>
 
-    function clearMarks(m) {
-      m.nodes.forEach(n => {
-        if (n.querySelector('mark')) n.innerHTML = n.innerHTML.replace(/<\/?mark>/g, '');
-      });
-    }
+    <a href="https://turath.io" target="_blank" class="card">
+      <div class="card-icon">&#x1F4D6;</div>
+      <div class="card-body">
+        <div class="card-name">Turath.io</div>
+        <div class="card-desc">Classical Islamic library &amp; search</div>
+      </div>
+    </a>
 
-    function applyMarks(m, q) {
-      const needle = fold(q);
-      m.nodes.forEach(n => {
-        const walker = document.createTreeWalker(n, NodeFilter.SHOW_TEXT);
-        const texts = [];
-        while (walker.nextNode()) texts.push(walker.currentNode);
-        texts.forEach(node => {
-          const folded = fold(node.nodeValue);
-          let idx = folded.indexOf(needle);
-          if (idx === -1) return;
-          const frag = document.createDocumentFragment();
-          let last = 0;
-          while (idx !== -1) {
-            frag.appendChild(document.createTextNode(node.nodeValue.slice(last, idx)));
-            const mk = document.createElement('mark');
-            mk.textContent = node.nodeValue.slice(idx, idx + needle.length);
-            frag.appendChild(mk);
-            last = idx + needle.length;
-            idx = folded.indexOf(needle, last);
-          }
-          frag.appendChild(document.createTextNode(node.nodeValue.slice(last)));
-          node.parentNode.replaceChild(frag, node);
-        });
-      });
-    }
+    <a href="https://usul.ai/genre/quranic-sciences-and-exegesis-1" target="_blank" class="card">
+      <div class="card-icon">&#x2609;</div>
+      <div class="card-body">
+        <div class="card-name">Usul.ai</div>
+        <div class="card-desc">Quranic sciences &amp; exegesis index</div>
+      </div>
+    </a>
 
-    function stripMarks(m) {
-      m.nodes.forEach(n => {
-        n.querySelectorAll('mark').forEach(mk => {
-          mk.replaceWith(document.createTextNode(mk.textContent));
-        });
-        n.normalize();
-      });
-    }
+    <a href="https://openalex.org/works" target="_blank" class="card">
+      <div class="card-icon">&#x2737;</div>
+      <div class="card-body">
+        <div class="card-name">OpenAlex</div>
+        <div class="card-desc">Open scholarly literature index</div>
+      </div>
+    </a>
 
-    function updateCounts(visibleSet) {
-      chips.forEach(chip => {
-        const g = chip.dataset.group, v = chip.dataset.value;
-        // Count what this chip would yield given the other groups' filters.
-        const n = model.filter(m => {
-          if (!m[g].includes(v)) return false;
-          for (const og of ['domain', 'tier', 'period']) {
-            if (og === g || !active[og].size) continue;
-            if (!m[og].some(x => active[og].has(x))) return false;
-          }
-          return m.searchHit;
-        }).length;
-        const span = chip.querySelector('.n');
-        if (span) span.textContent = n;
-        chip.classList.toggle('zero', n === 0 && chip.getAttribute('aria-pressed') === 'false');
-      });
-    }
+  </div>
 
-    function render() {
-      const q = searchInput.value.trim();
-      searchClear.classList.toggle('show', q.length > 0);
+</div>
 
-      let shown = 0;
-      model.forEach(m => {
-        stripMarks(m);
-        m.searchHit = !q || m.folded.indexOf(fold(q)) !== -1;
-        const visible = m.searchHit && matchesFacets(m);
-        m.el.classList.toggle('hidden', !visible);
-        if (visible) {
-          shown++;
-          if (q) applyMarks(m, q);
-        }
-      });
-
-      updateCounts();
-
-      const filtersOn = active.domain.size || active.tier.size || active.period.size || q;
-      resultCount.textContent = !filtersOn
-        ? 'Showing all 24 conditions'
-        : shown + (shown === 1 ? ' condition' : ' conditions') + ' of 24';
-      noResults.classList.toggle('show', shown === 0);
-    }
-
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const g = chip.dataset.group, v = chip.dataset.value;
-        const on = chip.getAttribute('aria-pressed') === 'true';
-        chip.setAttribute('aria-pressed', on ? 'false' : 'true');
-        if (on) active[g].delete(v); else active[g].add(v);
-        render();
-      });
-    });
-
-    function resetAll() {
-      chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
-      active.domain.clear(); active.tier.clear(); active.period.clear();
-      searchInput.value = '';
-      render();
-      searchInput.focus();
-    }
-    resetBtn.addEventListener('click', resetAll);
-    noResReset.addEventListener('click', resetAll);
-
-    searchClear.addEventListener('click', () => {
-      searchInput.value = '';
-      render();
-      searchInput.focus();
-    });
-
-    let t;
-    searchInput.addEventListener('input', () => {
-      clearTimeout(t);
-      t = setTimeout(render, 110);
-    });
-    searchInput.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { searchInput.value = ''; render(); }
-    });
-
-    // Mobile: collapse the filter panel behind a toggle.
-    const mq = window.matchMedia('(max-width: 900px)');
-    function syncFilterVisibility() {
-      if (mq.matches) {
-        filterBar.hidden = filterTgl.getAttribute('aria-expanded') !== 'true';
-      } else {
-        filterBar.hidden = false;
-      }
-    }
-    filterTgl.addEventListener('click', () => {
-      const open = filterTgl.getAttribute('aria-expanded') === 'true';
-      filterTgl.setAttribute('aria-expanded', open ? 'false' : 'true');
-      filterTgl.textContent = open ? 'Show filters' : 'Hide filters';
-      syncFilterVisibility();
-    });
-    mq.addEventListener('change', syncFilterVisibility);
-    syncFilterVisibility();
-
-    render();
-  })();
-</script>
+</article>
+</main>
 </body>
 </html>

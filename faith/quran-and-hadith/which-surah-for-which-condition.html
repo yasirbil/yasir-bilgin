@@ -70,9 +70,16 @@
       --qf-gilt:      #866017;   /* tier 2 — occasion of revelation */
       --qf-slate:     #4a5563;   /* tier 3 — thematic content       */
       --qf-plum:      #74405a;   /* tier 4 — later practice         */
-      --qf-rule:      rgba(107,93,79,0.20);
-      --qf-surface:   rgba(255,252,246,0.72);
-      --qf-surface-2: rgba(247,243,236,0.55);
+      --qf-rule:      #ded5c6;   /* decorative hairlines */
+      --qf-border:    #8d8779;   /* control borders — 3.5:1 on surface, 3.1:1 on surface-2 */
+      --qf-surface:   #fffdf8;   /* opaque — cards must not let the page show through */
+      --qf-surface-2: #f4efe4;
+      --qf-ink:       #241f18;   /* primary card text     — 12.6:1 */
+      --qf-ink-2:     #4a4137;   /* secondary card text   —  9.8:1 */
+      --qf-ink-3:     #5f564a;   /* labels, meta          —  7.1:1 */
+      --qf-mark-bg:   #f9e4a6;
+      --qf-mark-fg:   #241f18;
+      --qf-tint:      #eef4f3;   /* pressed chip fill */
       --accent:       var(--qf-verdigris);
     }
     @media (prefers-color-scheme: dark) {
@@ -81,9 +88,16 @@
         --qf-gilt:      #d4ab4e;
         --qf-slate:     #97a3b2;
         --qf-plum:      #c98aa6;
-        --qf-rule:      rgba(255,255,255,0.13);
-        --qf-surface:   rgba(30,27,23,0.62);
-        --qf-surface-2: rgba(24,22,18,0.5);
+        --qf-rule:      #38332b;
+        --qf-border:    #787061;   /* 3.6:1 on surface, 3.3:1 on surface-2 */
+        --qf-surface:   #1c1a16;   /* opaque, hardcoded — never var() in dark UI */
+        --qf-surface-2: #23201a;
+        --qf-ink:       #ece7dd;   /* 13.1:1 */
+        --qf-ink-2:     #c0b8ab;   /*  8.8:1 */
+        --qf-ink-3:     #9d9487;   /*  5.8:1 */
+        --qf-mark-bg:   #5c4a1c;
+        --qf-mark-fg:   #f6efe0;
+        --qf-tint:      #1a2624;
       }
     }
 
@@ -150,7 +164,7 @@
       float: right;
       min-height: 44px;
       min-width: 44px;
-      border: 1px solid var(--qf-rule);
+      border: 1px solid var(--qf-border);
       border-radius: 999px;
       background: transparent;
       color: inherit;
@@ -169,17 +183,17 @@
     .toc-list a {
       display: block;
       min-height: 44px;
-      padding: 0.75rem 0.2rem;
-      color: inherit;
+      padding: 0.8rem 0.2rem;
+      color: var(--qf-ink);
       text-decoration: none;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.86rem;
+      font-size: 0.92rem;
       line-height: 1.5;
     }
     .toc-list a:hover { color: var(--accent); }
     .toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
     .toc-list .toc-main { font-weight: 600; }
-    .toc-list .toc-sub  { padding-left: 1.4rem; font-size: 0.8rem; opacity: 0.82; }
+    .toc-list .toc-sub  { padding-left: 1.4rem; font-size: 0.86rem; color: var(--qf-ink-2); }
 
     /* ── Hero ─────────────────────────────────────────────────── */
     .hero { max-width: 900px; margin: 0 auto; padding: 4rem 2.5rem 0; }
@@ -252,13 +266,13 @@
     .toc-btn {
       min-height: 44px;
       padding: 0.6rem 1.2rem;
-      border: 1px solid var(--qf-rule);
+      border: 1px solid var(--qf-border);
       border-radius: 999px;
       background: transparent;
       color: inherit;
       cursor: pointer;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       letter-spacing: 0.06em;
       transition: border-color var(--duration-normal, 0.2s) var(--ease, ease);
     }
@@ -272,8 +286,8 @@
       margin: 0 auto;
       padding: 4rem 2.5rem 8rem;
       font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 1.02rem;
-      line-height: 1.8;
+      font-size: 1.06rem;
+      line-height: 1.78;
     }
     .article-body > section[id] { scroll-margin-top: 90px; }
     .major-section { margin-bottom: 5rem; }
@@ -281,11 +295,11 @@
       display: block;
       margin-bottom: 0.7rem;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
     h2 {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -315,11 +329,11 @@
     .mini-label {
       margin: 2rem 0 0.6rem;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.13em;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
     .article-body ul:not(.tier-legend):not(.toc-list):not(.verses):not(.srcs) {
       margin: 0 0 1.3rem;
@@ -361,14 +375,15 @@
       border-left-width: 4px;
       border-radius: var(--radius-md, 8px);
       background: var(--qf-surface-2);
-      font-size: 0.88rem;
-      line-height: 1.55;
+      color: var(--qf-ink-2);
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
     .tier-legend li b {
       display: block;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.4rem;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -389,14 +404,14 @@
       width: 100%;
       min-height: 52px;
       padding: 0.9rem 3rem 0.9rem 1.1rem;
-      border: 1px solid var(--qf-rule);
+      border: 1px solid var(--qf-border);
       border-radius: var(--radius-md, 8px);
       background: var(--qf-surface);
-      color: inherit;
+      color: var(--qf-ink);
       font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
-    .search-input::placeholder { color: var(--faint, #6e5f4e); opacity: 0.85; }
+    .search-input::placeholder { color: var(--qf-ink-3); opacity: 1; }
     .search-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
     .search-clear {
       position: absolute;
@@ -432,8 +447,10 @@
       border: 1px solid var(--qf-rule);
       border-radius: var(--radius-md, 8px);
       background: var(--qf-surface);
+      box-shadow: 0 1px 2px rgba(60,48,30,0.04), 0 4px 14px rgba(60,48,30,0.05);
       font-family: 'DM Sans', system-ui, sans-serif;
     }
+    @media (prefers-color-scheme: dark) { .filter-bar { box-shadow: none; } }
     .filter-head {
       display: flex;
       align-items: baseline;
@@ -444,11 +461,11 @@
     .filter-head h3 {
       margin: 0;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
     .reset-btn {
       padding: 0.2rem 0;
@@ -457,7 +474,7 @@
       color: var(--accent);
       cursor: pointer;
       font-family: inherit;
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       text-decoration: underline;
       text-underline-offset: 3px;
     }
@@ -465,72 +482,80 @@
     .facet { margin-bottom: 1.5rem; }
     .facet:last-child { margin-bottom: 0; }
     .facet-title {
-      margin: 0 0 0.6rem;
+      margin: 0 0 0.7rem;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
     .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
     .chip {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.4rem 0.7rem;
-      border: 1px solid var(--qf-rule);
+      padding: 0.48rem 0.8rem;
+      border: 1px solid var(--qf-border);
       border-radius: 999px;
-      background: transparent;
-      color: inherit;
+      background: var(--qf-surface-2);
+      color: var(--qf-ink-2);
       cursor: pointer;
       font-family: inherit;
-      font-size: 0.74rem;
-      line-height: 1.3;
+      font-size: 0.8rem;
+      line-height: 1.35;
       text-align: left;
       transition: border-color var(--duration-fast, 0.12s) var(--ease, ease),
                   background var(--duration-fast, 0.12s) var(--ease, ease);
     }
     .chip:hover { border-color: var(--accent); }
     .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    /* Pressed state uses solid tints — these resolve reliably in both schemes */
     .chip[aria-pressed="true"] {
-      border-color: var(--accent);
-      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      border-color: var(--qf-verdigris);
+      background: var(--qf-tint);
+      color: var(--qf-verdigris);
       font-weight: 600;
     }
     .chip .n {
-      font-size: 0.66rem;
+      font-size: 0.72rem;
       font-variant-numeric: tabular-nums;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
-    .chip[aria-pressed="true"] .n { color: var(--accent); }
-    .chip.zero { opacity: 0.42; }
-    .chip.t-hadith[aria-pressed="true"]   { border-color: var(--qf-verdigris); background: color-mix(in srgb, var(--qf-verdigris) 14%, transparent); }
-    .chip.t-asbab[aria-pressed="true"]    { border-color: var(--qf-gilt);      background: color-mix(in srgb, var(--qf-gilt) 14%, transparent); }
-    .chip.t-theme[aria-pressed="true"]    { border-color: var(--qf-slate);     background: color-mix(in srgb, var(--qf-slate) 14%, transparent); }
-    .chip.t-practice[aria-pressed="true"] { border-color: var(--qf-plum);      background: color-mix(in srgb, var(--qf-plum) 14%, transparent); }
+    .chip[aria-pressed="true"] .n { color: inherit; }
+    .chip.zero { opacity: 0.5; }
+    .chip.t-hadith[aria-pressed="true"]   { border-color: var(--qf-verdigris); color: var(--qf-verdigris); }
+    .chip.t-asbab[aria-pressed="true"]    { border-color: var(--qf-gilt);      color: var(--qf-gilt); }
+    .chip.t-theme[aria-pressed="true"]    { border-color: var(--qf-slate);     color: var(--qf-slate); }
+    .chip.t-practice[aria-pressed="true"] { border-color: var(--qf-plum);      color: var(--qf-plum); }
 
     .filter-toggle { display: none; }
 
     .result-count {
       margin: 0 0 1rem;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.74rem;
-      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
 
     /* ── Condition cards ──────────────────────────────────────── */
     .card-list { display: flex; flex-direction: column; gap: 1.2rem; }
     .cond-card {
       position: relative;
-      padding: 1.5rem 1.6rem 1.6rem;
+      padding: 1.7rem 1.8rem 1.8rem;
       border: 1px solid var(--qf-rule);
-      border-left: 4px solid var(--qf-slate);
+      border-left: 5px solid var(--qf-slate);
       border-radius: var(--radius-md, 8px);
       background: var(--qf-surface);
+      box-shadow: 0 1px 2px rgba(60,48,30,0.04), 0 4px 14px rgba(60,48,30,0.05);
+      color: var(--qf-ink);
       scroll-margin-top: 80px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .cond-card { box-shadow: none; }
     }
     .cond-card[data-spine="hadith"]   { border-left-color: var(--qf-verdigris); }
     .cond-card[data-spine="asbab"]    { border-left-color: var(--qf-gilt); }
@@ -547,15 +572,15 @@
     .card-num {
       flex: none;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.74rem;
       font-variant-numeric: tabular-nums;
       letter-spacing: 0.1em;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
     .cond-card h3.card-title {
       margin: 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.42rem;
+      font-size: 1.6rem;
       font-weight: 600;
       letter-spacing: 0;
       line-height: 1.25;
@@ -563,18 +588,20 @@
       color: inherit;
     }
     .when {
-      margin: 0 0 1.1rem;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      color: var(--muted, #5d5346);
+      margin: 0 0 1.2rem;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--qf-ink-2);
     }
     .when b {
+      display: inline-block;
+      margin-bottom: 0.25rem;
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
     }
 
     /* Sūrah roundel — the illuminated āyah marker of the codex */
@@ -602,8 +629,8 @@
       border-radius: 50%;
       box-shadow: inset 0 0 0 2px var(--qf-surface);
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
+      font-size: 0.76rem;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
       color: var(--qf-gilt);
     }
@@ -611,18 +638,19 @@
     .surah-txt { display: flex; flex-direction: column; line-height: 1.15; }
     .surah-name {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.05rem;
+      font-size: 1.16rem;
       font-weight: 600;
       line-height: 1.2;
+      color: var(--qf-ink);
     }
     .surah-eng {
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.68rem;
-      color: var(--faint, #6e5f4e);
+      font-size: 0.74rem;
+      color: var(--qf-ink-3);
     }
     .surah.secondary .surah-name { font-weight: 400; font-style: italic; }
 
-    .why { margin: 0 0 1.1rem; font-size: 0.96rem; line-height: 1.7; }
+    .why { margin: 0 0 1.2rem; font-size: 1.02rem; line-height: 1.72; color: var(--qf-ink); }
 
     /* Verse strip */
     .verses { margin: 0 0 1.1rem; padding: 0; list-style: none; }
@@ -630,21 +658,39 @@
       display: grid;
       grid-template-columns: 4.6rem 1fr;
       gap: 0.8rem;
-      padding: 0.55rem 0;
+      padding: 0.7rem 0;
       border-top: 1px solid var(--qf-rule);
-      font-size: 0.92rem;
-      line-height: 1.6;
+      font-size: 1rem;
+      line-height: 1.65;
     }
     .verses li:last-child { border-bottom: 1px solid var(--qf-rule); }
     .vref {
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.74rem;
+      font-size: 0.82rem;
+      font-weight: 600;
       font-variant-numeric: tabular-nums;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      padding-top: 0.2rem;
+      letter-spacing: 0.03em;
+      color: var(--qf-verdigris);
+      padding-top: 0.22rem;
     }
-    .vtext { font-style: italic; }
+    .vtext { font-style: italic; color: var(--qf-ink); }
+    .vbody { display: flex; flex-direction: column; gap: 0.55rem; min-width: 0; }
+    /* Recitation text. fonts.css carries no Arabic face, so this is a system
+       stack — add a Naskh/Uthmani webfont to fonts.css for a consistent cut. */
+    .vtext-ar {
+      font-family: 'Scheherazade New', 'Amiri Quran', 'Amiri',
+                   'KFGQPC Uthmanic Script HAFS', 'Noto Naskh Arabic',
+                   'Traditional Arabic', 'Geeza Pro', 'Al Bayan', serif;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.15;
+      direction: rtl;
+      text-align: right;
+      color: var(--qf-ink);
+      -webkit-font-feature-settings: "liga" 1, "calt" 1;
+      font-feature-settings: "liga" 1, "calt" 1;
+    }
 
     /* Tier badges */
     .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -652,13 +698,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.25rem 0.6rem;
+      padding: 0.3rem 0.65rem;
       border: 1px solid currentColor;
       border-radius: var(--radius-sm, 4px);
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.63rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
     .badge::before {
@@ -672,7 +718,7 @@
     .badge.t-theme    { color: var(--qf-slate); }
     .badge.t-practice { color: var(--qf-plum); }
     .badge.period {
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
       border-style: dashed;
     }
     .badge.period::before { display: none; }
@@ -682,16 +728,17 @@
     .srcs li {
       padding-left: 1rem;
       text-indent: -1rem;
-      font-size: 0.82rem;
-      line-height: 1.6;
-      color: var(--muted, #5d5346);
+      font-family: 'DM Sans', system-ui, sans-serif;  /* sans: bigger x-height at small sizes */
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--qf-ink-2);
     }
-    .srcs li + li { margin-top: 0.4rem; }
+    .srcs li + li { margin-top: 0.6rem; }
     .srcs .tag {
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
     .srcs .tag.ok    { color: var(--qf-verdigris); }
@@ -699,10 +746,11 @@
     .srcs .tag.note  { color: var(--qf-gilt); }
 
     mark {
-      padding: 0 0.12em;
+      padding: 0.05em 0.18em;
       border-radius: 2px;
-      background: color-mix(in srgb, var(--qf-gilt) 32%, transparent);
-      color: inherit;
+      background: var(--qf-mark-bg);
+      color: var(--qf-mark-fg);
+      font-weight: 600;
     }
 
     .no-results {
@@ -713,7 +761,7 @@
       text-align: center;
     }
     .no-results.show { display: block; }
-    .no-results p { margin: 0 0 1rem; color: var(--muted, #5d5346); }
+    .no-results p { margin: 0 0 1rem; font-size: 1.02rem; color: var(--qf-ink-2); }
 
     /* ── Archetype table ──────────────────────────────────────── */
     .table-wrap {
@@ -722,29 +770,38 @@
       border: 1px solid var(--qf-rule);
       border-radius: var(--radius-md, 8px);
     }
-    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-    th, td { padding: 0.7rem 0.9rem; text-align: left; border-bottom: 1px solid var(--qf-rule); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.96rem; background: var(--qf-surface); }
+    th, td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--qf-rule); color: var(--qf-ink-2); }
     thead th {
+      background: var(--qf-surface-2);
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-size: 0.66rem;
-      font-weight: 600;
-      letter-spacing: 0.11em;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--faint, #6e5f4e);
+      color: var(--qf-ink-3);
       white-space: nowrap;
     }
+    tbody tr:nth-child(even) td { background: var(--qf-surface-2); }
     tbody tr:last-child td { border-bottom: 0; }
-    td.surah-cell { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem; }
+    td.surah-cell {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--qf-ink);
+    }
 
     /* ── Duo panel: Makkan / Madinan ──────────────────────────── */
     .duo-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin: 2rem 0; }
     @media (max-width: 560px) { .duo-panel { grid-template-columns: 1fr; } }
     .duo-panel > div {
-      padding: 1.4rem 1.5rem;
+      padding: 1.5rem 1.6rem;
       border: 1px solid var(--qf-rule);
       border-radius: var(--radius-md, 8px);
       background: var(--qf-surface-2);
+      color: var(--qf-ink-2);
     }
+    .duo-panel p:last-child { margin-bottom: 0; }
     .duo-panel .mini-label { margin-top: 0; }
 
     /* ── Caution box ──────────────────────────────────────────── */
@@ -752,9 +809,10 @@
       margin: 2rem 0;
       padding: 1.4rem 1.5rem;
       border: 1px solid var(--qf-rule);
-      border-left: 4px solid var(--qf-plum);
+      border-left: 5px solid var(--qf-plum);
       border-radius: var(--radius-md, 8px);
       background: var(--qf-surface-2);
+      color: var(--qf-ink-2);
     }
     .caution .mini-label { margin-top: 0; color: var(--qf-plum); }
     .caution p:last-child { margin-bottom: 0; }
@@ -775,6 +833,40 @@
     .footer-logo { font-size: 0.9rem; font-weight: 600; }
     .footer-copy { font-size: 0.76rem; color: var(--faint, #6e5f4e); }
 
+    /* ── Cascade hardening ────────────────────────────────────────
+       Standalone, `.cond-card` (0-1-0) sets the background fine. Dropped
+       into the site shell, any rule in article.css shaped like
+       `.article-body article {…}` (0-1-1) out-specifies it and the box
+       reverts to the site's own surface. These re-assert the box colours
+       at ID specificity (1-1-0) so the page renders identically in both
+       contexts. `#main-content` is already required by the skip link.
+       Tier colours are re-stated at 1-3-0 so they still beat the base. */
+    #main-content .cond-card            { background: var(--qf-surface); color: var(--qf-ink); }
+    #main-content .cond-card .why,
+    #main-content .cond-card .vtext,
+    #main-content .cond-card .vtext-ar  { color: var(--qf-ink); }
+    #main-content .cond-card .when,
+    #main-content .cond-card .srcs li   { color: var(--qf-ink-2); }
+    #main-content .cond-card .surah     { background: var(--qf-surface-2); }
+    #main-content .filter-bar           { background: var(--qf-surface); }
+    #main-content .search-input         { background: var(--qf-surface); color: var(--qf-ink); }
+    #main-content .chip[aria-pressed="false"] { background: var(--qf-surface-2); color: var(--qf-ink-2); }
+    #main-content .chip[aria-pressed="true"]  { background: var(--qf-tint);      color: var(--qf-verdigris); }
+    #main-content .chip.t-hadith[aria-pressed="true"]   { color: var(--qf-verdigris); }
+    #main-content .chip.t-asbab[aria-pressed="true"]    { color: var(--qf-gilt); }
+    #main-content .chip.t-theme[aria-pressed="true"]    { color: var(--qf-slate); }
+    #main-content .chip.t-practice[aria-pressed="true"] { color: var(--qf-plum); }
+    #main-content .tier-legend li       { background: var(--qf-surface-2); color: var(--qf-ink-2); }
+    #main-content .duo-panel > div,
+    #main-content .caution,
+    #main-content .no-results           { background: var(--qf-surface-2); color: var(--qf-ink-2); }
+    #main-content .table-wrap table     { background: var(--qf-surface); }
+    #main-content .table-wrap td        { color: var(--qf-ink-2); }
+    #main-content .table-wrap thead th,
+    #main-content .table-wrap tbody tr:nth-child(even) td { background: var(--qf-surface-2); }
+    #main-content .table-wrap td.surah-cell { color: var(--qf-ink); }
+    #main-content mark                  { background: var(--qf-mark-bg); color: var(--qf-mark-fg); }
+
     /* ── Mobile ───────────────────────────────────────────────── */
     @media (max-width: 900px) {
       .finder-grid { grid-template-columns: 1fr; }
@@ -784,7 +876,7 @@
         min-height: 48px;
         margin-bottom: 0.8rem;
         padding: 0.7rem 1.2rem;
-        border: 1px solid var(--qf-rule);
+        border: 1px solid var(--qf-border);
         border-radius: var(--radius-md, 8px);
         background: var(--qf-surface);
         color: inherit;
@@ -804,7 +896,8 @@
       .article-body { padding: 3rem 1.4rem 5rem; }
       footer { padding: 2rem 1.4rem; }
       .cond-card { padding: 1.3rem 1.1rem 1.4rem; }
-      .verses li { grid-template-columns: 1fr; gap: 0.15rem; }
+      .verses li { grid-template-columns: 1fr; gap: 0.3rem; }
+      .vtext-ar  { font-size: 1.32rem; line-height: 2.05; }
     }
 
     /* ── Reduced motion ───────────────────────────────────────── */
@@ -995,9 +1088,9 @@
                 </div>
                 <p class="why">Sūrat Yūsuf is the Qurʾān's long study of loss that turns out to have been architecture. Yaʿqūb loses a son and then his eyesight; Yūsuf loses his family, his freedom, and his reputation, in that order. Neither of them is told why while it is happening. The sūrah's power is that it withholds the meaning for as long as the characters have to wait for it. Read alongside it aḍ-Ḍuḥā, which is the shorter and sharper medicine: it came down after revelation itself went quiet and the Prophet ﷺ feared he had been dropped.</p>
                 <ul class="verses">
-                  <li><span class="vref">12:18</span><span class="vtext">"So beautiful patience — and it is God whose help is sought against what you describe."</span></li>
-                  <li><span class="vref">12:86</span><span class="vtext">"I complain of my anguish and my grief only to God, and I know from God what you do not know."</span></li>
-                  <li><span class="vref">93:3</span><span class="vtext">"Your Lord has not forsaken you, nor has He turned against you."</span></li>
+                  <li><span class="vref">12:18</span><span class="vbody"><span class="vtext">"So beautiful patience — and it is God whose help is sought against what you describe."</span><span class="vtext-ar" lang="ar" dir="rtl">فَصَبْرٌ جَمِيلٌ ۖ وَاللَّهُ الْمُسْتَعَانُ عَلَىٰ مَا تَصِفُونَ</span></span></li>
+                  <li><span class="vref">12:86</span><span class="vbody"><span class="vtext">"I complain of my anguish and my grief only to God, and I know from God what you do not know."</span><span class="vtext-ar" lang="ar" dir="rtl">إِنَّمَا أَشْكُو بَثِّي وَحُزْنِي إِلَى اللَّهِ وَأَعْلَمُ مِنَ اللَّهِ مَا لَا تَعْلَمُونَ</span></span></li>
+                  <li><span class="vref">93:3</span><span class="vbody"><span class="vtext">"Your Lord has not forsaken you, nor has He turned against you."</span><span class="vtext-ar" lang="ar" dir="rtl">مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1024,8 +1117,8 @@
                 </div>
                 <p class="why">Hūd is a procession of prophets who did everything correctly and were rejected anyway — Nūḥ for centuries, Hūd, Ṣāliḥ, Lūṭ, Shuʿayb. It does not promise that vindication arrives quickly; it reports that it arrives late, sometimes after the prophet's whole society is gone. Al-ʿAnkabūt supplies the frame: testing is not a malfunction of belief, it is the entry condition.</p>
                 <ul class="verses">
-                  <li><span class="vref">11:112</span><span class="vtext">"So stand firm as you have been commanded — you and whoever has turned back with you — and do not transgress. He sees what you do."</span></li>
-                  <li><span class="vref">29:2</span><span class="vtext">"Do people suppose they will be left to say 'we believe' and not be tested?"</span></li>
+                  <li><span class="vref">11:112</span><span class="vbody"><span class="vtext">"So stand firm as you have been commanded — you and whoever has turned back with you — and do not transgress. He sees what you do."</span><span class="vtext-ar" lang="ar" dir="rtl">فَاسْتَقِمْ كَمَا أُمِرْتَ وَمَن تَابَ مَعَكَ وَلَا تَطْغَوْا ۚ إِنَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ</span></span></li>
+                  <li><span class="vref">29:2</span><span class="vbody"><span class="vtext">"Do people suppose they will be left to say 'we believe' and not be tested?"</span><span class="vtext-ar" lang="ar" dir="rtl">أَحَسِبَ النَّاسُ أَن يُتْرَكُوا أَن يَقُولُوا آمَنَّا وَهُمْ لَا يُفْتَنُونَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1050,7 +1143,7 @@
                 </div>
                 <p class="why">A sūrah about the legal mechanics of divorce contains the Qurʾān's most concentrated statement about unknown futures — which is not a coincidence. Divorce is the paradigm case of a life whose next chapter is unwritten and whose provision is suddenly uncertain. The two verses arrive in the middle of waiting periods and maintenance rules, which is precisely their point: <em>God's way out is issued inside the paperwork, not instead of it.</em></p>
                 <ul class="verses">
-                  <li><span class="vref">65:2–3</span><span class="vtext">"…and whoever is mindful of God, He makes for him a way out, and provides for him from where he does not reckon. And whoever relies on God — He is enough for him. God will accomplish His purpose. He has set a measure for everything."</span></li>
+                  <li><span class="vref">65:2–3</span><span class="vbody"><span class="vtext">"…and whoever is mindful of God, He makes for him a way out, and provides for him from where he does not reckon. And whoever relies on God — He is enough for him. God will accomplish His purpose. He has set a measure for everything."</span><span class="vtext-ar" lang="ar" dir="rtl">وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ۚ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ۚ إِنَّ اللَّهَ بَالِغُ أَمْرِهِ ۚ قَدْ جَعَلَ اللَّهُ لِكُلِّ شَيْءٍ قَدْرًا</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-theme">Thematic</span>
@@ -1074,10 +1167,10 @@
                 </div>
                 <p class="why">Aṭ-Ṭalāq is the substantive text: provision from an unreckoned direction, tied explicitly to <em>taqwā</em> rather than to recitation. Al-Wāqiʿah is included because it is what people actually recite — and because what it actually does is dismantle the assumption underneath financial panic. It asks who made the seed sprout, who sent the water down, who lit the fire, and answers each time: not you. That is a real remedy for scarcity, and it is not the one the popular ḥadīth advertises.</p>
                 <ul class="verses">
-                  <li><span class="vref">65:2–3</span><span class="vtext">"…He provides for him from where he does not reckon."</span></li>
-                  <li><span class="vref">17:31</span><span class="vtext">"Do not kill your children fearing poverty. We provide for them and for you."</span></li>
-                  <li><span class="vref">2:245</span><span class="vtext">"Who will lend God a goodly loan, that He may multiply it for him many times over? God withholds and He grants abundance, and to Him you return."</span></li>
-                  <li><span class="vref">56:63–64</span><span class="vtext">"Have you considered what you sow? Do you make it grow, or are We the growers?"</span></li>
+                  <li><span class="vref">65:2–3</span><span class="vbody"><span class="vtext">"…He provides for him from where he does not reckon."</span><span class="vtext-ar" lang="ar" dir="rtl">وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ</span></span></li>
+                  <li><span class="vref">17:31</span><span class="vbody"><span class="vtext">"Do not kill your children fearing poverty. We provide for them and for you."</span><span class="vtext-ar" lang="ar" dir="rtl">وَلَا تَقْتُلُوا أَوْلَادَكُمْ خَشْيَةَ إِمْلَاقٍ ۖ نَّحْنُ نَرْزُقُهُمْ وَإِيَّاكُمْ ۚ إِنَّ قَتْلَهُمْ كَانَ خِطْئًا كَبِيرًا</span></span></li>
+                  <li><span class="vref">2:245</span><span class="vbody"><span class="vtext">"Who will lend God a goodly loan, that He may multiply it for him many times over? God withholds and He grants abundance, and to Him you return."</span><span class="vtext-ar" lang="ar" dir="rtl">مَّن ذَا الَّذِي يُقْرِضُ اللَّهَ قَرْضًا حَسَنًا فَيُضَاعِفَهُ لَهُ أَضْعَافًا كَثِيرَةً ۚ وَاللَّهُ يَقْبِضُ وَيَبْسُطُ وَإِلَيْهِ تُرْجَعُونَ</span></span></li>
+                  <li><span class="vref">56:63–64</span><span class="vbody"><span class="vtext">"Have you considered what you sow? Do you make it grow, or are We the growers?"</span><span class="vtext-ar" lang="ar" dir="rtl">أَفَرَأَيْتُم مَّا تَحْرُثُونَ ۝ أَأَنتُمْ تَزْرَعُونَهُ أَمْ نَحْنُ الزَّارِعُونَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-theme">Thematic</span>
@@ -1104,8 +1197,8 @@
                 </div>
                 <p class="why">This is the one place where the popular practice and the authentic Sunnah line up exactly. Both texts are prescribed by name, for protection, in the two Ṣaḥīḥs. Note what they say rather than only that they are said: Āyat al-Kursī is a verse about God's wakefulness — <em>no drowsiness overtakes Him</em> — recited by a person about to be unconscious. The fear is answered by the content, not by the sound.</p>
                 <ul class="verses">
-                  <li><span class="vref">2:255</span><span class="vtext">"God — there is no god but He, the Living, the Sustainer. Neither drowsiness overtakes Him nor sleep."</span></li>
-                  <li><span class="vref">2:286</span><span class="vtext">"God does not burden a soul beyond its capacity."</span></li>
+                  <li><span class="vref">2:255</span><span class="vbody"><span class="vtext">"God — there is no god but He, the Living, the Sustainer. Neither drowsiness overtakes Him nor sleep."</span><span class="vtext-ar" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ</span></span></li>
+                  <li><span class="vref">2:286</span><span class="vbody"><span class="vtext">"God does not burden a soul beyond its capacity."</span><span class="vtext-ar" lang="ar" dir="rtl">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1130,7 +1223,7 @@
                 </div>
                 <p class="why">One verse in this sūrah is aimed precisely at you, and its occasion of revelation is startling. Ibn Masʿūd reports that only four years separated the Companions' entry into Islam and God's rebuke of their hearts for going cold. <em>Four years.</em> If the first generation needed 57:16 within four years of Badr's horizon, the flatness you are describing is not evidence of a defect in you. It is the standard maintenance interval, and the sūrah names the mechanism: unaddressed time hardens hearts, as it hardened those of the communities before.</p>
                 <ul class="verses">
-                  <li><span class="vref">57:16</span><span class="vtext">"Has the time not come for those who believe — that their hearts should soften at the remembrance of God and what has come down of the truth? Let them not be like those given the Book before, for whom the age dragged on and their hearts hardened; and many of them are transgressors."</span></li>
+                  <li><span class="vref">57:16</span><span class="vbody"><span class="vtext">"Has the time not come for those who believe — that their hearts should soften at the remembrance of God and what has come down of the truth? Let them not be like those given the Book before, for whom the age dragged on and their hearts hardened; and many of them are transgressors."</span><span class="vtext-ar" lang="ar" dir="rtl">أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَن تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ وَمَا نَزَلَ مِنَ الْحَقِّ وَلَا يَكُونُوا كَالَّذِينَ أُوتُوا الْكِتَابَ مِن قَبْلُ فَطَالَ عَلَيْهِمُ الْأَمَدُ فَقَسَتْ قُلُوبُهُمْ ۖ وَكَثِيرٌ مِّنْهُمْ فَاسِقُونَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1156,8 +1249,8 @@
                 </div>
                 <p class="why">39:53 is the most extravagant verse in scripture and its wording is precise about who it is for. It does not say <em>those who slipped</em>. It says <em>those who transgressed against themselves</em> — <span lang="ar" dir="rtl">أسرفوا على أنفسهم</span>, who went to excess — and it forbids them despair not as consolation but as an error of belief. Despair is here a false statement about God's mercy, which is why the verse ends by naming Him <em>al-Ghafūr al-Raḥīm</em>: the correction is doctrinal.</p>
                 <ul class="verses">
-                  <li><span class="vref">39:53</span><span class="vtext">"Say: My servants who have gone to excess against yourselves — do not despair of God's mercy. God forgives all sins. He is the Forgiving, the Merciful."</span></li>
-                  <li><span class="vref">39:54</span><span class="vtext">"And turn back to your Lord and submit to Him before the punishment comes to you, when you will not be helped."</span></li>
+                  <li><span class="vref">39:53</span><span class="vbody"><span class="vtext">"Say: My servants who have gone to excess against yourselves — do not despair of God's mercy. God forgives all sins. He is the Forgiving, the Merciful."</span><span class="vtext-ar" lang="ar" dir="rtl">قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ ۚ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا ۚ إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ</span></span></li>
+                  <li><span class="vref">39:54</span><span class="vbody"><span class="vtext">"And turn back to your Lord and submit to Him before the punishment comes to you, when you will not be helped."</span><span class="vtext-ar" lang="ar" dir="rtl">وَأَنِيبُوا إِلَىٰ رَبِّكُمْ وَأَسْلِمُوا لَهُ مِن قَبْلِ أَن يَأْتِيَكُمُ الْعَذَابُ ثُمَّ لَا تُنصَرُونَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-asbab">Occasion of revelation</span>
@@ -1182,9 +1275,9 @@
                 </div>
                 <p class="why">The scene in the house of the ʿAzīz is the Qurʾān's most exact anatomy of temptation, and its lesson is not willpower. Yūsuf does not out-muscle the moment; he reframes it (<em>"he is my master, he has made my stay good"</em>), he runs for the door, and he then tells God he would rather have the prison. And then — this is the part that gets left out — he says his own self is not to be trusted. The Qurʾān's model of self-mastery includes a formal statement of self-distrust.</p>
                 <ul class="verses">
-                  <li><span class="vref">12:23</span><span class="vtext">"…she bolted the doors and said: come. He said: God forbid — he is my master, he has made my stay good. The wrongdoers do not prosper."</span></li>
-                  <li><span class="vref">12:33</span><span class="vtext">"My Lord, prison is dearer to me than what they call me to."</span></li>
-                  <li><span class="vref">12:53</span><span class="vtext">"I do not absolve my own self. The self commands to evil, except one my Lord has mercy on."</span></li>
+                  <li><span class="vref">12:23</span><span class="vbody"><span class="vtext">"…she bolted the doors and said: come. He said: God forbid — he is my master, he has made my stay good. The wrongdoers do not prosper."</span><span class="vtext-ar" lang="ar" dir="rtl">وَرَاوَدَتْهُ الَّتِي هُوَ فِي بَيْتِهَا عَن نَّفْسِهِ وَغَلَّقَتِ الْأَبْوَابَ وَقَالَتْ هَيْتَ لَكَ ۚ قَالَ مَعَاذَ اللَّهِ ۖ إِنَّهُ رَبِّي أَحْسَنَ مَثْوَايَ ۖ إِنَّهُ لَا يُفْلِحُ الظَّالِمُونَ</span></span></li>
+                  <li><span class="vref">12:33</span><span class="vbody"><span class="vtext">"My Lord, prison is dearer to me than what they call me to."</span><span class="vtext-ar" lang="ar" dir="rtl">قَالَ رَبِّ السِّجْنُ أَحَبُّ إِلَيَّ مِمَّا يَدْعُونَنِي إِلَيْهِ</span></span></li>
+                  <li><span class="vref">12:53</span><span class="vbody"><span class="vtext">"I do not absolve my own self. The self commands to evil, except one my Lord has mercy on."</span><span class="vtext-ar" lang="ar" dir="rtl">وَمَا أُبَرِّئُ نَفْسِي ۚ إِنَّ النَّفْسَ لَأَمَّارَةٌ بِالسُّوءِ إِلَّا مَا رَحِمَ رَبِّي</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-theme">Thematic</span>
@@ -1207,8 +1300,8 @@
                 </div>
                 <p class="why">The Uḥud passage is the Qurʾān's leadership seminar, and it is unusual scripture: it is God's debrief of a battle His own community lost, conducted in public, in front of everyone who was there. It assigns blame, refuses to let the leader harden, and then — at the exact moment a commander whose orders were disobeyed would be entitled to centralise — instructs him to consult them anyway. The order of the clauses in 3:159 is the whole teaching: soften, pardon, ask forgiveness for them, consult them, then decide, then rely on God.</p>
                 <ul class="verses">
-                  <li><span class="vref">3:159</span><span class="vtext">"It was by a mercy from God that you were gentle with them. Had you been harsh, hard of heart, they would have scattered from around you. So pardon them, ask forgiveness for them, and consult them in the matter. Then when you have resolved, rely on God."</span></li>
-                  <li><span class="vref">3:152</span><span class="vtext">"…until you lost heart and disputed about the order and disobeyed, after He had shown you what you love."</span></li>
+                  <li><span class="vref">3:159</span><span class="vbody"><span class="vtext">"It was by a mercy from God that you were gentle with them. Had you been harsh, hard of heart, they would have scattered from around you. So pardon them, ask forgiveness for them, and consult them in the matter. Then when you have resolved, rely on God."</span><span class="vtext-ar" lang="ar" dir="rtl">فَبِمَا رَحْمَةٍ مِّنَ اللَّهِ لِنتَ لَهُمْ ۖ وَلَوْ كُنتَ فَظًّا غَلِيظَ الْقَلْبِ لَانفَضُّوا مِنْ حَوْلِكَ ۖ فَاعْفُ عَنْهُمْ وَاسْتَغْفِرْ لَهُمْ وَشَاوِرْهُمْ فِي الْأَمْرِ ۖ فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى اللَّهِ</span></span></li>
+                  <li><span class="vref">3:152</span><span class="vbody"><span class="vtext">"…until you lost heart and disputed about the order and disobeyed, after He had shown you what you love."</span><span class="vtext-ar" lang="ar" dir="rtl">حَتَّىٰ إِذَا فَشِلْتُمْ وَتَنَازَعْتُمْ فِي الْأَمْرِ وَعَصَيْتُم مِّن بَعْدِ مَا أَرَاكُم مَّا تُحِبُّونَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-asbab">Occasion of revelation</span>
@@ -1232,9 +1325,9 @@
                 </div>
                 <p class="why">Uḥud was a defeat with a named cause: archers left a hill. Seventy Muslims died, including Ḥamzah; a rumour spread that the Prophet ﷺ was dead. The Qurʾān's response is worth studying as a template for post-mortems. It does not minimise the loss. It does not excuse the error. It does not permit despair. And it inserts a sentence that reframes the whole category: <em>these days We alternate among people</em> — reversal is not a verdict on your project, it is a property of time.</p>
                 <ul class="verses">
-                  <li><span class="vref">3:139</span><span class="vtext">"Do not weaken, and do not grieve — you are the higher, if you are believers."</span></li>
-                  <li><span class="vref">3:140</span><span class="vtext">"If a wound has touched you, a like wound touched the other people. These are days We alternate among mankind."</span></li>
-                  <li><span class="vref">3:146</span><span class="vtext">"How many a prophet fought, and with him many devoted men — they did not lose heart at what struck them in God's path, nor weaken, nor submit."</span></li>
+                  <li><span class="vref">3:139</span><span class="vbody"><span class="vtext">"Do not weaken, and do not grieve — you are the higher, if you are believers."</span><span class="vtext-ar" lang="ar" dir="rtl">وَلَا تَهِنُوا وَلَا تَحْزَنُوا وَأَنتُمُ الْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ</span></span></li>
+                  <li><span class="vref">3:140</span><span class="vbody"><span class="vtext">"If a wound has touched you, a like wound touched the other people. These are days We alternate among mankind."</span><span class="vtext-ar" lang="ar" dir="rtl">إِن يَمْسَسْكُمْ قَرْحٌ فَقَدْ مَسَّ الْقَوْمَ قَرْحٌ مِّثْلُهُ ۚ وَتِلْكَ الْأَيَّامُ نُدَاوِلُهَا بَيْنَ النَّاسِ</span></span></li>
+                  <li><span class="vref">3:146</span><span class="vbody"><span class="vtext">"How many a prophet fought, and with him many devoted men — they did not lose heart at what struck them in God's path, nor weaken, nor submit."</span><span class="vtext-ar" lang="ar" dir="rtl">وَكَأَيِّن مِّن نَّبِيٍّ قَاتَلَ مَعَهُ رِبِّيُّونَ كَثِيرٌ فَمَا وَهَنُوا لِمَا أَصَابَهُمْ فِي سَبِيلِ اللَّهِ وَمَا ضَعُفُوا وَمَا اسْتَكَانُوا</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-asbab">Occasion of revelation</span>
@@ -1258,7 +1351,7 @@
                 </div>
                 <p class="why">Three verses, and they are the strangest response to triumph in religious literature. God's help has come, the conquest has arrived, the crowds are entering the religion — and the instruction is: <em>ask forgiveness</em>. Not celebrate. ʿUmar once asked the veterans of Badr what the sūrah meant; they gave the obvious answer. Ibn ʿAbbās, the youngest man in the room, said it was the announcement of the Prophet's death — the work is done, therefore prepare. ʿUmar said: I know of it only what you know. That exchange is the reason this card exists.</p>
                 <ul class="verses">
-                  <li><span class="vref">110:1–3</span><span class="vtext">"When God's help comes, and the conquest, and you see people entering God's religion in throngs — then glorify your Lord with praise, and ask His forgiveness. He is ever relenting."</span></li>
+                  <li><span class="vref">110:1–3</span><span class="vbody"><span class="vtext">"When God's help comes, and the conquest, and you see people entering God's religion in throngs — then glorify your Lord with praise, and ask His forgiveness. He is ever relenting."</span><span class="vtext-ar" lang="ar" dir="rtl">إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ ۝ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا ۝ فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1284,8 +1377,8 @@
                 </div>
                 <p class="why">The sūrah takes its name from half a verse buried in a list of the believers' qualities, sitting between prayer and charity: <em>their affair is consultation among them</em>. The placement is the argument. Consultation is not a management technique the Qurʾān recommends; it is filed with the acts of worship. Then, having consulted, do what the Prophet ﷺ taught for exactly this moment — the istikhārah, which is not a request for a sign but a request that God choose and then reconcile you to the choice.</p>
                 <ul class="verses">
-                  <li><span class="vref">42:38</span><span class="vtext">"…and those who answer their Lord, and establish the prayer, and their affair is consultation among them, and they spend from what We have provided them."</span></li>
-                  <li><span class="vref">42:10</span><span class="vtext">"Whatever you differ about — its judgement rests with God."</span></li>
+                  <li><span class="vref">42:38</span><span class="vbody"><span class="vtext">"…and those who answer their Lord, and establish the prayer, and their affair is consultation among them, and they spend from what We have provided them."</span><span class="vtext-ar" lang="ar" dir="rtl">وَالَّذِينَ اسْتَجَابُوا لِرَبِّهِمْ وَأَقَامُوا الصَّلَاةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</span></span></li>
+                  <li><span class="vref">42:10</span><span class="vbody"><span class="vtext">"Whatever you differ about — its judgement rests with God."</span><span class="vtext-ar" lang="ar" dir="rtl">وَمَا اخْتَلَفْتُمْ فِيهِ مِن شَيْءٍ فَحُكْمُهُ إِلَى اللَّهِ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1309,9 +1402,9 @@
                 </div>
                 <p class="why">Al-Mulk answers smallness by making you smaller and then telling you who is counting. It sends your eye out to the seven heavens twice and reports that it comes back exhausted and defeated — and then, having established the scale, says the whole apparatus was built to test <em>which of you is best in deed</em>. The insignificance is real. The conclusion you drew from it was wrong. Your act is the thing the scale was built around.</p>
                 <ul class="verses">
-                  <li><span class="vref">67:2</span><span class="vtext">"He who created death and life to test which of you is best in deed."</span></li>
-                  <li><span class="vref">67:3–4</span><span class="vtext">"…look again — do you see any flaw? Then look twice more: your sight returns to you humbled and worn out."</span></li>
-                  <li><span class="vref">67:15</span><span class="vtext">"It is He who made the earth tractable for you — so walk its shoulders and eat of His provision."</span></li>
+                  <li><span class="vref">67:2</span><span class="vbody"><span class="vtext">"He who created death and life to test which of you is best in deed."</span><span class="vtext-ar" lang="ar" dir="rtl">الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا</span></span></li>
+                  <li><span class="vref">67:3–4</span><span class="vbody"><span class="vtext">"…look again — do you see any flaw? Then look twice more: your sight returns to you humbled and worn out."</span><span class="vtext-ar" lang="ar" dir="rtl">فَارْجِعِ الْبَصَرَ هَلْ تَرَىٰ مِن فُطُورٍ ۝ ثُمَّ ارْجِعِ الْبَصَرَ كَرَّتَيْنِ يَنقَلِبْ إِلَيْكَ الْبَصَرُ خَاسِئًا وَهُوَ حَسِيرٌ</span></span></li>
+                  <li><span class="vref">67:15</span><span class="vbody"><span class="vtext">"It is He who made the earth tractable for you — so walk its shoulders and eat of His provision."</span><span class="vtext-ar" lang="ar" dir="rtl">هُوَ الَّذِي جَعَلَ لَكُمُ الْأَرْضَ ذَلُولًا فَامْشُوا فِي مَنَاكِبِهَا وَكُلُوا مِن رِّزْقِهِ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1338,9 +1431,9 @@
                 </div>
                 <p class="why">These three work on certainty rather than comfort, which is the correct target: the fear of death is mostly a fear of annihilation, and the remedy for a doubt is not a soothing. Al-Qiyāmah takes the sceptic's own objection — <em>does he think We cannot reassemble his bones?</em> — and answers it at the level of the fingertips. Al-Wāqiʿah sorts humanity into three and stages the deathbed itself, the moment the soul reaches the throat and you are looking on. Yāsīn argues from the first creation to the second and ends on the man who has forgotten how he was made.</p>
                 <ul class="verses">
-                  <li><span class="vref">75:3–4</span><span class="vtext">"Does man suppose We will not gather his bones? Yes — We are able to reshape even his fingertips."</span></li>
-                  <li><span class="vref">56:83–85</span><span class="vtext">"Then why, when it reaches the throat, and you at that moment are looking on — and We are nearer to him than you are, but you do not see…"</span></li>
-                  <li><span class="vref">36:78–79</span><span class="vtext">"He puts a comparison to Us and forgets his own creation: who will give life to bones when they have crumbled? Say: He who made them the first time will give them life."</span></li>
+                  <li><span class="vref">75:3–4</span><span class="vbody"><span class="vtext">"Does man suppose We will not gather his bones? Yes — We are able to reshape even his fingertips."</span><span class="vtext-ar" lang="ar" dir="rtl">أَيَحْسَبُ الْإِنسَانُ أَلَّن نَّجْمَعَ عِظَامَهُ ۝ بَلَىٰ قَادِرِينَ عَلَىٰ أَن نُّسَوِّيَ بَنَانَهُ</span></span></li>
+                  <li><span class="vref">56:83–85</span><span class="vbody"><span class="vtext">"Then why, when it reaches the throat, and you at that moment are looking on — and We are nearer to him than you are, but you do not see…"</span><span class="vtext-ar" lang="ar" dir="rtl">فَلَوْلَا إِذَا بَلَغَتِ الْحُلْقُومَ ۝ وَأَنتُمْ حِينَئِذٍ تَنظُرُونَ ۝ وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنكُمْ وَلَٰكِن لَّا تُبْصِرُونَ</span></span></li>
+                  <li><span class="vref">36:78–79</span><span class="vbody"><span class="vtext">"He puts a comparison to Us and forgets his own creation: who will give life to bones when they have crumbled? Say: He who made them the first time will give them life."</span><span class="vtext-ar" lang="ar" dir="rtl">وَضَرَبَ لَنَا مَثَلًا وَنَسِيَ خَلْقَهُ ۖ قَالَ مَن يُحْيِي الْعِظَامَ وَهِيَ رَمِيمٌ ۝ قُلْ يُحْيِيهَا الَّذِي أَنشَأَهَا أَوَّلَ مَرَّةٍ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-theme">Thematic</span>
@@ -1366,9 +1459,9 @@
                 </div>
                 <p class="why">Four stories, four trials, and each one is a distinct way a life gets spent. The Sleepers face the trial of <em>faith</em> and pay for it with their society. The man with two gardens faces the trial of <em>wealth</em> and loses the argument to his poorer friend. Mūsā faces the trial of <em>knowledge</em> and discovers there is a servant of God who knows what he does not. Dhū al-Qarnayn faces the trial of <em>power</em> and, at the height of it, calls his own achievement a mercy from his Lord that will one day be levelled. Between the stories sits the verse that indexes them: what stays is not what you accumulated.</p>
                 <ul class="verses">
-                  <li><span class="vref">18:7</span><span class="vtext">"We made what is on the earth an ornament for it, to test which of them is best in deed."</span></li>
-                  <li><span class="vref">18:46</span><span class="vtext">"Wealth and children are the ornament of the life of this world; but the enduring good deeds are better with your Lord in reward, and better in hope."</span></li>
-                  <li><span class="vref">18:98</span><span class="vtext">"He said: this is a mercy from my Lord. When my Lord's promise comes, He will level it."</span></li>
+                  <li><span class="vref">18:7</span><span class="vbody"><span class="vtext">"We made what is on the earth an ornament for it, to test which of them is best in deed."</span><span class="vtext-ar" lang="ar" dir="rtl">إِنَّا جَعَلْنَا مَا عَلَى الْأَرْضِ زِينَةً لَّهَا لِنَبْلُوَهُمْ أَيُّهُمْ أَحْسَنُ عَمَلًا</span></span></li>
+                  <li><span class="vref">18:46</span><span class="vbody"><span class="vtext">"Wealth and children are the ornament of the life of this world; but the enduring good deeds are better with your Lord in reward, and better in hope."</span><span class="vtext-ar" lang="ar" dir="rtl">الْمَالُ وَالْبَنُونَ زِينَةُ الْحَيَاةِ الدُّنْيَا ۖ وَالْبَاقِيَاتُ الصَّالِحَاتُ خَيْرٌ عِندَ رَبِّكَ ثَوَابًا وَخَيْرٌ أَمَلًا</span></span></li>
+                  <li><span class="vref">18:98</span><span class="vbody"><span class="vtext">"He said: this is a mercy from my Lord. When my Lord's promise comes, He will level it."</span><span class="vtext-ar" lang="ar" dir="rtl">قَالَ هَٰذَا رَحْمَةٌ مِّن رَّبِّي ۖ فَإِذَا جَاءَ وَعْدُ رَبِّي جَعَلَهُ دَكَّاءَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-theme">Thematic</span>
@@ -1391,9 +1484,9 @@
                 </div>
                 <p class="why">286 verses, the longest chapter in the muṣḥaf, and the only text in the Qurʾān that attempts the entire worldview in one sweep: revelation and its reception, the three human postures toward it, sacred history from Ādam through the Children of Israel, law, war, debt, marriage, charity, prayer, and — at the exact centre of the sūrah, verse 143 of 286 — the change of the qibla. Read it as an argument rather than a devotional exercise. It answers structural doubt structurally: by showing you what the structure is.</p>
                 <ul class="verses">
-                  <li><span class="vref">2:2</span><span class="vtext">"This is the Book — no doubt in it — a guidance for the mindful."</span></li>
-                  <li><span class="vref">2:143</span><span class="vtext">"Thus We made you a middle community, that you might be witnesses over mankind."</span></li>
-                  <li><span class="vref">2:286</span><span class="vtext">"God does not burden a soul beyond its capacity. It has what it earned and against it what it deserved."</span></li>
+                  <li><span class="vref">2:2</span><span class="vbody"><span class="vtext">"This is the Book — no doubt in it — a guidance for the mindful."</span><span class="vtext-ar" lang="ar" dir="rtl">ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ</span></span></li>
+                  <li><span class="vref">2:143</span><span class="vbody"><span class="vtext">"Thus We made you a middle community, that you might be witnesses over mankind."</span><span class="vtext-ar" lang="ar" dir="rtl">وَكَذَٰلِكَ جَعَلْنَاكُمْ أُمَّةً وَسَطًا لِّتَكُونُوا شُهَدَاءَ عَلَى النَّاسِ</span></span></li>
+                  <li><span class="vref">2:286</span><span class="vbody"><span class="vtext">"God does not burden a soul beyond its capacity. It has what it earned and against it what it deserved."</span><span class="vtext-ar" lang="ar" dir="rtl">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1418,9 +1511,9 @@
                 </div>
                 <p class="why">An-Nisāʾ is what happens when a moral principle is made to pay rent. It opens on the orphan's property and the estate, and it works down through inheritance shares, marriage, the treatment of dependants, and the conduct of judges. It contains the verse that made a case notorious — the Prophet ﷺ nearly ruled for a well-connected clan against a Jewish man on false evidence, and revelation came down against the Muslims. If your sense of injustice needs a text that will not flatter your side, it is this one.</p>
                 <ul class="verses">
-                  <li><span class="vref">4:58</span><span class="vtext">"God commands you to deliver trusts to those they belong to, and when you judge between people, to judge with justice."</span></li>
-                  <li><span class="vref">4:105</span><span class="vtext">"We sent down to you the Book with the truth, that you may judge between people by what God has shown you — do not be an advocate for the treacherous."</span></li>
-                  <li><span class="vref">4:135</span><span class="vtext">"Be upholders of justice, witnesses for God, even against yourselves, or your parents and kin — rich or poor, God is closer to both."</span></li>
+                  <li><span class="vref">4:58</span><span class="vbody"><span class="vtext">"God commands you to deliver trusts to those they belong to, and when you judge between people, to judge with justice."</span><span class="vtext-ar" lang="ar" dir="rtl">إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ النَّاسِ أَن تَحْكُمُوا بِالْعَدْلِ</span></span></li>
+                  <li><span class="vref">4:105</span><span class="vbody"><span class="vtext">"We sent down to you the Book with the truth, that you may judge between people by what God has shown you — do not be an advocate for the treacherous."</span><span class="vtext-ar" lang="ar" dir="rtl">إِنَّا أَنزَلْنَا إِلَيْكَ الْكِتَابَ بِالْحَقِّ لِتَحْكُمَ بَيْنَ النَّاسِ بِمَا أَرَاكَ اللَّهُ ۚ وَلَا تَكُن لِّلْخَائِنِينَ خَصِيمًا</span></span></li>
+                  <li><span class="vref">4:135</span><span class="vbody"><span class="vtext">"Be upholders of justice, witnesses for God, even against yourselves, or your parents and kin — rich or poor, God is closer to both."</span><span class="vtext-ar" lang="ar" dir="rtl">يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ بِالْقِسْطِ شُهَدَاءَ لِلَّهِ وَلَوْ عَلَىٰ أَنفُسِكُمْ أَوِ الْوَالِدَيْنِ وَالْأَقْرَبِينَ ۚ إِن يَكُنْ غَنِيًّا أَوْ فَقِيرًا فَاللَّهُ أَوْلَىٰ بِهِمَا</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-theme">Thematic</span>
@@ -1444,10 +1537,10 @@
                 </div>
                 <p class="why">Al-Ḥujurāt is eighteen verses of social protocol with the force of law, and almost every one of them has a documented occasion behind it. Verify before you forward. Reconcile the two factions, and if one refuses, restrain it — then reconcile with fairness. Do not mock; do not use nicknames; do not spy; do not backbite, which the sūrah images as eating your dead brother's flesh. Then the verse that dissolves the premise of most communal conflict: the tribes exist so you can recognise each other, not rank each other.</p>
                 <ul class="verses">
-                  <li><span class="vref">49:6</span><span class="vtext">"If a corrupt person brings you news, verify it — lest you strike a people in ignorance and become regretful over what you did."</span></li>
-                  <li><span class="vref">49:12</span><span class="vtext">"Avoid much suspicion — some suspicion is sin. Do not spy, and do not backbite one another."</span></li>
-                  <li><span class="vref">49:13</span><span class="vtext">"We made you peoples and tribes so that you may know one another. The noblest of you before God is the most mindful of Him."</span></li>
-                  <li><span class="vref">3:103</span><span class="vtext">"Hold fast, all of you, to God's rope, and do not scatter."</span></li>
+                  <li><span class="vref">49:6</span><span class="vbody"><span class="vtext">"If a corrupt person brings you news, verify it — lest you strike a people in ignorance and become regretful over what you did."</span><span class="vtext-ar" lang="ar" dir="rtl">يَا أَيُّهَا الَّذِينَ آمَنُوا إِن جَاءَكُمْ فَاسِقٌ بِنَبَإٍ فَتَبَيَّنُوا أَن تُصِيبُوا قَوْمًا بِجَهَالَةٍ فَتُصْبِحُوا عَلَىٰ مَا فَعَلْتُمْ نَادِمِينَ</span></span></li>
+                  <li><span class="vref">49:12</span><span class="vbody"><span class="vtext">"Avoid much suspicion — some suspicion is sin. Do not spy, and do not backbite one another."</span><span class="vtext-ar" lang="ar" dir="rtl">يَا أَيُّهَا الَّذِينَ آمَنُوا اجْتَنِبُوا كَثِيرًا مِّنَ الظَّنِّ إِنَّ بَعْضَ الظَّنِّ إِثْمٌ ۖ وَلَا تَجَسَّسُوا وَلَا يَغْتَب بَّعْضُكُم بَعْضًا</span></span></li>
+                  <li><span class="vref">49:13</span><span class="vbody"><span class="vtext">"We made you peoples and tribes so that you may know one another. The noblest of you before God is the most mindful of Him."</span><span class="vtext-ar" lang="ar" dir="rtl">يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا ۚ إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ</span></span></li>
+                  <li><span class="vref">3:103</span><span class="vbody"><span class="vtext">"Hold fast, all of you, to God's rope, and do not scatter."</span><span class="vtext-ar" lang="ar" dir="rtl">وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-asbab">Occasion of revelation</span>
@@ -1473,9 +1566,9 @@
                 </div>
                 <p class="why">These two are the Qurʾān's clinical literature on a specific pathology, and they are best read together with a warning attached. At-Tawbah dissects the excuses made at Tabūk — the heat, the harvest, the mosque built as a base for division. Al-Munāfiqūn is shorter and colder: it opens on men who are handsome and speak well, and tells you to listen to them anyway. The warning: both sūrahs are addressed to a community that had a prophet to identify the hypocrites. You do not. Use them to audit yourself.</p>
                 <ul class="verses">
-                  <li><span class="vref">9:81</span><span class="vtext">"They said: do not march out in the heat. Say: the fire of Hell is hotter — if only they understood."</span></li>
-                  <li><span class="vref">63:4</span><span class="vtext">"When you see them, their forms please you; if they speak, you listen to their speech — as though they were propped-up timbers."</span></li>
-                  <li><span class="vref">9:105</span><span class="vtext">"Say: act — God will see your work, and His Messenger, and the believers."</span></li>
+                  <li><span class="vref">9:81</span><span class="vbody"><span class="vtext">"They said: do not march out in the heat. Say: the fire of Hell is hotter — if only they understood."</span><span class="vtext-ar" lang="ar" dir="rtl">وَقَالُوا لَا تَنفِرُوا فِي الْحَرِّ ۗ قُلْ نَارُ جَهَنَّمَ أَشَدُّ حَرًّا ۚ لَّوْ كَانُوا يَفْقَهُونَ</span></span></li>
+                  <li><span class="vref">63:4</span><span class="vbody"><span class="vtext">"When you see them, their forms please you; if they speak, you listen to their speech — as though they were propped-up timbers."</span><span class="vtext-ar" lang="ar" dir="rtl">وَإِذَا رَأَيْتَهُمْ تُعْجِبُكَ أَجْسَامُهُمْ ۖ وَإِن يَقُولُوا تَسْمَعْ لِقَوْلِهِمْ ۖ كَأَنَّهُمْ خُشُبٌ مُّسَنَّدَةٌ</span></span></li>
+                  <li><span class="vref">9:105</span><span class="vbody"><span class="vtext">"Say: act — God will see your work, and His Messenger, and the believers."</span><span class="vtext-ar" lang="ar" dir="rtl">وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ وَرَسُولُهُ وَالْمُؤْمِنُونَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-asbab">Occasion of revelation</span>
@@ -1501,9 +1594,9 @@
                 </div>
                 <p class="why">Badr: roughly three hundred against three times their number, and the Prophet ﷺ in the shelter pressing his Lord until his cloak fell. The sūrah's account of what produced the victory is not what you would expect from a battle narrative. It attributes it to reinforcement you cannot see, to sleep falling on frightened men as a security, to rain firming the sand under their feet, and to the discipline of not quarrelling. Then it removes the credit from the hero entirely: <em>you did not throw when you threw</em>. Courage in al-Anfāl is downstream of obedience and internal calm, not of temperament.</p>
                 <ul class="verses">
-                  <li><span class="vref">8:11</span><span class="vtext">"When He covered you with sleep as a security from Him, and sent down water from the sky to purify you… and to make firm your feet."</span></li>
-                  <li><span class="vref">8:17</span><span class="vtext">"You did not kill them — God killed them. You did not throw when you threw — God threw."</span></li>
-                  <li><span class="vref">8:46</span><span class="vtext">"Obey God and His Messenger, and do not dispute, or you will lose heart and your wind will go. Be patient — God is with the patient."</span></li>
+                  <li><span class="vref">8:11</span><span class="vbody"><span class="vtext">"When He covered you with sleep as a security from Him, and sent down water from the sky to purify you… and to make firm your feet."</span><span class="vtext-ar" lang="ar" dir="rtl">إِذْ يُغَشِّيكُمُ النُّعَاسَ أَمَنَةً مِّنْهُ وَيُنَزِّلُ عَلَيْكُم مِّنَ السَّمَاءِ مَاءً لِّيُطَهِّرَكُم بِهِ … وَلِيَرْبِطَ عَلَىٰ قُلُوبِكُمْ وَيُثَبِّتَ بِهِ الْأَقْدَامَ</span></span></li>
+                  <li><span class="vref">8:17</span><span class="vbody"><span class="vtext">"You did not kill them — God killed them. You did not throw when you threw — God threw."</span><span class="vtext-ar" lang="ar" dir="rtl">فَلَمْ تَقْتُلُوهُمْ وَلَٰكِنَّ اللَّهَ قَتَلَهُمْ ۚ وَمَا رَمَيْتَ إِذْ رَمَيْتَ وَلَٰكِنَّ اللَّهَ رَمَىٰ</span></span></li>
+                  <li><span class="vref">8:46</span><span class="vbody"><span class="vtext">"Obey God and His Messenger, and do not dispute, or you will lose heart and your wind will go. Be patient — God is with the patient."</span><span class="vtext-ar" lang="ar" dir="rtl">وَأَطِيعُوا اللَّهَ وَرَسُولَهُ وَلَا تَنَازَعُوا فَتَفْشَلُوا وَتَذْهَبَ رِيحُكُمْ ۖ وَاصْبِرُوا ۚ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-asbab">Occasion of revelation</span>
@@ -1529,9 +1622,9 @@
                 </div>
                 <p class="why">Three sūrahs, three dimensions of the same faculty, and they are not interchangeable. Hūd teaches trust <em>through duration</em> — the prophets are vindicated, eventually, sometimes after everything is lost. Yūsuf teaches trust <em>in hidden design</em> — the pit, the price, the prison and the palace turn out to have been one movement. Aṭ-Ṭalāq teaches trust <em>under uncertainty</em> — do the right thing inside a situation whose next step you cannot see, and provision arrives from an unaudited direction. Grief needs the second. Persecution needs the first. A Tuesday needs the third.</p>
                 <ul class="verses">
-                  <li><span class="vref">11:56</span><span class="vtext">"I rely on God, my Lord and your Lord. There is no creature He does not hold by its forelock."</span></li>
-                  <li><span class="vref">12:67</span><span class="vtext">"Judgement belongs only to God. On Him I rely, and on Him let the reliant rely."</span></li>
-                  <li><span class="vref">65:3</span><span class="vtext">"Whoever relies on God — He is enough for him."</span></li>
+                  <li><span class="vref">11:56</span><span class="vbody"><span class="vtext">"I rely on God, my Lord and your Lord. There is no creature He does not hold by its forelock."</span><span class="vtext-ar" lang="ar" dir="rtl">إِنِّي تَوَكَّلْتُ عَلَى اللَّهِ رَبِّي وَرَبِّكُم ۚ مَّا مِن دَابَّةٍ إِلَّا هُوَ آخِذٌ بِنَاصِيَتِهَا</span></span></li>
+                  <li><span class="vref">12:67</span><span class="vbody"><span class="vtext">"Judgement belongs only to God. On Him I rely, and on Him let the reliant rely."</span><span class="vtext-ar" lang="ar" dir="rtl">إِنِ الْحُكْمُ إِلَّا لِلَّهِ ۖ عَلَيْهِ تَوَكَّلْتُ ۖ وَعَلَيْهِ فَلْيَتَوَكَّلِ الْمُتَوَكِّلُونَ</span></span></li>
+                  <li><span class="vref">65:3</span><span class="vbody"><span class="vtext">"Whoever relies on God — He is enough for him."</span><span class="vtext-ar" lang="ar" dir="rtl">وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-theme">Thematic</span>
@@ -1556,9 +1649,9 @@
                 </div>
                 <p class="why">Three of them, three times each, morning and evening. The Prophet ﷺ named the number and the times, which puts this in a different category from almost everything else in this guide. The content is a sequence: al-Ikhlāṣ states who God is, al-Falaq seeks refuge from harms that come from outside, an-Nās from the one that whispers inside. Doctrine, then the world, then the self — in that order.</p>
                 <ul class="verses">
-                  <li><span class="vref">112:1–2</span><span class="vtext">"Say: He is God, One. God, the Everlasting Refuge."</span></li>
-                  <li><span class="vref">113:1</span><span class="vtext">"Say: I take refuge with the Lord of the daybreak."</span></li>
-                  <li><span class="vref">114:4–5</span><span class="vtext">"…from the evil of the slinking whisperer, who whispers into the breasts of people."</span></li>
+                  <li><span class="vref">112:1–2</span><span class="vbody"><span class="vtext">"Say: He is God, One. God, the Everlasting Refuge."</span><span class="vtext-ar" lang="ar" dir="rtl">قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ</span></span></li>
+                  <li><span class="vref">113:1</span><span class="vbody"><span class="vtext">"Say: I take refuge with the Lord of the daybreak."</span><span class="vtext-ar" lang="ar" dir="rtl">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</span></span></li>
+                  <li><span class="vref">114:4–5</span><span class="vbody"><span class="vtext">"…from the evil of the slinking whisperer, who whispers into the breasts of people."</span><span class="vtext-ar" lang="ar" dir="rtl">مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1582,8 +1675,8 @@
                 </div>
                 <p class="why">The weekly reading of al-Kahf is the most widely kept optional practice in the Muslim world, and its evidence is worth separating into two claims — because they are graded differently and only one of them is beyond dispute. The Dajjāl protection is in Ṣaḥīḥ Muslim. The light between the two Fridays is strong but sits a rung below. Both are worth keeping; only one is worth asserting flatly.</p>
                 <ul class="verses">
-                  <li><span class="vref">18:13</span><span class="vtext">"We relate their account to you in truth: they were young men who believed in their Lord, and We increased them in guidance."</span></li>
-                  <li><span class="vref">18:110</span><span class="vtext">"Whoever hopes to meet his Lord — let him do righteous work and associate no one in the worship of his Lord."</span></li>
+                  <li><span class="vref">18:13</span><span class="vbody"><span class="vtext">"We relate their account to you in truth: they were young men who believed in their Lord, and We increased them in guidance."</span><span class="vtext-ar" lang="ar" dir="rtl">نَّحْنُ نَقُصُّ عَلَيْكَ نَبَأَهُم بِالْحَقِّ ۚ إِنَّهُمْ فِتْيَةٌ آمَنُوا بِرَبِّهِمْ وَزِدْنَاهُمْ هُدًى</span></span></li>
+                  <li><span class="vref">18:110</span><span class="vbody"><span class="vtext">"Whoever hopes to meet his Lord — let him do righteous work and associate no one in the worship of his Lord."</span><span class="vtext-ar" lang="ar" dir="rtl">فَمَن كَانَ يَرْجُو لِقَاءَ رَبِّهِ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَلَا يُشْرِكْ بِعِبَادَةِ رَبِّهِ أَحَدًا</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1612,8 +1705,8 @@
                 </div>
                 <p class="why">The bedtime sequence is the single best-evidenced devotional routine in this guide — every element below is in the Ṣaḥīḥs or graded ḥasan, and the whole thing takes four minutes. The method for the three quls is specific and often dropped: they are recited into the cupped hands, blown into, and then wiped over the body, beginning with the head and face, three times over.</p>
                 <ul class="verses">
-                  <li><span class="vref">2:255</span><span class="vtext">"Neither drowsiness overtakes Him nor sleep." — the verse for the moment you lose consciousness.</span></li>
-                  <li><span class="vref">2:285</span><span class="vtext">"We hear, and we obey. Your forgiveness, our Lord — and to You is the return."</span></li>
+                  <li><span class="vref">2:255</span><span class="vbody"><span class="vtext">"Neither drowsiness overtakes Him nor sleep." — the verse for the moment you lose consciousness.</span><span class="vtext-ar" lang="ar" dir="rtl">لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ</span></span></li>
+                  <li><span class="vref">2:285</span><span class="vbody"><span class="vtext">"We hear, and we obey. Your forgiveness, our Lord — and to You is the return."</span><span class="vtext-ar" lang="ar" dir="rtl">سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ</span></span></li>
                 </ul>
                 <div class="badges">
                   <span class="badge t-hadith">Prophetic ḥadīth</span>
@@ -1795,13 +1888,17 @@
 
     // Cache each card's searchable text and its facet values.
     const model = cards.map(card => {
+      // .vtext-ar is deliberately excluded from `nodes`: highlighting inside it
+      // would need harakat-stripped indices, which do not map back to the DOM.
       const nodes = Array.from(card.querySelectorAll(
         '.card-title, .when, .why, .surah-name, .surah-eng, .vref, .vtext, .srcs li'
       ));
+      const arNodes = Array.from(card.querySelectorAll('.vtext-ar'));
       return {
         el: card,
         nodes: nodes,
         text: nodes.map(n => n.textContent).join(' ').toLowerCase(),
+        arText: arNodes.map(n => n.textContent).join(' '),
         domain: (card.dataset.domain || '').split(','),
         tier:   (card.dataset.tier   || '').split(','),
         period: (card.dataset.period || '').split(',')
@@ -1810,9 +1907,19 @@
 
     const active = { domain: new Set(), tier: new Set(), period: new Set() };
 
-    // Diacritic-insensitive: "surah" should find "sūrah", "Yusuf" → "Yūsuf".
+    // fold(): length-preserving (precomposed Latin decomposes 1→2 then back to 1),
+    // so it is safe to use for <mark> index maths. "Yusuf" finds "Yūsuf".
     const fold = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-    model.forEach(m => { m.folded = fold(m.text); });
+
+    // foldMatch(): also strips Arabic harakat/tatweel and normalises alef, ya
+    // and ta marbuta, so typing "الله" or "توكل" bare finds the vocalised text.
+    // NOT length-preserving — matching only, never marking.
+    const foldMatch = s => fold(s)
+      .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, '')
+      .replace(/[\u0622\u0623\u0625\u0671]/g, '\u0627')
+      .replace(/\u0649/g, '\u064A')
+      .replace(/\u0629/g, '\u0647');
+    model.forEach(m => { m.folded = foldMatch(m.text + ' ' + m.arText); });
 
     function matchesFacets(m) {
       // AND across groups, OR within a group.
@@ -1889,7 +1996,7 @@
       let shown = 0;
       model.forEach(m => {
         stripMarks(m);
-        m.searchHit = !q || m.folded.indexOf(fold(q)) !== -1;
+        m.searchHit = !q || m.folded.indexOf(foldMatch(q)) !== -1;
         const visible = m.searchHit && matchesFacets(m);
         m.el.classList.toggle('hidden', !visible);
         if (visible) {
