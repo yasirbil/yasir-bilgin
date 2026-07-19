@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Refugee Integration Guide | Yasir Bilgin</title>
+
+<!-- Unique 150–160 char description -->
+<meta name="description" content="A framework for how displaced communities move from survival to belonging, plus a searchable database of 34 refugee groups who resettled in the United States.">
+
+<!-- Article tags — exactly 3 -->
+<meta name="keywords" content="refugee integration, diaspora studies, migration history">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://yasirbilgin.com/civilization/Social-Movements/refugee-integration-guide.html">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="article">
+<meta property="og:title"       content="The Refugee Integration Guide">
+<meta property="og:description" content="A framework for how displaced communities move from survival to belonging, plus a searchable database of 34 refugee groups who resettled in the United States.">
+<meta property="og:url"         content="https://yasirbilgin.com/civilization/Social-Movements/refugee-integration-guide.html">
+<meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+<meta property="og:image:alt"   content="The Refugee Integration Guide">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="The Refugee Integration Guide">
+<meta name="twitter:description" content="A framework for how displaced communities move from survival to belonging, plus a searchable database of 34 refugee groups who resettled in the United States.">
+<meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+<!-- Global nav — always first script -->
+<script src="https://yasirbilgin.com/nav.js"></script>
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+
+<!-- Article JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Refugee Integration Guide",
+  "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+  "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-18",
+  "description": "A framework for how displaced communities move from survival to belonging, plus a searchable database of 34 refugee groups who resettled in the United States.",
+  "url": "https://yasirbilgin.com/civilization/Social-Movements/refugee-integration-guide.html"
+}
+</script>
+
+<!-- BreadcrumbList JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",                        "item": "https://yasirbilgin.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Civilization",                "item": "https://yasirbilgin.com/civilization/" },
+    { "@type": "ListItem", "position": 3, "name": "Social Movements",            "item": "https://yasirbilgin.com/civilization/Social-Movements/" },
+    { "@type": "ListItem", "position": 4, "name": "The Refugee Integration Guide", "item": "https://yasirbilgin.com/civilization/Social-Movements/refugee-integration-guide.html" }
+  ]
+}
+</script>
+
+<!-- Shared fonts + design tokens -->
+<link rel="stylesheet" href="/assets/fonts.css">
+
+<style>
+  :root{
+    --paper:#faf5ec;
+    --paper-2:#f2e9d8;
+    --ink:#221c14;
+    --ink-soft:#4a4034;
+    --line:#ddccae;
+    --accent:#8a2f27;
+    --accent-2:#0f5f52;
+    --gold:#a9762f;
+    --card:#ffffff;
+    --shadow:0 6px 20px rgba(34,28,20,0.08);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.65;
+    font-size:18px;
+  }
+  h1,h2,h3,h4{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    color:var(--ink);
+    line-height:1.15;
+    margin:0 0 .5em;
+  }
+  a{ color:var(--accent); }
+  .ui{ font-family:'DM Sans', sans-serif; }
+
+  /* Global focus ring — keyboard users only */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  [tabindex]:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:2px;
+    border-radius:3px;
+  }
+
+  /* Progress bar — below nav */
+  .progress-bar{
+    position:fixed;
+    top:62px;
+    left:0;
+    height:3px;
+    background:var(--accent);
+    width:0%;
+    z-index:100;
+    transition:width .1s linear;
+  }
+
+  /* TOC overlay — backdrop-filter only on .open */
+  .toc-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9000;
+    background:rgba(24,20,14,0.55);
+  }
+  .toc-overlay.open{
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+    backdrop-filter:blur(4px);
+  }
+  .toc-panel{
+    background:var(--paper);
+    width:min(360px, 88vw);
+    height:100%;
+    overflow-y:auto;
+    padding:1.6rem 1.5rem 3rem;
+    box-shadow:-8px 0 30px rgba(0,0,0,.25);
+  }
+  .toc-panel button.close-btn{
+    font-family:'DM Sans',sans-serif;
+    background:none;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:.4rem .8rem;
+    cursor:pointer;
+    float:right;
+    font-size:.9rem;
+    min-height:36px;
+  }
+  .toc-panel h2{
+    clear:both;
+    font-size:1.3rem;
+    margin-top:1.2rem;
+    border-bottom:2px solid var(--accent);
+    padding-bottom:.5rem;
+  }
+  .toc-list{ list-style:none; margin:1rem 0 0; padding:0; }
+  .toc-list li{ margin:0; }
+  .toc-list a{
+    padding:.55rem .3rem;
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-family:'DM Sans',sans-serif;
+    font-size:.95rem;
+    border-bottom:1px dashed var(--line);
+    min-height:44px;
+    display:flex;
+    align-items:center;
+  }
+  .toc-list a.toc-main{ font-weight:700; color:var(--ink); }
+  .toc-list a.toc-sub{ padding-left:1.1rem; font-size:.88rem; }
+  .toc-list a:hover{ color:var(--accent); }
+
+  /* Article meta-bar — STATIC (not sticky), placed after the hero-rule */
+  .article-header{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:1rem;
+    max-width:1280px;
+    margin:0 auto;
+    padding:.75rem 1.6rem;
+    font-family:'DM Sans',sans-serif;
+  }
+  .read-time{ font-size:.85rem; color:var(--ink-soft); }
+  .toc-btn{
+    background:var(--ink);
+    color:var(--paper);
+    border:none;
+    border-radius:999px;
+    padding:.55rem 1.2rem;
+    font-family:'DM Sans',sans-serif;
+    font-weight:600;
+    font-size:.85rem;
+    cursor:pointer;
+    min-height:44px;
+  }
+
+  /* Hero */
+  .hero{
+    max-width:880px;
+    margin:0 auto;
+    padding:4rem 1.6rem 1.5rem;
+    text-align:center;
+  }
+  /* ── Eyebrow pill — Section · Subsection ─────────────────── */
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    margin-bottom:1.5rem;
+    padding:0.35rem 0.9rem;
+    border:1px solid rgba(107,93,79,0.22);
+    border-radius:999px;
+    color:var(--ink-soft);
+    font-size:0.72rem;
+    font-family:'Source Serif 4', Georgia, serif;
+    letter-spacing:0.13em;
+    text-transform:uppercase;
+    background:rgba(255,250,242,0.6);
+  }
+  h1.title{ font-size:clamp(2rem, 6vw, 3.6rem); margin-top:.6rem; }
+  .hero-sub{ font-size:clamp(1.05rem, 2.2vw, 1.3rem); color:var(--ink-soft); max-width:680px; margin:1rem auto 0; }
+  .byline-row{ display:flex; align-items:center; justify-content:center; gap:.7rem; margin-top:1.8rem; font-family:'DM Sans',sans-serif; }
+  .avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:.85rem;
+  }
+  .byline-text{ text-align:left; }
+  .byline-name{ display:block; font-weight:600; font-size:.92rem; }
+  .byline-meta{ display:block; font-size:.8rem; color:var(--ink-soft); }
+  hr.hero-rule{ border:none; border-top:1px solid var(--line); max-width:880px; margin:2.2rem auto; }
+
+  /* Layout: sidebar + article */
+  .layout{
+    max-width:1280px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:280px minmax(0,1fr);
+    gap:2.4rem;
+    padding:0 1.6rem 6rem;
+    align-items:start;
+  }
+  .sidebar{
+    position:sticky;
+    top:80px;
+    max-height:calc(100vh - 100px);
+    overflow-y:auto;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:1.3rem 1.2rem 1.6rem;
+    font-family:'DM Sans',sans-serif;
+    box-shadow:var(--shadow);
+    z-index:10;
+  }
+  .sidebar h2{
+    font-family:'DM Sans',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:.72rem;
+    color:var(--ink-soft);
+    margin:1.3rem 0 .6rem;
+    font-weight:700;
+    line-height:1.4;
+  }
+  .sidebar h2:first-of-type{ margin-top:0; }
+  .search-wrap{ position:relative; }
+  #searchInput{
+    width:100%;
+    padding:.65rem .8rem .65rem 2.2rem;
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-family:'DM Sans',sans-serif;
+    font-size:.92rem;
+    background:var(--paper) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234a4034" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>') no-repeat .65rem center;
+    background-size:15px;
+    min-height:44px;
+  }
+  #searchResults{
+    margin-top:.5rem;
+    font-size:.82rem;
+    color:var(--ink-soft);
+    display:none;
+  }
+  #searchResults a{ display:block; padding:.35rem 0; color:var(--accent); text-decoration:none; }
+  #searchResults a:hover{ text-decoration:underline; }
+  #searchResults mark{ background:#f7e7c6; color:var(--ink); padding:0 .1em; border-radius:2px; }
+  .filter-group label{
+    display:flex;
+    align-items:flex-start;
+    gap:.5rem;
+    font-size:.88rem;
+    color:var(--ink-soft);
+    padding:.32rem 0;
+    cursor:pointer;
+    min-height:32px;
+  }
+  .filter-group input[type=checkbox]{ margin-top:.2rem; accent-color:var(--accent); width:16px; height:16px; flex:none; }
+  .count-badge{
+    background:var(--paper-2);
+    border-radius:999px;
+    padding:.25rem .7rem;
+    font-size:.85rem;
+    font-weight:600;
+    color:var(--ink);
+    display:inline-block;
+    margin-bottom:.5rem;
+  }
+  #resetFilters{
+    width:100%;
+    margin-top:1.2rem;
+    background:none;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:.6rem;
+    font-family:'DM Sans',sans-serif;
+    font-weight:600;
+    font-size:.85rem;
+    cursor:pointer;
+    color:var(--ink-soft);
+    min-height:44px;
+  }
+  #resetFilters:hover{ border-color:var(--accent); color:var(--accent); }
+  .quicknav{ list-style:none; margin:0; padding:0; }
+  .quicknav li a{
+    font-size:.85rem;
+    color:var(--ink-soft);
+    text-decoration:none;
+    padding:.32rem 0;
+    border-bottom:1px dotted var(--line);
+    min-height:32px;
+    display:flex;
+    align-items:center;
+  }
+  .quicknav li a:hover{ color:var(--accent); }
+
+  /* Article body */
+  .article-body{ min-width:0; }
+  .major-section{ margin-bottom:4rem; scroll-margin-top:80px; }
+  .section-label{
+    font-family:'DM Sans',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.75rem;
+    color:var(--accent);
+    font-weight:700;
+  }
+  .major-section h2{ font-size:clamp(1.6rem, 4vw, 2.5rem); margin-top:.4rem; }
+  .sub-heading{ font-size:clamp(1.15rem,2.6vw,1.4rem); margin-top:1.8rem; display:flex; gap:.6rem; align-items:baseline; scroll-margin-top:80px; }
+  .sh-num{ color:var(--accent); font-family:'DM Sans',sans-serif; font-weight:700; font-size:.9em; }
+  .lede{ font-size:1.15rem; color:var(--ink-soft); }
+
+  blockquote.pull{
+    border-left:4px solid var(--accent);
+    margin:1.6rem 0 1.6rem 1.2rem;
+    padding:.3rem 0 .3rem 1.2rem;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1.35rem;
+    color:var(--ink);
+  }
+  @media (max-width:640px){ blockquote.pull{ margin-left:0; } }
+
+  .callout{
+    background:var(--paper-2);
+    border-radius:14px;
+    padding:1.4rem 1.6rem;
+    margin:1.6rem 0;
+    border:1px solid var(--line);
+  }
+  .callout.thesis{ border-left:5px solid var(--accent); }
+  .callout p:last-child{ margin-bottom:0; }
+
+  /* stage flow chain */
+  .flow-chain{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    align-items:center;
+    margin:1.6rem 0;
+    font-family:'DM Sans',sans-serif;
+  }
+  .flow-chain .pill{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:.5rem 1rem;
+    font-size:.88rem;
+    font-weight:600;
+    box-shadow:var(--shadow);
+  }
+  .flow-chain .arrow{ color:var(--accent); font-weight:700; }
+
+  /* tables */
+  .table-wrap{ overflow-x:auto; margin:1.6rem 0; border-radius:12px; border:1px solid var(--line); }
+  table{ border-collapse:collapse; width:100%; min-width:560px; font-family:'DM Sans',sans-serif; font-size:.92rem; background:var(--card); }
+  table caption{ caption-side:top; text-align:left; font-family:'Cormorant Garamond',serif; font-size:1.15rem; padding:.8rem 1rem 0; }
+  th,td{ text-align:left; padding:.7rem .9rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--paper-2); font-weight:700; }
+  tbody tr:hover{ background:#fbf2e6; }
+
+  /* stage table row danger emphasis */
+  td.danger{ color:var(--accent); font-weight:600; }
+
+  /* layers grid */
+  .layer-grid{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); margin:1.6rem 0; }
+  .layer-card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:1.2rem 1.3rem; box-shadow:var(--shadow);
+  }
+  .layer-card .num{ font-family:'DM Sans',sans-serif; font-weight:700; color:var(--accent); font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; }
+  .layer-card h3{ margin:.4rem 0 .6rem; font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--ink); text-transform:none; letter-spacing:0; }
+  .layer-card ul{ margin:0; padding-left:1.1rem; font-size:.92rem; color:var(--ink-soft); }
+  .layer-card ul li{ margin-bottom:.2rem; }
+
+  /* polycentric diagram */
+  .polycentric{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:.8rem;
+    margin:1.8rem 0;
+    text-align:center;
+    font-family:'DM Sans',sans-serif;
+  }
+  .polycentric .hub{
+    grid-column:1/-1;
+    background:var(--ink); color:var(--paper);
+    border-radius:12px; padding:.9rem; font-weight:700; letter-spacing:.05em;
+  }
+  .polycentric .node{
+    background:var(--card); border:1px solid var(--line); border-radius:12px; padding:.9rem .6rem; font-size:.88rem; font-weight:600;
+    box-shadow:var(--shadow);
+  }
+
+  /* severity pills */
+  .sev{ display:inline-block; padding:.15rem .55rem; border-radius:999px; font-size:.75rem; font-weight:700; font-family:'DM Sans',sans-serif; }
+  .sev.high{ background:#f6dcd8; color:#8a2f27; }
+  .sev.med{ background:#f7e7c6; color:#8a5a10; }
+
+  /* example box */
+  .example{
+    border:1px dashed var(--gold);
+    background:#fbf6ea;
+    border-radius:12px;
+    padding:1rem 1.2rem;
+    margin:1.2rem 0;
+    font-size:.96rem;
+  }
+  .example .tag{ font-family:'DM Sans',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:.72rem; color:var(--gold); display:block; margin-bottom:.35rem; }
+
+  /* history cards */
+  .db-stats{ font-family:'DM Sans',sans-serif; font-size:.9rem; color:var(--ink-soft); margin-bottom:1rem; }
+  .wave-heading{
+    font-family:'DM Sans',sans-serif; font-weight:700; font-size:.95rem; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--accent); margin:2.2rem 0 .8rem; padding-top:1.2rem; border-top:1px solid var(--line);
+  }
+  .wave-heading:first-of-type{ border-top:none; padding-top:0; margin-top:1rem; }
+  .group-grid{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+  .group-card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.1rem 1.2rem;
+    box-shadow:var(--shadow);
+  }
+  .group-card h3{ font-family:'Cormorant Garamond',serif; font-size:1.35rem; margin:0 0 .2rem; }
+  .group-card .origin{ font-family:'DM Sans',sans-serif; font-size:.78rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; }
+  .group-card .period{ font-family:'DM Sans',sans-serif; font-size:.82rem; color:var(--gold); font-weight:700; margin:.3rem 0 .5rem; }
+  .group-card p{ font-size:.92rem; margin:.3rem 0 0; }
+  .group-card p mark{ background:#f7e7c6; color:var(--ink); padding:0 .1em; border-radius:2px; }
+  .group-card .tags{ margin-top:.6rem; display:flex; flex-wrap:wrap; gap:.3rem; }
+  .group-card .tags span{
+    font-family:'DM Sans',sans-serif; font-size:.7rem; background:var(--paper-2); border-radius:999px; padding:.2rem .55rem; color:var(--ink-soft);
+  }
+  .no-results{ font-family:'DM Sans',sans-serif; color:var(--ink-soft); padding:2rem; text-align:center; display:none; }
+
+  footer{
+    text-align:center; padding:3rem 1.6rem; font-family:'DM Sans',sans-serif; color:var(--ink-soft); font-size:.85rem;
+    border-top:1px solid var(--line);
+  }
+  .footer-logo{ display:block; font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--ink); margin-bottom:.4rem; }
+  .footer-copy{ display:block; }
+  .sources{ font-size:.78rem; max-width:880px; margin:1rem auto 0; text-align:left; color:var(--ink-soft); }
+  .sources a{ color:var(--ink-soft); }
+
+  /* Mobile */
+  @media (max-width:960px){
+    .layout{ grid-template-columns:1fr; }
+    .sidebar{ position:relative; top:0; max-height:none; }
+  }
+  @media (max-width:720px){
+    body{ font-size:16.5px; }
+    .article-header{ padding:.6rem 1rem; }
+    .hero{ padding:2.6rem 1.2rem 1rem; }
+    .layout{ padding:0 1rem 4rem; gap:1.6rem; }
+    .major-section{ margin-bottom:2.8rem; }
+  }
+
+  /* Reduced motion — always last */
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{
+      animation-duration:0.01ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:0.01ms !important;
+    }
+    html{ scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<main id="main-content">
+
+<!-- Progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- TOC overlay -->
+<div class="toc-overlay" id="tocOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="toc-panel">
+    <button class="close-btn" onclick="document.getElementById('tocOverlay').classList.remove('open')">Close ✕</button>
+    <h2>Table of Contents</h2>
+    <ul class="toc-list">
+      <li><a href="#s1" class="toc-main">I. The Seven Stages</a></li>
+      <li><a href="#s2" class="toc-main">II. The Healthiest Trajectory</a></li>
+      <li><a href="#s3" class="toc-main">III. The Institutional Ecosystem</a></li>
+      <li><a href="#s4" class="toc-main">IV. Decentralize: The Polycentric Principle</a></li>
+      <li><a href="#s5" class="toc-main">V. Danger: Importing the Homeland's Conflict</a></li>
+      <li><a href="#s6" class="toc-main">VI. Danger: Identity Built on Trauma</a></li>
+      <li><a href="#s7" class="toc-main">VII. Leadership Must Evolve</a></li>
+      <li><a href="#s8" class="toc-main">VIII. The Second Generation</a></li>
+      <li><a href="#s9" class="toc-main">IX. Education as Leverage</a></li>
+      <li><a href="#s10" class="toc-main">X. Common Unhealthy Models</a></li>
+      <li><a href="#s11" class="toc-main">XI. What Success Looks Like</a></li>
+      <li><a href="#s12" class="toc-main">XII. Institutional Architecture</a></li>
+      <li><a href="#s13" class="toc-main">XIII. Four Centuries of Arrivals</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="eyebrow">Civilization · Social Movements</div>
+  <h1 class="title">The Refugee Integration Guide</h1>
+  <p class="hero-sub">A framework for how displaced communities move from survival to belonging — and four centuries of the groups who made that journey to the United States. Searchable, filterable, and built for return visits.</p>
+  <div class="byline-row">
+    <div class="avatar">YB</div>
+    <div class="byline-text">
+      <span class="byline-name">Yasir Bilgin</span>
+      <span class="byline-meta">Yasir Bilgin · Updated July 2026</span>
+    </div>
+  </div>
+</section>
+<hr class="hero-rule">
+
+<!-- Meta-bar: read-time + Contents — AFTER the hero-rule, static -->
+<header class="article-header">
+  <span class="read-time">~35 min read</span>
+  <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR: search + filters -->
+  <aside class="sidebar ui">
+    <h2>Search the guide</h2>
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="e.g. Armenian, genocide, 1980…" autocomplete="off" aria-label="Search refugee groups and framework sections">
+    </div>
+    <div id="searchResults"></div>
+
+    <h2>Historical wave</h2>
+    <div class="filter-group" data-group="wave">
+      <label><input type="checkbox" value="1"> Wave 1 — Religious dissenters</label>
+      <label><input type="checkbox" value="2"> Wave 2 — Nationalism, antisemitism &amp; totalitarianism</label>
+      <label><input type="checkbox" value="3"> Wave 3 — Cold War &amp; communist regimes</label>
+      <label><input type="checkbox" value="4"> Wave 4 — Contemporary civil war &amp; persecution</label>
+    </div>
+
+    <h2>Cause of displacement</h2>
+    <div class="filter-group" data-group="cause">
+      <label><input type="checkbox" value="religious"> Religious persecution</label>
+      <label><input type="checkbox" value="ethnic-genocide"> Ethnic cleansing / genocide</label>
+      <label><input type="checkbox" value="political"> Communist / political repression</label>
+      <label><input type="checkbox" value="war"> War, invasion &amp; state collapse</label>
+      <label><input type="checkbox" value="war-affiliated"> Persecuted for U.S. wartime ties</label>
+      <label><input type="checkbox" value="economic"> Economic hardship &amp; discrimination</label>
+    </div>
+
+    <h2>Era of arrival</h2>
+    <div class="filter-group" data-group="era">
+      <label><input type="checkbox" value="1600-1700"> 1600s – 1700s</label>
+      <label><input type="checkbox" value="1800s"> 1800s</label>
+      <label><input type="checkbox" value="1900-1945"> 1900 – 1945</label>
+      <label><input type="checkbox" value="1946-1979"> 1946 – 1979</label>
+      <label><input type="checkbox" value="1980-1999"> 1980 – 1999</label>
+      <label><input type="checkbox" value="2000-present"> 2000 – present</label>
+    </div>
+
+    <button id="resetFilters">Reset all filters</button>
+
+    <h2>Jump to a section</h2>
+    <ul class="quicknav">
+      <li><a href="#s1">I. The Seven Stages</a></li>
+      <li><a href="#s3">III. The Institutional Ecosystem</a></li>
+      <li><a href="#s7">VII. Leadership Must Evolve</a></li>
+      <li><a href="#s10">X. Unhealthy Models</a></li>
+      <li><a href="#s13">XIII. Four Centuries of Arrivals</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN ARTICLE -->
+  <article class="article-body">
+
+    <p class="lede">Looking across the experiences of Jewish, Armenian, Cuban, Vietnamese, Hmong, Bosnian, Somali, Iraqi, Syrian, Afghan, Ukrainian and other displaced communities, recurring patterns emerge in how displacement becomes belonging. The details differ enormously by community, era and country of origin, so what follows is a <strong>framework of tendencies, not a deterministic formula</strong>.</p>
+
+    <div class="callout thesis">
+      <p><strong>Healthy integration is neither assimilation nor isolation.</strong> It is the gradual construction of a dual capacity: preserving a meaningful identity while becoming fully capable of participating in the institutions, economy, civic life and social networks of the new country.</p>
+      <p>The U.S. refugee resettlement system itself is built around stability, well-being and self-sufficiency in the first months and years after arrival — but long-term integration unfolds over decades and generations, well past the reach of any single program. The Office of Refugee Resettlement (ORR), housed within the Administration for Children and Families at the Department of Health and Human Services, coordinates this initial phase; everything after it is community work.</p>
+    </div>
+
+    <!-- SECTION I -->
+    <section id="s1" class="major-section">
+      <span class="section-label">Section I</span>
+      <h2>The Seven Stages</h2>
+      <p>The refugee experience can be modeled as roughly <strong>seven stages</strong>, often spanning three generations. A community can become stuck at almost any stage — for example, achieving economic integration while remaining socially isolated, or achieving educational success while losing its language and cultural memory.</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>The seven stages of refugee community development</caption>
+          <thead>
+            <tr><th>Stage</th><th>Main question</th><th>Community need</th><th>Major danger</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1. Escape</td><td>"Are we safe?"</td><td>Physical safety</td><td class="danger">Trauma, family separation</td></tr>
+            <tr><td>2. Survival</td><td>"How do we live here?"</td><td>Housing, jobs, documents</td><td class="danger">Dependency, confusion</td></tr>
+            <tr><td>3. Community formation</td><td>"Who are we here?"</td><td>Networks, associations</td><td class="danger">Isolation / enclave</td></tr>
+            <tr><td>4. Stabilization</td><td>"How do we build a life?"</td><td>Careers, education, property</td><td class="danger">Permanent low-skill trap</td></tr>
+            <tr><td>5. Integration</td><td>"How do we belong?"</td><td>Civic &amp; professional participation</td><td class="danger">Assimilation vs. withdrawal</td></tr>
+            <tr><td>6. Generational transition</td><td>"What will our children become?"</td><td>Identity transmission</td><td class="danger">Parent–child cultural rupture</td></tr>
+            <tr><td>7. Institutional maturity</td><td>"What will we contribute?"</td><td>Sustainable institutions</td><td class="danger">Nostalgia, internal politics</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The goal is not simply "successful assimilation." It is <strong>multidimensional integration</strong> — progress on all seven fronts at once, rather than substituting one kind of success for another.</p>
+
+      <div class="example">
+        <span class="tag">Example — stuck at stage 3</span>
+        Vietnamese refugee enclaves in parts of California and Texas in the late 1970s and 1980s achieved strong internal cohesion and mutual aid quickly, but some first-generation adults remained economically confined to ethnic-owned businesses for a decade or more before broader labor-market integration took hold — a textbook case of strong bonding capital arriving well before bridging capital.
+      </div>
+    </section>
+
+    <!-- SECTION II -->
+    <section id="s2" class="major-section">
+      <span class="section-label">Section II</span>
+      <h2>The Healthiest Long-Term Trajectory</h2>
+      <p>The ideal progression moves through a predictable sequence:</p>
+
+      <div class="flow-chain">
+        <span class="pill">Safety</span><span class="arrow">→</span>
+        <span class="pill">Stability</span><span class="arrow">→</span>
+        <span class="pill">Self-sufficiency</span><span class="arrow">→</span>
+        <span class="pill">Social capital</span><span class="arrow">→</span>
+        <span class="pill">Institutional capacity</span><span class="arrow">→</span>
+        <span class="pill">Civic participation</span><span class="arrow">→</span>
+        <span class="pill">Contribution</span>
+      </div>
+
+      <p>The critical transition is from being a <strong>community of refugees</strong> to becoming a <strong>community with refugee origins</strong>.</p>
+
+      <blockquote class="pull">"We need help." → "We help ourselves." → "We help newcomers." → "We contribute to solving problems for the entire society."</blockquote>
+
+      <p>That last transition matters enormously. A community becomes deeply rooted when its institutions are useful not only to its own members but to its neighbors and the wider country.</p>
+
+      <div class="example">
+        <span class="tag">Example — from ethnic clinic to civic institution</span>
+        A refugee-founded community health clinic might open in the 1980s serving mainly its own resettled population. Two or three decades later, the same clinic — now staffed by second-generation doctors and nurses trained in American medical schools — often serves the whole city, regardless of background. HIAS, originally organized in the 1880s to resettle Jewish refugees fleeing Russian pogroms and later Nazism, is a well-known case: it now resettles refugees of any faith or origin.
+      </div>
+
+      <p>The underlying psychological transformation runs: <strong>Victim → Survivor → Citizen → Contributor → Institution builder.</strong></p>
+    </section>
+
+    <!-- SECTION III -->
+    <section id="s3" class="major-section">
+      <span class="section-label">Section III</span>
+      <h2>The Institutional Ecosystem</h2>
+      <p>A mature refugee community needs an <strong>ecosystem</strong> of institutions rather than one giant organization trying to do everything.</p>
+
+      <div class="layer-grid">
+        <div class="layer-card">
+          <span class="num">Layer 1</span>
+          <h3>Emergency support</h3>
+          <ul>
+            <li>Housing &amp; food assistance</li>
+            <li>Transportation</li>
+            <li>Legal &amp; immigration navigation</li>
+            <li>Healthcare &amp; trauma support</li>
+            <li>Translation &amp; interpretation</li>
+          </ul>
+        </div>
+        <div class="layer-card">
+          <span class="num">Layer 2</span>
+          <h3>Economic mobility</h3>
+          <ul>
+            <li>English education</li>
+            <li>Vocational training &amp; credential recognition</li>
+            <li>Job placement &amp; entrepreneurship</li>
+            <li>Professional networks</li>
+            <li>Financial literacy &amp; homeownership</li>
+          </ul>
+        </div>
+        <div class="layer-card">
+          <span class="num">Layer 3</span>
+          <h3>Cultural continuity</h3>
+          <ul>
+            <li>Cultural &amp; religious institutions</li>
+            <li>Heritage-language schools</li>
+            <li>Oral-history projects &amp; archives</li>
+            <li>Arts, music, museums</li>
+            <li>Youth programs</li>
+          </ul>
+        </div>
+        <div class="layer-card">
+          <span class="num">Layer 4</span>
+          <h3>Professional networks</h3>
+          <ul>
+            <li>Doctors', engineers', lawyers' associations</li>
+            <li>Business &amp; entrepreneur networks</li>
+            <li>Teachers' &amp; academic networks</li>
+            <li>Technology networks</li>
+          </ul>
+        </div>
+        <div class="layer-card">
+          <span class="num">Layer 5</span>
+          <h3>Civic institutions</h3>
+          <ul>
+            <li>Local government &amp; school boards</li>
+            <li>Universities &amp; journalism</li>
+            <li>Nonprofits &amp; philanthropy</li>
+            <li>Political participation</li>
+            <li>Interfaith &amp; intercultural initiatives</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>One of the most common mistakes is focusing only on <strong>employment</strong> rather than <strong>career mobility</strong>. A refugee engineer driving a taxi has achieved employment, not integration of human capital. The better question is always: how do we move this person from survival employment to the highest level appropriate to their abilities?</p>
+
+      <p>Layer 4 matters because it builds <strong>bridging social capital</strong> — connections outside the community — to complement the <strong>bonding social capital</strong> that early ethnic and family networks provide. The distinction comes from sociologist Robert Putnam: too little bonding produces fragmentation; too little bridging produces isolation and economic stagnation. Healthy communities need both.</p>
+    </section>
+
+    <!-- SECTION IV -->
+    <section id="s4" class="major-section">
+      <span class="section-label">Section IV</span>
+      <h2>Decentralize: The Polycentric Principle</h2>
+      <p>A common unhealthy pattern is the creation of <strong>one umbrella organization claiming to represent everyone</strong>. This can be useful at first — coordinating scarce resources during the emergency stage — but over time a single central organization tends to accumulate control over funding, representation, media and community leadership, which in turn breeds internal political struggles.</p>
+
+      <p>A healthier, mature ecosystem is <strong>polycentric</strong>: no single institution owns the community, and organizations cooperate where useful while remaining institutionally independent.</p>
+
+      <div class="polycentric">
+        <div class="hub">COMMUNITY</div>
+        <div class="node">Education &amp; Youth</div>
+        <div class="node">Business &amp; Professionals</div>
+        <div class="node">Culture &amp; Arts</div>
+        <div class="node">Religion &amp; Social Services</div>
+        <div class="node">Civic Life &amp; Media</div>
+        <div class="node">Research &amp; Philanthropy</div>
+      </div>
+
+      <p>This redundancy creates resilience. If one organization fails, becomes corrupt, becomes politicized, or loses leadership, the entire community does not collapse with it.</p>
+    </section>
+
+    <!-- SECTION V -->
+    <section id="s5" class="major-section">
+      <span class="section-label">Section V</span>
+      <h2>Danger: Importing the Homeland's Conflict</h2>
+      <p>Refugees often escape political conflict physically while continuing to live inside it psychologically. The community can end up organizing itself around old-country questions — who supported whom, who betrayed whom, which faction is legitimate — producing a diaspora trapped in suspended history, where the old country remains the operating system of everyday community life.</p>
+
+      <p>The healthier transition converts grievance into knowledge rather than erasing it:</p>
+
+      <div class="flow-chain">
+        <span class="pill">Grievance</span><span class="arrow">→</span>
+        <span class="pill">Memory</span><span class="arrow">→</span>
+        <span class="pill">Scholarship</span><span class="arrow">→</span>
+        <span class="pill">Advocacy</span><span class="arrow">→</span>
+        <span class="pill">Universal principle</span>
+      </div>
+
+      <div class="example">
+        <span class="tag">Example — from grievance to universal principle</span>
+        Armenian-American organizations that formed after the 1915–1923 genocide initially focused almost entirely on recognition of that specific history. Over the following century, many of the same institutions broadened into general genocide-prevention scholarship, human-rights advocacy and interfaith work — applying the lesson of their own persecution to atrocities affecting other peoples entirely.
+      </div>
+
+      <p>Instead of "the world must understand what happened to us," the mature form becomes: "because of what happened to us, we will work to prevent persecution of anyone."</p>
+    </section>
+
+    <!-- SECTION VI -->
+    <section id="s6" class="major-section">
+      <span class="section-label">Section VI</span>
+      <h2>Danger: Building Identity Around Trauma</h2>
+      <p>Persecution naturally becomes a foundational story. But there is a difference between "we are a people who suffered" and "we are a people whose identity <em>is</em> suffering." The second can become unhealthy: organizations grow psychologically and financially dependent on maintaining a permanent sense of crisis, which can suppress internal criticism and make leadership unaccountable.</p>
+
+      <blockquote class="pull">We suffered → We survived → We learned → We rebuilt → We contribute.</blockquote>
+
+      <p>Trauma is part of the story. It should not become the entire story.</p>
+    </section>
+
+    <!-- SECTION VII -->
+    <section id="s7" class="major-section">
+      <span class="section-label">Section VII</span>
+      <h2>Leadership Must Evolve Across Stages</h2>
+      <p>The leaders needed during persecution are rarely the leaders needed during integration. During crisis, effective leadership tends to be courageous, secretive, centralized and decisive — qualities that can literally save lives. Decades later, the community instead needs educators, entrepreneurs, institution builders, academics, civic leaders and professional managers. A wartime organizational culture that never adapts can become dysfunctional during peacetime.</p>
+
+      <div class="flow-chain">
+        <span class="pill">Resistance leadership</span><span class="arrow">→</span>
+        <span class="pill">Resettlement leadership</span><span class="arrow">→</span>
+        <span class="pill">Institution-building leadership</span><span class="arrow">→</span>
+        <span class="pill">Civic leadership</span>
+      </div>
+
+      <p>Failure to make this transition tends to produce organizations permanently stuck operating in emergency mode, long after the emergency has passed.</p>
+    </section>
+
+    <!-- SECTION VIII -->
+    <section id="s8" class="major-section">
+      <span class="section-label">Section VIII</span>
+      <h2>The Second Generation Is the Critical Generation</h2>
+      <p>The first generation typically asks "how do we survive?" The second generation asks "who am I?" The third generation asks "where did we come from?" This creates a predictable tension: parents may build a cultural bubble to protect their children, while children encounter American society every day at school, online and among peers. If the gap becomes too large, communication itself can weaken across the generational line.</p>
+
+      <p>The solution is not stronger isolation — it is <strong>intentional bicultural competence</strong>. The ideal graduate of the community is not someone protected from America; it is someone who can walk confidently between worlds, ideally holding:</p>
+      <ul>
+        <li>Excellent English</li>
+        <li>Heritage language, where feasible</li>
+        <li>American civic culture</li>
+        <li>Family and community history</li>
+        <li>Religious or cultural tradition</li>
+        <li>The ability to navigate multiple social environments</li>
+      </ul>
+
+      <div class="example">
+        <span class="tag">Example — heritage-language erosion and recovery</span>
+        Among many Hmong-American families, English fluency in the second generation often came at the near-total expense of Hmong fluency by the third — a well-documented pattern in refugee linguistics. In response, several Hmong community organizations in Minnesota and California built dedicated after-school and weekend heritage-language programs in the 2000s and 2010s specifically to slow this loss without asking children to disengage from English-medium schooling.
+      </div>
+    </section>
+
+    <!-- SECTION IX -->
+    <section id="s9" class="major-section">
+      <span class="section-label">Section IX</span>
+      <h2>Education as the Highest-Leverage Investment</h2>
+      <p>A useful generational model for where to concentrate resources:</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Where educational investment matters most, by generation</caption>
+          <thead><tr><th>Generation</th><th>Primary focus</th></tr></thead>
+          <tbody>
+            <tr><td>Generation 1</td><td>Employment + English</td></tr>
+            <tr><td>Generation 1.5 (arrived as children)</td><td>Credential recovery + professional mobility</td></tr>
+            <tr><td>Generation 2</td><td>Education + identity</td></tr>
+            <tr><td>Generation 3</td><td>Leadership + institutional stewardship</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Education should not mean only "our children must become doctors and engineers" — a common immigrant strategy, but an incomplete one. Mature communities also need historians, journalists, teachers, social scientists, lawyers, artists, writers, public servants and nonprofit leaders. Otherwise the community risks becoming economically successful but institutionally and intellectually thin — well represented in medicine and engineering, but largely absent from the institutions that write its own history and shape its public voice.</p>
+    </section>
+
+    <!-- SECTION X -->
+    <section id="s10" class="major-section">
+      <span class="section-label">Section X</span>
+      <h2>Common Unhealthy Models</h2>
+      <p>Several patterns repeatedly create problems across very different communities:</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Unhealthy models and their long-term consequences</caption>
+          <thead><tr><th>Unhealthy model</th><th>Long-term consequence</th><th>Severity</th></tr></thead>
+          <tbody>
+            <tr><td>Permanent victim identity</td><td>Psychological stagnation</td><td><span class="sev high">High</span></td></tr>
+            <tr><td>Total assimilation</td><td>Cultural memory disappears</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Cultural isolation</td><td>Children eventually rebel or disconnect</td><td><span class="sev high">High</span></td></tr>
+            <tr><td>One powerful umbrella organization</td><td>Concentration of power</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Imported homeland politics</td><td>Endless factionalism</td><td><span class="sev high">High</span></td></tr>
+            <tr><td>Leadership for life</td><td>Generational blockage</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Loyalty valued above competence</td><td>Institutional decline</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Internal-only employment networks</td><td>Economic ceiling</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Charity without empowerment</td><td>Dependency</td><td><span class="sev high">High</span></td></tr>
+            <tr><td>Community media as propaganda</td><td>Intellectual isolation</td><td><span class="sev high">High</span></td></tr>
+            <tr><td>Suppression of internal criticism</td><td>Leadership corruption</td><td><span class="sev high">High</span></td></tr>
+            <tr><td>Treating youth as recipients, not partners</td><td>Second-generation disengagement</td><td><span class="sev high">High</span></td></tr>
+            <tr><td>Fear-based unity</td><td>Community fragments once fear recedes</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Excessive secrecy</td><td>Low institutional trust</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Only religious institutions built</td><td>Weak civic/professional ecosystem</td><td><span class="sev med">Medium</span></td></tr>
+            <tr><td>Only professional institutions built</td><td>Cultural identity erosion</td><td><span class="sev med">Medium</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p>The single most dangerous combination tends to be <strong>trauma + centralized leadership + secrecy + an external-threat narrative + financial dependency</strong>. That mix can keep a community cohesive in the short term while actively preventing the institutional evolution it needs over the long term.</p>
+      </div>
+    </section>
+
+    <!-- SECTION XI -->
+    <section id="s11" class="major-section">
+      <span class="section-label">Section XI</span>
+      <h2>What Success Looks Like After 30–50 Years</h2>
+      <p>A genuinely integrated refugee-origin community tends to accumulate seven kinds of capital simultaneously:</p>
+      <div class="layer-grid">
+        <div class="layer-card"><span class="num">Economic</span><h3>Businesses, professionals, property</h3></div>
+        <div class="layer-card"><span class="num">Human</span><h3>Educated second &amp; third generations</h3></div>
+        <div class="layer-card"><span class="num">Social</span><h3>Networks inside and outside the community</h3></div>
+        <div class="layer-card"><span class="num">Cultural</span><h3>Language, history, traditions, archives</h3></div>
+        <div class="layer-card"><span class="num">Institutional</span><h3>Schools, foundations, cultural centers</h3></div>
+        <div class="layer-card"><span class="num">Civic</span><h3>Participation in local &amp; national institutions</h3></div>
+        <div class="layer-card"><span class="num">Intellectual</span><h3>Scholars &amp; writers who interpret the community's own story</h3></div>
+      </div>
+      <p>The final indicator may be the most telling: <strong>a successful refugee community eventually develops the capacity to help the next refugee community.</strong> HIAS moving from resettling Jewish refugees to serving refugees of every background, and established Vietnamese-American organizations later assisting Iraqi, Somali and Afghan arrivals, both illustrate the same underlying arc: <strong>Refugee → Resident → Citizen → Professional → Leader → Institution builder → Benefactor.</strong></p>
+    </section>
+
+    <!-- SECTION XII -->
+    <section id="s12" class="major-section">
+      <span class="section-label">Section XII</span>
+      <h2>Recommended Institutional Architecture</h2>
+      <p>For a newly arriving refugee community, the long-run architecture tends to cluster around a foundation that funds — but does not control — an ecosystem of independent institutions across human capital, community life, civic capital, and a shared knowledge center that turns lived experience into archive, research and public memory.</p>
+      <div class="callout">
+        <p><strong>Design rule:</strong> the foundation should fund the ecosystem, not control it. Independent organizations should compete, collaborate, innovate and sometimes disagree — that friction is a sign of health, not dysfunction.</p>
+      </div>
+
+      <h3 class="sub-heading" id="s12-1"><span class="sh-num">12.1</span>The deepest principle</h3>
+      <div class="flow-chain">
+        <span class="pill">Protect</span><span class="arrow">→</span>
+        <span class="pill">Stabilize</span><span class="arrow">→</span>
+        <span class="pill">Empower</span><span class="arrow">→</span>
+        <span class="pill">Connect</span><span class="arrow">→</span>
+        <span class="pill">Integrate</span><span class="arrow">→</span>
+        <span class="pill">Institutionalize</span><span class="arrow">→</span>
+        <span class="pill">Contribute</span><span class="arrow">→</span>
+        <span class="pill">Universalize</span>
+      </div>
+      <p>The first responsibility is to protect people from the persecution they escaped. The last, and perhaps most important, is universalization: the community takes the moral lessons of its own persecution and applies them beyond itself. At that point the story changes from <em>"America gave us refuge"</em> to <em>"we became part of America, helped shape it, and now help create refuge and opportunity for others."</em></p>
+    </section>
+
+    <!-- SECTION XIII: HISTORY DATABASE -->
+    <section id="s13" class="major-section">
+      <span class="section-label">Section XIII</span>
+      <h2>Four Centuries of Refugee Arrivals to the United States</h2>
+      <p>If "refugee groups" is read broadly — major populations who came to the United States fleeing religious, ethnic, political or ideological persecution — the history stretches from the colonial era to today. Many early groups were not admitted under the modern legal category of "refugee," which was formalized by the <strong>Refugee Act of 1980</strong>; the term is used broadly below to mean any population that fled persecution or organized violence and resettled in large numbers.</p>
+
+      <p>A useful way to read this history is as <strong>four broad waves</strong>: European religious dissenters; victims of 19th- and 20th-century nationalism, antisemitism and totalitarianism; Cold War refugees from communist regimes; and contemporary refugees from civil war, ethnic cleansing, religious extremism and authoritarian collapse. American refugee history can almost be read as a map of the major forms of persecution over four hundred years — religious persecution, then nationalist and ethnic persecution, then fascist and communist totalitarianism, then genocide and ethnic cleansing, then today's civil wars and authoritarian regimes.</p>
+
+      <p><strong>Use the search bar and filters on the left</strong> to narrow this list by historical wave, cause of displacement, or era of arrival — or type a country, keyword or year directly into the search box.</p>
+
+      <div class="db-stats ui"><span id="dbCount" class="count-badge">Showing 34 of 34 groups</span></div>
+
+      <div id="historyDb"></div>
+      <p class="no-results ui" id="noResults">No groups match the current filters. Try clearing a filter or broadening your search.</p>
+
+      <h3 class="sub-heading" id="s13-1"><span class="sh-num">13.1</span>A turning point: 1975–1980</h3>
+      <p>After the fall of Saigon in April 1975, the United States undertook large-scale resettlement of Vietnamese and Cambodian refugees, coordinated by a dedicated federal task force. The <strong>Refugee Act of 1980</strong> — introduced by Senator Ted Kennedy in March 1979, passed unanimously by the Senate, and signed by President Carter in March 1980 — then formalized the modern U.S. refugee admissions system: it raised the annual admissions ceiling from 17,400 to 50,000, adopted the international "well-founded fear of persecution" standard, and created the Office of Refugee Resettlement. Before 1980, refugee admissions had proceeded through ad hoc parole authority, case by case, program by program — Hungarians in 1956, Cubans after 1959, Vietnamese and Cambodians after 1975. After 1980, the country had a standing legal system for doing what it had, for two decades, been improvising.</p>
+    </section>
+
+  </article>
+</div>
+
+</main><!-- /main#main-content -->
+
+<footer class="ui">
+  <span class="footer-logo">Yasir Bilgin</span>
+  <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  <div class="sources">
+    <strong>Selected sources:</strong>
+    <a href="https://acf.gov/orr" target="_blank" rel="noopener">Administration for Children and Families — Office of Refugee Resettlement</a> ·
+    <a href="https://www.uscis.gov/about-us/our-history/stories-from-the-archives/refugee-timeline" target="_blank" rel="noopener">USCIS Refugee Timeline</a> ·
+    <a href="https://en.wikipedia.org/wiki/Refugee_Act_of_1980" target="_blank" rel="noopener">Refugee Act of 1980</a> ·
+    <a href="https://en.wikipedia.org/wiki/Cuban_Adjustment_Act" target="_blank" rel="noopener">Cuban Adjustment Act (1966)</a> ·
+    <a href="https://en.wikipedia.org/wiki/Mariel_boatlift" target="_blank" rel="noopener">Mariel Boatlift (1980)</a> ·
+    <a href="https://en.wikipedia.org/wiki/Hmong_Veterans%27_Naturalization_Act_of_2000" target="_blank" rel="noopener">Hmong Veterans' Naturalization Act (2000)</a> ·
+    <a href="https://www.uscis.gov/about-us/our-history/stories-from-the-archives/operation-safe-haven-the-hungarian-refugee-crisis-of-1956" target="_blank" rel="noopener">USCIS — Operation Safe Haven (1956)</a> ·
+    <a href="https://en.wikipedia.org/wiki/Yazidi_genocide" target="_blank" rel="noopener">Yazidi Genocide (2014)</a> ·
+    <a href="https://www.americanimmigrationcouncil.org/fact-sheet/overview-uniting-ukraine-program/" target="_blank" rel="noopener">American Immigration Council — Uniting for Ukraine</a> ·
+    <a href="https://www.dhs.gov/medialibrary/assets/publications/uniting-ukraine-process-overview-assessment" target="_blank" rel="noopener">DHS — Uniting for Ukraine Assessment (2024)</a> ·
+    <a href="https://www.kiro7.com/news/local/what-is-operation-allies-welcome-heres-how-over-72k-afghans-resettled-us-since-2022/AP3VXFE3GJCRTBSVQZZUUQOH7U/" target="_blank" rel="noopener">Operation Allies Welcome (2021)</a>
+  </div>
+</footer>
+
+<script>
+  // Progress bar
+  const bar = document.getElementById('progressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docH > 0 ? (scrollTop / docH * 100) : 0) + '%';
+    }, { passive: true });
+  }
+
+  // ---------- HISTORICAL DATABASE ----------
+  const groups = [
+    {name:"Puritans & Pilgrims", origin:"England", period:"1620s–1640s", wave:1, era:["1600-1700"], cause:["religious"], text:"Fled restrictions on separatist Protestant worship and religious conflict in England, founding the Plymouth and Massachusetts Bay colonies."},
+    {name:"Quakers", origin:"England", period:"1650s–1700s", wave:1, era:["1600-1700"], cause:["religious"], text:"Religious persecution in England, including imprisonment for refusing oaths and state church attendance, drove Quaker migration to Pennsylvania and New Jersey."},
+    {name:"Huguenots", origin:"France", period:"1680s onward", wave:1, era:["1600-1700"], cause:["religious"], text:"French Protestants fled after the 1685 Edict of Fontainebleau revoked legal protections for Protestant worship, scattering communities across the Atlantic colonies."},
+    {name:"German Protestant sects", origin:"German states", period:"1700s", wave:1, era:["1600-1700"], cause:["religious"], text:"Mennonites, Amish, Moravians and other dissenting Protestant sects fled religious restrictions and conscription pressures in the German states, settling heavily in Pennsylvania."},
+    {name:"Irish Catholics", origin:"Ireland", period:"1840s–1850s", wave:2, era:["1800s"], cause:["economic","religious"], text:"The Great Famine (1845–1852) killed roughly a million people and drove mass emigration; longstanding discrimination against Irish Catholics under British rule compounded the economic catastrophe."},
+    {name:"German \"Forty-Eighters\"", origin:"German states", period:"1848 onward", wave:2, era:["1800s"], cause:["political"], text:"Failed liberal and nationalist revolutions of 1848 across the German states brought waves of political exiles, many of whom became prominent abolitionists and Union officers."},
+    {name:"Jews from the Russian Empire & Eastern Europe", origin:"Russia, Poland, Ukraine", period:"1881–1924", wave:2, era:["1800s","1900-1945"], cause:["religious","ethnic-genocide"], text:"Waves of pogroms following the 1881 assassination of Alexander II, the discriminatory 1882 May Laws, and further violence through the 1900s and 1918–1921 Russian Civil War drove roughly two million Jews to the United States."},
+    {name:"Armenians", origin:"Ottoman Empire", period:"1890s–1920s", wave:2, era:["1900-1945"], cause:["ethnic-genocide"], text:"The 1890s Hamidian massacres and, especially, the 1915–1923 Armenian Genocide — in which an estimated 600,000 to 1.5 million Armenians were killed — drove survivors to the U.S., concentrating in cities like Fresno, Watertown and Providence."},
+    {name:"Anti-Bolshevik / White Russian refugees", origin:"Russia / USSR", period:"1917–1920s", wave:2, era:["1900-1945"], cause:["political"], text:"The Bolshevik Revolution and subsequent Russian Civil War produced a large exile population of aristocrats, military officers and professionals fleeing communist rule."},
+    {name:"Jewish refugees from Nazism", origin:"Germany & Nazi-occupied Europe", period:"1933–1945", wave:2, era:["1900-1945"], cause:["ethnic-genocide","religious"], text:"Nazi persecution and the Holocaust drove desperate emigration; U.S. admission was severely restricted by national-origin quotas, most infamously turning away the MS St. Louis and its 900+ Jewish refugees in 1939."},
+    {name:"European displaced persons", origin:"Central & Eastern Europe", period:"1945–1952", wave:2, era:["1946-1979"], cause:["political"], text:"WWII's end left millions homeless; the Displaced Persons Act of 1948 admitted roughly 400,000 Europeans uprooted by the war, the Holocaust, and postwar communist takeovers."},
+    {name:"Hungarians", origin:"Hungary", period:"1956–1957", wave:3, era:["1946-1979"], cause:["political"], text:"Soviet tanks crushed the 1956 Hungarian Revolution; roughly 35,000–38,000 refugees were paroled into the U.S. through Operation Safe Haven, processed mainly through Camp Kilmer, New Jersey."},
+    {name:"Cubans", origin:"Cuba", period:"1959 onward", wave:3, era:["1946-1979","1980-1999"], cause:["political"], text:"Fidel Castro's communist government triggered decades of migration: the Cuban Adjustment Act of 1966 offered a path to residency, and the 1980 Mariel boatlift alone brought roughly 125,000 Cubans (plus around 25,000 Haitians, admitted under the new Cuban–Haitian Entrant Program)."},
+    {name:"Soviet Jews", origin:"USSR", period:"1960s–1980s", wave:3, era:["1946-1979","1980-1999"], cause:["religious","political"], text:"Religious and ethnic discrimination, plus tight restrictions on emigration that created a generation of \"refuseniks,\" drove a decades-long U.S. and Israeli resettlement effort backed by sustained American diplomatic pressure."},
+    {name:"Soviet religious minorities", origin:"USSR", period:"1960s–1990s", wave:3, era:["1946-1979","1980-1999"], cause:["religious"], text:"Evangelical Christians, Pentecostals and other minority faiths faced state suppression of worship and were resettled in significant numbers, especially from the late 1980s onward."},
+    {name:"Vietnamese", origin:"Vietnam", period:"1975 onward", wave:3, era:["1946-1979","1980-1999"], cause:["political","war-affiliated"], text:"The fall of Saigon in April 1975 triggered mass flight from reeducation camps and one-party rule; later \"boat people\" fleeing by sea through the late 1970s and 1980s became one of the defining refugee stories of the era."},
+    {name:"Cambodians", origin:"Cambodia", period:"1975–1990s", wave:3, era:["1946-1979","1980-1999"], cause:["ethnic-genocide","war"], text:"The Khmer Rouge genocide of 1975–1979 killed an estimated 1.5–2 million people; survivors fled through Thai border camps into U.S. resettlement throughout the 1980s."},
+    {name:"Laotians & Hmong", origin:"Laos", period:"1975–1990s", wave:3, era:["1946-1979","1980-1999"], cause:["war-affiliated","political"], text:"Communist takeover followed the U.S.-backed \"Secret War\"; Hmong fighters who had served U.S. special forces were specifically targeted for retaliation. The Hmong Veterans' Naturalization Act of 2000 later waived English and civics requirements for up to 45,000 Hmong and Lao veterans who served alongside U.S. forces."},
+    {name:"Afghans (Soviet-era wave)", origin:"Afghanistan", period:"1979–1989", wave:3, era:["1946-1979","1980-1999"], cause:["war","political"], text:"The 1979 Soviet invasion and ensuing war displaced millions; a first significant wave of Afghan refugees reached the U.S. through the 1980s."},
+    {name:"Iranians", origin:"Iran", period:"1979 onward", wave:3, era:["1946-1979","1980-1999"], cause:["religious","political"], text:"The 1979 Islamic Revolution brought political and religious persecution, including of Baháʼís, secularists and former officials, prompting sustained emigration to the U.S."},
+    {name:"Ethiopians & Eritreans", origin:"Ethiopia / Eritrea", period:"1980s–1990s", wave:3, era:["1980-1999"], cause:["political","war"], text:"The Derg regime's repression, famine, and the decades-long Eritrean war of independence (concluding 1991) drove large-scale displacement and U.S. resettlement."},
+    {name:"Somalis", origin:"Somalia", period:"1991 onward", wave:4, era:["1980-1999","2000-present"], cause:["war"], text:"The 1991 collapse of the Siad Barre government triggered clan-based civil war and state collapse that has continued in various forms for over three decades, producing one of the world's most protracted refugee crises."},
+    {name:"Bosniaks and other Bosnian refugees", origin:"Bosnia and Herzegovina", period:"1992–2000", wave:4, era:["1980-1999"], cause:["ethnic-genocide"], text:"Bosnian Serb forces conducted systematic ethnic cleansing between 1992 and 1995 — the largest forced displacement in Europe since WWII, with 2.2–2.7 million people uprooted. More than 130,000 Bosnians were resettled in the U.S. as refugees or humanitarian parolees by 2000, concentrated in Chicago and St. Louis."},
+    {name:"Kosovar Albanians", origin:"Kosovo", period:"1999", wave:4, era:["1980-1999"], cause:["ethnic-genocide","war"], text:"Serbian forces' ethnic persecution during the Kosovo War prompted a NATO intervention; roughly 14,000 Kosovar refugees were evacuated to the U.S. under Operation Provide Refuge, many processed through Fort Dix, New Jersey."},
+    {name:"Liberians & Sierra Leoneans", origin:"West Africa", period:"1990s–2000s", wave:4, era:["1980-1999","2000-present"], cause:["war"], text:"Brutal, overlapping civil wars in Liberia (1989–2003) and Sierra Leone (1991–2002), marked by targeted violence against civilians, drove large diaspora communities to the U.S., many initially under Temporary Protected Status."},
+    {name:"Sudanese", origin:"Sudan", period:"1990s onward", wave:4, era:["1980-1999","2000-present"], cause:["war","ethnic-genocide"], text:"Sudan's Second Civil War (1983–2005) and the Darfur genocide beginning in 2003 produced enormous displacement, including the well-known \"Lost Boys of Sudan\" resettled as unaccompanied minors in the late 1990s and early 2000s."},
+    {name:"Burmese / Myanmar minorities", origin:"Myanmar", period:"1990s onward", wave:4, era:["1980-1999","2000-present"], cause:["ethnic-genocide","religious"], text:"Decades of military rule brought sustained persecution of Karen, Karenni, Chin, Rohingya and other ethnic and religious minorities, driving one of Southeast Asia's largest and longest-running refugee flows."},
+    {name:"Bhutanese (Lhotshampa)", origin:"Bhutan / Nepal", period:"1990s–2010s", wave:4, era:["1980-1999","2000-present"], cause:["ethnic-genocide"], text:"Nepali-speaking Lhotshampa were stripped of citizenship and expelled from Bhutan in the early 1990s, spending up to two decades stateless in Nepali refugee camps before large-scale U.S. resettlement began around 2008."},
+    {name:"Iraqis", origin:"Iraq", period:"2003 onward", wave:4, era:["2000-present"], cause:["war","war-affiliated"], text:"The 2003 U.S. invasion and subsequent sectarian civil war endangered both religious and ethnic minorities and Iraqis who had worked with U.S. forces; a dedicated Special Immigrant Visa program was created in 2008 for the latter group."},
+    {name:"Syrians", origin:"Syria", period:"2011 onward", wave:4, era:["2000-present"], cause:["war"], text:"The 2011 civil war against the Assad government, compounded by the rise of ISIS, displaced roughly half of Syria's pre-war population and produced one of the largest refugee crises since WWII."},
+    {name:"Yazidis", origin:"Iraq / Syria", period:"2014 onward", wave:4, era:["2000-present"], cause:["ethnic-genocide","religious"], text:"On August 3, 2014, ISIS launched a genocidal campaign against the Yazidi minority at Sinjar, killing roughly 5,000 and abducting thousands of women and children; the U.S. formally recognized it as genocide within days."},
+    {name:"Congolese", origin:"Democratic Republic of Congo", period:"1990s onward", wave:4, era:["2000-present"], cause:["war","ethnic-genocide"], text:"Prolonged conflict since the mid-1990s, including the deadliest wars since WWII by death toll, has produced sustained ethnic violence and one of the largest and most persistent refugee and displacement crises in the world."},
+    {name:"Afghans (post-2021 wave)", origin:"Afghanistan", period:"2021 onward", wave:4, era:["2000-present"], cause:["war-affiliated","political"], text:"The Taliban's return to power in August 2021 threatened former government employees, U.S.-affiliated Afghans, women activists and minorities. Operation Allies Welcome evacuated roughly 76,000 Afghans to the U.S. in its initial phase — about 40% Special Immigrant Visa–eligible — and its successor, Operation Enduring Welcome, later brought the combined total near 200,000."},
+    {name:"Ukrainians", origin:"Ukraine", period:"2022 onward", wave:4, era:["2000-present"], cause:["war"], text:"Russia's February 2022 full-scale invasion displaced millions; the Uniting for Ukraine humanitarian parole program, launched that April, brought more than 158,000 Ukrainians to the U.S. by the end of FY2023 and nearly 240,000 through the program by the end of 2024, before it was suspended in January 2025."}
+  ];
+
+  const waveLabels = {
+    1:"Wave 1 — Religious Dissenters (1600s–1700s)",
+    2:"Wave 2 — Nationalism, Antisemitism & Totalitarianism (1800s–1940s)",
+    3:"Wave 3 — Cold War & Communist Regimes (1950s–1980s)",
+    4:"Wave 4 — Contemporary Civil War & Persecution (1990s–present)"
+  };
+  const causeLabels = {
+    "religious":"Religious persecution",
+    "ethnic-genocide":"Ethnic cleansing / genocide",
+    "political":"Political / communist repression",
+    "war":"War & state collapse",
+    "war-affiliated":"U.S. wartime ties",
+    "economic":"Economic hardship"
+  };
+
+  const dbEl = document.getElementById('historyDb');
+  const countEl = document.getElementById('dbCount');
+  const noResultsEl = document.getElementById('noResults');
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function highlight(text, query){
+    const safe = escapeHtml(text);
+    if(!query) return safe;
+    const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return safe.replace(new RegExp('(' + q + ')', 'gi'), '<mark>$1</mark>');
+  }
+
+  function renderGroups(list, query){
+    dbEl.innerHTML = "";
+    if(list.length === 0){
+      noResultsEl.style.display = 'block';
+      return;
+    }
+    noResultsEl.style.display = 'none';
+    const byWave = {1:[],2:[],3:[],4:[]};
+    list.forEach(g => byWave[g.wave].push(g));
+    [1,2,3,4].forEach(w => {
+      if(byWave[w].length === 0) return;
+      const heading = document.createElement('div');
+      heading.className = 'wave-heading';
+      heading.textContent = waveLabels[w];
+      dbEl.appendChild(heading);
+      const grid = document.createElement('div');
+      grid.className = 'group-grid';
+      byWave[w].forEach(g => {
+        const card = document.createElement('div');
+        card.className = 'group-card';
+        const tags = g.cause.map(c => '<span>' + causeLabels[c] + '</span>').join('');
+        card.innerHTML =
+          '<div class="origin">' + highlight(g.origin, query) + '</div>' +
+          '<h3>' + highlight(g.name, query) + '</h3>' +
+          '<div class="period">' + highlight(g.period, query) + '</div>' +
+          '<p>' + highlight(g.text, query) + '</p>' +
+          '<div class="tags">' + tags + '</div>';
+        grid.appendChild(card);
+      });
+      dbEl.appendChild(grid);
+    });
+  }
+
+  function getChecked(groupName){
+    return Array.from(document.querySelectorAll('.filter-group[data-group="' + groupName + '"] input:checked')).map(i => i.value);
+  }
+
+  function applyFilters(){
+    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    const waves = getChecked('wave').map(Number);
+    const causes = getChecked('cause');
+    const eras = getChecked('era');
+
+    const filtered = groups.filter(g => {
+      if(waves.length && !waves.includes(g.wave)) return false;
+      if(causes.length && !g.cause.some(c => causes.includes(c))) return false;
+      if(eras.length && !g.era.some(e => eras.includes(e))) return false;
+      if(query){
+        const hay = (g.name + ' ' + g.origin + ' ' + g.period + ' ' + g.text).toLowerCase();
+        if(!hay.includes(query)) return false;
+      }
+      return true;
+    });
+
+    renderGroups(filtered, query);
+    countEl.textContent = 'Showing ' + filtered.length + ' of ' + groups.length + ' groups';
+    updateSearchJumpLinks(query);
+  }
+
+  // Search also surfaces matching framework sections (s1–s12) as jump links
+  const frameworkSections = Array.from(document.querySelectorAll('.article-body > section.major-section')).filter(s => s.id !== 's13');
+  function updateSearchJumpLinks(query){
+    const box = document.getElementById('searchResults');
+    if(!query){ box.style.display = 'none'; box.innerHTML = ''; return; }
+    const matches = frameworkSections.filter(s => s.innerText.toLowerCase().includes(query));
+    if(matches.length === 0){ box.style.display = 'none'; box.innerHTML=''; return; }
+    box.style.display = 'block';
+    box.innerHTML = '<div style="margin-bottom:.3rem;font-weight:600;color:var(--ink-soft);">Also appears in:</div>' +
+      matches.slice(0,6).map(s => {
+        const h2 = s.querySelector('h2');
+        return '<a href="#' + s.id + '">' + (h2 ? h2.textContent : s.id) + '</a>';
+      }).join('');
+  }
+
+  document.getElementById('searchInput').addEventListener('input', applyFilters);
+  document.querySelectorAll('.filter-group input[type=checkbox]').forEach(cb => cb.addEventListener('change', applyFilters));
+  document.getElementById('resetFilters').addEventListener('click', () => {
+    document.getElementById('searchInput').value = '';
+    document.querySelectorAll('.filter-group input[type=checkbox]').forEach(cb => cb.checked = false);
+    applyFilters();
+  });
+
+  renderGroups(groups, '');
+</script>
+</body>
+</html>
