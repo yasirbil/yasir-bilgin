@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metaphysics: A Structured Guide | Yasir Bilgin</title>
+
+  <meta name="description" content="A structured guide to metaphysics: being, substance, universals, time, causation, free will, mind, and God across Greek, Islamic, and analytic thought.">
+  <meta name="keywords" content="metaphysics, ontology, philosophy">
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/Big-Questions/metaphysics-structured-guide.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Metaphysics: A Structured Guide">
+  <meta property="og:description" content="A structured guide to metaphysics: being, substance, universals, time, causation, free will, mind, and God across Greek, Islamic, and analytic thought.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Big-Questions/metaphysics-structured-guide.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="Metaphysics: A Structured Guide">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Metaphysics: A Structured Guide">
+  <meta name="twitter:description" content="A structured guide to metaphysics: being, substance, universals, time, causation, free will, mind, and God across Greek, Islamic, and analytic thought.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <!-- Global nav — always first script -->
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"   href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml"  href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Metaphysics: A Structured Guide",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-07-25",
+    "dateModified": "2026-07-25",
+    "description": "A structured guide to metaphysics: being, substance, universals, time, causation, free will, mind, and God across Greek, Islamic, and analytic thought.",
+    "url": "https://yasirbilgin.com/atlas/Big-Questions/metaphysics-structured-guide.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas",        "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "Big Questions", "item": "https://yasirbilgin.com/atlas/Big-Questions/" },
+      { "@type": "ListItem", "position": 4, "name": "Metaphysics: A Structured Guide", "item": "https://yasirbilgin.com/atlas/Big-Questions/metaphysics-structured-guide.html" }
+    ]
+  }
+  </script>
+
+  <!-- Fonts + design tokens — fonts.css @imports tokens.css automatically -->
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Article-scoped palette ─────────────────────────────── */
+    :root {
+      --bg:        #f7f3ec;
+      --surface:   #fffdf7;
+      --surface-2: #fbf6ec;
+      --ink:       #241e17;
+      --ink-soft:  #463d33;
+      --body:      #33291f;
+      --faint:     #6e5f4e;
+      --accent:    #c9a84c;
+      --accent-deep:#a8863a;
+      --line:      rgba(107,93,79,0.20);
+      --line-soft: rgba(107,93,79,0.12);
+      --mark:      rgba(201,168,76,0.34);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:        #131310;
+        --surface:   #1b1815;
+        --surface-2: #201c18;
+        --ink:       #ece7de;
+        --ink-soft:  #cdc5b8;
+        --body:      #c4bcae;
+        --faint:     #9a8e7c;
+        --accent:    #d8bc63;
+        --accent-deep:#c9a84c;
+        --line:      rgba(255,255,255,0.13);
+        --line-soft: rgba(255,255,255,0.08);
+        --mark:      rgba(216,188,99,0.28);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--body);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ── Progress bar — below the 62px global nav ───────────── */
+    .progress-bar {
+      position: fixed;
+      top: 62px;
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 100;
+    }
+
+    /* ── TOC overlay — backdrop-filter ONLY on .open ────────── */
+    .toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      width: min(400px, 86vw);
+      height: 100%;
+      overflow-y: auto;
+      background: var(--surface);
+      border-left: 1px solid var(--line);
+      padding: 2.2rem 2rem 3rem;
+      box-shadow: -12px 0 40px rgba(24,20,14,0.28);
+    }
+    .toc-panel h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 0 0 1.2rem;
+    }
+    .toc-close {
+      float: right;
+      background: none;
+      border: 1px solid var(--line);
+      color: var(--faint);
+      width: 34px; height: 34px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .toc-close:hover { color: var(--ink); border-color: var(--accent); }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block;
+      padding: 0.5rem 0.4rem;
+      min-height: 44px;
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .toc-list a.toc-main { font-weight: 600; color: var(--ink); }
+    .toc-list a.toc-sub  { padding-left: 1.3rem; font-size: 0.84rem; color: var(--faint); border-bottom: none; }
+    .toc-list a:hover { color: var(--accent-deep); }
+
+    /* ── Eyebrow pill ───────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px;
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow {
+        border-color: rgba(255,255,255,0.14);
+        background: rgba(30,27,23,0.7);
+        color: var(--faint);
+      }
+    }
+
+    /* ── Hero ───────────────────────────────────────────────── */
+    .hero {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3.4rem 2.5rem 0;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.04;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0 0 1.2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent-deep); }
+    .hero-sub {
+      font-size: clamp(1.12rem, 2.4vw, 1.4rem);
+      line-height: 1.55;
+      color: var(--ink-soft);
+      font-style: italic;
+      max-width: 40ch;
+      margin: 0 0 2rem;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar {
+      width: 46px; height: 46px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+      color: #241e17;
+      display: grid; place-items: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+    }
+    .byline-text { display: flex; flex-direction: column; }
+    .byline-name { font-family: 'DM Sans', sans-serif; font-weight: 600; color: var(--ink); font-size: 0.95rem; }
+    .byline-meta { font-family: 'DM Sans', sans-serif; color: var(--faint); font-size: 0.8rem; }
+
+    .hero-rule {
+      max-width: 880px;
+      margin: 2.6rem auto 0;
+      border: none;
+      border-top: 1px solid var(--line);
+    }
+
+    /* ── Article meta-bar — STATIC, after the hero rule ─────── */
+    .article-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0.75rem 2.5rem;
+    }
+    .read-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    .toc-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      min-height: 44px;
+      padding: 0.5rem 1.1rem;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .toc-btn:hover { border-color: var(--accent); color: var(--ink); }
+
+    /* ── Article body ───────────────────────────────────────── */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 8rem;
+    }
+    .major-section { margin: 0 0 4.4rem; scroll-margin-top: 84px; }
+    .section-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin-bottom: 0.7rem;
+    }
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin: 0 0 1.2rem;
+      letter-spacing: -0.005em;
+    }
+    .article-body h2 em { font-style: italic; color: var(--accent-deep); }
+    .article-body h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      color: var(--ink);
+      margin: 2.6rem 0 0.8rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .sh-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-deep);
+      letter-spacing: 0.04em;
+    }
+    .article-body h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 1.9rem 0 0.5rem;
+    }
+    /* sub-section labels — semantically h3 (keeps a strict h2→h3 hierarchy),
+       styled as compact labels rather than large display headings */
+    .article-body h3.mini-head {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 1.9rem 0 0.5rem;
+      display: block;
+    }
+    .article-body p { margin: 0 0 1.25rem; }
+    .article-body p.lead {
+      font-size: 1.15rem;
+      color: var(--ink-soft);
+    }
+    .article-body a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px; }
+    .article-body strong { color: var(--ink); font-weight: 700; }
+    .article-body em { font-style: italic; }
+    .q-prompt {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 1.28rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+      border-left: 3px solid var(--accent);
+      padding: 0.2rem 0 0.2rem 1.3rem;
+      margin: 0 0 1.6rem;
+    }
+
+    /* definition-style list */
+    .defs { margin: 0 0 1.4rem; padding: 0; list-style: none; }
+    .defs li { margin: 0 0 0.85rem; padding-left: 1.1rem; position: relative; }
+    .defs li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0.72em;
+      width: 6px; height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+    .defs li .term { color: var(--ink); font-weight: 700; }
+
+    /* callout / cross-reference / fact-note */
+    .note {
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.1rem 1.3rem;
+      margin: 1.6rem 0;
+      font-size: 0.98rem;
+    }
+    .note .note-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin-bottom: 0.4rem;
+    }
+    .note p:last-child { margin-bottom: 0; }
+
+    /* pull quote */
+    .pull-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.5rem, 3.4vw, 2rem);
+      line-height: 1.35;
+      color: var(--ink);
+      margin: 3rem 0 3rem -2rem;
+      padding-left: 2rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* map table */
+    .table-wrap { overflow-x: auto; margin: 1.6rem 0; border: 1px solid var(--line); border-radius: 8px; }
+    table.map {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    table.map th, table.map td {
+      text-align: left;
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+    }
+    table.map thead th {
+      background: var(--surface-2);
+      color: var(--accent-deep);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    table.map td:first-child { color: var(--ink); font-weight: 600; }
+    table.map tbody tr:last-child td { border-bottom: none; }
+
+    /* ── EXPLORER (side filter + live search) ───────────────── */
+    .explorer {
+      max-width: 1120px;
+      margin: 0 auto 1rem;
+      padding: 2.4rem 2.5rem 0;
+      scroll-margin-top: 84px;
+    }
+    .explorer-head { margin-bottom: 1.6rem; }
+    .explorer-head .section-label { color: var(--accent-deep); }
+    .explorer-head h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--ink);
+      margin: 0 0 0.5rem;
+    }
+    .explorer-head p {
+      color: var(--ink-soft);
+      max-width: 62ch;
+      margin: 0;
+      font-size: 1.02rem;
+    }
+    .explorer-grid {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .filter-rail {
+      position: sticky;
+      top: 78px;
+      align-self: start;
+    }
+    .search-box { position: relative; margin-bottom: 1.4rem; }
+    .search-box input {
+      width: 100%;
+      padding: 0.75rem 2.4rem 0.75rem 0.95rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      min-height: 44px;
+    }
+    .search-box input::placeholder { color: var(--faint); }
+    .search-box input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+    .search-clear {
+      position: absolute;
+      right: 0.5rem; top: 50%;
+      transform: translateY(-50%);
+      background: none; border: none;
+      color: var(--faint);
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1;
+      padding: 0.3rem;
+      display: none;
+    }
+    .search-clear.show { display: block; }
+    .search-clear:hover { color: var(--ink); }
+
+    .facet-group { margin-bottom: 1.5rem; }
+    .facet-group > h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 0 0 0.7rem;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      padding: 0.34rem 0.7rem;
+      min-height: 32px;
+      background: var(--surface);
+      color: var(--ink-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s;
+      line-height: 1.2;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--ink); }
+    .chip.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #241e17;
+      font-weight: 600;
+    }
+    .chip:focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 2px; }
+    .reset-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--accent-deep);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .reset-btn:disabled { color: var(--faint); text-decoration: none; cursor: default; }
+
+    .result-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--faint);
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .p-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1.05rem 1.15rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: border-color 0.18s, transform 0.18s;
+    }
+    .p-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .p-card .p-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .p-tag {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.16rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--faint);
+    }
+    .p-tag.q { color: var(--accent-deep); border-color: rgba(201,168,76,0.4); }
+    .p-card h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.15;
+      color: var(--ink);
+      margin: 0.1rem 0 0;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .p-card .p-thinkers {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.76rem;
+      color: var(--accent-deep);
+      font-weight: 500;
+    }
+    .p-card .p-desc { font-size: 0.9rem; line-height: 1.55; color: var(--body); margin: 0; }
+    .p-card .p-jump {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.74rem;
+      color: var(--faint);
+      text-decoration: none;
+      margin-top: auto;
+      padding-top: 0.3rem;
+    }
+    .p-card .p-jump:hover { color: var(--accent-deep); }
+    .p-card mark, .p-desc mark, .p-thinkers mark {
+      background: var(--mark);
+      color: inherit;
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--faint);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+    }
+    .empty-state strong { display: block; color: var(--ink-soft); margin-bottom: 0.3rem; font-size: 1.05rem; }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--line);
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.4rem 2.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      color: var(--ink);
+    }
+    .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--faint); }
+
+    /* focus-visible baseline */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-deep);
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .explorer-grid { grid-template-columns: 1fr; }
+      .filter-rail { position: static; }
+      .chips { gap: 0.4rem; }
+    }
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 2.6rem 1.4rem 0; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .article-body { padding: 2.4rem 1.4rem 5rem; }
+      .explorer { padding: 2rem 1.4rem 0; }
+      .pull-quote { margin-left: 0; }
+      footer { padding: 2.2rem 1.4rem 4rem; }
+    }
+
+    /* ── Reduced motion — last ──────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- TOC overlay -->
+  <div class="toc-overlay" id="tocOverlay"
+       onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="toc-panel">
+      <button class="toc-close" aria-label="Close contents"
+              onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#s-what" class="toc-main">What Metaphysics Is</a></li>
+        <li><a href="#s-explorer" class="toc-main">Explore the Positions</a></li>
+        <li><a href="#q1" class="toc-main">I. Being &amp; Existence</a></li>
+        <li><a href="#q2" class="toc-main">II. Substance</a></li>
+        <li><a href="#q3" class="toc-main">III. Universals</a></li>
+        <li><a href="#q4" class="toc-main">IV. Persistence &amp; Change</a></li>
+        <li><a href="#q5" class="toc-main">V. Personal Identity</a></li>
+        <li><a href="#q6" class="toc-main">VI. Time</a></li>
+        <li><a href="#q7" class="toc-main">VII. Causation</a></li>
+        <li><a href="#q8" class="toc-main">VIII. Modality</a></li>
+        <li><a href="#q9" class="toc-main">IX. Free Will</a></li>
+        <li><a href="#q10" class="toc-main">X. Mind &amp; Body</a></li>
+        <li><a href="#q11" class="toc-main">XI. Fundamental Structure</a></li>
+        <li><a href="#q12" class="toc-main">XII. Realism &amp; Anti-Realism</a></li>
+        <li><a href="#q13" class="toc-main">XIII. Parts &amp; Wholes</a></li>
+        <li><a href="#q14" class="toc-main">XIV. God &amp; the Ground of Being</a></li>
+        <li><a href="#q15" class="toc-main">XV. Is Metaphysics Possible?</a></li>
+        <li><a href="#s-map" class="toc-main">A Map to Keep</a></li>
+        <li><a href="#s-close" class="toc-main">The Threads That Interlock</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Atlas · Big Questions</div>
+    <h1>Metaphysics: <em>A Structured Guide</em></h1>
+    <p class="hero-sub">The deepest questions, the concepts that structure each one, and the thinkers who staked out the answers.</p>
+    <div class="byline-row">
+      <div class="avatar">YB</div>
+      <div class="byline-text">
+        <span class="byline-name">Yasir Bilgin</span>
+        <span class="byline-meta">Yasir Bilgin · July 2026</span>
+      </div>
+    </div>
+  </section>
+  <hr class="hero-rule">
+
+  <!-- Meta-bar: read-time + Contents -->
+  <header class="article-header">
+    <span class="read-time">42 min read</span>
+    <button class="toc-btn"
+            onclick="document.getElementById('tocOverlay').classList.add('open')">
+      Contents
+    </button>
+  </header>
+
+  <!-- What metaphysics is -->
+  <article class="article-body">
+    <section id="s-what" class="major-section">
+      <span class="section-label">Orientation</span>
+      <h2>What Metaphysics <em>Is</em></h2>
+      <p class="lead">Metaphysics is the study of the most general features of reality: what exists, what it is to exist, what kinds of things there fundamentally are, and how they hang together.</p>
+      <p>Where the special sciences each carve off a region of reality — physics studies matter in motion, biology living systems — metaphysics asks after <strong>being as such</strong>: not this or that being, but <em>being qua being</em> (Aristotle's <em>tò òn hê òn</em>). It is the discipline that refuses to take for granted the categories every other inquiry quietly assumes.</p>
+
+      <h3 class="mini-head">A note on the name</h3>
+      <p>The word is a historical accident. Aristotle called this inquiry <em>first philosophy</em> (<em>prōtē philosophia</em>), the <em>science of being qua being</em>, and sometimes <em>theology</em>. The label "metaphysics" comes from the editor <strong>Andronicus of Rhodes</strong> (1st c. BCE), who arranged Aristotle's untitled treatises on these topics <em>after</em> the <em>Physics</em> — <em>tà metà tà physiká</em>, "the [books] after the Physics." A librarian's ordering note hardened into the name of a discipline, and the prefix <em>meta-</em> ("after") was later reread as "beyond," giving the popular but etymologically spurious sense of metaphysics as the study of what lies <em>beyond</em> the physical.</p>
+
+      <h3 class="mini-head">The classical division</h3>
+      <p>Systematized by Christian Wolff in the 18th century, the traditional map splits the field in two:</p>
+      <ul class="defs">
+        <li><span class="term">General metaphysics</span> — <em>ontology</em>: being in general, existence, substance, properties, identity, cause, modality.</li>
+        <li><span class="term">Special metaphysics</span> — three regional inquiries into the highest kinds of being: <em>rational cosmology</em> (the world as a whole), <em>rational psychology</em> (the soul or mind), and <em>natural theology</em> (God, the ground of being).</li>
+      </ul>
+      <p>Modern analytic metaphysics has largely dropped the tidy Wolffian scheme, but it still circles the same questions. The guide below is organized by question rather than by school — fifteen deep problems, each with the concepts that structure it and the positions that divide it. Use the explorer immediately below to filter and search across every position in the guide, or read straight through.</p>
+    </section>
+  </article>
+
+  <!-- ── EXPLORER: side filter + live search ──────────────────── -->
+  <section id="s-explorer" class="explorer">
+    <div class="explorer-head">
+      <span class="section-label">Interactive</span>
+      <h2>Explore the Positions</h2>
+      <p>Every major position in this guide, as a filterable set of cards. Narrow by question or by tradition — filters combine, so <em>Islamic</em> plus <em>Causation</em> isolates occasionalism — or type a name, term, or thinker to search. Each card links to its full discussion below.</p>
+    </div>
+
+    <div class="explorer-grid">
+      <aside class="filter-rail" aria-label="Filters">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search positions, thinkers, terms…"
+                 aria-label="Search positions" autocomplete="off">
+          <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="facet-group">
+          <h3>Question</h3>
+          <div class="chips" id="facetQuestion" role="group" aria-label="Filter by question"></div>
+        </div>
+
+        <div class="facet-group">
+          <h3>Tradition</h3>
+          <div class="chips" id="facetTradition" role="group" aria-label="Filter by tradition"></div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn" disabled>Clear all filters</button>
+      </aside>
+
+      <div class="explorer-results">
+        <p class="result-meta" id="resultMeta" aria-live="polite"></p>
+        <div class="card-grid" id="cardGrid"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Questions I–VII -->
+  <article class="article-body">
+
+    <!-- Q1 -->
+    <section id="q1" class="major-section">
+      <span class="section-label">Question I</span>
+      <h2>Being &amp; <em>Existence</em></h2>
+      <p class="q-prompt">What does it mean to say something exists? Is "exists" a genuine property of things? What is the most general inventory of what there is?</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">Being vs. beings</span> — the general fact of existence versus the particular things that exist. Heidegger names the gap the <em>ontological difference</em> and charges the whole tradition with forgetting the question of Being itself (<em>Seinsfrage</em>).</li>
+        <li><span class="term">Categories of being</span> — Aristotle's ten highest genera under which anything whatever falls: substance, quantity, quality, relation, place, time, position, state, action, passion. Everything else is said "of" or "in" a substance.</li>
+        <li><span class="term">Is existence a predicate?</span> — Kant's famous denial: existence adds nothing to the <em>concept</em> of a thing (a hundred real dollars contain no more coins than a hundred imagined ones). Frege and Russell formalize this — existence is not a first-order property of objects but a <strong>second-order</strong> property, expressed by the existential quantifier ("there is an <em>x</em> such that…").</li>
+        <li><span class="term">Ontological commitment</span> — Quine's criterion, from "On What There Is" (1948): <em>to be is to be the value of a bound variable.</em> You are committed to whatever your best theory must quantify over. His slogan — <strong>"no entity without identity"</strong> — admits no thing you cannot say when it is the same as, or different from, another.</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Parmenides</strong> makes the founding statement of ontology: being is one, ungenerated, indivisible, changeless — "what is, is, and cannot not-be." Non-being cannot be thought or spoken, and so change is illusion, the standing challenge every later ontology must answer. <strong>Heraclitus</strong> is the counter-pole: reality is flux, "you cannot step into the same river twice," unity held together in tension. <strong>Aristotle</strong> refuses both extremes — being is not a single genus but is "said in many ways" (<em>pollachōs legetai</em>); the categories map those ways, with substance primary.</p>
+      <p>At the outer edge sits <strong>Meinong</strong>, whose jungle of objects grants that even non-existent and impossible objects — the golden mountain, the round square — <em>subsist</em> and can bear properties. Against him, <strong>Quine</strong> preaches a "desert-landscape" ontology tied to natural science: admit only what our best theory quantifies over. <strong>Heidegger</strong> reopens the question of the <em>meaning of Being</em> through <em>Dasein</em>, the entity (us) for whom Being is a question.</p>
+
+      <h3 class="mini-head">The Islamic contribution — essence and existence</h3>
+      <p><strong>Ibn Sīnā (Avicenna)</strong> draws the single most consequential distinction in this area: in any contingent thing, its <em>essence</em> (<em>māhiyya</em>, "whatness") is separable in thought from its <em>existence</em> (<em>wujūd</em>). Existence is "superadded" to essence — the essence of a horse does not by itself guarantee that any horse exists. Only in one being is essence <em>identical</em> with existence: the <strong>Necessary Being</strong> (<em>wājib al-wujūd</em>), whose essence just <em>is</em> to exist. Everything else is <em>mumkin al-wujūd</em>, merely possible-in-itself and existent only through another. This distinction drives his cosmological argument and, transmitted through translation, shapes Aquinas.</p>
+      <p><strong>Mullā Ṣadrā</strong> (d. c. 1640) inverts a long essentialist tradition with <em>aṣālat al-wujūd</em> — the primacy of existence. Existence, not essence, is the fundamental reality; essences are mind-derived abstractions from a single graded field of being. Being admits of <em>tashkīk</em> (systematic gradation or modulation): one reality, present in more and less intense degrees — a metaphysics of existence itself rather than of things.</p>
+    </section>
+
+    <!-- Q2 -->
+    <section id="q2" class="major-section">
+      <span class="section-label">Question II</span>
+      <h2>Substance <em>— the bearers of reality</em></h2>
+      <p class="q-prompt">What are the basic, independent things that have properties and undergo change? Is there an underlying "thing" beneath the properties, or only properties all the way down?</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">Substance</span> — traditionally, what exists <em>in its own right</em> and bears properties (a horse, a person), as opposed to properties, which exist only <em>in</em> a substance.</li>
+        <li><span class="term">Hylomorphism</span> — Aristotle's analysis of a substance into <strong>matter</strong> (<em>hylē</em>) and <strong>form</strong> (<em>morphē</em>); the form makes it the kind of thing it is. A bronze statue is bronze (matter) shaped into a figure (form); strip the form and you have only a lump.</li>
+        <li><span class="term">Substratum vs. bundle</span> — is there a propertyless bearer "underneath" (a bare particular), or is a thing just a <em>bundle</em> of its properties?</li>
+        <li><span class="term">Trope</span> — a <em>particular</em> property (this red, not redness in general).</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Aristotle</strong> holds that <em>primary substances</em> are concrete individuals; universals and properties are ontologically derivative. <strong>Descartes</strong> defines a substance as what needs nothing but itself (and God) to exist, and finds two created kinds: <em>res cogitans</em> (thinking, unextended) and <em>res extensa</em> (extended, unthinking). <strong>Spinoza</strong> pushes the definition to its limit: since a substance must be causally and conceptually self-sufficient, only the whole of reality qualifies — radical monism, one <strong>substance</strong>, <em>Deus sive Natura</em> (God-or-Nature), of which everything else is a <em>mode</em>. <strong>Leibniz</strong> goes the opposite way: reality is composed of infinitely many simple substances, <strong>monads</strong> — partless, "windowless," each mirroring the whole universe from its own point of view, coordinated by <em>pre-established harmony</em>.</p>
+      <p>On the underlying structure of a single thing, three camps divide. <strong>Substratum theory</strong> (Locke's "something, I know not what"; Bergmann's bare particulars) posits a thin bearer that individuates and supports properties. <strong>Bundle theory</strong> (Hume, Russell) denies any bare bearer: an object just <em>is</em> a co-located bundle of properties. <strong>Trope theory</strong> (D. C. Williams, Keith Campbell) makes the world's basic constituents property-particulars, and builds both substances and universals out of them.</p>
+    </section>
+
+    <!-- Q3 -->
+    <section id="q3" class="major-section">
+      <span class="section-label">Question III</span>
+      <h2>Universals <em>— one over many</em></h2>
+      <p class="q-prompt">Two apples are both red. Is there one thing, redness, that both share — or only two red particulars and a resemblance?</p>
+      <p>This is <strong>the problem of universals</strong>, the longest-running dispute in metaphysics, alive from Plato through the medieval schools to contemporary philosophy of science.</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">Universal</span> — a repeatable feature that can be wholly present in many places at once (redness, humanity, being-triangular).</li>
+        <li><span class="term">Particular</span> — a non-repeatable individual (this apple).</li>
+        <li><span class="term"><em>Ante rem</em> vs. <em>in re</em></span> — universals existing <em>prior to and apart from</em> their instances (Platonic Forms) versus <em>in</em> their instances (Aristotelian immanent universals).</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Platonic realism</strong> places the Forms transcendently, outside space and time; particulars are what they are by <em>participating</em> in them. This grounds the intelligibility of the world but strains under the <em>Third Man</em> regress (if redness needs a further form to explain what it shares with red things, the explanation never stops). <strong>Aristotelian (immanent) realism</strong> keeps universals real but locates them only <em>in</em> their instances, not in a separate realm.</p>
+      <p><strong>Nominalism</strong> holds that only particulars exist; "universals" are just names, predicates, classes, or resemblances. <strong>William of Ockham</strong> is the great medieval nominalist — and Ockham's razor (<em>do not multiply entities beyond necessity</em>) is his weapon. <strong>Conceptualism</strong> occupies the middle: universals exist, but as <em>concepts in the mind</em>, not mind-independent things. <strong>Abelard</strong> holds this ground in the debate that <strong>Boethius</strong> had transmitted from <strong>Porphyry's</strong> three questions — do genera and species exist in reality or only in thought? if real, are they bodily or incorporeal? separate from sensibles or in them? Into the modern era, <strong>D. M. Armstrong</strong> defends a scientific realism about universals: admit just those universals that mature physics needs, discovered a posteriori, immanent in things.</p>
+    </section>
+
+    <!-- Q4 -->
+    <section id="q4" class="major-section">
+      <span class="section-label">Question IV</span>
+      <h2>Persistence &amp; <em>Change</em></h2>
+      <p class="q-prompt">How can one and the same thing persist through time while its properties change? And what makes x at one time identical to y at another?</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">Numerical vs. qualitative identity</span> — being <em>one and the same thing</em> versus being <em>exactly alike</em>. Two new coins are qualitatively identical but numerically two.</li>
+        <li><span class="term">Leibniz's Law</span> — the <em>indiscernibility of identicals</em> (if a = b, they share all properties) and the more contested <em>identity of indiscernibles</em> (if they share all properties, a = b).</li>
+        <li><span class="term">Temporary intrinsics</span> — the puzzle of how a thing can be bent at one time and straight at another without contradiction.</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Endurantism</strong> says a persisting thing is <em>wholly present</em> at each moment it exists; it has no temporal parts — the whole of you is here now, and the whole of you was here yesterday. <strong>Perdurantism</strong> says a thing <em>perdures</em> by having distinct <strong>temporal parts</strong> at different times; the whole object is a four-dimensional "spacetime worm" of which any given moment is only a slice (Lewis, Quine). <strong>Exdurantism</strong>, or stage theory, makes the object a momentary <em>stage</em>, analyzing all talk of persistence through relations among stages (Sider, Hawley).</p>
+      <div class="note">
+        <span class="note-label">Classic puzzles</span>
+        <p>The <strong>Ship of Theseus</strong>: replace every plank one by one, then reassemble the discarded originals into a second ship — which is the original? And the <strong>statue and the clay</strong>: one lump of clay, one statue, seemingly two things occupying one place at once — the problem of <em>material constitution</em> and <em>coincidence</em>. Both press on whether identity through change is a fact about the world or an artifact of how we count.</p>
+      </div>
+    </section>
+
+    <!-- Q5 -->
+    <section id="q5" class="major-section">
+      <span class="section-label">Question V</span>
+      <h2>Personal <em>Identity</em></h2>
+      <p class="q-prompt">A special, high-stakes case: what makes you the same person from childhood to old age? What matters for survival?</p>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p>The <strong>soul or substance view</strong> holds that you are an immaterial substance persisting through all change (Descartes; most religious traditions). <strong>Locke</strong> relocates identity in <em>continuity of consciousness and memory</em>, not sameness of soul or body — later refined into overlapping chains of psychological connection. <strong>Eric Olson's</strong> animalism answers differently again: you <em>are</em> a human animal, and your identity is the persistence of the organism, not of a psychology.</p>
+      <p><strong>Derek Parfit</strong> (<em>Reasons and Persons</em>, 1984), through fission and teletransportation thought experiments, argues that personal identity is not a deep further fact and not what rationally matters in survival — what matters is <em>Relation R</em>, psychological connectedness and continuity, which can hold to varying degrees and even branch. This converges strikingly with the <strong>Buddhist</strong> doctrine of <em>anattā</em> (no-self): the "person" is a bundle of ever-changing aggregates (<em>skandhas</em>), with no persisting substantial self beneath them. Against naïve memory theories, <strong>Reid's</strong> <em>brave officer</em> paradox shows they violate the transitivity of identity — the old general remembers the young officer, the young officer remembers the flogged boy, yet the general remembers nothing of the boy.</p>
+    </section>
+
+    <!-- Q6 -->
+    <section id="q6" class="major-section">
+      <span class="section-label">Question VI</span>
+      <h2>The Nature of <em>Time</em></h2>
+      <p class="q-prompt">Does time really pass? Are past and future as real as the present? Is temporal becoming an objective feature of the world or of our perspective?</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">A-series vs. B-series</span> — <strong>McTaggart's</strong> distinction (from "The Unreality of Time," <em>Mind</em>, 1908). The <strong>A-series</strong> orders events as <em>past / present / future</em> — a tensed, moving structure. The <strong>B-series</strong> orders them as <em>earlier-than / later-than</em> — a fixed, tenseless structure. His argument for the <strong>unreality of time</strong>: real change requires the A-series, but the A-series is contradictory (every event is past <em>and</em> present <em>and</em> future), so time is unreal.</li>
+        <li><span class="term">A-theory vs. B-theory</span> — is tense and passage objective (A), or is reality fundamentally tenseless, with "now" as indexical as "here" (B)?</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Presentism</strong> holds that only the present exists; past and future are unreal. <strong>Eternalism</strong>, or the block universe, holds that all times are equally real — the universe is a four-dimensional block, "now" merely marking one's location within it (the natural partner of relativity). The <strong>growing block</strong> splits the difference: past and present are real and fixed, the future open and unreal, so reality accretes moment by moment.</p>
+      <p><strong>Augustine</strong> (<em>Confessions</em> XI) frames the enduring puzzle — "What then is time? If no one asks me, I know; if I wish to explain, I know not" — and locates time in the mind's <em>distentio</em>, its stretching between memory and expectation. <strong>McTaggart</strong>, <strong>A. N. Prior</strong> (founder of tense logic, defending real tense), and <strong>D. C. Williams</strong> ("The Myth of Passage," attacking it) anchor the modern debate. Related live problems: the <em>arrow of time</em> (why does time have a direction?) and <em>time travel</em> (the grandfather paradox).</p>
+      <div class="note">
+        <span class="note-label">Companion question — space</span>
+        <p>Is space a real container — <strong>Newton's</strong> absolute space, <em>substantivalism</em> — or merely the system of relations among bodies, <strong>Leibniz's</strong> <em>relationism</em>? The <em>Leibniz–Clarke correspondence</em> and Newton's rotating-bucket argument are the classic battleground, revived in the philosophy of general relativity through the <em>hole argument</em>.</p>
+      </div>
+    </section>
+
+    <!-- Q7 -->
+    <section id="q7" class="major-section">
+      <span class="section-label">Question VII</span>
+      <h2><em>Causation</em></h2>
+      <p class="q-prompt">What is it for one thing to cause another? Is there a real "productive" connection in nature, or only patterns we project?</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">Aristotle's four causes</span> — the <em>material</em> (what it's made of), <em>formal</em> (its form or essence), <em>efficient</em> (what brings it about), and <em>final</em> (that for the sake of which). Modern usage narrows "cause" almost entirely to the efficient.</li>
+        <li><span class="term">Necessary connection</span> — is there a "glue" binding cause to effect, or only regular succession?</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Hume's</strong> regularity theory is the field's most influential move: we never <em>observe</em> a necessary connection, only <em>constant conjunction</em> plus the mind's habit of expectation; causation "in the objects" is nothing over and above regular succession. <strong>Kant</strong> answers that causal necessity is not read off the world but <em>imposed</em> by the understanding as a condition of possible experience. <strong>David Lewis</strong> offers a counterfactual analysis: c causes e roughly iff, had c not occurred, e would not have occurred (spelled out through possible worlds). Neo-Aristotelian <strong>powers theorists</strong> (Molnar, Mumford, Bird) restore genuine necessity to nature: things have real <em>causal powers</em>, and causation is their manifestation. And <strong>interventionists</strong> (Woodward, Pearl) treat causes as what you could manipulate to change effects — causation as difference-making under intervention.</p>
+
+      <h3 class="mini-head">Islamic occasionalism</h3>
+      <p><strong>Al-Ghazālī</strong>, in the seventeenth discussion of the <em>Tahāfut al-Falāsifa</em>, denies any <em>necessary</em> connection between what we call cause and effect: when cotton meets fire, it is not the fire but <strong>God</strong> who creates the burning; the two are merely habitually conjoined. This <em>occasionalism</em> — developed in Ash'arite <em>kalām</em>, and independently by <strong>Malebranche</strong> — anticipates Hume's critique of necessary connection by six centuries, while drawing the opposite theological conclusion: the constant conjunction is God's customary act (<em>sunnat Allāh</em>), not blind regularity.</p>
+      <div class="note">
+        <span class="note-label">A scholarly caveat</span>
+        <p>How thoroughgoing al-Ghazālī's occasionalism really was is contested. On the traditional reading (defended by Michael Marmura) he restricts genuine causal power to God alone. Recent scholarship — Richard Frank, and especially Frank Griffel — argues that his primary aim was narrower: to secure the <em>possibility</em> of miracles against the philosophers' claim that nature runs by necessity, leaving room for real secondary causes in creatures. The label "occasionalist" fits the seventeenth discussion's opening argument better than it fits the whole of his thought.</p>
+      </div>
+      <div class="note">
+        <span class="note-label">Related contemporary problem — mental causation</span>
+        <p>If the physical world is causally closed, how can mental states cause anything without overdetermining their effects? <strong>Jaegwon Kim's</strong> <em>exclusion argument</em> presses this hard against non-reductive physicalism.</p>
+      </div>
+    </section>
+
+  </article>
+  <!-- Questions VIII–XV -->
+  <article class="article-body">
+
+    <!-- Q8 -->
+    <section id="q8" class="major-section">
+      <span class="section-label">Question VIII</span>
+      <h2>Modality <em>— necessity, possibility, essence</em></h2>
+      <p class="q-prompt">Some truths are merely contingent (Paris is the capital of France), others necessary (2 + 2 = 4). What grounds this difference? And are there real essences?</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">De dicto vs. de re</span> — necessity attaching to a <em>proposition</em> ("necessarily, bachelors are unmarried") versus to a <em>thing itself</em> ("this water is necessarily H₂O").</li>
+        <li><span class="term">Possible worlds</span> — total ways things could have been; a proposition is <em>necessary</em> if true in all of them, <em>possible</em> if true in at least one.</li>
+        <li><span class="term">Rigid designator</span> — a term that picks out the same object in every possible world (proper names, natural-kind terms).</li>
+        <li><span class="term">Essence</span> — what a thing must be to be the thing it is; its identity conditions.</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Leibniz</strong> first brings possible worlds into philosophy as ideas in God's intellect: infinitely many are conceived, and the actual world is the <em>best</em> of them. <strong>David Lewis</strong> takes them literally — <strong>modal realism</strong> holds that possible worlds are <em>concrete</em>, spatiotemporally isolated universes, as real as our own, with "actual" merely indexical (our world, from our vantage). Ontologically extravagant, theoretically powerful. <strong>Actualists</strong> (Plantinga, Stalnaker) keep the machinery but deflate the ontology: possible worlds are <em>abstract</em> objects — maximal states of affairs or propositions — and only the actual world is concrete.</p>
+      <p><strong>Kripke</strong> (<em>Naming and Necessity</em>, delivered as lectures in 1970) is the modern watershed. Names are rigid designators; there are <strong>necessary a posteriori</strong> truths (Hesperus = Phosphorus; water = H₂O — discovered empirically, yet true in all worlds) and <strong>contingent a priori</strong> truths (the length of the standard meter). The upshot restored <em>essentialism</em> to respectability. <strong>Kit Fine</strong> then argues that essence is <em>not</em> reducible to modal necessity: many things are necessarily such-and-such — Socrates is necessarily a member of the set {Socrates} — without that being part of what Socrates essentially <em>is</em>. Essence is the more basic, "real-definitional" notion.</p>
+      <div class="note">
+        <span class="note-label">Cross-reference</span>
+        <p>Ibn Sīnā's distinction between <em>necessary</em> and <em>contingent</em> being (Question I) is a foundational contribution here, powering the modal version of the cosmological argument (Question XIV).</p>
+      </div>
+    </section>
+
+    <!-- Q9 -->
+    <section id="q9" class="major-section">
+      <span class="section-label">Question IX</span>
+      <h2>Free Will &amp; <em>Determinism</em></h2>
+      <p class="q-prompt">If every event is fixed by prior events and the laws of nature, can any of our choices be free? And would mere randomness help?</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">Determinism</span> — a complete state of the world plus the laws entails a unique future.</li>
+        <li><span class="term">Could have done otherwise</span> — the <em>principle of alternate possibilities</em>: freedom (and responsibility) requires genuinely open alternatives.</li>
+        <li><span class="term">Sourcehood</span> — an alternative gloss: freedom is being the true <em>source</em> or origin of one's action, whether or not alternatives were open.</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Hard determinists</strong> and hard incompatibilists hold that the causal order rules out free will, so we lack it (<strong>Spinoza</strong>, <strong>d'Holbach</strong>; and among contemporaries <strong>Derk Pereboom</strong> and <strong>Galen Strawson</strong>, whose "basic argument" targets ultimate responsibility). <strong>Libertarians</strong> hold that we have free will and determinism is therefore false, in two forms: <em>agent-causal</em> — a self, not merely prior events, causes the action (<strong>Reid</strong>, <strong>Chisholm</strong>, <strong>O'Connor</strong>) — and <em>event-causal</em> — indeterministic yet controlled (<strong>Robert Kane</strong>). <strong>Compatibilists</strong> deny the conflict: freedom means acting from one's own will without external constraint, not metaphysical openness (<strong>Hobbes</strong>, <strong>Hume</strong>; <strong>Harry Frankfurt</strong>, who casts freedom as <em>higher-order</em> endorsement of one's desires and whose cases attack the alternate-possibilities principle; and <strong>Dennett</strong>). The sharpest case <em>for</em> incompatibilism is <strong>Peter van Inwagen's</strong> <em>consequence argument</em>: if our acts are consequences of the remote past and the laws, and neither is up to us, then our acts are not up to us.</p>
+      <div class="note">
+        <span class="note-label">The Islamic dimension</span>
+        <p>The <em>Muʿtazila</em> defended human free creation of acts, since divine justice requires it; the <em>Ashʿariyya</em> replied with <em>kasb</em> ("acquisition") — God creates the act, the human "acquires" it and so is accountable — a subtle, compatibilist-leaning mediation between omnipotence (<em>qadar</em>) and responsibility.</p>
+      </div>
+    </section>
+
+    <!-- Q10 -->
+    <section id="q10" class="major-section">
+      <span class="section-label">Question X</span>
+      <h2>Mind &amp; <em>Body</em></h2>
+      <p class="q-prompt">Consciousness and thought seem utterly unlike anything physical. What is the mind, and how does it fit into a physical world?</p>
+      <p>This overlaps philosophy of mind, but it is metaphysically central: it is a question about the <em>fundamental kinds</em> of thing there are.</p>
+
+      <h3 class="mini-head">Key concepts</h3>
+      <ul class="defs">
+        <li><span class="term">The hard problem</span> (Chalmers) — even a complete account of brain <em>function</em> leaves unexplained why there is <em>something it is like</em> to undergo it.</li>
+        <li><span class="term">Qualia</span> — the felt, subjective qualities of experience (the redness of red, the ache of pain).</li>
+        <li><span class="term">Supervenience</span> — the mental depends on and is fixed by the physical: no mental difference without a physical difference.</li>
+      </ul>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Substance dualism</strong> (<strong>Descartes</strong>) makes mind and body distinct substances; the notorious <em>interaction problem</em> — how can the unextended move the extended? — has dogged it ever since. <strong>Property dualism</strong> and <strong>panpsychism</strong> keep one kind of substance but treat mental properties as fundamental and irreducible; panpsychism (revived by <strong>Chalmers</strong> and <strong>Goff</strong>) makes experience a basic, ubiquitous feature of matter. <strong>Physicalism</strong> holds that the mind is physical, in several variants: the <em>identity theory</em> — mental states <em>are</em> brain states (<strong>Place</strong>, <strong>Smart</strong>); <em>functionalism</em> — mental states are defined by causal role and so are multiply realizable, capable of being implemented in neurons or silicon alike (<strong>Putnam</strong>); <em>eliminativism</em> — folk mental categories are a false theory to be replaced (the <strong>Churchlands</strong>); and <em>non-reductive physicalism</em> — the mental supervenes on but does not reduce to the physical. <strong>Idealism</strong> runs the reduction the other way: the physical reduces to the mental. <strong>Berkeley</strong>: <em>esse est percipi</em>, to be is to be perceived, with no mind-independent matter; German idealism (Fichte, Hegel) develops reality as the self-unfolding of spirit or reason.</p>
+      <div class="note">
+        <span class="note-label">Landmark challenges to physicalism</span>
+        <p><strong>Nagel's</strong> "What Is It Like to Be a Bat?" (the subjective character of experience eludes objective description); <strong>Jackson's</strong> knowledge argument (Mary the color scientist, who knows every physical fact about color yet learns something new on first seeing red); and <strong>Levine's</strong> <em>explanatory gap</em>.</p>
+      </div>
+    </section>
+
+    <!-- Q11 -->
+    <section id="q11" class="major-section">
+      <span class="section-label">Question XI</span>
+      <h2>The Fundamental <em>Structure of Reality</em></h2>
+      <p class="q-prompt">How many ultimate things are there — one or many? And of what kind is reality ultimately made?</p>
+
+      <h3 class="mini-head">Key concepts &amp; positions</h3>
+      <p><strong>Monism vs. pluralism</strong> asks whether reality is ultimately <em>one</em> (Parmenides; Spinoza's single substance; Bradley's Absolute) or <em>many</em>. A crucial modern refinement distinguishes <em>existence monism</em> (only one thing exists) from <strong>priority monism</strong> (<strong>Jonathan Schaffer</strong>): many things exist, but the <em>cosmos as a whole</em> is metaphysically prior to its parts, which are its abstractions. On the question of kind: <strong>materialism / physicalism</strong> makes the fundamental stuff physical; <strong>idealism</strong> makes it mental; <strong>neutral monism</strong> (<strong>Russell</strong>, <strong>James</strong>) makes it neither, with mind and matter both derived from it; <strong>dualism</strong> posits two irreducible fundamental kinds.</p>
+
+      <h3 class="mini-head">The contemporary frontier — grounding and fundamentality</h3>
+      <p>Much current analytic metaphysics has shifted from "<em>what</em> exists" to "<em>what is fundamental</em>, and what depends on it." <strong>Metaphysical grounding</strong> is a non-causal "in virtue of" relation — the party exists <em>in virtue of</em> the people; the mental holds <em>in virtue of</em> the physical. <strong>Fine</strong>, <strong>Rosen</strong>, <strong>Schaffer</strong>, and <strong>Sider</strong> (on the world's fundamental <em>structure</em>) recast the old realism debates as questions about layers of dependence rather than mere lists of entities.</p>
+    </section>
+
+    <!-- Q12 -->
+    <section id="q12" class="major-section">
+      <span class="section-label">Question XII</span>
+      <h2>Realism vs. <em>Anti-Realism</em></h2>
+      <p class="q-prompt">Does the world exist and have its character independently of any mind, or is reality in some way constituted by thought, language, or perception?</p>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Metaphysical realism</strong> holds that the world and its structure are mind-independent, and truth is correspondence to that world. <strong>Kant's</strong> <strong>transcendental idealism</strong> stages a Copernican revolution: we know only <em>appearances</em> (<em>phenomena</em>), structured by the mind's own forms — space, time, and the categories — while <em>things-in-themselves</em> (<em>noumena</em>) are real but unknowable; objects conform to our cognition rather than cognition to objects. <strong>Hegel's</strong> <strong>absolute idealism</strong> pushes further: the real is the rational, unfolding dialectically, and the distinction between mind and world is overcome in the Absolute. Modern <strong>anti-realisms</strong> come in several keys — <strong>Dummett</strong> (anti-realism motivated by a verificationist theory of meaning), <strong>Putnam's</strong> internal realism ("objects" exist only relative to a conceptual scheme), and <strong>Goodman's</strong> irrealist "ways of worldmaking."</p>
+      <div class="note">
+        <span class="note-label">Comparative note</span>
+        <p><strong>Advaita Vedānta</strong> (Śaṅkara) offers a non-Western idealist monism: <em>Brahman</em> alone is ultimately real, the plural world is <em>māyā</em> (appearance), and liberation is recognizing the identity of <em>ātman</em> and <em>Brahman</em> — a striking parallel to, and contrast with, both Parmenidean monism and Mullā Ṣadrā's <em>waḥdat al-wujūd</em> (unity of being).</p>
+      </div>
+    </section>
+
+    <!-- Q13 -->
+    <section id="q13" class="major-section">
+      <span class="section-label">Question XIII</span>
+      <h2>Parts &amp; Wholes <em>— composition</em></h2>
+      <p class="q-prompt">When do some things add up to a further thing? Do "tables" and "crowds" really exist over and above the particles arranged tablewise or the people arranged crowdwise?</p>
+      <p><em>Mereology</em> is the formal theory of the part–whole relation; the <strong>Special Composition Question</strong> (van Inwagen) asks: <em>under what conditions do some objects compose a further object?</em></p>
+
+      <h3 class="mini-head">Positions &amp; thinkers</h3>
+      <p><strong>Mereological nihilism</strong> holds that nothing composite exists — there are only mereological <em>simples</em> (fundamental particles), and "tables" are just simples arranged tablewise. <strong>Universalism</strong>, or unrestricted composition (<strong>David Lewis</strong>, Sider), goes to the opposite extreme: <em>any</em> things whatever compose a further object, however scattered — your nose plus the Eiffel Tower plus a distant star form a legitimate, if gerrymandered, object. <strong>Restricted composition</strong> (<strong>van Inwagen</strong>) charts a middle course: composition occurs only in special cases — for him, only when the activity of the parts constitutes a <em>life</em>, so the only composite objects are living organisms.</p>
+      <div class="note">
+        <span class="note-label">Related notions</span>
+        <p><em>Gunk</em> — matter infinitely divisible, with no simples at the bottom — versus <em>atomism</em>, on which composition bottoms out in partless simples.</p>
+      </div>
+    </section>
+
+    <!-- Q14 -->
+    <section id="q14" class="major-section">
+      <span class="section-label">Question XIV</span>
+      <h2>God &amp; the <em>Ground of Being</em></h2>
+      <p class="q-prompt">Is there a necessary, self-existent ground of all contingent reality? This is metaphysics' oldest overlap with theology, pursued by argument rather than revelation.</p>
+
+      <h3 class="mini-head">Key arguments &amp; concepts</h3>
+      <p><strong>Cosmological arguments</strong> reason from the existence or contingency of the world to a first or necessary cause: <strong>Aquinas's</strong> Five Ways (motion, causation, contingency, degrees, teleology); the <strong>kalām cosmological argument</strong> (al-Kindī, al-Ghazālī, revived by William Lane Craig) — the universe began to exist, whatever begins has a cause, therefore the universe has a cause; and <strong>Leibniz's</strong> version from the <em>Principle of Sufficient Reason</em> (why is there something rather than nothing?). <strong>Ibn Sīnā's</strong> contingency argument — from <em>mumkin al-wujūd</em> to <em>wājib al-wujūd</em> — is the modal spine of the whole family.</p>
+      <p><strong>Ontological arguments</strong> run entirely a priori, from the <em>concept</em> of God to God's existence. <strong>Anselm</strong>: God is <em>that than which nothing greater can be conceived</em>, and such a being must exist in reality, not merely in the understanding. <strong>Descartes'</strong> version makes existence belong to the essence of a perfect being; <strong>Gödel</strong> gives a formalization; <strong>Plantinga's</strong> modal version argues that a <em>maximally great being</em> exists in some possible world, hence — given the modal system S5 — in all, hence in this one.</p>
+      <p>The <strong>divine attributes</strong> are themselves metaphysical notions: <em>aseity</em> (self-existence), <em>necessity</em>, <em>simplicity</em> (no composition of parts), and <em>timelessness</em>.</p>
+
+      <h3 class="mini-head">Positions</h3>
+      <p><em>Classical theism</em> (God as necessary, simple, timeless, immutable — Aquinas, Ibn Sīnā, Maimonides) stands against <em>process theism</em> (<strong>Whitehead</strong>, <strong>Hartshorne</strong> — God as dipolar, in genuine temporal relation to a becoming world), with <strong>Tillich's</strong> "God as the <em>ground of being</em>," beyond the subject/object of ordinary existence-talk, as a third path.</p>
+    </section>
+
+    <!-- Q15 -->
+    <section id="q15" class="major-section">
+      <span class="section-label">Question XV</span>
+      <h2>Is Metaphysics Even <em>Possible?</em></h2>
+      <p class="q-prompt">Can reason reach truths about reality beyond all possible experience? Or is metaphysics a tissue of pseudo-problems?</p>
+
+      <h3 class="mini-head">The critical tradition and its answers</h3>
+      <p><strong>Kant</strong> argues that transcendent metaphysics — soul, cosmos, God — inevitably overreaches the bounds of possible experience and collapses into <em>antinomies</em>, equally good proofs of contradictory theses. Legitimate metaphysics is only the <em>critique</em> of the mind's own a priori structure. <strong>Logical positivism</strong> — the <strong>Vienna Circle</strong>, <strong>Carnap</strong>, <strong>Ayer</strong> — goes further: metaphysical statements are neither analytic nor empirically verifiable, hence <em>cognitively meaningless</em>, not false but nonsense (Carnap, "The Elimination of Metaphysics Through Logical Analysis of Language"). Carnap's <em>internal vs. external</em> distinction dissolves many disputes: "do numbers exist?" is trivial <em>inside</em> the framework of arithmetic and merely a pragmatic choice-of-language <em>outside</em> it.</p>
+      <p><strong>Quine</strong> dismantles the analytic/synthetic distinction ("Two Dogmas of Empiricism") and with it the positivists' basis for excluding metaphysics; he rehabilitates ontology as <em>continuous with natural science</em> — we should believe in whatever our best total theory of the world must quantify over. This is <em>naturalized</em> metaphysics. The <strong>neo-Aristotelian revival</strong> (<strong>Fine</strong>, <strong>Lowe</strong>, <strong>Schaffer</strong>, and others) then argues that the interesting questions were never mainly about <em>existence</em> — which is often cheap — but about <em>essence, grounding, fundamentality, and powers</em>, reviving a robust, non-positivist metaphysics of structure.</p>
+      <div class="note">
+        <span class="note-label">How metaphysics is done</span>
+        <p>Its characteristic tools: <em>conceptual analysis</em>; <em>thought experiments</em> and intuitions (the Ship of Theseus, the teletransporter, philosophical zombies); <em>theoretical virtues</em> borrowed from science (parsimony — <strong>Ockham's razor</strong> — explanatory power, elegance, fit with total theory); and, in the naturalist camp, close attention to what our best physics actually posits.</p>
+      </div>
+    </section>
+
+  </article>
+  <!-- Map + closing -->
+  <article class="article-body">
+
+    <section id="s-map" class="major-section">
+      <span class="section-label">Summary</span>
+      <h2>A Map to <em>Keep</em></h2>
+      <p>The whole field on one page — fifteen questions, the core dispute animating each, and the representative positions that divide it.</p>
+      <div class="table-wrap">
+        <table class="map">
+          <thead>
+            <tr><th>Big question</th><th>Core dispute</th><th>Representative positions</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>What is being?</td><td>Is existence a property? What's the inventory?</td><td>Aristotle's categories · Quine's ontological commitment · Ibn Sīnā's essence/existence · Ṣadrā's primacy of existence</td></tr>
+            <tr><td>What is substance?</td><td>Bearer beneath properties, or bundle?</td><td>Hylomorphism · substratum · bundle · trope</td></tr>
+            <tr><td>Universals</td><td>One-over-many</td><td>Platonic &amp; Aristotelian realism · nominalism · conceptualism</td></tr>
+            <tr><td>Persistence</td><td>How survive change?</td><td>Endurantism · perdurantism · stage theory</td></tr>
+            <tr><td>Personal identity</td><td>What makes you you?</td><td>Soul · psychological continuity · animalism · Parfit</td></tr>
+            <tr><td>Time</td><td>Does time pass?</td><td>A- vs. B-theory · presentism · eternalism · growing block</td></tr>
+            <tr><td>Causation</td><td>Real connection or regularity?</td><td>Hume · counterfactual · powers · occasionalism</td></tr>
+            <tr><td>Modality</td><td>What grounds necessity?</td><td>Lewis's worlds · actualism · Kripkean essentialism</td></tr>
+            <tr><td>Free will</td><td>Compatible with determinism?</td><td>Hard determinism · libertarianism · compatibilism</td></tr>
+            <tr><td>Mind &amp; body</td><td>Where does consciousness fit?</td><td>Dualism · physicalism · idealism · panpsychism</td></tr>
+            <tr><td>Fundamental structure</td><td>One or many; of what kind?</td><td>Monism · pluralism · materialism · idealism · grounding</td></tr>
+            <tr><td>Realism</td><td>Mind-independent world?</td><td>Realism · Kantian idealism · anti-realism</td></tr>
+            <tr><td>Parts &amp; wholes</td><td>When do things compose?</td><td>Nihilism · universalism · restricted composition</td></tr>
+            <tr><td>God / ground of being</td><td>A necessary first reality?</td><td>Cosmological · ontological arguments · classical vs. process theism</td></tr>
+            <tr><td>Is metaphysics possible?</td><td>Legitimate knowledge?</td><td>Kant · positivism · Quinean naturalism · neo-Aristotelian revival</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s-close" class="major-section">
+      <span class="section-label">Closing</span>
+      <h2>The Threads That <em>Interlock</em></h2>
+      <p>Two cross-cutting observations are worth carrying into any deeper study.</p>
+      <p><strong>First, the questions interlock.</strong> Your theory of time constrains your theory of persistence, which in turn constrains personal identity. Your view on universals shapes your view on modality and laws of nature. Choose a position in one corner of the field and you have quietly committed yourself in several others.</p>
+      <p class="pull-quote">Metaphysics is less a settled body of doctrine than a small set of very deep questions that every serious civilization has been unable to leave alone.</p>
+      <p><strong>Second, the same problems recur across traditions with independent vocabularies.</strong> The essence/existence distinction runs from Ibn Sīnā to Aquinas to the existentialists. Occasionalism links Ash'arite <em>kalām</em> to Malebranche to Hume. No-self connects Parfit to the Buddhist <em>skandhas</em>. Monism ties Parmenides to Spinoza to Śaṅkara to Ṣadrā. The reader who learns to see these convergences has learned something about the structure of the problems themselves — and about the minds, in every age, that could not stop asking.</p>
+    </section>
+
+  </article>
+
+  </main><!-- /main#main-content -->
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  </footer>
+
+  <script>
+    /* ── Progress bar ─────────────────────────────────────── */
+    (function () {
+      const bar = document.getElementById('progressBar');
+      if (!bar) return;
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docH > 0 ? (scrollTop / docH * 100) : 0) + '%';
+      }, { passive: true });
+    })();
+
+    /* ── Explorer: faceted filter + live search ───────────── */
+    (function () {
+      const qShort = {
+        1:"Being", 2:"Substance", 3:"Universals", 4:"Persistence", 5:"Identity",
+        6:"Time", 7:"Causation", 8:"Modality", 9:"Free Will", 10:"Mind & Body",
+        11:"Structure", 12:"Realism", 13:"Parts & Wholes", 14:"God", 15:"Meta"
+      };
+      const tradOrder = ["Ancient Greek","Medieval","Islamic","Early Modern","Modern","Contemporary","Non-Western"];
+
+      const DATA = [
+        {t:"Parmenidean monism",q:1,trad:["Ancient Greek"],who:"Parmenides",d:"Being is one, ungenerated, and changeless; non-being cannot be thought, so change is illusion."},
+        {t:"Heraclitean flux",q:1,trad:["Ancient Greek"],who:"Heraclitus",d:"Reality is flux and unity-in-tension: you cannot step into the same river twice."},
+        {t:"Being said in many ways",q:1,trad:["Ancient Greek"],who:"Aristotle",d:"Being is no single genus; the ten categories map its many senses, with substance primary."},
+        {t:"Meinong's jungle",q:1,trad:["Modern"],who:"Meinong",d:"Even non-existent and impossible objects subsist and can bear properties."},
+        {t:"Desert-landscape ontology",q:1,trad:["Contemporary"],who:"Quine",d:"To be is to be the value of a bound variable; admit only what our best science must quantify over."},
+        {t:"The question of Being",q:1,trad:["Modern","Contemporary"],who:"Heidegger",d:"The tradition forgot Being itself; Dasein is the entity for whom Being is a question."},
+        {t:"Essence and existence",q:1,trad:["Islamic","Medieval"],who:"Ibn Sīnā (Avicenna)",d:"In contingent things essence is separable from existence; only in the Necessary Being are they one."},
+        {t:"Primacy of existence",q:1,trad:["Islamic"],who:"Mullā Ṣadrā",d:"Existence, not essence, is fundamental; being is one graded reality (tashkīk)."},
+
+        {t:"Primary substance & hylomorphism",q:2,trad:["Ancient Greek"],who:"Aristotle",d:"Concrete individuals are primary; each is matter (hylē) informed by form (morphē)."},
+        {t:"Two created substances",q:2,trad:["Early Modern"],who:"Descartes",d:"Thinking, unextended substance (res cogitans) and extended, unthinking substance (res extensa)."},
+        {t:"Substance monism",q:2,trad:["Early Modern"],who:"Spinoza",d:"Only one self-sufficient substance exists — God-or-Nature; all else is its modes."},
+        {t:"Monads",q:2,trad:["Early Modern"],who:"Leibniz",d:"Infinitely many partless, windowless simple substances, coordinated by pre-established harmony."},
+        {t:"Substratum theory",q:2,trad:["Early Modern","Contemporary"],who:"Locke, Bergmann",d:"A thin, propertyless bearer underlies and individuates a thing's properties."},
+        {t:"Bundle theory",q:2,trad:["Early Modern","Modern"],who:"Hume, Russell",d:"No bare bearer: an object just is a co-located bundle of its properties."},
+        {t:"Trope theory",q:2,trad:["Contemporary"],who:"D. C. Williams, Campbell",d:"The world's basic constituents are property-particulars — this red, not redness in general."},
+
+        {t:"Platonic realism",q:3,trad:["Ancient Greek"],who:"Plato",d:"Forms exist transcendently, outside space and time; particulars participate in them."},
+        {t:"Immanent realism",q:3,trad:["Ancient Greek"],who:"Aristotle",d:"Universals are real but exist only in their instances, not in a separate realm."},
+        {t:"Nominalism",q:3,trad:["Medieval"],who:"William of Ockham",d:"Only particulars exist; universals are just names, classes, or resemblances."},
+        {t:"Conceptualism",q:3,trad:["Medieval"],who:"Abelard, Porphyry, Boethius",d:"Universals exist as concepts in the mind, not as mind-independent things."},
+        {t:"Scientific realism about universals",q:3,trad:["Contemporary"],who:"D. M. Armstrong",d:"Admit only those universals mature physics needs, discovered a posteriori and immanent in things."},
+
+        {t:"Endurantism",q:4,trad:["Contemporary"],who:"",d:"A persisting thing is wholly present at each moment it exists; it has no temporal parts."},
+        {t:"Perdurantism",q:4,trad:["Contemporary"],who:"Lewis, Quine",d:"A thing has distinct temporal parts; the whole object is a four-dimensional spacetime worm."},
+        {t:"Stage theory (exdurantism)",q:4,trad:["Contemporary"],who:"Sider, Hawley",d:"The object is a momentary stage; persistence is analyzed as a relation among stages."},
+
+        {t:"Soul / substance view",q:5,trad:["Early Modern"],who:"Descartes",d:"You are an immaterial substance persisting through all bodily and mental change."},
+        {t:"Psychological continuity",q:5,trad:["Early Modern"],who:"Locke",d:"Identity is continuity of consciousness and memory, not sameness of soul or body."},
+        {t:"Animalism",q:5,trad:["Contemporary"],who:"Eric Olson",d:"You are a human animal; your identity is the persistence of the organism, not a psychology."},
+        {t:"Reductionism (Relation R)",q:5,trad:["Contemporary"],who:"Derek Parfit",d:"Identity is no deep further fact; what matters is psychological continuity, which can branch."},
+        {t:"No-self (anattā)",q:5,trad:["Non-Western"],who:"Buddhist skandhas",d:"The person is a bundle of ever-changing aggregates, with no persisting substantial self."},
+
+        {t:"Presentism",q:6,trad:["Contemporary"],who:"",d:"Only the present exists; past and future are unreal."},
+        {t:"Eternalism (block universe)",q:6,trad:["Contemporary"],who:"",d:"All times are equally real; 'now' merely marks one's location in a four-dimensional block."},
+        {t:"Growing block",q:6,trad:["Contemporary"],who:"",d:"Past and present are real and fixed; the future is open and unreal, so reality accretes."},
+        {t:"Unreality of time",q:6,trad:["Modern"],who:"McTaggart",d:"Real change needs the A-series, but the A-series is contradictory — so time is unreal (Mind, 1908)."},
+        {t:"A-theory (real tense)",q:6,trad:["Contemporary"],who:"A. N. Prior",d:"Tense and passage are objective features of reality; the founder of tense logic defends them."},
+        {t:"B-theory (tenseless)",q:6,trad:["Contemporary"],who:"D. C. Williams",d:"Reality is fundamentally tenseless; passage is a myth, 'now' as indexical as 'here'."},
+        {t:"Time in the mind",q:6,trad:["Ancient Greek","Medieval"],who:"Augustine",d:"Time is the mind's distentio, its stretch between memory and expectation."},
+        {t:"Substantivalism vs. relationism",q:6,trad:["Early Modern"],who:"Newton, Leibniz",d:"Is space an absolute container, or only the system of relations among bodies?"},
+
+        {t:"Regularity theory",q:7,trad:["Early Modern"],who:"Hume",d:"No observable necessary connection — only constant conjunction and the mind's habit of expectation."},
+        {t:"Causation as a category",q:7,trad:["Modern"],who:"Kant",d:"Causal necessity is imposed by the understanding as a condition of possible experience."},
+        {t:"Counterfactual theory",q:7,trad:["Contemporary"],who:"David Lewis",d:"c causes e iff, had c not occurred, e would not have — spelled out via possible worlds."},
+        {t:"Powers / dispositional realism",q:7,trad:["Contemporary"],who:"Molnar, Mumford, Bird",d:"Things have real causal powers; causation is their manifestation — necessity returns to nature."},
+        {t:"Interventionism",q:7,trad:["Contemporary"],who:"Woodward, Pearl",d:"Causes are what you could manipulate to change effects — difference-making under intervention."},
+        {t:"Occasionalism",q:7,trad:["Islamic","Early Modern"],who:"al-Ghazālī, Malebranche",d:"God, not the fire, creates the burning; cause and effect are only habitually conjoined."},
+        {t:"The four causes",q:7,trad:["Ancient Greek"],who:"Aristotle",d:"Material, formal, efficient, and final — four senses of why a thing is as it is."},
+
+        {t:"Possible worlds as divine ideas",q:8,trad:["Early Modern"],who:"Leibniz",d:"God's intellect conceives infinitely many possible worlds; the actual world is the best."},
+        {t:"Modal realism",q:8,trad:["Contemporary"],who:"David Lewis",d:"Possible worlds are concrete, isolated universes as real as our own; 'actual' is indexical."},
+        {t:"Actualism / ersatzism",q:8,trad:["Contemporary"],who:"Plantinga, Stalnaker",d:"Possible worlds are abstract objects; only the actual world is concrete."},
+        {t:"Rigid designation & a posteriori necessity",q:8,trad:["Contemporary"],who:"Kripke",d:"Names are rigid designators; some necessary truths (water = H₂O) are discovered empirically."},
+        {t:"Essence beyond modality",q:8,trad:["Contemporary"],who:"Kit Fine",d:"Essence is real definition, not mere necessity — the more basic notion."},
+
+        {t:"Hard determinism / incompatibilism",q:9,trad:["Early Modern","Contemporary"],who:"Spinoza, d'Holbach, Pereboom, Strawson",d:"The causal order rules out free will and ultimate responsibility; we simply lack them."},
+        {t:"Libertarianism (agent-causal)",q:9,trad:["Early Modern","Contemporary"],who:"Reid, Chisholm, O'Connor",d:"A self, not merely prior events, causes the free action — so determinism is false."},
+        {t:"Libertarianism (event-causal)",q:9,trad:["Contemporary"],who:"Robert Kane",d:"Free acts are indeterministic yet genuinely controlled by the agent."},
+        {t:"Compatibilism",q:9,trad:["Early Modern","Contemporary"],who:"Hobbes, Hume, Frankfurt, Dennett",d:"Freedom is acting from one's own will without constraint — compatible with determinism."},
+        {t:"The consequence argument",q:9,trad:["Contemporary"],who:"van Inwagen",d:"If our acts follow from the remote past and the laws, and neither is up to us, neither are they."},
+        {t:"Free creation of acts",q:9,trad:["Islamic"],who:"Muʿtazila",d:"Divine justice requires that humans freely create their own acts."},
+        {t:"Acquisition (kasb)",q:9,trad:["Islamic"],who:"Ashʿariyya",d:"God creates the act; the human acquires it and is thereby accountable."},
+
+        {t:"Substance dualism",q:10,trad:["Early Modern"],who:"Descartes",d:"Mind and body are distinct substances; how the unextended moves the extended is the standing problem."},
+        {t:"Property dualism / panpsychism",q:10,trad:["Contemporary"],who:"Chalmers, Goff",d:"Mental properties are fundamental; experience may be a basic, ubiquitous feature of matter."},
+        {t:"Identity theory",q:10,trad:["Contemporary"],who:"Place, Smart",d:"Mental states just are brain states."},
+        {t:"Functionalism",q:10,trad:["Contemporary"],who:"Putnam",d:"Mental states are defined by causal role, and so are multiply realizable — in neurons or silicon."},
+        {t:"Eliminativism",q:10,trad:["Contemporary"],who:"the Churchlands",d:"Folk mental categories are a false theory, to be replaced by mature neuroscience."},
+        {t:"Idealism (esse est percipi)",q:10,trad:["Early Modern"],who:"Berkeley",d:"To be is to be perceived; there is no mind-independent matter."},
+
+        {t:"Priority monism",q:11,trad:["Contemporary"],who:"Jonathan Schaffer",d:"Many things exist, but the cosmos as a whole is metaphysically prior to its parts."},
+        {t:"Neutral monism",q:11,trad:["Modern"],who:"Russell, James",d:"The fundamental stuff is neither mental nor physical; both are derived from it."},
+        {t:"Metaphysical grounding",q:11,trad:["Contemporary"],who:"Fine, Rosen, Schaffer, Sider",d:"A non-causal 'in virtue of' relation; reality is layers of dependence, not a flat list."},
+        {t:"Materialism / physicalism",q:11,trad:["Contemporary"],who:"",d:"The fundamental stuff of reality is physical."},
+        {t:"Existence monism",q:11,trad:["Ancient Greek","Early Modern"],who:"Parmenides, Spinoza, Bradley",d:"Ultimately only one thing exists; all plurality is appearance."},
+
+        {t:"Metaphysical realism",q:12,trad:["Contemporary"],who:"",d:"The world and its structure are mind-independent; truth is correspondence to that world."},
+        {t:"Transcendental idealism",q:12,trad:["Modern"],who:"Kant",d:"We know only appearances, structured by the mind's forms; things-in-themselves are unknowable."},
+        {t:"Absolute idealism",q:12,trad:["Modern"],who:"Hegel",d:"The real is the rational, unfolding dialectically; mind and world unite in the Absolute."},
+        {t:"Internal realism / anti-realism",q:12,trad:["Contemporary"],who:"Dummett, Putnam, Goodman",d:"Objects exist only relative to a conceptual scheme, or to a verificationist theory of meaning."},
+        {t:"Advaita Vedānta",q:12,trad:["Non-Western"],who:"Śaṅkara",d:"Brahman alone is ultimately real; the plural world is māyā, appearance."},
+
+        {t:"Mereological nihilism",q:13,trad:["Contemporary"],who:"",d:"Nothing composite exists — only simples arranged tablewise, crowdwise, and so on."},
+        {t:"Universalism (unrestricted composition)",q:13,trad:["Contemporary"],who:"Lewis, Sider",d:"Any things whatever compose a further object, however scattered or gerrymandered."},
+        {t:"Restricted composition",q:13,trad:["Contemporary"],who:"van Inwagen",d:"Composition occurs only when the parts constitute a life — so only organisms compose."},
+
+        {t:"Cosmological arguments",q:14,trad:["Medieval","Islamic","Early Modern"],who:"Aquinas, al-Kindī, al-Ghazālī, Leibniz, Ibn Sīnā",d:"From the world's existence or contingency to a first or necessary cause."},
+        {t:"Ontological arguments",q:14,trad:["Medieval","Early Modern","Contemporary"],who:"Anselm, Descartes, Gödel, Plantinga",d:"From the concept of God, entirely a priori, to God's existence."},
+        {t:"Classical theism",q:14,trad:["Medieval","Islamic"],who:"Aquinas, Ibn Sīnā, Maimonides",d:"God as necessary, simple, timeless, and immutable."},
+        {t:"Process theism",q:14,trad:["Contemporary"],who:"Whitehead, Hartshorne",d:"God is dipolar, in genuine temporal relation to a becoming world."},
+        {t:"God as the ground of being",q:14,trad:["Modern"],who:"Tillich",d:"God is being-itself, beyond the subject/object of ordinary existence-talk."},
+
+        {t:"Critique & the antinomies",q:15,trad:["Modern"],who:"Kant",d:"Transcendent metaphysics overreaches possible experience and collapses into antinomies."},
+        {t:"Logical positivism",q:15,trad:["Modern"],who:"Vienna Circle, Carnap, Ayer",d:"Metaphysical claims are neither analytic nor verifiable, hence cognitively meaningless."},
+        {t:"Naturalized metaphysics",q:15,trad:["Contemporary"],who:"Quine",d:"Ontology is continuous with science: believe whatever your best total theory quantifies over."},
+        {t:"Neo-Aristotelian revival",q:15,trad:["Contemporary"],who:"Fine, Lowe, Schaffer",d:"The real questions are essence, grounding, fundamentality, and powers — not mere existence."}
+      ];
+
+      const activeQ = new Set();
+      const activeTrad = new Set();
+      let term = "";
+
+      const facetQ    = document.getElementById('facetQuestion');
+      const facetT    = document.getElementById('facetTradition');
+      const grid      = document.getElementById('cardGrid');
+      const meta      = document.getElementById('resultMeta');
+      const input     = document.getElementById('searchInput');
+      const clearBtn  = document.getElementById('searchClear');
+      const resetBtn  = document.getElementById('resetBtn');
+
+      // Build question chips in numeric order
+      Object.keys(qShort).map(Number).sort((a,b)=>a-b).forEach(n => {
+        const b = document.createElement('button');
+        b.className = 'chip';
+        b.type = 'button';
+        b.textContent = qShort[n];
+        b.setAttribute('aria-pressed','false');
+        b.addEventListener('click', () => {
+          if (activeQ.has(n)) { activeQ.delete(n); b.classList.remove('active'); b.setAttribute('aria-pressed','false'); }
+          else { activeQ.add(n); b.classList.add('active'); b.setAttribute('aria-pressed','true'); }
+          render();
+        });
+        facetQ.appendChild(b);
+      });
+
+      // Build tradition chips in canonical order
+      tradOrder.forEach(tr => {
+        const b = document.createElement('button');
+        b.className = 'chip';
+        b.type = 'button';
+        b.textContent = tr;
+        b.setAttribute('aria-pressed','false');
+        b.addEventListener('click', () => {
+          if (activeTrad.has(tr)) { activeTrad.delete(tr); b.classList.remove('active'); b.setAttribute('aria-pressed','false'); }
+          else { activeTrad.add(tr); b.classList.add('active'); b.setAttribute('aria-pressed','true'); }
+          render();
+        });
+        facetT.appendChild(b);
+      });
+
+      function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+      function escRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+      function hi(s){
+        const safe = esc(s);
+        if (!term) return safe;
+        try { return safe.replace(new RegExp('('+escRe(term)+')','ig'), '<mark>$1</mark>'); }
+        catch(e){ return safe; }
+      }
+
+      function render(){
+        const t = term.trim().toLowerCase();
+        const matches = DATA.filter(c => {
+          const okQ = activeQ.size === 0 || activeQ.has(c.q);
+          const okT = activeTrad.size === 0 || c.trad.some(x => activeTrad.has(x));
+          const hay = (c.t + ' ' + c.who + ' ' + c.d + ' ' + qShort[c.q] + ' ' + c.trad.join(' ')).toLowerCase();
+          const okS = t === '' || hay.indexOf(t) !== -1;
+          return okQ && okT && okS;
+        });
+
+        const anyFilter = activeQ.size || activeTrad.size || term;
+        resetBtn.disabled = !anyFilter;
+
+        meta.textContent = matches.length === DATA.length
+          ? `All ${DATA.length} positions`
+          : `${matches.length} of ${DATA.length} position${matches.length===1?'':'s'}`;
+
+        if (matches.length === 0){
+          grid.innerHTML = `<div class="empty-state"><strong>No positions match</strong>Try removing a filter or clearing the search.</div>`;
+          return;
+        }
+
+        grid.innerHTML = matches.map(c => {
+          const tags = [`<span class="p-tag q">${esc(qShort[c.q])}</span>`]
+            .concat(c.trad.slice(0,2).map(x => `<span class="p-tag">${esc(x)}</span>`)).join('');
+          const who = c.who ? `<div class="p-thinkers">${hi(c.who)}</div>` : '';
+          return `<article class="p-card">
+            <div class="p-tags">${tags}</div>
+            <h4>${hi(c.t)}</h4>
+            ${who}
+            <p class="p-desc">${hi(c.d)}</p>
+            <a class="p-jump" href="#q${c.q}">Read the full discussion →</a>
+          </article>`;
+        }).join('');
+      }
+
+      input.addEventListener('input', () => {
+        term = input.value;
+        clearBtn.classList.toggle('show', term.length > 0);
+        render();
+      });
+      clearBtn.addEventListener('click', () => {
+        term = ''; input.value = ''; clearBtn.classList.remove('show'); input.focus(); render();
+      });
+      resetBtn.addEventListener('click', () => {
+        activeQ.clear(); activeTrad.clear(); term = ''; input.value = '';
+        clearBtn.classList.remove('show');
+        document.querySelectorAll('.filter-rail .chip.active').forEach(ch => {
+          ch.classList.remove('active'); ch.setAttribute('aria-pressed','false');
+        });
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
