@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Field Guide to Reference Works | Yasir Bilgin</title>
+
+  <meta name="description" content="A searchable field guide to 34 kinds of reference work — from dictionaries and concordances to gazetteers and prosopographies — each with a real example.">
+  <meta name="keywords" content="reference works, library science, research skills">
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/Reference-Guides/reference-works-field-guide.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="A Field Guide to Reference Works">
+  <meta property="og:description" content="A searchable field guide to 34 kinds of reference work — from dictionaries and concordances to gazetteers and prosopographies — each with a real example.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Reference-Guides/reference-works-field-guide.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="A Field Guide to Reference Works">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="A Field Guide to Reference Works">
+  <meta name="twitter:description" content="A searchable field guide to 34 kinds of reference work — from dictionaries and concordances to gazetteers and prosopographies — each with a real example.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "A Field Guide to Reference Works",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-08-13",
+    "dateModified": "2026-08-13",
+    "description": "A searchable field guide to 34 kinds of reference work — from dictionaries and concordances to gazetteers and prosopographies — each with a real example.",
+    "url": "https://yasirbilgin.com/atlas/Reference-Guides/reference-works-field-guide.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas",   "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "A Field Guide to Reference Works", "item": "https://yasirbilgin.com/atlas/Reference-Guides/reference-works-field-guide.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Self-contained palette (mirrors site tokens; falls back gracefully) ── */
+    :root{
+      --bg:#f7f3ec; --surface:#fffdf8; --surface-2:#f2ece0;
+      --ink:#26201a; --body:#3a322a; --faint:#6e5f4e;
+      --line:rgba(107,93,79,0.18); --line-strong:rgba(107,93,79,0.32);
+      --accent:#c9a84c; --accent-deep:#9a7d2e;
+      --d-language:#2f6f68; --d-general:#8a6a2f; --d-science:#3f648c;
+      --d-business:#6b568c; --d-history:#9a5a44; --d-religion:#4f7a46; --d-law:#7a6636;
+      --shadow:0 1px 2px rgba(38,32,26,.05),0 8px 24px rgba(38,32,26,.06);
+      --content-w:1180px; --prose-w:760px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#131310; --surface:#1c1a15; --surface-2:#221f19;
+        --ink:#ece7dd; --body:#d7d0c4; --faint:#9a8e7c;
+        --line:rgba(255,255,255,0.10); --line-strong:rgba(255,255,255,0.18);
+        --accent:#d8b862; --accent-deep:#c9a84c;
+        --d-language:#6fb8ae; --d-general:#d3a758; --d-science:#84add8;
+        --d-business:#b298d8; --d-history:#d89a86; --d-religion:#8fc082; --d-law:#cbb277;
+        --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+      }
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0; background:var(--bg); color:var(--body);
+      font-family:'Source Serif 4', Georgia, 'Times New Roman', serif;
+      font-size:18px; line-height:1.8; -webkit-font-smoothing:antialiased;
+    }
+    ::selection{background:rgba(201,168,76,.28);}
+    a{color:var(--accent-deep); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:.5px;}
+    a:hover{color:var(--ink);}
+    em{font-style:italic;}
+
+    /* ── Progress bar ── */
+    .progress-bar{position:fixed; top:62px; left:0; height:3px; background:var(--accent); width:0%; z-index:100;}
+
+    /* ── TOC overlay ── */
+    .toc-overlay{display:none; position:fixed; inset:0; z-index:9000; background:rgba(24,20,14,0.55);}
+    .toc-overlay.open{display:flex; align-items:flex-start; justify-content:flex-end; backdrop-filter:blur(4px);}
+    .toc-panel{background:var(--surface); width:min(420px,86vw); height:100%; overflow-y:auto;
+      padding:2.4rem 2rem; box-shadow:-12px 0 40px rgba(0,0,0,.18); border-left:1px solid var(--line);}
+    .toc-panel h3{font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; margin:.2rem 0 1.2rem; color:var(--ink); font-weight:600;}
+    .toc-panel>button{float:right; background:none; border:none; font-size:1.3rem; cursor:pointer; color:var(--faint); line-height:1;}
+    .toc-list{list-style:none; margin:0; padding:0;}
+    .toc-list li{margin:0;}
+    .toc-list a{display:block; padding:.55rem .2rem; text-decoration:none; color:var(--body); border-bottom:1px solid var(--line); font-size:.98rem;}
+    .toc-list a.toc-main{font-family:'Cormorant Garamond',Georgia,serif; font-size:1.18rem; color:var(--ink); font-weight:600;}
+    .toc-list a:hover{color:var(--accent-deep);}
+
+    /* ── Hero ── */
+    .hero{max-width:var(--content-w); margin:0 auto; padding:3.4rem 2.5rem 0;}
+    .eyebrow{
+      display:inline-flex; align-items:center; margin-bottom:1.5rem; padding:.35rem .9rem;
+      border:1px solid rgba(107,93,79,0.22); border-radius:999px; color:var(--faint);
+      font-size:.72rem; font-family:'Source Serif 4',Georgia,serif; letter-spacing:.13em;
+      text-transform:uppercase; background:rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark){
+      .eyebrow{border-color:rgba(255,255,255,0.14); background:rgba(30,27,23,0.7); color:var(--faint);}
+    }
+    .hero h1{
+      font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; color:var(--ink);
+      font-size:clamp(2.4rem,6vw,4.6rem); line-height:1.04; letter-spacing:-.01em; margin:0 0 1.2rem;
+    }
+    .hero h1 em{font-style:italic; color:var(--accent-deep);}
+    .hero-sub{
+      max-width:var(--prose-w); font-size:clamp(1.08rem,2.2vw,1.32rem); color:var(--faint);
+      line-height:1.6; margin:0 0 2rem;
+    }
+    .byline-row{display:flex; align-items:center; gap:.9rem; margin-bottom:2.6rem;}
+    .avatar{width:44px; height:44px; border-radius:50%; background:var(--accent); color:#241c07;
+      display:flex; align-items:center; justify-content:center; font-family:'DM Sans',system-ui,sans-serif;
+      font-weight:600; font-size:.9rem; letter-spacing:.02em;}
+    .byline-text{display:flex; flex-direction:column; line-height:1.35;}
+    .byline-name{font-family:'DM Sans',system-ui,sans-serif; font-weight:600; color:var(--ink); font-size:.95rem;}
+    .byline-meta{font-family:'DM Sans',system-ui,sans-serif; color:var(--faint); font-size:.82rem;}
+    .hero-rule{max-width:var(--content-w); margin:0 auto; border:none; border-top:1px solid var(--line-strong); height:0;}
+
+    /* ── Article meta-bar (static) ── */
+    .article-header{
+      max-width:var(--content-w); margin:0 auto; display:flex; align-items:center;
+      justify-content:flex-end; gap:1rem; padding:.75rem 2.5rem;
+    }
+    .read-time{font-family:'DM Sans',system-ui,sans-serif; font-size:.8rem; letter-spacing:.06em;
+      text-transform:uppercase; color:var(--faint);}
+    .toc-btn{font-family:'DM Sans',system-ui,sans-serif; font-size:.8rem; letter-spacing:.06em;
+      text-transform:uppercase; color:var(--ink); background:var(--surface); border:1px solid var(--line-strong);
+      border-radius:999px; padding:.5rem 1.1rem; cursor:pointer; min-height:44px;}
+    .toc-btn:hover{border-color:var(--accent); color:var(--accent-deep);}
+
+    /* ── Article body ── */
+    .article-body{max-width:var(--content-w); margin:0 auto; padding:3.2rem 2.5rem 7rem;}
+    .major-section{margin:0 0 4.6rem; scroll-margin-top:80px;}
+    .prose{max-width:var(--prose-w);}
+    .section-label{
+      display:block; font-family:'DM Sans',system-ui,sans-serif; font-size:.74rem; font-weight:600;
+      letter-spacing:.16em; text-transform:uppercase; color:var(--accent-deep); margin:0 0 .7rem;
+    }
+    .article-body h2{
+      font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; color:var(--ink);
+      font-size:clamp(1.9rem,4vw,2.9rem); line-height:1.1; letter-spacing:-.01em; margin:0 0 1.3rem;
+    }
+    .article-body h2 em{font-style:italic; color:var(--accent-deep);}
+    .article-body h3{
+      font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; color:var(--ink);
+      font-size:clamp(1.35rem,2.6vw,1.7rem); line-height:1.2; margin:2.6rem 0 .8rem;
+    }
+    .article-body p{margin:0 0 1.3rem;}
+    .lead{font-size:1.2rem; color:var(--ink); line-height:1.7;}
+    .prose strong{color:var(--ink); font-weight:600;}
+
+    .pull-quote{
+      max-width:var(--prose-w); margin:3rem 0 3rem -1.4rem; padding:.2rem 0 .2rem 1.6rem;
+      border-left:3px solid var(--accent); font-family:'Cormorant Garamond',Georgia,serif;
+      font-size:clamp(1.5rem,3vw,2rem); font-style:italic; line-height:1.3; color:var(--ink);
+    }
+    @media (max-width:640px){ .pull-quote{margin-left:0;} }
+
+    /* ── Question grid (Section II) ── */
+    .qgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; margin:2rem 0 0;}
+    .q-card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:1.3rem 1.4rem;
+      box-shadow:var(--shadow); position:relative;}
+    .q-card .q{font-family:'Cormorant Garamond',Georgia,serif; font-size:1.32rem; font-style:italic;
+      color:var(--ink); line-height:1.25; margin:0 0 .5rem;}
+    .q-card .arrow{color:var(--accent); font-family:'DM Sans',sans-serif; font-weight:600; margin:0 .35rem;}
+    .q-card .a{font-family:'DM Sans',system-ui,sans-serif; font-size:.95rem; color:var(--body); font-weight:500;}
+    .q-card .a b{color:var(--accent-deep); font-weight:600;}
+
+    /* ── Field guide layout (Section III) ── */
+    .refguide{display:grid; grid-template-columns:250px 1fr; gap:2.2rem; align-items:start; margin-top:2rem;}
+    .filters{position:sticky; top:80px; align-self:start;}
+    .searchbar{position:relative; margin-bottom:1.4rem;}
+    .searchbar input{
+      width:100%; font-family:'Source Serif 4',Georgia,serif; font-size:1rem; color:var(--ink);
+      background:var(--surface); border:1px solid var(--line-strong); border-radius:10px;
+      padding:.8rem 2.4rem .8rem 1rem; min-height:44px;
+    }
+    .searchbar input::placeholder{color:var(--faint);}
+    .searchbar input:focus{outline:none; border-color:var(--accent);}
+    .searchbar input:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+    .searchbar .ic{position:absolute; right:.85rem; top:50%; transform:translateY(-50%); color:var(--faint); pointer-events:none;}
+
+    .filter-group{margin-bottom:1.5rem;}
+    .filter-group .fg-h{
+      font-family:'DM Sans',system-ui,sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.14em;
+      text-transform:uppercase; color:var(--faint); margin:0 0 .7rem;
+    }
+    .chips{display:flex; flex-wrap:wrap; gap:.4rem;}
+    .chip{
+      display:inline-flex; align-items:center; gap:.45rem; font-family:'DM Sans',system-ui,sans-serif;
+      font-size:.82rem; color:var(--body); background:var(--surface); border:1px solid var(--line-strong);
+      border-radius:999px; padding:.4rem .7rem; cursor:pointer; min-height:34px; line-height:1;
+      transition:border-color .15s, background .15s, color .15s;
+    }
+    .chip .dot{width:9px; height:9px; border-radius:50%; background:var(--faint); flex:none;}
+    .chip .ct{color:var(--faint); font-variant-numeric:tabular-nums; font-size:.76rem;}
+    .chip:hover{border-color:var(--accent);}
+    .chip.active{background:var(--ink); color:var(--surface); border-color:var(--ink);}
+    .chip.active .ct{color:rgba(255,255,255,.7);}
+    .chip:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+    .chip[data-count="0"]{opacity:.38; pointer-events:none;}
+    /* domain dot colours */
+    .dot.language{background:var(--d-language);}
+    .dot.general{background:var(--d-general);}
+    .dot.science{background:var(--d-science);}
+    .dot.business{background:var(--d-business);}
+    .dot.history{background:var(--d-history);}
+    .dot.religion{background:var(--d-religion);}
+    .dot.law{background:var(--d-law);}
+
+    .filter-reset{
+      font-family:'DM Sans',system-ui,sans-serif; font-size:.82rem; color:var(--accent-deep);
+      background:none; border:none; cursor:pointer; padding:.3rem 0; text-decoration:underline; min-height:34px;
+    }
+    .filter-reset:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+    .filter-toggle{display:none;}
+
+    /* results */
+    .rg-main{min-width:0;}
+    .rg-toolbar{display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin-bottom:1.2rem;}
+    .rg-count{font-family:'DM Sans',system-ui,sans-serif; font-size:.86rem; color:var(--faint); letter-spacing:.02em;}
+    .rg-count b{color:var(--ink); font-variant-numeric:tabular-nums;}
+
+    .ref-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(258px,1fr)); gap:1rem;}
+    .ref-card{
+      position:relative; background:var(--surface); border:1px solid var(--line); border-radius:12px;
+      padding:1.15rem 1.25rem 1.2rem; box-shadow:var(--shadow); overflow:hidden;
+      display:flex; flex-direction:column;
+    }
+    .ref-card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--faint);}
+    .ref-card[data-domain="language"]::before{background:var(--d-language);}
+    .ref-card[data-domain="general"]::before{background:var(--d-general);}
+    .ref-card[data-domain="science"]::before{background:var(--d-science);}
+    .ref-card[data-domain="business"]::before{background:var(--d-business);}
+    .ref-card[data-domain="history"]::before{background:var(--d-history);}
+    .ref-card[data-domain="religion"]::before{background:var(--d-religion);}
+    .ref-card[data-domain="law"]::before{background:var(--d-law);}
+    .card-tag{display:flex; align-items:center; justify-content:space-between; gap:.5rem; margin-bottom:.5rem;}
+    .card-num{font-family:'DM Sans',system-ui,sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.1em;
+      color:var(--faint); font-variant-numeric:tabular-nums;}
+    .card-domain{font-family:'DM Sans',system-ui,sans-serif; font-size:.66rem; font-weight:600; letter-spacing:.1em;
+      text-transform:uppercase; padding:.18rem .5rem; border-radius:999px; border:1px solid var(--line-strong); color:var(--faint);}
+    .card-name{margin:.1rem 0 .5rem !important; font-size:1.5rem !important;}
+    .card-purpose{font-size:.95rem; line-height:1.55; color:var(--body); margin:0 0 .9rem;}
+    .card-example{
+      margin-top:auto; padding-top:.75rem; border-top:1px dashed var(--line-strong);
+      font-size:.9rem; line-height:1.5; color:var(--body);
+    }
+    .ex-label{display:inline-block; font-family:'DM Sans',system-ui,sans-serif; font-size:.62rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase; color:var(--accent-deep); margin-right:.4rem; vertical-align:.08em;}
+    .ex-body em{font-style:italic; color:var(--ink);}
+    .card-example [lang="ar"]{font-family:'Scheherazade New','Amiri','Noto Naskh Arabic',serif; font-size:1.05em; line-height:1;}
+    .ref-card.hidden{display:none;}
+    mark{background:rgba(201,168,76,.34); color:inherit; padding:0 .05em; border-radius:2px;}
+    @media (prefers-color-scheme: dark){ mark{background:rgba(216,184,98,.30);} }
+
+    .no-results{display:none; text-align:center; padding:3rem 1rem; color:var(--faint); font-style:italic;
+      font-family:'Cormorant Garamond',Georgia,serif; font-size:1.4rem;}
+    .no-results.show{display:block;}
+
+    /* ── Domain blocks (Section IV) ── */
+    .domain-block{margin:2.2rem 0 0; padding:1.4rem 1.6rem; background:var(--surface); border:1px solid var(--line);
+      border-radius:12px; box-shadow:var(--shadow); border-left:4px solid var(--faint);}
+    .domain-block.language{border-left-color:var(--d-language);}
+    .domain-block.history{border-left-color:var(--d-history);}
+    .domain-block.science{border-left-color:var(--d-science);}
+    .domain-block.religion{border-left-color:var(--d-religion);}
+    .domain-block.philosophy{border-left-color:var(--d-business);}
+    .domain-block.business{border-left-color:var(--d-general);}
+    .domain-block h3{margin-top:0 !important;}
+    .domain-block ul{margin:.4rem 0 0; padding:0; list-style:none;}
+    .domain-block li{padding:.55rem 0; border-bottom:1px solid var(--line); font-size:.98rem; line-height:1.5;}
+    .domain-block li:last-child{border-bottom:none;}
+    .domain-block li b{color:var(--ink); font-weight:600;}
+    .domain-block li .ex{color:var(--faint); font-size:.92rem;}
+    .domain-block li [lang="ar"]{font-family:'Scheherazade New','Amiri','Noto Naskh Arabic',serif;}
+
+    /* ── Shelf list (Section V) ── */
+    .shelf{max-width:var(--prose-w); margin:2rem 0 0; counter-reset:shelf; list-style:none; padding:0;}
+    .shelf li{position:relative; padding:.7rem 0 .7rem 3rem; border-bottom:1px solid var(--line); line-height:1.55;}
+    .shelf li::before{counter-increment:shelf; content:counter(shelf,decimal-leading-zero);
+      position:absolute; left:0; top:.75rem; font-family:'DM Sans',system-ui,sans-serif; font-size:.85rem;
+      font-weight:600; color:var(--accent-deep); font-variant-numeric:tabular-nums;}
+    .shelf li b{color:var(--ink); font-weight:600;}
+    .shelf li .ex{color:var(--faint); font-size:.94rem;}
+
+    /* ── Callout ── */
+    .callout{max-width:var(--prose-w); margin:2rem 0; padding:1.3rem 1.5rem; background:var(--surface-2);
+      border:1px solid var(--line); border-radius:12px; font-size:.98rem;}
+    .callout .ct-label{display:block; font-family:'DM Sans',system-ui,sans-serif; font-size:.7rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase; color:var(--accent-deep); margin-bottom:.4rem;}
+
+    /* ── Footer ── */
+    footer{max-width:var(--content-w); margin:0 auto; padding:2.4rem 2.5rem 3.4rem; border-top:1px solid var(--line);
+      display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;}
+    .footer-logo{font-family:'Cormorant Garamond',Georgia,serif; font-size:1.3rem; color:var(--ink); font-weight:600;}
+    .footer-copy{font-family:'DM Sans',system-ui,sans-serif; font-size:.82rem; color:var(--faint);}
+
+    /* ── Responsive ── */
+    @media (max-width:900px){
+      .refguide{grid-template-columns:1fr;}
+      .filters{position:static; top:auto;}
+      .filter-toggle{
+        display:inline-flex; align-items:center; gap:.5rem; font-family:'DM Sans',system-ui,sans-serif;
+        font-size:.85rem; font-weight:500; color:var(--ink); background:var(--surface);
+        border:1px solid var(--line-strong); border-radius:999px; padding:.6rem 1.1rem; cursor:pointer;
+        min-height:44px; margin-bottom:1rem;
+      }
+      .filters .filter-body{display:none;}
+      .filters.open .filter-body{display:block; margin-bottom:.6rem;}
+    }
+    @media (max-width:720px){
+      body{font-size:17px;}
+      .hero{padding:2.6rem 1.4rem 0;}
+      .article-header{padding:.75rem 1.4rem;}
+      .article-body{padding:2.4rem 1.4rem 5rem;}
+      .hero-rule{width:auto;}
+      footer{padding:2rem 1.4rem 3rem;}
+    }
+
+    /* ── Reduced motion (must remain the final CSS block) ── */
+    @media (prefers-reduced-motion: reduce){
+      *, *::before, *::after{
+        animation-duration:0.01ms !important; animation-iteration-count:1 !important;
+        transition-duration:0.01ms !important;
+      }
+      html{scroll-behavior:auto !important;}
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- TOC overlay -->
+    <div class="toc-overlay" id="tocOverlay"
+         onclick="if(event.target===this)this.classList.remove('open')">
+      <div class="toc-panel">
+        <button aria-label="Close contents" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+        <h3>Contents</h3>
+        <ul class="toc-list">
+          <li><a href="#s1" class="toc-main">I. The Consultable Book</a></li>
+          <li><a href="#s2" class="toc-main">II. The Questions They Answer</a></li>
+          <li><a href="#s3" class="toc-main">III. The Field Guide</a></li>
+          <li><a href="#s4" class="toc-main">IV. Reference by Domain</a></li>
+          <li><a href="#s4-1">Language</a></li>
+          <li><a href="#s4-2">History</a></li>
+          <li><a href="#s4-3">Science</a></li>
+          <li><a href="#s4-4">Religion</a></li>
+          <li><a href="#s4-5">Philosophy</a></li>
+          <li><a href="#s4-6">Business &amp; Economics</a></li>
+          <li><a href="#s5" class="toc-main">V. Building a Reference Shelf</a></li>
+          <li><a href="#s6" class="toc-main">VI. The Digital Turn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="eyebrow">Atlas · Reference Guides</div>
+      <h1>A Field Guide to <em>Reference Works</em></h1>
+      <p class="hero-sub">Some books are meant to be read; others are meant to be <em>consulted</em>. This is a working guide to the second kind — thirty-four families of reference work, each defined, sorted by the question it answers, and matched to a real example you could pull off a shelf today.</p>
+      <div class="byline-row">
+        <div class="avatar">YB</div>
+        <div class="byline-text">
+          <span class="byline-name">Yasir Bilgin</span>
+          <span class="byline-meta">Atlas · Reference Guides · August 2026</span>
+        </div>
+      </div>
+    </section>
+    <hr class="hero-rule">
+
+    <!-- Meta-bar -->
+    <header class="article-header">
+      <span class="read-time">19 min read</span>
+      <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+    </header>
+
+    <!-- Article body -->
+    <article class="article-body">
+
+      <!-- ── SECTION I ── -->
+      <section id="s1" class="major-section">
+        <div class="prose">
+          <span class="section-label">Section I</span>
+          <h2>The <em>Consultable</em> Book</h2>
+          <p class="lead">A reference work is a book you do not read from beginning to end. You open it at a point of need, extract exactly what you came for, and close it again. Its unit is not the chapter but the <em>entry</em>; its virtue is not narrative but retrieval.</p>
+          <p>That single design decision — organise for lookup, not for reading — is what separates a dictionary from a novel, a gazetteer from a travelogue, an almanac from an essay. Everything else about reference works follows from it: the alphabetical ordering, the dense abbreviations, the indexes and cross-references, the columns of small type. A reference book is a machine for answering questions, and its parts are engineered so the answer surfaces quickly.</p>
+          <p>The impulse is very old. The Roman scholar Pliny the Elder assembled his <em>Naturalis Historia</em> (c. 77&nbsp;CE) as a browsable compendium of some twenty thousand facts, complete with a summary table so a reader could jump straight to a topic — arguably the ancestor of the modern encyclopedia. The tenth-century Byzantine <span lang="el">Suda</span> was a vast alphabetical lexicon-cum-encyclopedia of the ancient world. Muslim scholars built enormous biographical dictionaries (<em lang="ar">ṭabaqāt</em>) and hadith indexes to keep a growing tradition retrievable. Every literate civilisation, once its stock of knowledge outgrew a single memory, invented tools to file it.</p>
+          <p class="pull-quote">The question a reference work answers is never “what is the story?” but “where, exactly, is the fact I need?”</p>
+          <p>What follows sorts that toolkit into thirty-four families. The distinctions are real but not always sharp — a handbook shades into a manual, a lexicon into a dictionary, a digest into an index — and many real books wear two hats at once. Treat the categories as a map of a territory rather than a set of sealed boxes. The <a href="#s3">searchable field guide in Section III</a> lets you filter the whole set by the field it serves and the question it answers.</p>
+        </div>
+      </section>
+      <!-- ── SECTION II ── -->
+      <section id="s2" class="major-section">
+        <div class="prose">
+          <span class="section-label">Section II</span>
+          <h2>The Questions They <em>Answer</em></h2>
+          <p>The fastest way to choose the right reference work is to start not from the book but from the <em>question</em>. Each family of reference is, in effect, a specialised answer to one kind of query. Match the question to the tool and the search half-solves itself.</p>
+        </div>
+
+        <div class="qgrid">
+          <div class="q-card"><p class="q">“What does this word mean?”</p><p class="a"><span class="arrow">→</span><b>Dictionary</b></p></div>
+          <div class="q-card"><p class="q">“What is this thing?”</p><p class="a"><span class="arrow">→</span><b>Encyclopedia</b></p></div>
+          <div class="q-card"><p class="q">“Where is it?”</p><p class="a"><span class="arrow">→</span><b>Atlas</b> or <b>Gazetteer</b></p></div>
+          <div class="q-card"><p class="q">“When did it happen?”</p><p class="a"><span class="arrow">→</span><b>Chronology</b></p></div>
+          <div class="q-card"><p class="q">“Who was this person?”</p><p class="a"><span class="arrow">→</span><b>Biographical dictionary</b></p></div>
+          <div class="q-card"><p class="q">“How do I do it?”</p><p class="a"><span class="arrow">→</span><b>Handbook</b> or <b>Manual</b></p></div>
+          <div class="q-card"><p class="q">“What are the current facts?”</p><p class="a"><span class="arrow">→</span><b>Almanac</b> or <b>Statistical Abstract</b></p></div>
+          <div class="q-card"><p class="q">“Where can I learn more?”</p><p class="a"><span class="arrow">→</span><b>Bibliography</b></p></div>
+          <div class="q-card"><p class="q">“Where does this word occur?”</p><p class="a"><span class="arrow">→</span><b>Concordance</b></p></div>
+          <div class="q-card"><p class="q">“How is this field organised?”</p><p class="a"><span class="arrow">→</span><b>Companion</b> or <b>Sourcebook</b></p></div>
+        </div>
+
+        <div class="callout">
+          <span class="ct-label">A note on overlap</span>
+          Notice that several questions have two good answers. “Where is it?” splits between an <em>atlas</em> (which shows you the place) and a <em>gazetteer</em> (which describes it in words). “How do I do it?” splits between a <em>handbook</em> (which gathers the facts and formulas you apply yourself) and a <em>manual</em> (which walks you through a procedure step by step). These twins recur throughout the field guide below; where the boundary is genuinely blurry, the guide says so.
+        </div>
+      </section>
+      <!-- ── SECTION III ── -->
+      <section id="s3" class="major-section">
+        <div class="prose">
+          <span class="section-label">Section III</span>
+          <h2>The Field <em>Guide</em></h2>
+          <p>Thirty-four families of reference work, each with a real example. Filter by the <strong>field</strong> it serves and by the <strong>question</strong> it answers, or search by name, purpose, or title. Filters within a group are inclusive (any match); across groups they narrow together.</p>
+        </div>
+
+        <div class="refguide">
+          <!-- Filters -->
+          <aside class="filters" id="filters" aria-label="Filter reference works">
+            <button class="filter-toggle" id="filterToggle" aria-expanded="false">
+              <span>Filters &amp; search</span><span aria-hidden="true">▾</span>
+            </button>
+            <div class="filter-body">
+              <div class="searchbar">
+                <input type="search" id="rgSearch" placeholder="Search 34 reference types…"
+                       aria-label="Search reference works" autocomplete="off">
+                <span class="ic" aria-hidden="true">⌕</span>
+              </div>
+
+              <div class="filter-group" role="group" aria-label="Filter by field">
+                <p class="fg-h">By field</p>
+                <div class="chips" id="domainChips">
+                  <button class="chip" data-filter="domain" data-value="language"><span class="dot language"></span>Language <span class="ct"></span></button>
+                  <button class="chip" data-filter="domain" data-value="general"><span class="dot general"></span>General <span class="ct"></span></button>
+                  <button class="chip" data-filter="domain" data-value="science"><span class="dot science"></span>Science <span class="ct"></span></button>
+                  <button class="chip" data-filter="domain" data-value="history"><span class="dot history"></span>History <span class="ct"></span></button>
+                  <button class="chip" data-filter="domain" data-value="religion"><span class="dot religion"></span>Religion <span class="ct"></span></button>
+                  <button class="chip" data-filter="domain" data-value="law"><span class="dot law"></span>Law <span class="ct"></span></button>
+                  <button class="chip" data-filter="domain" data-value="business"><span class="dot business"></span>Business <span class="ct"></span></button>
+                </div>
+              </div>
+
+              <div class="filter-group" role="group" aria-label="Filter by question answered">
+                <p class="fg-h">By question</p>
+                <div class="chips" id="fnChips">
+                  <button class="chip" data-filter="function" data-value="define">Define <span class="ct"></span></button>
+                  <button class="chip" data-filter="function" data-value="explain">Explain <span class="ct"></span></button>
+                  <button class="chip" data-filter="function" data-value="locate">Locate <span class="ct"></span></button>
+                  <button class="chip" data-filter="function" data-value="identify">Identify <span class="ct"></span></button>
+                  <button class="chip" data-filter="function" data-value="instruct">Instruct <span class="ct"></span></button>
+                  <button class="chip" data-filter="function" data-value="find">Find sources <span class="ct"></span></button>
+                  <button class="chip" data-filter="function" data-value="collect">Collect texts <span class="ct"></span></button>
+                </div>
+              </div>
+
+              <button class="filter-reset" id="rgReset">Reset all</button>
+            </div>
+          </aside>
+
+          <!-- Results -->
+          <div class="rg-main">
+            <div class="rg-toolbar">
+              <p class="rg-count" id="rgCount" aria-live="polite"><b>34</b> of 34 shown</p>
+            </div>
+
+            <div class="ref-grid" id="refGrid">
+
+              <article class="ref-card" data-domain="language" data-function="define" data-search="dictionary defines words meaning spelling pronunciation etymology grammar oxford english dictionary oed merriam webster">
+                <div class="card-tag"><span class="card-num">01</span><span class="card-domain">Language</span></div>
+                <h3 class="card-name hl">Dictionary</h3>
+                <p class="card-purpose hl">Defines words — their meanings, spelling, pronunciation, part of speech, and history.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Oxford English Dictionary</em> — a historical dictionary that traces each of its 600,000+ words through millions of dated quotations.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="explain" data-search="encyclopedia encyclopaedia explains topics articles history science biography britannica wikipedia">
+                <div class="card-tag"><span class="card-num">02</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Encyclopedia</h3>
+                <p class="card-purpose hl">Explains topics in survey articles — history, science, the arts, biography, ideas.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>Encyclopædia Britannica</em> — founded in Edinburgh in 1768; it ended its 244-year print run in 2012 and continues online.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="locate" data-search="almanac annual facts statistics weather astronomy sports records tides world almanac whitaker old farmer">
+                <div class="card-tag"><span class="card-num">03</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Almanac</h3>
+                <p class="card-purpose hl">Gathers annual facts and figures — weather, tides, astronomy, records, government data.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The World Almanac and Book of Facts</em> — published annually since 1868 and long the best-selling U.S. book of facts.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="locate" data-search="atlas maps political physical historical thematic geography times comprehensive national geographic">
+                <div class="card-tag"><span class="card-num">04</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Atlas</h3>
+                <p class="card-purpose hl">Shows where things are — political, physical, historical, and thematic maps.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The Times Comprehensive Atlas of the World</em> — the benchmark English-language world atlas, first issued in 1922.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="locate" data-search="gazetteer geographic directory places towns rivers mountains descriptions columbia getty">
+                <div class="card-tag"><span class="card-num">05</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Gazetteer</h3>
+                <p class="card-purpose hl">Describes places in words — towns, rivers, mountains — with population, location, and detail.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The Columbia Gazetteer of the World</em> — roughly 170,000 entries describing the world's places.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="science" data-function="explain" data-search="handbook practical reference engineering formulas medical guidelines constants data crc chemistry physics merck">
+                <div class="card-tag"><span class="card-num">06</span><span class="card-domain">Science</span></div>
+                <h3 class="card-name hl">Handbook</h3>
+                <p class="card-purpose hl">Packs a field's working facts, constants, and formulas into one dense practical volume.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>CRC Handbook of Chemistry and Physics</em> — the “Rubber Bible,” published yearly since 1914.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="instruct" data-search="manual instructions equipment operation software guide procedure step by step haynes repair">
+                <div class="card-tag"><span class="card-num">07</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Manual</h3>
+                <p class="card-purpose hl">Walks you through a procedure — how to operate, assemble, maintain, or repair something.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>Haynes Manuals</em> — car-repair guides written from a full teardown and rebuild of each model.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="explain" data-search="companion background subject literary philosophy music oxford companion literature">
+                <div class="card-tag"><span class="card-num">08</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Companion</h3>
+                <p class="card-purpose hl">Maps a whole subject in alphabetical background entries — authors, works, terms, movements.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The Oxford Companion to English Literature</em> — the standard one-volume guide to its field.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="instruct" data-search="guidebook practical advice travel guides field michelin baedeker lonely planet">
+                <div class="card-tag"><span class="card-num">09</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Guidebook</h3>
+                <p class="card-purpose hl">Offers practical advice for doing something on the ground — usually travel, place by place.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Michelin Guide</em> — practical travel and dining guidance whose stars still make and break restaurants.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="science" data-function="identify" data-search="field guide identification birds plants insects rocks peterson sibley audubon">
+                <div class="card-tag"><span class="card-num">10</span><span class="card-domain">Science</span></div>
+                <h3 class="card-name hl">Field Guide</h3>
+                <p class="card-purpose hl">Helps you identify what you're looking at in the wild — birds, plants, insects, minerals.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>A Field Guide to the Birds</em> by Roger Tory Peterson (1934) — its arrows to key field marks founded modern bird ID.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="science" data-function="identify" data-search="catalog catalogue organized listings museum collections stars products messier deep sky henry draper">
+                <div class="card-tag"><span class="card-num">11</span><span class="card-domain">Science</span></div>
+                <h3 class="card-name hl">Catalogue</h3>
+                <p class="card-purpose hl">A systematic, numbered listing of items in a collection — stars, artworks, specimens, products.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Messier Catalogue</em> — Charles Messier's list of 110 deep-sky objects (M1–M110), compiled in the 1770s–80s.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="business" data-function="identify" data-search="directory contact information businesses organizations professionals thomas register yellow pages">
+                <div class="card-tag"><span class="card-num">12</span><span class="card-domain">Business</span></div>
+                <h3 class="card-name hl">Directory</h3>
+                <p class="card-purpose hl">Lists who and where — businesses, organisations, or professionals with contact details.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Thomas Register of American Manufacturers</em> — the classic “who makes what” industrial directory.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="business" data-function="locate" data-search="yearbook annual review world events statistics country statesman europa">
+                <div class="card-tag"><span class="card-num">13</span><span class="card-domain">Business</span></div>
+                <h3 class="card-name hl">Yearbook</h3>
+                <p class="card-purpose hl">An annual snapshot — the year's events, statistics, and standings, refreshed each edition.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The Statesman's Yearbook</em> — country-by-country facts and figures, published every year since 1864.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="history" data-function="locate" data-search="chronology timeline events order world history dates timetables grun sequence">
+                <div class="card-tag"><span class="card-num">14</span><span class="card-domain">History</span></div>
+                <h3 class="card-name hl">Chronology</h3>
+                <p class="card-purpose hl">Arranges events in time — a timeline that fixes what happened, and in what order.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The Timetables of History</em> (Bernard Grun) — parallel columns showing what happened at once across politics, science, and art.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="religion" data-function="find" data-search="concordance word index every occurrence bible quran shakespeare strong al mujam mufahras abd al baqi">
+                <div class="card-tag"><span class="card-num">15</span><span class="card-domain">Religion</span></div>
+                <h3 class="card-name hl">Concordance</h3>
+                <p class="card-purpose hl">Lists every occurrence of every word in a text, keyed to its exact location.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>Strong's Exhaustive Concordance</em> (1890) for the Bible; <span lang="ar" dir="rtl">المعجم المفهرس لألفاظ القرآن الكريم</span>, ʿAbd al-Bāqī's Qurʾānic concordance (1945).</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="find" data-search="index finding aid references topics within a work periodical reader guide back of book">
+                <div class="card-tag"><span class="card-num">16</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Index</h3>
+                <p class="card-purpose hl">A finding aid — points you from a topic to where it is discussed, within a book or across many.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Readers' Guide to Periodical Literature</em> — the classic subject index to popular magazine articles.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="find" data-search="bibliography list of sources books articles topic scholarship mla international">
+                <div class="card-tag"><span class="card-num">17</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Bibliography</h3>
+                <p class="card-purpose hl">A curated list of the sources on a subject — where to go to read further.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The MLA International Bibliography</em> — the standard record of scholarship in language and literature.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="science" data-function="find" data-search="abstract index research summaries scientific paper abstracts chemical biological psycinfo">
+                <div class="card-tag"><span class="card-num">18</span><span class="card-domain">Science</span></div>
+                <h3 class="card-name hl">Abstract Index</h3>
+                <p class="card-purpose hl">Summarises the research literature so you can scan a field and find the papers that matter.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>Chemical Abstracts</em> — summaries of the world's chemistry literature since 1907, now the CAS databases.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="language" data-function="define" data-search="thesaurus synonyms antonyms vocabulary alternatives roget words by idea">
+                <div class="card-tag"><span class="card-num">19</span><span class="card-domain">Language</span></div>
+                <h3 class="card-name hl">Thesaurus</h3>
+                <p class="card-purpose hl">Groups words by meaning — synonyms and antonyms — to help you find the word you want.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>Roget's Thesaurus</em> — Peter Mark Roget's 1852 classification of words by idea rather than by alphabet.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="language" data-function="define" data-search="lexicon specialized dictionary greek hebrew arabic legal terms lane liddell scott">
+                <div class="card-tag"><span class="card-num">20</span><span class="card-domain">Language</span></div>
+                <h3 class="card-name hl">Lexicon</h3>
+                <p class="card-purpose hl">A dictionary for a specialised language or corpus — classical Greek, Hebrew, Arabic, the law.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">Lane's <em>Arabic–English Lexicon</em> (8 vols, 1863–93), drawn from the medieval Arabic dictionaries; Liddell &amp; Scott for Greek.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="language" data-function="define" data-search="glossary definitions within a subject technical textbook terms">
+                <div class="card-tag"><span class="card-num">21</span><span class="card-domain">Language</span></div>
+                <h3 class="card-name hl">Glossary</h3>
+                <p class="card-purpose hl">A short list of terms defined for one subject or one book — its own private dictionary.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The term list appended to a technical or legal textbook, defining the vocabulary that book uses.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="language" data-function="find" data-search="corpus collection of texts linguistic research databases coca bnc davies contemporary american english">
+                <div class="card-tag"><span class="card-num">22</span><span class="card-domain">Language</span></div>
+                <h3 class="card-name hl">Corpus</h3>
+                <p class="card-purpose hl">A searchable body of real texts used to study how a language is actually used.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Corpus of Contemporary American English</em> (COCA) — about one billion words (1990–2019), built by Mark Davies.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="language" data-function="define" data-search="corpus dictionary usage based frequency real world examples collins cobuild longman">
+                <div class="card-tag"><span class="card-num">23</span><span class="card-domain">Language</span></div>
+                <h3 class="card-name hl">Corpus Dictionary</h3>
+                <p class="card-purpose hl">A dictionary written from a corpus, defining words by real usage and frequency rather than intuition.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Collins COBUILD Dictionary</em> (1987) — the first dictionary built entirely on corpus evidence.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="business" data-function="collect" data-search="statistical abstract numerical data census economics demographics united states proquest">
+                <div class="card-tag"><span class="card-num">24</span><span class="card-domain">Business</span></div>
+                <h3 class="card-name hl">Statistical Abstract</h3>
+                <p class="card-purpose hl">Assembles a nation's key numbers — population, economy, society — into one browsable data book.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>Statistical Abstract of the United States</em> — issued by the Census Bureau 1878–2012, and by ProQuest since 2013.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="science" data-function="instruct" data-search="formula book equations mathematics physics chemistry crc mathematical tables schaum">
+                <div class="card-tag"><span class="card-num">25</span><span class="card-domain">Science</span></div>
+                <h3 class="card-name hl">Formula Book</h3>
+                <p class="card-purpose hl">A compact store of equations and identities, so you look up a formula instead of deriving it.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>CRC Standard Mathematical Tables and Formulae</em> — the standing desk-reference of equations.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="science" data-function="instruct" data-search="tables numerical lookup logarithms trigonometric functions steam abramowitz stegun">
+                <div class="card-tag"><span class="card-num">26</span><span class="card-domain">Science</span></div>
+                <h3 class="card-name hl">Tables</h3>
+                <p class="card-purpose hl">Pre-computed numerical values for lookup — logarithms, function values, steam properties.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">Abramowitz &amp; Stegun's <em>Handbook of Mathematical Functions</em> (1964) — the famous tables of function values.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="law" data-function="instruct" data-search="code book standards regulations building codes electrical national electrical code international building">
+                <div class="card-tag"><span class="card-num">27</span><span class="card-domain">Law</span></div>
+                <h3 class="card-name hl">Code Book</h3>
+                <p class="card-purpose hl">The binding rules of a trade or jurisdiction — standards you must build, wire, or operate by.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The <em>National Electrical Code</em> (NFPA&nbsp;70) — the adopted U.S. standard for safe electrical installation.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="language" data-function="instruct" data-search="style guide writing conventions apa chicago mla citation usage strunk white">
+                <div class="card-tag"><span class="card-num">28</span><span class="card-domain">Language</span></div>
+                <h3 class="card-name hl">Style Guide</h3>
+                <p class="card-purpose hl">The house rules of writing — citation, punctuation, capitalisation, and usage.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The Chicago Manual of Style</em> — the editors' standard since 1906; APA and MLA rule their own fields.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="law" data-function="collect" data-search="casebook legal business cases court decisions studies langdell harvard case method">
+                <div class="card-tag"><span class="card-num">29</span><span class="card-domain">Law</span></div>
+                <h3 class="card-name hl">Casebook</h3>
+                <p class="card-purpose hl">A teaching collection of real cases — judicial opinions or business studies — read to learn a field.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The law-school casebook — curated opinions, in the case method Christopher Langdell built at Harvard in the 1870s.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="history" data-function="collect" data-search="sourcebook reader primary texts historical documents philosophy readings anthology de bary">
+                <div class="card-tag"><span class="card-num">30</span><span class="card-domain">History</span></div>
+                <h3 class="card-name hl">Sourcebook</h3>
+                <p class="card-purpose hl">Gathers primary texts — the documents themselves — into one volume for study.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>Sources of Chinese Tradition</em> (Wm. Theodore de Bary, ed.) — foundational Chinese texts collected for readers.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="law" data-function="collect" data-search="digest summaries legal case digests readers subject arranged american law reports west">
+                <div class="card-tag"><span class="card-num">31</span><span class="card-domain">Law</span></div>
+                <h3 class="card-name hl">Digest</h3>
+                <p class="card-purpose hl">Condenses and re-sorts a mass of material by subject, so the law on a point can be found fast.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>American Law Reports</em> and West's digests — cases summarised and arranged by legal topic.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="general" data-function="identify" data-search="whos who biographical directory notable people living marquis america">
+                <div class="card-tag"><span class="card-num">32</span><span class="card-domain">General</span></div>
+                <h3 class="card-name hl">Who's Who</h3>
+                <p class="card-purpose hl">A directory of notable living people — potted biographies of the eminent, updated each year.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>Who's Who</em> — the British directory of notable people, published annually since 1849; Marquis <em>Who's Who in America</em>.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="history" data-function="identify" data-search="prosopography collective biographies groups historical figures later roman empire jones martindale">
+                <div class="card-tag"><span class="card-num">33</span><span class="card-domain">History</span></div>
+                <h3 class="card-name hl">Prosopography</h3>
+                <p class="card-purpose hl">Collective biography — the assembled lives of a whole group, so patterns across them emerge.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body"><em>The Prosopography of the Later Roman Empire</em> (Jones, Martindale &amp; Morris, 3 vols, 1971–92) — everyone attested AD 260–641.</span></div>
+              </article>
+
+              <article class="ref-card" data-domain="religion" data-function="locate" data-search="calendar dates observances religious astronomical civic liturgical ecclesiastical nautical almanac">
+                <div class="card-tag"><span class="card-num">34</span><span class="card-domain">Religion</span></div>
+                <h3 class="card-name hl">Calendar</h3>
+                <p class="card-purpose hl">Fixes the cycle of dates and observances — religious feasts, civic dates, celestial events.</p>
+                <div class="card-example"><span class="ex-label">See</span><span class="ex-body">The liturgical calendar of feasts and fasts; in astronomy, the celestial calendar of <em>The Nautical Almanac</em>.</span></div>
+              </article>
+
+            </div>
+
+            <p class="no-results" id="noResults">No reference type matches those filters. <a href="#" id="clearFromEmpty">Clear them</a> to see all thirty-four.</p>
+          </div>
+        </div>
+      </section>
+      <!-- ── SECTION IV ── -->
+      <section id="s4" class="major-section">
+        <div class="prose">
+          <span class="section-label">Section IV</span>
+          <h2>Reference by <em>Domain</em></h2>
+          <p>Beyond the general families, most disciplines have evolved their own house set of reference tools. The same underlying types recur — a dictionary, an index, a catalogue — but tuned to the field's particular texts and questions. Here is how six domains equip their shelves, each entry paired with a standard work.</p>
+        </div>
+
+        <div id="s4-1" class="domain-block language">
+          <h3>Language</h3>
+          <ul>
+            <li><b>Dictionary</b> — <span class="ex">meanings and usage; e.g. <em>Merriam-Webster's Collegiate</em>.</span></li>
+            <li><b>Thesaurus</b> — <span class="ex">words grouped by idea; <em>Roget's Thesaurus</em>.</span></li>
+            <li><b>Lexicon</b> — <span class="ex">a specialised-language dictionary; Liddell &amp; Scott (Greek), Lane (Arabic).</span></li>
+            <li><b>Concordance</b> — <span class="ex">every occurrence of a word in a text; <em>Cruden's Concordance</em>.</span></li>
+            <li><b>Glossary</b> — <span class="ex">terms defined for one subject or book.</span></li>
+            <li><b>Phrasebook</b> — <span class="ex">ready-made expressions for travellers; the <em>Berlitz</em> phrasebooks.</span></li>
+            <li><b>Etymological dictionary</b> — <span class="ex">word origins traced back through languages; Klein's <em>Comprehensive Etymological Dictionary</em>.</span></li>
+            <li><b>Pronouncing dictionary</b> — <span class="ex">how words are said; Daniel Jones's <em>English Pronouncing Dictionary</em> (Cambridge).</span></li>
+          </ul>
+        </div>
+
+        <div id="s4-2" class="domain-block history">
+          <h3>History</h3>
+          <ul>
+            <li><b>Chronology</b> — <span class="ex">events fixed in sequence; <em>The Timetables of History</em>.</span></li>
+            <li><b>Historical atlas</b> — <span class="ex">maps of the past as it changed; <em>The Times Atlas of World History</em>.</span></li>
+            <li><b>Genealogical register</b> — <span class="ex">family lines and descent; <em>Burke's Peerage</em>.</span></li>
+            <li><b>Biographical dictionary</b> — <span class="ex">lives of the notable dead; the <em>Oxford Dictionary of National Biography</em>.</span></li>
+            <li><b>Historical gazetteer</b> — <span class="ex">places as they were named and known; Smith's <em>Dictionary of Greek and Roman Geography</em>.</span></li>
+          </ul>
+        </div>
+
+        <div id="s4-3" class="domain-block science">
+          <h3>Science</h3>
+          <ul>
+            <li><b>CRC Handbook (constants)</b> — <span class="ex">physical constants and data; the <em>CRC Handbook of Chemistry and Physics</em>.</span></li>
+            <li><b>Pharmacopoeia</b> — <span class="ex">official drug standards; the <em>United States Pharmacopeia</em> (USP).</span></li>
+            <li><b>Taxonomic catalog</b> — <span class="ex">the named species of life; the <em>Catalogue of Life</em>.</span></li>
+            <li><b>Star catalog</b> — <span class="ex">positions and magnitudes of stars; the <em>Hipparcos Catalogue</em>.</span></li>
+            <li><b>Ephemeris</b> — <span class="ex">predicted positions of celestial bodies; <em>The Astronomical Almanac</em>.</span></li>
+          </ul>
+        </div>
+
+        <div id="s4-4" class="domain-block religion">
+          <h3>Religion</h3>
+          <ul>
+            <li><b>Concordance</b> — <span class="ex">every word of scripture, located; <span lang="ar" dir="rtl">المعجم المفهرس</span> of ʿAbd al-Bāqī for the Qurʾān.</span></li>
+            <li><b>Bible / Qurʾān dictionary</b> — <span class="ex">terms and names explained; al-Rāghib al-Iṣfahānī's <em lang="ar">Mufradāt alfāẓ al-Qurʾān</em>.</span></li>
+            <li><b>Commentary (tafsir, exegesis)</b> — <span class="ex">verse-by-verse interpretation; al-Ṭabarī's <em lang="ar">Jāmiʿ al-bayān</em>.</span></li>
+            <li><b>Hadith index</b> — <span class="ex">reports located across the collections; Wensinck's <em lang="ar">al-Muʿjam al-mufahras li-alfāẓ al-ḥadīth</em>.</span></li>
+            <li><b>Canon law collections</b> — <span class="ex">a tradition's codified law; the Catholic <em>Code of Canon Law</em> (1983).</span></li>
+            <li><b>Liturgical calendar</b> — <span class="ex">the ordered cycle of feasts and fasts across the year.</span></li>
+          </ul>
+        </div>
+
+        <div id="s4-5" class="domain-block philosophy">
+          <h3>Philosophy</h3>
+          <ul>
+            <li><b>Companion</b> — <span class="ex">a guided map of the field; the <em>Cambridge Companion</em> series.</span></li>
+            <li><b>Encyclopedia of Philosophy</b> — <span class="ex">survey articles on problems and figures; the <em>Stanford Encyclopedia of Philosophy</em>.</span></li>
+            <li><b>Dictionary of Philosophy</b> — <span class="ex">concise definitions of terms; Blackburn's <em>Oxford Dictionary of Philosophy</em>.</span></li>
+            <li><b>Anthology / Reader</b> — <span class="ex">key texts gathered for study.</span></li>
+            <li><b>Sourcebook</b> — <span class="ex">primary passages in translation; <em>A Source Book in Indian Philosophy</em> (Radhakrishnan &amp; Moore).</span></li>
+          </ul>
+        </div>
+
+        <div id="s4-6" class="domain-block business">
+          <h3>Business &amp; Economics</h3>
+          <ul>
+            <li><b>Statistical yearbook</b> — <span class="ex">annual national and global figures; the UN <em>Statistical Yearbook</em>.</span></li>
+            <li><b>Financial handbook</b> — <span class="ex">the working formulas and conventions of finance.</span></li>
+            <li><b>Market directory</b> — <span class="ex">who supplies and buys within a sector.</span></li>
+            <li><b>Industry report</b> — <span class="ex">the state and outlook of a sector; <em>IBISWorld</em> reports.</span></li>
+            <li><b>Economic indicators reference</b> — <span class="ex">the headline gauges of an economy; the OECD <em>Main Economic Indicators</em>.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── SECTION V ── -->
+      <section id="s5" class="major-section">
+        <div class="prose">
+          <span class="section-label">Section V</span>
+          <h2>Building a Reference <em>Shelf</em></h2>
+          <p>If you wanted to assemble one well-rounded reference shelf — the fifteen works that between them answer most everyday factual questions — it would look something like this. Each entry covers a different <em>kind</em> of question, which is exactly why libraries have kept them close at hand for centuries.</p>
+        </div>
+
+        <ol class="shelf">
+          <li><b>Dictionary</b> <span class="ex">— what a word means.</span></li>
+          <li><b>Encyclopedia</b> <span class="ex">— what a thing is.</span></li>
+          <li><b>Atlas</b> <span class="ex">— where it is, in maps.</span></li>
+          <li><b>Almanac</b> <span class="ex">— this year's facts and figures.</span></li>
+          <li><b>Thesaurus</b> <span class="ex">— the better word for it.</span></li>
+          <li><b>Handbook</b> <span class="ex">— a field's working facts and formulas.</span></li>
+          <li><b>Style Guide</b> <span class="ex">— how to write and cite it.</span></li>
+          <li><b>Field Guide</b> <span class="ex">— how to identify what you see.</span></li>
+          <li><b>Timeline / Chronology</b> <span class="ex">— when it happened.</span></li>
+          <li><b>Biographical Dictionary</b> <span class="ex">— who the person was.</span></li>
+          <li><b>Gazetteer</b> <span class="ex">— what a place is like, in words.</span></li>
+          <li><b>Statistical Yearbook</b> <span class="ex">— the numbers behind the world.</span></li>
+          <li><b>Sourcebook</b> <span class="ex">— the primary documents themselves.</span></li>
+          <li><b>Concordance</b> <span class="ex">— (if studying religious or literary texts) where a word occurs.</span></li>
+          <li><b>Companion</b> <span class="ex">— (for a specialised subject) how the field is organised.</span></li>
+        </ol>
+      </section>
+      <!-- ── SECTION VI ── -->
+      <section id="s6" class="major-section">
+        <div class="prose">
+          <span class="section-label">Section VI</span>
+          <h2>The Digital <em>Turn</em></h2>
+          <p>Reference works were the first genre of book to move online in earnest, and for a simple reason: lookup is exactly what hyperlinks and search boxes do best. A book built for retrieval loses little when it leaves paper — and gains speed, cross-linking, and constant revision.</p>
+          <p>The landmarks are recent. <em>Encyclopædia Britannica</em> stopped printing in 2012 after nearly two and a half centuries; the default general encyclopedia is now <em>Wikipedia</em>, launched in 2001. The <em>Oxford English Dictionary</em> has been online since 2000, and its third edition is being compiled not as a new fixed set of volumes but as a continuous revision. The <em>Statistical Abstract of the United States</em> survived the end of its print run as a live ProQuest database. Corpora like COCA simply keep growing; the <em>Stanford Encyclopedia of Philosophy</em> is peer-reviewed and updated entry by entry, never “finished.”</p>
+          <p class="pull-quote">The forms dissolve into software; the functions remain exactly what they were.</p>
+          <p>Look closely and the old categories are still everywhere, only hidden inside the tools we use without naming. A search box is a <em>concordance</em> and an <em>index</em>. A mapping app is an <em>atlas</em> welded to a <em>gazetteer</em>. A spell-checker carries a <em>dictionary</em>; autocomplete runs on a <em>corpus</em>; a citation manager is a portable <em>style guide</em>. The shelf has been folded into the screen, but the questions have not changed — and neither has the discipline of knowing which kind of answer you are looking for.</p>
+          <p>That, in the end, is what a field guide to reference works is for. Not to memorise thirty-four labels, but to recognise the shape of your question quickly enough to reach for the right tool — on the shelf or in the search bar — and get back the fact you came for.</p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial. Atlas · Reference Guides.</span>
+  </footer>
+
+  <script>
+    /* Progress bar */
+    (function(){
+      var bar = document.getElementById('progressBar');
+      if(!bar) return;
+      window.addEventListener('scroll', function(){
+        var scrollTop = window.scrollY;
+        var docH = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docH > 0 ? (scrollTop / docH * 100) : 0) + '%';
+      }, { passive:true });
+    })();
+
+    /* Field guide: search + faceted filters (AND across groups, OR within) */
+    (function(){
+      var grid    = document.getElementById('refGrid');
+      if(!grid) return;
+      var cards   = Array.prototype.slice.call(grid.querySelectorAll('.ref-card'));
+      var search  = document.getElementById('rgSearch');
+      var count   = document.getElementById('rgCount');
+      var noRes   = document.getElementById('noResults');
+      var reset   = document.getElementById('rgReset');
+      var clearE  = document.getElementById('clearFromEmpty');
+      var chips   = Array.prototype.slice.call(document.querySelectorAll('.chip[data-filter]'));
+      var toggle  = document.getElementById('filterToggle');
+      var filters = document.getElementById('filters');
+      var TOTAL   = cards.length;
+
+      var active = { domain:new Set(), function:new Set() };
+      var query  = '';
+
+      /* prepare highlight originals */
+      var hlEls = grid.querySelectorAll('.hl');
+      Array.prototype.forEach.call(hlEls, function(el){ el.dataset.orig = el.textContent; });
+
+      function esc(s){ return s.replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+      function highlight(el, q){
+        var orig = el.dataset.orig;
+        if(!q){ el.textContent = orig; return; }
+        var low = orig.toLowerCase(), out = '', i = 0, f;
+        while(i < orig.length){
+          f = low.indexOf(q, i);
+          if(f < 0){ out += esc(orig.slice(i)); break; }
+          out += esc(orig.slice(i, f)) + '<mark>' + esc(orig.slice(f, f + q.length)) + '</mark>';
+          i = f + q.length;
+        }
+        el.innerHTML = out;
+      }
+
+      function passDomain(c){ return active.domain.size === 0 || active.domain.has(c.getAttribute('data-domain')); }
+      function passFunction(c){ return active.function.size === 0 || active.function.has(c.getAttribute('data-function')); }
+      function passSearch(c){ return query === '' || c.getAttribute('data-search').indexOf(query) !== -1; }
+
+      function apply(){
+        var shown = 0;
+        cards.forEach(function(c){
+          var vis = passDomain(c) && passFunction(c) && passSearch(c);
+          c.classList.toggle('hidden', !vis);
+          if(vis){
+            shown++;
+            c.querySelectorAll('.hl').forEach(function(el){ highlight(el, query); });
+          }
+        });
+        count.innerHTML = '<b>' + shown + '</b> of ' + TOTAL + ' shown';
+        noRes.classList.toggle('show', shown === 0);
+
+        /* live chip counts, contextual to the other group + search */
+        chips.forEach(function(chip){
+          var grp = chip.getAttribute('data-filter');
+          var val = chip.getAttribute('data-value');
+          var n = cards.filter(function(c){
+            if(!passSearch(c)) return false;
+            if(grp === 'domain'){ return passFunction(c) && c.getAttribute('data-domain') === val; }
+            return passDomain(c) && c.getAttribute('data-function') === val;
+          }).length;
+          chip.querySelector('.ct').textContent = n;
+          chip.setAttribute('data-count', n);
+        });
+      }
+
+      chips.forEach(function(chip){
+        chip.addEventListener('click', function(){
+          var grp = chip.getAttribute('data-filter');
+          var val = chip.getAttribute('data-value');
+          if(active[grp].has(val)){ active[grp].delete(val); chip.classList.remove('active'); }
+          else { active[grp].add(val); chip.classList.add('active'); }
+          apply();
+        });
+      });
+
+      search.addEventListener('input', function(){ query = search.value.trim().toLowerCase(); apply(); });
+      search.addEventListener('keydown', function(e){
+        if(e.key === 'Escape'){ search.value=''; query=''; apply(); }
+      });
+
+      function resetAll(){
+        active.domain.clear(); active.function.clear(); query = '';
+        search.value = '';
+        chips.forEach(function(c){ c.classList.remove('active'); });
+        apply();
+      }
+      reset.addEventListener('click', resetAll);
+      if(clearE){ clearE.addEventListener('click', function(e){ e.preventDefault(); resetAll(); }); }
+
+      if(toggle && filters){
+        toggle.addEventListener('click', function(){
+          var open = filters.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      apply();
+    })();
+  </script>
+</body>
+</html>
