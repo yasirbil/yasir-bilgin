@@ -452,6 +452,26 @@
       .cc-rows li { grid-template-columns: 1fr; gap: 0.1rem; }
     }
 
+    /* ── Readability hardening — literal colors that win over external tokens.css ── */
+    .article-body { color: #2b261f !important; }
+    .article-body p,
+    .article-body li { color: #2b261f !important; }
+    p.lead { color: #14110d !important; }
+    .hero-sub { color: #2a251e !important; }
+    .eyebrow { color: #453a2c !important; }
+    .byline-name { color: #1a1712 !important; }
+    .byline-meta, .read-time { color: #574a3b !important; }
+    .stage .ex, .toc-list a { color: #4a3f31 !important; }
+    @media (prefers-color-scheme: dark) {
+      .article-body, .article-body p, .article-body li { color: #d2cbc0 !important; }
+      p.lead { color: #f0ebe3 !important; }
+      .hero-sub { color: #cfc8bd !important; }
+      .eyebrow { color: #b7b0a6 !important; }
+      .byline-name { color: #ede8e0 !important; }
+      .byline-meta, .read-time { color: #a8a29a !important; }
+      .stage .ex, .toc-list a { color: #b7b0a6 !important; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
