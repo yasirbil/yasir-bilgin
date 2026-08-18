@@ -482,6 +482,41 @@
     }
 
     /* ---- Reduced motion (MUST be last) ---- */
+    /* ── Infographic figure ──────────────────────────────────── */
+    .infographic {
+      margin: 3.2rem auto;
+      max-width: 620px;
+      text-align: center;
+    }
+    .infographic a {
+      display: block;
+      border: 1px solid var(--rule, rgba(107,93,79,0.22));
+      border-radius: var(--radius-lg, 12px);
+      overflow: hidden;
+      box-shadow: 0 10px 34px rgba(24,20,14,0.14);
+      background: #ffffff;
+      outline: none;
+      transition: transform var(--duration-normal, 0.2s) var(--ease, ease),
+                  box-shadow var(--duration-normal, 0.2s) var(--ease, ease);
+    }
+    .infographic a:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(24,20,14,0.20); }
+    .infographic a:focus-visible { outline: 2px solid var(--accent-deep, #9a7d2e); outline-offset: 3px; }
+    .infographic img { display: block; width: 100%; height: auto; }
+    .infographic figcaption {
+      margin-top: 0.9rem;
+      font-family: var(--ui);
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--muted);
+      max-width: 46ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .infographic .zoom-hint { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--accent-deep); }
+    @media (prefers-color-scheme: dark) {
+      .infographic a { border-color: rgba(255,255,255,0.14); box-shadow: 0 10px 34px rgba(0,0,0,0.45); }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -550,6 +585,21 @@
         <p>Rehber özellikle şu soruya cevap arar:</p>
         <p class="pull-quote">Bağımsız güç merkezleri tek tek izole edilip etkisizleştiriliyorsa, buna karşı nasıl dayanıklı, geniş, meşru ve sürdürülebilir bir demokratik savunma hattı kurulabilir?</p>
       </section>
+
+      <!-- Görsel özet — tek sayfalık infografik -->
+      <figure class="infographic">
+        <a href="/assets/images/guc-konsolidasyonuna-karsi-demokratik-mucadele-infografik.png"
+           target="_blank" rel="noopener"
+           aria-label="İnfografiği tam boyutta yeni sekmede aç">
+          <img src="/assets/images/guc-konsolidasyonuna-karsi-demokratik-mucadele-infografik.png"
+               width="1024" height="1536" loading="lazy" decoding="async"
+               alt="Rehberin tek sayfalık görsel özeti: temel ilke, konsolidasyon mantığı ile demokratik savunma mantığının karşılaştırması, üç katmanlı mücadele, 16 adımlı demokratik karşı-döngü, ortak asgari demokratik zemin, doğru iletişim dili, kritik stratejik prensipler, psikolojik boyut, mücadele alanları ve geçiş sonrası plan.">
+        </a>
+        <figcaption lang="tr">
+          Rehberin tek sayfalık görsel özeti — bütün bölümler aşağıda metin olarak ayrıntılandırılmıştır.
+          <span class="zoom-hint">↗ Büyütmek için görsele tıklayın.</span>
+        </figcaption>
+      </figure>
 
       <!-- ═══════════════ II. TEMEL İLKE ═══════════════ -->
       <section id="ilke" class="major-section">
