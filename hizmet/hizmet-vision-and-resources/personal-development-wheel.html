@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Development Wheel | Yasir Bilgin</title>
+
+  <meta name="description" content="An interactive self-assessment in the Hizmet tradition: rate yourself across eight areas of a balanced life and watch your development wheel update live.">
+  <meta name="keywords" content="personal development, Hizmet, self-assessment">
+  <link rel="canonical" href="https://yasirbilgin.com/hizmet/Hizmet-Vision-and-Resources/personal-development-wheel.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Personal Development Wheel">
+  <meta property="og:description" content="An interactive self-assessment in the Hizmet tradition: rate yourself across eight areas of a balanced life and watch your development wheel update live.">
+  <meta property="og:url"         content="https://yasirbilgin.com/hizmet/Hizmet-Vision-and-Resources/personal-development-wheel.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="Personal Development Wheel">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Personal Development Wheel">
+  <meta name="twitter:description" content="An interactive self-assessment in the Hizmet tradition: rate yourself across eight areas of a balanced life and watch your development wheel update live.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Personal Development Wheel: A Balanced Life in the Hizmet Tradition",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-09-09",
+    "dateModified": "2026-09-09",
+    "description": "An interactive self-assessment in the Hizmet tradition: rate yourself across eight areas of a balanced life and watch your development wheel update live.",
+    "url": "https://yasirbilgin.com/hizmet/Hizmet-Vision-and-Resources/personal-development-wheel.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",   "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmet", "item": "https://yasirbilgin.com/hizmet/" },
+      { "@type": "ListItem", "position": 3, "name": "Personal Development Wheel", "item": "https://yasirbilgin.com/hizmet/Hizmet-Vision-and-Resources/personal-development-wheel.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ─────────────────────────────────────────────────────────
+       Palette — explicit hex so bespoke components render safely
+       in both light and dark contexts (no reliance on token cascade)
+       ───────────────────────────────────────────────────────── */
+    :root {
+      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-body:    'Source Serif 4', Georgia, serif;
+      --font-ui:      'DM Sans', system-ui, -apple-system, sans-serif;
+
+      --ink:     #241f18;
+      --body:    #3a332a;
+      --muted:   #6e5f4e;
+      --faint:   #7c6f5c;
+      --bg:      #f7f3ec;
+      --bg-soft: #f1ebe0;
+      --surface: #fffdf8;
+      --line:    rgba(107,93,79,0.18);
+      --line-2:  rgba(107,93,79,0.10);
+      --gold:    #a97b23;   /* text-safe gold */
+      --gold-dec:#c9a84c;   /* decorative gold */
+
+      --pw-track:   #e7e0d3;
+      --pw-wheel-bg:#fbf8f2;
+      --pw-ring:    #ded4c1;
+      --pw-spoke:   #cfc4ad;
+      --pw-hub:     #1f3b5c;
+      --pw-hub-ink: #f3efe4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:     #efe7d8;
+        --body:    #ddd3c2;
+        --muted:   #b3a892;
+        --faint:   #a0937d;
+        --bg:      #12100d;
+        --bg-soft: #191510;
+        --surface: #1c1813;
+        --line:    rgba(255,255,255,0.12);
+        --line-2:  rgba(255,255,255,0.07);
+        --gold:    #d9b451;
+        --gold-dec:#c9a84c;
+
+        --pw-track:   #39332b;
+        --pw-wheel-bg:#171410;
+        --pw-ring:    #3d372d;
+        --pw-spoke:   #4a4235;
+        --pw-hub:     #16283d;
+        --pw-hub-ink: #eef4fb;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--body);
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Progress bar — below the fixed global nav */
+    .progress-bar {
+      position: fixed; top: 62px; left: 0; height: 3px;
+      background: var(--gold-dec); width: 0%; z-index: 100;
+    }
+
+    /* Hero */
+    .hero { max-width: 820px; margin: 0 auto; padding: 3.5rem 2.5rem 0; }
+    .eyebrow {
+      display: inline-flex; align-items: center; margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem; border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px; color: var(--faint); font-size: 0.72rem;
+      font-family: var(--font-body); letter-spacing: 0.13em;
+      text-transform: uppercase; background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow { border-color: rgba(255,255,255,0.14); background: rgba(30,27,23,0.7); color: var(--faint); }
+    }
+    h1 {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.05;
+      margin: 0 0 1rem; color: var(--ink); letter-spacing: -0.01em;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem); line-height: 1.6;
+      color: var(--muted); margin: 0 0 2rem; max-width: 60ch;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.9rem; }
+    .avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--pw-hub); color: var(--pw-hub-ink);
+      display: grid; place-items: center; font-family: var(--font-ui);
+      font-weight: 600; font-size: 0.9rem; letter-spacing: 0.02em;
+    }
+    .byline-text { display: flex; flex-direction: column; line-height: 1.35; }
+    .byline-name { font-family: var(--font-ui); font-weight: 600; color: var(--ink); font-size: 0.95rem; }
+    .byline-meta { font-family: var(--font-ui); font-size: 0.82rem; color: var(--faint); }
+    .hero-rule {
+      max-width: 820px; margin: 2.5rem auto 0; border: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    /* Meta-bar — static, after the hero rule */
+    .article-header {
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 1rem; max-width: 820px; margin: 0 auto; padding: 0.75rem 2.5rem;
+    }
+    .read-time { font-family: var(--font-ui); font-size: 0.82rem; color: var(--faint); letter-spacing: 0.02em; }
+    .toc-btn {
+      font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600;
+      color: var(--ink); background: var(--surface);
+      border: 1px solid var(--line); border-radius: 999px;
+      padding: 0.45rem 1rem; min-height: 40px; cursor: pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .toc-btn:hover { border-color: var(--gold-dec); }
+
+    /* TOC overlay — backdrop-filter only when open */
+    .toc-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex; align-items: flex-start; justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      background: var(--surface); color: var(--body);
+      width: min(360px, 88vw); height: 100%; overflow-y: auto;
+      padding: 2rem 1.75rem; box-shadow: -12px 0 40px rgba(0,0,0,0.2);
+    }
+    .toc-panel h2 {
+      font-family: var(--font-ui); font-size: 0.75rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--faint); margin: 0 0 1rem; font-weight: 600;
+    }
+    .toc-panel > button {
+      float: right; background: none; border: 0; font-size: 1.3rem;
+      color: var(--muted); cursor: pointer; line-height: 1; padding: 0.2rem;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.6rem 0; min-height: 44px;
+      color: var(--body); text-decoration: none;
+      font-family: var(--font-ui); font-size: 0.95rem;
+      border-bottom: 1px solid var(--line-2);
+    }
+    .toc-list a:hover { color: var(--gold); }
+    .toc-main { font-weight: 600; }
+
+    /* Article body */
+    .article-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2.5rem 8rem; }
+    .prose { max-width: 68ch; margin-inline: auto; }
+    .major-section { margin: 0 0 4.5rem; }
+    .section-label {
+      display: block; font-family: var(--font-ui); font-size: 0.72rem;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 0.6rem; font-weight: 600;
+    }
+    h2 {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: clamp(1.9rem, 4vw, 2.7rem); line-height: 1.12;
+      color: var(--ink); margin: 0 0 1.2rem; letter-spacing: -0.01em;
+    }
+    h2 em { font-style: italic; color: var(--gold); }
+    h3 {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.2;
+      color: var(--ink); margin: 2.4rem 0 0.9rem;
+    }
+    .article-body p { margin: 0 0 1.3rem; }
+    .article-body a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    strong { color: var(--ink); }
+
+    .lede { font-size: 1.15rem; color: var(--muted); }
+
+    /* Steps list in the directions section */
+    .steps { list-style: none; counter-reset: step; margin: 1.5rem 0; padding: 0; }
+    .steps li {
+      counter-increment: step; position: relative; padding: 0 0 1.2rem 3rem;
+      margin: 0;
+    }
+    .steps li::before {
+      content: counter(step); position: absolute; left: 0; top: 0;
+      width: 2rem; height: 2rem; border-radius: 50%;
+      background: var(--pw-hub); color: var(--pw-hub-ink);
+      display: grid; place-items: center;
+      font-family: var(--font-ui); font-weight: 600; font-size: 0.9rem;
+    }
+
+    .callout {
+      border-left: 3px solid var(--gold-dec);
+      background: var(--bg-soft);
+      padding: 1.2rem 1.5rem; border-radius: 0 8px 8px 0;
+      margin: 2rem 0; font-size: 1.02rem;
+    }
+
+    /* ─────────────────────────────────────────────────────────
+       The tool
+       ───────────────────────────────────────────────────────── */
+    .pw-layout {
+      display: grid; grid-template-columns: minmax(300px, 420px) 1fr;
+      gap: 2.4rem; align-items: start;
+    }
+    .pw-wheel-col { position: sticky; top: 82px; }
+    .pw-wheel-card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 16px; padding: 1.4rem 1.4rem 1rem;
+      box-shadow: 0 1px 2px rgba(43,38,32,0.05), 0 18px 40px -24px rgba(43,38,32,0.28);
+    }
+    #pwWheel { width: 100%; height: auto; display: block; }
+    .pw-wheel-cap {
+      text-align: center; font-family: var(--font-ui);
+      font-size: 0.76rem; color: var(--faint); margin: 0.4rem 0 0;
+      letter-spacing: 0.03em;
+    }
+
+    /* Summary */
+    .pw-summary {
+      margin-top: 1.2rem; background: var(--surface);
+      border: 1px solid var(--line); border-radius: 16px; padding: 1.3rem 1.4rem;
+    }
+    .pw-score-big {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      font-family: var(--font-display); color: var(--ink);
+    }
+    .pw-score-big b { font-size: 3rem; font-weight: 600; line-height: 1; }
+    .pw-score-big span { font-size: 1.1rem; color: var(--faint); font-family: var(--font-ui); }
+    .pw-score-lab { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.3rem; }
+    .pw-interp { font-size: 0.98rem; color: var(--muted); margin: 0.8rem 0 0; }
+    .pw-flags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.9rem; }
+    .pw-flag {
+      font-family: var(--font-ui); font-size: 0.78rem; color: var(--ink);
+      background: var(--bg-soft); border: 1px solid var(--line);
+      border-radius: 999px; padding: 0.3rem 0.75rem;
+    }
+    .pw-flag i { font-style: normal; width: 9px; height: 9px; border-radius: 50%; display: inline-block; margin-right: 0.4rem; vertical-align: middle; }
+
+    /* Toolbar */
+    .pw-toolbar { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.3rem; }
+    .pw-btn {
+      font-family: var(--font-ui); font-size: 0.85rem; font-weight: 600;
+      color: var(--ink); background: var(--surface);
+      border: 1px solid var(--line); border-radius: 999px;
+      padding: 0.5rem 1.05rem; min-height: 44px; cursor: pointer;
+      transition: border-color .2s, background .2s, color .2s;
+    }
+    .pw-btn:hover { border-color: var(--gold-dec); }
+    .pw-btn-primary { background: var(--pw-hub); color: var(--pw-hub-ink); border-color: var(--pw-hub); }
+    .pw-btn-primary:hover { filter: brightness(1.08); }
+
+    /* Category cards */
+    .pw-cards { display: flex; flex-direction: column; gap: 0.9rem; }
+    .pw-card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-left: 4px solid var(--cat, var(--gold-dec));
+      border-radius: 12px; overflow: hidden;
+    }
+    .pw-card-head {
+      width: 100%; display: grid;
+      grid-template-columns: auto auto 1fr auto auto; align-items: center;
+      gap: 0.7rem; padding: 0.95rem 1.1rem; min-height: 56px;
+      background: none; border: 0; cursor: pointer; text-align: left;
+      font-family: var(--font-ui); color: var(--ink);
+    }
+    .pw-num {
+      font-family: var(--font-ui); font-weight: 700; font-size: 0.8rem;
+      color: #fff; background: var(--cat, var(--gold-dec));
+      width: 1.6rem; height: 1.6rem; border-radius: 50%;
+      display: grid; place-items: center;
+    }
+    .pw-icon { font-size: 1.1rem; line-height: 1; }
+    .pw-name { font-weight: 600; font-size: 1rem; line-height: 1.25; }
+    .pw-avg {
+      font-family: var(--font-display); font-weight: 600; font-size: 1.25rem;
+      color: var(--ink); min-width: 2.6rem; text-align: right;
+    }
+    .pw-avg small { font-family: var(--font-ui); font-size: 0.7rem; color: var(--faint); font-weight: 400; }
+    .pw-chev { color: var(--faint); font-size: 0.8rem; transition: transform .2s; }
+    .pw-card-head[aria-expanded="true"] .pw-chev { transform: rotate(90deg); }
+
+    .pw-items { padding: 0.4rem 1.1rem 1.1rem; border-top: 1px solid var(--line-2); }
+    .pw-row {
+      display: grid; grid-template-columns: 1fr auto; align-items: center;
+      gap: 0.8rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line-2);
+    }
+    .pw-row:last-of-type { border-bottom: 0; }
+    .pw-row-label { font-family: var(--font-body); font-size: 0.95rem; color: var(--body); line-height: 1.35; }
+    .pw-row-control { display: flex; align-items: center; gap: 0.7rem; }
+    .pw-val {
+      font-family: var(--font-ui); font-weight: 600; font-size: 0.9rem;
+      color: var(--ink); width: 1.5rem; text-align: right;
+    }
+    .pw-total {
+      display: flex; justify-content: flex-end; align-items: baseline; gap: 0.5rem;
+      padding-top: 0.9rem; margin-top: 0.4rem; border-top: 1px dashed var(--line);
+      font-family: var(--font-ui); font-size: 0.85rem; color: var(--muted);
+    }
+    .pw-total strong { font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); }
+
+    /* Range inputs */
+    input[type="range"] {
+      -webkit-appearance: none; appearance: none;
+      width: 130px; height: 6px; border-radius: 999px;
+      background: var(--pw-track); outline: none; cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--cat, var(--gold-dec)); border: 2px solid var(--surface);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25); cursor: pointer;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--cat, var(--gold-dec)); border: 2px solid var(--surface);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25); cursor: pointer;
+    }
+
+    /* Areas grid in §4 */
+    .areas-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem; margin: 1.6rem 0;
+    }
+    .area-chip {
+      background: var(--surface); border: 1px solid var(--line);
+      border-top: 3px solid var(--cat, var(--gold-dec));
+      border-radius: 10px; padding: 1rem 1.1rem;
+    }
+    .area-chip h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
+    .area-chip p { margin: 0; font-size: 0.92rem; color: var(--muted); line-height: 1.55; }
+
+    .epigraph {
+      text-align: center; font-family: var(--font-display); font-style: italic;
+      font-size: 1.35rem; line-height: 1.5; color: var(--ink);
+      max-width: 40ch; margin: 2.5rem auto 0.6rem;
+    }
+    .epigraph-cite { text-align: center; font-family: var(--font-ui); font-size: 0.82rem; color: var(--faint); letter-spacing: 0.04em; }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      max-width: 1080px; margin: 0 auto; padding: 2.5rem 2.5rem 4rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); font-weight: 600; }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.82rem; color: var(--faint); }
+
+    /* Focus-visible on all interactive elements */
+    a:focus-visible, button:focus-visible, .pw-card-head:focus-visible,
+    input[type="range"]:focus-visible, .toc-btn:focus-visible, .pw-btn:focus-visible {
+      outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .pw-layout { grid-template-columns: 1fr; }
+      .pw-wheel-col { position: static; }
+    }
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 2.5rem 1.4rem 0; }
+      .hero-rule, .article-header { padding-left: 1.4rem; padding-right: 1.4rem; }
+      .article-body { padding: 2.5rem 1.4rem 5rem; }
+      footer { padding: 2rem 1.4rem 3rem; }
+      .pw-row { grid-template-columns: 1fr; gap: 0.4rem; }
+      .pw-row-control { justify-content: space-between; }
+      input[type="range"] { flex: 1; width: auto; }
+    }
+    @media (max-width: 420px) {
+      .pw-card-head { grid-template-columns: auto 1fr auto auto; }
+      .pw-icon { display: none; }
+    }
+
+    /* Print */
+    @media print {
+      .pw-toolbar, .toc-btn, .progress-bar, .toc-overlay { display: none !important; }
+      .pw-wheel-col { position: static; }
+      .pw-card { break-inside: avoid; }
+    }
+
+    /* Reduced motion — final block */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- TOC overlay -->
+    <div class="toc-overlay" id="tocOverlay"
+         onclick="if(event.target===this)this.classList.remove('open')">
+      <div class="toc-panel">
+        <button aria-label="Close contents" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+        <h2>Contents</h2>
+        <ul class="toc-list">
+          <li><a href="#s1" class="toc-main">I. How to use this tool</a></li>
+          <li><a href="#s2" class="toc-main">II. Your development wheel</a></li>
+          <li><a href="#s3" class="toc-main">III. Reading your wheel</a></li>
+          <li><a href="#s4" class="toc-main">IV. The eight areas</a></li>
+          <li><a href="#s5" class="toc-main">V. Balance, not perfection</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="eyebrow">Hizmet · Resources</div>
+      <h1>The Personal Development <em>Wheel</em></h1>
+      <p class="hero-sub">A living self-assessment for a balanced life in the Hizmet tradition. Rate yourself across eight areas and watch your wheel take shape — a picture of where you are flourishing and where you might turn your attention next.</p>
+      <div class="byline-row">
+        <div class="avatar">YB</div>
+        <div class="byline-text">
+          <span class="byline-name">Yasir Bilgin</span>
+          <span class="byline-meta">Interactive self-assessment</span>
+        </div>
+      </div>
+    </section>
+    <hr class="hero-rule">
+
+    <header class="article-header">
+      <span class="read-time">Interactive tool · 5 min</span>
+      <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+    </header>
+
+    <article class="article-body">
+
+      <!-- I. Directions -->
+      <section id="s1" class="major-section prose">
+        <span class="section-label">Section I</span>
+        <h2>How to use this <em>tool</em></h2>
+        <p class="lede">This is a mirror, not a scoreboard. It draws the classic “wheel of life” through the lens of the Hizmet values — faith, knowledge, service, and excellence, in the pursuit of a more just and peaceful world.</p>
+        <ol class="steps">
+          <li>Open each of the eight areas below and rate every statement from <strong>1</strong> (very weak) to <strong>10</strong> (excellent). Be honest and thoughtful rather than generous.</li>
+          <li>Each area averages its ten statements automatically — the same as adding your scores and dividing by ten on paper.</li>
+          <li>The wheel redraws as you go. A round, full wheel means a balanced life; a lopsided one shows where energy is pooling or draining.</li>
+          <li>Nothing is sent anywhere. Your answers stay in this browser, so you can return and watch the wheel change over months.</li>
+        </ol>
+        <div class="callout">
+          <strong>Every area starts at 5</strong> so the wheel is visible from the outset — these are placeholders, not a verdict. Slide each statement to what is true for you today.
+        </div>
+      </section>
+
+      <!-- II. The tool -->
+      <section id="s2" class="major-section">
+        <span class="section-label">Section II</span>
+        <h2>Your development <em>wheel</em></h2>
+
+        <div class="pw-layout">
+          <div class="pw-wheel-col">
+            <div class="pw-wheel-card">
+              <svg id="pwWheel" viewBox="0 0 700 660" role="img"
+                   aria-label="Personal development wheel showing your current scores across eight areas of life."></svg>
+              <p class="pw-wheel-cap">Rings mark 2 · 4 · 6 · 8 · 10 — the further a wedge reaches, the stronger that area.</p>
+            </div>
+
+            <div class="pw-summary" id="pwSummary">
+              <div class="pw-score-lab">Overall balance</div>
+              <div class="pw-score-big"><b id="pwOverall">5.0</b> <span>/ 10 average</span></div>
+              <p class="pw-interp" id="pwInterp"></p>
+              <div class="pw-flags" id="pwFlags"></div>
+            </div>
+          </div>
+
+          <div class="pw-controls">
+            <div class="pw-toolbar">
+              <button class="pw-btn" id="pwExpand" type="button">Expand all</button>
+              <button class="pw-btn" id="pwCollapse" type="button">Collapse all</button>
+              <button class="pw-btn" id="pwReset" type="button">Reset to 5</button>
+              <button class="pw-btn pw-btn-primary" id="pwPrint" type="button">Print / save PDF</button>
+            </div>
+            <div class="pw-cards" id="pwCards"></div>
+          </div>
+        </div>
+
+        <p class="sr-only" id="pwLive" role="status" aria-live="polite"></p>
+      </section>
+
+      <!-- III. Interpretation -->
+      <section id="s3" class="major-section prose">
+        <span class="section-label">Section III</span>
+        <h2>Reading your <em>wheel</em></h2>
+        <p>Two things matter, and they are different. The first is <strong>size</strong> — how far your wedges reach on average. The second, and often the more revealing, is <strong>roundness</strong> — how even they are. A wheel of straight 6s rolls smoothly; a wheel of 9s and 2s does not, however impressive its high points.</p>
+        <h3>What the shape is telling you</h3>
+        <p>A deep notch usually marks an area you have quietly deprioritised, not one you lack the capacity for. In the Hizmet framing, the eight areas are meant to feed one another: sound health sustains service; knowledge deepens worship; a peaceful home makes generosity possible. A weak spoke tends to drag on its neighbours before long.</p>
+        <h3>Where to begin</h3>
+        <p>Resist the urge to fix everything. Choose the single lowest area, or the one whose weakness is costing the others most, and set one small, repeatable intention for the coming week. Re-rate yourself in a month; the wheel remembers, so the change will be visible.</p>
+      </section>
+
+      <!-- IV. The eight areas -->
+      <section id="s4" class="major-section prose">
+        <span class="section-label">Section IV</span>
+        <h2>The eight <em>areas</em></h2>
+        <p>These are not eight competing demands but eight facets of one integrated life. Together they trace the Hizmet ideal: <strong>faith, knowledge, service, excellence</strong> — offered toward a more just and peaceful world. Each hub of the wheel points back to that shared centre.</p>
+        <div class="areas-grid" id="pwAreasGrid"></div>
+      </section>
+
+      <!-- V. Balance, not perfection -->
+      <section id="s5" class="major-section prose">
+        <span class="section-label">Section V</span>
+        <h2>Balance, not <em>perfection</em></h2>
+        <p>No one scores tens across a full wheel, and a life spent chasing them would miss the point. The aim is a wheel round enough to keep rolling — steady growth, honestly seen, offered with sincerity. Small, consistent efforts, area by area, are what compound over a lifetime.</p>
+        <blockquote class="epigraph">“Small, sincere efforts, when joined together, can make a great difference in the world.”</blockquote>
+        <p class="epigraph-cite">— Fethullah Gülen</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial · Inspired by the Hizmet tradition</span>
+  </footer>
+  <script>
+  /* Progress bar */
+  (function () {
+    var bar = document.getElementById('progressBar');
+    if (!bar) return;
+    window.addEventListener('scroll', function () {
+      var docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docH > 0 ? (window.scrollY / docH * 100) : 0) + '%';
+    }, { passive: true });
+  })();
+  </script>
+
+  <script>
+  /* ── Personal Development Wheel ─────────────────────────────── */
+  (function () {
+    'use strict';
+
+    var CATS = [
+      { id: 'faith', num: 1, name: 'Faith & Spiritual Life', short: ['1. Faith &', 'Spiritual Life'], color: '#6f9e7f', icon: '🌱',
+        blurb: 'The inner life — sincerity, worship, and nearness to God.',
+        items: [
+          'Sincerity in worship (namaz, dua)',
+          'Qur’an reading and understanding',
+          'Connection with Allah in daily life',
+          'Ikhlas — purity of intention',
+          'Trust and patience (<span lang="tr">tevekkül, sabır</span>)',
+          'Gratitude',
+          'Striving against ego (nefs)',
+          'Seeking knowledge as worship',
+          'Spiritual companionship (sohbet)',
+          'Living according to moral values'
+        ] },
+      { id: 'knowledge', num: 2, name: 'Knowledge & Learning', short: ['2. Knowledge', '& Learning'], color: '#5b8bb0', icon: '📖',
+        blurb: 'Lifelong learning — sacred and secular, held with humility.',
+        items: [
+          'Depth in Islamic knowledge',
+          'Secular knowledge & professional skills',
+          'Reading and research habits',
+          'Critical and independent thinking',
+          'Curiosity and asking questions',
+          'Continuous, life-long learning',
+          'Intellectual humility',
+          'Applying knowledge in life',
+          'Sharing what I learn with others',
+          'Exposure to diverse perspectives'
+        ] },
+      { id: 'character', num: 3, name: 'Character & Inner Development', short: ['3. Character &', 'Inner Development'], color: '#cf8a52', icon: '🧭',
+        blurb: 'Ahlak — the daily work of becoming a trustworthy person.',
+        items: [
+          'Honesty and integrity',
+          'Self-discipline',
+          'Humility (<span lang="tr">tevazu</span>)',
+          'Patience and emotional control',
+          'Kindness and compassion',
+          'Reliability and responsibility',
+          'Courage to do what is right',
+          'Avoiding gossip and negativity',
+          'Mindfulness of speech and conduct',
+          'Striving to be a good role model'
+        ] },
+      { id: 'family', num: 4, name: 'Family & Close Relationships', short: ['4. Family &', 'Relationships'], color: '#d17f8f', icon: '❤️',
+        blurb: 'The household — a warm, peaceful home is its own kind of service.',
+        items: [
+          'Spouse relationship',
+          'Being a caring parent',
+          'Quality time with children',
+          'Respect and listening at home',
+          'Supporting family members',
+          'Maintaining extended family ties',
+          'Creating a warm and peaceful home',
+          'Dealing with disagreements well',
+          'Being a positive role model',
+          'Regular family time and traditions'
+        ] },
+      { id: 'community', num: 5, name: 'Community & Service', short: ['5. Community', '& Service'], color: '#8f82c0', icon: '👥',
+        blurb: 'Hizmet in action — giving to others without seeking return.',
+        items: [
+          'Participation in community activities',
+          'Mentoring and supporting youth',
+          'Helping those in need',
+          'Contributing to education initiatives',
+          'Building bridges across differences',
+          'Working for a more just and peaceful society',
+          'Volunteering time and skills',
+          'Supporting community institutions',
+          'Intercultural and interfaith engagement',
+          'Living the “hizmet” (service) spirit'
+        ] },
+      { id: 'health', num: 6, name: 'Physical Health & Well-Being', short: ['6. Physical Health', '& Well-Being'], color: '#4fa78e', icon: '🏃',
+        blurb: 'The body as a trust — rested, nourished, and cared for.',
+        items: [
+          'Regular exercise and activity',
+          'Healthy nutrition',
+          'Maintaining a healthy weight',
+          'Enough sleep and rest',
+          'Regular health checkups',
+          'Managing stress',
+          'Avoiding harmful habits (e.g., smoking)',
+          'Energy level for daily responsibilities',
+          'Time in nature and outdoors',
+          'Overall physical fitness and endurance'
+        ] },
+      { id: 'finance', num: 7, name: 'Financial Stewardship', short: ['7. Financial', 'Stewardship'], color: '#cfa63f', icon: '🪙',
+        blurb: 'Earning, spending, and giving with responsibility and barakah.',
+        items: [
+          'Living within my means',
+          'Earning through halal and ethical work',
+          'Wise and responsible spending',
+          'Saving for the future',
+          'Investing wisely',
+          'Supporting family responsibilities',
+          'Giving charity (zekat, sadaka)',
+          'Avoiding debt',
+          'Financial planning for the long term',
+          'Using resources to support good causes'
+        ] },
+      { id: 'work', num: 8, name: 'Work, Purpose & Contribution', short: ['8. Work, Purpose', '& Contribution'], color: '#7f9bc9', icon: '💼',
+        blurb: 'Meaningful work done with excellence and a clear direction.',
+        items: [
+          'Doing meaningful work',
+          'Using my skills and talents',
+          'Excellence and professionalism',
+          'Time management',
+          'Balance between work and family',
+          'Alignment with my values',
+          'Creating positive impact',
+          'Opportunities for growth and advancement',
+          'Well-being at work (low burnout)',
+          'Having a clear long-term direction'
+        ] }
+    ];
+
+    var STORE_KEY = 'ynb-pw-scores-v1';
+    var DEFAULT = 5;
+    var state = {}; // { catId: [10 ints] }
+
+    /* ── Persistence ─────────────────────────────────────────── */
+    function load() {
+      var saved = null;
+      try { saved = JSON.parse(localStorage.getItem(STORE_KEY) || 'null'); } catch (e) { saved = null; }
+      CATS.forEach(function (c) {
+        var arr = saved && Array.isArray(saved[c.id]) ? saved[c.id] : null;
+        state[c.id] = c.items.map(function (_, i) {
+          var v = arr && Number(arr[i]);
+          return (v >= 1 && v <= 10) ? Math.round(v) : DEFAULT;
+        });
+      });
+    }
+    function save() {
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function stripTags(s) { return s.replace(/<[^>]+>/g, ''); }
+    function avg(catId) {
+      var a = state[catId], sum = 0;
+      for (var i = 0; i < a.length; i++) sum += a[i];
+      return sum / a.length;
+    }
+    function fmt(n) { return (Math.round(n * 10) / 10).toFixed(1); }
+
+    /* ── Build the category cards ────────────────────────────── */
+    function buildCards() {
+      var wrap = document.getElementById('pwCards');
+      wrap.innerHTML = '';
+      CATS.forEach(function (c) {
+        var card = document.createElement('div');
+        card.className = 'pw-card';
+        card.style.setProperty('--cat', c.color);
+
+        var itemsId = 'items-' + c.id;
+        var rows = c.items.map(function (label, i) {
+          var plain = stripTags(label);
+          return '<label class="pw-row">' +
+                   '<span class="pw-row-label">' + label + '</span>' +
+                   '<span class="pw-row-control">' +
+                     '<input type="range" min="1" max="10" step="1" value="' + state[c.id][i] + '" ' +
+                            'data-cat="' + c.id + '" data-idx="' + i + '" ' +
+                            'aria-label="' + plain.replace(/"/g, '&quot;') + '">' +
+                     '<output class="pw-val">' + state[c.id][i] + '</output>' +
+                   '</span>' +
+                 '</label>';
+        }).join('');
+
+        card.innerHTML =
+          '<button class="pw-card-head" type="button" aria-expanded="false" aria-controls="' + itemsId + '">' +
+            '<span class="pw-num">' + c.num + '</span>' +
+            '<span class="pw-icon" aria-hidden="true">' + c.icon + '</span>' +
+            '<span class="pw-name">' + c.name + '</span>' +
+            '<span class="pw-avg" id="avg-' + c.id + '">' + fmt(avg(c.id)) + '<small> /10</small></span>' +
+            '<span class="pw-chev" aria-hidden="true">▸</span>' +
+          '</button>' +
+          '<div class="pw-items" id="' + itemsId + '" hidden>' + rows +
+            '<div class="pw-total">Total ÷ 10 = <strong id="total-' + c.id + '">' + fmt(avg(c.id)) + '</strong></div>' +
+          '</div>';
+
+        wrap.appendChild(card);
+      });
+    }
+
+    /* ── Build the reference chips in §4 ─────────────────────── */
+    function buildAreas() {
+      var grid = document.getElementById('pwAreasGrid');
+      grid.innerHTML = CATS.map(function (c) {
+        return '<div class="area-chip" style="--cat:' + c.color + '">' +
+                 '<h3>' + c.icon + ' ' + c.name + '</h3>' +
+                 '<p>' + c.blurb + '</p>' +
+               '</div>';
+      }).join('');
+    }
+
+    /* ── Wheel geometry ──────────────────────────────────────── */
+    var CX = 350, CY = 320, RMAX = 205, RHUB = 56, RLABEL = 232;
+
+    function P(r, thetaDeg) {
+      var t = thetaDeg * Math.PI / 180;
+      return [CX + r * Math.sin(t), CY - r * Math.cos(t)];
+    }
+    function wedgePath(rInner, rOuter, a0, a1) {
+      var p0o = P(rOuter, a0), p1o = P(rOuter, a1);
+      var p0i = P(rInner, a0), p1i = P(rInner, a1);
+      return 'M ' + p0i[0].toFixed(2) + ' ' + p0i[1].toFixed(2) +
+             ' L ' + p0o[0].toFixed(2) + ' ' + p0o[1].toFixed(2) +
+             ' A ' + rOuter + ' ' + rOuter + ' 0 0 1 ' + p1o[0].toFixed(2) + ' ' + p1o[1].toFixed(2) +
+             ' L ' + p1i[0].toFixed(2) + ' ' + p1i[1].toFixed(2) +
+             ' A ' + rInner + ' ' + rInner + ' 0 0 0 ' + p0i[0].toFixed(2) + ' ' + p0i[1].toFixed(2) + ' Z';
+    }
+
+    function drawWheel() {
+      var s = '';
+      // concentric rings
+      [2, 4, 6, 8, 10].forEach(function (k) {
+        s += '<circle cx="' + CX + '" cy="' + CY + '" r="' + (k / 10 * RMAX) +
+             '" fill="none" stroke="var(--pw-ring)" stroke-width="1"/>';
+      });
+      // wedges
+      CATS.forEach(function (c, i) {
+        var centre = i * 45;
+        var a0 = centre - 22.5, a1 = centre + 22.5;
+        var v = avg(c.id);
+        var rScore = Math.max(v / 10 * RMAX, 2);
+        // faint full-radius territory
+        s += '<path d="' + wedgePath(RHUB, RMAX, a0, a1) + '" fill="' + c.color + '" fill-opacity="0.10" stroke="none"/>';
+        // score fill
+        s += '<path d="' + wedgePath(RHUB, RHUB + rScore * (RMAX - RHUB) / RMAX, a0, a1) + '" fill="' + c.color + '" fill-opacity="0.62" stroke="' + c.color + '" stroke-width="1.5" stroke-opacity="0.9"/>';
+      });
+      // spokes at wedge boundaries
+      for (var i = 0; i < 8; i++) {
+        var b = i * 45 + 22.5;
+        var pIn = P(RHUB, b), pOut = P(RMAX, b);
+        s += '<line x1="' + pIn[0].toFixed(2) + '" y1="' + pIn[1].toFixed(2) +
+             '" x2="' + pOut[0].toFixed(2) + '" y2="' + pOut[1].toFixed(2) +
+             '" stroke="var(--pw-spoke)" stroke-width="1"/>';
+      }
+      // labels
+      CATS.forEach(function (c, i) {
+        var lp = P(RLABEL, i * 45);
+        var anchor = Math.abs(lp[0] - CX) < 6 ? 'middle' : (lp[0] > CX ? 'start' : 'end');
+        s += '<text x="' + lp[0].toFixed(1) + '" y="' + lp[1].toFixed(1) + '" text-anchor="' + anchor +
+             '" font-family="var(--font-ui)" font-size="12.5" fill="var(--ink)" font-weight="600">' +
+               '<tspan x="' + lp[0].toFixed(1) + '" dy="-4">' + c.short[0] + '</tspan>' +
+               '<tspan x="' + lp[0].toFixed(1) + '" dy="15">' + c.short[1] + '</tspan>' +
+             '</text>';
+      });
+      // hub
+      s += '<circle cx="' + CX + '" cy="' + CY + '" r="' + RHUB + '" fill="var(--pw-hub)"/>';
+      s += '<text x="' + CX + '" y="' + (CY - 12) + '" text-anchor="middle" font-family="var(--font-ui)" fill="var(--pw-hub-ink)">' +
+             '<tspan x="' + CX + '" font-size="11" font-weight="600">A More Just</tspan>' +
+             '<tspan x="' + CX + '" dy="14" font-size="11" font-weight="600">&amp; Peaceful</tspan>' +
+             '<tspan x="' + CX + '" dy="14" font-size="11" font-weight="600">World</tspan>' +
+           '</text>';
+      document.getElementById('pwWheel').innerHTML = s;
+    }
+
+    /* ── Summary + interpretation ────────────────────────────── */
+    function updateSummary() {
+      var vals = CATS.map(function (c) { return { c: c, v: avg(c.id) }; });
+      var overall = vals.reduce(function (a, x) { return a + x.v; }, 0) / vals.length;
+      var lo = vals.slice().sort(function (a, b) { return a.v - b.v; })[0];
+      var hi = vals.slice().sort(function (a, b) { return b.v - a.v; })[0];
+      var spread = hi.v - lo.v;
+
+      document.getElementById('pwOverall').textContent = fmt(overall);
+
+      var msg;
+      if (overall < 4)      msg = 'Several areas are running low. Pick one to nurture first rather than trying to lift everything at once.';
+      else if (overall < 6) msg = 'A developing balance. The foundations are there; steady, small efforts will round the wheel out.';
+      else if (overall < 8) msg = 'A strong, fairly balanced life. Protect what is working while tending the softer spokes.';
+      else                  msg = 'An excellent, well-rounded wheel. The work now is to sustain it with the same sincerity that built it.';
+      if (spread >= 4.5)    msg += ' The gap between your highest and lowest areas is wide — the wheel is running uneven.';
+      else if (spread <= 1.5) msg += ' Your areas are remarkably even — a wheel that rolls smoothly.';
+      document.getElementById('pwInterp').textContent = msg;
+
+      document.getElementById('pwFlags').innerHTML =
+        '<span class="pw-flag"><i style="background:' + lo.c.color + '"></i>Nurture: ' + lo.c.name + ' (' + fmt(lo.v) + ')</span>' +
+        '<span class="pw-flag"><i style="background:' + hi.c.color + '"></i>Strength: ' + hi.c.name + ' (' + fmt(hi.v) + ')</span>';
+
+      document.getElementById('pwLive').textContent =
+        'Overall balance ' + fmt(overall) + ' out of 10. Lowest area ' + lo.c.name + ' at ' + fmt(lo.v) + '.';
+    }
+
+    function refreshCat(catId) {
+      var a = fmt(avg(catId));
+      var badge = document.getElementById('avg-' + catId);
+      var total = document.getElementById('total-' + catId);
+      if (badge) badge.innerHTML = a + '<small> /10</small>';
+      if (total) total.textContent = a;
+    }
+
+    function refreshAll() {
+      CATS.forEach(function (c) { refreshCat(c.id); });
+      drawWheel();
+      updateSummary();
+    }
+
+    /* ── Events ──────────────────────────────────────────────── */
+    function bind() {
+      var cards = document.getElementById('pwCards');
+
+      cards.addEventListener('input', function (e) {
+        var el = e.target;
+        if (el.type !== 'range') return;
+        var cat = el.getAttribute('data-cat'), idx = +el.getAttribute('data-idx');
+        state[cat][idx] = +el.value;
+        var out = el.parentNode.querySelector('.pw-val');
+        if (out) out.textContent = el.value;
+        refreshCat(cat);
+        drawWheel();
+        updateSummary();
+        save();
+      });
+
+      cards.addEventListener('click', function (e) {
+        var head = e.target.closest('.pw-card-head');
+        if (!head) return;
+        var open = head.getAttribute('aria-expanded') === 'true';
+        head.setAttribute('aria-expanded', String(!open));
+        document.getElementById(head.getAttribute('aria-controls')).hidden = open;
+      });
+
+      function setAll(open) {
+        document.querySelectorAll('.pw-card-head').forEach(function (h) {
+          h.setAttribute('aria-expanded', String(open));
+          document.getElementById(h.getAttribute('aria-controls')).hidden = !open;
+        });
+      }
+      document.getElementById('pwExpand').addEventListener('click', function () { setAll(true); });
+      document.getElementById('pwCollapse').addEventListener('click', function () { setAll(false); });
+
+      document.getElementById('pwReset').addEventListener('click', function () {
+        CATS.forEach(function (c) { state[c.id] = c.items.map(function () { return DEFAULT; }); });
+        save();
+        buildCards();
+        refreshAll();
+      });
+
+      document.getElementById('pwPrint').addEventListener('click', function () { window.print(); });
+    }
+
+    /* ── Init ────────────────────────────────────────────────── */
+    load();
+    buildCards();
+    buildAreas();
+    bind();
+    refreshAll();
+  })();
+  </script>
+</body>
+</html>
