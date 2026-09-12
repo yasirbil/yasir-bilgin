@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Architecture of Experience | Yasir Bilgin</title>
+
+  <meta name="description" content="How the mind turns bare facts into lived experience: a layered model of perception, appraisal, schemas, personality, and phenomenology — explore and filter it.">
+  <meta name="keywords" content="predictive processing, mental models, phenomenology">
+  <link rel="canonical" href="https://yasirbilgin.com/atlas/Mental-Models/architecture-of-experience.html">
+
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="The Architecture of Experience">
+  <meta property="og:description" content="How the mind turns bare facts into lived experience: a layered model of perception, appraisal, schemas, personality, and phenomenology — explore and filter it.">
+  <meta property="og:url"         content="https://yasirbilgin.com/atlas/Mental-Models/architecture-of-experience.html">
+  <meta property="og:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+  <meta property="og:image:alt"   content="The Architecture of Experience">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="The Architecture of Experience">
+  <meta name="twitter:description" content="How the mind turns bare facts into lived experience: a layered model of perception, appraisal, schemas, personality, and phenomenology — explore and filter it.">
+  <meta name="twitter:image"       content="https://yasirbilgin.com/assets/images/social-preview.jpg">
+
+  <script src="https://yasirbilgin.com/nav.js"></script>
+
+  <link rel="icon" type="image/x-icon"  href="/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Architecture of Experience",
+    "author": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "publisher": { "@type": "Person", "name": "Yasir Bilgin", "url": "https://yasirbilgin.com" },
+    "datePublished": "2026-09-11",
+    "dateModified": "2026-09-11",
+    "description": "How the mind turns bare facts into lived experience: a layered model of perception, appraisal, schemas, personality, and phenomenology — explore and filter it.",
+    "url": "https://yasirbilgin.com/atlas/Mental-Models/architecture-of-experience.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://yasirbilgin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "https://yasirbilgin.com/atlas/" },
+      { "@type": "ListItem", "position": 3, "name": "The Architecture of Experience", "item": "https://yasirbilgin.com/atlas/Mental-Models/architecture-of-experience.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/fonts.css">
+
+  <style>
+    /* ── Article-scoped palette (warm parchment, with dark-mode overrides) ─── */
+    .aoe {
+      --ink: #26221c;
+      --ink-soft: #423b31;
+      --muted: #6e5f4e;          /* AA 5.6:1 on parchment */
+      --line: rgba(107,93,79,0.18);
+      --line-soft: rgba(107,93,79,0.10);
+      --paper: #fffdf8;
+      --paper-2: #f4efe6;
+      --gold: #c9a84c;
+      --gold-ink: #8a6d1f;       /* AA gold for small text */
+
+      /* Five domains of the architecture */
+      --d-world:  #4d6b7c;  --d-world-ink:  #3f5c6c;
+      --d-repr:   #34796b;  --d-repr-ink:   #2c6659;
+      --d-interp: #b07d1e;  --d-interp-ink: #8a6413;
+      --d-person: #a9542f;  --d-person-ink: #93472a;
+      --d-phenom: #6f4f83;  --d-phenom-ink: #5f4272;
+    }
+    @media (prefers-color-scheme: dark) {
+      .aoe {
+        --ink: #ece5d8;
+        --ink-soft: #d3cabb;
+        --muted: #a89b88;
+        --line: rgba(255,255,255,0.12);
+        --line-soft: rgba(255,255,255,0.06);
+        --paper: #1e1b16;
+        --paper-2: #17140f;
+        --gold: #d8bd6a;
+        --gold-ink: #d8bd6a;
+        --d-world:  #86aabf; --d-world-ink:  #9dbdcf;
+        --d-repr:   #5cb5a2; --d-repr-ink:   #7cc7b7;
+        --d-interp: #d8ad52; --d-interp-ink: #e2bf74;
+        --d-person: #d9855e; --d-person-ink: #e29d7c;
+        --d-phenom: #ab8ac0; --d-phenom-ink: #bda2ce;
+      }
+    }
+
+    /* ── Progress bar (below nav) ──────────────────────────────────────────── */
+    .progress-bar {
+      position: fixed; top: 62px; left: 0; height: 3px;
+      background: var(--gold); width: 0%; z-index: 100;
+    }
+
+    /* ── TOC overlay ───────────────────────────────────────────────────────── */
+    .toc-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9000;
+      background: rgba(24,20,14,0.55);
+    }
+    .toc-overlay.open {
+      display: flex; align-items: flex-start; justify-content: flex-end;
+      backdrop-filter: blur(4px);
+    }
+    .toc-panel {
+      width: min(360px, 88vw); height: 100%; overflow-y: auto;
+      background: var(--paper); border-left: 1px solid var(--line);
+      padding: 2rem 1.6rem; box-shadow: -12px 0 40px -20px rgba(0,0,0,0.4);
+    }
+    .toc-panel h3 {
+      font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.72rem;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+      margin: 0 0 1.2rem;
+    }
+    .toc-panel > button {
+      float: right; background: none; border: none; cursor: pointer;
+      font-size: 1.3rem; line-height: 1; color: var(--muted); padding: 0.2rem 0.4rem;
+    }
+    .toc-panel > button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.5rem 0.2rem; min-height: 44px;
+      color: var(--ink-soft); text-decoration: none;
+      font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem;
+      border-bottom: 1px solid var(--line-soft); transition: color .16s;
+    }
+    .toc-list a.toc-main { font-weight: 600; }
+    .toc-list a:not(.toc-main) { padding-left: 1.1rem; font-size: 0.86rem; color: var(--muted); }
+    .toc-list a:hover { color: var(--gold-ink); }
+    .toc-list a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ── Eyebrow pill ──────────────────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex; align-items: center; margin-bottom: 1.5rem;
+      padding: 0.35rem 0.9rem; border: 1px solid rgba(107,93,79,0.22);
+      border-radius: 999px; color: var(--faint, #6e5f4e); font-size: 0.72rem;
+      font-family: 'Source Serif 4', Georgia, serif; letter-spacing: 0.13em;
+      text-transform: uppercase; background: rgba(255,250,242,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      .eyebrow { border-color: rgba(255,255,255,0.14); background: rgba(30,27,23,0.7); color: var(--faint, #5a5750); }
+    }
+
+    /* ── Hero ──────────────────────────────────────────────────────────────── */
+    .hero { max-width: 820px; margin: 0 auto; padding: 3.5rem 2.5rem 0; }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+      font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.04; letter-spacing: -0.01em;
+      color: var(--ink); margin: 0 0 1.2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-ink); }
+    .hero-sub {
+      font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+      line-height: 1.55; color: var(--ink-soft); margin: 0 0 2rem; max-width: 40ch;
+    }
+    .byline-row { display: flex; align-items: center; gap: 0.85rem; }
+    .avatar {
+      width: 44px; height: 44px; border-radius: 50%; flex: none;
+      display: grid; place-items: center; background: var(--gold);
+      color: #2a2313; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem;
+    }
+    .byline-text { display: flex; flex-direction: column; font-family: 'DM Sans', sans-serif; }
+    .byline-name { font-weight: 600; font-size: 0.92rem; color: var(--ink); }
+    .byline-meta { font-size: 0.8rem; color: var(--muted); }
+    .hero-rule { max-width: 820px; margin: 2.5rem auto 0; border: none; border-top: 1px solid var(--line); }
+
+    /* ── Meta-bar (static) ─────────────────────────────────────────────────── */
+    .article-header {
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 1rem; padding: 0.75rem 2.5rem; max-width: 820px; margin: 0 auto;
+    }
+    .read-time { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em; }
+    .toc-btn {
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; letter-spacing: 0.04em;
+      background: none; border: 1px solid var(--line); border-radius: 999px;
+      padding: 0.5rem 1rem; min-height: 44px; color: var(--ink-soft); cursor: pointer;
+      transition: border-color .16s, color .16s;
+    }
+    .toc-btn:hover { border-color: var(--gold); color: var(--gold-ink); }
+    .toc-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ── Article body ──────────────────────────────────────────────────────── */
+    .article-body { max-width: 820px; margin: 0 auto; padding: 2.5rem 2.5rem 8rem; }
+    .aoe p, .aoe li {
+      font-family: 'Source Serif 4', Georgia, serif; font-size: 1.08rem;
+      line-height: 1.8; color: var(--ink-soft);
+    }
+    .article-body > p { margin: 0 0 1.4rem; }
+    .lead { font-size: 1.22rem !important; line-height: 1.7 !important; color: var(--ink) !important; }
+    .article-body a { color: var(--gold-ink); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+    .article-body a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+
+    .major-section { margin-top: 4rem; scroll-margin-top: 84px; }
+    .section-label {
+      display: block; font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+      font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.12; color: var(--ink);
+      margin: 0 0 1.2rem; letter-spacing: -0.005em;
+    }
+    .article-body h2 em { font-style: italic; color: var(--gold-ink); }
+    .article-body h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+      font-size: clamp(1.3rem, 3vw, 1.7rem); color: var(--ink);
+      margin: 2.6rem 0 0.9rem; scroll-margin-top: 84px;
+    }
+    .sh-num { color: var(--gold-ink); font-style: italic; margin-right: 0.5rem; }
+    .article-body strong { color: var(--ink); font-weight: 600; }
+
+    /* ── Pull quote ────────────────────────────────────────────────────────── */
+    .pull-quote {
+      margin: 3rem 0 3rem -2rem; padding: 0.4rem 0 0.4rem 2rem;
+      border-left: 3px solid var(--gold);
+      font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+      font-size: clamp(1.5rem, 3.6vw, 2rem); line-height: 1.3; color: var(--ink);
+    }
+    @media (max-width: 640px) { .pull-quote { margin-left: 0; } }
+
+    /* ── Callout / note ────────────────────────────────────────────────────── */
+    .note {
+      margin: 2.2rem 0; padding: 1.3rem 1.5rem; border-radius: 12px;
+      background: var(--paper-2); border: 1px solid var(--line);
+    }
+    .note .note-label {
+      font-family: 'DM Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold-ink); font-weight: 600;
+      display: block; margin-bottom: 0.5rem;
+    }
+    .note p { margin: 0; font-size: 1rem !important; }
+    .note p + p { margin-top: 0.8rem; }
+
+    /* ── Compact-model flow ────────────────────────────────────────────────── */
+    .flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 1.6rem 0 0.5rem; }
+    .flow .step {
+      font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500;
+      padding: 0.45rem 0.85rem; border-radius: 999px; background: var(--paper);
+      border: 1px solid var(--line); color: var(--ink); white-space: nowrap;
+    }
+    .flow .arrow { color: var(--gold); font-size: 0.9rem; }
+    .flow .step.loopback { border-style: dashed; color: var(--muted); }
+
+    /* ── Formula block ─────────────────────────────────────────────────────── */
+    .formula {
+      margin: 2rem 0; padding: 1.5rem 1.4rem; border-radius: 12px;
+      background: var(--paper-2); border: 1px solid var(--line);
+      text-align: center; overflow-x: auto;
+    }
+    .formula .eq {
+      font-family: 'Source Serif 4', Georgia, serif; font-size: 1.15rem;
+      line-height: 1.7; color: var(--ink); white-space: nowrap;
+    }
+    .formula .eq b { color: var(--gold-ink); font-weight: 600; font-style: italic; }
+    .formula .gloss { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--muted); margin-top: 0.9rem; }
+
+    /* ═══════ LAYER EXPLORER ═══════════════════════════════════════════════ */
+    .explorer { margin: 2rem 0 1rem; }
+    .exp-controls {
+      position: sticky; top: 62px; z-index: 40;
+      background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+      padding: 1rem 1.1rem; margin-bottom: 1.6rem;
+      box-shadow: 0 8px 24px -18px rgba(0,0,0,0.35);
+    }
+    .exp-search-row { display: flex; gap: 0.6rem; align-items: center; }
+    .exp-search {
+      flex: 1; display: flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--line); border-radius: 10px; padding: 0.55rem 0.8rem;
+      background: var(--paper-2);
+    }
+    .exp-search svg { flex: none; color: var(--muted); }
+    .exp-search input {
+      flex: 1; border: none; background: none; outline: none;
+      font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink); min-width: 0;
+    }
+    .exp-search input::placeholder { color: var(--muted); }
+    .exp-search:focus-within { border-color: var(--gold); outline: 2px solid var(--gold); outline-offset: 1px; }
+    .exp-filter-toggle {
+      display: none; font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
+      border: 1px solid var(--line); border-radius: 10px; background: var(--paper-2);
+      color: var(--ink-soft); padding: 0.55rem 0.9rem; min-height: 44px; cursor: pointer;
+    }
+    .exp-filter-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    .exp-facets { margin-top: 0.9rem; }
+    .facet + .facet { margin-top: 0.75rem; }
+    .facet-label {
+      font-family: 'DM Sans', sans-serif; font-size: 0.66rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.45rem;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500;
+      padding: 0.4rem 0.7rem; border-radius: 999px; cursor: pointer;
+      background: var(--paper-2); border: 1px solid var(--line); color: var(--ink-soft);
+      transition: background .14s, border-color .14s, color .14s;
+    }
+    .chip .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--dot, var(--muted)); }
+    .chip .ct { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.72rem; }
+    .chip:hover { border-color: var(--gold); }
+    .chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .chip[aria-pressed="true"] {
+      background: var(--tint, rgba(201,168,76,0.14));
+      border-color: var(--dot, var(--gold));
+      color: var(--ink);
+    }
+    .chip[aria-pressed="true"] .ct { color: var(--ink-soft); }
+
+    .exp-meta {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 0.6rem; margin-bottom: 1rem;
+    }
+    .exp-count { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--muted); }
+    .exp-count b { color: var(--ink); }
+    .exp-clear {
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; background: none;
+      border: none; color: var(--gold-ink); cursor: pointer; text-decoration: underline;
+      text-underline-offset: 2px; padding: 0.3rem;
+    }
+    .exp-clear:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .exp-clear[hidden] { display: none; }
+
+    .layer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
+    .layer-card {
+      border: 1px solid var(--line); border-left: 4px solid var(--dc, var(--gold));
+      border-radius: 12px; background: var(--paper); padding: 1.1rem 1.2rem 1.2rem;
+      display: flex; flex-direction: column;
+    }
+    .lc-top { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.5rem; }
+    .lc-num {
+      font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+      font-size: 1.5rem; color: var(--dc, var(--gold)); line-height: 1; flex: none;
+    }
+    .lc-title {
+      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 1rem;
+      color: var(--ink); line-height: 1.25;
+    }
+    .lc-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.7rem; }
+    .lc-tag {
+      font-family: 'DM Sans', sans-serif; font-size: 0.64rem; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 999px;
+      background: var(--paper-2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .lc-tag.domain { color: var(--dc, var(--muted)); border-color: color-mix(in srgb, var(--dc) 40%, transparent); }
+    .lc-what { font-size: 0.96rem !important; line-height: 1.55 !important; color: var(--ink-soft); margin: 0 0 0.75rem; }
+    .lc-ex {
+      font-size: 0.9rem !important; line-height: 1.5 !important; color: var(--muted);
+      margin: 0 0 0.75rem; padding-left: 0.75rem; border-left: 2px solid var(--line);
+      font-style: italic;
+    }
+    .lc-ex b { font-style: normal; color: var(--ink-soft); font-weight: 600; }
+    .lc-who {
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; line-height: 1.5;
+      color: var(--muted); margin-top: auto; padding-top: 0.4rem;
+    }
+    .lc-who span { color: var(--dc, var(--gold-ink)); font-weight: 600; }
+    .layer-card mark { background: rgba(201,168,76,0.32); color: inherit; border-radius: 2px; padding: 0 1px; }
+    @media (prefers-color-scheme: dark) { .layer-card mark { background: rgba(216,189,106,0.28); } }
+
+    .exp-empty {
+      display: none; text-align: center; padding: 3rem 1rem;
+      border: 1px dashed var(--line); border-radius: 12px; color: var(--muted);
+    }
+    .exp-empty.show { display: block; }
+    .exp-empty p { font-size: 1rem !important; color: var(--muted); margin: 0 0 1rem; }
+
+    /* ── Architecture (5 domains) ──────────────────────────────────────────── */
+    .arch { display: grid; gap: 0.9rem; margin: 1.8rem 0; }
+    .arch-row {
+      display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;
+      padding: 1.1rem 1.2rem; border-radius: 12px; background: var(--paper);
+      border: 1px solid var(--line); border-left: 4px solid var(--dc);
+    }
+    .arch-n {
+      font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; font-style: italic;
+      color: var(--dc); line-height: 1;
+    }
+    .arch-name { font-family: 'DM Sans', sans-serif; font-weight: 600; color: var(--ink); font-size: 1.02rem; }
+    .arch-q { color: var(--dc); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
+    .arch-d { font-size: 0.96rem !important; margin: 0.35rem 0 0; color: var(--ink-soft); line-height: 1.55 !important; }
+
+    /* ── Persona cards (manager example) ───────────────────────────────────── */
+    .persona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.8rem 0; }
+    @media (max-width: 560px) { .persona-grid { grid-template-columns: 1fr; } }
+    .persona {
+      border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.2rem; background: var(--paper);
+    }
+    .persona .ph {
+      font-family: 'DM Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold-ink); margin: 0 0 0.7rem; line-height: 1.3;
+    }
+    .persona .chain { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .persona .chain span { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--ink-soft); }
+    .persona .chain .a { color: var(--gold); }
+
+    /* ── Cascade (vertical hierarchy) ──────────────────────────────────────── */
+    .cascade { margin: 1.8rem 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+    .cascade-item {
+      display: grid; grid-template-columns: 3px 1fr; align-items: stretch;
+    }
+    .cascade-item .bar { background: var(--dc); }
+    .cascade-item .body { padding: 0.7rem 1.1rem; border-bottom: 1px solid var(--line-soft); }
+    .cascade-item:last-child .body { border-bottom: none; }
+    .cascade-item .cn {
+      font-family: 'DM Sans', sans-serif; font-size: 0.68rem; color: var(--dc);
+      letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
+    }
+    .cascade-item .ct2 { font-family: 'Source Serif 4', serif; color: var(--ink); font-size: 1rem; }
+    .cascade-loop {
+      display: flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.1rem;
+      background: var(--paper-2); color: var(--gold-ink);
+      font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-style: italic;
+    }
+
+    /* ── Spiral duo ────────────────────────────────────────────────────────── */
+    .duo-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin: 1.8rem 0; }
+    @media (max-width: 560px) { .duo-panel { grid-template-columns: 1fr; } }
+    .spiral { border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.3rem; background: var(--paper); }
+    .spiral.neg { border-top: 4px solid var(--d-person); }
+    .spiral.pos { border-top: 4px solid var(--d-repr); }
+    .spiral .ph {
+      font-family: 'DM Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; margin: 0 0 0.9rem;
+    }
+    .spiral.neg .ph { color: var(--d-person-ink); }
+    .spiral.pos .ph { color: var(--d-repr-ink); }
+    .spiral ol { margin: 0; padding-left: 1.1rem; }
+    .spiral li { font-size: 0.96rem !important; line-height: 1.55 !important; margin-bottom: 0.35rem; color: var(--ink-soft); }
+
+    /* ── Three stages ──────────────────────────────────────────────────────── */
+    .stages { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.8rem 0; }
+    .stage { border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.3rem; background: var(--paper); }
+    .stage .sn {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 2.2rem;
+      color: var(--gold); line-height: 1; display: block; margin-bottom: 0.4rem;
+    }
+    .stage .ph { font-family: 'DM Sans', sans-serif; font-size: 0.98rem; color: var(--ink); margin: 0 0 0.5rem; }
+    .stage p { font-size: 0.94rem !important; line-height: 1.55 !important; margin: 0; color: var(--ink-soft); }
+
+    /* ── Table wrap ────────────────────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin: 1.6rem 0; border: 1px solid var(--line); border-radius: 12px; }
+    table.mini { border-collapse: collapse; width: 100%; min-width: 460px; }
+    table.mini th, table.mini td {
+      text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line-soft);
+      font-family: 'DM Sans', sans-serif; font-size: 0.86rem; color: var(--ink-soft); vertical-align: top;
+    }
+    table.mini th { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    table.mini tr:last-child td { border-bottom: none; }
+    table.mini td b { color: var(--ink); }
+
+    /* ── Footer ────────────────────────────────────────────────────────────── */
+    footer.site {
+      max-width: 820px; margin: 0 auto; padding: 2.5rem 2.5rem 4rem;
+      border-top: 1px solid var(--line); display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.6rem;
+    }
+    footer.site .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--ink); }
+    footer.site .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--muted); }
+
+    /* ── Responsive ────────────────────────────────────────────────────────── */
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); }
+    h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
+    @media (max-width: 720px) {
+      .hero { padding: 2.5rem 1.4rem 0; }
+      .article-header { padding: 0.75rem 1.4rem; }
+      .article-body { padding: 2rem 1.4rem 5rem; }
+      footer.site { padding: 2.5rem 1.4rem 4rem; }
+    }
+    @media (max-width: 620px) {
+      .exp-filter-toggle { display: inline-flex; align-items: center; }
+      .exp-facets { display: none; }
+      .exp-facets.open { display: block; }
+    }
+
+    /* ── Reduced motion ────────────────────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content" class="aoe">
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- TOC overlay -->
+    <div class="toc-overlay" id="tocOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+      <div class="toc-panel">
+        <button aria-label="Close contents" onclick="document.getElementById('tocOverlay').classList.remove('open')">✕</button>
+        <h3>Contents</h3>
+        <ul class="toc-list">
+          <li><a href="#s1" class="toc-main">I. We Never Meet the Facts</a></li>
+          <li><a href="#s2" class="toc-main">II. The Seventeen Layers</a></li>
+          <li><a href="#s2-1">2.1 Explore the model</a></li>
+          <li><a href="#s3" class="toc-main">III. Experience as a Function</a></li>
+          <li><a href="#s4" class="toc-main">IV. Five Levels</a></li>
+          <li><a href="#s5" class="toc-main">V. Same Event, Different Worlds</a></li>
+          <li><a href="#s6" class="toc-main">VI. Frames vs. Beliefs</a></li>
+          <li><a href="#s7" class="toc-main">VII. Where Personality Fits</a></li>
+          <li><a href="#s8" class="toc-main">VIII. The Predicting Brain</a></li>
+          <li><a href="#s9" class="toc-main">IX. Worldviews as Meta-Frames</a></li>
+          <li><a href="#s10" class="toc-main">X. The Loop That Builds Us</a></li>
+          <li><a href="#s11" class="toc-main">XI. Three Stages of Reality</a></li>
+          <li><a href="#s12" class="toc-main">XII. Where the Model Is Contested</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="eyebrow">Atlas · Mental Models</div>
+      <h1>The Architecture of <em>Experience</em></h1>
+      <p class="hero-sub">How the mind turns raw reality into a world you can live in — layer by layer, from the event to the emotion.</p>
+      <div class="byline-row">
+        <div class="avatar" aria-hidden="true">YB</div>
+        <div class="byline-text">
+          <span class="byline-name">Yasir Bilgin</span>
+          <span class="byline-meta">Yasir Bilgin · September 2026</span>
+        </div>
+      </div>
+    </section>
+    <hr class="hero-rule">
+
+    <header class="article-header">
+      <span class="read-time">28 min read</span>
+      <button class="toc-btn" onclick="document.getElementById('tocOverlay').classList.add('open')">Contents</button>
+    </header>
+
+    <article class="article-body">
+
+      <p class="lead">Two people receive the same message. One feels a flash of dread; the other barely notices. Nothing in the world differed — the difference was manufactured, silently, somewhere between the event and the feeling. This is a map of that machinery: the stack of layers through which a bare fact becomes <em>your</em> experience of it.</p>
+
+      <!-- ════════ I ════════ -->
+      <section id="s1" class="major-section">
+        <span class="section-label">Section I</span>
+        <h2>We Never Meet the <em>Facts</em></h2>
+
+        <p>The most useful place to start is also the most disorienting: we do not, as a rule, experience reality directly. We experience a <strong>constructed version</strong> of it. Long before beliefs, personality, or mood get involved, perception itself is already selecting, compressing, and interpreting. The nervous system does not photograph the world and hand you the print; it takes a thin, noisy sample of sensory data and builds its best guess about what is out there.</p>
+
+        <p>This is not a mystical claim. It is the mainstream view in cognitive neuroscience, and it has a long lineage. In the 1860s the physicist and physiologist Hermann von Helmholtz argued that perception is a kind of <em>unconscious inference</em>: because the light hitting the retina underdetermines what caused it, the brain has to guess, using prior experience. A century and a half later, that intuition has hardened into <strong>predictive processing</strong> — the model of the brain as a prediction engine that constantly generates expectations and checks them against incoming signals, updating only where the two diverge. The philosopher Andy Clark and the neuroscientist Anil Seth have popularized the vivid phrase for what results: perception as a <em>"controlled hallucination"</em> — a construction reined in, but not dictated, by the senses.</p>
+
+        <div class="note">
+          <span class="note-label">The through-line</span>
+          <p>To keep the model concrete, one ordinary event runs through this entire article as an example: <strong>you send someone a message, and hours later there is still no reply.</strong> Watch how far that single non-event travels before it becomes something you feel.</p>
+        </div>
+
+        <p>A compact way to picture the journey — the whole pipeline in one line:</p>
+
+        <div class="flow" role="img" aria-label="Flow: Reality to Data to Perception to Interpretation to Personal Meaning to Lived Experience to Response to Memory to Updated Self, looping back">
+          <span class="step">Reality</span><span class="arrow">→</span>
+          <span class="step">Data</span><span class="arrow">→</span>
+          <span class="step">Perception</span><span class="arrow">→</span>
+          <span class="step">Interpretation</span><span class="arrow">→</span>
+          <span class="step">Personal Meaning</span><span class="arrow">→</span>
+          <span class="step">Lived Experience</span><span class="arrow">→</span>
+          <span class="step">Response</span><span class="arrow">→</span>
+          <span class="step">Memory</span><span class="arrow">→</span>
+          <span class="step loopback">Updated Self ↺</span>
+        </div>
+
+        <p>Each arrow hides real work. The sections below open up that work — first as seventeen fine-grained layers you can explore and filter, then as a cleaner five-level architecture, and finally as a philosophical backbone linking <em>being</em>, <em>representation</em>, <em>meaning</em>, and <em>experience</em>.</p>
+      </section>
+
+      <!-- ════════ II ════════ -->
+      <section id="s2" class="major-section">
+        <span class="section-label">Section II</span>
+        <h2>The Seventeen <em>Layers</em></h2>
+
+        <p>Between the event and the emotion sit at least seventeen distinguishable operations. Two people can share almost identical input at layers 1–3 yet inhabit entirely different realities by layer 14. Each card below names one layer, says what it does, shows it working on the unanswered message, and names the research tradition that studies it. Filter by which of the <strong>five domains</strong> the layer belongs to, or by the <strong>discipline</strong> that studies it — or search the whole set.</p>
+
+        <h3 id="s2-1" class="sub-heading"><span class="sh-num">2.1</span>Explore the model</h3>
+
+        <div class="explorer">
+          <div class="exp-controls">
+            <div class="exp-search-row">
+              <label class="exp-search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+                <input id="expSearch" type="search" placeholder="Search layers, examples, thinkers…" aria-label="Search the seventeen layers" autocomplete="off">
+              </label>
+              <button class="exp-filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="expFacets">Filters</button>
+            </div>
+            <div class="exp-facets" id="expFacets">
+              <div class="facet">
+                <div class="facet-label" id="facet-domain">Domain</div>
+                <div class="chips" role="group" aria-labelledby="facet-domain" id="chipsDomain"></div>
+              </div>
+              <div class="facet">
+                <div class="facet-label" id="facet-disc">Discipline</div>
+                <div class="chips" role="group" aria-labelledby="facet-disc" id="chipsDisc"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-meta">
+            <div class="exp-count" id="expCount" aria-live="polite"></div>
+            <button class="exp-clear" id="expClear" hidden>Clear all filters</button>
+          </div>
+
+          <div class="layer-grid" id="layerGrid"></div>
+
+          <div class="exp-empty" id="expEmpty">
+            <p>No layers match those filters.</p>
+            <button class="exp-clear" onclick="window.__aoeReset&&window.__aoeReset()">Reset</button>
+          </div>
+        </div>
+
+        <p style="margin-top:1.6rem;">Read straight down the numbers and you have the storyline of an experience forming in real time. But the numbering is a simplification — several of these run in parallel, and the arrows point both ways. The next sections make that structure explicit.</p>
+      </section>
+
+      <!-- ════════ III ════════ -->
+      <section id="s3" class="major-section">
+        <span class="section-label">Section III</span>
+        <h2>Experience as a <em>Function</em></h2>
+
+        <p>It helps to stop thinking of experience as "fact plus emotion" and start thinking of it as the <strong>output of a function with many inputs</strong>. The felt experience is not one of the inputs; it is what the whole system computes:</p>
+
+        <div class="formula">
+          <div class="eq"><b>Experience</b> = f ( Reality, Attention, Perception, Appraisal, Schemas, Personality, History, Beliefs, Identity, Culture, State )</div>
+          <div class="gloss">The same person, holding every other input fixed, will still experience the same event differently as the last term changes.</div>
+        </div>
+
+        <p>That last input deserves its own line, because it is the one we most often forget and most reliably underestimate:</p>
+
+        <div class="formula">
+          <div class="eq"><b>State</b> = fatigue + stress + hormones + mood + bodily condition + immediate context</div>
+        </div>
+
+        <p>This is why the unanswered message lands like a threat at midnight after a hard day and like nothing at all over coffee the next morning. The event was identical; the machine was tuned differently. Recent affective neuroscience takes this further still: the body's internal signals — hunger, heart rate, inflammation, what researchers call <em>interoception</em> — are not a backdrop to interpretation but an <strong>ingredient</strong> in it. Your gut state is quietly voting on what the silence means.</p>
+
+        <p class="pull-quote">Hold everything constant but the body, and the world still changes.</p>
+      </section>
+
+      <!-- ════════ IV ════════ -->
+      <section id="s4" class="major-section">
+        <span class="section-label">Section IV</span>
+        <h2>Five <em>Levels</em></h2>
+
+        <p>Seventeen layers is precise but unwieldy. For everyday use, collapse them into five large domains — the same five you can filter by above. Each answers a different question, and the questions get progressively more personal:</p>
+
+        <div class="arch">
+          <div class="arch-row" style="--dc:var(--d-world);">
+            <div class="arch-n">1</div>
+            <div>
+              <div class="arch-name">World <span class="arch-q">— "What happened?"</span></div>
+              <p class="arch-d">Physical reality, events, the behaviour of others, measurable conditions. The layer everyone assumes they share — and rarely do, because no one lives at this level.</p>
+            </div>
+          </div>
+          <div class="arch-row" style="--dc:var(--d-repr);">
+            <div class="arch-n">2</div>
+            <div>
+              <div class="arch-name">Representation <span class="arch-q">— "What did I notice?"</span></div>
+              <p class="arch-d">Sensation, attention, categorization, expectation. The thin, selective sample of the world that actually reaches awareness.</p>
+            </div>
+          </div>
+          <div class="arch-row" style="--dc:var(--d-interp);">
+            <div class="arch-n">3</div>
+            <div>
+              <div class="arch-name">Interpretation <span class="arch-q">— "What does this mean?"</span></div>
+              <p class="arch-d">Appraisal, schemas, assumptions, causal stories. The event is assigned significance and slotted into a model of how things work.</p>
+            </div>
+          </div>
+          <div class="arch-row" style="--dc:var(--d-person);">
+            <div class="arch-n">4</div>
+            <div>
+              <div class="arch-name">Personalization <span class="arch-q">— "What does this mean <em>for me</em>?"</span></div>
+              <p class="arch-d">Personality, biography, values, identity, beliefs, culture. The meaning is bent through the particular person having it.</p>
+            </div>
+          </div>
+          <div class="arch-row" style="--dc:var(--d-phenom);">
+            <div class="arch-n">5</div>
+            <div>
+              <div class="arch-name">Phenomenology <span class="arch-q">— "What world am I now in?"</span></div>
+              <p class="arch-d">Emotion, felt meaning, motivation, action, memory. Not "fact plus feeling" but a whole constructed world in which the facts have acquired weight.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>That fifth level is the one we usually mean by <em>"my experience of existence."</em> It is not a neutral report on the world; it is a world — one already saturated with significance, threat, invitation, or indifference before we consciously deliberate about anything.</p>
+      </section>
+
+      <!-- ════════ V ════════ -->
+      <section id="s5" class="major-section">
+        <span class="section-label">Section V</span>
+        <h2>Same Event, Different <em>Worlds</em></h2>
+
+        <p>Swap the unanswered message for a second scenario to see how completely the divergence can happen. Your manager sends four words:</p>
+
+        <p class="pull-quote">"Can we talk tomorrow?"</p>
+
+        <p>The external event is nearly identical for everyone who receives it. The <strong>experienced worlds</strong> are not even close:</p>
+
+        <div class="persona-grid">
+          <div class="persona">
+            <div class="ph">Person A</div>
+            <div class="chain"><span>Fact</span><span class="a">→</span><span>ambiguity</span><span class="a">→</span><span>opportunity</span><span class="a">→</span><span>curiosity</span><span class="a">→</span><span>anticipation</span></div>
+          </div>
+          <div class="persona">
+            <div class="ph">Person B</div>
+            <div class="chain"><span>Fact</span><span class="a">→</span><span>threat</span><span class="a">→</span><span>"I made a mistake"</span><span class="a">→</span><span>anxiety</span><span class="a">→</span><span>rumination</span></div>
+          </div>
+          <div class="persona">
+            <div class="ph">Person C</div>
+            <div class="chain"><span>Fact</span><span class="a">→</span><span>routine work event</span><span class="a">→</span><span>low significance</span><span class="a">→</span><span>forgets it</span></div>
+          </div>
+          <div class="persona">
+            <div class="ph">Person D</div>
+            <div class="chain"><span>Fact</span><span class="a">→</span><span>authority cue</span><span class="a">→</span><span>memory of past criticism</span><span class="a">→</span><span>defensive preparation</span></div>
+          </div>
+        </div>
+
+        <p>Four people, four realities, one text message. The message did almost nothing; the architecture did nearly everything. Which raises the obvious question — <em>what</em>, specifically, is doing the bending?</p>
+      </section>
+
+      <!-- ════════ VI ════════ -->
+      <section id="s6" class="major-section">
+        <span class="section-label">Section VI</span>
+        <h2>Frames vs. <em>Beliefs</em></h2>
+
+        <p>Two of the strongest benders are easy to confuse, so it is worth separating them cleanly.</p>
+
+        <p>A <strong>belief</strong> is a stored proposition about how the world is — <em>"people generally can't be trusted,"</em> or <em>"effort tends to pay off."</em> A <strong>frame</strong> is different and, in the moment, often more powerful: it defines what <em>kind of situation</em> you take yourself to be in. The sociologist Erving Goffman built an entire book, <em>Frame Analysis</em>, around this idea — that we are always answering, usually without noticing, the question "what is going on here?"</p>
+
+        <p>Frames matter because they decide <strong>which facts even become relevant</strong>. Walk into the same meeting under three different frames:</p>
+
+        <div class="table-wrap">
+          <table class="mini">
+            <thead><tr><th>Frame</th><th>What you notice</th><th>What recedes</th></tr></thead>
+            <tbody>
+              <tr><td><b>Performance test</b></td><td>Your mistakes, others' judgements</td><td>Useful feedback, shared goals</td></tr>
+              <tr><td><b>Learning environment</b></td><td>Feedback, new information</td><td>Status, who "won" the exchange</td></tr>
+              <tr><td><b>Status contest</b></td><td>Hierarchy, who defers to whom</td><td>The actual content of the work</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Same room, same conversation, three different experienced realities — decided before a word is weighed. This is also why reframing is such a lever: change the frame and you change the entire field of what is salient, without touching a single external fact.</p>
+      </section>
+
+      <!-- ════════ VII ════════ -->
+      <section id="s7" class="major-section">
+        <span class="section-label">Section VII</span>
+        <h2>Where Personality <em>Fits</em></h2>
+
+        <p>It is tempting to slot personality in as a single layer that acts after perception. That is the wrong picture. Personality is better understood as a set of <strong>weights that tune several layers at once</strong> — a bias applied across the whole pipeline rather than a station within it. Using the widely validated Big Five (OCEAN) traits:</p>
+
+        <div class="table-wrap">
+          <table class="mini">
+            <thead><tr><th>Trait</th><th>What it tilts</th></tr></thead>
+            <tbody>
+              <tr><td><b>Extraversion</b></td><td>What captures attention and what registers as rewarding</td></tr>
+              <tr><td><b>Neuroticism</b></td><td>Threat appraisal and the intensity of felt emotion</td></tr>
+              <tr><td><b>Openness</b></td><td>How many interpretations are entertained before one is chosen</td></tr>
+              <tr><td><b>Conscientiousness</b></td><td>Whether an event is read as a responsibility to act on</td></tr>
+              <tr><td><b>Agreeableness</b></td><td>Whether others' intentions are read as hostile or benign</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>So personality doesn't <em>add</em> something at the end. It changes the odds all along the way. Formally, it shifts a conditional probability — how likely a given interpretation is, given a given event:</p>
+
+        <div class="formula">
+          <div class="eq">P ( <b>interpretation</b> | event )</div>
+          <div class="gloss">Personal history works the same way: it doesn't dictate the reading, it re-weights the priors the mind brings to the situation.</div>
+        </div>
+
+        <p>That framing — interpretation as a probability shaped by priors — is not just a metaphor. It connects directly to how contemporary neuroscience models the whole system.</p>
+      </section>
+
+      <!-- ════════ VIII ════════ -->
+      <section id="s8" class="major-section">
+        <span class="section-label">Section VIII</span>
+        <h2>The Predicting <em>Brain</em></h2>
+
+        <p>The cleanest scientific frame for the entire model is the <strong>Bayesian brain</strong>. In simplified terms, the mind is continuously asking: <em>given everything I already know, what is probably happening here?</em> It does not build interpretations from scratch; it starts from expectations and adjusts them by the evidence. Bayes' theorem captures the shape of it:</p>
+
+        <div class="formula">
+          <div class="eq">P ( <b>H</b> | D ) &nbsp;∝&nbsp; P ( D | <b>H</b> ) &nbsp;×&nbsp; P ( <b>H</b> )</div>
+          <div class="gloss">Interpretation ∝ (fit of the evidence) × (prior expectation)</div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="mini">
+            <thead><tr><th>Term</th><th>Meaning</th><th>In the message example</th></tr></thead>
+            <tbody>
+              <tr><td><b>D</b></td><td>Incoming data</td><td>"Delivered," no reply, eight hours</td></tr>
+              <tr><td><b>H</b></td><td>A candidate interpretation</td><td>"They're upset with me" / "they're just busy"</td></tr>
+              <tr><td><b>P(H)</b></td><td>Prior — built from personality, history, culture, belief</td><td>How likely rejection felt <em>before</em> today</td></tr>
+              <tr><td><b>P(D|H)</b></td><td>How well the evidence fits that reading</td><td>Does silence really look like anger?</td></tr>
+              <tr><td><b>P(H|D)</b></td><td>The interpretation you end up living in</td><td>The story that wins</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>This explains individual differences with unusual elegance. Two people receive the same <strong>D</strong> but carry different <strong>priors</strong> into the moment — so they compute different <strong>P(H|D)</strong>, and therefore inhabit different perceived realities. The high-anxiety prior makes rejection the cheapest explanation; the secure prior makes "busy" the cheapest one. Neither is reasoning badly. They are running the same inference on different assumptions.</p>
+
+        <p>The lineage here is worth naming, because it grounds the model in real science rather than analogy. Helmholtz's nineteenth-century "unconscious inference" was revived as <em>predictive coding</em> by Rao and Ballard in 1999, formalized by Karl Friston in the mid-2000s under the <em>free-energy principle</em>, and developed philosophically by Andy Clark and Jakob Hohwy. The Bayesian-brain formulation itself is usually credited to Knill and Pouget (2004). It is a live, productive research program — and, as Section XII notes, a contested one.</p>
+      </section>
+
+      <!-- ════════ IX ════════ -->
+      <section id="s9" class="major-section">
+        <span class="section-label">Section IX</span>
+        <h2>Worldviews as <em>Meta-Frames</em></h2>
+
+        <p>Above ordinary beliefs sits one more layer — the <strong>meta-frame</strong>, or worldview. These do not interpret a single event; they supply the <em>grammar</em> through which existence itself becomes intelligible. Four familiar examples, each turning the same raw event into a different kind of thing:</p>
+
+        <div class="table-wrap">
+          <table class="mini">
+            <thead><tr><th>Meta-frame</th><th>Existence is read as…</th></tr></thead>
+            <tbody>
+              <tr><td><b>Naturalistic</b></td><td>Events as the product of physical and social causation</td></tr>
+              <tr><td><b>Religious</b></td><td>Events as also carrying providential or spiritual significance</td></tr>
+              <tr><td><b>Stoic</b></td><td>Events sorted by the one distinction that matters — what I control vs. what I don't</td></tr>
+              <tr><td><b>Existential</b></td><td>Events as revealing something about freedom, mortality, and meaning</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The Stoic frame is a clean illustration of the leverage here. Epictetus opens the <em>Enchiridion</em> with exactly this move: some things are up to us and some are not, and nearly all suffering comes from confusing the two. Adopt that single meta-frame and the unanswered message reclassifies instantly — the other person's response was never in your control, so it drops out of the category of things worth disturbing yourself over. Nothing about the world changed. The grammar did.</p>
+      </section>
+
+      <!-- ════════ X ════════ -->
+      <section id="s10" class="major-section">
+        <span class="section-label">Section X</span>
+        <h2>The Loop That Builds <em>Us</em></h2>
+
+        <p>Stacked in full, the layers form a cascade from bare being down to felt experience and action — and then a return path that is the most important part of the whole diagram:</p>
+
+        <div class="cascade">
+          <div class="cascade-item" style="--dc:var(--d-world);"><div class="bar"></div><div class="body"><span class="cn">World</span><div class="ct2">Reality → Observable facts</div></div></div>
+          <div class="cascade-item" style="--dc:var(--d-repr);"><div class="bar"></div><div class="body"><span class="cn">Representation</span><div class="ct2">Attention → Perception</div></div></div>
+          <div class="cascade-item" style="--dc:var(--d-interp);"><div class="bar"></div><div class="body"><span class="cn">Interpretation</span><div class="ct2">Appraisal → Schemas → Narrative</div></div></div>
+          <div class="cascade-item" style="--dc:var(--d-person);"><div class="bar"></div><div class="body"><span class="cn">Personalization</span><div class="ct2">Personality → History → Beliefs → Identity → Culture</div></div></div>
+          <div class="cascade-item" style="--dc:var(--d-phenom);"><div class="bar"></div><div class="body"><span class="cn">Phenomenology</span><div class="ct2">Emotion → Action → Consequence → Memory</div></div></div>
+          <div class="cascade-loop">↺ Memory and learning feed back into schemas, beliefs, and expectation — reshaping the priors for next time.</div>
+        </div>
+
+        <p>That feedback loop is why the model is not a one-way pipe but a self-modifying system. <strong>We don't merely interpret reality through our history; our interpretations help create the history through which we interpret the next reality.</strong> Run the loop enough times and it becomes a spiral — for better or worse:</p>
+
+        <div class="duo-panel">
+          <div class="spiral neg">
+            <div class="ph">A self-confirming spiral</div>
+            <ol>
+              <li>Prior: "people reject me"</li>
+              <li>Ambiguity is read as rejection</li>
+              <li>You withdraw defensively</li>
+              <li>Others actually become distant</li>
+              <li>You experience real social distance</li>
+              <li>"See — people reject me" (prior strengthens)</li>
+            </ol>
+          </div>
+          <div class="spiral pos">
+            <div class="ph">A generative spiral</div>
+            <ol>
+              <li>Prior: "difficulty is a chance to learn"</li>
+              <li>You attend to the useful information</li>
+              <li>You experiment instead of retreating</li>
+              <li>You gain competence</li>
+              <li>You experience success</li>
+              <li>The learning frame strengthens</li>
+            </ol>
+          </div>
+        </div>
+
+        <p>The mechanism is identical in both columns. This is the same structure the sociologist Robert Merton named in 1948 as the <em>self-fulfilling prophecy</em>: a reading of the situation that, through the behaviour it triggers, manufactures the very evidence that seems to confirm it. The leverage point is not the world at the bottom of the loop — it is the prior at the top.</p>
+      </section>
+
+      <!-- ════════ XI ════════ -->
+      <section id="s11" class="major-section">
+        <span class="section-label">Section XI</span>
+        <h2>Three Stages of <em>Reality</em></h2>
+
+        <p>Zoom all the way out and the entire model collapses into three stages — a distinction worth carrying around long after the seventeen layers fade:</p>
+
+        <div class="stages">
+          <div class="stage">
+            <span class="sn" aria-hidden="true">1</span>
+            <div class="ph">Reality-as-it-is</div>
+            <p>What exists independently of any interpretation. The world we can point to but never quite occupy directly.</p>
+          </div>
+          <div class="stage">
+            <span class="sn" aria-hidden="true">2</span>
+            <div class="ph">Reality-as-represented</div>
+            <p>What the nervous system and cognition construct from the fragments of information actually available.</p>
+          </div>
+          <div class="stage">
+            <span class="sn" aria-hidden="true">3</span>
+            <div class="ph">Reality-as-lived</div>
+            <p>What that representation <em>means</em> inside a particular biography, personality, identity, and worldview.</p>
+          </div>
+        </div>
+
+        <p>It is <strong>reality-as-lived</strong> that makes up most of what we normally call experience. And that maps onto one of philosophy's oldest sequences — from what <em>is</em>, to what we can <em>know</em>, to what we <em>make of it</em>, to what it is <em>like</em> to undergo:</p>
+
+        <div class="formula">
+          <div class="eq"><b>Being</b> → Representation → Meaning → <b>Experience</b></div>
+          <div class="gloss">Ontology → epistemology → interpretation → phenomenology</div>
+        </div>
+
+        <p>This is the cleanest backbone the whole model has. The "lived" stage is the domain the phenomenologists mapped — Husserl's <em lang="de">Lebenswelt</em> (lifeworld), Heidegger's being-in-the-world, Merleau-Ponty's embodied perception. Their shared insight is the one this entire article has been circling: the world we actually live in is not the world of bare facts but the world those facts have <em>come to mean</em> for us.</p>
+      </section>
+
+      <!-- ════════ XII ════════ -->
+      <section id="s12" class="major-section">
+        <span class="section-label">Section XII</span>
+        <h2>Where the Model Is <em>Contested</em></h2>
+
+        <p>A model this tidy earns a warning label. What you have read is a <strong>synthesis</strong> — an integration of several distinct research traditions, not a single settled theory. Each layer rests on real, well-supported science, but the joins between them, and some of the grander claims, are genuinely disputed. Three honest caveats:</p>
+
+        <p><strong>The Bayesian brain may be too flexible to falsify.</strong> Critics point out that the framework is so accommodating it can be fitted to almost any result after the fact, which raises the question of whether it is a genuine mechanistic account or a very compelling metaphor. It is a productive research program, not a proven mechanism.</p>
+
+        <p><strong>Not everyone accepts that perception is "indirect."</strong> The ecological psychologist James J. Gibson argued the opposite — that rich information is directly available in the environment (his theory of <em>affordances</em>), and that the brain need not build elaborate internal representations to pick it up. The constructivist picture in this article is the majority view, but the direct-perception tradition is a serious dissent.</p>
+
+        <p><strong>The last step remains a mystery.</strong> Even a complete account of layers 1–13 would not obviously explain <em>why there is something it is like</em> to undergo layer 14 at all. This is David Chalmers' "hard problem" of consciousness, and no model here — or anywhere yet — dissolves it.</p>
+
+        <div class="note">
+          <span class="note-label">How to hold it</span>
+          <p>Treat this as a <strong>working map, not a proof</strong>. Its value is practical: it shows you the seams in your own experience — the places where a reading was added that felt like a fact. Those seams are exactly where attention, reframing, and self-knowledge get their grip. You cannot edit the world at the bottom of the loop. You can, with practice, notice and revise the priors at the top.</p>
+        </div>
+
+        <p class="pull-quote">The facts arrive thin. Everything that makes them <em>heavy</em> is added on the way in — which means much of it can be examined.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="site aoe">
+    <span class="footer-logo">Yasir Bilgin</span>
+    <span class="footer-copy">© 2026 Yasir Bilgin Editorial.</span>
+  </footer>
+
+  <script>
+  /* ── Progress bar ──────────────────────────────────────────────────────── */
+  (function () {
+    var bar = document.getElementById('progressBar');
+    if (!bar) return;
+    window.addEventListener('scroll', function () {
+      var docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docH > 0 ? (window.scrollY / docH * 100) : 0) + '%';
+    }, { passive: true });
+  })();
+
+  /* ── Layer explorer: filter + search ───────────────────────────────────── */
+  (function () {
+    var DOMAINS = [
+      { id: 'world',          label: 'World',          v: '--d-world' },
+      { id: 'representation', label: 'Representation',  v: '--d-repr' },
+      { id: 'interpretation', label: 'Interpretation',  v: '--d-interp' },
+      { id: 'personalization',label: 'Personalization', v: '--d-person' },
+      { id: 'phenomenology',  label: 'Phenomenology',   v: '--d-phenom' }
+    ];
+    var DISCIPLINES = [
+      { id: 'philosophy',  label: 'Philosophy' },
+      { id: 'neuroscience',label: 'Neuroscience' },
+      { id: 'cognitive',   label: 'Cognitive psych.' },
+      { id: 'personality', label: 'Personality & clinical' },
+      { id: 'social',      label: 'Social & cultural' }
+    ];
+    var DOMAIN_VAR = {}; DOMAINS.forEach(function(d){ DOMAIN_VAR[d.id] = d.v; });
+    var DOMAIN_LABEL = {}; DOMAINS.forEach(function(d){ DOMAIN_LABEL[d.id] = d.label; });
+    var DISC_LABEL = {}; DISCIPLINES.forEach(function(d){ DISC_LABEL[d.id] = d.label; });
+
+    var LAYERS = [
+      { n:1,  title:'Reality / Event', domain:'world', disc:'philosophy',
+        what:'Something objectively happens, independent of anyone being aware of it.',
+        ex:'No reply has arrived for eight hours.',
+        who:'Metaphysical realism — the world exists whether or not it is perceived.' },
+      { n:2,  title:'Observable facts', domain:'world', disc:'philosophy',
+        what:'A measurable description of the event, stripped of interpretation.',
+        ex:'Message sent at 9:00; no response logged by 17:00.',
+        who:"The ideal of a 'view from nowhere' (Nagel) — a description no one actually lives in." },
+      { n:3,  title:'Sensory / informational input', domain:'representation', disc:'neuroscience',
+        what:'Only a fraction of the facts reach the nervous system as signal at all.',
+        ex:"You see the 'Delivered' receipt and the absence of a reply.",
+        who:'Transduction and bandwidth limits — the senses sample the world, they do not copy it.' },
+      { n:4,  title:'Attention', domain:'representation', disc:'cognitive',
+        what:'A selective spotlight makes some inputs salient and lets the rest vanish.',
+        ex:'You keep returning to the missing reply; the rest of the day fades.',
+        who:"Selective attention (Cherry's cocktail-party effect); inattentional blindness (Simons & Chabris)." },
+      { n:5,  title:'Perceptual organization', domain:'representation', disc:'cognitive',
+        what:'Raw input is sorted into patterns and categories before you notice deciding anything.',
+        ex:"This already reads as 'unusual silence' — a pattern, not raw data.",
+        who:"Gestalt organization; perception as the brain's best guess (Helmholtz)." },
+      { n:6,  title:'Immediate appraisal', domain:'interpretation', disc:'cognitive',
+        what:'A fast, often pre-conscious evaluation: good or bad, safe or threatening, mine to handle or not.',
+        ex:"'Something may be wrong' arrives before any reasoning does.",
+        who:'Primary appraisal (Arnold; Lazarus, Emotion and Adaptation, 1991).' },
+      { n:7,  title:'Mental frames / schemas', domain:'interpretation', disc:'cognitive',
+        what:'Stored models of how the world works interpret the appraised event.',
+        ex:"'People go quiet when they are upset' supplies the meaning.",
+        who:'Schemas (Bartlett, 1932; Piaget; Beck).' },
+      { n:8,  title:'Personality / temperament', domain:'personalization', disc:'personality',
+        what:'Stable dispositions tilt which interpretations become probable.',
+        ex:'High threat-sensitivity leans to alarm; high emotional stability to ease.',
+        who:'The Big Five / OCEAN (Costa & McCrae; Goldberg).' },
+      { n:9,  title:'Personal history', domain:'personalization', disc:'personality',
+        what:'Past episodes supply analogies that set the prior odds on each reading.',
+        ex:'An earlier rejection makes this silence feel significant.',
+        who:'Attachment patterns (Bowlby, Ainsworth); learned priors.' },
+      { n:10, title:'Beliefs / worldview', domain:'personalization', disc:'social',
+        what:'Broad assumptions about how people and the world behave fix the meaning.',
+        ex:"'People are unreliable' vs. 'people are usually just busy' point different ways.",
+        who:'Core beliefs (Beck); the assumptive world.' },
+      { n:11, title:'Identity / self-concept', domain:'personalization', disc:'personality',
+        what:"The event is measured against 'who I am,' making it about the self.",
+        ex:"'Maybe I said something stupid' folds the silence into self-worth.",
+        who:'Self-concept and self-schema (Markus).' },
+      { n:12, title:'Social / cultural frame', domain:'personalization', disc:'social',
+        what:'Cultural norms decide what a behaviour even means.',
+        ex:'Eight hours of silence is ordinary in one culture, rude in another.',
+        who:'Cultural psychology; norms and display rules.' },
+      { n:13, title:'Narrative construction', domain:'interpretation', disc:'cognitive',
+        what:'The mind assembles the fragments into a causal story with a plot and a motive.',
+        ex:"'They are quietly distancing themselves from me.'",
+        who:'Narrative identity and sense-making (McAdams; Bruner).' },
+      { n:14, title:'Emotional experience', domain:'phenomenology', disc:'neuroscience',
+        what:'The interpreted event is felt — the story becomes an emotion in the body.',
+        ex:'Anxiety, anger, indifference, or curiosity, depending on everything above.',
+        who:'The theory of constructed emotion (Barrett, 2017): emotions are built, not triggered.' },
+      { n:15, title:'Action tendency', domain:'phenomenology', disc:'cognitive',
+        what:'The felt state pushes toward a response.',
+        ex:'Send another text, wait it out, confront, or withdraw.',
+        who:'Emotions as action readiness (Frijda).' },
+      { n:16, title:'Consequence / feedback', domain:'phenomenology', disc:'social',
+        what:'The action changes the environment, which answers back.',
+        ex:"They reply warmly — or they're irritated at being chased.",
+        who:'The self-fulfilling prophecy (Merton, 1948).' },
+      { n:17, title:'Memory updating', domain:'phenomenology', disc:'neuroscience',
+        what:"The episode is filed away, adjusting the priors you'll use next time.",
+        ex:"'Silence usually means rejection' grows a little stronger — or weaker.",
+        who:'Memory reconsolidation; each recall rewrites the trace.' }
+    ];
+
+    var grid = document.getElementById('layerGrid');
+    var countEl = document.getElementById('expCount');
+    var emptyEl = document.getElementById('expEmpty');
+    var clearEl = document.getElementById('expClear');
+    var searchEl = document.getElementById('expSearch');
+    var chipsDomain = document.getElementById('chipsDomain');
+    var chipsDisc = document.getElementById('chipsDisc');
+    var facetsEl = document.getElementById('expFacets');
+    var toggleEl = document.getElementById('filterToggle');
+
+    var active = { domain: {}, disc: {} };
+    var query = '';
+
+    function esc(s){ return s.replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+    function norm(s){ return s.toLowerCase(); }
+    function highlight(text, q) {
+      var safe = esc(text);
+      if (!q) return safe;
+      try {
+        var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+        return safe.replace(re, '<mark>$1</mark>');
+      } catch (e) { return safe; }
+    }
+
+    function matches(layer) {
+      var dSel = Object.keys(active.domain).filter(function(k){return active.domain[k];});
+      var sSel = Object.keys(active.disc).filter(function(k){return active.disc[k];});
+      if (dSel.length && dSel.indexOf(layer.domain) === -1) return false;
+      if (sSel.length && sSel.indexOf(layer.disc) === -1) return false;
+      if (query) {
+        var hay = norm(layer.title + ' ' + layer.what + ' ' + layer.ex + ' ' + layer.who + ' ' +
+                       DOMAIN_LABEL[layer.domain] + ' ' + DISC_LABEL[layer.disc]);
+        if (hay.indexOf(query) === -1) return false;
+      }
+      return true;
+    }
+
+    function countFor(group, id) {
+      // count layers that would match if this option were the only change (respect the OTHER group + search)
+      return LAYERS.filter(function (l) {
+        if (group === 'domain' && l.domain !== id) return false;
+        if (group === 'disc' && l.disc !== id) return false;
+        var otherSel = group === 'domain'
+          ? Object.keys(active.disc).filter(function(k){return active.disc[k];})
+          : Object.keys(active.domain).filter(function(k){return active.domain[k];});
+        if (otherSel.length) {
+          var field = group === 'domain' ? l.disc : l.domain;
+          if (otherSel.indexOf(field) === -1) return false;
+        }
+        if (query) {
+          var hay = norm(l.title + ' ' + l.what + ' ' + l.ex + ' ' + l.who + ' ' +
+                         DOMAIN_LABEL[l.domain] + ' ' + DISC_LABEL[l.disc]);
+          if (hay.indexOf(query) === -1) return false;
+        }
+        return true;
+      }).length;
+    }
+
+    function render() {
+      var shown = LAYERS.filter(matches);
+      grid.innerHTML = shown.map(function (l) {
+        var v = DOMAIN_VAR[l.domain];
+        return '<article class="layer-card" style="--dc:var(' + v + ');">' +
+          '<div class="lc-top"><span class="lc-num">' + l.n + '</span>' +
+          '<span class="lc-title">' + highlight(l.title, query) + '</span></div>' +
+          '<div class="lc-tags">' +
+            '<span class="lc-tag domain">' + DOMAIN_LABEL[l.domain] + '</span>' +
+            '<span class="lc-tag">' + DISC_LABEL[l.disc] + '</span>' +
+          '</div>' +
+          '<p class="lc-what">' + highlight(l.what, query) + '</p>' +
+          '<p class="lc-ex"><b>e.g.</b> ' + highlight(l.ex, query) + '</p>' +
+          '<p class="lc-who"><span>Studied in:</span> ' + highlight(l.who, query) + '</p>' +
+        '</article>';
+      }).join('');
+
+      emptyEl.classList.toggle('show', shown.length === 0);
+      countEl.innerHTML = '<b>' + shown.length + '</b> of ' + LAYERS.length + ' layers';
+
+      var anyFilter = query ||
+        Object.keys(active.domain).some(function(k){return active.domain[k];}) ||
+        Object.keys(active.disc).some(function(k){return active.disc[k];});
+      clearEl.hidden = !anyFilter;
+
+      updateChipCounts();
+    }
+
+    function updateChipCounts() {
+      [['domain', chipsDomain], ['disc', chipsDisc]].forEach(function (pair) {
+        var group = pair[0], container = pair[1];
+        Array.prototype.forEach.call(container.querySelectorAll('.chip'), function (chip) {
+          var id = chip.getAttribute('data-id');
+          var ct = chip.querySelector('.ct');
+          if (ct) ct.textContent = countFor(group, id);
+          chip.setAttribute('aria-pressed', active[group][id] ? 'true' : 'false');
+        });
+      });
+    }
+
+    function buildChips(list, group, container, useDot) {
+      container.innerHTML = list.map(function (item) {
+        var dot = useDot ? '<span class="dot" style="background:var(' + item.v + ');"></span>' : '';
+        var tint = useDot ? 'color-mix(in srgb, var(' + item.v + ') 14%, transparent)' : 'rgba(201,168,76,0.14)';
+        var dotc = useDot ? 'var(' + item.v + ')' : 'var(--gold)';
+        return '<button class="chip" type="button" role="button" data-id="' + item.id + '" ' +
+          'aria-pressed="false" style="--tint:' + tint + ';--dot:' + dotc + ';">' +
+          dot + '<span class="lbl">' + item.label + '</span> <span class="ct"></span></button>';
+      }).join('');
+      Array.prototype.forEach.call(container.querySelectorAll('.chip'), function (chip) {
+        chip.addEventListener('click', function () {
+          var id = chip.getAttribute('data-id');
+          active[group][id] = !active[group][id];
+          render();
+        });
+      });
+    }
+
+    buildChips(DOMAINS, 'domain', chipsDomain, true);
+    buildChips(DISCIPLINES, 'disc', chipsDisc, false);
+
+    searchEl.addEventListener('input', function () { query = norm(searchEl.value.trim()); render(); });
+
+    function reset() {
+      active = { domain: {}, disc: {} };
+      query = ''; searchEl.value = '';
+      render();
+    }
+    clearEl.addEventListener('click', reset);
+    window.__aoeReset = reset;
+
+    // Mobile filter toggle
+    toggleEl.addEventListener('click', function () {
+      var open = facetsEl.classList.toggle('open');
+      toggleEl.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    render();
+  })();
+  </script>
+</body>
+</html>
