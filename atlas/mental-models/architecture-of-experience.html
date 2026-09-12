@@ -64,6 +64,7 @@
       --muted: #6e5f4e;          /* AA 5.6:1 on parchment */
       --line: rgba(107,93,79,0.18);
       --line-soft: rgba(107,93,79,0.10);
+      --page: #e6dcc9;
       --paper: #fffdf8;
       --paper-2: #f4efe6;
       --gold: #c9a84c;
@@ -83,6 +84,7 @@
         --muted: #a89b88;
         --line: rgba(255,255,255,0.12);
         --line-soft: rgba(255,255,255,0.06);
+        --page: #16130e;
         --paper: #1e1b16;
         --paper-2: #17140f;
         --gold: #d8bd6a;
@@ -94,6 +96,12 @@
         --d-phenom: #ab8ac0; --d-phenom-ink: #bda2ce;
       }
     }
+
+    /* ── Page background (deeper warm ground) ──────────────── */
+    body { background: #e6dcc9; }
+    @media (prefers-color-scheme: dark) { body { background: #16130e; } }
+    #main-content.aoe { background: var(--page); }
+    footer.site.aoe   { background: var(--page); }
 
     /* ── Progress bar (below nav) ──────────────────────────────────────────── */
     .progress-bar {
