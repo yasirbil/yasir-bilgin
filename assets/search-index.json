@@ -108,7 +108,7 @@
     "section": "Atlas",
     "subsec": "Big Questions",
     "title": "The Big Questions — Perspectives from Said Nursi",
-    "desc": "Plato, Thomas Hobbes, Gilbert Ryle, Albert Camus, Jean-Paul Sartre, Georg W.F.",
+    "desc": "Six fundamental questions of human existence explored through Said Nursi",
     "date": "2026-05-23",
     "tags": [
       "Said Nursi",
@@ -563,7 +563,7 @@
     "section": "Civilization",
     "subsec": "World Cultures",
     "title": "Japan — A Cultural Guide",
-    "desc": "Arts · Food · Seasons · Brands — a structured map to explore Japanese",
+    "desc": "A structured guide to Japanese culture covering arts, food, seasonal traditions, iconic brands, philosophy, and the defining patterns of the Japanese mind.",
     "date": "2026-05-23",
     "tags": [
       "Japan",
@@ -758,7 +758,7 @@
     "section": "Faith",
     "subsec": "Islamic Intellectual History",
     "title": "The Mujtahid's Path — A Comprehensive Formation Guide",
-    "desc": "A Comprehensive Formation Guide for Sacred Reasoning, Ethical Judgment & Spiritual",
+    "desc": "A formation guide for the mujtahid — covering usul al-fiqh, sacred reasoning, ethical judgment, spiritual training, and the path to independent Islamic scholarship.",
     "date": "2026-05-23",
     "tags": [
       "ijtihad",
@@ -1109,7 +1109,7 @@
     "section": "Life",
     "subsec": "Wellbeing",
     "title": "How the Body Repairs Itself",
-    "desc": "A systems-level guide to accelerating recovery—covering cellular cleanup, sleep, nutrition, movement, inflammation, and damage",
+    "desc": "A systems-level guide to accelerating recovery — covering cellular repair, autophagy, sleep, nutrition, movement, and how inflammation both heals and harms.",
     "date": "2026-04-01",
     "tags": [
       "health",
@@ -1707,7 +1707,7 @@
     "section": "Tech",
     "subsec": "Ai & Mlops",
     "title": "The AI Practitioner's Field Guide",
-    "desc": "A comprehensive reference for understanding, building with, and deploying modern AI systems — from prompt fundamentals to autonomous agentic",
+    "desc": "Covers prompt engineering, RAG, tool use, memory systems, agentic pipelines, safety guardrails, and production deployment patterns for modern AI systems.",
     "date": "2026-05-23",
     "tags": [
       "AI",
