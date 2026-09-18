@@ -599,13 +599,13 @@
 </header>
 
 <nav>
-  <button class="tab active" onclick="showTab('families')">① Language Families</button>
-  <button class="tab" onclick="showTab('speakers')">② By Speakers</button>
-  <button class="tab" onclick="showTab('geography')">③ By Geography</button>
-  <button class="tab" onclick="showTab('scripts')">④ Writing Systems</button>
-  <button class="tab" onclick="showTab('typology')">⑤ Typology</button>
-  <button class="tab" onclick="showTab('status')">⑥ Status & Vitality</button>
-  <button class="tab" onclick="showTab('history')">⑦ Historical Depth</button>
+  <button class="tab active" onclick="showTab('families', this)">① Language Families</button>
+  <button class="tab" onclick="showTab('speakers', this)">② By Speakers</button>
+  <button class="tab" onclick="showTab('geography', this)">③ By Geography</button>
+  <button class="tab" onclick="showTab('scripts', this)">④ Writing Systems</button>
+  <button class="tab" onclick="showTab('typology', this)">⑤ Typology</button>
+  <button class="tab" onclick="showTab('status', this)">⑥ Status & Vitality</button>
+  <button class="tab" onclick="showTab('history', this)">⑦ Historical Depth</button>
 </nav>
 
 <!-- ① LANGUAGE FAMILIES -->
@@ -1143,11 +1143,11 @@
 
 <script>
   // TAB SWITCHING
-  function showTab(id) {
+  function showTab(id, btn) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
+    btn.classList.add('active');
     window.scrollTo({ top: document.querySelector('nav').offsetTop, behavior: 'smooth' });
   }
 
@@ -1190,7 +1190,7 @@
   // SCRIPTS
   const scripts = [
     { sample: "𓂀𓏤𓆑𓅓", name: "Hieroglyphics / Egyptian", type: "Logographic + phonetic", dir: "Left-to-right, right-to-left, or vertical", desc: "An ancient Egyptian script mixing word-signs and sound-signs. Used ~3100 BCE–400 CE. Deciphered in 1822 via the Rosetta Stone. Parent of the Coptic alphabet." },
-    { sample: "<span lang="ar" dir="rtl">الْعَرَبِيَّة</span>", name: "Arabic Script", type: "Abjad (consonants only)", dir: "Right to left", desc: "Used for Arabic, Persian, Urdu, Pashto, and others. Vowels are typically omitted (readers infer them). The script connects letters fluidly, changing letter shapes by position. 2nd most widely used script in the world." },
+    { sample: '<span lang="ar" dir="rtl">الْعَرَبِيَّة</span>', name: "Arabic Script", type: "Abjad (consonants only)", dir: "Right to left", desc: "Used for Arabic, Persian, Urdu, Pashto, and others. Vowels are typically omitted (readers infer them). The script connects letters fluidly, changing letter shapes by position. 2nd most widely used script in the world." },
     { sample: "한글", name: "Hangul (Korean)", type: "Featural alphabet", dir: "Left to right", desc: "Invented in 1443 CE by King Sejong — one of the few scripts with a known inventor. Uniquely, letter shapes encode phonetic features (e.g., tongue position). Organized into syllabic blocks despite being alphabetic." },
     { sample: "あいうえお", name: "Hiragana / Katakana", type: "Syllabary", dir: "Left to right (or top to bottom)", desc: "Japanese uses three scripts simultaneously: Hiragana (native words), Katakana (foreign words), and Kanji (Chinese characters). Each hiragana character represents one syllable." },
     { sample: "𒀭𒂗𒍪", name: "Cuneiform", type: "Logo-syllabic", dir: "Left to right", desc: "The world's oldest writing system, developed by Sumerians ~3200 BCE. Made by pressing a reed stylus into clay. Used for Sumerian, Akkadian, Elamite, Hittite, and others. Deciphered in the 1800s." },
